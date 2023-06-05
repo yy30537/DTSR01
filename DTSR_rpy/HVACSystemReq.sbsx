@@ -12,16 +12,16 @@
 			<_id type="a">GUID c5f0339f-c456-4d06-b677-ec1368c6e81c</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">HVACSystemReq</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::16:42:21</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.5.2023::22:40:30</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID 279e1505-3f1d-48f9-aa9f-5b35654caa15</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.4.2023::16:42:21</_modifiedTime>
+			<_modifiedTime type="a">6.5.2023::22:40:30</_modifiedTime>
 			<_lastID type="a">2</_lastID>
-			<weakCGTime type="a">6.4.2023::16:42:21</weakCGTime>
+			<weakCGTime type="a">6.5.2023::22:40:30</weakCGTime>
 			<strongCGTime type="a">6.2.2023::16:58:25</strongCGTime>
 			<_defaultComposite type="s">GUID 89c36e7a-07a9-4499-98f9-0e8eff7f156a</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -36,8 +36,8 @@
 			<_id type="a">GUID b5b1fe71-7676-439d-90f5-b6155314e70e</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">HVACSystemRequirement</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::16:42:10</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:42:10</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.5.2023::22:40:30</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:40:30</_modifiedTime>
 			<_lastID type="a">14</_lastID>
 			<_body type="a">{\rtf1\fbidis\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\ltrpar\kerning2\f0\fs22 The HVAC system shall automatically be regulated based on data from sensors and the presence of users.\kerning0\f1\fs20\par%0D
@@ -57,8 +57,8 @@
 			<_id type="a">GUID 0d056ebb-baee-4365-bd95-f5f7aa5710ca</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Network</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::16:41:50</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:41:50</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.5.2023::22:40:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:40:8</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\lang3072\kerning2\f0\fs22 The \lang1033 HVAC system \lang3072 shall \lang1033 be connected \lang3072 to the network.\lang1033\kerning0\f1\fs20\par%0D
@@ -77,10 +77,6 @@
 			<_id type="a">GUID ebb415f0-4619-4062-9f38-8121e233c729</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Connection CO2 Sensor</_name>
-			<Annotations type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Annotations>
 			<_modifiedTimeWeak type="a">6.4.2023::16:34:41</_modifiedTimeWeak>
 			<_modifiedTime type="a">6.4.2023::16:34:41</_modifiedTime>
 			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
@@ -93,93 +89,85 @@
 			<_id type="a">GUID 233eeec5-58b9-4791-87ab-b2e094eee310</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Connection Movement Detection Sensor</_name>
-			<Annotations type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Annotations>
-			<_modifiedTimeWeak type="a">6.4.2023::16:41:27</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:41:27</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.5.2023::22:40:5</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:40:5</_modifiedTime>
 			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC system shall be connected to the movement detection sensor.\kerning0\f1\fs20\par%0D
 }%0D
 </_body>
-			<reqID type="a">HS-7</reqID>
+			<reqID type="a">HS-5</reqID>
 		</IRequirement>
 		<IRequirement type="e">
 			<_id type="a">GUID dd7e5990-4116-49bd-ab92-829ef80603f1</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Connection Room Touch Panel</_name>
-			<Annotations type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Annotations>
-			<_modifiedTimeWeak type="a">6.4.2023::16:41:50</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:41:50</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.5.2023::22:40:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:40:8</_modifiedTime>
 			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC system shall be connected to the room touch panel.\kerning0\f1\fs20\par%0D
-}%0D
-</_body>
-			<reqID type="a">HS-10</reqID>
-		</IRequirement>
-		<IRequirement type="e">
-			<_id type="a">GUID 910c6994-1f7d-49b3-bc9c-9195d4770278</_id>
-			<_myState type="a">8192</_myState>
-			<_name type="a">Connection Occupancy Sensor</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::16:41:1</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:41:1</_modifiedTime>
-			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
-\viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC system shall be connected to the occupancy sensor.\kerning0\f1\fs20\par%0D
 }%0D
 </_body>
 			<reqID type="a">HS-6</reqID>
 		</IRequirement>
 		<IRequirement type="e">
-			<_id type="a">GUID 8dfbb545-2260-4cd3-871d-8272ea7614bb</_id>
+			<_id type="a">GUID 910c6994-1f7d-49b3-bc9c-9195d4770278</_id>
 			<_myState type="a">8192</_myState>
-			<_name type="a">Connection Weather Forecast</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::16:40:41</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:40:41</_modifiedTime>
-			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
-\viewkind4\uc1\pard\fs20 The HVAC system shall be connected to the Weather Forecast.\par%0D
+			<_name type="a">Connection Occupancy Sensor</_name>
+			<_modifiedTimeWeak type="a">6.5.2023::22:39:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:39:58</_modifiedTime>
+			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC system shall be connected to the occupancy sensor.\kerning0\f1\fs20\par%0D
 }%0D
 </_body>
 			<reqID type="a">HS-4</reqID>
 		</IRequirement>
 		<IRequirement type="e">
-			<_id type="a">GUID 31ca275d-90ab-40bc-a954-745a5f3a01d1</_id>
+			<_id type="a">GUID 8dfbb545-2260-4cd3-871d-8272ea7614bb</_id>
 			<_myState type="a">8192</_myState>
-			<_name type="a">Regulate Air Quality</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::16:40:30</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:40:30</_modifiedTime>
-			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
-\viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC system shall regulate the air quality in the DTSR.\kerning0\f1\fs20\par%0D
+			<_name type="a">Connection Weather Forecast</_name>
+			<_modifiedTimeWeak type="a">6.5.2023::22:39:56</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:39:56</_modifiedTime>
+			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\fs20 The HVAC system shall be connected to the Weather Forecast.\par%0D
 }%0D
 </_body>
 			<reqID type="a">HS-3</reqID>
 		</IRequirement>
 		<IRequirement type="e">
-			<_id type="a">GUID 3078191d-31aa-4637-a2a7-4e7c9f8e3634</_id>
+			<_id type="a">GUID 31ca275d-90ab-40bc-a954-745a5f3a01d1</_id>
 			<_myState type="a">8192</_myState>
-			<_name type="a">Automatic HVAC Off</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::16:41:41</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:41:41</_modifiedTime>
+			<_name type="a">Regulate Air Quality</_name>
+			<_modifiedTimeWeak type="a">6.5.2023::22:40:25</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:40:25</_modifiedTime>
 			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
-\viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC system shall turn off the air conditioning /heating when no user is present in the DTSR.\kerning0\f1\fs20\par%0D
+\viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC system shall regulate the air quality in the DTSR.\kerning0\f1\fs20\par%0D
 }%0D
 </_body>
 			<reqID type="a">HS-9</reqID>
 		</IRequirement>
 		<IRequirement type="e">
+			<_id type="a">GUID 3078191d-31aa-4637-a2a7-4e7c9f8e3634</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Automatic HVAC Off</_name>
+			<_modifiedTimeWeak type="a">6.5.2023::22:40:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:40:20</_modifiedTime>
+			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC system shall turn off the air conditioning /heating when no user is present in the DTSR.\kerning0\f1\fs20\par%0D
+}%0D
+</_body>
+			<reqID type="a">HS-8</reqID>
+		</IRequirement>
+		<IRequirement type="e">
 			<_id type="a">GUID 5d4e182b-452b-44cb-9ab7-811c38ff6d88</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Automatic HVAC On</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::16:41:36</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:41:36</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.5.2023::22:40:16</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:40:16</_modifiedTime>
 			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC system shall turn on the air conditioning/heating when a user enters the DTSR\kerning0\f1\fs20\par%0D
 }%0D
 </_body>
-			<reqID type="a">HS-8</reqID>
+			<reqID type="a">HS-7</reqID>
 		</IRequirement>
 		<IRequirement type="e">
 			<_id type="a">GUID 8af300ae-f9d8-4f29-952c-879f24487aa9</_id>
@@ -238,13 +226,13 @@
 			<_id type="a">GUID 09819a4b-3229-4220-bd4c-d655bf963c0c</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Weather Regulation</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::16:40:47</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:40:47</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.5.2023::22:40:30</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.5.2023::22:40:30</_modifiedTime>
 			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\kerning2\f0\fs22 The HVAC System shall use w\lang3072 eather forecasts to intelligently regulate and supervise the room's temperature\lang1033\kerning0\f1\fs20\par%0D
 }%0D
 </_body>
-			<reqID type="a">HS-5</reqID>
+			<reqID type="a">HS-10</reqID>
 		</IRequirement>
 		<IDiagram type="e">
 			<_id type="a">GUID 279e1505-3f1d-48f9-aa9f-5b35654caa15</_id>
@@ -461,8 +449,8 @@
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::16:42:27</_modifiedTime>
-			<_lastModifiedTime type="a">6.4.2023::16:42:27</_lastModifiedTime>
+			<_modifiedTime type="a">6.5.2023::22:38:56</_modifiedTime>
+			<_lastModifiedTime type="a">6.5.2023::22:39:9</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -2052,7 +2040,7 @@
 			<m_polygon type="a">4 0 3  0 1095  1084 1095  1084 3  </m_polygon>
 			<m_nNameFormat type="a">0</m_nNameFormat>
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
-			<frameset type="a">&lt;frameset rows=30%25,70%25&gt;
+			<frameset type="a">&lt;frameset rows=50%25,50%25&gt;
 &lt;frame name=IDTextCompartment&gt;
 &lt;frame name=SpecificationTextCompartment&gt;</frameset>
 			<_iTempdisplayTextFlag type="a">1</_iTempdisplayTextFlag>
@@ -2125,7 +2113,7 @@
 			<m_polygon type="a">4 0 3  0 1095  1084 1095  1084 3  </m_polygon>
 			<m_nNameFormat type="a">0</m_nNameFormat>
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
-			<frameset type="a">&lt;frameset rows=27%25,73%25&gt;
+			<frameset type="a">&lt;frameset rows=50%25,50%25&gt;
 &lt;frame name=IDTextCompartment&gt;
 &lt;frame name=SpecificationTextCompartment&gt;</frameset>
 			<_iTempdisplayTextFlag type="a">1</_iTempdisplayTextFlag>
@@ -2198,7 +2186,7 @@
 			<m_polygon type="a">4 0 3  0 1095  1084 1095  1084 3  </m_polygon>
 			<m_nNameFormat type="a">0</m_nNameFormat>
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
-			<frameset type="a">&lt;frameset rows=27%25,73%25&gt;
+			<frameset type="a">&lt;frameset rows=50%25,50%25&gt;
 &lt;frame name=IDTextCompartment&gt;
 &lt;frame name=SpecificationTextCompartment&gt;</frameset>
 			<_iTempdisplayTextFlag type="a">1</_iTempdisplayTextFlag>
