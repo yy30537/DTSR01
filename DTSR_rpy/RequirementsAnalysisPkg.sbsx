@@ -12,11 +12,7 @@
 			<_id type="a">GUID c5c7a408-3f0e-44ce-b2ce-277d561e82fa</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">RequirementsAnalysisPkg</_name>
-			<Annotations type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Annotations>
-			<_modifiedTimeWeak type="a">6.2.2023::17:0:38</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.6.2023::12:13:26</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -24,9 +20,9 @@
 					<_hid type="a">GUID f1832423-7170-436a-ad22-8c3d19d37de2</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.2.2023::17:0:38</_modifiedTime>
-			<_lastID type="a">11</_lastID>
-			<weakCGTime type="a">6.2.2023::17:0:38</weakCGTime>
+			<_modifiedTime type="a">6.6.2023::12:13:26</_modifiedTime>
+			<_lastID type="a">12</_lastID>
+			<weakCGTime type="a">6.6.2023::12:13:26</weakCGTime>
 			<strongCGTime type="a">6.2.2023::15:47:37</strongCGTime>
 			<_defaultComposite type="s">GUID 4b022a86-3b64-415b-9953-22f41b58123f</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -43,6 +39,7 @@
 				<value>GUID c54bc7ef-6f3f-4a90-8fff-6f02733529b0</value>
 				<value>GUID 09bc1e71-4736-44c0-aa2d-89fded8f89ca</value>
 				<value>GUID 4b022a86-3b64-415b-9953-22f41b58123f</value>
+				<value>GUID 4d928952-34e5-4019-af35-f75245f65744</value>
 			</AggregatesList>
 		</ISubsystem>
 		<ISubsystem type="e">
@@ -90,7 +87,7 @@
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_itsStateChart type="r">
@@ -99,6 +96,75 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 		</IClass>
+		<ITableInstance type="e">
+			<_id type="a">GUID 4d928952-34e5-4019-af35-f75245f65744</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">TableView</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">UseOwnerScope</_Name>
+													<_Value type="a">False</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_name type="a">DTSRRequirementsTable</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Requirements</_hsubsystem>
+							<_hname type="a">RequirementsTable</_hname>
+							<_hid type="a">GUID ac8ca999-c415-4942-b5eb-99bb8da2415c</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.6.2023::12:13:26</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.6.2023::12:13:26</_modifiedTime>
+			<LayoutHandle type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ITableLayout</_hm2Class>
+					<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+					<_hsubsystem type="a">SysML::Requirements</_hsubsystem>
+					<_hname type="a">ReqTableLayout</_hname>
+					<_hid type="a">GUID 8f1f7467-b093-4abe-9871-3462587c6bc8</_hid>
+				</IHandle>
+			</LayoutHandle>
+			<ScopeHandles type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IProject</_hm2Class>
+							<_hname type="a">DTSR</_hname>
+							<_hid type="a">GUID 79a904df-a658-4ea5-870a-854c1d648312</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</ScopeHandles>
+		</ITableInstance>
 		
 	</RHAPSODY-MODEL>
 	<OslcLinks type="c">

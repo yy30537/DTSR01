@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>109.0</version>
+	<lang>C++</lang>
+	<BuildNo>202002261110</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<ISubsystem type="e">
+			<_id type="a">GUID b851de7a-61ef-4289-bfd6-f9aac76a1047</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">ActorPkg</_name>
+			<_modifiedTimeWeak type="a">6.12.2023::21:52:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::21:59:4</_modifiedTime>
+			<_lastID type="a">1</_lastID>
+			<weakCGTime type="a">6.12.2023::21:52:58</weakCGTime>
+			<strongCGTime type="a">6.12.2023::14:5:40</strongCGTime>
+			<_defaultComposite type="s">GUID 5430bcf7-7251-458e-94a8-6f75ad0df316</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 5430bcf7-7251-458e-94a8-6f75ad0df316</value>
+				<value>GUID 56334670-ad3b-4456-8a7b-a5216256f82d</value>
+				<value>GUID e41aa68e-8b46-4dcc-b153-1c1a19f9cb94</value>
+			</AggregatesList>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID 5430bcf7-7251-458e-94a8-6f75ad0df316</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		<IActor type="e">
+			<_id type="a">GUID 56334670-ad3b-4456-8a7b-a5216256f82d</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">User</_name>
+			<_modifiedTimeWeak type="a">6.12.2023::21:53:12</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Door Touch Panel</_hname>
+					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.12.2023::21:53:12</_modifiedTime>
+			<weakCGTime type="a">6.12.2023::21:53:12</weakCGTime>
+			<strongCGTime type="a">6.12.2023::14:21:57</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 60f148b2-3395-40e3-a502-e2db1f4df046</value>
+				<value>GUID d5829674-93dc-4b74-909e-f8669102449c</value>
+				<value>GUID 5c2d57a6-604f-40fd-a30f-ec103077dcab</value>
+				<value>GUID 2eee55fb-f6bb-4841-81e3-1d8e3ea4c558</value>
+				<value>GUID db6fa1fb-e380-43b5-aa64-5c7017e789d0</value>
+				<value>GUID d1be81b5-56d5-4f49-8aa8-8967a30c36e9</value>
+				<value>GUID 00c63780-e9e0-4089-bacf-69a6eaf9a989</value>
+				<value>GUID 73aba255-652c-4607-9a22-9317fb367459</value>
+				<value>GUID b69a17dd-00b3-4232-bb82-d9ad7823aadd</value>
+				<value>GUID c967d48b-444c-4eb9-97c1-325a8d8a487a</value>
+				<value>GUID 1db8fd2f-07dc-4f7d-8825-3be2e63c1226</value>
+				<value>GUID 275a5513-bc03-49c0-86ea-532236b0c0ae</value>
+			</AggregatesList>
+		</IActor>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 60f148b2-3395-40e3-a502-e2db1f4df046</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsControl Lightning</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::18:54:2</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Control Lightning</_hname>
+					<_hid type="a">GUID cfd3896a-db6c-402f-9469-6d590c0cfc36</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Control Lightning</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 4324bfa7-6c57-4795-ae03-e32bbedb7212</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID d5829674-93dc-4b74-909e-f8669102449c</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsControl HVAC</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::14:22:51</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Control HVAC</_hname>
+					<_hid type="a">GUID 23022587-85f1-4920-bc8a-9f0247757a80</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Control HVAC</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 366f0fef-8ff2-4b74-bb4b-6c0031e0ff18</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 5c2d57a6-604f-40fd-a30f-ec103077dcab</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsControl AudioVid</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::14:22:58</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Control AudioVid</_hname>
+					<_hid type="a">GUID 3d5a5309-de25-457d-b6bb-c2a116cbdb04</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Control AudioVid</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 4851cbc4-5812-4253-932f-418ea9cf6f67</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 2eee55fb-f6bb-4841-81e3-1d8e3ea4c558</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsControl Security and Access</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::14:23:2</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Control Security and Access</_hname>
+					<_hid type="a">GUID 32a5d3a3-c5ce-4041-97f8-49c943e5da79</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Control Security and Access</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID f9e73cc1-3b0c-41ad-b8bd-9e232f0521e4</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID db6fa1fb-e380-43b5-aa64-5c7017e789d0</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsLog in user</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::20:38:28</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Log in user</_hname>
+					<_hid type="a">GUID 04697276-d8ac-4661-b910-ec685b8bfd55</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Log in user</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID f32dc1cc-c976-4692-96e6-1eb933b37d37</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID d1be81b5-56d5-4f49-8aa8-8967a30c36e9</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsTurn Off Light</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::21:18:28</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Turn Off Light</_hname>
+					<_hid type="a">GUID 042c641a-e1b3-4be5-9340-c9e335403581</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Turn Off Light</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 76794388-3a37-475c-95f0-8230fdd9df5f</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 00c63780-e9e0-4089-bacf-69a6eaf9a989</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsTurn On Light</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::21:18:39</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Turn On Light</_hname>
+					<_hid type="a">GUID b894393b-226e-419a-90b8-1df002e266dc</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Turn On Light</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 4f2a9ab7-ba2f-4b43-9aa6-a11c598dd751</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 73aba255-652c-4607-9a22-9317fb367459</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsIncrease Light</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::21:18:42</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Increase Light</_hname>
+					<_hid type="a">GUID 36c8ae8c-d167-436a-ac65-2c222b0a68e4</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Increase Light</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 178e63dc-77db-4536-a1d5-53f153bb3bce</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID b69a17dd-00b3-4232-bb82-d9ad7823aadd</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsDecrease Light</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::21:18:45</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Decrease Light</_hname>
+					<_hid type="a">GUID c6ffe02b-4456-4d3f-8167-e1291acdc4bc</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Decrease Light</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 8b4d18ea-132d-447b-a538-7774206af05f</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID c967d48b-444c-4eb9-97c1-325a8d8a487a</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsTurn On HVAC</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::21:52:58</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Turn On HVAC</_hname>
+					<_hid type="a">GUID bad2a4df-8826-47ba-8f72-0c33e12a84f6</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Turn On HVAC</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 352915d7-10b7-4eef-aa1b-7e0429a7dbf2</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 1db8fd2f-07dc-4f7d-8825-3be2e63c1226</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsTurn Off HVAC</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::21:53:5</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Turn Off HVAC</_hname>
+					<_hid type="a">GUID ab63c21c-fe6d-4cf2-88e0-b8bdf488ba6e</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Turn Off HVAC</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID f8db603c-63ef-48be-b51f-7f16d65e8015</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 275a5513-bc03-49c0-86ea-532236b0c0ae</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsSet temperature</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::21:53:12</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Set temperature</_hname>
+					<_hid type="a">GUID d018fe0f-3ef6-4524-b6f2-42d3b9b9cfa8</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Set temperature</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 260c9bde-7cc8-4449-92f9-7b05ff9e4253</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IActor type="e">
+			<_id type="a">GUID e41aa68e-8b46-4dcc-b153-1c1a19f9cb94</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">External Personnel</_name>
+			<_modifiedTimeWeak type="a">6.12.2023::20:1:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Door Touch Panel</_hname>
+					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.12.2023::20:1:32</_modifiedTime>
+			<weakCGTime type="a">6.12.2023::20:1:32</weakCGTime>
+			<strongCGTime type="a">6.12.2023::18:42:57</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IActor>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

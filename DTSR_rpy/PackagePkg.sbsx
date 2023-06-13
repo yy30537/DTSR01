@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>109.0</version>
+	<lang>C++</lang>
+	<BuildNo>202002261110</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<ISubsystem type="e">
+			<_id type="a">GUID 3d461902-d2d6-4e03-a5a4-8d4484d7b822</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">PackagePkg</_name>
+			<_modifiedTimeWeak type="a">6.12.2023::22:1:33</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.12.2023::22:1:33</_modifiedTime>
+			<_lastID type="a">4</_lastID>
+			<weakCGTime type="a">6.12.2023::22:1:33</weakCGTime>
+			<strongCGTime type="a">6.12.2023::18:43:28</strongCGTime>
+			<_defaultComposite type="s">GUID 8459498b-369d-4f8a-a319-e75a6200ba47</_defaultComposite>
+			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<AggregatesList type="e">
+				<value>GUID 460c4e92-23f2-4290-8a87-8a6f5aa8f4aa</value>
+				<value>GUID 7224aeb3-0ff9-41a9-8176-897c80e8af7a</value>
+				<value>GUID 9638c904-fb16-4cf9-a957-eb1dd762e976</value>
+				<value>GUID 9f10a0e9-4d5e-4455-b98a-848b5ee267a2</value>
+				<value>GUID ab12afe5-2e49-4203-95e1-0997a986e029</value>
+				<value>GUID f60ea70e-f8c4-4faf-aeec-78b8964427d3</value>
+				<value>GUID 303110d7-33de-40bd-80df-ad7e777e2570</value>
+				<value>GUID 8459498b-369d-4f8a-a319-e75a6200ba47</value>
+			</AggregatesList>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Network</fileName>
+			<_id type="a">GUID 460c4e92-23f2-4290-8a87-8a6f5aa8f4aa</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">InterfacesPkg</fileName>
+			<_id type="a">GUID 7224aeb3-0ff9-41a9-8176-897c80e8af7a</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Movement_Sensor</fileName>
+			<_id type="a">GUID 9638c904-fb16-4cf9-a957-eb1dd762e976</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Occupancy_Sensor</fileName>
+			<_id type="a">GUID 9f10a0e9-4d5e-4455-b98a-848b5ee267a2</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Room_Touch_Panel</fileName>
+			<_id type="a">GUID ab12afe5-2e49-4203-95e1-0997a986e029</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Weather_Forecast</fileName>
+			<_id type="a">GUID f60ea70e-f8c4-4faf-aeec-78b8964427d3</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">CO2_Sensor</fileName>
+			<_id type="a">GUID 303110d7-33de-40bd-80df-ad7e777e2570</_id>
+		</ISubsystem>
+		<IClass type="e">
+			<_id type="a">GUID 8459498b-369d-4f8a-a319-e75a6200ba47</_id>
+			<_myState type="a">40960</_myState>
+			<_name type="a">TopLevel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+		</IClass>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+
