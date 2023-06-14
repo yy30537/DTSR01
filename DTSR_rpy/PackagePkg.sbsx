@@ -12,10 +12,10 @@
 			<_id type="a">GUID 3d461902-d2d6-4e03-a5a4-8d4484d7b822</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">PackagePkg</_name>
-			<_modifiedTimeWeak type="a">6.14.2023::10:26:59</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.14.2023::10:26:59</_modifiedTime>
-			<_lastID type="a">8</_lastID>
-			<weakCGTime type="a">6.14.2023::10:26:59</weakCGTime>
+			<_modifiedTimeWeak type="a">6.14.2023::21:46:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2023::21:46:0</_modifiedTime>
+			<_lastID type="a">11</_lastID>
+			<weakCGTime type="a">6.14.2023::21:46:0</weakCGTime>
 			<strongCGTime type="a">6.12.2023::18:43:28</strongCGTime>
 			<_defaultComposite type="s">GUID 8459498b-369d-4f8a-a319-e75a6200ba47</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -33,6 +33,9 @@
 				<value>GUID 11a529b0-49db-411c-986b-c3d0e25ca8de</value>
 				<value>GUID c070518c-0731-49d3-b18f-3b00a9d97056</value>
 				<value>GUID 296b2871-0834-41a1-a47e-fa3b2b2792b2</value>
+				<value>GUID 03c02cd0-ce37-454b-824c-7e9f101a3759</value>
+				<value>GUID 394a2f5f-bfe3-4e19-91db-4b5a64943cc6</value>
+				<value>GUID be17ef07-ac86-4e18-b910-3e769dc7d029</value>
 				<value>GUID 8459498b-369d-4f8a-a319-e75a6200ba47</value>
 			</AggregatesList>
 		</ISubsystem>
@@ -83,6 +86,18 @@
 		<ISubsystem type="e">
 			<fileName type="a">Fire_Sensor</fileName>
 			<_id type="a">GUID 296b2871-0834-41a1-a47e-fa3b2b2792b2</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Door_Touch_Panel</fileName>
+			<_id type="a">GUID 03c02cd0-ce37-454b-824c-7e9f101a3759</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Lights</fileName>
+			<_id type="a">GUID 394a2f5f-bfe3-4e19-91db-4b5a64943cc6</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">HVAC</fileName>
+			<_id type="a">GUID be17ef07-ac86-4e18-b910-3e769dc7d029</_id>
 		</ISubsystem>
 		<IClass type="e">
 			<_id type="a">GUID 8459498b-369d-4f8a-a319-e75a6200ba47</_id>

@@ -19,8 +19,8 @@
 					<_hid type="a">GUID 5639a143-b14d-4656-a70d-c3775aea9a5c</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.5.2023::22:20:37</_modifiedTime>
-			<_lastID type="a">20</_lastID>
+			<_modifiedTime type="a">6.14.2023::19:45:31</_modifiedTime>
+			<_lastID type="a">21</_lastID>
 			<weakCGTime type="a">6.5.2023::22:20:37</weakCGTime>
 			<strongCGTime type="a">6.2.2023::17:41:56</strongCGTime>
 			<_defaultComposite type="s">GUID 37b7e346-b81f-49dc-bffa-35f894f54a0c</_defaultComposite>
@@ -136,10 +136,6 @@
 			<_id type="a">GUID 40a4a394-65fd-43ce-a94f-26eea106419c</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Control Security and Access System</_name>
-			<Annotations type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Annotations>
 			<_modifiedTimeWeak type="a">6.5.2023::22:18:3</_modifiedTimeWeak>
 			<_modifiedTime type="a">6.5.2023::22:18:3</_modifiedTime>
 			<_lastID type="a">4</_lastID>
