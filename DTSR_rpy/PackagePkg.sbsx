@@ -12,10 +12,10 @@
 			<_id type="a">GUID 3d461902-d2d6-4e03-a5a4-8d4484d7b822</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">PackagePkg</_name>
-			<_modifiedTimeWeak type="a">6.12.2023::22:1:33</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.12.2023::22:1:33</_modifiedTime>
-			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">6.12.2023::22:1:33</weakCGTime>
+			<_modifiedTimeWeak type="a">6.14.2023::10:26:59</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2023::10:26:59</_modifiedTime>
+			<_lastID type="a">8</_lastID>
+			<weakCGTime type="a">6.14.2023::10:26:59</weakCGTime>
 			<strongCGTime type="a">6.12.2023::18:43:28</strongCGTime>
 			<_defaultComposite type="s">GUID 8459498b-369d-4f8a-a319-e75a6200ba47</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -28,6 +28,11 @@
 				<value>GUID ab12afe5-2e49-4203-95e1-0997a986e029</value>
 				<value>GUID f60ea70e-f8c4-4faf-aeec-78b8964427d3</value>
 				<value>GUID 303110d7-33de-40bd-80df-ad7e777e2570</value>
+				<value>GUID 0b0bba48-0640-4223-b8d8-89c17b9a672d</value>
+				<value>GUID 69d0bea6-ac78-4ece-98d9-42b2310a2c84</value>
+				<value>GUID 11a529b0-49db-411c-986b-c3d0e25ca8de</value>
+				<value>GUID c070518c-0731-49d3-b18f-3b00a9d97056</value>
+				<value>GUID 296b2871-0834-41a1-a47e-fa3b2b2792b2</value>
 				<value>GUID 8459498b-369d-4f8a-a319-e75a6200ba47</value>
 			</AggregatesList>
 		</ISubsystem>
@@ -58,6 +63,26 @@
 		<ISubsystem type="e">
 			<fileName type="a">CO2_Sensor</fileName>
 			<_id type="a">GUID 303110d7-33de-40bd-80df-ad7e777e2570</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Smart_Screen</fileName>
+			<_id type="a">GUID 0b0bba48-0640-4223-b8d8-89c17b9a672d</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Microphone</fileName>
+			<_id type="a">GUID 69d0bea6-ac78-4ece-98d9-42b2310a2c84</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Speakers</fileName>
+			<_id type="a">GUID 11a529b0-49db-411c-986b-c3d0e25ca8de</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Webcam</fileName>
+			<_id type="a">GUID c070518c-0731-49d3-b18f-3b00a9d97056</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">Fire_Sensor</fileName>
+			<_id type="a">GUID 296b2871-0834-41a1-a47e-fa3b2b2792b2</_id>
 		</ISubsystem>
 		<IClass type="e">
 			<_id type="a">GUID 8459498b-369d-4f8a-a319-e75a6200ba47</_id>

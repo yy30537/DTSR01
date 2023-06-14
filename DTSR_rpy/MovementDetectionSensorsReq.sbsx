@@ -12,16 +12,16 @@
 			<_id type="a">GUID 22216f85-8852-4cad-9f2b-ee11dc1fe90b</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">MovementDetectionSensorsReq</_name>
-			<_modifiedTimeWeak type="a">6.5.2023::6:27:58</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.14.2023::10:22:58</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID b9a34edc-dae7-484c-9a24-689b812b1c5b</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.5.2023::6:27:58</_modifiedTime>
+			<_modifiedTime type="a">6.14.2023::10:22:58</_modifiedTime>
 			<_lastID type="a">1</_lastID>
-			<weakCGTime type="a">6.5.2023::6:27:58</weakCGTime>
+			<weakCGTime type="a">6.14.2023::10:22:58</weakCGTime>
 			<strongCGTime type="a">6.2.2023::16:59:6</strongCGTime>
 			<_defaultComposite type="s">GUID 022651e2-f08e-4d11-9310-a894bab751a6</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -35,9 +35,9 @@
 		<IRequirement type="e">
 			<_id type="a">GUID 272416b3-d905-4d63-bb8f-9b7c757b8c81</_id>
 			<_myState type="a">8192</_myState>
-			<_name type="a">MovementDetetctionSensorRequirement</_name>
-			<_modifiedTimeWeak type="a">6.5.2023::6:27:58</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.5.2023::6:27:58</_modifiedTime>
+			<_name type="a">MovementDetectionSensorRequirement</_name>
+			<_modifiedTimeWeak type="a">6.14.2023::10:22:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.14.2023::10:22:58</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<_body type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\kerning2\f0\fs22 The movement detection sensor shall detect user movement and send the movement data to other sytems to be utilized.\kerning0\f1\fs20\par%0D
@@ -276,8 +276,8 @@
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.5.2023::6:27:37</_modifiedTime>
-			<_lastModifiedTime type="a">6.5.2023::6:27:37</_lastModifiedTime>
+			<_modifiedTime type="a">6.14.2023::10:22:58</_modifiedTime>
+			<_lastModifiedTime type="a">6.14.2023::10:22:58</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -508,7 +508,7 @@
 			<m_pParent type="s">GUID 0fca3dd7-8e75-48d4-ade0-6c952b414604</m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
-					<m_str type="a">MovementDetetctionSensorRequirement</m_str>
+					<m_str type="a">MovementDetectionSensorRequirement</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
