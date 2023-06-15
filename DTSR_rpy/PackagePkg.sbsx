@@ -12,92 +12,31 @@
 			<_id type="a">GUID 3d461902-d2d6-4e03-a5a4-8d4484d7b822</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">PackagePkg</_name>
-			<_modifiedTimeWeak type="a">6.14.2023::21:46:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.14.2023::21:46:0</_modifiedTime>
-			<_lastID type="a">11</_lastID>
-			<weakCGTime type="a">6.14.2023::21:46:0</weakCGTime>
+			<_modifiedTimeWeak type="a">6.15.2023::22:45:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::22:45:38</_modifiedTime>
+			<_lastID type="a">12</_lastID>
+			<weakCGTime type="a">6.15.2023::22:45:38</weakCGTime>
 			<strongCGTime type="a">6.12.2023::18:43:28</strongCGTime>
 			<_defaultComposite type="s">GUID 8459498b-369d-4f8a-a319-e75a6200ba47</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
-			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<_configurationRelatedTime type="a">6.15.2023::21:24:9</_configurationRelatedTime>
 			<AggregatesList type="e">
-				<value>GUID 460c4e92-23f2-4290-8a87-8a6f5aa8f4aa</value>
-				<value>GUID 7224aeb3-0ff9-41a9-8176-897c80e8af7a</value>
-				<value>GUID 9638c904-fb16-4cf9-a957-eb1dd762e976</value>
-				<value>GUID 9f10a0e9-4d5e-4455-b98a-848b5ee267a2</value>
-				<value>GUID ab12afe5-2e49-4203-95e1-0997a986e029</value>
-				<value>GUID f60ea70e-f8c4-4faf-aeec-78b8964427d3</value>
-				<value>GUID 303110d7-33de-40bd-80df-ad7e777e2570</value>
-				<value>GUID 0b0bba48-0640-4223-b8d8-89c17b9a672d</value>
-				<value>GUID 69d0bea6-ac78-4ece-98d9-42b2310a2c84</value>
-				<value>GUID 11a529b0-49db-411c-986b-c3d0e25ca8de</value>
-				<value>GUID c070518c-0731-49d3-b18f-3b00a9d97056</value>
-				<value>GUID 296b2871-0834-41a1-a47e-fa3b2b2792b2</value>
-				<value>GUID 03c02cd0-ce37-454b-824c-7e9f101a3759</value>
-				<value>GUID 394a2f5f-bfe3-4e19-91db-4b5a64943cc6</value>
-				<value>GUID be17ef07-ac86-4e18-b910-3e769dc7d029</value>
 				<value>GUID 8459498b-369d-4f8a-a319-e75a6200ba47</value>
+				<value>GUID 23e944c3-bf4b-489d-8285-9fcb08fe2e14</value>
+				<value>GUID 28130e4e-a2b4-4890-b7ef-4161926d17ba</value>
+				<value>GUID 6945bed3-e21e-46ab-ad82-5adce337f085</value>
+				<value>GUID 5a1d9f93-223d-466c-a4fe-d80d40560095</value>
+				<value>GUID e39f1c5b-0f82-4fb2-a066-041edd1568c0</value>
+				<value>GUID 9838ab77-1e7f-4fd1-b85f-069d562fa13f</value>
+				<value>GUID b65d22f4-3fd9-457a-862a-d752f0963951</value>
+				<value>GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</value>
+				<value>GUID 1a436a09-0aef-48d9-bd00-97cbde5ba107</value>
+				<value>GUID d716e118-1247-47bb-a04f-ae96c294ee81</value>
+				<value>GUID 55c02f71-42de-4c91-8df1-87d0d2285eb2</value>
+				<value>GUID 3e745777-84a8-4b33-87a3-592820b1aabd</value>
+				<value>GUID 3b4267c3-ffdc-45c0-b89f-52bacbe5be96</value>
+				<value>GUID 7ce36dff-49f2-4f09-826c-2cf3e1737b81</value>
 			</AggregatesList>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Network</fileName>
-			<_id type="a">GUID 460c4e92-23f2-4290-8a87-8a6f5aa8f4aa</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">InterfacesPkg</fileName>
-			<_id type="a">GUID 7224aeb3-0ff9-41a9-8176-897c80e8af7a</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Movement_Sensor</fileName>
-			<_id type="a">GUID 9638c904-fb16-4cf9-a957-eb1dd762e976</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Occupancy_Sensor</fileName>
-			<_id type="a">GUID 9f10a0e9-4d5e-4455-b98a-848b5ee267a2</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Room_Touch_Panel</fileName>
-			<_id type="a">GUID ab12afe5-2e49-4203-95e1-0997a986e029</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Weather_Forecast</fileName>
-			<_id type="a">GUID f60ea70e-f8c4-4faf-aeec-78b8964427d3</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">CO2_Sensor</fileName>
-			<_id type="a">GUID 303110d7-33de-40bd-80df-ad7e777e2570</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Smart_Screen</fileName>
-			<_id type="a">GUID 0b0bba48-0640-4223-b8d8-89c17b9a672d</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Microphone</fileName>
-			<_id type="a">GUID 69d0bea6-ac78-4ece-98d9-42b2310a2c84</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Speakers</fileName>
-			<_id type="a">GUID 11a529b0-49db-411c-986b-c3d0e25ca8de</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Webcam</fileName>
-			<_id type="a">GUID c070518c-0731-49d3-b18f-3b00a9d97056</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Fire_Sensor</fileName>
-			<_id type="a">GUID 296b2871-0834-41a1-a47e-fa3b2b2792b2</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Door_Touch_Panel</fileName>
-			<_id type="a">GUID 03c02cd0-ce37-454b-824c-7e9f101a3759</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">Lights</fileName>
-			<_id type="a">GUID 394a2f5f-bfe3-4e19-91db-4b5a64943cc6</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">HVAC</fileName>
-			<_id type="a">GUID be17ef07-ac86-4e18-b910-3e769dc7d029</_id>
 		</ISubsystem>
 		<IClass type="e">
 			<_id type="a">GUID 8459498b-369d-4f8a-a319-e75a6200ba47</_id>
@@ -113,6 +52,1096 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 		</IClass>
+		<IClass type="e">
+			<_id type="a">GUID 23e944c3-bf4b-489d-8285-9fcb08fe2e14</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">CO2_Sensor</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">CO2 Sensor</_hname>
+					<_hid type="a">GUID 960f7037-532f-49bf-85ca-1c8a6dcba995</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 8298a362-1060-4bfa-bf56-1c838fa15f2f</value>
+				<value>GUID 6b3aadcb-0b05-4b78-adfa-e6241a652820</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 8298a362-1060-4bfa-bf56-1c838fa15f2f</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsMonitor CO2 Level</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::20:59:23</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Monitor CO2 Level</_hname>
+					<_hid type="a">GUID 54b971c4-ac6b-4806-a798-acf161343a3a</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Monitor CO2 Level</_hclass>
+					<_hname type="a">itsCO2_Sensor</_hname>
+					<_hid type="a">GUID 21e2f612-b032-408e-8eec-c9f2343d14af</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 6b3aadcb-0b05-4b78-adfa-e6241a652820</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::20:59:45</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsCO2_Sensor</_hname>
+					<_hid type="a">GUID 88ae7419-7166-4815-b4c9-436aafe29ecc</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 28130e4e-a2b4-4890-b7ef-4161926d17ba</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Door_Touch_Panel</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Door Touch Panel</_hname>
+					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 7bc38735-9a62-48bc-b078-cd5e6de24dd9</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 7bc38735-9a62-48bc-b078-cd5e6de24dd9</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsInteract with Door Touch Panel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:2:2</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Interact with Door Touch Panel</_hname>
+					<_hid type="a">GUID e7132679-0141-485d-8010-b80ce5d77431</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Interact with Door Touch Panel</_hclass>
+					<_hname type="a">itsDoor_Touch_Panel</_hname>
+					<_hid type="a">GUID 6a6160f7-f980-46ec-8d8e-99ba46c19ce1</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 6945bed3-e21e-46ab-ad82-5adce337f085</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Fire_Sensor</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::22:27:34</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Fire Sensor</_hname>
+					<_hid type="a">GUID bfb172f5-f5c5-4c20-a5a3-3fe84dbfcb86</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::22:27:34</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::22:27:34</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 9605d216-c848-48d6-9b90-0bd636d8555a</value>
+				<value>GUID d1b12231-9a6b-4243-b6b4-3c7955c02794</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 9605d216-c848-48d6-9b90-0bd636d8555a</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsDetect Fire</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:4:10</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Detect Fire</_hname>
+					<_hid type="a">GUID df5e98c9-e52c-40e9-a093-e8ba14bbe8c8</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Detect Fire</_hclass>
+					<_hname type="a">itsFire_Sensor</_hname>
+					<_hid type="a">GUID 3668b3ad-a60a-4ab3-b6e8-bbc64b5efbe4</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID d1b12231-9a6b-4243-b6b4-3c7955c02794</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::22:27:34</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsFire_Sensor</_hname>
+					<_hid type="a">GUID 08f38677-1241-436f-ba75-3ee77bfab845</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 5a1d9f93-223d-466c-a4fe-d80d40560095</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">HVAC</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::22:37:29</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">HVAC System</_hname>
+					<_hid type="a">GUID b18ec0de-4404-4af5-9123-6b792c0009b8</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::22:37:29</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::22:37:29</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 1a9a0f32-cc3a-4c04-b1f9-f83d28490572</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 1a9a0f32-cc3a-4c04-b1f9-f83d28490572</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsControl HVAC</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::22:37:29</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Control HVAC</_hname>
+					<_hid type="a">GUID 23022587-85f1-4920-bc8a-9f0247757a80</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID e39f1c5b-0f82-4fb2-a066-041edd1568c0</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Lights</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::22:45:38</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Lightning System</_hname>
+					<_hid type="a">GUID 14b8548c-4548-42ce-aa4e-63d2d29a85af</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::22:45:38</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::22:45:38</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 0803c094-b53e-4fe8-8137-fc683d2e0622</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 0803c094-b53e-4fe8-8137-fc683d2e0622</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsControl Lightning</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::22:45:38</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Control Lightning</_hname>
+					<_hid type="a">GUID cfd3896a-db6c-402f-9469-6d590c0cfc36</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 9838ab77-1e7f-4fd1-b85f-069d562fa13f</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Microphone</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Communication and AudioVideo System</_hname>
+					<_hid type="a">GUID a5e12e95-21c4-42a9-b44a-9cbf1f41679c</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID d2bdc481-dc2d-42ee-9702-b8cde2307635</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID d2bdc481-dc2d-42ee-9702-b8cde2307635</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:23:34</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsMicrophone</_hname>
+					<_hid type="a">GUID 80504613-6ef9-4d57-9ebb-4b965b970c6c</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID b65d22f4-3fd9-457a-862a-d752f0963951</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Movement_Sensor</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Movement Detection sensor</_hname>
+					<_hid type="a">GUID a167b975-2def-4263-a917-39d96ea32fc2</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID d6a92fbf-5a59-4293-bcb9-99929de10097</value>
+				<value>GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID d6a92fbf-5a59-4293-bcb9-99929de10097</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsDetect Movement</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:6:50</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Detect Movement</_hname>
+					<_hid type="a">GUID e53416d7-6083-4a54-90c4-de4e777afd35</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Detect Movement</_hclass>
+					<_hname type="a">itsMovement_Sensor</_hname>
+					<_hid type="a">GUID 485757ca-cb4b-4461-a246-901bda0b9a4e</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:7:10</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsMovement_Sensor</_hname>
+					<_hid type="a">GUID 2ec7a220-86fa-4a1b-8e62-00a97951b3c2</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Network</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Door Touch Panel</_hname>
+					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::20:56:56</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsNetwork</_hname>
+					<_hid type="a">GUID 37c649d1-63e9-4223-ac3a-75800edc7cfe</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 1a436a09-0aef-48d9-bd00-97cbde5ba107</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Occupancy_Sensor</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:59:53</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Occupancy Sensor</_hname>
+					<_hid type="a">GUID 7e84f2ef-a170-4985-8bc0-124fdb6115e0</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:59:53</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:59:53</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 9b20802b-190f-41ed-b35b-1b788c907801</value>
+				<value>GUID 7e55a2a4-5ead-4488-aaf1-0afdf4603ffe</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 9b20802b-190f-41ed-b35b-1b788c907801</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:55:49</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsOccupancy_Sensor</_hname>
+					<_hid type="a">GUID 8e5c885e-284f-4d69-ae38-a579df44fac7</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 7e55a2a4-5ead-4488-aaf1-0afdf4603ffe</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsDetect Occupancy</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:59:53</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Detect Occupancy</_hname>
+					<_hid type="a">GUID 0c01c962-e8ec-487e-ad55-d731a3f698dd</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Detect Occupancy</_hclass>
+					<_hname type="a">itsOccupancy_Sensor</_hname>
+					<_hid type="a">GUID d0bf4349-9603-4c65-b501-a99bfb2584f4</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Room_Touch_Panel</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Room Touch Panel</_hname>
+					<_hid type="a">GUID 957d40d9-6ee1-4b54-a58e-7c19d23c3fa4</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID de36c95f-4806-41a0-8bba-bfd4032eb061</value>
+				<value>GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID de36c95f-4806-41a0-8bba-bfd4032eb061</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsInteract with Room Touch Panel</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:5:30</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Interact with Room Touch Panel</_hname>
+					<_hid type="a">GUID a5fb9110-d681-4a5f-969b-0b41b66bf49b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Interact with Room Touch Panel</_hclass>
+					<_hname type="a">itsRoom_Touch_Panel</_hname>
+					<_hid type="a">GUID f79f172e-5b47-47e4-a70f-da1b7db1f7bf</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:5:51</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsRoom_Touch_Panel</_hname>
+					<_hid type="a">GUID d42ebeaf-4cc6-4cde-9fa0-27cb4dfbb30f</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 55c02f71-42de-4c91-8df1-87d0d2285eb2</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Smart_Screen</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Communication and AudioVideo System</_hname>
+					<_hid type="a">GUID a5e12e95-21c4-42a9-b44a-9cbf1f41679c</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 7a561fc0-8f69-4411-bce0-30d497114f6f</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 7a561fc0-8f69-4411-bce0-30d497114f6f</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:24:24</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsSmart_Screen</_hname>
+					<_hid type="a">GUID 1dbf7420-f274-4813-9a55-85ef5caeabdf</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 3e745777-84a8-4b33-87a3-592820b1aabd</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Speakers</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Communication and AudioVideo System</_hname>
+					<_hid type="a">GUID a5e12e95-21c4-42a9-b44a-9cbf1f41679c</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID c6ac30b2-0ed9-4fbc-ae47-c06b9a4f8579</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID c6ac30b2-0ed9-4fbc-ae47-c06b9a4f8579</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:23:53</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsSpeakers</_hname>
+					<_hid type="a">GUID cbff0459-5da7-4c11-8844-abd7028e35cc</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 3b4267c3-ffdc-45c0-b89f-52bacbe5be96</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Weather_Forecast</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">HVAC System</_hname>
+					<_hid type="a">GUID b18ec0de-4404-4af5-9123-6b792c0009b8</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 35d1af47-632d-4657-bee7-fbcf1a55cf93</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 35d1af47-632d-4657-bee7-fbcf1a55cf93</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:21:36</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsWeather_Forecast</_hname>
+					<_hid type="a">GUID dd1420c8-375c-43c5-8d67-157b2dfb0f29</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 7ce36dff-49f2-4f09-826c-2cf3e1737b81</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Webcam</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Communication and AudioVideo System</_hname>
+					<_hid type="a">GUID a5e12e95-21c4-42a9-b44a-9cbf1f41679c</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
+			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 3179fa06-750c-49b5-94ae-dc5b3f1fe398</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 3179fa06-750c-49b5-94ae-dc5b3f1fe398</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:23:57</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsWebcam</_hname>
+					<_hid type="a">GUID 3f1d9f3d-08b3-4b79-890c-d2a12dfd7ab5</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
 		
 	</RHAPSODY-MODEL>
 	<OslcLinks type="c">

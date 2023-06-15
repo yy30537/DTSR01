@@ -24,8 +24,8 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">6.14.2023::9:49:8</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.14.2023::9:49:8</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.15.2023::21:13:59</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.15.2023::21:13:59</_modifiedTime>
 			<_lastID type="a">23</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
@@ -527,8 +527,8 @@
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.12.2023::18:43:36</_modifiedTime>
-			<_lastModifiedTime type="a">6.12.2023::18:43:36</_lastModifiedTime>
+			<_modifiedTime type="a">6.15.2023::21:13:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.15.2023::21:13:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -573,7 +573,7 @@
 			</m_name>
 			<m_drawBehavior type="a">0</m_drawBehavior>
 			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
-			<elementList type="a">6</elementList>
+			<elementList type="a">5</elementList>
 			
 			<m_access type="a">'Z'</m_access>
 			<m_modified type="a">'N'</m_modified>
@@ -588,7 +588,6 @@
 			<AggregatesList type="e">
 				<value>GUID 3e12685e-f9b4-4e0b-98f0-3f26900273df</value>
 				<value>GUID 46de2e87-d386-4270-af00-6cf1c180f172</value>
-				<value>GUID 5d84a556-41c6-483a-a3a9-43a2ba76b5cc</value>
 				<value>GUID 94e5a897-a95b-4b43-a9ed-b58791560a40</value>
 				<value>GUID 3a0e1852-f047-462b-94e8-80728f004e09</value>
 				<value>GUID 8780497f-7898-456f-b955-0d4fe2f84d12</value>
@@ -700,87 +699,6 @@
 			<m_nNameFormat type="a">0</m_nNameFormat>
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
 		</CGIDiagramFrame>
-		<CGIPackage type="e">
-			<_id type="a">GUID 5d84a556-41c6-483a-a3a9-43a2ba76b5cc</_id>
-			<_properties type="p"><IPropertyContainer type="e">
-				<Subjects type="c">
-					<IRPYRawContainer type="e">
-						<IPropertySubject type="e">
-							<_Name type="a">General</_Name>
-							<Metaclasses type="c">
-								<IRPYRawContainer type="e">
-									<IPropertyMetaclass type="e">
-										<_Name type="a">Graphics</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<IProperty type="e">
-													<_Name type="a">FitBoxToItsTextuals</_Name>
-													<_Value type="a">False</_Value>
-													<_Type type="a">Bool</_Type>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
-								</IRPYRawContainer>
-							</Metaclasses>
-						</IPropertySubject>
-						
-					</IRPYRawContainer>
-				</Subjects>
-			</IPropertyContainer>
-			</_properties>
-			<m_type type="a">127</m_type>
-			<m_pModelObject type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">ISubsystem</_hm2Class>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
-					<_hname type="a">InterfacesPkg</_hname>
-					<_hid type="a">GUID 7224aeb3-0ff9-41a9-8176-897c80e8af7a</_hid>
-				</IHandle>
-			</m_pModelObject>
-			<m_pParent type="s">GUID 3e12685e-f9b4-4e0b-98f0-3f26900273df</m_pParent>
-			<m_name type="p">
-				<CGIText type="e">
-					<m_str type="a">InterfacesPkg</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">5</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_name>
-			<m_drawBehavior type="a">4104</m_drawBehavior>
-			<m_transform type="a">0.177632 0 0 0.0920938 63 150.684 </m_transform>
-			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
-			<m_AdditionalLabel type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_AdditionalLabel>
-			<m_polygon type="a">4 0 0  0 1151  1216 1151  1216 0  </m_polygon>
-			<m_nNameFormat type="a">0</m_nNameFormat>
-			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
-		</CGIPackage>
 		<CGIPackage type="e">
 			<_id type="a">GUID 94e5a897-a95b-4b43-a9ed-b58791560a40</_id>
 			<_properties type="p"><IPropertyContainer type="e">
