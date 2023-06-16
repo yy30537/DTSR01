@@ -12,7 +12,7 @@
 			<_id type="a">GUID a127c406-634c-4e60-9083-0e78541b5a6d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">UseCaseAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">6.16.2023::12:28:55</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.16.2023::13:48:38</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -20,9 +20,9 @@
 					<_hid type="a">GUID f1832423-7170-436a-ad22-8c3d19d37de2</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.16.2023::12:10:30</_modifiedTime>
+			<_modifiedTime type="a">6.16.2023::14:4:24</_modifiedTime>
 			<_lastID type="a">68</_lastID>
-			<weakCGTime type="a">6.16.2023::12:28:55</weakCGTime>
+			<weakCGTime type="a">6.16.2023::13:48:38</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:20:48</strongCGTime>
 			<_defaultComposite type="s">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -21062,6 +21062,7 @@
 			<_description type="p"><IDescription type="e">
 				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\kerning2\b\f0\fs22 Use case name:\b0  Control HVAC\par%0D
+\b ID: \b0 5.1\par%0D
 \b Scope:\b0   The user is able to control the HVAC system through the room touch panel\par%0D
 \b Primary actor\b0 : User\par%0D
 \b Secondary actor:\b0  HVAC\par%0D
@@ -21082,7 +21083,7 @@
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::10:5:53</_modifiedTime>
+			<_modifiedTime type="a">6.16.2023::13:44:22</_modifiedTime>
 			<_lastID type="a">7</_lastID>
 			<weakCGTime type="a">6.15.2023::22:51:0</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -21402,6 +21403,7 @@
 			<_description type="p"><IDescription type="e">
 				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}}%0D
 \viewkind4\uc1\pard\kerning2\b\f0\fs22 Use case name:\b0  Control Lightning\par%0D
+\b ID: \b0 6.1\par%0D
 \b Scope:\b0   The user is able to control the lightning system through the room touch panel\par%0D
 \b Primary actor\b0 : User\par%0D
 \b Secondary actor: \b0 Lightning\par%0D
@@ -21420,7 +21422,7 @@
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::10:24:59</_modifiedTime>
+			<_modifiedTime type="a">6.16.2023::13:48:38</_modifiedTime>
 			<_lastID type="a">6</_lastID>
 			<weakCGTime type="a">6.15.2023::22:51:32</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -21698,7 +21700,7 @@
 			<_id type="a">GUID 3d5a5309-de25-457d-b6bb-c2a116cbdb04</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Control AudioVid</_name>
-			<_modifiedTimeWeak type="a">6.15.2023::22:31:18</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.16.2023::9:32:26</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -21708,7 +21710,8 @@
 			<_description type="p"><IDescription type="e">
 				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\kerning2\b\f0\fs22 Use case name:\b0  Control Communication and Audio/Video System\par%0D
-\b Scope:\b0   The user is able to control the Control and Audio/Video System through the room touch panel\par%0D
+\b ID: \b0 2.1\b\par%0D
+Scope:\b0   The user is able to control the Control and Audio/Video System through the room touch panel\par%0D
 \b Primary actor\b0 : User\par%0D
 \b Secondary actor: \b0 -\par%0D
 \b Pre-condition: \par%0D
@@ -21731,7 +21734,7 @@
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::10:6:19</_modifiedTime>
+			<_modifiedTime type="a">6.16.2023::13:36:28</_modifiedTime>
 			<_lastID type="a">5</_lastID>
 			<weakCGTime type="a">6.16.2023::9:32:26</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -21740,10 +21743,6 @@
 				</IHandle>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
-			<Diagrams type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Diagrams>
 			<_EntryPoints type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
@@ -21919,7 +21918,7 @@
 			<_id type="a">GUID 32a5d3a3-c5ce-4041-97f8-49c943e5da79</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Control Security and Access</_name>
-			<_modifiedTimeWeak type="a">6.14.2023::20:24:57</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.16.2023::12:19:16</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -21929,6 +21928,7 @@
 			<_description type="p"><IDescription type="e">
 				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\kerning2\b\f0\fs22 Use case name:\b0  Control Security and Access system\par%0D
+\b ID:  \b0 10.1\par%0D
 \b Scope:\b0   The user is able to control the Security and Access  system through the room touch panel\par%0D
 \b Primary actor\b0 : User\par%0D
 \b Secondary actor: \b0 -\par%0D
@@ -21947,10 +21947,11 @@
 \par%0D
 \pard\kerning0\b0\f1\fs20\par%0D
 \par%0D
-}</_textRTF>
+}%0D
+</_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::12:19:16</_modifiedTime>
+			<_modifiedTime type="a">6.16.2023::13:41:26</_modifiedTime>
 			<_lastID type="a">6</_lastID>
 			<weakCGTime type="a">6.16.2023::12:19:16</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -22201,7 +22202,7 @@
 			<_id type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Get Data</_name>
-			<_modifiedTimeWeak type="a">6.15.2023::22:52:39</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.16.2023::12:21:22</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -22211,6 +22212,7 @@
 			<_description type="p"><IDescription type="e">
 				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
 \viewkind4\uc1\pard\kerning2\b\f0\fs22 Use case name:\b0  Get Data\par%0D
+\b ID: \b0 1.2\par%0D
 \b Scope:\b0   Systems get required data from other systems\par%0D
 \b Primary actor\b0 : All sensors, room- and door touch panels, weather forecast, booking system and external personnel database\par%0D
 \b Secondary actor:  \b0 Lightning system, HVAC, Communication and Audio/Video system and Security and Access system\par%0D
@@ -22235,7 +22237,7 @@
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::12:21:22</_modifiedTime>
+			<_modifiedTime type="a">6.16.2023::13:52:28</_modifiedTime>
 			<_lastID type="a">10</_lastID>
 			<weakCGTime type="a">6.16.2023::12:21:22</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -22995,14 +22997,34 @@
 			<_id type="a">GUID 576a8712-d187-4426-ab1d-616d09598778</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Control Door</_name>
-			<_modifiedTimeWeak type="a">6.14.2023::20:27:41</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.16.2023::12:25:22</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.16.2023::12:25:22</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Control Door %0D
+ID: 3.3 %0D
+Scope:  A user has control over the opening- and closing of a door %0D
+Primary actor: User %0D
+Secondary actor: Door Touch Panel %0D
+Pre-condition:  %0D
+(1) The logged-in user has booked the room %0D
+(2) The user has access to the room %0D
+(3) The user is physically present at the Door Touch Panel %0D
+Post-condition:  %0D
+(1) The user can open or close the door of the room from the Door Touch Panel %0D
+Trigger: The user touches the display of the Door Touch Panel %0D
+Main success scenario:  %0D
+(1) The logged-in user selects on the Door Touch Panel that they wish to open or close the door %0D
+(2) The door opens or closes, according to the by the user selected option %0D
+Extensions:  - %0D
+Related information: -</_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:57:48</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<weakCGTime type="a">6.16.2023::12:25:22</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23191,7 +23213,26 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.14.2023::21:7:43</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Log in user %0D
+ID: 3.2 %0D
+Scope:  The user logs into the Door Touch Panel %0D
+Primary actor: User %0D
+Secondary actor: - %0D
+Pre-condition:  %0D
+(1) The user is physically present at the Door Touch Panel %0D
+(2) The Touch Door Panel is connected with the network %0D
+Post-condition: The user is logged into the Door Touch Panel %0D
+Trigger: The user touches the display of the Door Touch Panel %0D
+Main success scenario:  %0D
+(1) The user authenticates themself by fingerprint on the Door Touch Panel  %0D
+(2) The fingerprint of the user match a registered fingerprint %0D
+(3) The Door Touch Panel logs the user into the System %0D
+Extensions:  %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:57:22</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<weakCGTime type="a">6.14.2023::20:20:29</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23315,7 +23356,27 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.15.2023::22:36:5</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Book Room %0D
+ID: 3.5 %0D
+Scope:  The user books a room %0D
+Primary actor: User %0D
+Secondary actor: - %0D
+Pre-condition:  %0D
+(1) The user is logged in to the Door Touch Panel of the room that they want to book %0D
+Post-condition:  %0D
+(1) The room is booked %0D
+(2) The user gains access to the room %0D
+Trigger: The user selects a room they want to book %0D
+Main success scenario:  %0D
+(1) The logged-in user selects on the Door Touch Panel that they wish to book the room %0D
+(2) The user confirms that they want to book the room %0D
+(3) The Door Touch Panel displays that the room is booked by the user %0D
+Extensions:  - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:58:37</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<weakCGTime type="a">6.14.2023::20:31:48</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23441,7 +23502,32 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.15.2023::22:39:48</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Request service %0D
+ID: 3.6  %0D
+Scope:  The user requests a service from the Door Touch Panel %0D
+Primary actor: User %0D
+Secondary actor: External personnel %0D
+Pre-condition:  %0D
+(1) The user is physically at the Door Touch Panel %0D
+(2) The Door Touch Panel is connected with the network %0D
+Post-condition:  %0D
+(1) External personnel have received the request made by the user %0D
+Trigger: The user requires external personnel %0D
+Main success scenario:  %0D
+(1) The user selects on the Door Touch Panel that they want to request service %0D
+(2) The user selects any of the following personnel options: %0D
+* Cleaning personnel %0D
+* IT personnel %0D
+* Police department %0D
+* Hospital personnel %0D
+(3) The Door Touch Panel puts the request on the network %0D
+(4) The request arrives at the external personnel selected in (2)  %0D
+Extensions:  - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:59:4</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<weakCGTime type="a">6.14.2023::20:26:19</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23556,7 +23642,29 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.14.2023::20:30:51</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\fs20 Use case name: Give access to user \par%0D
+ID: 3.4\par%0D
+Scope:  The user is granted access to the room \par%0D
+Primary actor: User \par%0D
+Secondary actor: - \par%0D
+Pre-condition:  \par%0D
+(1) The user has booked the room \par%0D
+Post-condition:  \par%0D
+(1) The user is granted access to the room  \par%0D
+Trigger: The user has booked the room \par%0D
+Main success scenario:  \par%0D
+(1) The user books the room \par%0D
+(2) The Security and Access System grants the user access to the room  \par%0D
+(3) The Use Case \ldblquote Control Door\rdblquote  is started \par%0D
+Extensions:  \par%0D
+Related information: - \par%0D
+}%0D
+</_textRTF>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:58:16</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<weakCGTime type="a">6.14.2023::20:30:51</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23644,7 +23752,28 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Toggle Light Location of User</_name>
 			<_modifiedTimeWeak type="a">6.14.2023::21:34:13</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:43:54</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Toggle Light Location of User %0D
+ID: 6.5 %0D
+Scope: The Lightning system does not turn off the lights on the location of the user %0D
+Primary actor: Lightning System %0D
+Secondary actor: User %0D
+Pre-condition:  %0D
+(1) The Lightning System is connected with the network %0D
+(2) The user is present in the room %0D
+Post-condition:  %0D
+(1) The lights on the location of the user are turned on %0D
+Trigger: The occupancy sensor senses occupants %0D
+Main success scenario:  %0D
+(1) The Occupancy Sensor senses the location of the user %0D
+(2) The Occupancy Sensor sends the location to the system %0D
+(3) The System notifies the Lightning System of the location of the user and gives the command to not turn of the light at the location of the user %0D
+(4) The Lightning System does not turn off the light at the location of the user %0D
+Extensions:  - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:4:17</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.14.2023::21:34:13</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23700,7 +23829,31 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Set temperature</_name>
 			<_modifiedTimeWeak type="a">6.15.2023::22:35:24</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:38:18</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\fs20 Use case name: Set Temperature \par%0D
+ID: 5.3 \par%0D
+Scope:  The user sets the temperature on the HVAC through the Room Touch Panel \par%0D
+Primary actor: User \par%0D
+Secondary actor: HVAC \par%0D
+Pre-condition:  \par%0D
+(1) The user is physically at the Room Touch Panel \par%0D
+(2) The HVAC is connected with the network \par%0D
+(3) The HVAC is turned on \par%0D
+Post-condition:  \par%0D
+(1) The HVAC set temperature is adjusted to the temperature set by the user \par%0D
+Trigger: The user touches the display of the Room Touch Panel \par%0D
+Main success scenario:  \par%0D
+(1) The user selects the \ldblquote Set Temperature\rdblquote  button on the Room Touch Panel \par%0D
+(2) The user fills in the desired temperature of the room \par%0D
+(3) The HVAC will regulate the temperature in the room to match the desired temperature \par%0D
+Extensions:  \par%0D
+Related information: \par%0D
+}%0D
+</_textRTF>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:0:45</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<weakCGTime type="a">6.15.2023::22:35:24</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23788,7 +23941,25 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Regulate Air Quality</_name>
 			<_modifiedTimeWeak type="a">6.14.2023::22:33:21</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:38:41</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Regulate Air Quality  %0D
+ID: 5.6 %0D
+Scope: The HVAC regulates the air quality in the room  %0D
+Primary actor: HVAC %0D
+Secondary actor: - %0D
+Pre-condition:  %0D
+(1) The CO2 level in the room exceeds a certain threshold %0D
+Post-condition:  %0D
+(1) The CO2 level in the room is below a certain threshold %0D
+Trigger: The CO2 level in the room exceeds a certain threshold %0D
+Main success scenario:  %0D
+(1) The CO2 Sensor notifies the HVAC that the CO2 level has exceeded a certain threshold %0D
+(2) The HVAC lowers the CO2 level in the room  %0D
+Extensions: - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:2:14</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.14.2023::22:33:21</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23843,8 +24014,30 @@
 			<_id type="a">GUID c57947b8-86d3-4d2b-be50-4fecf21c451e</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Regulate HVAC Automatically</_name>
-			<_modifiedTimeWeak type="a">6.14.2023::22:30:37</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::10:13:39</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.16.2023::10:13:39</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Regulate HVAC Automatically %0D
+ID: 5.4 %0D
+Scope:  The HVAC regulates the temperature of the room automatically %0D
+Primary actor: HVAC %0D
+Secondary actor: - %0D
+Pre-condition:  %0D
+(1) The HVAC is connected with the network %0D
+(2) The HVAC is turned on %0D
+(3) The Weather Forecast signals the temperature to be at least 25 degrees Celsius %0D
+Post-condition:  %0D
+(1) The temperature in the room is regulated by the HVAC %0D
+Trigger: The Weather Forecast signals the HVAC %0D
+Main success scenario:  %0D
+(1) The Weather Forecast signals the HVAC that the temperature is at least 25 degrees Celsius %0D
+(2) The HVAC sets the desired temperature in the room to 20 degrees %0D
+Extensions:  %0D
+(1) The Weather Forecast signals the HVAC that the temperature is at most 15 degrees Celsius %0D
+(2) The HVAC sets the desired temperature in the room to 20 degrees %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:1:17</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<weakCGTime type="a">6.16.2023::10:13:39</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23937,7 +24130,8 @@
 			<_modifiedTimeWeak type="a">6.15.2023::22:17:43</_modifiedTimeWeak>
 			<_description type="p"><IDescription type="e">
 				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}}%0D
-\viewkind4\uc1\pard\kerning2\b\f0\fs22 Use case name:\b0  Interact with Touch Panel\par%0D
+\viewkind4\uc1\pard\kerning2\b\f0\fs22 Use case name:\b0  Interact with Room Touch Panel\par%0D
+\b ID: \b0 9.1\par%0D
 \b Scope:\b0   The user is able to interact with the room touch panel\par%0D
 \b Primary actor\b0 : User\par%0D
 \b Secondary actor: \b0 Room Touch Panel\par%0D
@@ -23953,7 +24147,7 @@
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.15.2023::22:44:58</_modifiedTime>
+			<_modifiedTime type="a">6.16.2023::13:50:57</_modifiedTime>
 			<_lastID type="a">6</_lastID>
 			<weakCGTime type="a">6.15.2023::22:17:43</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -24346,7 +24540,31 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Control Microphone</_name>
 			<_modifiedTimeWeak type="a">6.15.2023::14:28:5</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::9:32:7</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\fs20 Use case name: Control Microphone \par%0D
+ID: 2.2 \par%0D
+Scope:  Interact with Communication and AudioVideo System \par%0D
+Primary actor: User \par%0D
+Secondary actor: - \par%0D
+Pre-condition:  \par%0D
+(1) See Use Case \ldblquote Control AudioVid\rdblquote  \par%0D
+Post-condition:  \par%0D
+(1) The user has toggled the microphone on or off \par%0D
+Main success scenario:  \par%0D
+(1) The user interacts with the Room Touch Panel \par%0D
+(2) The user selects the \ldblquote Turn on microphone\rdblquote  button \par%0D
+(3) The Audio/Video System turns on the microphone \par%0D
+Extensions:   \par%0D
+(1) The user interacts with the Room Touch Panel \par%0D
+(2) The user selects the \ldblquote Turn off microphone\rdblquote  button \par%0D
+(3) The Audio/Video System turns off the microphone \par%0D
+Related information: - \par%0D
+}%0D
+</_textRTF>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:53:13</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<weakCGTime type="a">6.15.2023::14:28:5</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -24433,7 +24651,7 @@
 		<IGeneralization type="e">
 			<_id type="a">GUID 948be9bf-f285-4c74-a281-9bbbce3ca798</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IUseCase</_hm2Class>
@@ -24447,8 +24665,37 @@
 			<_id type="a">GUID aea93d01-0990-48d6-a71e-925e65590cc1</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Control Speakers</_name>
-			<_modifiedTimeWeak type="a">6.15.2023::14:28:18</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::9:32:32</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.16.2023::9:32:26</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\fs20 Use case name: Control Microphone \par%0D
+ID: 2.3 \par%0D
+Scope:  Interact with the speakers of the Audio/Video System \par%0D
+Primary actor: User \par%0D
+Secondary actor: - \par%0D
+Pre-condition:  \par%0D
+(1) See Use Case \ldblquote Control AudioVid\rdblquote  \par%0D
+Post-condition:  \par%0D
+(1) The user has toggled the speakers on or off \par%0D
+Main success scenario:  \par%0D
+(1) The user interacts with the Room Touch Panel \par%0D
+(2) The user selects the \ldblquote Turn on speakers\rdblquote  button \par%0D
+(3) The Audio/Video System turns on the speakers \par%0D
+Extensions:   \par%0D
+(1) The user interacts with the Room Touch Panel \par%0D
+(2) The user selects the \ldblquote Turn off speakers\rdblquote  button \par%0D
+(3) The Audio/Video System turns off the speakers\par%0D
+ \par%0D
+(1) The user interacts with the Room Touch Panel \par%0D
+(2) The user selects the \ldblquote Control volume\rdblquote  \par%0D
+(3) The user selects the desired volume level \par%0D
+(4) The Audio/Video System sets the volume to the selected level  \par%0D
+Related information: - \par%0D
+}%0D
+</_textRTF>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:54:1</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<weakCGTime type="a">6.16.2023::9:32:26</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -24456,15 +24703,7 @@
 				<IHandle type="e">
 				</IHandle>
 			</_itsStateChart>
-			<Associations type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Associations>
 			<_classModifier type="a">Unspecified</_classModifier>
-			<Diagrams type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Diagrams>
 			<_EntryPoints type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
@@ -24543,7 +24782,7 @@
 		<IGeneralization type="e">
 			<_id type="a">GUID 794470e0-6aca-4d87-887f-1530d8994866</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IUseCase</_hm2Class>
@@ -24558,7 +24797,31 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Control Webcam</_name>
 			<_modifiedTimeWeak type="a">6.15.2023::14:28:27</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::9:32:41</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\fs20 Use case name: Control Webcam \par%0D
+ID: 2.4 \par%0D
+Scope:  Interact with the speakers of the Audio/Video System \par%0D
+Primary actor: User \par%0D
+Secondary actor: - \par%0D
+Pre-condition:  \par%0D
+(1) See Use Case \ldblquote Control AudioVid\rdblquote  \par%0D
+Post-condition:  \par%0D
+(1) The user has toggled the webcam on or off \par%0D
+Main success scenario:  \par%0D
+(1) The user interacts with the Room Touch Panel \par%0D
+(2) The user selects the \ldblquote Turn on webcam\rdblquote  button \par%0D
+(3) The Audio/Video System turns on the webcam \par%0D
+Extensions:   \par%0D
+(1) The user interacts with the Room Touch Panel \par%0D
+(2) The user selects the \ldblquote Turn off webcam\rdblquote  button \par%0D
+(3) The Audio/Video System turns off the webcam \par%0D
+Related information: - \par%0D
+}%0D
+</_textRTF>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:54:27</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<weakCGTime type="a">6.15.2023::14:28:27</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -24645,7 +24908,7 @@
 		<IGeneralization type="e">
 			<_id type="a">GUID e1aed27e-1f9d-4658-9b76-db32d848de2d</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IUseCase</_hm2Class>
@@ -24660,7 +24923,31 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Control Smart Screen</_name>
 			<_modifiedTimeWeak type="a">6.15.2023::14:28:33</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::9:32:48</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\fs20 Use case name: Control Smart Screen \par%0D
+ID: 2.5 \par%0D
+Scope:  Interact with the Smart Screen of the Audio/Video System \par%0D
+Primary actor: User \par%0D
+Secondary actor: - \par%0D
+Pre-condition:  \par%0D
+(1) See Use Case \ldblquote Control AudioVid\rdblquote  \par%0D
+Post-condition:  \par%0D
+(1) The user has toggled the Smart Screen on or off \par%0D
+Main success scenario:  \par%0D
+(1) The user interacts with the Room Touch Panel \par%0D
+(2) The user selects the \ldblquote Turn on Smart Screen\rdblquote  button \par%0D
+(3) The Audio/Video System turns on the Smart Screen \par%0D
+Extensions:   \par%0D
+(1) The user interacts with the Room Touch Panel \par%0D
+(2) The user selects the \ldblquote Turn off Smart Screen\rdblquote  button \par%0D
+(3) The Audio/Video System turns off the Smart Screen \par%0D
+Related information: - \par%0D
+}%0D
+</_textRTF>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:54:51</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<weakCGTime type="a">6.15.2023::14:28:33</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -24747,7 +25034,7 @@
 		<IGeneralization type="e">
 			<_id type="a">GUID c8894ee8-683e-48d5-956f-3ebed050f959</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IUseCase</_hm2Class>
@@ -24762,7 +25049,25 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Monitor CO2 Level</_name>
 			<_modifiedTimeWeak type="a">6.14.2023::23:6:55</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::20:59:23</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Monitor CO2 level %0D
+ID: 1.1 %0D
+Scope:  The CO2 sensor monitors the CO2 level of the air in the room and communicates this with the network %0D
+Primary actor: Fire Sensor %0D
+Secondary actor: -  %0D
+Pre-condition:  %0D
+(1) The CO2 sensor is physically present inside the room %0D
+(2) The CO2 sensor is connected with the network %0D
+Post-condition:  %0D
+(1) The CO2 sensor continuously sends the CO2 level to the network %0D
+Main success scenario:  %0D
+(1) The CO2 sensor measures the CO2 level of the air in the room %0D
+(2) The CO2 sensor sends this measured CO2 level to the network %0D
+Extensions:  - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:52:7</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.14.2023::23:6:55</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -24848,7 +25153,27 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Detect Fire</_name>
 			<_modifiedTimeWeak type="a">6.14.2023::23:9:3</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:4:10</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Detect Fire %0D
+ID: 4.1 %0D
+Scope:  The Fire Sensor detect whether there is a fire or not in the room and communicates this with the network %0D
+Primary actor: Fire Sensor %0D
+Secondary actor: -  %0D
+Pre-condition:  %0D
+(1) The Fire Sensor is physically present in the room %0D
+(2) The Fire Sensor is connected with the network %0D
+(3) There is a fire in the room %0D
+Post-condition:  %0D
+(1) The Fire Sensor has communicated to the network that there is a fire %0D
+Trigger: %0D
+Main success scenario:  %0D
+(1) The Fire Sensor detects a fire inside the room %0D
+(2) The Fire Sensor sends to the network that there is a fire inside the room %0D
+Extensions: - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:59:30</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.14.2023::23:9:3</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -24934,7 +25259,27 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Detect Movement</_name>
 			<_modifiedTimeWeak type="a">6.14.2023::23:10:39</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:6:50</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Detect Movement %0D
+ID: 7.1 %0D
+Scope:  The Movement Detection Sensor detects movement in the room and sends this to the system %0D
+Primary actor: Movement Detection Sensor %0D
+Secondary actor: - %0D
+Pre-condition:  %0D
+(1) There is movement in the room %0D
+(2) The Movement Detection Sensor is connected with the network %0D
+Post-condition:  %0D
+(1) The Movement Detection sensor notifies the system that there is movement in the room %0D
+Trigger: There is movement in the room %0D
+Main success scenario:  %0D
+(1) There is movement in the room %0D
+(2) The Movement Detection System detects the movement %0D
+(3) The Movement Detection System notifies the system through the network that there is movement in the room %0D
+Extensions: - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:5:10</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.14.2023::23:10:39</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25020,7 +25365,22 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Interact with Door Touch Panel</_name>
 			<_modifiedTimeWeak type="a">6.15.2023::22:30:58</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:39:48</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Interact with Door Touch Panel %0D
+ID: 3.1 %0D
+Scope:  The user interacts with the Door Touch Panel %0D
+Primary actor: User %0D
+Secondary actor: Door Touch Panel %0D
+Pre-condition:  %0D
+(1) The user is physically present at the Door Touch Panel %0D
+Post-condition: The user has interacted with the Door Touch Panel %0D
+Trigger: The user touches the display of the Door Touch Panel %0D
+Main success scenario:  %0D
+(1) The user clicks an option on the Door Touch Panel %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::13:57:4</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<weakCGTime type="a">6.15.2023::22:30:58</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25189,7 +25549,31 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Toggle Light</_name>
 			<_modifiedTimeWeak type="a">6.15.2023::22:42:58</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:42:58</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\fs20 Use case name: Toggle Light \par%0D
+ID: 6.2 \par%0D
+Scope:  The user turns on or off the light in the room through the Room Touch Panel \par%0D
+Primary actor: User \par%0D
+Secondary actor: Lightning System \par%0D
+Pre-condition:  \par%0D
+(1) The user is physically at the Room Touch Panel \par%0D
+(2) The Lightning System is connected with the network \par%0D
+Post-condition:  \par%0D
+(1) The Lightning System turns has toggled the light in the room \par%0D
+Trigger: The user touches the display of the Room Touch Panel \par%0D
+Main success scenario:  \par%0D
+(1) The user selects the \ldblquote Turn off lights\rdblquote  button on the Room Touch Panel \par%0D
+(2) The Lightning System turns off the light \par%0D
+Extensions:  \par%0D
+(1) The user selects the \ldblquote Turn on lights\rdblquote  button on the Room Touch Panel \par%0D
+(2) The Lightning System turns on the light \par%0D
+Related information: - \par%0D
+}%0D
+</_textRTF>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:2:46</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<weakCGTime type="a">6.15.2023::22:42:58</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25312,7 +25696,26 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Change Light Intensity</_name>
 			<_modifiedTimeWeak type="a">6.15.2023::22:42:55</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:42:55</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Change Light Intensity %0D
+ID: 6.3 %0D
+Scope:  The user sets the light intensity in the room through the Room Touch Panel %0D
+Primary actor: User %0D
+Secondary actor: Lightning System %0D
+Pre-condition:  %0D
+(1) The user is physically at the Room Touch Panel %0D
+(2) The Lightning System is connected with the network %0D
+Post-condition:  %0D
+(1) The light intensity is adjusted to the by the user selected intensity %0D
+Trigger: The user touches the display of the Room Touch Panel %0D
+Main success scenario:  %0D
+(1) The user changes the light intensity on the Room Touch Panel %0D
+(2) The Lightning System will change the light intensity in the room to match the selected intensity %0D
+Extensions: - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:3:13</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<weakCGTime type="a">6.15.2023::22:42:55</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25435,7 +25838,31 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Toggle Light Automatically</_name>
 			<_modifiedTimeWeak type="a">6.14.2023::21:32:40</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:41:30</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Turn Off Light Automatically %0D
+ID: 6.4%0D
+Scope: The lights are turned off automatically by the Lightning System %0D
+Primary actor: Lightning System %0D
+Secondary actor: - %0D
+Pre-condition:  %0D
+(1) The Lightning System is connected with the network %0D
+Post-condition:  %0D
+(1) The Lightning System turns on or off the lights in the room %0D
+Trigger: The conditions for turning on or off the lights automatically are met %0D
+Main success scenario:  %0D
+(1) The lights are on %0D
+(2) The Movement Sensors have not detected any movement in the room for some time %0D
+(3) The Movement Sensors notify the Lightning System that the lights have to be turned off %0D
+(4) The Lightning System will turn off the lights %0D
+Extensions:  %0D
+(1) The lights are off %0D
+(2) The Movement Sensors have detected some movement in the room for some time %0D
+(3) The Movement Sensors notify the Lightning System that the lights have to be turned on %0D
+(4) The Lightning System will turn on the lights %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:3:47</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<weakCGTime type="a">6.14.2023::21:32:40</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25526,7 +25953,31 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Toggle HVAC</_name>
 			<_modifiedTimeWeak type="a">6.15.2023::22:35:21</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:35:21</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_textRTF type="a">{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}%0D
+\viewkind4\uc1\pard\fs20 Use case name: Toggle HVAC \par%0D
+ID: 5.2 \par%0D
+Scope:  The user turns on or off the HVAC through the Room Touch Panel \par%0D
+Primary actor: User \par%0D
+Secondary actor: HVAC \par%0D
+Pre-condition:  \par%0D
+(1) The user is physically at the Room Touch Panel \par%0D
+(2) The HVAC is connected with the network \par%0D
+Post-condition:  \par%0D
+(1) The HVAC is turned on or off \par%0D
+Trigger: The user touches the display of the Room Touch Panel \par%0D
+Main success scenario:  \par%0D
+(1) The user selects the \ldblquote Turn on HVAC\rdblquote  button on the Room Touch Panel \par%0D
+(2) The HVAC turns on \par%0D
+Extensions:  \par%0D
+(1) The user selects the \ldblquote Turn off HVAC\rdblquote  button on the Room Touch Panel \par%0D
+(2) The HVAC turns off \par%0D
+Related information: - \par%0D
+}%0D
+</_textRTF>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:0:21</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<weakCGTime type="a">6.15.2023::22:35:21</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25649,7 +26100,29 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Toggle HVAC Automatically</_name>
 			<_modifiedTimeWeak type="a">6.14.2023::22:29:20</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:34:31</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Turn Off HVAC Automatically %0D
+ID: 5.5 %0D
+Scope: The HVAC is turned off automatically by the system. %0D
+Primary actor: HVAC %0D
+Secondary actor: - %0D
+Pre-condition:  %0D
+(1) The HVAC is connected with the network %0D
+Post-condition:  %0D
+(1) The HVAC is toggled on or off automatically  %0D
+Trigger: The conditions for turning off the HVAC automatically are met  %0D
+Main success scenario:  %0D
+(1) The Movement Detection Sensor senses that the user is inside the room %0D
+(2) The Movement Detection Sensor notifies the HVAC that the user is in the room %0D
+(3) The HVAC is turned on  %0D
+Extensions:  %0D
+(1) The Movement Detection Sensor senses that there is no user inside the room %0D
+(2) The Movement Detection Sensor notifies the HVAC that there is no user in the room %0D
+(3) The HVAC is turned off %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:1:46</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.14.2023::22:29:20</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25742,7 +26215,26 @@
 			<_myState type="a">8192</_myState>
 			<_name type="a">Detect Occupancy</_name>
 			<_modifiedTimeWeak type="a">6.15.2023::22:53:33</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:53:33</_modifiedTime>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Detect Occupancy %0D
+ID: 8.1 %0D
+Scope:  The Occupancy Detection Sensor detects occupants in the room and sends this to the system %0D
+Primary actor: Occupancy Sensor %0D
+Secondary actor: - %0D
+Pre-condition:  %0D
+(1) There are occupants in the room %0D
+(2) The Occupancy Sensor is connected with the network %0D
+Post-condition:  %0D
+(1) The Occupancy sensor notifies the system that there are occupants in the room %0D
+Trigger: There are occupancy in the room %0D
+Main success scenario:  %0D
+(1) The Occupancy System detects the movement %0D
+(2) The Occupancy Sensor notifies the system through the network that there are occupants in the room %0D
+Extensions: - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:6:7</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.15.2023::22:53:33</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25827,8 +26319,29 @@
 			<_id type="a">GUID 99c0025b-15b6-4983-ad4f-8339bf7ae213</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Identify User</_name>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::12:26:31</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.16.2023::12:26:31</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Identify User %0D
+ID: 10.2 %0D
+Scope:  The Security and Access System identifies a user %0D
+Primary actor: Security and Access System %0D
+Secondary actor: User %0D
+Pre-condition:  %0D
+(1) The Security and Access System stores a database of users %0D
+(2) There is an attempt made by a user to get identified by the system %0D
+Post-condition:  %0D
+(1) The Security and Access System correctly identified a user %0D
+Trigger: There is an attempt made by a user to get identified by the system %0D
+Main success scenario:  %0D
+(1) The Security Access System is requested to identify a user %0D
+(2) The Security Access System receives the credentials of the user %0D
+(3) The Security Access System checks if the credentials of the user match any of the credentials in the database of users %0D
+(4) The Security Access System finds a matching set of credentials and has identified the user %0D
+Extensions: - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:6:49</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<weakCGTime type="a">6.16.2023::12:26:31</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25837,10 +26350,6 @@
 				</IHandle>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
-			<UseCaseStereoTypes type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</UseCaseStereoTypes>
 			<_EntryPoints type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
@@ -25919,8 +26428,26 @@
 			<_id type="a">GUID a48a5077-d904-471f-8649-dc417acddd92</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">External Personnel Access</_name>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::12:27:55</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.16.2023::12:27:55</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: External Personnel Access %0D
+ID: 10.3 %0D
+Scope:  The Security and Access System grants access to the room to external personnel  %0D
+Primary actor: Security and Access System %0D
+Secondary actor: External personnel %0D
+Pre-condition:  %0D
+(1) There is an emergency for which external personnel needs to enter the room %0D
+Post-condition:  %0D
+(1) The Security and Access System has granted external personnel access to the room %0D
+Trigger: There is an emergency for which external personnel needs to enter the room %0D
+Main success scenario:  %0D
+(1) There is an emergency for which external personnel needs to enter the room %0D
+(2) The Security and Access System grants the external personnel access to the room %0D
+Extensions: - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:7:14</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<weakCGTime type="a">6.16.2023::12:27:55</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25929,10 +26456,6 @@
 				</IHandle>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
-			<UseCaseStereoTypes type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</UseCaseStereoTypes>
 			<_EntryPoints type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
@@ -26011,8 +26534,26 @@
 			<_id type="a">GUID 64d03ad9-edc3-48a1-9be5-154d1286347a</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Fire Department Access</_name>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::12:28:55</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.16.2023::12:28:55</_modifiedTimeWeak>
+			<_description type="p"><IDescription type="e">
+				<_text type="a">Use case name: Fire Department Access %0D
+ID: 10.4 %0D
+Scope:  The Security and Access System grants access to the room to the Fire Department %0D
+Primary actor: Security and Access System %0D
+Secondary actor: Fire Department %0D
+Pre-condition:  %0D
+(1) There is an emergency for which the Fire Department needs to enter the room %0D
+Post-condition:  %0D
+(1) The Security and Access System has granted the Fire Department access to the room %0D
+Trigger: There is an emergency for which the Fire Department needs to enter the room %0D
+Main success scenario:  %0D
+(1) There is an emergency for which the Fire Department needs to enter the room %0D
+(2) The Security and Access System grants the Fire Department access to the room %0D
+Extensions: - %0D
+Related information: - </_text>
+			</IDescription>
+			</_description>
+			<_modifiedTime type="a">6.16.2023::14:7:41</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.16.2023::12:28:55</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -26021,10 +26562,6 @@
 				</IHandle>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
-			<UseCaseStereoTypes type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</UseCaseStereoTypes>
 			<_EntryPoints type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
@@ -26071,7 +26608,7 @@
 		<IGeneralization type="e">
 			<_id type="a">GUID 7e4687c4-09de-4146-a17e-a96b78c5ee46</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_dependsOn type="r">
 				<INObjectHandle type="e">
 					<_hm2Class type="a">IUseCase</_hm2Class>
