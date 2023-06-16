@@ -12,7 +12,7 @@
 			<_id type="a">GUID c5c7a408-3f0e-44ce-b2ce-277d561e82fa</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">RequirementsAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">6.15.2023::22:50:52</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.16.2023::10:12:49</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -20,9 +20,9 @@
 					<_hid type="a">GUID f1832423-7170-436a-ad22-8c3d19d37de2</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.15.2023::22:52:46</_modifiedTime>
+			<_modifiedTime type="a">6.16.2023::10:13:36</_modifiedTime>
 			<_lastID type="a">50</_lastID>
-			<weakCGTime type="a">6.15.2023::22:50:52</weakCGTime>
+			<weakCGTime type="a">6.16.2023::10:12:49</weakCGTime>
 			<strongCGTime type="a">6.2.2023::15:47:37</strongCGTime>
 			<_defaultComposite type="s">GUID 4b022a86-3b64-415b-9953-22f41b58123f</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -18947,8 +18947,8 @@
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.14.2023::22:30:37</_modifiedTime>
-			<_lastModifiedTime type="a">6.14.2023::22:30:37</_lastModifiedTime>
+			<_modifiedTime type="a">6.16.2023::10:13:39</_modifiedTime>
+			<_lastModifiedTime type="a">6.16.2023::10:13:39</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -19007,8 +19007,8 @@
 				<value>GUID 87df048c-5e11-498c-8693-27f30112ec48</value>
 				<value>GUID e108d5f9-3b36-4c47-b3c6-a125c9a82bbe</value>
 				<value>GUID c6dc3a4b-350d-44f8-acfc-8ab607ed9bd8</value>
-				<value>GUID 1b2f0894-92b5-476b-b85b-709d904cdda1</value>
-				<value>GUID b7e683b6-15aa-4730-8d87-18d59009802d</value>
+				<value>GUID 9370f818-751a-4b32-822e-a2fe843fe10b</value>
+				<value>GUID 2ad658f6-2569-4a46-b532-05a0c740bc28</value>
 			</AggregatesList>
 		</CGIClassChart>
 		<CGIClass type="e">
@@ -19169,21 +19169,21 @@
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
 		</CGIBasicClass>
 		<CGIAnnotation type="e">
-			<_id type="a">GUID 1b2f0894-92b5-476b-b85b-709d904cdda1</_id>
+			<_id type="a">GUID 9370f818-751a-4b32-822e-a2fe843fe10b</_id>
 			<m_type type="a">176</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IRequirement</_hm2Class>
 					<_hfilename type="a">.\HVACSystemReq.sbsx</_hfilename>
 					<_hsubsystem type="a">RequirementsAnalysisPkg::HVACSystemReq</_hsubsystem>
-					<_hname type="a">Regulate Air Quality</_hname>
-					<_hid type="a">GUID 31ca275d-90ab-40bc-a954-745a5f3a01d1</_hid>
+					<_hname type="a">Weather Regulation</_hname>
+					<_hid type="a">GUID 09819a4b-3229-4220-bd4c-d655bf963c0c</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s">GUID 87df048c-5e11-498c-8693-27f30112ec48</m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
-					<m_str type="a">Regulate Air Quality</m_str>
+					<m_str type="a">Weather Regulation</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -19199,7 +19199,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">4104</m_drawBehavior>
-			<m_transform type="a">0.115314 0 0 0.102564 384 198.692 </m_transform>
+			<m_transform type="a">0.133764 0 0 0.157509 412 157.527 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -19220,32 +19220,32 @@
 			<m_polygon type="a">4 0 3  0 1095  1084 1095  1084 3  </m_polygon>
 			<m_nNameFormat type="a">0</m_nNameFormat>
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
-			<frameset type="a">&lt;frameset rows=40%25,60%25&gt;
+			<frameset type="a">&lt;frameset rows=25%25,75%25&gt;
 &lt;frame name=IDTextCompartment&gt;
 &lt;frame name=SpecificationTextCompartment&gt;</frameset>
 			<_iTempdisplayTextFlag type="a">1</_iTempdisplayTextFlag>
 			<m_bIsBoxStyle type="a">1</m_bIsBoxStyle>
 			<AggregatesList type="e">
-				<value>GUID b6fd4b13-6105-432a-8339-cbd57adcbf72</value>
-				<value>GUID d6e64e1d-88ef-4038-a7e7-c7dce0fb96f9</value>
+				<value>GUID 1ccb263f-a8fc-49b2-9186-0aa74a145716</value>
+				<value>GUID 26e20025-05b7-4cce-aae2-47bf77856c5f</value>
 			</AggregatesList>
 		</CGIAnnotation>
 		<CGICompartment type="e">
-			<_id type="a">GUID b6fd4b13-6105-432a-8339-cbd57adcbf72</_id>
+			<_id type="a">GUID 1ccb263f-a8fc-49b2-9186-0aa74a145716</_id>
 			<m_name type="a">ID</m_name>
 			<m_displayOption type="a">All</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
 		</CGICompartment>
 		<CGICompartment type="e">
-			<_id type="a">GUID d6e64e1d-88ef-4038-a7e7-c7dce0fb96f9</_id>
+			<_id type="a">GUID 26e20025-05b7-4cce-aae2-47bf77856c5f</_id>
 			<m_name type="a">Specification</m_name>
 			<m_displayOption type="a">All</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
 		</CGICompartment>
 		<CGIInheritance type="e">
-			<_id type="a">GUID b7e683b6-15aa-4730-8d87-18d59009802d</_id>
+			<_id type="a">GUID 2ad658f6-2569-4a46-b532-05a0c740bc28</_id>
 			<m_type type="a">128</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
@@ -19253,14 +19253,14 @@
 					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
 					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Regulate HVAC Automatically</_hclass>
-					<_hname type="a">Regulate Air Quality</_hname>
-					<_hid type="a">GUID ddae30de-7c0d-4cd3-8227-b183841a4c34</_hid>
+					<_hname type="a">Weather Regulation</_hname>
+					<_hid type="a">GUID 2ba3b18c-8ab4-40d0-b266-be5c67d97d15</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
-					<m_str type="a">Regulate Air Quality</m_str>
+					<m_str type="a">Weather Regulation</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -19279,7 +19279,7 @@
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_pSource type="s">GUID c6dc3a4b-350d-44f8-acfc-8ab607ed9bd8</m_pSource>
 			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID 1b2f0894-92b5-476b-b85b-709d904cdda1</m_pTarget>
+			<m_pTarget type="s">GUID 9370f818-751a-4b32-822e-a2fe843fe10b</m_pTarget>
 			<m_targetType type="a">'T'</m_targetType>
 			<m_direction type="a">' '</m_direction>
 			<m_rpn type="p">
@@ -19302,8 +19302,8 @@
 			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
 			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
 			<m_line_style type="a">0</m_line_style>
-			<m_SourcePort type="a">1127 510 </m_SourcePort>
-			<m_TargetPort type="a">-9 539 </m_TargetPort>
+			<m_SourcePort type="a">1127 543 </m_SourcePort>
+			<m_TargetPort type="a">0 619 </m_TargetPort>
 			<m_ShowName type="a">0</m_ShowName>
 			<m_ShowStereotype type="a">1</m_ShowStereotype>
 		</CGIInheritance>
