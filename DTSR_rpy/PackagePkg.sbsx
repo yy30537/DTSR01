@@ -12,10 +12,10 @@
 			<_id type="a">GUID 3d461902-d2d6-4e03-a5a4-8d4484d7b822</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">PackagePkg</_name>
-			<_modifiedTimeWeak type="a">6.16.2023::10:24:59</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::10:13:36</_modifiedTime>
-			<_lastID type="a">12</_lastID>
-			<weakCGTime type="a">6.16.2023::10:24:59</weakCGTime>
+			<_modifiedTimeWeak type="a">6.16.2023::12:12:31</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.16.2023::12:12:31</_modifiedTime>
+			<_lastID type="a">14</_lastID>
+			<weakCGTime type="a">6.16.2023::12:12:31</weakCGTime>
 			<strongCGTime type="a">6.12.2023::18:43:28</strongCGTime>
 			<_defaultComposite type="s">GUID 8459498b-369d-4f8a-a319-e75a6200ba47</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -36,6 +36,8 @@
 				<value>GUID 3e745777-84a8-4b33-87a3-592820b1aabd</value>
 				<value>GUID 3b4267c3-ffdc-45c0-b89f-52bacbe5be96</value>
 				<value>GUID 7ce36dff-49f2-4f09-826c-2cf3e1737b81</value>
+				<value>GUID 76a8c87b-5e66-4d8c-a9a6-31aca6ee4b6f</value>
+				<value>GUID 0dc5ffce-ab75-44f6-8275-84262fe6b83c</value>
 			</AggregatesList>
 		</ISubsystem>
 		<IClass type="e">
@@ -879,7 +881,7 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">6.15.2023::21:24:32</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.16.2023::12:15:44</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -889,8 +891,8 @@
 					<_hid type="a">GUID 957d40d9-6ee1-4b54-a58e-7c19d23c3fa4</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.15.2023::21:24:32</_modifiedTime>
-			<weakCGTime type="a">6.15.2023::21:24:32</weakCGTime>
+			<_modifiedTime type="a">6.16.2023::12:15:44</_modifiedTime>
+			<weakCGTime type="a">6.16.2023::12:15:44</weakCGTime>
 			<strongCGTime type="a">6.15.2023::21:24:32</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -900,6 +902,7 @@
 			<AggregatesList type="e">
 				<value>GUID de36c95f-4806-41a0-8bba-bfd4032eb061</value>
 				<value>GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</value>
+				<value>GUID 93a90f8c-dd9a-49ad-bc68-6753df200272</value>
 			</AggregatesList>
 		</IClass>
 		<IAssociationEnd type="e">
@@ -955,6 +958,35 @@
 					<_hclass type="a">Get Data</_hclass>
 					<_hname type="a">itsRoom_Touch_Panel</_hname>
 					<_hid type="a">GUID d42ebeaf-4cc6-4cde-9fa0-27cb4dfbb30f</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 93a90f8c-dd9a-49ad-bc68-6753df200272</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsControl Door</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.16.2023::12:15:44</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Control Door</_hname>
+					<_hid type="a">GUID 576a8712-d187-4426-ab1d-616d09598778</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Control Door</_hclass>
+					<_hname type="a">itsRoom_Touch_Panel</_hname>
+					<_hid type="a">GUID 9d980822-3c33-4fe6-aa23-0525f833c5a0</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -1227,6 +1259,142 @@
 					<_hclass type="a">Get Data</_hclass>
 					<_hname type="a">itsWebcam</_hname>
 					<_hid type="a">GUID 3f1d9f3d-08b3-4b79-890c-d2a12dfd7ab5</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 76a8c87b-5e66-4d8c-a9a6-31aca6ee4b6f</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">Booking_System</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.16.2023::12:13:46</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Security and Access System</_hname>
+					<_hid type="a">GUID 309f74b2-064b-4cb1-8615-72956a15153c</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.16.2023::12:13:46</_modifiedTime>
+			<weakCGTime type="a">6.16.2023::12:13:46</weakCGTime>
+			<strongCGTime type="a">6.16.2023::12:12:28</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID cfff03a7-a3b3-4804-86ad-0399954c719d</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID cfff03a7-a3b3-4804-86ad-0399954c719d</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.16.2023::12:13:46</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsBooking_System</_hname>
+					<_hid type="a">GUID b642119c-3c79-4e7a-888d-cde6c306dab1</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IClass type="e">
+			<_id type="a">GUID 0dc5ffce-ab75-44f6-8275-84262fe6b83c</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">External_Personnel</_name>
+			<Stereotypes type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IStereotype</_hm2Class>
+							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
+							<_hsubsystem type="a">SysML::Blocks</_hsubsystem>
+							<_hname type="a">Block</_hname>
+							<_hid type="a">GUID f685432f-691e-4ff1-be70-4d09d19457e1</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</Stereotypes>
+			<_modifiedTimeWeak type="a">6.16.2023::12:13:51</_modifiedTimeWeak>
+			<_theMainDiagram type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IUCDiagram</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Security and Access System</_hname>
+					<_hid type="a">GUID 309f74b2-064b-4cb1-8615-72956a15153c</_hid>
+				</IHandle>
+			</_theMainDiagram>
+			<_modifiedTime type="a">6.16.2023::12:13:51</_modifiedTime>
+			<weakCGTime type="a">6.16.2023::12:13:51</weakCGTime>
+			<strongCGTime type="a">6.16.2023::12:13:7</strongCGTime>
+			<_itsStateChart type="r">
+				<IHandle type="e">
+				</IHandle>
+			</_itsStateChart>
+			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID 7f2d2e10-0623-4a1d-bf39-78427a1cc968</value>
+			</AggregatesList>
+		</IClass>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 7f2d2e10-0623-4a1d-bf39-78427a1cc968</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsGet Data</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.16.2023::12:13:51</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Get Data</_hname>
+					<_hid type="a">GUID ba38af33-f562-4089-ac77-a9086645287b</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Get Data</_hclass>
+					<_hname type="a">itsExternal_Personnel</_hname>
+					<_hid type="a">GUID 6eb39b9c-62a7-4fa4-bd8f-aa580611720a</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>

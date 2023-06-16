@@ -12,10 +12,10 @@
 			<_id type="a">GUID b851de7a-61ef-4289-bfd6-f9aac76a1047</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">ActorPkg</_name>
-			<_modifiedTimeWeak type="a">6.15.2023::22:38:18</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.16.2023::12:12:0</_modifiedTimeWeak>
 			<_modifiedTime type="a">6.15.2023::22:38:18</_modifiedTime>
 			<_lastID type="a">14</_lastID>
-			<weakCGTime type="a">6.15.2023::22:38:18</weakCGTime>
+			<weakCGTime type="a">6.16.2023::12:12:0</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:5:40</strongCGTime>
 			<_defaultComposite type="s">GUID 5430bcf7-7251-458e-94a8-6f75ad0df316</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -44,7 +44,7 @@
 			<_id type="a">GUID 56334670-ad3b-4456-8a7b-a5216256f82d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">User</_name>
-			<_modifiedTimeWeak type="a">6.15.2023::22:42:9</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.16.2023::12:12:0</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -54,9 +54,9 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.15.2023::22:42:9</_modifiedTime>
+			<_modifiedTime type="a">6.16.2023::12:12:0</_modifiedTime>
 			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">6.15.2023::22:42:9</weakCGTime>
+			<weakCGTime type="a">6.16.2023::12:12:0</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:21:57</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -71,6 +71,7 @@
 				<value>GUID c3a48c5f-5563-4937-832e-c042e0278822</value>
 				<value>GUID ec45b0e3-cf52-478e-854f-a50fc78d0f55</value>
 				<value>GUID 760a0ed2-afb3-4aa2-9ac0-4288285139c4</value>
+				<value>GUID cd31aed6-d791-43cf-84ae-b73ebfc249bf</value>
 			</AggregatesList>
 		</IActor>
 		<IAssociationEnd type="e">
@@ -265,6 +266,35 @@
 					<_hclass type="a">Control Lightning</_hclass>
 					<_hname type="a">itsUser</_hname>
 					<_hid type="a">GUID 94b8e29f-1f06-4b38-9900-f9f22fcf98f6</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID cd31aed6-d791-43cf-84ae-b73ebfc249bf</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsControl Security and Access</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.16.2023::12:12:0</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IUseCase</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hname type="a">Control Security and Access</_hname>
+					<_hid type="a">GUID 32a5d3a3-c5ce-4041-97f8-49c943e5da79</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\UseCaseAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Control Security and Access</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 38439158-4848-4423-b9b9-fa2d568d8ee5</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
