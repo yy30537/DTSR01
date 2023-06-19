@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
-	<CODE-PAGE>1252</CODE-PAGE>
+	<CODE-PAGE>936</CODE-PAGE>
 	<version>109.0</version>
 	<lang>C++</lang>
 	<BuildNo>202002261110</BuildNo>
@@ -12,7 +12,7 @@
 			<_id type="a">GUID a127c406-634c-4e60-9083-0e78541b5a6d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">UseCaseAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">6.16.2023::13:48:38</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.19.2023::12:11:35</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -20,9 +20,9 @@
 					<_hid type="a">GUID f1832423-7170-436a-ad22-8c3d19d37de2</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.16.2023::14:4:24</_modifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:50:42</_modifiedTime>
 			<_lastID type="a">68</_lastID>
-			<weakCGTime type="a">6.16.2023::13:48:38</weakCGTime>
+			<weakCGTime type="a">6.19.2023::12:11:35</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:20:48</strongCGTime>
 			<_defaultComposite type="s">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -495,8 +495,8 @@
 			</_properties>
 			<_name type="a">Room Touch Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:18:26</_modifiedTime>
-			<_lastModifiedTime type="a">6.15.2023::22:18:26</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -1537,8 +1537,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Network</_hname>
 					<_hid type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_hid>
 				</IHandle>
@@ -1650,8 +1650,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Network</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
@@ -1835,8 +1835,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Room_Touch_Panel</_hname>
 					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
 				</IHandle>
@@ -1948,8 +1948,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
@@ -2125,8 +2125,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsInteract with Room Touch Panel</_hname>
 					<_hid type="a">GUID de36c95f-4806-41a0-8bba-bfd4032eb061</_hid>
@@ -2667,8 +2667,8 @@
 			</_properties>
 			<_name type="a">Door Touch Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::9:43:48</_modifiedTime>
-			<_lastModifiedTime type="a">6.16.2023::9:43:48</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -3844,8 +3844,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Network</_hname>
 					<_hid type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_hid>
 				</IHandle>
@@ -3957,8 +3957,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Network</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
@@ -4083,8 +4083,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Door_Touch_Panel</_hname>
 					<_hid type="a">GUID 28130e4e-a2b4-4890-b7ef-4161926d17ba</_hid>
 				</IHandle>
@@ -4145,8 +4145,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Door_Touch_Panel</_hclass>
 					<_hname type="a">itsInteract with Door Touch Panel</_hname>
 					<_hid type="a">GUID 7bc38735-9a62-48bc-b078-cd5e6de24dd9</_hid>
@@ -4379,8 +4379,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Door_Touch_Panel</_hclass>
 					<_hname type="a">itsControl Door</_hname>
 					<_hid type="a">GUID 70722d6c-329b-4a3f-8ca4-e063f6d3579a</_hid>
@@ -4970,8 +4970,8 @@
 			</_properties>
 			<_name type="a">Lightning System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::10:24:59</_modifiedTime>
-			<_lastModifiedTime type="a">6.16.2023::10:24:59</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -5556,8 +5556,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Room_Touch_Panel</_hname>
 					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
 				</IHandle>
@@ -5669,8 +5669,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
@@ -5793,8 +5793,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Movement_Sensor</_hname>
 					<_hid type="a">GUID b65d22f4-3fd9-457a-862a-d752f0963951</_hid>
 				</IHandle>
@@ -5906,8 +5906,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Movement_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</_hid>
@@ -6030,8 +6030,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Lights</_hname>
 					<_hid type="a">GUID e39f1c5b-0f82-4fb2-a066-041edd1568c0</_hid>
 				</IHandle>
@@ -6092,8 +6092,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Occupancy_Sensor</_hname>
 					<_hid type="a">GUID 1a436a09-0aef-48d9-bd00-97cbde5ba107</_hid>
 				</IHandle>
@@ -6154,8 +6154,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Occupancy_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 9b20802b-190f-41ed-b35b-1b788c907801</_hid>
@@ -6849,8 +6849,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Lights</_hclass>
 					<_hname type="a">itsControl Lightning_1</_hname>
 					<_hid type="a">GUID 8f3bf302-e11e-4e9e-9ff9-94a81f84495d</_hid>
@@ -7440,8 +7440,8 @@
 			</_properties>
 			<_name type="a">HVAC System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::10:4:52</_modifiedTime>
-			<_lastModifiedTime type="a">6.16.2023::10:4:52</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -8109,8 +8109,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">CO2_Sensor</_hname>
 					<_hid type="a">GUID 23e944c3-bf4b-489d-8285-9fcb08fe2e14</_hid>
 				</IHandle>
@@ -8171,8 +8171,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">CO2_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 6b3aadcb-0b05-4b78-adfa-e6241a652820</_hid>
@@ -8346,8 +8346,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Room_Touch_Panel</_hname>
 					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
 				</IHandle>
@@ -8459,8 +8459,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
@@ -8585,8 +8585,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Movement_Sensor</_hname>
 					<_hid type="a">GUID b65d22f4-3fd9-457a-862a-d752f0963951</_hid>
 				</IHandle>
@@ -8698,8 +8698,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Movement_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</_hid>
@@ -8824,8 +8824,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">HVAC</_hname>
 					<_hid type="a">GUID 5a1d9f93-223d-466c-a4fe-d80d40560095</_hid>
 				</IHandle>
@@ -8886,8 +8886,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Weather_Forecast</_hname>
 					<_hid type="a">GUID 3b4267c3-ffdc-45c0-b89f-52bacbe5be96</_hid>
 				</IHandle>
@@ -8999,8 +8999,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Weather_Forecast</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 35d1af47-632d-4657-bee7-fbcf1a55cf93</_hid>
@@ -9702,8 +9702,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">HVAC</_hclass>
 					<_hname type="a">itsControl HVAC_1</_hname>
 					<_hid type="a">GUID 3b4a8386-f077-4420-a447-5186a2cb70c2</_hid>
@@ -10325,8 +10325,8 @@
 			</_properties>
 			<_name type="a">Communication and AudioVideo System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::9:39:32</_modifiedTime>
-			<_lastModifiedTime type="a">6.16.2023::9:39:32</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:51:45</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:51:45</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -11109,8 +11109,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Room_Touch_Panel</_hname>
 					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
 				</IHandle>
@@ -11222,8 +11222,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
@@ -11348,8 +11348,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Webcam</_hname>
 					<_hid type="a">GUID 7ce36dff-49f2-4f09-826c-2cf3e1737b81</_hid>
 				</IHandle>
@@ -11410,8 +11410,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Speakers</_hname>
 					<_hid type="a">GUID 3e745777-84a8-4b33-87a3-592820b1aabd</_hid>
 				</IHandle>
@@ -11472,16 +11472,16 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
-					<_hname type="a">Microphone</_hname>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Microphones</_hname>
 					<_hid type="a">GUID 9838ab77-1e7f-4fd1-b85f-069d562fa13f</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s">GUID b8df3262-2798-46c1-9321-d66f4bf8cd6f</m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
-					<m_str type="a">Microphone</m_str>
+					<m_str type="a">Microphones</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -11585,9 +11585,9 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
-					<_hclass type="a">Microphone</_hclass>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Microphones</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID d2bdc481-dc2d-42ee-9702-b8cde2307635</_hid>
 				</IAssociationEndHandle>
@@ -11760,8 +11760,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Speakers</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID c6ac30b2-0ed9-4fbc-ae47-c06b9a4f8579</_hid>
@@ -11935,8 +11935,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Webcam</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 3179fa06-750c-49b5-94ae-dc5b3f1fe398</_hid>
@@ -12059,8 +12059,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Smart_Screen</_hname>
 					<_hid type="a">GUID 55c02f71-42de-4c91-8df1-87d0d2285eb2</_hid>
 				</IHandle>
@@ -12172,8 +12172,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Smart_Screen</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 7a561fc0-8f69-4411-bce0-30d497114f6f</_hid>
@@ -13081,8 +13081,8 @@
 			</_properties>
 			<_name type="a">Security and Access System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::12:16:15</_modifiedTime>
-			<_lastModifiedTime type="a">6.16.2023::12:16:15</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:17:51</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:17:51</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -14188,8 +14188,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Booking_System</_hname>
 					<_hid type="a">GUID 76a8c87b-5e66-4d8c-a9a6-31aca6ee4b6f</_hid>
 				</IHandle>
@@ -14279,8 +14279,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">External_Personnel</_hname>
 					<_hid type="a">GUID 0dc5ffce-ab75-44f6-8275-84262fe6b83c</_hid>
 				</IHandle>
@@ -14304,7 +14304,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">266246</m_drawBehavior>
-			<m_transform type="a">0.141643 0 0 0.0748663 1005.72 0.368973 </m_transform>
+			<m_transform type="a">0.141643 0 0 0.0748663 1019.72 14.369 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -14341,8 +14341,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Booking_System</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID cfff03a7-a3b3-4804-86ad-0399954c719d</_hid>
@@ -14516,8 +14516,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">External_Personnel</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 7f2d2e10-0623-4a1d-bf39-78427a1cc968</_hid>
@@ -14720,8 +14720,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Door_Touch_Panel</_hname>
 					<_hid type="a">GUID 28130e4e-a2b4-4890-b7ef-4161926d17ba</_hid>
 				</IHandle>
@@ -14811,8 +14811,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Room_Touch_Panel</_hname>
 					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
 				</IHandle>
@@ -14924,8 +14924,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Door_Touch_Panel</_hclass>
 					<_hname type="a">itsControl Door</_hname>
 					<_hid type="a">GUID 70722d6c-329b-4a3f-8ca4-e063f6d3579a</_hid>
@@ -15101,8 +15101,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
@@ -15227,8 +15227,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsControl Door</_hname>
 					<_hid type="a">GUID 93a90f8c-dd9a-49ad-bc68-6753df200272</_hid>
@@ -15431,8 +15431,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Fire_Sensor</_hname>
 					<_hid type="a">GUID 6945bed3-e21e-46ab-ad82-5adce337f085</_hid>
 				</IHandle>
@@ -15544,8 +15544,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Fire_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID d1b12231-9a6b-4243-b6b4-3c7955c02794</_hid>
@@ -16036,8 +16036,8 @@
 			</_properties>
 			<_name type="a">CO2 Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:33:20</_modifiedTime>
-			<_lastModifiedTime type="a">6.15.2023::22:33:20</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -16376,8 +16376,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Network</_hname>
 					<_hid type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_hid>
 				</IHandle>
@@ -16489,8 +16489,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Network</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
@@ -16615,8 +16615,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">CO2_Sensor</_hname>
 					<_hid type="a">GUID 23e944c3-bf4b-489d-8285-9fcb08fe2e14</_hid>
 				</IHandle>
@@ -16728,8 +16728,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">CO2_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 6b3aadcb-0b05-4b78-adfa-e6241a652820</_hid>
@@ -16905,8 +16905,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">CO2_Sensor</_hclass>
 					<_hname type="a">itsMonitor CO2 Level</_hname>
 					<_hid type="a">GUID 8298a362-1060-4bfa-bf56-1c838fa15f2f</_hid>
@@ -17397,8 +17397,8 @@
 			</_properties>
 			<_name type="a">Fire Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:32:51</_modifiedTime>
-			<_lastModifiedTime type="a">6.15.2023::22:32:51</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -17737,8 +17737,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Network</_hname>
 					<_hid type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_hid>
 				</IHandle>
@@ -17850,8 +17850,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Network</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
@@ -17976,8 +17976,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Fire_Sensor</_hname>
 					<_hid type="a">GUID 6945bed3-e21e-46ab-ad82-5adce337f085</_hid>
 				</IHandle>
@@ -18089,8 +18089,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Fire_Sensor</_hclass>
 					<_hname type="a">itsDetect Fire</_hname>
 					<_hid type="a">GUID 9605d216-c848-48d6-9b90-0bd636d8555a</_hid>
@@ -18266,8 +18266,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Fire_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID d1b12231-9a6b-4243-b6b4-3c7955c02794</_hid>
@@ -18756,8 +18756,8 @@
 			</_properties>
 			<_name type="a">Movement Detection sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:33:41</_modifiedTime>
-			<_lastModifiedTime type="a">6.15.2023::22:33:41</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -19096,8 +19096,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Network</_hname>
 					<_hid type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_hid>
 				</IHandle>
@@ -19209,8 +19209,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Network</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
@@ -19335,8 +19335,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Movement_Sensor</_hname>
 					<_hid type="a">GUID b65d22f4-3fd9-457a-862a-d752f0963951</_hid>
 				</IHandle>
@@ -19448,8 +19448,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Movement_Sensor</_hclass>
 					<_hname type="a">itsDetect Movement</_hname>
 					<_hid type="a">GUID d6a92fbf-5a59-4293-bcb9-99929de10097</_hid>
@@ -19625,8 +19625,8 @@
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Movement_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</_hid>
@@ -20047,8 +20047,8 @@
 			</_properties>
 			<_name type="a">Occupancy Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:33:30</_modifiedTime>
-			<_lastModifiedTime type="a">6.15.2023::22:33:30</_lastModifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
+			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -20287,8 +20287,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Occupancy_Sensor</_hname>
 					<_hid type="a">GUID 1a436a09-0aef-48d9-bd00-97cbde5ba107</_hid>
 				</IHandle>
@@ -20349,8 +20349,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Network</_hname>
 					<_hid type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_hid>
 				</IHandle>
@@ -20461,8 +20461,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Network</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
@@ -20638,8 +20638,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Occupancy_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 9b20802b-190f-41ed-b35b-1b788c907801</_hid>
@@ -20865,8 +20865,8 @@
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Occupancy_Sensor</_hclass>
 					<_hname type="a">itsDetect Occupancy</_hname>
 					<_hid type="a">GUID 7e55a2a4-5ead-4488-aaf1-0afdf4603ffe</_hid>
@@ -21370,8 +21370,8 @@
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">HVAC</_hname>
 					<_hid type="a">GUID 5a1d9f93-223d-466c-a4fe-d80d40560095</_hid>
 				</IClassifierHandle>
@@ -21379,8 +21379,8 @@
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">HVAC</_hclass>
 					<_hname type="a">itsControl HVAC_1</_hname>
 					<_hid type="a">GUID 3b4a8386-f077-4420-a447-5186a2cb70c2</_hid>
@@ -21677,8 +21677,8 @@
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Lights</_hname>
 					<_hid type="a">GUID e39f1c5b-0f82-4fb2-a066-041edd1568c0</_hid>
 				</IClassifierHandle>
@@ -21686,8 +21686,8 @@
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Lights</_hclass>
 					<_hname type="a">itsControl Lightning_1</_hname>
 					<_hid type="a">GUID 8f3bf302-e11e-4e9e-9ff9-94a81f84495d</_hid>
@@ -22237,7 +22237,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::13:52:28</_modifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:28:54</_modifiedTime>
 			<_lastID type="a">10</_lastID>
 			<weakCGTime type="a">6.16.2023::12:21:22</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -22626,8 +22626,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Network</_hname>
 					<_hid type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_hid>
 				</IClassifierHandle>
@@ -22635,8 +22635,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Network</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
@@ -22655,8 +22655,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">CO2_Sensor</_hname>
 					<_hid type="a">GUID 23e944c3-bf4b-489d-8285-9fcb08fe2e14</_hid>
 				</IClassifierHandle>
@@ -22664,8 +22664,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">CO2_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 6b3aadcb-0b05-4b78-adfa-e6241a652820</_hid>
@@ -22684,8 +22684,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Room_Touch_Panel</_hname>
 					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
 				</IClassifierHandle>
@@ -22693,8 +22693,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
@@ -22713,8 +22713,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Movement_Sensor</_hname>
 					<_hid type="a">GUID b65d22f4-3fd9-457a-862a-d752f0963951</_hid>
 				</IClassifierHandle>
@@ -22722,8 +22722,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Movement_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</_hid>
@@ -22742,8 +22742,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Weather_Forecast</_hname>
 					<_hid type="a">GUID 3b4267c3-ffdc-45c0-b89f-52bacbe5be96</_hid>
 				</IClassifierHandle>
@@ -22751,8 +22751,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Weather_Forecast</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 35d1af47-632d-4657-bee7-fbcf1a55cf93</_hid>
@@ -22764,25 +22764,25 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 		<IAssociationEnd type="e">
 			<_id type="a">GUID 80504613-6ef9-4d57-9ebb-4b965b970c6c</_id>
 			<_myState type="a">10240</_myState>
-			<_name type="a">itsMicrophone</_name>
+			<_name type="a">itsMicrophones</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:23:34</_modifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:28:54</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
-					<_hname type="a">Microphone</_hname>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Microphones</_hname>
 					<_hid type="a">GUID 9838ab77-1e7f-4fd1-b85f-069d562fa13f</_hid>
 				</IClassifierHandle>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
-					<_hclass type="a">Microphone</_hclass>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Microphones</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID d2bdc481-dc2d-42ee-9702-b8cde2307635</_hid>
 				</IHandle>
@@ -22800,8 +22800,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Speakers</_hname>
 					<_hid type="a">GUID 3e745777-84a8-4b33-87a3-592820b1aabd</_hid>
 				</IClassifierHandle>
@@ -22809,8 +22809,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Speakers</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID c6ac30b2-0ed9-4fbc-ae47-c06b9a4f8579</_hid>
@@ -22829,8 +22829,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Webcam</_hname>
 					<_hid type="a">GUID 7ce36dff-49f2-4f09-826c-2cf3e1737b81</_hid>
 				</IClassifierHandle>
@@ -22838,8 +22838,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Webcam</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 3179fa06-750c-49b5-94ae-dc5b3f1fe398</_hid>
@@ -22858,8 +22858,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Smart_Screen</_hname>
 					<_hid type="a">GUID 55c02f71-42de-4c91-8df1-87d0d2285eb2</_hid>
 				</IClassifierHandle>
@@ -22867,8 +22867,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Smart_Screen</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 7a561fc0-8f69-4411-bce0-30d497114f6f</_hid>
@@ -22887,8 +22887,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Occupancy_Sensor</_hname>
 					<_hid type="a">GUID 1a436a09-0aef-48d9-bd00-97cbde5ba107</_hid>
 				</IClassifierHandle>
@@ -22896,8 +22896,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Occupancy_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 9b20802b-190f-41ed-b35b-1b788c907801</_hid>
@@ -22916,8 +22916,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Fire_Sensor</_hname>
 					<_hid type="a">GUID 6945bed3-e21e-46ab-ad82-5adce337f085</_hid>
 				</IClassifierHandle>
@@ -22925,8 +22925,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Fire_Sensor</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID d1b12231-9a6b-4243-b6b4-3c7955c02794</_hid>
@@ -22945,8 +22945,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Booking_System</_hname>
 					<_hid type="a">GUID 76a8c87b-5e66-4d8c-a9a6-31aca6ee4b6f</_hid>
 				</IClassifierHandle>
@@ -22954,8 +22954,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Booking_System</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID cfff03a7-a3b3-4804-86ad-0399954c719d</_hid>
@@ -22974,8 +22974,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">External_Personnel</_hname>
 					<_hid type="a">GUID 0dc5ffce-ab75-44f6-8275-84262fe6b83c</_hid>
 				</IClassifierHandle>
@@ -22983,8 +22983,8 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">External_Personnel</_hclass>
 					<_hname type="a">itsGet Data</_hname>
 					<_hid type="a">GUID 7f2d2e10-0623-4a1d-bf39-78427a1cc968</_hid>
@@ -23154,8 +23154,8 @@ Related information: -</_text>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Door_Touch_Panel</_hname>
 					<_hid type="a">GUID 28130e4e-a2b4-4890-b7ef-4161926d17ba</_hid>
 				</IClassifierHandle>
@@ -23163,8 +23163,8 @@ Related information: -</_text>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Door_Touch_Panel</_hclass>
 					<_hname type="a">itsControl Door</_hname>
 					<_hid type="a">GUID 70722d6c-329b-4a3f-8ca4-e063f6d3579a</_hid>
@@ -23183,8 +23183,8 @@ Related information: -</_text>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Room_Touch_Panel</_hname>
 					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
 				</IClassifierHandle>
@@ -23192,8 +23192,8 @@ Related information: -</_text>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsControl Door</_hname>
 					<_hid type="a">GUID 93a90f8c-dd9a-49ad-bc68-6753df200272</_hid>
@@ -24516,8 +24516,8 @@ Related information: - </_text>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Room_Touch_Panel</_hname>
 					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
 				</IClassifierHandle>
@@ -24525,8 +24525,8 @@ Related information: - </_text>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Room_Touch_Panel</_hclass>
 					<_hname type="a">itsInteract with Room Touch Panel</_hname>
 					<_hid type="a">GUID de36c95f-4806-41a0-8bba-bfd4032eb061</_hid>
@@ -25129,8 +25129,8 @@ Related information: - </_text>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">CO2_Sensor</_hname>
 					<_hid type="a">GUID 23e944c3-bf4b-489d-8285-9fcb08fe2e14</_hid>
 				</IClassifierHandle>
@@ -25138,8 +25138,8 @@ Related information: - </_text>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">CO2_Sensor</_hclass>
 					<_hname type="a">itsMonitor CO2 Level</_hname>
 					<_hid type="a">GUID 8298a362-1060-4bfa-bf56-1c838fa15f2f</_hid>
@@ -25235,8 +25235,8 @@ Related information: - </_text>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Fire_Sensor</_hname>
 					<_hid type="a">GUID 6945bed3-e21e-46ab-ad82-5adce337f085</_hid>
 				</IClassifierHandle>
@@ -25244,8 +25244,8 @@ Related information: - </_text>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Fire_Sensor</_hclass>
 					<_hname type="a">itsDetect Fire</_hname>
 					<_hid type="a">GUID 9605d216-c848-48d6-9b90-0bd636d8555a</_hid>
@@ -25341,8 +25341,8 @@ Related information: - </_text>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Movement_Sensor</_hname>
 					<_hid type="a">GUID b65d22f4-3fd9-457a-862a-d752f0963951</_hid>
 				</IClassifierHandle>
@@ -25350,8 +25350,8 @@ Related information: - </_text>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Movement_Sensor</_hclass>
 					<_hname type="a">itsDetect Movement</_hname>
 					<_hid type="a">GUID d6a92fbf-5a59-4293-bcb9-99929de10097</_hid>
@@ -25525,8 +25525,8 @@ Related information: - </_text>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Door_Touch_Panel</_hname>
 					<_hid type="a">GUID 28130e4e-a2b4-4890-b7ef-4161926d17ba</_hid>
 				</IClassifierHandle>
@@ -25534,8 +25534,8 @@ Related information: - </_text>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Door_Touch_Panel</_hclass>
 					<_hname type="a">itsInteract with Door Touch Panel</_hname>
 					<_hid type="a">GUID 7bc38735-9a62-48bc-b078-cd5e6de24dd9</_hid>
@@ -26296,8 +26296,8 @@ Related information: - </_text>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hname type="a">Occupancy_Sensor</_hname>
 					<_hid type="a">GUID 1a436a09-0aef-48d9-bd00-97cbde5ba107</_hid>
 				</IClassifierHandle>
@@ -26305,8 +26305,8 @@ Related information: - </_text>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-					<_hsubsystem type="a">PackagePkg</_hsubsystem>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 					<_hclass type="a">Occupancy_Sensor</_hclass>
 					<_hname type="a">itsDetect Occupancy</_hname>
 					<_hid type="a">GUID 7e55a2a4-5ead-4488-aaf1-0afdf4603ffe</_hid>

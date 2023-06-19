@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
-	<CODE-PAGE>1252</CODE-PAGE>
+	<CODE-PAGE>936</CODE-PAGE>
 	<version>109.0</version>
 	<lang>C++</lang>
 	<BuildNo>202002261110</BuildNo>
@@ -12,10 +12,10 @@
 			<_id type="a">GUID b851de7a-61ef-4289-bfd6-f9aac76a1047</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">ActorPkg</_name>
-			<_modifiedTimeWeak type="a">6.16.2023::12:12:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:38:18</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.19.2023::12:27:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.19.2023::12:50:42</_modifiedTime>
 			<_lastID type="a">14</_lastID>
-			<weakCGTime type="a">6.16.2023::12:12:0</weakCGTime>
+			<weakCGTime type="a">6.19.2023::12:27:45</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:5:40</strongCGTime>
 			<_defaultComposite type="s">GUID 5430bcf7-7251-458e-94a8-6f75ad0df316</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -44,7 +44,7 @@
 			<_id type="a">GUID 56334670-ad3b-4456-8a7b-a5216256f82d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">User</_name>
-			<_modifiedTimeWeak type="a">6.16.2023::12:12:0</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.19.2023::12:27:45</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -54,9 +54,9 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.16.2023::12:12:0</_modifiedTime>
+			<_modifiedTime type="a">6.19.2023::12:27:45</_modifiedTime>
 			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">6.16.2023::12:12:0</weakCGTime>
+			<weakCGTime type="a">6.19.2023::12:27:45</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:21:57</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -72,6 +72,7 @@
 				<value>GUID ec45b0e3-cf52-478e-854f-a50fc78d0f55</value>
 				<value>GUID 760a0ed2-afb3-4aa2-9ac0-4288285139c4</value>
 				<value>GUID cd31aed6-d791-43cf-84ae-b73ebfc249bf</value>
+				<value>GUID 97542657-4aa5-4418-be78-632467264308</value>
 			</AggregatesList>
 		</IActor>
 		<IAssociationEnd type="e">
@@ -300,11 +301,40 @@
 			<_linkType type="a">Assoc</_linkType>
 			<_navigability type="a">Navigable</_navigability>
 		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 97542657-4aa5-4418-be78-632467264308</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsSmart_Room</_name>
+			<_modifiedTimeWeak type="a">6.19.2023::12:27:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.19.2023::12:27:45</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Smart_Room</_hname>
+					<_hid type="a">GUID be3cfde1-5923-4d7e-8f83-c88357a81c83</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Smart_Room</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 6199a25d-9060-412a-90c9-9d3fbae094c7</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
 		<IActor type="e">
 			<_id type="a">GUID e41aa68e-8b46-4dcc-b153-1c1a19f9cb94</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">External Personnel</_name>
-			<_modifiedTimeWeak type="a">6.12.2023::20:1:32</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.19.2023::12:28:1</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -314,15 +344,47 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.12.2023::20:1:32</_modifiedTime>
-			<weakCGTime type="a">6.12.2023::20:1:32</weakCGTime>
+			<_modifiedTime type="a">6.19.2023::12:28:1</_modifiedTime>
+			<weakCGTime type="a">6.19.2023::12:28:1</weakCGTime>
 			<strongCGTime type="a">6.12.2023::18:42:57</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
 				</IHandle>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
+			<AggregatesList type="e">
+				<value>GUID af218b41-c895-41df-aab8-809a4f015046</value>
+			</AggregatesList>
 		</IActor>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID af218b41-c895-41df-aab8-809a4f015046</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsSmart_Room</_name>
+			<_modifiedTimeWeak type="a">6.19.2023::12:28:1</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.19.2023::12:28:1</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Smart_Room</_hname>
+					<_hid type="a">GUID be3cfde1-5923-4d7e-8f83-c88357a81c83</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Smart_Room</_hclass>
+					<_hname type="a">itsExternal Personnel</_hname>
+					<_hid type="a">GUID d26aa504-2fb6-4252-8ec8-a096350bd161</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
 		
 	</RHAPSODY-MODEL>
 	<OslcLinks type="c">
