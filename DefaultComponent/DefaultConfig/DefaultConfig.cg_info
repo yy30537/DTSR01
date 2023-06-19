@@ -1,0 +1,23 @@
+I-Logix-RPY-Archive version 8.15.0 * 202002261110
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 2;
+	- value = "DefaultComponent\\DefaultConfig\\Smart_Room.cpp" 6.19.2023::14:55:12
+	"DefaultComponent\\DefaultConfig\\Smart_Room.h" 6.19.2023::14:55:12
+	
+}
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 1;
+	- value = "GUID 18af55da-14bc-4e3a-9961-31c8936235af" "GUID 79a904df-a658-4ea5-870a-854c1d648312"
+	
+}
+- size = 1;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\DTSR_rpy\\ArchitecturalAnalysisPkg.sbsx";
+	- _subsystem = "ArchitecturalAnalysisPkg";
+	- _name = "Smart_Room";
+	- _id = GUID be3cfde1-5923-4d7e-8f83-c88357a81c83;
+}
+- genTime = 6.19.2023::14:55:12;
+
