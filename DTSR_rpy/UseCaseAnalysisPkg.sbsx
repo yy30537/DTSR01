@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
-	<CODE-PAGE>936</CODE-PAGE>
+	<CODE-PAGE>65001</CODE-PAGE>
 	<version>109.0</version>
 	<lang>C++</lang>
 	<BuildNo>202002261110</BuildNo>
@@ -12,7 +12,7 @@
 			<_id type="a">GUID a127c406-634c-4e60-9083-0e78541b5a6d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">UseCaseAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">6.19.2023::12:11:35</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.20.2023::14:37:29</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -20,9 +20,9 @@
 					<_hid type="a">GUID f1832423-7170-436a-ad22-8c3d19d37de2</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.19.2023::12:50:42</_modifiedTime>
-			<_lastID type="a">68</_lastID>
-			<weakCGTime type="a">6.19.2023::12:11:35</weakCGTime>
+			<_modifiedTime type="a">6.20.2023::14:37:29</_modifiedTime>
+			<_lastID type="a">69</_lastID>
+			<weakCGTime type="a">6.20.2023::14:37:29</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:20:48</strongCGTime>
 			<_defaultComposite type="s">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -38,6 +38,7 @@
 				<value>GUID bfb172f5-f5c5-4c20-a5a3-3fe84dbfcb86</value>
 				<value>GUID a167b975-2def-4263-a917-39d96ea32fc2</value>
 				<value>GUID 7e84f2ef-a170-4985-8bc0-124fdb6115e0</value>
+				<value>GUID 2cc4dd90-23f4-4031-900c-2999b192c063</value>
 				<value>GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</value>
 				<value>GUID 23022587-85f1-4920-bc8a-9f0247757a80</value>
 				<value>GUID cfd3896a-db6c-402f-9469-6d590c0cfc36</value>
@@ -495,8 +496,8 @@
 			</_properties>
 			<_name type="a">Room Touch Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -1649,12 +1650,6 @@
 			<m_TargetPort type="a">527 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -1706,7 +1701,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -1768,7 +1762,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIInheritance type="e">
 			<_id type="a">GUID 3fb10101-0045-4f03-ad63-77a831e80d02</_id>
@@ -1947,12 +1941,6 @@
 			<m_TargetPort type="a">943 329 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -2004,7 +1992,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -2066,7 +2053,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID 0f23a865-6e67-49ae-98a6-616f5098911a</_id>
@@ -2124,12 +2111,6 @@
 			<m_TargetPort type="a">79 329 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsInteract with Room Touch Panel</_hname>
-					<_hid type="a">GUID de36c95f-4806-41a0-8bba-bfd4032eb061</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -2181,7 +2162,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -2243,7 +2223,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<IUCDiagram type="e">
 			<_id type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_id>
@@ -2667,8 +2647,8 @@
 			</_properties>
 			<_name type="a">Door Touch Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -3956,12 +3936,6 @@
 			<m_TargetPort type="a">527 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -4013,7 +3987,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -4075,7 +4048,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID 1d35e832-62a0-4c6f-a464-4348f992d8b2</_id>
@@ -4144,12 +4117,6 @@
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Door_Touch_Panel</_hclass>
-					<_hname type="a">itsInteract with Door Touch Panel</_hname>
-					<_hid type="a">GUID 7bc38735-9a62-48bc-b078-cd5e6de24dd9</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -4312,7 +4279,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<CGIInheritance type="e">
 			<_id type="a">GUID 414aec7a-2baa-422a-b26b-1252f26a9f55</_id>
@@ -4378,12 +4345,6 @@
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Door_Touch_Panel</_hclass>
-					<_hname type="a">itsControl Door</_hname>
-					<_hid type="a">GUID 70722d6c-329b-4a3f-8ca4-e063f6d3579a</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -4546,7 +4507,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<IUCDiagram type="e">
 			<_id type="a">GUID 14b8548c-4548-42ce-aa4e-63d2d29a85af</_id>
@@ -4970,8 +4931,8 @@
 			</_properties>
 			<_name type="a">Lightning System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -5668,12 +5629,6 @@
 			<m_TargetPort type="a">-5 716 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -5785,7 +5740,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID 9b7fc68c-3c43-4a72-b134-cd87dd33901b</_id>
@@ -5905,12 +5860,6 @@
 			<m_TargetPort type="a">-5 943 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Movement_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -6022,7 +5971,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID 2bd67476-7608-430c-80d9-5a2e6c01937a</_id>
@@ -6153,12 +6102,6 @@
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Occupancy_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 9b20802b-190f-41ed-b35b-1b788c907801</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -6321,7 +6264,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<CGIBasicClass type="e">
 			<_id type="a">GUID 7eedd34d-36cf-4b69-957e-c161988299e6</_id>
@@ -6848,12 +6791,6 @@
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Lights</_hclass>
-					<_hname type="a">itsControl Lightning_1</_hname>
-					<_hid type="a">GUID 8f3bf302-e11e-4e9e-9ff9-94a81f84495d</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -7016,7 +6953,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<IUCDiagram type="e">
 			<_id type="a">GUID b18ec0de-4404-4af5-9123-6b792c0009b8</_id>
@@ -7440,8 +7377,8 @@
 			</_properties>
 			<_name type="a">HVAC System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -8170,12 +8107,6 @@
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">CO2_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 6b3aadcb-0b05-4b78-adfa-e6241a652820</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -8338,7 +8269,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID 0a1f3279-5b83-4882-a6be-f40cbc66df38</_id>
@@ -8458,12 +8389,6 @@
 			<m_TargetPort type="a">531 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -8515,7 +8440,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -8577,7 +8501,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID bb9e3e22-8ae3-431c-bf2e-5a52798075d0</_id>
@@ -8697,12 +8621,6 @@
 			<m_TargetPort type="a">532 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Movement_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -8754,7 +8672,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -8816,7 +8733,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID b1313deb-5ce6-4f67-8961-930058c64194</_id>
@@ -8998,12 +8915,6 @@
 			<m_TargetPort type="a">-5 928 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Weather_Forecast</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 35d1af47-632d-4657-bee7-fbcf1a55cf93</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -9115,7 +9026,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIBasicClass type="e">
 			<_id type="a">GUID 3a325ef5-6c41-4e9e-9cd0-f6a5e30bcf33</_id>
@@ -9701,12 +9612,6 @@
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">HVAC</_hclass>
-					<_hname type="a">itsControl HVAC_1</_hname>
-					<_hid type="a">GUID 3b4a8386-f077-4420-a447-5186a2cb70c2</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -9869,7 +9774,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<IUCDiagram type="e">
 			<_id type="a">GUID a5e12e95-21c4-42a9-b44a-9cbf1f41679c</_id>
@@ -10325,8 +10230,8 @@
 			</_properties>
 			<_name type="a">Communication and AudioVideo System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:51:45</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:51:45</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -11221,12 +11126,6 @@
 			<m_TargetPort type="a">531 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -11278,7 +11177,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -11340,7 +11238,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID 3efa6573-ba54-45bc-a437-fa22d1828ae0</_id>
@@ -11584,12 +11482,6 @@
 			<m_TargetPort type="a">334 321 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Microphones</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID d2bdc481-dc2d-42ee-9702-b8cde2307635</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -11701,7 +11593,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID 69481d89-d84d-4250-9f9b-0c7794a190b5</_id>
@@ -11759,12 +11651,6 @@
 			<m_TargetPort type="a">-7 1110 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Speakers</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID c6ac30b2-0ed9-4fbc-ae47-c06b9a4f8579</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -11876,7 +11762,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID c115e3e9-640c-45ad-a316-de15c2a30a25</_id>
@@ -11934,12 +11820,6 @@
 			<m_TargetPort type="a">-7 958 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Webcam</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 3179fa06-750c-49b5-94ae-dc5b3f1fe398</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -12051,7 +11931,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID a92a4d57-b279-4f66-8a59-c8c0d67d43d2</_id>
@@ -12171,12 +12051,6 @@
 			<m_TargetPort type="a">39 329 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Smart_Screen</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 7a561fc0-8f69-4411-bce0-30d497114f6f</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -12288,7 +12162,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIInheritance type="e">
 			<_id type="a">GUID facaa89f-8481-4595-bbdb-df42953b68a4</_id>
@@ -13081,8 +12955,8 @@
 			</_properties>
 			<_name type="a">Security and Access System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:17:51</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:17:51</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::14:15:52</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::14:15:52</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -14304,7 +14178,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">266246</m_drawBehavior>
-			<m_transform type="a">0.141643 0 0 0.0748663 1019.72 14.369 </m_transform>
+			<m_transform type="a">0.141643 0 0 0.0748663 1002.72 14.369 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -14340,12 +14214,6 @@
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Booking_System</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID cfff03a7-a3b3-4804-86ad-0399954c719d</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -14508,19 +14376,13 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID 7fec2152-6b3f-4553-af93-3959f5ce7a10</_id>
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">External_Personnel</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 7f2d2e10-0623-4a1d-bf39-78427a1cc968</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -14683,7 +14545,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID c5a2241e-687f-4dfa-a0b8-24b329c779b7</_id>
@@ -14923,12 +14785,6 @@
 			<m_TargetPort type="a">-5 339 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Door_Touch_Panel</_hclass>
-					<_hname type="a">itsControl Door</_hname>
-					<_hid type="a">GUID 70722d6c-329b-4a3f-8ca4-e063f6d3579a</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -14980,7 +14836,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -15042,7 +14897,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID acfec10e-9665-4248-b1a8-cd4daafcf987</_id>
@@ -15100,12 +14955,6 @@
 			<m_TargetPort type="a">-5 339 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -15157,7 +15006,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -15219,19 +15067,13 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID d3540e4d-ad78-429f-af72-3de0295efb9d</_id>
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsControl Door</_hname>
-					<_hid type="a">GUID 93a90f8c-dd9a-49ad-bc68-6753df200272</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -15394,7 +15236,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID ab8fed35-1504-49f3-b111-b46c7ea46138</_id>
@@ -15543,12 +15385,6 @@
 			<m_TargetPort type="a">527 885 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Fire_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID d1b12231-9a6b-4243-b6b4-3c7955c02794</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -15600,7 +15436,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -15662,7 +15497,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<IUCDiagram type="e">
 			<_id type="a">GUID 960f7037-532f-49bf-85ca-1c8a6dcba995</_id>
@@ -16036,8 +15871,8 @@
 			</_properties>
 			<_name type="a">CO2 Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -16488,12 +16323,6 @@
 			<m_TargetPort type="a">527 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -16545,7 +16374,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -16607,7 +16435,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID 3c400411-b9e4-4c40-aed0-884e46fa4f17</_id>
@@ -16727,12 +16555,6 @@
 			<m_TargetPort type="a">527 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">CO2_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 6b3aadcb-0b05-4b78-adfa-e6241a652820</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -16784,7 +16606,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -16846,7 +16667,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID 8b0c1f0c-6c4b-42f2-9897-2ce63f575e3c</_id>
@@ -16904,12 +16725,6 @@
 			<m_TargetPort type="a">527 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">CO2_Sensor</_hclass>
-					<_hname type="a">itsMonitor CO2 Level</_hname>
-					<_hid type="a">GUID 8298a362-1060-4bfa-bf56-1c838fa15f2f</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -16961,7 +16776,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -17023,7 +16837,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<IUCDiagram type="e">
 			<_id type="a">GUID bfb172f5-f5c5-4c20-a5a3-3fe84dbfcb86</_id>
@@ -17397,8 +17211,8 @@
 			</_properties>
 			<_name type="a">Fire Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -17849,12 +17663,6 @@
 			<m_TargetPort type="a">527 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -17906,7 +17714,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -17968,7 +17775,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID 8330e337-a213-4a3e-9c98-33794dbd17b7</_id>
@@ -18088,12 +17895,6 @@
 			<m_TargetPort type="a">527 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Fire_Sensor</_hclass>
-					<_hname type="a">itsDetect Fire</_hname>
-					<_hid type="a">GUID 9605d216-c848-48d6-9b90-0bd636d8555a</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -18145,7 +17946,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -18207,7 +18007,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID 2f0f3794-7393-4bf6-bc61-14f92f282c43</_id>
@@ -18265,12 +18065,6 @@
 			<m_TargetPort type="a">674 329 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Fire_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID d1b12231-9a6b-4243-b6b4-3c7955c02794</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -18382,7 +18176,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<IUCDiagram type="e">
 			<_id type="a">GUID a167b975-2def-4263-a917-39d96ea32fc2</_id>
@@ -18756,8 +18550,8 @@
 			</_properties>
 			<_name type="a">Movement Detection sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -19208,12 +19002,6 @@
 			<m_TargetPort type="a">527 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -19265,7 +19053,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -19327,7 +19114,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID 33a28a0e-ca96-4a74-bcf0-72b3a158bc68</_id>
@@ -19447,12 +19234,6 @@
 			<m_TargetPort type="a">531 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Movement_Sensor</_hclass>
-					<_hname type="a">itsDetect Movement</_hname>
-					<_hid type="a">GUID d6a92fbf-5a59-4293-bcb9-99929de10097</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -19504,7 +19285,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -19566,7 +19346,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID 843dd1c7-7f48-4e84-9f28-b872be27755f</_id>
@@ -19624,12 +19404,6 @@
 			<m_TargetPort type="a">531 890 </m_TargetPort>
 			<m_pInverseModelObject type="r">
 				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Movement_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</_hid>
 				</IAssociationEndHandle>
 			</m_pInverseModelObject>
 			<m_pInstance type="r">
@@ -19681,7 +19455,6 @@
 			</m_targetRole>
 			<m_sourceMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -19743,7 +19516,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_122</m_specificType>
 		</CGIAssociationEnd>
 		<IUCDiagram type="e">
 			<_id type="a">GUID 7e84f2ef-a170-4985-8bc0-124fdb6115e0</_id>
@@ -20047,8 +19820,8 @@
 			</_properties>
 			<_name type="a">Occupancy Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:11:35</_modifiedTime>
-			<_lastModifiedTime type="a">6.19.2023::12:11:35</_lastModifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
+			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -20460,12 +20233,6 @@
 			<m_type type="a">92</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -20584,7 +20351,6 @@
 			</m_sourceMultiplicity>
 			<m_targetMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -20630,19 +20396,13 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<CGIAssociationEnd type="e">
 			<_id type="a">GUID 4e40fd17-7da1-4da3-ad6b-e8a439a671b4</_id>
 			<m_type type="a">92</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Occupancy_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 9b20802b-190f-41ed-b35b-1b788c907801</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -20761,7 +20521,6 @@
 			</m_sourceMultiplicity>
 			<m_targetMultiplicity type="p">
 				<CGIText type="e">
-					<m_str type="a">1</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -20807,7 +20566,7 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
 		<CGIBasicClass type="e">
 			<_id type="a">GUID d8e9ab4f-086a-46aa-a65a-477f649aa55d</_id>
@@ -20864,12 +20623,6 @@
 			<m_type type="a">94</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Occupancy_Sensor</_hclass>
-					<_hname type="a">itsDetect Occupancy</_hname>
-					<_hid type="a">GUID 7e55a2a4-5ead-4488-aaf1-0afdf4603ffe</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -21032,8 +20785,12 @@
 					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
+			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
+		<ISubsystem type="e">
+			<fileName type="a">ControlLightPkg</fileName>
+			<_id type="a">GUID 2cc4dd90-23f4-4031-900c-2999b192c063</_id>
+		</ISubsystem>
 		<IClass type="e">
 			<_id type="a">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_id>
 			<_myState type="a">40960</_myState>
@@ -21083,7 +20840,7 @@
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::13:44:22</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_lastID type="a">7</_lastID>
 			<weakCGTime type="a">6.15.2023::22:51:0</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -21365,7 +21122,7 @@
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsHVAC</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::10:4:52</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -21378,12 +21135,6 @@
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">HVAC</_hclass>
-					<_hname type="a">itsControl HVAC_1</_hname>
-					<_hid type="a">GUID 3b4a8386-f077-4420-a447-5186a2cb70c2</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -21422,7 +21173,7 @@
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::13:48:38</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_lastID type="a">6</_lastID>
 			<weakCGTime type="a">6.15.2023::22:51:32</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -21672,7 +21423,7 @@
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsLights</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::10:24:59</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -21685,12 +21436,6 @@
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Lights</_hclass>
-					<_hname type="a">itsControl Lightning_1</_hname>
-					<_hid type="a">GUID 8f3bf302-e11e-4e9e-9ff9-94a81f84495d</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22237,7 +21982,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.19.2023::12:28:54</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:49:46</_modifiedTime>
 			<_lastID type="a">10</_lastID>
 			<weakCGTime type="a">6.16.2023::12:21:22</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -22621,7 +22366,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsNetwork</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::20:56:56</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22634,12 +22379,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 1ca5bacd-e879-40ac-b055-02e0e04a7d41</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22650,7 +22389,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsCO2_Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::20:59:45</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:49:46</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22663,12 +22402,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">CO2_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 6b3aadcb-0b05-4b78-adfa-e6241a652820</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22679,7 +22412,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsRoom_Touch_Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:5:51</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22692,12 +22425,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID afe54864-9b6f-43f4-9cdb-1ff333be0862</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22708,7 +22435,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsMovement_Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:7:10</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22721,12 +22448,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Movement_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 991a72ec-1af5-47d5-8598-ad948066ceb8</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22737,7 +22458,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsWeather_Forecast</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:21:36</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22750,12 +22471,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Weather_Forecast</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 35d1af47-632d-4657-bee7-fbcf1a55cf93</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22766,7 +22481,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsMicrophones</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.19.2023::12:28:54</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22779,12 +22494,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Microphones</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID d2bdc481-dc2d-42ee-9702-b8cde2307635</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22795,7 +22504,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsSpeakers</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:23:53</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22808,12 +22517,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Speakers</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID c6ac30b2-0ed9-4fbc-ae47-c06b9a4f8579</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22824,7 +22527,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsWebcam</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:23:57</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22837,12 +22540,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Webcam</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 3179fa06-750c-49b5-94ae-dc5b3f1fe398</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22853,7 +22550,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsSmart_Screen</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:24:24</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22866,12 +22563,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Smart_Screen</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 7a561fc0-8f69-4411-bce0-30d497114f6f</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22882,7 +22573,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsOccupancy_Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:55:49</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22895,12 +22586,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Occupancy_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 9b20802b-190f-41ed-b35b-1b788c907801</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22911,7 +22596,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsFire_Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::22:27:34</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22924,12 +22609,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Fire_Sensor</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID d1b12231-9a6b-4243-b6b4-3c7955c02794</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22940,7 +22619,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsBooking_System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::12:13:46</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22953,12 +22632,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Booking_System</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID cfff03a7-a3b3-4804-86ad-0399954c719d</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -22969,7 +22642,7 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsExternal_Personnel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::12:13:51</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -22982,12 +22655,6 @@ Scope:\b0   The user is able to control the Control and Audio/Video System throu
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">External_Personnel</_hclass>
-					<_hname type="a">itsGet Data</_hname>
-					<_hid type="a">GUID 7f2d2e10-0623-4a1d-bf39-78427a1cc968</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -23024,7 +22691,7 @@ Extensions:  - %0D
 Related information: -</_text>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::13:57:48</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<weakCGTime type="a">6.16.2023::12:25:22</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -23149,7 +22816,7 @@ Related information: -</_text>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsDoor_Touch_Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::9:20:56</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -23162,12 +22829,6 @@ Related information: -</_text>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Door_Touch_Panel</_hclass>
-					<_hname type="a">itsControl Door</_hname>
-					<_hid type="a">GUID 70722d6c-329b-4a3f-8ca4-e063f6d3579a</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -23178,7 +22839,7 @@ Related information: -</_text>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsRoom_Touch_Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.16.2023::12:15:44</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -23191,12 +22852,6 @@ Related information: -</_text>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsControl Door</_hname>
-					<_hid type="a">GUID 93a90f8c-dd9a-49ad-bc68-6753df200272</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -24147,7 +23802,7 @@ Related information: - </_text>
 </_textRTF>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::13:50:57</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_lastID type="a">6</_lastID>
 			<weakCGTime type="a">6.15.2023::22:17:43</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -24511,7 +24166,7 @@ Related information: - </_text>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsRoom_Touch_Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:5:30</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -24524,12 +24179,6 @@ Related information: - </_text>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Room_Touch_Panel</_hclass>
-					<_hname type="a">itsInteract with Room Touch Panel</_hname>
-					<_hid type="a">GUID de36c95f-4806-41a0-8bba-bfd4032eb061</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -25067,7 +24716,7 @@ Extensions:  - %0D
 Related information: - </_text>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::13:52:7</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:49:46</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.14.2023::23:6:55</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25124,7 +24773,7 @@ Related information: - </_text>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsCO2_Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::20:59:23</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:49:46</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -25137,12 +24786,6 @@ Related information: - </_text>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">CO2_Sensor</_hclass>
-					<_hname type="a">itsMonitor CO2 Level</_hname>
-					<_hid type="a">GUID 8298a362-1060-4bfa-bf56-1c838fa15f2f</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -25173,7 +24816,7 @@ Extensions: - %0D
 Related information: - </_text>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::13:59:30</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.14.2023::23:9:3</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25230,7 +24873,7 @@ Related information: - </_text>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsFire_Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:4:10</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -25243,12 +24886,6 @@ Related information: - </_text>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Fire_Sensor</_hclass>
-					<_hname type="a">itsDetect Fire</_hname>
-					<_hid type="a">GUID 9605d216-c848-48d6-9b90-0bd636d8555a</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -25279,7 +24916,7 @@ Extensions: - %0D
 Related information: - </_text>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::14:5:10</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.14.2023::23:10:39</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25336,7 +24973,7 @@ Related information: - </_text>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsMovement_Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:6:50</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -25349,12 +24986,6 @@ Related information: - </_text>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Movement_Sensor</_hclass>
-					<_hname type="a">itsDetect Movement</_hname>
-					<_hid type="a">GUID d6a92fbf-5a59-4293-bcb9-99929de10097</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -25380,7 +25011,7 @@ Main success scenario:  %0D
 Related information: - </_text>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::13:57:4</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<weakCGTime type="a">6.15.2023::22:30:58</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -25520,7 +25151,7 @@ Related information: - </_text>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsDoor_Touch_Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:2:2</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -25533,12 +25164,6 @@ Related information: - </_text>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Door_Touch_Panel</_hclass>
-					<_hname type="a">itsInteract with Door Touch Panel</_hname>
-					<_hid type="a">GUID 7bc38735-9a62-48bc-b078-cd5e6de24dd9</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -26234,7 +25859,7 @@ Extensions: - %0D
 Related information: - </_text>
 			</IDescription>
 			</_description>
-			<_modifiedTime type="a">6.16.2023::14:6:7</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_lastID type="a">1</_lastID>
 			<weakCGTime type="a">6.15.2023::22:53:33</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
@@ -26291,7 +25916,7 @@ Related information: - </_text>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsOccupancy_Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.15.2023::21:59:53</_modifiedTime>
+			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -26304,12 +25929,6 @@ Related information: - </_text>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Occupancy_Sensor</_hclass>
-					<_hname type="a">itsDetect Occupancy</_hname>
-					<_hid type="a">GUID 7e55a2a4-5ead-4488-aaf1-0afdf4603ffe</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
