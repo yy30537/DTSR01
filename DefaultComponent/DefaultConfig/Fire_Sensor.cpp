@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Fire_Sensor
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Fire_Sensor.cpp
 *********************************************************************/
 
@@ -21,6 +21,14 @@ Fire_Sensor::Fire_Sensor() {
 
 Fire_Sensor::~Fire_Sensor() {
     cleanUpRelations();
+}
+
+bool Fire_Sensor::getIsFire() const {
+    return isFire;
+}
+
+void Fire_Sensor::setIsFire(bool p_isFire) {
+    isFire = p_isFire;
 }
 
 Network* Fire_Sensor::getItsNetwork() const {

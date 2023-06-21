@@ -4,10 +4,12 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Lights
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Lights.cpp
 *********************************************************************/
 
+//## auto_generated
+#include <oxf\omthread.h>
 //## auto_generated
 #include "Lights.h"
 //## link itsNetwork
@@ -15,12 +17,27 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Lights
-Lights::Lights() {
+Lights::Lights(IOxfActive* theActiveContext) : intensity(0) {
+    setActiveContext(theActiveContext, false);
     itsNetwork = NULL;
+    initStatechart();
 }
 
 Lights::~Lights() {
     cleanUpRelations();
+}
+
+void Lights::setLightIntensity(int targetIntensity) {
+    //#[ operation setLightIntensity(int)
+    //#]
+}
+
+int Lights::getIntensity() const {
+    return intensity;
+}
+
+void Lights::setIntensity(int p_intensity) {
+    intensity = p_intensity;
 }
 
 Network* Lights::getItsNetwork() const {
@@ -33,6 +50,17 @@ void Lights::setItsNetwork(Network* p_Network) {
             p_Network->_setItsLights(this);
         }
     _setItsNetwork(p_Network);
+}
+
+bool Lights::startBehavior() {
+    bool done = false;
+    done = OMReactive::startBehavior();
+    return done;
+}
+
+void Lights::initStatechart() {
+    rootState_subState = OMNonState;
+    rootState_active = OMNonState;
 }
 
 void Lights::cleanUpRelations() {
@@ -61,6 +89,14 @@ void Lights::_setItsNetwork(Network* p_Network) {
 
 void Lights::_clearItsNetwork() {
     itsNetwork = NULL;
+}
+
+void Lights::rootState_entDef() {
+}
+
+IOxfReactive::TakeEventStatus Lights::rootState_processEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    return res;
 }
 
 /*********************************************************************

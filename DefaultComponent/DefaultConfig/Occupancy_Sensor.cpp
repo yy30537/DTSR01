@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Occupancy_Sensor
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Occupancy_Sensor.cpp
 *********************************************************************/
 
@@ -15,12 +15,20 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Occupancy_Sensor
-Occupancy_Sensor::Occupancy_Sensor() {
+Occupancy_Sensor::Occupancy_Sensor() : numOccupants(0) {
     itsNetwork = NULL;
 }
 
 Occupancy_Sensor::~Occupancy_Sensor() {
     cleanUpRelations();
+}
+
+int Occupancy_Sensor::getNumOccupants() const {
+    return numOccupants;
+}
+
+void Occupancy_Sensor::setNumOccupants(int p_numOccupants) {
+    numOccupants = p_numOccupants;
 }
 
 Network* Occupancy_Sensor::getItsNetwork() const {

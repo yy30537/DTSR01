@@ -12,21 +12,14 @@
 			<_id type="a">GUID a127c406-634c-4e60-9083-0e78541b5a6d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">UseCaseAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">6.20.2023::14:37:29</_modifiedTimeWeak>
-			<_theMainDiagram type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IDiagram</_hm2Class>
-					<_hname type="a">DTSR Packages</_hname>
-					<_hid type="a">GUID f1832423-7170-436a-ad22-8c3d19d37de2</_hid>
-				</IHandle>
-			</_theMainDiagram>
-			<_modifiedTime type="a">6.20.2023::14:37:29</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.21.2023::17:8:54</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.21.2023::17:9:16</_modifiedTime>
 			<_lastID type="a">69</_lastID>
-			<weakCGTime type="a">6.20.2023::14:37:29</weakCGTime>
+			<weakCGTime type="a">6.21.2023::17:8:54</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:20:48</strongCGTime>
 			<_defaultComposite type="s">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
-			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<_configurationRelatedTime type="a">6.21.2023::13:23:43</_configurationRelatedTime>
 			<AggregatesList type="e">
 				<value>GUID 957d40d9-6ee1-4b54-a58e-7c19d23c3fa4</value>
 				<value>GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</value>
@@ -38,7 +31,6 @@
 				<value>GUID bfb172f5-f5c5-4c20-a5a3-3fe84dbfcb86</value>
 				<value>GUID a167b975-2def-4263-a917-39d96ea32fc2</value>
 				<value>GUID 7e84f2ef-a170-4985-8bc0-124fdb6115e0</value>
-				<value>GUID 2cc4dd90-23f4-4031-900c-2999b192c063</value>
 				<value>GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</value>
 				<value>GUID 23022587-85f1-4920-bc8a-9f0247757a80</value>
 				<value>GUID cfd3896a-db6c-402f-9469-6d590c0cfc36</value>
@@ -496,8 +488,8 @@
 			</_properties>
 			<_name type="a">Room Touch Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
-			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
+			<_modifiedTime type="a">6.21.2023::14:25:56</_modifiedTime>
+			<_lastModifiedTime type="a">6.21.2023::14:25:56</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -2647,8 +2639,8 @@
 			</_properties>
 			<_name type="a">Door Touch Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
-			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
+			<_modifiedTime type="a">6.21.2023::14:25:56</_modifiedTime>
+			<_lastModifiedTime type="a">6.21.2023::14:25:56</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -4931,8 +4923,8 @@
 			</_properties>
 			<_name type="a">Lightning System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
-			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
+			<_modifiedTime type="a">6.21.2023::16:9:48</_modifiedTime>
+			<_lastModifiedTime type="a">6.21.2023::16:9:48</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -7377,8 +7369,8 @@
 			</_properties>
 			<_name type="a">HVAC System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
-			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
+			<_modifiedTime type="a">6.21.2023::17:8:54</_modifiedTime>
+			<_lastModifiedTime type="a">6.21.2023::17:8:54</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -15871,8 +15863,8 @@
 			</_properties>
 			<_name type="a">CO2 Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
-			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
+			<_modifiedTime type="a">6.21.2023::17:8:54</_modifiedTime>
+			<_lastModifiedTime type="a">6.21.2023::17:8:54</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -17211,8 +17203,8 @@
 			</_properties>
 			<_name type="a">Fire Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
-			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
+			<_modifiedTime type="a">6.21.2023::14:25:56</_modifiedTime>
+			<_lastModifiedTime type="a">6.21.2023::14:25:56</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -18550,8 +18542,8 @@
 			</_properties>
 			<_name type="a">Movement Detection sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
-			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
+			<_modifiedTime type="a">6.21.2023::14:25:56</_modifiedTime>
+			<_lastModifiedTime type="a">6.21.2023::14:25:56</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -19820,8 +19812,8 @@
 			</_properties>
 			<_name type="a">Occupancy Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::13:54:59</_modifiedTime>
-			<_lastModifiedTime type="a">6.20.2023::13:54:59</_lastModifiedTime>
+			<_modifiedTime type="a">6.21.2023::14:25:56</_modifiedTime>
+			<_lastModifiedTime type="a">6.21.2023::14:25:56</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -20787,10 +20779,6 @@
 			</m_targetQualifier>
 			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
-		<ISubsystem type="e">
-			<fileName type="a">ControlLightPkg</fileName>
-			<_id type="a">GUID 2cc4dd90-23f4-4031-900c-2999b192c063</_id>
-		</ISubsystem>
 		<IClass type="e">
 			<_id type="a">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_id>
 			<_myState type="a">40960</_myState>

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\CO2_Sensor.h
 *********************************************************************/
 
@@ -35,6 +35,12 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    int getCO2Level() const;
+    
+    //## auto_generated
+    void setCO2Level(int p_CO2Level);
+    
+    //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
@@ -44,6 +50,10 @@ protected :
 
     //## auto_generated
     void cleanUpRelations();
+    
+    ////    Attributes    ////
+    
+    int CO2Level;		//## attribute CO2Level
     
     ////    Relations and components    ////
     

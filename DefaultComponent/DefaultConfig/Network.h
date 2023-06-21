@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.h
 *********************************************************************/
 
@@ -15,6 +15,12 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## auto_generated
+#include <oxf\omreactive.h>
+//## auto_generated
+#include <oxf\state.h>
+//## auto_generated
+#include <oxf\event.h>
 //## link itsBooking_System
 class Booking_System;
 
@@ -60,19 +66,49 @@ class Weather_Forecast;
 //## link itsWebcam
 class Webcam;
 
+//#[ ignore
+#define decreaseLightIntensity_Network_Event_id 31000
+
+#define increaseLightIntensity_Network_Event_id 31001
+
+#define turnOff_light_Network_Event_id 31002
+
+#define turnOn_light_Network_Event_id 31003
+//#]
+
 //## package ArchitecturalAnalysisPkg
 
 //## class Network
-class Network {
+class Network : public OMReactive {
     ////    Constructors and destructors    ////
     
 public :
 
     //## auto_generated
-    Network();
+    Network(IOxfActive* theActiveContext = 0);
     
     //## auto_generated
-    ~Network();
+    virtual ~Network();
+    
+    ////    Operations    ////
+    
+    //## operation Movement_Detected()
+    virtual void Movement_Detected();
+    
+    //## operation Occup_UpdateCount()
+    virtual void Occup_UpdateCount();
+    
+    //## operation turnOff_CO2_Alarm()
+    virtual void turnOff_CO2_Alarm();
+    
+    //## operation turnOff_Fire_Alarm()
+    virtual void turnOff_Fire_Alarm();
+    
+    //## operation turnOn_CO2_Alarm()
+    virtual void turnOn_CO2_Alarm();
+    
+    //## operation turnOn_Fire_Alarm()
+    virtual void turnOn_Fire_Alarm();
     
     ////    Additional operations    ////
     
@@ -81,12 +117,6 @@ public :
     
     //## auto_generated
     void setItsBooking_System(Booking_System* p_Booking_System);
-    
-    //## auto_generated
-    Booking_System* getItsBooking_System_1() const;
-    
-    //## auto_generated
-    void setItsBooking_System_1(Booking_System* p_Booking_System);
     
     //## auto_generated
     CO2_Sensor* getItsCO2_Sensor() const;
@@ -171,17 +201,37 @@ public :
     
     //## auto_generated
     void setItsWebcam(Webcam* p_Webcam);
+    
+    //## auto_generated
+    virtual bool startBehavior();
 
 protected :
 
     //## auto_generated
+    void initStatechart();
+    
+    //## auto_generated
     void cleanUpRelations();
+
+public :
+
+    //## TriggeredOperation decreaseLightIntensity()
+    int decreaseLightIntensity();
+    
+    //## TriggeredOperation increaseLightIntensity()
+    int increaseLightIntensity();
+    
+    //## TriggeredOperation turnOff_light()
+    void turnOff_light();
+    
+    //## TriggeredOperation turnOn_light()
+    void turnOn_light();
     
     ////    Relations and components    ////
-    
+
+protected :
+
     Booking_System* itsBooking_System;		//## link itsBooking_System
-    
-    Booking_System* itsBooking_System_1;		//## link itsBooking_System_1
     
     CO2_Sensor* itsCO2_Sensor;		//## link itsCO2_Sensor
     
@@ -223,15 +273,6 @@ public :
     
     //## auto_generated
     void _clearItsBooking_System();
-    
-    //## auto_generated
-    void __setItsBooking_System_1(Booking_System* p_Booking_System);
-    
-    //## auto_generated
-    void _setItsBooking_System_1(Booking_System* p_Booking_System);
-    
-    //## auto_generated
-    void _clearItsBooking_System_1();
     
     //## auto_generated
     void __setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
@@ -358,7 +399,101 @@ public :
     
     //## auto_generated
     void _clearItsWebcam();
+    
+    // rootState:
+    //## statechart_method
+    inline bool rootState_IN() const;
+    
+    //## statechart_method
+    virtual void rootState_entDef();
+    
+    //## statechart_method
+    virtual IOxfReactive::TakeEventStatus rootState_processEvent();
+    
+    // lights_on:
+    //## statechart_method
+    inline bool lights_on_IN() const;
+    
+    // lights_off:
+    //## statechart_method
+    inline bool lights_off_IN() const;
+    
+    ////    Framework    ////
+
+protected :
+
+//#[ ignore
+    enum Network_Enum {
+        OMNonState = 0,
+        lights_on = 1,
+        lights_off = 2
+    };
+    
+    int rootState_subState;
+    
+    int rootState_active;
+//#]
 };
+
+//#[ ignore
+class decreaseLightIntensity_Network_Event : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    decreaseLightIntensity_Network_Event();
+    
+    ////    Framework    ////
+    
+    int om_reply;
+};
+//#]
+
+//#[ ignore
+class increaseLightIntensity_Network_Event : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    increaseLightIntensity_Network_Event();
+    
+    ////    Framework    ////
+    
+    int om_reply;
+};
+//#]
+
+//#[ ignore
+class turnOff_light_Network_Event : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    turnOff_light_Network_Event();
+};
+//#]
+
+//#[ ignore
+class turnOn_light_Network_Event : public OMEvent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    turnOn_light_Network_Event();
+};
+//#]
+
+inline bool Network::rootState_IN() const {
+    return true;
+}
+
+inline bool Network::lights_on_IN() const {
+    return rootState_subState == lights_on;
+}
+
+inline bool Network::lights_off_IN() const {
+    return rootState_subState == lights_off;
+}
 
 #endif
 /*********************************************************************

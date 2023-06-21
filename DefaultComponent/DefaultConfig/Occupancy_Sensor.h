@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Occupancy_Sensor
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Occupancy_Sensor.h
 *********************************************************************/
 
@@ -35,6 +35,12 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    int getNumOccupants() const;
+    
+    //## auto_generated
+    void setNumOccupants(int p_numOccupants);
+    
+    //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
@@ -44,6 +50,10 @@ protected :
 
     //## auto_generated
     void cleanUpRelations();
+    
+    ////    Attributes    ////
+    
+    int numOccupants;		//## attribute numOccupants
     
     ////    Relations and components    ////
     

@@ -26,6 +26,39 @@
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
 								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
+								<m_nLeft type="a">182</m_nLeft>
+								<m_nTop type="a">182</m_nTop>
+								<m_nRight type="a">1220</m_nRight>
+								<m_nBottom type="a">644</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\DTSR_rpy\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+								<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+								<_hclass type="a">Network</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID 2d5757e0-93b9-4fc2-8c23-62e91e7513d7</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 140 </_UpLeft>
+						<_DownRight type="a">863 487 </_DownRight>
+						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">2</m_nFlags>
+								<m_showCmd type="a">3</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
 								<m_nLeft type="a">104</m_nLeft>
 								<m_nTop type="a">104</m_nTop>
 								<m_nRight type="a">610</m_nRight>
@@ -42,105 +75,9 @@
 								<_hid type="a">GUID 8e33cc4a-f455-45f0-bdf4-822456e93c1a</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">20 20 </_UpLeft>
-						<_DownRight type="a">843 797 </_DownRight>
-						<m_nDiagramIndex type="a">4</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">78</m_nLeft>
-								<m_nTop type="a">78</m_nTop>
-								<m_nRight type="a">905</m_nRight>
-								<m_nBottom type="a">575</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IUCDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">CO2 Sensor</_hname>
-								<_hid type="a">GUID 960f7037-532f-49bf-85ca-1c8a6dcba995</_hid>
-							</IHandle>
-						</_theDiagram>
 						<_UpLeft type="a">0 10 </_UpLeft>
-						<_DownRight type="a">790 447 </_DownRight>
-						<m_nDiagramIndex type="a">12</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">130</m_nLeft>
-								<m_nTop type="a">130</m_nTop>
-								<m_nRight type="a">957</m_nRight>
-								<m_nBottom type="a">627</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IUCDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">Communication and AudioVideo System</_hname>
-								<_hid type="a">GUID a5e12e95-21c4-42a9-b44a-9cbf1f41679c</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 110 </_UpLeft>
-						<_DownRight type="a">790 547 </_DownRight>
-						<m_nDiagramIndex type="a">10</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">2</m_nFlags>
-								<m_showCmd type="a">3</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">52</m_nLeft>
-								<m_nTop type="a">52</m_nTop>
-								<m_nRight type="a">355</m_nRight>
-								<m_nBottom type="a">612</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\ControlLightPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg::ControlLightPkg</_hsubsystem>
-								<_hname type="a">ControlLightContext</_hname>
-								<_hid type="a">GUID 28b0700f-ff9a-4d55-a2ac-3e5c80f15018</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1841 1077 </_DownRight>
-						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
+						<_DownRight type="a">2155 1316 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
 						<m_bIsActiveView type="a">1</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -154,58 +91,25 @@
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
 								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">78</m_nLeft>
-								<m_nTop type="a">78</m_nTop>
-								<m_nRight type="a">365</m_nRight>
-								<m_nBottom type="a">638</m_nBottom>
+								<m_nLeft type="a">156</m_nLeft>
+								<m_nTop type="a">156</m_nTop>
+								<m_nRight type="a">1215</m_nRight>
+								<m_nBottom type="a">628</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
-								<_hm2Class type="a">IActivityDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\ControlLightPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg::ControlLightPkg</_hsubsystem>
-								<_hclass type="a">UC_ControlLight</_hclass>
-								<_hname type="a">ActivityDiagram</_hname>
-								<_hid type="a">GUID 439a4e92-fcac-4e5a-ae6f-71a501cf61b4</_hid>
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\DTSR_rpy\RequirementsAnalysisPkg.sbsx</_hfilename>
+								<_hsubsystem type="a">RequirementsAnalysisPkg</_hsubsystem>
+								<_hname type="a">10DetectOccupancy</_hname>
+								<_hid type="a">GUID 603d5d4a-bfa0-401d-b2b3-db4107beb4ad</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">250 500 </_DownRight>
-						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">104</m_nLeft>
-								<m_nTop type="a">104</m_nTop>
-								<m_nRight type="a">931</m_nRight>
-								<m_nBottom type="a">601</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IUCDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">Door Touch Panel</_hname>
-								<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">122 10 </_UpLeft>
-						<_DownRight type="a">912 447 </_DownRight>
-						<m_nDiagramIndex type="a">11</m_nDiagramIndex>
+						<_UpLeft type="a">41 89 </_UpLeft>
+						<_DownRight type="a">797 394 </_DownRight>
+						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -221,23 +125,23 @@
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
 								<m_nLeft type="a">156</m_nLeft>
 								<m_nTop type="a">156</m_nTop>
-								<m_nRight type="a">983</m_nRight>
-								<m_nBottom type="a">653</m_nBottom>
+								<m_nRight type="a">1215</m_nRight>
+								<m_nBottom type="a">628</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
-								<_hm2Class type="a">IUCDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">Fire Sensor</_hname>
-								<_hid type="a">GUID bfb172f5-f5c5-4c20-a5a3-3fe84dbfcb86</_hid>
+								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hfilename type="a">.\DTSR_rpy\RequirementsAnalysisPkg.sbsx</_hfilename>
+								<_hsubsystem type="a">RequirementsAnalysisPkg</_hsubsystem>
+								<_hname type="a">2UseDoorTouchPanel</_hname>
+								<_hid type="a">GUID 0948c21b-1d1b-4e54-a02d-4a630df2646d</_hid>
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">790 437 </_DownRight>
-						<m_nDiagramIndex type="a">6</m_nDiagramIndex>
+						<_DownRight type="a">1022 412 </_DownRight>
+						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -253,8 +157,8 @@
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
 								<m_nLeft type="a">182</m_nLeft>
 								<m_nTop type="a">182</m_nTop>
-								<m_nRight type="a">1009</m_nRight>
-								<m_nBottom type="a">679</m_nBottom>
+								<m_nRight type="a">1215</m_nRight>
+								<m_nBottom type="a">751</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
@@ -263,173 +167,13 @@
 								<_hm2Class type="a">IUCDiagram</_hm2Class>
 								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
 								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">HVAC System</_hname>
-								<_hid type="a">GUID b18ec0de-4404-4af5-9123-6b792c0009b8</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">8 0 </_UpLeft>
-						<_DownRight type="a">798 437 </_DownRight>
-						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">208</m_nLeft>
-								<m_nTop type="a">208</m_nTop>
-								<m_nRight type="a">1035</m_nRight>
-								<m_nBottom type="a">705</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IUCDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">Lightning System</_hname>
-								<_hid type="a">GUID 14b8548c-4548-42ce-aa4e-63d2d29a85af</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">159 0 </_UpLeft>
-						<_DownRight type="a">949 437 </_DownRight>
-						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">234</m_nLeft>
-								<m_nTop type="a">234</m_nTop>
-								<m_nRight type="a">1061</m_nRight>
-								<m_nBottom type="a">731</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IUCDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">Movement Detection sensor</_hname>
-								<_hid type="a">GUID a167b975-2def-4263-a917-39d96ea32fc2</_hid>
+								<_hname type="a">CO2 Sensor</_hname>
+								<_hid type="a">GUID 960f7037-532f-49bf-85ca-1c8a6dcba995</_hid>
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">790 437 </_DownRight>
-						<m_nDiagramIndex type="a">9</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">0</m_nLeft>
-								<m_nTop type="a">0</m_nTop>
-								<m_nRight type="a">827</m_nRight>
-								<m_nBottom type="a">497</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IUCDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">Occupancy Sensor</_hname>
-								<_hid type="a">GUID 7e84f2ef-a170-4985-8bc0-124fdb6115e0</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">790 437 </_DownRight>
-						<m_nDiagramIndex type="a">8</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">26</m_nLeft>
-								<m_nTop type="a">26</m_nTop>
-								<m_nRight type="a">853</m_nRight>
-								<m_nBottom type="a">523</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IUCDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">Room Touch Panel</_hname>
-								<_hid type="a">GUID 957d40d9-6ee1-4b54-a58e-7c19d23c3fa4</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">790 437 </_DownRight>
-						<m_nDiagramIndex type="a">7</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
-					</CGEMdiDiagramParams>
-					
-					<CGEMdiDiagramParams type="e">
-						<_placement type="p">
-							<CCommon_WINDOWPLACEMENT type="e">
-								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
-								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
-								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
-								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
-								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">52</m_nLeft>
-								<m_nTop type="a">52</m_nTop>
-								<m_nRight type="a">879</m_nRight>
-								<m_nBottom type="a">549</m_nBottom>
-							</CCommon_WINDOWPLACEMENT>
-						</_placement>
-						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
-						<_theDiagram type="r">
-							<IHandle type="e">
-								<_hm2Class type="a">IUCDiagram</_hm2Class>
-								<_hfilename type="a">.\DTSR_rpy\UseCaseAnalysisPkg.sbsx</_hfilename>
-								<_hsubsystem type="a">UseCaseAnalysisPkg</_hsubsystem>
-								<_hname type="a">Security and Access System</_hname>
-								<_hid type="a">GUID 309f74b2-064b-4cb1-8615-72956a15153c</_hid>
-							</IHandle>
-						</_theDiagram>
-						<_UpLeft type="a">0 10 </_UpLeft>
-						<_DownRight type="a">790 447 </_DownRight>
-						<m_nDiagramIndex type="a">5</m_nDiagramIndex>
+						<_DownRight type="a">996 509 </_DownRight>
+						<m_nDiagramIndex type="a">4</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					

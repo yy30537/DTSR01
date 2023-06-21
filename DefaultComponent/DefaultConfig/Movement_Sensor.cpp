@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Movement_Sensor
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Movement_Sensor.cpp
 *********************************************************************/
 
@@ -15,12 +15,20 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Movement_Sensor
-Movement_Sensor::Movement_Sensor() {
+Movement_Sensor::Movement_Sensor() : isMovement(0) {
     itsNetwork = NULL;
 }
 
 Movement_Sensor::~Movement_Sensor() {
     cleanUpRelations();
+}
+
+bool Movement_Sensor::getIsMovement() const {
+    return isMovement;
+}
+
+void Movement_Sensor::setIsMovement(bool p_isMovement) {
+    isMovement = p_isMovement;
 }
 
 Network* Movement_Sensor::getItsNetwork() const {

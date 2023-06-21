@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Smart_Room
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Smart_Room.h
 *********************************************************************/
 
@@ -15,6 +15,12 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## auto_generated
+#include <oxf\omreactive.h>
+//## auto_generated
+#include <oxf\state.h>
+//## auto_generated
+#include <oxf\event.h>
 //## classInstance itsCO2_Sensor
 #include "CO2_Sensor.h"
 //## classInstance itsDoor_Touch_Panel
@@ -52,13 +58,13 @@ class Weather_Forecast;
 //## package ArchitecturalAnalysisPkg
 
 //## class Smart_Room
-class Smart_Room {
+class Smart_Room : public OMReactive {
     ////    Constructors and destructors    ////
     
 public :
 
     //## auto_generated
-    Smart_Room();
+    Smart_Room(IOxfActive* theActiveContext = 0);
     
     //## auto_generated
     ~Smart_Room();
@@ -102,12 +108,6 @@ public :
     void setItsNetwork(Network* p_Network);
     
     //## auto_generated
-    Network* getItsNetwork_1() const;
-    
-    //## auto_generated
-    void setItsNetwork_1(Network* p_Network);
-    
-    //## auto_generated
     Occupancy_Sensor* getItsOccupancy_Sensor() const;
     
     //## auto_generated
@@ -127,6 +127,9 @@ public :
     
     //## auto_generated
     Webcam* getItsWebcam() const;
+    
+    //## auto_generated
+    virtual bool startBehavior();
 
 protected :
 
@@ -152,8 +155,6 @@ protected :
     Movement_Sensor itsMovement_Sensor;		//## classInstance itsMovement_Sensor
     
     Network* itsNetwork;		//## link itsNetwork
-    
-    Network* itsNetwork_1;		//## link itsNetwork_1
     
     Occupancy_Sensor itsOccupancy_Sensor;		//## classInstance itsOccupancy_Sensor
     
@@ -206,6 +207,12 @@ public :
     
     //## auto_generated
     void _clearItsWeather_Forecast();
+    
+    //## auto_generated
+    void setActiveContext(IOxfActive* theActiveContext, bool activeInstance);
+    
+    //## auto_generated
+    virtual void destroy();
 };
 
 #endif

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\CO2_Sensor.cpp
 *********************************************************************/
 
@@ -15,12 +15,20 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class CO2_Sensor
-CO2_Sensor::CO2_Sensor() {
+CO2_Sensor::CO2_Sensor() : CO2Level(30) {
     itsNetwork = NULL;
 }
 
 CO2_Sensor::~CO2_Sensor() {
     cleanUpRelations();
+}
+
+int CO2_Sensor::getCO2Level() const {
+    return CO2Level;
+}
+
+void CO2_Sensor::setCO2Level(int p_CO2Level) {
+    CO2Level = p_CO2Level;
 }
 
 Network* CO2_Sensor::getItsNetwork() const {

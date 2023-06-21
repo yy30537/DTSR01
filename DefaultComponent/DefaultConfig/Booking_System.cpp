@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Booking_System
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Booking_System.cpp
 *********************************************************************/
 
@@ -44,11 +44,7 @@ Network* Booking_System::getItsNetwork_1() const {
 }
 
 void Booking_System::setItsNetwork_1(Network* p_Network) {
-    if(p_Network != NULL)
-        {
-            p_Network->_setItsBooking_System_1(this);
-        }
-    _setItsNetwork_1(p_Network);
+    itsNetwork_1 = p_Network;
 }
 
 Smart_Room* Booking_System::getItsSmart_Room() const {
@@ -75,11 +71,6 @@ void Booking_System::cleanUpRelations() {
         }
     if(itsNetwork_1 != NULL)
         {
-            Booking_System* p_Booking_System = itsNetwork_1->getItsBooking_System_1();
-            if(p_Booking_System != NULL)
-                {
-                    itsNetwork_1->__setItsBooking_System_1(NULL);
-                }
             itsNetwork_1 = NULL;
         }
     if(itsSmart_Room != NULL)
@@ -107,22 +98,6 @@ void Booking_System::_setItsNetwork(Network* p_Network) {
 
 void Booking_System::_clearItsNetwork() {
     itsNetwork = NULL;
-}
-
-void Booking_System::__setItsNetwork_1(Network* p_Network) {
-    itsNetwork_1 = p_Network;
-}
-
-void Booking_System::_setItsNetwork_1(Network* p_Network) {
-    if(itsNetwork_1 != NULL)
-        {
-            itsNetwork_1->__setItsBooking_System_1(NULL);
-        }
-    __setItsNetwork_1(p_Network);
-}
-
-void Booking_System::_clearItsNetwork_1() {
-    itsNetwork_1 = NULL;
 }
 
 void Booking_System::__setItsSmart_Room(Smart_Room* p_Smart_Room) {

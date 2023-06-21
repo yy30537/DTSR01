@@ -12,10 +12,10 @@
 			<_id type="a">GUID b851de7a-61ef-4289-bfd6-f9aac76a1047</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">ActorPkg</_name>
-			<_modifiedTimeWeak type="a">6.20.2023::14:45:52</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::14:48:39</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.21.2023::17:58:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.21.2023::18:4:45</_modifiedTime>
 			<_lastID type="a">14</_lastID>
-			<weakCGTime type="a">6.20.2023::14:45:52</weakCGTime>
+			<weakCGTime type="a">6.21.2023::17:58:17</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:5:40</strongCGTime>
 			<_defaultComposite type="s">GUID 5430bcf7-7251-458e-94a8-6f75ad0df316</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -44,11 +44,7 @@
 			<_id type="a">GUID 56334670-ad3b-4456-8a7b-a5216256f82d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">User</_name>
-			<OwnedDependencies type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</OwnedDependencies>
-			<_modifiedTimeWeak type="a">6.20.2023::14:45:52</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.21.2023::17:59:43</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -58,9 +54,9 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.20.2023::14:45:52</_modifiedTime>
+			<_modifiedTime type="a">6.21.2023::17:59:43</_modifiedTime>
 			<_lastID type="a">5</_lastID>
-			<weakCGTime type="a">6.20.2023::14:45:52</weakCGTime>
+			<weakCGTime type="a">6.21.2023::17:59:43</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:21:57</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -77,7 +73,9 @@
 				<value>GUID 760a0ed2-afb3-4aa2-9ac0-4288285139c4</value>
 				<value>GUID cd31aed6-d791-43cf-84ae-b73ebfc249bf</value>
 				<value>GUID 97542657-4aa5-4418-be78-632467264308</value>
-				<value>GUID 195c2f51-0b21-415e-8e9c-f09e2842d6bb</value>
+				<value>GUID f9ccb1a9-c19a-4577-baed-3a4a03fd21aa</value>
+				<value>GUID 0de35607-819f-44c2-a091-f0bdab761602</value>
+				<value>GUID e95df2d5-0157-47c4-9207-0cdc0d0cd4fe</value>
 			</AggregatesList>
 		</IActor>
 		<IAssociationEnd type="e">
@@ -330,29 +328,87 @@
 			<_navigability type="a">Navigable</_navigability>
 		</IAssociationEnd>
 		<IAssociationEnd type="e">
-			<_id type="a">GUID 195c2f51-0b21-415e-8e9c-f09e2842d6bb</_id>
+			<_id type="a">GUID f9ccb1a9-c19a-4577-baed-3a4a03fd21aa</_id>
 			<_myState type="a">10240</_myState>
-			<_name type="a">itsUC_ControlLight</_name>
-			<_modifiedTimeWeak type="a">6.20.2023::14:45:52</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::14:45:52</_modifiedTime>
+			<_name type="a">itsDoor_Touch_Panel</_name>
+			<_modifiedTimeWeak type="a">6.21.2023::17:58:17</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.21.2023::17:58:17</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
 					<_hm2Class type="a">IClass</_hm2Class>
-					<_hfilename type="a">.\ControlLightPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">UseCaseAnalysisPkg::ControlLightPkg</_hsubsystem>
-					<_hname type="a">UC_ControlLight</_hname>
-					<_hid type="a">GUID da1287cb-8d9e-4ebc-8e5c-f770f96a4117</_hid>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Door_Touch_Panel</_hname>
+					<_hid type="a">GUID 28130e4e-a2b4-4890-b7ef-4161926d17ba</_hid>
 				</IClassifierHandle>
 			</_otherClass>
 			<_inverse type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ControlLightPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">UseCaseAnalysisPkg::ControlLightPkg</_hsubsystem>
-					<_hclass type="a">UC_ControlLight</_hclass>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Door_Touch_Panel</_hclass>
 					<_hname type="a">itsUser</_hname>
-					<_hid type="a">GUID c5e9a05a-bfeb-414e-8979-3388ea6c2cef</_hid>
+					<_hid type="a">GUID 3e21cc35-654e-4cfa-94c7-dfd4bfb852a5</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 0de35607-819f-44c2-a091-f0bdab761602</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsRoom_Touch_Panel</_name>
+			<_modifiedTimeWeak type="a">6.21.2023::17:58:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.21.2023::17:58:45</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Room_Touch_Panel</_hname>
+					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Room_Touch_Panel</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID ac80527d-99e0-494b-963e-f1af1cdfae0d</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID e95df2d5-0157-47c4-9207-0cdc0d0cd4fe</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsNetwork</_name>
+			<_modifiedTimeWeak type="a">6.21.2023::17:59:43</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.21.2023::17:59:43</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Network</_hname>
+					<_hid type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">itsUser</_hname>
+					<_hid type="a">GUID 8e9f1cb3-9065-44fa-b76a-b04e2754e36e</_hid>
 				</IHandle>
 			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
@@ -362,11 +418,7 @@
 			<_id type="a">GUID e41aa68e-8b46-4dcc-b153-1c1a19f9cb94</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">ExternalPersonnel</_name>
-			<OwnedDependencies type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</OwnedDependencies>
-			<_modifiedTimeWeak type="a">6.20.2023::14:16:35</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.21.2023::17:59:23</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -376,9 +428,9 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.20.2023::14:16:35</_modifiedTime>
+			<_modifiedTime type="a">6.21.2023::17:59:23</_modifiedTime>
 			<_lastID type="a">1</_lastID>
-			<weakCGTime type="a">6.20.2023::14:16:35</weakCGTime>
+			<weakCGTime type="a">6.21.2023::17:59:23</weakCGTime>
 			<strongCGTime type="a">6.20.2023::13:46:16</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -387,6 +439,9 @@
 			<_classModifier type="a">Unspecified</_classModifier>
 			<AggregatesList type="e">
 				<value>GUID af218b41-c895-41df-aab8-809a4f015046</value>
+				<value>GUID 6c5fd704-2f7d-4a8c-8c41-bd81368d9227</value>
+				<value>GUID afe224c8-c5d7-4d26-bd9c-10cce4de5e28</value>
+				<value>GUID 894397a0-4f14-4728-830b-084fdab5f222</value>
 			</AggregatesList>
 		</IActor>
 		<IAssociationEnd type="e">
@@ -409,10 +464,93 @@
 				<IHandle type="e">
 				</IHandle>
 			</_inverse>
-			<Qualifiers type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Qualifiers>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 6c5fd704-2f7d-4a8c-8c41-bd81368d9227</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsDoor_Touch_Panel</_name>
+			<_modifiedTimeWeak type="a">6.21.2023::17:58:25</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.21.2023::17:58:25</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Door_Touch_Panel</_hname>
+					<_hid type="a">GUID 28130e4e-a2b4-4890-b7ef-4161926d17ba</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Door_Touch_Panel</_hclass>
+					<_hname type="a">itsExternalPersonnel</_hname>
+					<_hid type="a">GUID edbdaa5e-ca12-4da9-9a1f-a8cfe5c7df82</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID afe224c8-c5d7-4d26-bd9c-10cce4de5e28</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsRoom_Touch_Panel</_name>
+			<_modifiedTimeWeak type="a">6.21.2023::17:58:35</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.21.2023::17:58:35</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Room_Touch_Panel</_hname>
+					<_hid type="a">GUID d716e118-1247-47bb-a04f-ae96c294ee81</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Room_Touch_Panel</_hclass>
+					<_hname type="a">itsExternalPersonnel</_hname>
+					<_hid type="a">GUID d9bed7e2-c18e-405e-9743-9c6531729993</_hid>
+				</IHandle>
+			</_inverse>
+			<_linkType type="a">Assoc</_linkType>
+			<_navigability type="a">Navigable</_navigability>
+		</IAssociationEnd>
+		<IAssociationEnd type="e">
+			<_id type="a">GUID 894397a0-4f14-4728-830b-084fdab5f222</_id>
+			<_myState type="a">10240</_myState>
+			<_name type="a">itsNetwork</_name>
+			<_modifiedTimeWeak type="a">6.21.2023::17:59:23</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.21.2023::17:59:23</_modifiedTime>
+			<_multiplicity type="a">1</_multiplicity>
+			<_otherClass type="r">
+				<IClassifierHandle type="e">
+					<_hm2Class type="a">IClass</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hname type="a">Network</_hname>
+					<_hid type="a">GUID 69e8eeb5-862f-4dfc-a8c3-7a8dda4fef2d</_hid>
+				</IClassifierHandle>
+			</_otherClass>
+			<_inverse type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAssociationEnd</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">itsExternalPersonnel</_hname>
+					<_hid type="a">GUID aed0c39f-03aa-4dbd-aa69-44baf5404bae</_hid>
+				</IHandle>
+			</_inverse>
 			<_linkType type="a">Assoc</_linkType>
 			<_navigability type="a">Navigable</_navigability>
 		</IAssociationEnd>

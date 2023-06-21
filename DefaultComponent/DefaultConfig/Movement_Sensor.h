@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Movement_Sensor
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Movement_Sensor.h
 *********************************************************************/
 
@@ -35,6 +35,12 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    bool getIsMovement() const;
+    
+    //## auto_generated
+    void setIsMovement(bool p_isMovement);
+    
+    //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
@@ -44,6 +50,10 @@ protected :
 
     //## auto_generated
     void cleanUpRelations();
+    
+    ////    Attributes    ////
+    
+    bool isMovement;		//## attribute isMovement
     
     ////    Relations and components    ////
     

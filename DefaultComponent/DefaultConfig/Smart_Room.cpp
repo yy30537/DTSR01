@@ -4,10 +4,12 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Smart_Room
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Smart_Room.cpp
 *********************************************************************/
 
+//## auto_generated
+#include <oxf\omthread.h>
 //## auto_generated
 #include "Smart_Room.h"
 //## link itsBooking_System
@@ -21,11 +23,16 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Smart_Room
-Smart_Room::Smart_Room() {
+Smart_Room::Smart_Room(IOxfActive* theActiveContext) {
+    setActiveContext(theActiveContext, false);
+    {
+        {
+            itsLights.setShouldDelete(false);
+        }
+    }
     itsBooking_System = NULL;
     itsHVAC = NULL;
     itsNetwork = NULL;
-    itsNetwork_1 = NULL;
     itsWeather_Forecast = NULL;
 }
 
@@ -93,14 +100,6 @@ void Smart_Room::setItsNetwork(Network* p_Network) {
     _setItsNetwork(p_Network);
 }
 
-Network* Smart_Room::getItsNetwork_1() const {
-    return itsNetwork_1;
-}
-
-void Smart_Room::setItsNetwork_1(Network* p_Network) {
-    itsNetwork_1 = p_Network;
-}
-
 Occupancy_Sensor* Smart_Room::getItsOccupancy_Sensor() const {
     return (Occupancy_Sensor*) &itsOccupancy_Sensor;
 }
@@ -133,6 +132,13 @@ Webcam* Smart_Room::getItsWebcam() const {
     return (Webcam*) &itsWebcam;
 }
 
+bool Smart_Room::startBehavior() {
+    bool done = true;
+    done &= itsLights.startBehavior();
+    done &= OMReactive::startBehavior();
+    return done;
+}
+
 void Smart_Room::cleanUpRelations() {
     if(itsBooking_System != NULL)
         {
@@ -160,10 +166,6 @@ void Smart_Room::cleanUpRelations() {
                     itsNetwork->__setItsSmart_Room(NULL);
                 }
             itsNetwork = NULL;
-        }
-    if(itsNetwork_1 != NULL)
-        {
-            itsNetwork_1 = NULL;
         }
     if(itsWeather_Forecast != NULL)
         {
@@ -238,6 +240,18 @@ void Smart_Room::_setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast) {
 
 void Smart_Room::_clearItsWeather_Forecast() {
     itsWeather_Forecast = NULL;
+}
+
+void Smart_Room::setActiveContext(IOxfActive* theActiveContext, bool activeInstance) {
+    OMReactive::setActiveContext(theActiveContext, activeInstance);
+    {
+        itsLights.setActiveContext(theActiveContext, false);
+    }
+}
+
+void Smart_Room::destroy() {
+    itsLights.destroy();
+    OMReactive::destroy();
 }
 
 /*********************************************************************

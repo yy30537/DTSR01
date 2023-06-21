@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Booking_System
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Booking_System.h
 *********************************************************************/
 
@@ -80,15 +80,6 @@ public :
     
     //## auto_generated
     void _clearItsNetwork();
-    
-    //## auto_generated
-    void __setItsNetwork_1(Network* p_Network);
-    
-    //## auto_generated
-    void _setItsNetwork_1(Network* p_Network);
-    
-    //## auto_generated
-    void _clearItsNetwork_1();
     
     //## auto_generated
     void __setItsSmart_Room(Smart_Room* p_Smart_Room);

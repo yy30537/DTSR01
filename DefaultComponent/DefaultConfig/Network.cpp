@@ -4,10 +4,12 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Wed, 21, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.cpp
 *********************************************************************/
 
+//## auto_generated
+#include <oxf\omthread.h>
 //## auto_generated
 #include "Network.h"
 //## link itsBooking_System
@@ -43,9 +45,9 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Network
-Network::Network() {
+Network::Network(IOxfActive* theActiveContext) {
+    setActiveContext(theActiveContext, false);
     itsBooking_System = NULL;
-    itsBooking_System_1 = NULL;
     itsCO2_Sensor = NULL;
     itsDoor_Touch_Panel = NULL;
     itsFire_Sensor = NULL;
@@ -60,10 +62,41 @@ Network::Network() {
     itsSpeakers = NULL;
     itsWeather_Forecast = NULL;
     itsWebcam = NULL;
+    initStatechart();
 }
 
 Network::~Network() {
     cleanUpRelations();
+}
+
+void Network::Movement_Detected() {
+    //#[ operation Movement_Detected()
+    //#]
+}
+
+void Network::Occup_UpdateCount() {
+    //#[ operation Occup_UpdateCount()
+    //#]
+}
+
+void Network::turnOff_CO2_Alarm() {
+    //#[ operation turnOff_CO2_Alarm()
+    //#]
+}
+
+void Network::turnOff_Fire_Alarm() {
+    //#[ operation turnOff_Fire_Alarm()
+    //#]
+}
+
+void Network::turnOn_CO2_Alarm() {
+    //#[ operation turnOn_CO2_Alarm()
+    //#]
+}
+
+void Network::turnOn_Fire_Alarm() {
+    //#[ operation turnOn_Fire_Alarm()
+    //#]
 }
 
 Booking_System* Network::getItsBooking_System() const {
@@ -76,18 +109,6 @@ void Network::setItsBooking_System(Booking_System* p_Booking_System) {
             p_Booking_System->_setItsNetwork(this);
         }
     _setItsBooking_System(p_Booking_System);
-}
-
-Booking_System* Network::getItsBooking_System_1() const {
-    return itsBooking_System_1;
-}
-
-void Network::setItsBooking_System_1(Booking_System* p_Booking_System) {
-    if(p_Booking_System != NULL)
-        {
-            p_Booking_System->_setItsNetwork_1(this);
-        }
-    _setItsBooking_System_1(p_Booking_System);
 }
 
 CO2_Sensor* Network::getItsCO2_Sensor() const {
@@ -258,6 +279,17 @@ void Network::setItsWebcam(Webcam* p_Webcam) {
     _setItsWebcam(p_Webcam);
 }
 
+bool Network::startBehavior() {
+    bool done = false;
+    done = OMReactive::startBehavior();
+    return done;
+}
+
+void Network::initStatechart() {
+    rootState_subState = OMNonState;
+    rootState_active = OMNonState;
+}
+
 void Network::cleanUpRelations() {
     if(itsBooking_System != NULL)
         {
@@ -267,15 +299,6 @@ void Network::cleanUpRelations() {
                     itsBooking_System->__setItsNetwork(NULL);
                 }
             itsBooking_System = NULL;
-        }
-    if(itsBooking_System_1 != NULL)
-        {
-            Network* p_Network = itsBooking_System_1->getItsNetwork_1();
-            if(p_Network != NULL)
-                {
-                    itsBooking_System_1->__setItsNetwork_1(NULL);
-                }
-            itsBooking_System_1 = NULL;
         }
     if(itsCO2_Sensor != NULL)
         {
@@ -405,6 +428,28 @@ void Network::cleanUpRelations() {
         }
 }
 
+int Network::decreaseLightIntensity() {
+    decreaseLightIntensity_Network_Event triggerEvent;
+    handleTrigger(&triggerEvent);
+    return triggerEvent.om_reply;
+}
+
+int Network::increaseLightIntensity() {
+    increaseLightIntensity_Network_Event triggerEvent;
+    handleTrigger(&triggerEvent);
+    return triggerEvent.om_reply;
+}
+
+void Network::turnOff_light() {
+    turnOff_light_Network_Event triggerEvent;
+    handleTrigger(&triggerEvent);
+}
+
+void Network::turnOn_light() {
+    turnOn_light_Network_Event triggerEvent;
+    handleTrigger(&triggerEvent);
+}
+
 void Network::__setItsBooking_System(Booking_System* p_Booking_System) {
     itsBooking_System = p_Booking_System;
 }
@@ -419,22 +464,6 @@ void Network::_setItsBooking_System(Booking_System* p_Booking_System) {
 
 void Network::_clearItsBooking_System() {
     itsBooking_System = NULL;
-}
-
-void Network::__setItsBooking_System_1(Booking_System* p_Booking_System) {
-    itsBooking_System_1 = p_Booking_System;
-}
-
-void Network::_setItsBooking_System_1(Booking_System* p_Booking_System) {
-    if(itsBooking_System_1 != NULL)
-        {
-            itsBooking_System_1->__setItsNetwork_1(NULL);
-        }
-    __setItsBooking_System_1(p_Booking_System);
-}
-
-void Network::_clearItsBooking_System_1() {
-    itsBooking_System_1 = NULL;
 }
 
 void Network::__setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
@@ -660,6 +689,88 @@ void Network::_setItsWebcam(Webcam* p_Webcam) {
 void Network::_clearItsWebcam() {
     itsWebcam = NULL;
 }
+
+void Network::rootState_entDef() {
+    {
+        rootState_subState = lights_off;
+        rootState_active = lights_off;
+        //#[ state lights_off.(Entry) 
+         std::cout << "entry: lights_off state\n";
+        setLightIntensity(0);
+        //#]
+    }
+}
+
+IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    switch (rootState_active) {
+        // State lights_on
+        case lights_on:
+        {
+            if(IS_EVENT_TYPE_OF(turnOn_light_Network_Event_id))
+                {
+                    //#[ state lights_on.(Exit) 
+                     std::cout << "exit: lights_on state\n";
+                    //#]
+                    rootState_subState = lights_off;
+                    rootState_active = lights_off;
+                    //#[ state lights_off.(Entry) 
+                     std::cout << "entry: lights_off state\n";
+                    setLightIntensity(0);
+                    //#]
+                    res = eventConsumed;
+                }
+            
+        }
+        break;
+        // State lights_off
+        case lights_off:
+        {
+            if(IS_EVENT_TYPE_OF(turnOff_light_Network_Event_id))
+                {
+                    //#[ state lights_off.(Exit) 
+                     std::cout << "exit: lights_off state\n";
+                    //#]
+                    rootState_subState = lights_on;
+                    rootState_active = lights_on;
+                    //#[ state lights_on.(Entry) 
+                    std::cout << "entry: lights_on state\n";
+                    setLightIntensity(50);
+                    //#]
+                    res = eventConsumed;
+                }
+            
+        }
+        break;
+        default:
+            break;
+    }
+    return res;
+}
+
+//#[ ignore
+decreaseLightIntensity_Network_Event::decreaseLightIntensity_Network_Event() {
+    setId(decreaseLightIntensity_Network_Event_id);
+}
+//#]
+
+//#[ ignore
+increaseLightIntensity_Network_Event::increaseLightIntensity_Network_Event() {
+    setId(increaseLightIntensity_Network_Event_id);
+}
+//#]
+
+//#[ ignore
+turnOff_light_Network_Event::turnOff_light_Network_Event() {
+    setId(turnOff_light_Network_Event_id);
+}
+//#]
+
+//#[ ignore
+turnOn_light_Network_Event::turnOn_light_Network_Event() {
+    setId(turnOn_light_Network_Event_id);
+}
+//#]
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\Network.cpp
