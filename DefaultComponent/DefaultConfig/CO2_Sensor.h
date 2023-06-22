@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\CO2_Sensor.h
 *********************************************************************/
 
@@ -15,6 +15,9 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## link itsHVAC
+class HVAC;
+
 //## link itsNetwork
 class Network;
 
@@ -41,6 +44,12 @@ public :
     void setCO2Level(int p_CO2Level);
     
     //## auto_generated
+    HVAC* getItsHVAC() const;
+    
+    //## auto_generated
+    void setItsHVAC(HVAC* p_HVAC);
+    
+    //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
@@ -57,6 +66,8 @@ protected :
     
     ////    Relations and components    ////
     
+    HVAC* itsHVAC;		//## link itsHVAC
+    
     Network* itsNetwork;		//## link itsNetwork
     
     ////    Framework operations    ////
@@ -64,13 +75,13 @@ protected :
 public :
 
     //## auto_generated
-    void __setItsNetwork(Network* p_Network);
+    void __setItsHVAC(HVAC* p_HVAC);
     
     //## auto_generated
-    void _setItsNetwork(Network* p_Network);
+    void _setItsHVAC(HVAC* p_HVAC);
     
     //## auto_generated
-    void _clearItsNetwork();
+    void _clearItsHVAC();
 };
 
 #endif

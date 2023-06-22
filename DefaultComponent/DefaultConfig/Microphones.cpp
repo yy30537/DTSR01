@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Microphones
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Microphones.cpp
 *********************************************************************/
 
@@ -15,12 +15,28 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Microphones
-Microphones::Microphones() {
+Microphones::Microphones() : isOn(0), volume(0) {
     itsNetwork = NULL;
 }
 
 Microphones::~Microphones() {
     cleanUpRelations();
+}
+
+bool Microphones::getIsOn() const {
+    return isOn;
+}
+
+void Microphones::setIsOn(bool p_isOn) {
+    isOn = p_isOn;
+}
+
+int Microphones::getVolume() const {
+    return volume;
+}
+
+void Microphones::setVolume(int p_volume) {
+    volume = p_volume;
 }
 
 Network* Microphones::getItsNetwork() const {

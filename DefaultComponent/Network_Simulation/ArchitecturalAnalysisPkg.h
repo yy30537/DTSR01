@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\ArchitecturalAnalysisPkg.h
 *********************************************************************/
 
@@ -27,6 +27,9 @@ class CO2_Sensor;
 
 //## auto_generated
 class Door_Touch_Panel;
+
+//## auto_generated
+class External_Personnel;
 
 //## auto_generated
 class Fire_Sensor;
@@ -68,29 +71,33 @@ class Weather_Forecast;
 class Webcam;
 
 //#[ ignore
-#define turn_on_light_ArchitecturalAnalysisPkg_id 18201
+#define ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id 18201
 
-#define turn_off_light_ArchitecturalAnalysisPkg_id 18202
+#define ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id 18202
+
+#define ev_Fire_Detected_ArchitecturalAnalysisPkg_id 18203
+
+#define ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id 18204
 //#]
 
 //## package ArchitecturalAnalysisPkg
 
 
 
-//## event turn_on_light()
-class turn_on_light : public OMEvent {
+//## event ev_CO2_Level_OverThreshold()
+class ev_CO2_Level_OverThreshold : public OMEvent {
     ////    Friends    ////
     
 public :
 
 #ifdef _OMINSTRUMENT
-    friend class OMAnimatedturn_on_light;
+    friend class OMAnimatedev_CO2_Level_OverThreshold;
 #endif // _OMINSTRUMENT
 
     ////    Constructors and destructors    ////
     
     //## auto_generated
-    turn_on_light();
+    ev_CO2_Level_OverThreshold();
     
     ////    Framework operations    ////
     
@@ -100,26 +107,26 @@ public :
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
-class OMAnimatedturn_on_light : virtual public AOMEvent {
-    DECLARE_META_EVENT(turn_on_light)
+class OMAnimatedev_CO2_Level_OverThreshold : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_CO2_Level_OverThreshold)
 };
 //#]
 #endif // _OMINSTRUMENT
 
-//## event turn_off_light()
-class turn_off_light : public OMEvent {
+//## event ev_CO2_Level_BelowThreshold()
+class ev_CO2_Level_BelowThreshold : public OMEvent {
     ////    Friends    ////
     
 public :
 
 #ifdef _OMINSTRUMENT
-    friend class OMAnimatedturn_off_light;
+    friend class OMAnimatedev_CO2_Level_BelowThreshold;
 #endif // _OMINSTRUMENT
 
     ////    Constructors and destructors    ////
     
     //## auto_generated
-    turn_off_light();
+    ev_CO2_Level_BelowThreshold();
     
     ////    Framework operations    ////
     
@@ -129,8 +136,66 @@ public :
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
-class OMAnimatedturn_off_light : virtual public AOMEvent {
-    DECLARE_META_EVENT(turn_off_light)
+class OMAnimatedev_CO2_Level_BelowThreshold : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_CO2_Level_BelowThreshold)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_Fire_Detected()
+class ev_Fire_Detected : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_Fire_Detected;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_Fire_Detected();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_Fire_Detected : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_Fire_Detected)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_Fire_Distinguished()
+class ev_Fire_Distinguished : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_Fire_Distinguished;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_Fire_Distinguished();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_Fire_Distinguished : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_Fire_Distinguished)
 };
 //#]
 #endif // _OMINSTRUMENT

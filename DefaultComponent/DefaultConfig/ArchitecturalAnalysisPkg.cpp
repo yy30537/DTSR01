@@ -1,17 +1,15 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp
 *********************************************************************/
 
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
-//## classInstance part_0
-#include "part_0.h"
 //## auto_generated
 #include "Booking_System.h"
 //## auto_generated
@@ -49,8 +47,42 @@
 //## package ArchitecturalAnalysisPkg
 
 
-//## classInstance part_0
-part_0_C part_0;
+
+//## event ev_CO2_Level_OverThreshold()
+ev_CO2_Level_OverThreshold::ev_CO2_Level_OverThreshold() {
+    setId(ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_CO2_Level_OverThreshold::isTypeOf(const short id) const {
+    return (ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id==id);
+}
+
+//## event ev_CO2_Level_BelowThreshold()
+ev_CO2_Level_BelowThreshold::ev_CO2_Level_BelowThreshold() {
+    setId(ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_CO2_Level_BelowThreshold::isTypeOf(const short id) const {
+    return (ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id==id);
+}
+
+//## event ev_Fire_Detected()
+ev_Fire_Detected::ev_Fire_Detected() {
+    setId(ev_Fire_Detected_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Fire_Detected::isTypeOf(const short id) const {
+    return (ev_Fire_Detected_ArchitecturalAnalysisPkg_id==id);
+}
+
+//## event ev_Fire_Distinguished()
+ev_Fire_Distinguished::ev_Fire_Distinguished() {
+    setId(ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Fire_Distinguished::isTypeOf(const short id) const {
+    return (ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id==id);
+}
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp

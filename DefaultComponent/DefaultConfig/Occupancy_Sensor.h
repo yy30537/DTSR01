@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Occupancy_Sensor
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Occupancy_Sensor.h
 *********************************************************************/
 
@@ -15,6 +15,9 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## link itsHVAC
+class HVAC;
+
 //## link itsNetwork
 class Network;
 
@@ -35,10 +38,22 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
-    int getNumOccupants() const;
+    bool getDetectOccupantLeaves() const;
     
     //## auto_generated
-    void setNumOccupants(int p_numOccupants);
+    void setDetectOccupantLeaves(bool p_detectOccupantLeaves);
+    
+    //## auto_generated
+    bool getNewOccupantsDetected() const;
+    
+    //## auto_generated
+    void setNewOccupantsDetected(bool p_newOccupantsDetected);
+    
+    //## auto_generated
+    HVAC* getItsHVAC() const;
+    
+    //## auto_generated
+    void setItsHVAC(HVAC* p_HVAC);
     
     //## auto_generated
     Network* getItsNetwork() const;
@@ -53,9 +68,13 @@ protected :
     
     ////    Attributes    ////
     
-    int numOccupants;		//## attribute numOccupants
+    bool detectOccupantLeaves;		//## attribute detectOccupantLeaves
+    
+    bool newOccupantsDetected;		//## attribute newOccupantsDetected
     
     ////    Relations and components    ////
+    
+    HVAC* itsHVAC;		//## link itsHVAC
     
     Network* itsNetwork;		//## link itsNetwork
     
@@ -63,6 +82,15 @@ protected :
 
 public :
 
+    //## auto_generated
+    void __setItsHVAC(HVAC* p_HVAC);
+    
+    //## auto_generated
+    void _setItsHVAC(HVAC* p_HVAC);
+    
+    //## auto_generated
+    void _clearItsHVAC();
+    
     //## auto_generated
     void __setItsNetwork(Network* p_Network);
     

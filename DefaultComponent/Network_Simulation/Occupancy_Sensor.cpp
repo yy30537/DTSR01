@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Occupancy_Sensor
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\Occupancy_Sensor.cpp
 *********************************************************************/
 
@@ -14,6 +14,8 @@
 
 //## auto_generated
 #include "Occupancy_Sensor.h"
+//## link itsHVAC
+#include "HVAC.h"
 //## link itsNetwork
 #include "Network.h"
 //#[ ignore
@@ -25,12 +27,41 @@
 //## class Occupancy_Sensor
 Occupancy_Sensor::Occupancy_Sensor() {
     NOTIFY_CONSTRUCTOR(Occupancy_Sensor, Occupancy_Sensor(), 0, ArchitecturalAnalysisPkg_Occupancy_Sensor_Occupancy_Sensor_SERIALIZE);
+    itsHVAC = NULL;
     itsNetwork = NULL;
 }
 
 Occupancy_Sensor::~Occupancy_Sensor() {
     NOTIFY_DESTRUCTOR(~Occupancy_Sensor, true);
     cleanUpRelations();
+}
+
+bool Occupancy_Sensor::getDetectOccupantLeaves() const {
+    return detectOccupantLeaves;
+}
+
+void Occupancy_Sensor::setDetectOccupantLeaves(bool p_detectOccupantLeaves) {
+    detectOccupantLeaves = p_detectOccupantLeaves;
+}
+
+bool Occupancy_Sensor::getNewOccupantsDetected() const {
+    return newOccupantsDetected;
+}
+
+void Occupancy_Sensor::setNewOccupantsDetected(bool p_newOccupantsDetected) {
+    newOccupantsDetected = p_newOccupantsDetected;
+}
+
+HVAC* Occupancy_Sensor::getItsHVAC() const {
+    return itsHVAC;
+}
+
+void Occupancy_Sensor::setItsHVAC(HVAC* p_HVAC) {
+    if(p_HVAC != NULL)
+        {
+            p_HVAC->_setItsOccupancy_Sensor(this);
+        }
+    _setItsHVAC(p_HVAC);
 }
 
 Network* Occupancy_Sensor::getItsNetwork() const {
@@ -46,6 +77,16 @@ void Occupancy_Sensor::setItsNetwork(Network* p_Network) {
 }
 
 void Occupancy_Sensor::cleanUpRelations() {
+    if(itsHVAC != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsHVAC");
+            Occupancy_Sensor* p_Occupancy_Sensor = itsHVAC->getItsOccupancy_Sensor();
+            if(p_Occupancy_Sensor != NULL)
+                {
+                    itsHVAC->__setItsOccupancy_Sensor(NULL);
+                }
+            itsHVAC = NULL;
+        }
     if(itsNetwork != NULL)
         {
             NOTIFY_RELATION_CLEARED("itsNetwork");
@@ -56,6 +97,31 @@ void Occupancy_Sensor::cleanUpRelations() {
                 }
             itsNetwork = NULL;
         }
+}
+
+void Occupancy_Sensor::__setItsHVAC(HVAC* p_HVAC) {
+    itsHVAC = p_HVAC;
+    if(p_HVAC != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsHVAC", p_HVAC, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsHVAC");
+        }
+}
+
+void Occupancy_Sensor::_setItsHVAC(HVAC* p_HVAC) {
+    if(itsHVAC != NULL)
+        {
+            itsHVAC->__setItsOccupancy_Sensor(NULL);
+        }
+    __setItsHVAC(p_HVAC);
+}
+
+void Occupancy_Sensor::_clearItsHVAC() {
+    NOTIFY_RELATION_CLEARED("itsHVAC");
+    itsHVAC = NULL;
 }
 
 void Occupancy_Sensor::__setItsNetwork(Network* p_Network) {
@@ -85,11 +151,21 @@ void Occupancy_Sensor::_clearItsNetwork() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedOccupancy_Sensor::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("newOccupantsDetected", x2String(myReal->newOccupantsDetected));
+    aomsAttributes->addAttribute("detectOccupantLeaves", x2String(myReal->detectOccupantLeaves));
+}
+
 void OMAnimatedOccupancy_Sensor::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsNetwork", false, true);
     if(myReal->itsNetwork)
         {
             aomsRelations->ADD_ITEM(myReal->itsNetwork);
+        }
+    aomsRelations->addRelation("itsHVAC", false, true);
+    if(myReal->itsHVAC)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsHVAC);
         }
 }
 //#]

@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: External_Personnel
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\External_Personnel.cpp
 *********************************************************************/
 
@@ -28,14 +28,39 @@ Network* External_Personnel::getItsNetwork() const {
 }
 
 void External_Personnel::setItsNetwork(Network* p_Network) {
-    itsNetwork = p_Network;
+    if(p_Network != NULL)
+        {
+            p_Network->_setItsExternal_Personnel(this);
+        }
+    _setItsNetwork(p_Network);
 }
 
 void External_Personnel::cleanUpRelations() {
     if(itsNetwork != NULL)
         {
+            External_Personnel* p_External_Personnel = itsNetwork->getItsExternal_Personnel();
+            if(p_External_Personnel != NULL)
+                {
+                    itsNetwork->__setItsExternal_Personnel(NULL);
+                }
             itsNetwork = NULL;
         }
+}
+
+void External_Personnel::__setItsNetwork(Network* p_Network) {
+    itsNetwork = p_Network;
+}
+
+void External_Personnel::_setItsNetwork(Network* p_Network) {
+    if(itsNetwork != NULL)
+        {
+            itsNetwork->__setItsExternal_Personnel(NULL);
+        }
+    __setItsNetwork(p_Network);
+}
+
+void External_Personnel::_clearItsNetwork() {
+    itsNetwork = NULL;
 }
 
 /*********************************************************************

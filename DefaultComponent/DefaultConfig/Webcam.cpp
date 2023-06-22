@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Webcam
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Webcam.cpp
 *********************************************************************/
 
@@ -21,6 +21,14 @@ Webcam::Webcam() {
 
 Webcam::~Webcam() {
     cleanUpRelations();
+}
+
+bool Webcam::getIsOn() const {
+    return isOn;
+}
+
+void Webcam::setIsOn(bool p_isOn) {
+    isOn = p_isOn;
 }
 
 Network* Webcam::getItsNetwork() const {

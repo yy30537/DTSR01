@@ -186,25 +186,25 @@ SOCK_LIB=
 
 
 
-Smart_Room.obj : Smart_Room.cpp Smart_Room.h    Speakers.h Smart_Screen.h Door_Touch_Panel.h Room_Touch_Panel.h Webcam.h Microphones.h Lights.h Network.h HVAC.h Weather_Forecast.h Booking_System.h Fire_Sensor.h Movement_Sensor.h Occupancy_Sensor.h CO2_Sensor.h 
+Smart_Room.obj : Smart_Room.cpp Smart_Room.h    Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Smart_Room.obj" "Smart_Room.cpp" 
 
 
 
-Booking_System.obj : Booking_System.cpp Booking_System.h    Smart_Room.h Network.h 
+Booking_System.obj : Booking_System.cpp Booking_System.h    Network.h Door_Touch_Panel.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Booking_System.obj" "Booking_System.cpp" 
 
 
 
-CO2_Sensor.obj : CO2_Sensor.cpp CO2_Sensor.h    Network.h 
+CO2_Sensor.obj : CO2_Sensor.cpp CO2_Sensor.h    Network.h HVAC.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CO2_Sensor.obj" "CO2_Sensor.cpp" 
 
 
 
-Door_Touch_Panel.obj : Door_Touch_Panel.cpp Door_Touch_Panel.h    Network.h 
+Door_Touch_Panel.obj : Door_Touch_Panel.cpp Door_Touch_Panel.h    Network.h Booking_System.h User.h ExternalPersonnel.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Door_Touch_Panel.obj" "Door_Touch_Panel.cpp" 
 
@@ -216,13 +216,13 @@ External_Personnel.obj : External_Personnel.cpp External_Personnel.h    Network.
 
 
 
-Fire_Sensor.obj : Fire_Sensor.cpp Fire_Sensor.h    Network.h 
+Fire_Sensor.obj : Fire_Sensor.cpp Fire_Sensor.h    
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Fire_Sensor.obj" "Fire_Sensor.cpp" 
 
 
 
-HVAC.obj : HVAC.cpp HVAC.h    Smart_Room.h Network.h 
+HVAC.obj : HVAC.cpp HVAC.h    Network.h CO2_Sensor.h Occupancy_Sensor.h Movement_Sensor.h Room_Touch_Panel.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"HVAC.obj" "HVAC.cpp" 
 
@@ -240,25 +240,25 @@ Microphones.obj : Microphones.cpp Microphones.h    Network.h
 
 
 
-Movement_Sensor.obj : Movement_Sensor.cpp Movement_Sensor.h    Network.h 
+Movement_Sensor.obj : Movement_Sensor.cpp Movement_Sensor.h    Network.h HVAC.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Movement_Sensor.obj" "Movement_Sensor.cpp" 
 
 
 
-Network.obj : Network.cpp Network.h    Smart_Room.h HVAC.h Weather_Forecast.h Booking_System.h Room_Touch_Panel.h Door_Touch_Panel.h Smart_Screen.h Speakers.h Webcam.h Microphones.h Lights.h CO2_Sensor.h Occupancy_Sensor.h Movement_Sensor.h Fire_Sensor.h 
+Network.obj : Network.cpp Network.h    Smart_Room.h HVAC.h Room_Touch_Panel.h Door_Touch_Panel.h Smart_Screen.h Speakers.h Webcam.h Microphones.h Lights.h Occupancy_Sensor.h Movement_Sensor.h Booking_System.h External_Personnel.h ExternalPersonnel.h User.h Fire_Sensor.h CO2_Sensor.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Network.obj" "Network.cpp" 
 
 
 
-Occupancy_Sensor.obj : Occupancy_Sensor.cpp Occupancy_Sensor.h    Network.h 
+Occupancy_Sensor.obj : Occupancy_Sensor.cpp Occupancy_Sensor.h    Network.h HVAC.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Occupancy_Sensor.obj" "Occupancy_Sensor.cpp" 
 
 
 
-Room_Touch_Panel.obj : Room_Touch_Panel.cpp Room_Touch_Panel.h    Network.h 
+Room_Touch_Panel.obj : Room_Touch_Panel.cpp Room_Touch_Panel.h    Network.h HVAC.h ExternalPersonnel.h User.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Room_Touch_Panel.obj" "Room_Touch_Panel.cpp" 
 
@@ -276,7 +276,7 @@ Speakers.obj : Speakers.cpp Speakers.h    Network.h
 
 
 
-Weather_Forecast.obj : Weather_Forecast.cpp Weather_Forecast.h    Smart_Room.h Network.h 
+Weather_Forecast.obj : Weather_Forecast.cpp Weather_Forecast.h    
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Weather_Forecast.obj" "Weather_Forecast.cpp" 
 
@@ -288,13 +288,13 @@ Webcam.obj : Webcam.cpp Webcam.h    Network.h
 
 
 
-User.obj : User.cpp User.h    Smart_Room.h 
+User.obj : User.cpp User.h    Smart_Room.h Door_Touch_Panel.h Room_Touch_Panel.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"User.obj" "User.cpp" 
 
 
 
-ExternalPersonnel.obj : ExternalPersonnel.cpp ExternalPersonnel.h    Smart_Room.h 
+ExternalPersonnel.obj : ExternalPersonnel.cpp ExternalPersonnel.h    Smart_Room.h Door_Touch_Panel.h Room_Touch_Panel.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ExternalPersonnel.obj" "ExternalPersonnel.cpp" 
 

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Speakers
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\Speakers.h
 *********************************************************************/
 
@@ -45,6 +45,18 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    bool getIsOn() const;
+    
+    //## auto_generated
+    void setIsOn(bool p_isOn);
+    
+    //## auto_generated
+    int getVolume() const;
+    
+    //## auto_generated
+    void setVolume(int p_volume);
+    
+    //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
@@ -54,6 +66,12 @@ protected :
 
     //## auto_generated
     void cleanUpRelations();
+    
+    ////    Attributes    ////
+    
+    bool isOn;		//## attribute isOn
+    
+    int volume;		//## attribute volume
     
     ////    Relations and components    ////
     
@@ -82,6 +100,8 @@ class OMAnimatedSpeakers : virtual public AOMInstance {
     
 public :
 
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
     virtual void serializeRelations(AOMSRelations* aomsRelations) const;
 };
 //#]

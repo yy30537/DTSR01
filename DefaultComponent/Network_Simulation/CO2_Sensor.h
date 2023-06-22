@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\CO2_Sensor.h
 *********************************************************************/
 
@@ -19,6 +19,9 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
+//## link itsHVAC
+class HVAC;
+
 //## link itsNetwork
 class Network;
 
@@ -45,6 +48,18 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    int getCO2Level() const;
+    
+    //## auto_generated
+    void setCO2Level(int p_CO2Level);
+    
+    //## auto_generated
+    HVAC* getItsHVAC() const;
+    
+    //## auto_generated
+    void setItsHVAC(HVAC* p_HVAC);
+    
+    //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
@@ -55,7 +70,13 @@ protected :
     //## auto_generated
     void cleanUpRelations();
     
+    ////    Attributes    ////
+    
+    int CO2Level;		//## attribute CO2Level
+    
     ////    Relations and components    ////
+    
+    HVAC* itsHVAC;		//## link itsHVAC
     
     Network* itsNetwork;		//## link itsNetwork
     
@@ -64,13 +85,13 @@ protected :
 public :
 
     //## auto_generated
-    void __setItsNetwork(Network* p_Network);
+    void __setItsHVAC(HVAC* p_HVAC);
     
     //## auto_generated
-    void _setItsNetwork(Network* p_Network);
+    void _setItsHVAC(HVAC* p_HVAC);
     
     //## auto_generated
-    void _clearItsNetwork();
+    void _clearItsHVAC();
 };
 
 #ifdef _OMINSTRUMENT
@@ -82,6 +103,8 @@ class OMAnimatedCO2_Sensor : virtual public AOMInstance {
     
 public :
 
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
     virtual void serializeRelations(AOMSRelations* aomsRelations) const;
 };
 //#]

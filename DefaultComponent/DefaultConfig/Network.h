@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.h
 *********************************************************************/
 
@@ -16,37 +16,45 @@
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
 //## auto_generated
+#include "ArchitecturalAnalysisPkg.h"
+//## auto_generated
 #include <oxf\omreactive.h>
 //## auto_generated
 #include <oxf\state.h>
 //## auto_generated
 #include <oxf\event.h>
+//## classInstance itsCO2_Sensor
+#include "CO2_Sensor.h"
+//## classInstance itsFire_Sensor
+#include "Fire_Sensor.h"
+//## classInstance itsLights_1
+#include "Lights.h"
+//## classInstance itsMicrophones_1
+#include "Microphones.h"
+//## classInstance itsMovement_Sensor_1
+#include "Movement_Sensor.h"
+//## classInstance itsOccupancy_Sensor_1
+#include "Occupancy_Sensor.h"
+//## classInstance itsSmart_Screen_1
+#include "Smart_Screen.h"
+//## classInstance itsSpeakers_1
+#include "Speakers.h"
+//## classInstance itsWebcam_1
+#include "Webcam.h"
 //## link itsBooking_System
 class Booking_System;
-
-//## link itsCO2_Sensor
-class CO2_Sensor;
 
 //## link itsDoor_Touch_Panel
 class Door_Touch_Panel;
 
-//## link itsFire_Sensor
-class Fire_Sensor;
+//## link itsExternalPersonnel
+class ExternalPersonnel;
+
+//## link itsExternal_Personnel
+class External_Personnel;
 
 //## link itsHVAC
 class HVAC;
-
-//## link itsLights
-class Lights;
-
-//## link itsMicrophones
-class Microphones;
-
-//## link itsMovement_Sensor
-class Movement_Sensor;
-
-//## link itsOccupancy_Sensor
-class Occupancy_Sensor;
 
 //## link itsRoom_Touch_Panel
 class Room_Touch_Panel;
@@ -54,27 +62,8 @@ class Room_Touch_Panel;
 //## link itsSmart_Room
 class Smart_Room;
 
-//## link itsSmart_Screen
-class Smart_Screen;
-
-//## link itsSpeakers
-class Speakers;
-
-//## link itsWeather_Forecast
-class Weather_Forecast;
-
-//## link itsWebcam
-class Webcam;
-
-//#[ ignore
-#define decreaseLightIntensity_Network_Event_id 31000
-
-#define increaseLightIntensity_Network_Event_id 31001
-
-#define turnOff_light_Network_Event_id 31002
-
-#define turnOn_light_Network_Event_id 31003
-//#]
+//## link itsUser
+class User;
 
 //## package ArchitecturalAnalysisPkg
 
@@ -92,25 +81,25 @@ public :
     
     ////    Operations    ////
     
-    //## operation Movement_Detected()
-    virtual void Movement_Detected();
+    //## operation Set_CO2_Alarm(bool)
+    virtual void Set_CO2_Alarm(bool alarm_state);
     
-    //## operation Occup_UpdateCount()
-    virtual void Occup_UpdateCount();
-    
-    //## operation turnOff_CO2_Alarm()
-    virtual void turnOff_CO2_Alarm();
-    
-    //## operation turnOff_Fire_Alarm()
-    virtual void turnOff_Fire_Alarm();
-    
-    //## operation turnOn_CO2_Alarm()
-    virtual void turnOn_CO2_Alarm();
-    
-    //## operation turnOn_Fire_Alarm()
-    virtual void turnOn_Fire_Alarm();
+    //## operation Set_Fire_Alarm(bool)
+    virtual void Set_Fire_Alarm(bool alarm_state);
     
     ////    Additional operations    ////
+    
+    //## auto_generated
+    bool getCO2_Alarm_NetworkState() const;
+    
+    //## auto_generated
+    void setCO2_Alarm_NetworkState(bool p_CO2_Alarm_NetworkState);
+    
+    //## auto_generated
+    bool getFire_Alarm_NetworkState() const;
+    
+    //## auto_generated
+    void setFire_Alarm_NetworkState(bool p_Fire_Alarm_NetworkState);
     
     //## auto_generated
     Booking_System* getItsBooking_System() const;
@@ -122,19 +111,25 @@ public :
     CO2_Sensor* getItsCO2_Sensor() const;
     
     //## auto_generated
-    void setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
-    
-    //## auto_generated
     Door_Touch_Panel* getItsDoor_Touch_Panel() const;
     
     //## auto_generated
     void setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel);
     
     //## auto_generated
-    Fire_Sensor* getItsFire_Sensor() const;
+    ExternalPersonnel* getItsExternalPersonnel() const;
     
     //## auto_generated
-    void setItsFire_Sensor(Fire_Sensor* p_Fire_Sensor);
+    void setItsExternalPersonnel(ExternalPersonnel* p_ExternalPersonnel);
+    
+    //## auto_generated
+    External_Personnel* getItsExternal_Personnel() const;
+    
+    //## auto_generated
+    void setItsExternal_Personnel(External_Personnel* p_External_Personnel);
+    
+    //## auto_generated
+    Fire_Sensor* getItsFire_Sensor() const;
     
     //## auto_generated
     HVAC* getItsHVAC() const;
@@ -149,10 +144,16 @@ public :
     void setItsLights(Lights* p_Lights);
     
     //## auto_generated
+    Lights* getItsLights_1() const;
+    
+    //## auto_generated
     Microphones* getItsMicrophones() const;
     
     //## auto_generated
     void setItsMicrophones(Microphones* p_Microphones);
+    
+    //## auto_generated
+    Microphones* getItsMicrophones_1() const;
     
     //## auto_generated
     Movement_Sensor* getItsMovement_Sensor() const;
@@ -161,10 +162,16 @@ public :
     void setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor);
     
     //## auto_generated
+    Movement_Sensor* getItsMovement_Sensor_1() const;
+    
+    //## auto_generated
     Occupancy_Sensor* getItsOccupancy_Sensor() const;
     
     //## auto_generated
     void setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor);
+    
+    //## auto_generated
+    Occupancy_Sensor* getItsOccupancy_Sensor_1() const;
     
     //## auto_generated
     Room_Touch_Panel* getItsRoom_Touch_Panel() const;
@@ -185,22 +192,31 @@ public :
     void setItsSmart_Screen(Smart_Screen* p_Smart_Screen);
     
     //## auto_generated
+    Smart_Screen* getItsSmart_Screen_1() const;
+    
+    //## auto_generated
     Speakers* getItsSpeakers() const;
     
     //## auto_generated
     void setItsSpeakers(Speakers* p_Speakers);
     
     //## auto_generated
-    Weather_Forecast* getItsWeather_Forecast() const;
+    Speakers* getItsSpeakers_1() const;
     
     //## auto_generated
-    void setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast);
+    User* getItsUser() const;
+    
+    //## auto_generated
+    void setItsUser(User* p_User);
     
     //## auto_generated
     Webcam* getItsWebcam() const;
     
     //## auto_generated
     void setItsWebcam(Webcam* p_Webcam);
+    
+    //## auto_generated
+    Webcam* getItsWebcam_1() const;
     
     //## auto_generated
     virtual bool startBehavior();
@@ -212,42 +228,44 @@ protected :
     
     //## auto_generated
     void cleanUpRelations();
-
-public :
-
-    //## TriggeredOperation decreaseLightIntensity()
-    int decreaseLightIntensity();
     
-    //## TriggeredOperation increaseLightIntensity()
-    int increaseLightIntensity();
+    ////    Attributes    ////
     
-    //## TriggeredOperation turnOff_light()
-    void turnOff_light();
+    bool CO2_Alarm_NetworkState;		//## attribute CO2_Alarm_NetworkState
     
-    //## TriggeredOperation turnOn_light()
-    void turnOn_light();
+    bool Fire_Alarm_NetworkState;		//## attribute Fire_Alarm_NetworkState
     
     ////    Relations and components    ////
-
-protected :
-
+    
     Booking_System* itsBooking_System;		//## link itsBooking_System
     
-    CO2_Sensor* itsCO2_Sensor;		//## link itsCO2_Sensor
+    CO2_Sensor itsCO2_Sensor;		//## classInstance itsCO2_Sensor
     
     Door_Touch_Panel* itsDoor_Touch_Panel;		//## link itsDoor_Touch_Panel
     
-    Fire_Sensor* itsFire_Sensor;		//## link itsFire_Sensor
+    ExternalPersonnel* itsExternalPersonnel;		//## link itsExternalPersonnel
+    
+    External_Personnel* itsExternal_Personnel;		//## link itsExternal_Personnel
+    
+    Fire_Sensor itsFire_Sensor;		//## classInstance itsFire_Sensor
     
     HVAC* itsHVAC;		//## link itsHVAC
     
     Lights* itsLights;		//## link itsLights
     
+    Lights itsLights_1;		//## classInstance itsLights_1
+    
     Microphones* itsMicrophones;		//## link itsMicrophones
+    
+    Microphones itsMicrophones_1;		//## classInstance itsMicrophones_1
     
     Movement_Sensor* itsMovement_Sensor;		//## link itsMovement_Sensor
     
+    Movement_Sensor itsMovement_Sensor_1;		//## classInstance itsMovement_Sensor_1
+    
     Occupancy_Sensor* itsOccupancy_Sensor;		//## link itsOccupancy_Sensor
+    
+    Occupancy_Sensor itsOccupancy_Sensor_1;		//## classInstance itsOccupancy_Sensor_1
     
     Room_Touch_Panel* itsRoom_Touch_Panel;		//## link itsRoom_Touch_Panel
     
@@ -255,11 +273,17 @@ protected :
     
     Smart_Screen* itsSmart_Screen;		//## link itsSmart_Screen
     
+    Smart_Screen itsSmart_Screen_1;		//## classInstance itsSmart_Screen_1
+    
     Speakers* itsSpeakers;		//## link itsSpeakers
     
-    Weather_Forecast* itsWeather_Forecast;		//## link itsWeather_Forecast
+    Speakers itsSpeakers_1;		//## classInstance itsSpeakers_1
+    
+    User* itsUser;		//## link itsUser
     
     Webcam* itsWebcam;		//## link itsWebcam
+    
+    Webcam itsWebcam_1;		//## classInstance itsWebcam_1
     
     ////    Framework operations    ////
 
@@ -275,15 +299,6 @@ public :
     void _clearItsBooking_System();
     
     //## auto_generated
-    void __setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
-    
-    //## auto_generated
-    void _setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
-    
-    //## auto_generated
-    void _clearItsCO2_Sensor();
-    
-    //## auto_generated
     void __setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel);
     
     //## auto_generated
@@ -293,13 +308,22 @@ public :
     void _clearItsDoor_Touch_Panel();
     
     //## auto_generated
-    void __setItsFire_Sensor(Fire_Sensor* p_Fire_Sensor);
+    void __setItsExternalPersonnel(ExternalPersonnel* p_ExternalPersonnel);
     
     //## auto_generated
-    void _setItsFire_Sensor(Fire_Sensor* p_Fire_Sensor);
+    void _setItsExternalPersonnel(ExternalPersonnel* p_ExternalPersonnel);
     
     //## auto_generated
-    void _clearItsFire_Sensor();
+    void _clearItsExternalPersonnel();
+    
+    //## auto_generated
+    void __setItsExternal_Personnel(External_Personnel* p_External_Personnel);
+    
+    //## auto_generated
+    void _setItsExternal_Personnel(External_Personnel* p_External_Personnel);
+    
+    //## auto_generated
+    void _clearItsExternal_Personnel();
     
     //## auto_generated
     void __setItsHVAC(HVAC* p_HVAC);
@@ -383,13 +407,13 @@ public :
     void _clearItsSpeakers();
     
     //## auto_generated
-    void __setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast);
+    void __setItsUser(User* p_User);
     
     //## auto_generated
-    void _setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast);
+    void _setItsUser(User* p_User);
     
     //## auto_generated
-    void _clearItsWeather_Forecast();
+    void _clearItsUser();
     
     //## auto_generated
     void __setItsWebcam(Webcam* p_Webcam);
@@ -410,13 +434,13 @@ public :
     //## statechart_method
     virtual IOxfReactive::TakeEventStatus rootState_processEvent();
     
-    // lights_on:
+    // CO2_Alarm_On:
     //## statechart_method
-    inline bool lights_on_IN() const;
+    inline bool CO2_Alarm_On_IN() const;
     
-    // lights_off:
+    // CO2_Alarm_Off:
     //## statechart_method
-    inline bool lights_off_IN() const;
+    inline bool CO2_Alarm_Off_IN() const;
     
     ////    Framework    ////
 
@@ -425,8 +449,8 @@ protected :
 //#[ ignore
     enum Network_Enum {
         OMNonState = 0,
-        lights_on = 1,
-        lights_off = 2
+        CO2_Alarm_On = 1,
+        CO2_Alarm_Off = 2
     };
     
     int rootState_subState;
@@ -435,64 +459,16 @@ protected :
 //#]
 };
 
-//#[ ignore
-class decreaseLightIntensity_Network_Event : public OMEvent {
-    ////    Constructors and destructors    ////
-    
-public :
-
-    decreaseLightIntensity_Network_Event();
-    
-    ////    Framework    ////
-    
-    int om_reply;
-};
-//#]
-
-//#[ ignore
-class increaseLightIntensity_Network_Event : public OMEvent {
-    ////    Constructors and destructors    ////
-    
-public :
-
-    increaseLightIntensity_Network_Event();
-    
-    ////    Framework    ////
-    
-    int om_reply;
-};
-//#]
-
-//#[ ignore
-class turnOff_light_Network_Event : public OMEvent {
-    ////    Constructors and destructors    ////
-    
-public :
-
-    turnOff_light_Network_Event();
-};
-//#]
-
-//#[ ignore
-class turnOn_light_Network_Event : public OMEvent {
-    ////    Constructors and destructors    ////
-    
-public :
-
-    turnOn_light_Network_Event();
-};
-//#]
-
 inline bool Network::rootState_IN() const {
     return true;
 }
 
-inline bool Network::lights_on_IN() const {
-    return rootState_subState == lights_on;
+inline bool Network::CO2_Alarm_On_IN() const {
+    return rootState_subState == CO2_Alarm_On;
 }
 
-inline bool Network::lights_off_IN() const {
-    return rootState_subState == lights_off;
+inline bool Network::CO2_Alarm_Off_IN() const {
+    return rootState_subState == CO2_Alarm_Off;
 }
 
 #endif

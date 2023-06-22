@@ -1,30 +1,41 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Booking_System
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Booking_System.cpp
 *********************************************************************/
 
 //## auto_generated
 #include "Booking_System.h"
+//## link itsDoor_Touch_Panel
+#include "Door_Touch_Panel.h"
 //## link itsNetwork
 #include "Network.h"
-//## link itsSmart_Room
-#include "Smart_Room.h"
 //## package ArchitecturalAnalysisPkg
 
 //## class Booking_System
 Booking_System::Booking_System() {
+    itsDoor_Touch_Panel = NULL;
     itsNetwork = NULL;
-    itsNetwork_1 = NULL;
-    itsSmart_Room = NULL;
 }
 
 Booking_System::~Booking_System() {
     cleanUpRelations();
+}
+
+Door_Touch_Panel* Booking_System::getItsDoor_Touch_Panel() const {
+    return itsDoor_Touch_Panel;
+}
+
+void Booking_System::setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
+    if(p_Door_Touch_Panel != NULL)
+        {
+            p_Door_Touch_Panel->_setItsBooking_System(this);
+        }
+    _setItsDoor_Touch_Panel(p_Door_Touch_Panel);
 }
 
 Network* Booking_System::getItsNetwork() const {
@@ -39,27 +50,16 @@ void Booking_System::setItsNetwork(Network* p_Network) {
     _setItsNetwork(p_Network);
 }
 
-Network* Booking_System::getItsNetwork_1() const {
-    return itsNetwork_1;
-}
-
-void Booking_System::setItsNetwork_1(Network* p_Network) {
-    itsNetwork_1 = p_Network;
-}
-
-Smart_Room* Booking_System::getItsSmart_Room() const {
-    return itsSmart_Room;
-}
-
-void Booking_System::setItsSmart_Room(Smart_Room* p_Smart_Room) {
-    if(p_Smart_Room != NULL)
-        {
-            p_Smart_Room->_setItsBooking_System(this);
-        }
-    _setItsSmart_Room(p_Smart_Room);
-}
-
 void Booking_System::cleanUpRelations() {
+    if(itsDoor_Touch_Panel != NULL)
+        {
+            Booking_System* p_Booking_System = itsDoor_Touch_Panel->getItsBooking_System();
+            if(p_Booking_System != NULL)
+                {
+                    itsDoor_Touch_Panel->__setItsBooking_System(NULL);
+                }
+            itsDoor_Touch_Panel = NULL;
+        }
     if(itsNetwork != NULL)
         {
             Booking_System* p_Booking_System = itsNetwork->getItsBooking_System();
@@ -69,19 +69,22 @@ void Booking_System::cleanUpRelations() {
                 }
             itsNetwork = NULL;
         }
-    if(itsNetwork_1 != NULL)
+}
+
+void Booking_System::__setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
+    itsDoor_Touch_Panel = p_Door_Touch_Panel;
+}
+
+void Booking_System::_setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
+    if(itsDoor_Touch_Panel != NULL)
         {
-            itsNetwork_1 = NULL;
+            itsDoor_Touch_Panel->__setItsBooking_System(NULL);
         }
-    if(itsSmart_Room != NULL)
-        {
-            Booking_System* p_Booking_System = itsSmart_Room->getItsBooking_System();
-            if(p_Booking_System != NULL)
-                {
-                    itsSmart_Room->__setItsBooking_System(NULL);
-                }
-            itsSmart_Room = NULL;
-        }
+    __setItsDoor_Touch_Panel(p_Door_Touch_Panel);
+}
+
+void Booking_System::_clearItsDoor_Touch_Panel() {
+    itsDoor_Touch_Panel = NULL;
 }
 
 void Booking_System::__setItsNetwork(Network* p_Network) {
@@ -98,22 +101,6 @@ void Booking_System::_setItsNetwork(Network* p_Network) {
 
 void Booking_System::_clearItsNetwork() {
     itsNetwork = NULL;
-}
-
-void Booking_System::__setItsSmart_Room(Smart_Room* p_Smart_Room) {
-    itsSmart_Room = p_Smart_Room;
-}
-
-void Booking_System::_setItsSmart_Room(Smart_Room* p_Smart_Room) {
-    if(itsSmart_Room != NULL)
-        {
-            itsSmart_Room->__setItsBooking_System(NULL);
-        }
-    __setItsSmart_Room(p_Smart_Room);
-}
-
-void Booking_System::_clearItsSmart_Room() {
-    itsSmart_Room = NULL;
 }
 
 /*********************************************************************

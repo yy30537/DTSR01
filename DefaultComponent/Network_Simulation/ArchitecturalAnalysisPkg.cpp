@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\ArchitecturalAnalysisPkg.cpp
 *********************************************************************/
 
@@ -20,6 +20,8 @@
 #include "CO2_Sensor.h"
 //## auto_generated
 #include "Door_Touch_Panel.h"
+//## auto_generated
+#include "External_Personnel.h"
 //## auto_generated
 #include "Fire_Sensor.h"
 //## auto_generated
@@ -47,17 +49,29 @@
 //## auto_generated
 #include "Webcam.h"
 //#[ ignore
-#define turn_on_light_SERIALIZE OM_NO_OP
+#define ev_CO2_Level_OverThreshold_SERIALIZE OM_NO_OP
 
-#define turn_on_light_UNSERIALIZE OM_NO_OP
+#define ev_CO2_Level_OverThreshold_UNSERIALIZE OM_NO_OP
 
-#define turn_on_light_CONSTRUCTOR turn_on_light()
+#define ev_CO2_Level_OverThreshold_CONSTRUCTOR ev_CO2_Level_OverThreshold()
 
-#define turn_off_light_SERIALIZE OM_NO_OP
+#define ev_CO2_Level_BelowThreshold_SERIALIZE OM_NO_OP
 
-#define turn_off_light_UNSERIALIZE OM_NO_OP
+#define ev_CO2_Level_BelowThreshold_UNSERIALIZE OM_NO_OP
 
-#define turn_off_light_CONSTRUCTOR turn_off_light()
+#define ev_CO2_Level_BelowThreshold_CONSTRUCTOR ev_CO2_Level_BelowThreshold()
+
+#define ev_Fire_Detected_SERIALIZE OM_NO_OP
+
+#define ev_Fire_Detected_UNSERIALIZE OM_NO_OP
+
+#define ev_Fire_Detected_CONSTRUCTOR ev_Fire_Detected()
+
+#define ev_Fire_Distinguished_SERIALIZE OM_NO_OP
+
+#define ev_Fire_Distinguished_UNSERIALIZE OM_NO_OP
+
+#define ev_Fire_Distinguished_CONSTRUCTOR ev_Fire_Distinguished()
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -72,29 +86,53 @@ static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */) {
 }
 #endif // _OMINSTRUMENT
 
-//## event turn_on_light()
-turn_on_light::turn_on_light() {
-    NOTIFY_EVENT_CONSTRUCTOR(turn_on_light)
-    setId(turn_on_light_ArchitecturalAnalysisPkg_id);
+//## event ev_CO2_Level_OverThreshold()
+ev_CO2_Level_OverThreshold::ev_CO2_Level_OverThreshold() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_Level_OverThreshold)
+    setId(ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id);
 }
 
-bool turn_on_light::isTypeOf(const short id) const {
-    return (turn_on_light_ArchitecturalAnalysisPkg_id==id);
+bool ev_CO2_Level_OverThreshold::isTypeOf(const short id) const {
+    return (ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id==id);
 }
 
-IMPLEMENT_META_EVENT_P(turn_on_light, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, turn_on_light())
+IMPLEMENT_META_EVENT_P(ev_CO2_Level_OverThreshold, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_Level_OverThreshold())
 
-//## event turn_off_light()
-turn_off_light::turn_off_light() {
-    NOTIFY_EVENT_CONSTRUCTOR(turn_off_light)
-    setId(turn_off_light_ArchitecturalAnalysisPkg_id);
+//## event ev_CO2_Level_BelowThreshold()
+ev_CO2_Level_BelowThreshold::ev_CO2_Level_BelowThreshold() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_Level_BelowThreshold)
+    setId(ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id);
 }
 
-bool turn_off_light::isTypeOf(const short id) const {
-    return (turn_off_light_ArchitecturalAnalysisPkg_id==id);
+bool ev_CO2_Level_BelowThreshold::isTypeOf(const short id) const {
+    return (ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id==id);
 }
 
-IMPLEMENT_META_EVENT_P(turn_off_light, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, turn_off_light())
+IMPLEMENT_META_EVENT_P(ev_CO2_Level_BelowThreshold, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_Level_BelowThreshold())
+
+//## event ev_Fire_Detected()
+ev_Fire_Detected::ev_Fire_Detected() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Fire_Detected)
+    setId(ev_Fire_Detected_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Fire_Detected::isTypeOf(const short id) const {
+    return (ev_Fire_Detected_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_Fire_Detected, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Fire_Detected())
+
+//## event ev_Fire_Distinguished()
+ev_Fire_Distinguished::ev_Fire_Distinguished() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Fire_Distinguished)
+    setId(ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Fire_Distinguished::isTypeOf(const short id) const {
+    return (ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_Fire_Distinguished, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Fire_Distinguished())
 
 /*********************************************************************
 	File Path	: DefaultComponent\Network_Simulation\ArchitecturalAnalysisPkg.cpp

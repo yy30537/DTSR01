@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Movement_Sensor
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\Movement_Sensor.cpp
 *********************************************************************/
 
@@ -14,6 +14,8 @@
 
 //## auto_generated
 #include "Movement_Sensor.h"
+//## link itsHVAC
+#include "HVAC.h"
 //## link itsNetwork
 #include "Network.h"
 //#[ ignore
@@ -23,14 +25,35 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Movement_Sensor
-Movement_Sensor::Movement_Sensor() {
+Movement_Sensor::Movement_Sensor() : isMovement(0) {
     NOTIFY_CONSTRUCTOR(Movement_Sensor, Movement_Sensor(), 0, ArchitecturalAnalysisPkg_Movement_Sensor_Movement_Sensor_SERIALIZE);
+    itsHVAC = NULL;
     itsNetwork = NULL;
 }
 
 Movement_Sensor::~Movement_Sensor() {
     NOTIFY_DESTRUCTOR(~Movement_Sensor, true);
     cleanUpRelations();
+}
+
+bool Movement_Sensor::getIsMovement() const {
+    return isMovement;
+}
+
+void Movement_Sensor::setIsMovement(bool p_isMovement) {
+    isMovement = p_isMovement;
+}
+
+HVAC* Movement_Sensor::getItsHVAC() const {
+    return itsHVAC;
+}
+
+void Movement_Sensor::setItsHVAC(HVAC* p_HVAC) {
+    if(p_HVAC != NULL)
+        {
+            p_HVAC->_setItsMovement_Sensor(this);
+        }
+    _setItsHVAC(p_HVAC);
 }
 
 Network* Movement_Sensor::getItsNetwork() const {
@@ -46,6 +69,16 @@ void Movement_Sensor::setItsNetwork(Network* p_Network) {
 }
 
 void Movement_Sensor::cleanUpRelations() {
+    if(itsHVAC != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsHVAC");
+            Movement_Sensor* p_Movement_Sensor = itsHVAC->getItsMovement_Sensor();
+            if(p_Movement_Sensor != NULL)
+                {
+                    itsHVAC->__setItsMovement_Sensor(NULL);
+                }
+            itsHVAC = NULL;
+        }
     if(itsNetwork != NULL)
         {
             NOTIFY_RELATION_CLEARED("itsNetwork");
@@ -56,6 +89,31 @@ void Movement_Sensor::cleanUpRelations() {
                 }
             itsNetwork = NULL;
         }
+}
+
+void Movement_Sensor::__setItsHVAC(HVAC* p_HVAC) {
+    itsHVAC = p_HVAC;
+    if(p_HVAC != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsHVAC", p_HVAC, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsHVAC");
+        }
+}
+
+void Movement_Sensor::_setItsHVAC(HVAC* p_HVAC) {
+    if(itsHVAC != NULL)
+        {
+            itsHVAC->__setItsMovement_Sensor(NULL);
+        }
+    __setItsHVAC(p_HVAC);
+}
+
+void Movement_Sensor::_clearItsHVAC() {
+    NOTIFY_RELATION_CLEARED("itsHVAC");
+    itsHVAC = NULL;
 }
 
 void Movement_Sensor::__setItsNetwork(Network* p_Network) {
@@ -85,11 +143,20 @@ void Movement_Sensor::_clearItsNetwork() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedMovement_Sensor::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("isMovement", x2String(myReal->isMovement));
+}
+
 void OMAnimatedMovement_Sensor::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsNetwork", false, true);
     if(myReal->itsNetwork)
         {
             aomsRelations->ADD_ITEM(myReal->itsNetwork);
+        }
+    aomsRelations->addRelation("itsHVAC", false, true);
+    if(myReal->itsHVAC)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsHVAC);
         }
 }
 //#]

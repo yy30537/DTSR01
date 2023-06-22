@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.cpp
 *********************************************************************/
 
@@ -14,43 +14,29 @@
 #include "Network.h"
 //## link itsBooking_System
 #include "Booking_System.h"
-//## link itsCO2_Sensor
-#include "CO2_Sensor.h"
 //## link itsDoor_Touch_Panel
 #include "Door_Touch_Panel.h"
-//## link itsFire_Sensor
-#include "Fire_Sensor.h"
+//## link itsExternal_Personnel
+#include "External_Personnel.h"
+//## link itsExternalPersonnel
+#include "ExternalPersonnel.h"
 //## link itsHVAC
 #include "HVAC.h"
-//## link itsLights
-#include "Lights.h"
-//## link itsMicrophones
-#include "Microphones.h"
-//## link itsMovement_Sensor
-#include "Movement_Sensor.h"
-//## link itsOccupancy_Sensor
-#include "Occupancy_Sensor.h"
 //## link itsRoom_Touch_Panel
 #include "Room_Touch_Panel.h"
 //## link itsSmart_Room
 #include "Smart_Room.h"
-//## link itsSmart_Screen
-#include "Smart_Screen.h"
-//## link itsSpeakers
-#include "Speakers.h"
-//## link itsWeather_Forecast
-#include "Weather_Forecast.h"
-//## link itsWebcam
-#include "Webcam.h"
+//## link itsUser
+#include "User.h"
 //## package ArchitecturalAnalysisPkg
 
 //## class Network
-Network::Network(IOxfActive* theActiveContext) {
+Network::Network(IOxfActive* theActiveContext) : CO2_Alarm_NetworkState(false), Fire_Alarm_NetworkState(false) {
     setActiveContext(theActiveContext, false);
     itsBooking_System = NULL;
-    itsCO2_Sensor = NULL;
     itsDoor_Touch_Panel = NULL;
-    itsFire_Sensor = NULL;
+    itsExternalPersonnel = NULL;
+    itsExternal_Personnel = NULL;
     itsHVAC = NULL;
     itsLights = NULL;
     itsMicrophones = NULL;
@@ -60,7 +46,7 @@ Network::Network(IOxfActive* theActiveContext) {
     itsSmart_Room = NULL;
     itsSmart_Screen = NULL;
     itsSpeakers = NULL;
-    itsWeather_Forecast = NULL;
+    itsUser = NULL;
     itsWebcam = NULL;
     initStatechart();
 }
@@ -69,34 +55,35 @@ Network::~Network() {
     cleanUpRelations();
 }
 
-void Network::Movement_Detected() {
-    //#[ operation Movement_Detected()
+void Network::Set_CO2_Alarm(bool alarm_state) {
+    //#[ operation Set_CO2_Alarm(bool)
+    std::cout<< " set CO2_Alarm_NetworkState \n";
+    CO2_Alarm_NetworkState = alarm_state;
+    
     //#]
 }
 
-void Network::Occup_UpdateCount() {
-    //#[ operation Occup_UpdateCount()
+void Network::Set_Fire_Alarm(bool alarm_state) {
+    //#[ operation Set_Fire_Alarm(bool)
+    std::cout<< " set Fire_Alarm_NetworkState \n";
+    Fire_Alarm_NetworkState = alarm_state;
     //#]
 }
 
-void Network::turnOff_CO2_Alarm() {
-    //#[ operation turnOff_CO2_Alarm()
-    //#]
+bool Network::getCO2_Alarm_NetworkState() const {
+    return CO2_Alarm_NetworkState;
 }
 
-void Network::turnOff_Fire_Alarm() {
-    //#[ operation turnOff_Fire_Alarm()
-    //#]
+void Network::setCO2_Alarm_NetworkState(bool p_CO2_Alarm_NetworkState) {
+    CO2_Alarm_NetworkState = p_CO2_Alarm_NetworkState;
 }
 
-void Network::turnOn_CO2_Alarm() {
-    //#[ operation turnOn_CO2_Alarm()
-    //#]
+bool Network::getFire_Alarm_NetworkState() const {
+    return Fire_Alarm_NetworkState;
 }
 
-void Network::turnOn_Fire_Alarm() {
-    //#[ operation turnOn_Fire_Alarm()
-    //#]
+void Network::setFire_Alarm_NetworkState(bool p_Fire_Alarm_NetworkState) {
+    Fire_Alarm_NetworkState = p_Fire_Alarm_NetworkState;
 }
 
 Booking_System* Network::getItsBooking_System() const {
@@ -112,15 +99,7 @@ void Network::setItsBooking_System(Booking_System* p_Booking_System) {
 }
 
 CO2_Sensor* Network::getItsCO2_Sensor() const {
-    return itsCO2_Sensor;
-}
-
-void Network::setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
-    if(p_CO2_Sensor != NULL)
-        {
-            p_CO2_Sensor->_setItsNetwork(this);
-        }
-    _setItsCO2_Sensor(p_CO2_Sensor);
+    return (CO2_Sensor*) &itsCO2_Sensor;
 }
 
 Door_Touch_Panel* Network::getItsDoor_Touch_Panel() const {
@@ -135,16 +114,32 @@ void Network::setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
     _setItsDoor_Touch_Panel(p_Door_Touch_Panel);
 }
 
-Fire_Sensor* Network::getItsFire_Sensor() const {
-    return itsFire_Sensor;
+ExternalPersonnel* Network::getItsExternalPersonnel() const {
+    return itsExternalPersonnel;
 }
 
-void Network::setItsFire_Sensor(Fire_Sensor* p_Fire_Sensor) {
-    if(p_Fire_Sensor != NULL)
+void Network::setItsExternalPersonnel(ExternalPersonnel* p_ExternalPersonnel) {
+    if(p_ExternalPersonnel != NULL)
         {
-            p_Fire_Sensor->_setItsNetwork(this);
+            p_ExternalPersonnel->_setItsNetwork(this);
         }
-    _setItsFire_Sensor(p_Fire_Sensor);
+    _setItsExternalPersonnel(p_ExternalPersonnel);
+}
+
+External_Personnel* Network::getItsExternal_Personnel() const {
+    return itsExternal_Personnel;
+}
+
+void Network::setItsExternal_Personnel(External_Personnel* p_External_Personnel) {
+    if(p_External_Personnel != NULL)
+        {
+            p_External_Personnel->_setItsNetwork(this);
+        }
+    _setItsExternal_Personnel(p_External_Personnel);
+}
+
+Fire_Sensor* Network::getItsFire_Sensor() const {
+    return (Fire_Sensor*) &itsFire_Sensor;
 }
 
 HVAC* Network::getItsHVAC() const {
@@ -171,6 +166,10 @@ void Network::setItsLights(Lights* p_Lights) {
     _setItsLights(p_Lights);
 }
 
+Lights* Network::getItsLights_1() const {
+    return (Lights*) &itsLights_1;
+}
+
 Microphones* Network::getItsMicrophones() const {
     return itsMicrophones;
 }
@@ -181,6 +180,10 @@ void Network::setItsMicrophones(Microphones* p_Microphones) {
             p_Microphones->_setItsNetwork(this);
         }
     _setItsMicrophones(p_Microphones);
+}
+
+Microphones* Network::getItsMicrophones_1() const {
+    return (Microphones*) &itsMicrophones_1;
 }
 
 Movement_Sensor* Network::getItsMovement_Sensor() const {
@@ -195,6 +198,10 @@ void Network::setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor) {
     _setItsMovement_Sensor(p_Movement_Sensor);
 }
 
+Movement_Sensor* Network::getItsMovement_Sensor_1() const {
+    return (Movement_Sensor*) &itsMovement_Sensor_1;
+}
+
 Occupancy_Sensor* Network::getItsOccupancy_Sensor() const {
     return itsOccupancy_Sensor;
 }
@@ -205,6 +212,10 @@ void Network::setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor) {
             p_Occupancy_Sensor->_setItsNetwork(this);
         }
     _setItsOccupancy_Sensor(p_Occupancy_Sensor);
+}
+
+Occupancy_Sensor* Network::getItsOccupancy_Sensor_1() const {
+    return (Occupancy_Sensor*) &itsOccupancy_Sensor_1;
 }
 
 Room_Touch_Panel* Network::getItsRoom_Touch_Panel() const {
@@ -243,6 +254,10 @@ void Network::setItsSmart_Screen(Smart_Screen* p_Smart_Screen) {
     _setItsSmart_Screen(p_Smart_Screen);
 }
 
+Smart_Screen* Network::getItsSmart_Screen_1() const {
+    return (Smart_Screen*) &itsSmart_Screen_1;
+}
+
 Speakers* Network::getItsSpeakers() const {
     return itsSpeakers;
 }
@@ -255,16 +270,20 @@ void Network::setItsSpeakers(Speakers* p_Speakers) {
     _setItsSpeakers(p_Speakers);
 }
 
-Weather_Forecast* Network::getItsWeather_Forecast() const {
-    return itsWeather_Forecast;
+Speakers* Network::getItsSpeakers_1() const {
+    return (Speakers*) &itsSpeakers_1;
 }
 
-void Network::setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast) {
-    if(p_Weather_Forecast != NULL)
+User* Network::getItsUser() const {
+    return itsUser;
+}
+
+void Network::setItsUser(User* p_User) {
+    if(p_User != NULL)
         {
-            p_Weather_Forecast->_setItsNetwork(this);
+            p_User->_setItsNetwork(this);
         }
-    _setItsWeather_Forecast(p_Weather_Forecast);
+    _setItsUser(p_User);
 }
 
 Webcam* Network::getItsWebcam() const {
@@ -279,9 +298,13 @@ void Network::setItsWebcam(Webcam* p_Webcam) {
     _setItsWebcam(p_Webcam);
 }
 
+Webcam* Network::getItsWebcam_1() const {
+    return (Webcam*) &itsWebcam_1;
+}
+
 bool Network::startBehavior() {
-    bool done = false;
-    done = OMReactive::startBehavior();
+    bool done = true;
+    done &= OMReactive::startBehavior();
     return done;
 }
 
@@ -300,15 +323,6 @@ void Network::cleanUpRelations() {
                 }
             itsBooking_System = NULL;
         }
-    if(itsCO2_Sensor != NULL)
-        {
-            Network* p_Network = itsCO2_Sensor->getItsNetwork();
-            if(p_Network != NULL)
-                {
-                    itsCO2_Sensor->__setItsNetwork(NULL);
-                }
-            itsCO2_Sensor = NULL;
-        }
     if(itsDoor_Touch_Panel != NULL)
         {
             Network* p_Network = itsDoor_Touch_Panel->getItsNetwork();
@@ -318,14 +332,23 @@ void Network::cleanUpRelations() {
                 }
             itsDoor_Touch_Panel = NULL;
         }
-    if(itsFire_Sensor != NULL)
+    if(itsExternalPersonnel != NULL)
         {
-            Network* p_Network = itsFire_Sensor->getItsNetwork();
+            Network* p_Network = itsExternalPersonnel->getItsNetwork();
             if(p_Network != NULL)
                 {
-                    itsFire_Sensor->__setItsNetwork(NULL);
+                    itsExternalPersonnel->__setItsNetwork(NULL);
                 }
-            itsFire_Sensor = NULL;
+            itsExternalPersonnel = NULL;
+        }
+    if(itsExternal_Personnel != NULL)
+        {
+            Network* p_Network = itsExternal_Personnel->getItsNetwork();
+            if(p_Network != NULL)
+                {
+                    itsExternal_Personnel->__setItsNetwork(NULL);
+                }
+            itsExternal_Personnel = NULL;
         }
     if(itsHVAC != NULL)
         {
@@ -408,14 +431,14 @@ void Network::cleanUpRelations() {
                 }
             itsSpeakers = NULL;
         }
-    if(itsWeather_Forecast != NULL)
+    if(itsUser != NULL)
         {
-            Network* p_Network = itsWeather_Forecast->getItsNetwork();
+            Network* p_Network = itsUser->getItsNetwork();
             if(p_Network != NULL)
                 {
-                    itsWeather_Forecast->__setItsNetwork(NULL);
+                    itsUser->__setItsNetwork(NULL);
                 }
-            itsWeather_Forecast = NULL;
+            itsUser = NULL;
         }
     if(itsWebcam != NULL)
         {
@@ -426,28 +449,6 @@ void Network::cleanUpRelations() {
                 }
             itsWebcam = NULL;
         }
-}
-
-int Network::decreaseLightIntensity() {
-    decreaseLightIntensity_Network_Event triggerEvent;
-    handleTrigger(&triggerEvent);
-    return triggerEvent.om_reply;
-}
-
-int Network::increaseLightIntensity() {
-    increaseLightIntensity_Network_Event triggerEvent;
-    handleTrigger(&triggerEvent);
-    return triggerEvent.om_reply;
-}
-
-void Network::turnOff_light() {
-    turnOff_light_Network_Event triggerEvent;
-    handleTrigger(&triggerEvent);
-}
-
-void Network::turnOn_light() {
-    turnOn_light_Network_Event triggerEvent;
-    handleTrigger(&triggerEvent);
 }
 
 void Network::__setItsBooking_System(Booking_System* p_Booking_System) {
@@ -466,22 +467,6 @@ void Network::_clearItsBooking_System() {
     itsBooking_System = NULL;
 }
 
-void Network::__setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
-    itsCO2_Sensor = p_CO2_Sensor;
-}
-
-void Network::_setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
-    if(itsCO2_Sensor != NULL)
-        {
-            itsCO2_Sensor->__setItsNetwork(NULL);
-        }
-    __setItsCO2_Sensor(p_CO2_Sensor);
-}
-
-void Network::_clearItsCO2_Sensor() {
-    itsCO2_Sensor = NULL;
-}
-
 void Network::__setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
     itsDoor_Touch_Panel = p_Door_Touch_Panel;
 }
@@ -498,20 +483,36 @@ void Network::_clearItsDoor_Touch_Panel() {
     itsDoor_Touch_Panel = NULL;
 }
 
-void Network::__setItsFire_Sensor(Fire_Sensor* p_Fire_Sensor) {
-    itsFire_Sensor = p_Fire_Sensor;
+void Network::__setItsExternalPersonnel(ExternalPersonnel* p_ExternalPersonnel) {
+    itsExternalPersonnel = p_ExternalPersonnel;
 }
 
-void Network::_setItsFire_Sensor(Fire_Sensor* p_Fire_Sensor) {
-    if(itsFire_Sensor != NULL)
+void Network::_setItsExternalPersonnel(ExternalPersonnel* p_ExternalPersonnel) {
+    if(itsExternalPersonnel != NULL)
         {
-            itsFire_Sensor->__setItsNetwork(NULL);
+            itsExternalPersonnel->__setItsNetwork(NULL);
         }
-    __setItsFire_Sensor(p_Fire_Sensor);
+    __setItsExternalPersonnel(p_ExternalPersonnel);
 }
 
-void Network::_clearItsFire_Sensor() {
-    itsFire_Sensor = NULL;
+void Network::_clearItsExternalPersonnel() {
+    itsExternalPersonnel = NULL;
+}
+
+void Network::__setItsExternal_Personnel(External_Personnel* p_External_Personnel) {
+    itsExternal_Personnel = p_External_Personnel;
+}
+
+void Network::_setItsExternal_Personnel(External_Personnel* p_External_Personnel) {
+    if(itsExternal_Personnel != NULL)
+        {
+            itsExternal_Personnel->__setItsNetwork(NULL);
+        }
+    __setItsExternal_Personnel(p_External_Personnel);
+}
+
+void Network::_clearItsExternal_Personnel() {
+    itsExternal_Personnel = NULL;
 }
 
 void Network::__setItsHVAC(HVAC* p_HVAC) {
@@ -658,20 +659,20 @@ void Network::_clearItsSpeakers() {
     itsSpeakers = NULL;
 }
 
-void Network::__setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast) {
-    itsWeather_Forecast = p_Weather_Forecast;
+void Network::__setItsUser(User* p_User) {
+    itsUser = p_User;
 }
 
-void Network::_setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast) {
-    if(itsWeather_Forecast != NULL)
+void Network::_setItsUser(User* p_User) {
+    if(itsUser != NULL)
         {
-            itsWeather_Forecast->__setItsNetwork(NULL);
+            itsUser->__setItsNetwork(NULL);
         }
-    __setItsWeather_Forecast(p_Weather_Forecast);
+    __setItsUser(p_User);
 }
 
-void Network::_clearItsWeather_Forecast() {
-    itsWeather_Forecast = NULL;
+void Network::_clearItsUser() {
+    itsUser = NULL;
 }
 
 void Network::__setItsWebcam(Webcam* p_Webcam) {
@@ -692,11 +693,10 @@ void Network::_clearItsWebcam() {
 
 void Network::rootState_entDef() {
     {
-        rootState_subState = lights_off;
-        rootState_active = lights_off;
-        //#[ state lights_off.(Entry) 
-         std::cout << "entry: lights_off state\n";
-        setLightIntensity(0);
+        rootState_subState = CO2_Alarm_Off;
+        rootState_active = CO2_Alarm_Off;
+        //#[ state CO2_Alarm_Off.(Entry) 
+         Set_CO2_Alarm(false);
         //#]
     }
 }
@@ -704,38 +704,36 @@ void Network::rootState_entDef() {
 IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     switch (rootState_active) {
-        // State lights_on
-        case lights_on:
+        // State CO2_Alarm_Off
+        case CO2_Alarm_Off:
         {
-            if(IS_EVENT_TYPE_OF(turnOn_light_Network_Event_id))
+            if(IS_EVENT_TYPE_OF(ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id))
                 {
-                    //#[ state lights_on.(Exit) 
-                     std::cout << "exit: lights_on state\n";
+                    //#[ state CO2_Alarm_Off.(Exit) 
+                    std::cout << " set co2 alarm to false \n";
                     //#]
-                    rootState_subState = lights_off;
-                    rootState_active = lights_off;
-                    //#[ state lights_off.(Entry) 
-                     std::cout << "entry: lights_off state\n";
-                    setLightIntensity(0);
+                    rootState_subState = CO2_Alarm_On;
+                    rootState_active = CO2_Alarm_On;
+                    //#[ state CO2_Alarm_On.(Entry) 
+                    Set_CO2_Alarm(true);
                     //#]
                     res = eventConsumed;
                 }
             
         }
         break;
-        // State lights_off
-        case lights_off:
+        // State CO2_Alarm_On
+        case CO2_Alarm_On:
         {
-            if(IS_EVENT_TYPE_OF(turnOff_light_Network_Event_id))
+            if(IS_EVENT_TYPE_OF(ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id))
                 {
-                    //#[ state lights_off.(Exit) 
-                     std::cout << "exit: lights_off state\n";
+                    //#[ state CO2_Alarm_On.(Exit) 
+                    std::cout << " set co2 alarm to true \n";
                     //#]
-                    rootState_subState = lights_on;
-                    rootState_active = lights_on;
-                    //#[ state lights_on.(Entry) 
-                    std::cout << "entry: lights_on state\n";
-                    setLightIntensity(50);
+                    rootState_subState = CO2_Alarm_Off;
+                    rootState_active = CO2_Alarm_Off;
+                    //#[ state CO2_Alarm_Off.(Entry) 
+                     Set_CO2_Alarm(false);
                     //#]
                     res = eventConsumed;
                 }
@@ -747,30 +745,6 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
     }
     return res;
 }
-
-//#[ ignore
-decreaseLightIntensity_Network_Event::decreaseLightIntensity_Network_Event() {
-    setId(decreaseLightIntensity_Network_Event_id);
-}
-//#]
-
-//#[ ignore
-increaseLightIntensity_Network_Event::increaseLightIntensity_Network_Event() {
-    setId(increaseLightIntensity_Network_Event_id);
-}
-//#]
-
-//#[ ignore
-turnOff_light_Network_Event::turnOff_light_Network_Event() {
-    setId(turnOff_light_Network_Event_id);
-}
-//#]
-
-//#[ ignore
-turnOn_light_Network_Event::turnOn_light_Network_Event() {
-    setId(turnOn_light_Network_Event_id);
-}
-//#]
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\Network.cpp

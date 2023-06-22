@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Webcam
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Webcam.h
 *********************************************************************/
 
@@ -35,6 +35,12 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    bool getIsOn() const;
+    
+    //## auto_generated
+    void setIsOn(bool p_isOn);
+    
+    //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
@@ -44,6 +50,10 @@ protected :
 
     //## auto_generated
     void cleanUpRelations();
+    
+    ////    Attributes    ////
+    
+    bool isOn;		//## attribute isOn
     
     ////    Relations and components    ////
     

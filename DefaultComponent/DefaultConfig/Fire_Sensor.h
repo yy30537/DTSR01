@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Fire_Sensor
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Fire_Sensor.h
 *********************************************************************/
 
@@ -15,9 +15,6 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
-//## link itsNetwork
-class Network;
-
 //## package ArchitecturalAnalysisPkg
 
 //## class Fire_Sensor
@@ -40,37 +37,11 @@ public :
     //## auto_generated
     void setIsFire(bool p_isFire);
     
-    //## auto_generated
-    Network* getItsNetwork() const;
-    
-    //## auto_generated
-    void setItsNetwork(Network* p_Network);
+    ////    Attributes    ////
 
 protected :
 
-    //## auto_generated
-    void cleanUpRelations();
-    
-    ////    Attributes    ////
-    
     bool isFire;		//## attribute isFire
-    
-    ////    Relations and components    ////
-    
-    Network* itsNetwork;		//## link itsNetwork
-    
-    ////    Framework operations    ////
-
-public :
-
-    //## auto_generated
-    void __setItsNetwork(Network* p_Network);
-    
-    //## auto_generated
-    void _setItsNetwork(Network* p_Network);
-    
-    //## auto_generated
-    void _clearItsNetwork();
 };
 
 #endif

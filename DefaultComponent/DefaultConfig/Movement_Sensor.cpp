@@ -1,21 +1,24 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Movement_Sensor
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Movement_Sensor.cpp
 *********************************************************************/
 
 //## auto_generated
 #include "Movement_Sensor.h"
+//## link itsHVAC
+#include "HVAC.h"
 //## link itsNetwork
 #include "Network.h"
 //## package ArchitecturalAnalysisPkg
 
 //## class Movement_Sensor
 Movement_Sensor::Movement_Sensor() : isMovement(0) {
+    itsHVAC = NULL;
     itsNetwork = NULL;
 }
 
@@ -31,6 +34,18 @@ void Movement_Sensor::setIsMovement(bool p_isMovement) {
     isMovement = p_isMovement;
 }
 
+HVAC* Movement_Sensor::getItsHVAC() const {
+    return itsHVAC;
+}
+
+void Movement_Sensor::setItsHVAC(HVAC* p_HVAC) {
+    if(p_HVAC != NULL)
+        {
+            p_HVAC->_setItsMovement_Sensor(this);
+        }
+    _setItsHVAC(p_HVAC);
+}
+
 Network* Movement_Sensor::getItsNetwork() const {
     return itsNetwork;
 }
@@ -44,6 +59,15 @@ void Movement_Sensor::setItsNetwork(Network* p_Network) {
 }
 
 void Movement_Sensor::cleanUpRelations() {
+    if(itsHVAC != NULL)
+        {
+            Movement_Sensor* p_Movement_Sensor = itsHVAC->getItsMovement_Sensor();
+            if(p_Movement_Sensor != NULL)
+                {
+                    itsHVAC->__setItsMovement_Sensor(NULL);
+                }
+            itsHVAC = NULL;
+        }
     if(itsNetwork != NULL)
         {
             Movement_Sensor* p_Movement_Sensor = itsNetwork->getItsMovement_Sensor();
@@ -53,6 +77,22 @@ void Movement_Sensor::cleanUpRelations() {
                 }
             itsNetwork = NULL;
         }
+}
+
+void Movement_Sensor::__setItsHVAC(HVAC* p_HVAC) {
+    itsHVAC = p_HVAC;
+}
+
+void Movement_Sensor::_setItsHVAC(HVAC* p_HVAC) {
+    if(itsHVAC != NULL)
+        {
+            itsHVAC->__setItsMovement_Sensor(NULL);
+        }
+    __setItsHVAC(p_HVAC);
+}
+
+void Movement_Sensor::_clearItsHVAC() {
+    itsHVAC = NULL;
 }
 
 void Movement_Sensor::__setItsNetwork(Network* p_Network) {

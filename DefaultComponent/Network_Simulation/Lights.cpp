@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Lights
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\Lights.cpp
 *********************************************************************/
 
@@ -23,7 +23,7 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Lights
-Lights::Lights() {
+Lights::Lights() : intensity(0) {
     NOTIFY_CONSTRUCTOR(Lights, Lights(), 0, ArchitecturalAnalysisPkg_Lights_Lights_SERIALIZE);
     itsNetwork = NULL;
 }
@@ -31,6 +31,14 @@ Lights::Lights() {
 Lights::~Lights() {
     NOTIFY_DESTRUCTOR(~Lights, true);
     cleanUpRelations();
+}
+
+int Lights::getIntensity() const {
+    return intensity;
+}
+
+void Lights::setIntensity(int p_intensity) {
+    intensity = p_intensity;
 }
 
 Network* Lights::getItsNetwork() const {
@@ -85,6 +93,10 @@ void Lights::_clearItsNetwork() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedLights::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("intensity", x2String(myReal->intensity));
+}
+
 void OMAnimatedLights::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsNetwork", false, true);
     if(myReal->itsNetwork)

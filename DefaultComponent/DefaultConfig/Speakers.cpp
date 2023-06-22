@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Speakers
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Speakers.cpp
 *********************************************************************/
 
@@ -15,12 +15,28 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Speakers
-Speakers::Speakers() {
+Speakers::Speakers() : isOn(0), volume(0) {
     itsNetwork = NULL;
 }
 
 Speakers::~Speakers() {
     cleanUpRelations();
+}
+
+bool Speakers::getIsOn() const {
+    return isOn;
+}
+
+void Speakers::setIsOn(bool p_isOn) {
+    isOn = p_isOn;
+}
+
+int Speakers::getVolume() const {
+    return volume;
+}
+
+void Speakers::setVolume(int p_volume) {
+    volume = p_volume;
 }
 
 Network* Speakers::getItsNetwork() const {

@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Speakers
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\Speakers.cpp
 *********************************************************************/
 
@@ -23,7 +23,7 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Speakers
-Speakers::Speakers() {
+Speakers::Speakers() : isOn(0), volume(0) {
     NOTIFY_CONSTRUCTOR(Speakers, Speakers(), 0, ArchitecturalAnalysisPkg_Speakers_Speakers_SERIALIZE);
     itsNetwork = NULL;
 }
@@ -31,6 +31,22 @@ Speakers::Speakers() {
 Speakers::~Speakers() {
     NOTIFY_DESTRUCTOR(~Speakers, true);
     cleanUpRelations();
+}
+
+bool Speakers::getIsOn() const {
+    return isOn;
+}
+
+void Speakers::setIsOn(bool p_isOn) {
+    isOn = p_isOn;
+}
+
+int Speakers::getVolume() const {
+    return volume;
+}
+
+void Speakers::setVolume(int p_volume) {
+    volume = p_volume;
 }
 
 Network* Speakers::getItsNetwork() const {
@@ -85,6 +101,11 @@ void Speakers::_clearItsNetwork() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedSpeakers::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("volume", x2String(myReal->volume));
+    aomsAttributes->addAttribute("isOn", x2String(myReal->isOn));
+}
+
 void OMAnimatedSpeakers::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsNetwork", false, true);
     if(myReal->itsNetwork)

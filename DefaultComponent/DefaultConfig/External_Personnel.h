@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: External_Personnel
-//!	Generated Date	: Tue, 20, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\External_Personnel.h
 *********************************************************************/
 
@@ -48,6 +48,19 @@ protected :
     ////    Relations and components    ////
     
     Network* itsNetwork;		//## link itsNetwork
+    
+    ////    Framework operations    ////
+
+public :
+
+    //## auto_generated
+    void __setItsNetwork(Network* p_Network);
+    
+    //## auto_generated
+    void _setItsNetwork(Network* p_Network);
+    
+    //## auto_generated
+    void _clearItsNetwork();
 };
 
 #endif

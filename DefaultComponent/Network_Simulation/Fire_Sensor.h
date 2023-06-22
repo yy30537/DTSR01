@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Fire_Sensor
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\Fire_Sensor.h
 *********************************************************************/
 
@@ -19,9 +19,6 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
-//## link itsNetwork
-class Network;
-
 //## package ArchitecturalAnalysisPkg
 
 //## class Fire_Sensor
@@ -45,32 +42,16 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
-    Network* getItsNetwork() const;
+    bool getIsFire() const;
     
     //## auto_generated
-    void setItsNetwork(Network* p_Network);
+    void setIsFire(bool p_isFire);
+    
+    ////    Attributes    ////
 
 protected :
 
-    //## auto_generated
-    void cleanUpRelations();
-    
-    ////    Relations and components    ////
-    
-    Network* itsNetwork;		//## link itsNetwork
-    
-    ////    Framework operations    ////
-
-public :
-
-    //## auto_generated
-    void __setItsNetwork(Network* p_Network);
-    
-    //## auto_generated
-    void _setItsNetwork(Network* p_Network);
-    
-    //## auto_generated
-    void _clearItsNetwork();
+    bool isFire;		//## attribute isFire
 };
 
 #ifdef _OMINSTRUMENT
@@ -82,7 +63,7 @@ class OMAnimatedFire_Sensor : virtual public AOMInstance {
     
 public :
 
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
 };
 //#]
 #endif // _OMINSTRUMENT

@@ -87,21 +87,26 @@ ADDITIONAL_OBJS=
 OBJS= \
   Network.obj \
   Smart_Room.obj \
-  Speakers.obj \
-  Smart_Screen.obj \
-  Door_Touch_Panel.obj \
-  Room_Touch_Panel.obj \
-  Webcam.obj \
-  Microphones.obj \
-  Lights.obj \
   HVAC.obj \
-  Weather_Forecast.obj \
-  Booking_System.obj \
-  Fire_Sensor.obj \
-  Movement_Sensor.obj \
-  Occupancy_Sensor.obj \
   CO2_Sensor.obj \
-  ArchitecturalAnalysisPkg.obj
+  Occupancy_Sensor.obj \
+  Movement_Sensor.obj \
+  Room_Touch_Panel.obj \
+  ExternalPersonnel.obj \
+  Door_Touch_Panel.obj \
+  Booking_System.obj \
+  User.obj \
+  Weather_Forecast.obj \
+  Microphones.obj \
+  Speakers.obj \
+  Webcam.obj \
+  Smart_Screen.obj \
+  Fire_Sensor.obj \
+  External_Personnel.obj \
+  Lights.obj \
+  ArchitecturalAnalysisPkg.obj \
+  ActorPkg.obj \
+  UseCaseAnalysisPkg.obj
 
 
 
@@ -184,45 +189,75 @@ SOCK_LIB=
 
 
 
-Network.obj : Network.cpp Network.h    ArchitecturalAnalysisPkg.h Smart_Room.h HVAC.h Weather_Forecast.h Booking_System.h Room_Touch_Panel.h Door_Touch_Panel.h Smart_Screen.h Speakers.h Webcam.h Microphones.h Lights.h CO2_Sensor.h Occupancy_Sensor.h Movement_Sensor.h Fire_Sensor.h 
+Network.obj : Network.cpp Network.h    ArchitecturalAnalysisPkg.h Smart_Room.h HVAC.h Room_Touch_Panel.h Door_Touch_Panel.h Smart_Screen.h Speakers.h Webcam.h Microphones.h Lights.h Occupancy_Sensor.h Movement_Sensor.h Booking_System.h External_Personnel.h ExternalPersonnel.h User.h Fire_Sensor.h CO2_Sensor.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Network.obj" "Network.cpp" 
 
 
 
-Smart_Room.obj : Smart_Room.cpp Smart_Room.h    ArchitecturalAnalysisPkg.h Speakers.h Smart_Screen.h Door_Touch_Panel.h Room_Touch_Panel.h Webcam.h Microphones.h Lights.h Network.h HVAC.h Weather_Forecast.h Booking_System.h Fire_Sensor.h Movement_Sensor.h Occupancy_Sensor.h CO2_Sensor.h 
+Smart_Room.obj : Smart_Room.cpp Smart_Room.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Smart_Room.obj" "Smart_Room.cpp" 
 
 
 
-Speakers.obj : Speakers.cpp Speakers.h    ArchitecturalAnalysisPkg.h Network.h 
+HVAC.obj : HVAC.cpp HVAC.h    ArchitecturalAnalysisPkg.h Network.h CO2_Sensor.h Occupancy_Sensor.h Movement_Sensor.h Room_Touch_Panel.h 
 	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Speakers.obj" "Speakers.cpp" 
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"HVAC.obj" "HVAC.cpp" 
 
 
 
-Smart_Screen.obj : Smart_Screen.cpp Smart_Screen.h    ArchitecturalAnalysisPkg.h Network.h 
+CO2_Sensor.obj : CO2_Sensor.cpp CO2_Sensor.h    ArchitecturalAnalysisPkg.h Network.h HVAC.h 
 	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Smart_Screen.obj" "Smart_Screen.cpp" 
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CO2_Sensor.obj" "CO2_Sensor.cpp" 
 
 
 
-Door_Touch_Panel.obj : Door_Touch_Panel.cpp Door_Touch_Panel.h    ArchitecturalAnalysisPkg.h Network.h 
+Occupancy_Sensor.obj : Occupancy_Sensor.cpp Occupancy_Sensor.h    ArchitecturalAnalysisPkg.h Network.h HVAC.h 
 	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Door_Touch_Panel.obj" "Door_Touch_Panel.cpp" 
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Occupancy_Sensor.obj" "Occupancy_Sensor.cpp" 
 
 
 
-Room_Touch_Panel.obj : Room_Touch_Panel.cpp Room_Touch_Panel.h    ArchitecturalAnalysisPkg.h Network.h 
+Movement_Sensor.obj : Movement_Sensor.cpp Movement_Sensor.h    ArchitecturalAnalysisPkg.h Network.h HVAC.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Movement_Sensor.obj" "Movement_Sensor.cpp" 
+
+
+
+Room_Touch_Panel.obj : Room_Touch_Panel.cpp Room_Touch_Panel.h    ArchitecturalAnalysisPkg.h Network.h HVAC.h ExternalPersonnel.h User.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Room_Touch_Panel.obj" "Room_Touch_Panel.cpp" 
 
 
 
-Webcam.obj : Webcam.cpp Webcam.h    ArchitecturalAnalysisPkg.h Network.h 
+ExternalPersonnel.obj : ExternalPersonnel.cpp ExternalPersonnel.h    ActorPkg.h Smart_Room.h Door_Touch_Panel.h Room_Touch_Panel.h Network.h 
 	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Webcam.obj" "Webcam.cpp" 
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ExternalPersonnel.obj" "ExternalPersonnel.cpp" 
+
+
+
+Door_Touch_Panel.obj : Door_Touch_Panel.cpp Door_Touch_Panel.h    ArchitecturalAnalysisPkg.h Network.h Booking_System.h User.h ExternalPersonnel.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Door_Touch_Panel.obj" "Door_Touch_Panel.cpp" 
+
+
+
+Booking_System.obj : Booking_System.cpp Booking_System.h    ArchitecturalAnalysisPkg.h Network.h Door_Touch_Panel.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Booking_System.obj" "Booking_System.cpp" 
+
+
+
+User.obj : User.cpp User.h    ActorPkg.h Smart_Room.h Door_Touch_Panel.h Room_Touch_Panel.h Network.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"User.obj" "User.cpp" 
+
+
+
+Weather_Forecast.obj : Weather_Forecast.cpp Weather_Forecast.h    ArchitecturalAnalysisPkg.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Weather_Forecast.obj" "Weather_Forecast.cpp" 
 
 
 
@@ -232,57 +267,57 @@ Microphones.obj : Microphones.cpp Microphones.h    ArchitecturalAnalysisPkg.h Ne
 
 
 
+Speakers.obj : Speakers.cpp Speakers.h    ArchitecturalAnalysisPkg.h Network.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Speakers.obj" "Speakers.cpp" 
+
+
+
+Webcam.obj : Webcam.cpp Webcam.h    ArchitecturalAnalysisPkg.h Network.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Webcam.obj" "Webcam.cpp" 
+
+
+
+Smart_Screen.obj : Smart_Screen.cpp Smart_Screen.h    ArchitecturalAnalysisPkg.h Network.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Smart_Screen.obj" "Smart_Screen.cpp" 
+
+
+
+Fire_Sensor.obj : Fire_Sensor.cpp Fire_Sensor.h    ArchitecturalAnalysisPkg.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Fire_Sensor.obj" "Fire_Sensor.cpp" 
+
+
+
+External_Personnel.obj : External_Personnel.cpp External_Personnel.h    ArchitecturalAnalysisPkg.h Network.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"External_Personnel.obj" "External_Personnel.cpp" 
+
+
+
 Lights.obj : Lights.cpp Lights.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Lights.obj" "Lights.cpp" 
 
 
 
-HVAC.obj : HVAC.cpp HVAC.h    ArchitecturalAnalysisPkg.h Smart_Room.h Network.h 
-	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"HVAC.obj" "HVAC.cpp" 
-
-
-
-Weather_Forecast.obj : Weather_Forecast.cpp Weather_Forecast.h    ArchitecturalAnalysisPkg.h Smart_Room.h Network.h 
-	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Weather_Forecast.obj" "Weather_Forecast.cpp" 
-
-
-
-Booking_System.obj : Booking_System.cpp Booking_System.h    ArchitecturalAnalysisPkg.h Smart_Room.h Network.h 
-	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Booking_System.obj" "Booking_System.cpp" 
-
-
-
-Fire_Sensor.obj : Fire_Sensor.cpp Fire_Sensor.h    ArchitecturalAnalysisPkg.h Network.h 
-	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Fire_Sensor.obj" "Fire_Sensor.cpp" 
-
-
-
-Movement_Sensor.obj : Movement_Sensor.cpp Movement_Sensor.h    ArchitecturalAnalysisPkg.h Network.h 
-	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Movement_Sensor.obj" "Movement_Sensor.cpp" 
-
-
-
-Occupancy_Sensor.obj : Occupancy_Sensor.cpp Occupancy_Sensor.h    ArchitecturalAnalysisPkg.h Network.h 
-	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Occupancy_Sensor.obj" "Occupancy_Sensor.cpp" 
-
-
-
-CO2_Sensor.obj : CO2_Sensor.cpp CO2_Sensor.h    ArchitecturalAnalysisPkg.h Network.h 
-	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CO2_Sensor.obj" "CO2_Sensor.cpp" 
-
-
-
-ArchitecturalAnalysisPkg.obj : ArchitecturalAnalysisPkg.cpp ArchitecturalAnalysisPkg.h    Smart_Room.h Booking_System.h CO2_Sensor.h Door_Touch_Panel.h Fire_Sensor.h HVAC.h Lights.h Microphones.h Movement_Sensor.h Network.h Occupancy_Sensor.h Room_Touch_Panel.h Smart_Screen.h Speakers.h Weather_Forecast.h Webcam.h 
+ArchitecturalAnalysisPkg.obj : ArchitecturalAnalysisPkg.cpp ArchitecturalAnalysisPkg.h    Smart_Room.h Booking_System.h CO2_Sensor.h Door_Touch_Panel.h External_Personnel.h Fire_Sensor.h HVAC.h Lights.h Microphones.h Movement_Sensor.h Network.h Occupancy_Sensor.h Room_Touch_Panel.h Smart_Screen.h Speakers.h Weather_Forecast.h Webcam.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ArchitecturalAnalysisPkg.obj" "ArchitecturalAnalysisPkg.cpp" 
+
+
+
+ActorPkg.obj : ActorPkg.cpp ActorPkg.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ActorPkg.obj" "ActorPkg.cpp" 
+
+
+
+UseCaseAnalysisPkg.obj : UseCaseAnalysisPkg.cpp UseCaseAnalysisPkg.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UseCaseAnalysisPkg.obj" "UseCaseAnalysisPkg.cpp" 
 
 
 
@@ -315,21 +350,26 @@ clean:
 	@echo Cleanup
 	if exist Network.obj erase Network.obj
 	if exist Smart_Room.obj erase Smart_Room.obj
-	if exist Speakers.obj erase Speakers.obj
-	if exist Smart_Screen.obj erase Smart_Screen.obj
-	if exist Door_Touch_Panel.obj erase Door_Touch_Panel.obj
-	if exist Room_Touch_Panel.obj erase Room_Touch_Panel.obj
-	if exist Webcam.obj erase Webcam.obj
-	if exist Microphones.obj erase Microphones.obj
-	if exist Lights.obj erase Lights.obj
 	if exist HVAC.obj erase HVAC.obj
-	if exist Weather_Forecast.obj erase Weather_Forecast.obj
-	if exist Booking_System.obj erase Booking_System.obj
-	if exist Fire_Sensor.obj erase Fire_Sensor.obj
-	if exist Movement_Sensor.obj erase Movement_Sensor.obj
-	if exist Occupancy_Sensor.obj erase Occupancy_Sensor.obj
 	if exist CO2_Sensor.obj erase CO2_Sensor.obj
+	if exist Occupancy_Sensor.obj erase Occupancy_Sensor.obj
+	if exist Movement_Sensor.obj erase Movement_Sensor.obj
+	if exist Room_Touch_Panel.obj erase Room_Touch_Panel.obj
+	if exist ExternalPersonnel.obj erase ExternalPersonnel.obj
+	if exist Door_Touch_Panel.obj erase Door_Touch_Panel.obj
+	if exist Booking_System.obj erase Booking_System.obj
+	if exist User.obj erase User.obj
+	if exist Weather_Forecast.obj erase Weather_Forecast.obj
+	if exist Microphones.obj erase Microphones.obj
+	if exist Speakers.obj erase Speakers.obj
+	if exist Webcam.obj erase Webcam.obj
+	if exist Smart_Screen.obj erase Smart_Screen.obj
+	if exist Fire_Sensor.obj erase Fire_Sensor.obj
+	if exist External_Personnel.obj erase External_Personnel.obj
+	if exist Lights.obj erase Lights.obj
 	if exist ArchitecturalAnalysisPkg.obj erase ArchitecturalAnalysisPkg.obj
+	if exist ActorPkg.obj erase ActorPkg.obj
+	if exist UseCaseAnalysisPkg.obj erase UseCaseAnalysisPkg.obj
 	if exist $(TARGET_MAIN)$(OBJ_EXT) erase $(TARGET_MAIN)$(OBJ_EXT)
 	if exist *$(OBJ_EXT) erase *$(OBJ_EXT)
 	if exist $(TARGET_NAME).pdb erase $(TARGET_NAME).pdb

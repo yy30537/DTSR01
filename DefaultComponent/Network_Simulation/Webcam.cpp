@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Webcam
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\Webcam.cpp
 *********************************************************************/
 
@@ -31,6 +31,14 @@ Webcam::Webcam() {
 Webcam::~Webcam() {
     NOTIFY_DESTRUCTOR(~Webcam, true);
     cleanUpRelations();
+}
+
+bool Webcam::getIsOn() const {
+    return isOn;
+}
+
+void Webcam::setIsOn(bool p_isOn) {
+    isOn = p_isOn;
 }
 
 Network* Webcam::getItsNetwork() const {
@@ -85,6 +93,10 @@ void Webcam::_clearItsNetwork() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedWebcam::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("isOn", x2String(myReal->isOn));
+}
+
 void OMAnimatedWebcam::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsNetwork", false, true);
     if(myReal->itsNetwork)

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Movement_Sensor
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Movement_Sensor.h
 *********************************************************************/
 
@@ -15,6 +15,9 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## link itsHVAC
+class HVAC;
+
 //## link itsNetwork
 class Network;
 
@@ -41,6 +44,12 @@ public :
     void setIsMovement(bool p_isMovement);
     
     //## auto_generated
+    HVAC* getItsHVAC() const;
+    
+    //## auto_generated
+    void setItsHVAC(HVAC* p_HVAC);
+    
+    //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
@@ -57,12 +66,23 @@ protected :
     
     ////    Relations and components    ////
     
+    HVAC* itsHVAC;		//## link itsHVAC
+    
     Network* itsNetwork;		//## link itsNetwork
     
     ////    Framework operations    ////
 
 public :
 
+    //## auto_generated
+    void __setItsHVAC(HVAC* p_HVAC);
+    
+    //## auto_generated
+    void _setItsHVAC(HVAC* p_HVAC);
+    
+    //## auto_generated
+    void _clearItsHVAC();
+    
     //## auto_generated
     void __setItsNetwork(Network* p_Network);
     

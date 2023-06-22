@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Lights
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\Lights.h
 *********************************************************************/
 
@@ -45,6 +45,12 @@ public :
     ////    Additional operations    ////
     
     //## auto_generated
+    int getIntensity() const;
+    
+    //## auto_generated
+    void setIntensity(int p_intensity);
+    
+    //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
@@ -54,6 +60,10 @@ protected :
 
     //## auto_generated
     void cleanUpRelations();
+    
+    ////    Attributes    ////
+    
+    int intensity;		//## attribute intensity
     
     ////    Relations and components    ////
     
@@ -82,6 +92,8 @@ class OMAnimatedLights : virtual public AOMInstance {
     
 public :
 
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
     virtual void serializeRelations(AOMSRelations* aomsRelations) const;
 };
 //#]

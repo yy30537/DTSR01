@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Microphones
-//!	Generated Date	: Wed, 21, Jun 2023  
+//!	Generated Date	: Thu, 22, Jun 2023  
 	File Path	: DefaultComponent\Network_Simulation\Microphones.cpp
 *********************************************************************/
 
@@ -23,7 +23,7 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Microphones
-Microphones::Microphones() {
+Microphones::Microphones() : isOn(0), volume(0) {
     NOTIFY_CONSTRUCTOR(Microphones, Microphones(), 0, ArchitecturalAnalysisPkg_Microphones_Microphones_SERIALIZE);
     itsNetwork = NULL;
 }
@@ -31,6 +31,22 @@ Microphones::Microphones() {
 Microphones::~Microphones() {
     NOTIFY_DESTRUCTOR(~Microphones, true);
     cleanUpRelations();
+}
+
+bool Microphones::getIsOn() const {
+    return isOn;
+}
+
+void Microphones::setIsOn(bool p_isOn) {
+    isOn = p_isOn;
+}
+
+int Microphones::getVolume() const {
+    return volume;
+}
+
+void Microphones::setVolume(int p_volume) {
+    volume = p_volume;
 }
 
 Network* Microphones::getItsNetwork() const {
@@ -85,6 +101,11 @@ void Microphones::_clearItsNetwork() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedMicrophones::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("isOn", x2String(myReal->isOn));
+    aomsAttributes->addAttribute("volume", x2String(myReal->volume));
+}
+
 void OMAnimatedMicrophones::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsNetwork", false, true);
     if(myReal->itsNetwork)
