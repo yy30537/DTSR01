@@ -12,13 +12,13 @@
 			<_id type="a">GUID 18af55da-14bc-4e3a-9961-31c8936235af</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">ArchitecturalAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::1:26:12</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::1:26:12</_modifiedTime>
-			<_lastID type="a">10</_lastID>
-			<weakCGTime type="a">6.22.2023::1:26:12</weakCGTime>
+			<_modifiedTimeWeak type="a">6.22.2023::2:5:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:5:30</_modifiedTime>
+			<_lastID type="a">15</_lastID>
+			<weakCGTime type="a">6.22.2023::2:5:20</weakCGTime>
 			<strongCGTime type="a">6.21.2023::22:50:15</strongCGTime>
 			<_defaultComposite type="s">GUID 6554ffed-ae43-47e4-883c-2eaecc07dd0b</_defaultComposite>
-			<_eventsBaseID type="a">-1</_eventsBaseID>
+			<_eventsBaseID type="a">18201</_eventsBaseID>
 			<_configurationRelatedTime type="a">6.20.2023::13:56:19</_configurationRelatedTime>
 			<AggregatesList type="e">
 				<value>GUID 25cd26df-f8a6-4f0e-b086-8c3cf3d75e10</value>
@@ -41,6 +41,10 @@
 				<value>GUID 3e745777-84a8-4b33-87a3-592820b1aabd</value>
 				<value>GUID 3b4267c3-ffdc-45c0-b89f-52bacbe5be96</value>
 				<value>GUID 7ce36dff-49f2-4f09-826c-2cf3e1737b81</value>
+				<value>GUID d86bb85a-bc2e-4afa-8348-7ac17d75a5bc</value>
+				<value>GUID 80d7871a-0d79-43a6-abfc-811b98cf5ad7</value>
+				<value>GUID 7a8afa5b-f8a7-4287-8463-539defbef7db</value>
+				<value>GUID b0857c18-257f-415e-807f-061f61d20bfa</value>
 			</AggregatesList>
 		</ISubsystem>
 		<IComment type="e">
@@ -7133,9 +7137,9 @@
 			<_id type="a">GUID 6554ffed-ae43-47e4-883c-2eaecc07dd0b</_id>
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
-			<_modifiedTimeWeak type="a">6.21.2023::22:50:15</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::13:56:19</_modifiedTime>
-			<weakCGTime type="a">6.21.2023::22:50:15</weakCGTime>
+			<_modifiedTimeWeak type="a">6.22.2023::2:5:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:5:20</_modifiedTime>
+			<weakCGTime type="a">6.22.2023::2:5:20</weakCGTime>
 			<strongCGTime type="a">6.21.2023::22:50:15</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -7696,10 +7700,6 @@
 				<IHandle type="e">
 				</IHandle>
 			</_itsStateChart>
-			<Associations type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Associations>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<AggregatesList type="e">
 				<value>GUID a996bc49-aff1-49b0-ba72-029c74253db2</value>
@@ -8693,7 +8693,7 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">6.22.2023::1:28:56</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.22.2023::2:2:22</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IUCDiagram</_hm2Class>
@@ -8703,9 +8703,9 @@
 					<_hid type="a">GUID 5fcd23db-b0ae-4c90-9b04-aaedcd862ec7</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.22.2023::1:28:56</_modifiedTime>
+			<_modifiedTime type="a">6.22.2023::2:2:22</_modifiedTime>
 			<_lastID type="a">26</_lastID>
-			<weakCGTime type="a">6.22.2023::1:28:56</weakCGTime>
+			<weakCGTime type="a">6.22.2023::2:2:22</weakCGTime>
 			<strongCGTime type="a">6.21.2023::22:51:36</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -8715,12 +8715,12 @@
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<AggregatesList type="e">
-				<value>GUID f8bdc52d-3e7c-4102-92c6-42083de6f08b</value>
-				<value>GUID e68dfc36-ab29-4f71-8de3-d6bb0cdf2393</value>
 				<value>GUID 0942379f-aadf-4de7-8008-7c73ab61d50d</value>
-				<value>GUID bae0285f-959f-4e04-9d20-80e59cdbe066</value>
-				<value>GUID c03deb5b-bc8d-4d43-b463-5d9b8e7cae5e</value>
 				<value>GUID cbdd3335-f154-420f-b5b9-583de034f84d</value>
+				<value>GUID cba2929d-fd4d-4339-a83e-55cfd4803ed8</value>
+				<value>GUID c6ff0096-77b7-4924-bfd5-07e4fe51b7a8</value>
+				<value>GUID a312a306-eb56-4f3c-80d2-eb969cc6c7bb</value>
+				<value>GUID d30c52b6-316e-4837-beaa-321069264e92</value>
 				<value>GUID 4f8e8fc1-39c2-461e-adb2-f7c02dec9db9</value>
 				<value>GUID 5f37071e-0ab8-486d-87b9-bf0f85ed64f9</value>
 				<value>GUID 87bfe630-690a-425a-9493-a2e9b632520c</value>
@@ -8751,116 +8751,6 @@
 				<value>GUID 02bc4a3f-151b-4e65-bc6b-49278f250cf5</value>
 			</AggregatesList>
 		</IClass>
-		<ITriggered type="e">
-			<_id type="a">GUID f8bdc52d-3e7c-4102-92c6-42083de6f08b</_id>
-			<_myState type="a">8192</_myState>
-			<_properties type="p"><IPropertyContainer type="e">
-				<Subjects type="c">
-					<IRPYRawContainer type="e">
-						<IPropertySubject type="e">
-							<_Name type="a">CPP_CG</_Name>
-							<Metaclasses type="c">
-								<IRPYRawContainer type="e">
-									<IPropertyMetaclass type="e">
-										<_Name type="a">Operation</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<IProperty type="e">
-													<_Name type="a">Kind</_Name>
-													<_Value type="a">common</_Value>
-													<_Type type="a">Enum</_Type>
-													<_ExtraTypeInfo type="a">common,virtual,abstract</_ExtraTypeInfo>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
-								</IRPYRawContainer>
-							</Metaclasses>
-						</IPropertySubject>
-						
-					</IRPYRawContainer>
-				</Subjects>
-			</IPropertyContainer>
-			</_properties>
-			<_name type="a">ev_CO2_Level_Below</_name>
-			<_modifiedTimeWeak type="a">6.21.2023::23:59:34</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.21.2023::23:59:34</_modifiedTime>
-			<_lastID type="a">2</_lastID>
-			<_virtual type="a">1</_virtual>
-			<Args type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Args>
-			<_returnType type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">bool</_hname>
-					<_hid type="a">GUID e6c263cc-4bc5-4a11-b32d-02148c93add0</_hid>
-				</IHandle>
-			</_returnType>
-			<_abstract type="a">0</_abstract>
-			<_final type="a">0</_final>
-			<_concurrency type="a">Sequential</_concurrency>
-			<_protection type="a">iPublic</_protection>
-		</ITriggered>
-		<ITriggered type="e">
-			<_id type="a">GUID e68dfc36-ab29-4f71-8de3-d6bb0cdf2393</_id>
-			<_myState type="a">8192</_myState>
-			<_properties type="p"><IPropertyContainer type="e">
-				<Subjects type="c">
-					<IRPYRawContainer type="e">
-						<IPropertySubject type="e">
-							<_Name type="a">CPP_CG</_Name>
-							<Metaclasses type="c">
-								<IRPYRawContainer type="e">
-									<IPropertyMetaclass type="e">
-										<_Name type="a">Operation</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<IProperty type="e">
-													<_Name type="a">Kind</_Name>
-													<_Value type="a">common</_Value>
-													<_Type type="a">Enum</_Type>
-													<_ExtraTypeInfo type="a">common,virtual,abstract</_ExtraTypeInfo>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
-								</IRPYRawContainer>
-							</Metaclasses>
-						</IPropertySubject>
-						
-					</IRPYRawContainer>
-				</Subjects>
-			</IPropertyContainer>
-			</_properties>
-			<_name type="a">ev_CO2_Level_Over</_name>
-			<_modifiedTimeWeak type="a">6.21.2023::23:59:42</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.21.2023::23:59:42</_modifiedTime>
-			<_lastID type="a">1</_lastID>
-			<_virtual type="a">1</_virtual>
-			<Args type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Args>
-			<_returnType type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">bool</_hname>
-					<_hid type="a">GUID e6c263cc-4bc5-4a11-b32d-02148c93add0</_hid>
-				</IHandle>
-			</_returnType>
-			<_abstract type="a">0</_abstract>
-			<_final type="a">0</_final>
-			<_concurrency type="a">Sequential</_concurrency>
-			<_protection type="a">iPublic</_protection>
-		</ITriggered>
 		<IPrimitiveOperation type="e">
 			<_id type="a">GUID 0942379f-aadf-4de7-8008-7c73ab61d50d</_id>
 			<_myState type="a">8192</_myState>
@@ -8910,54 +8800,6 @@ CO2_Alarm_NetworkState = alarm_state;%0D
 			<_isOrdered type="a">0</_isOrdered>
 			<_argumentDirection type="a">In</_argumentDirection>
 		</IArgument>
-		<ITriggered type="e">
-			<_id type="a">GUID bae0285f-959f-4e04-9d20-80e59cdbe066</_id>
-			<_myState type="a">8192</_myState>
-			<_name type="a">ev_Fire_Detected</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::0:57:37</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::0:57:37</_modifiedTime>
-			<_virtual type="a">0</_virtual>
-			<Args type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Args>
-			<_returnType type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">void</_hname>
-					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
-				</IHandle>
-			</_returnType>
-			<_abstract type="a">0</_abstract>
-			<_final type="a">0</_final>
-			<_concurrency type="a">Sequential</_concurrency>
-			<_protection type="a">iPublic</_protection>
-		</ITriggered>
-		<ITriggered type="e">
-			<_id type="a">GUID c03deb5b-bc8d-4d43-b463-5d9b8e7cae5e</_id>
-			<_myState type="a">8192</_myState>
-			<_name type="a">ev_Fire_Distinguished</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::0:57:56</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::0:57:56</_modifiedTime>
-			<_virtual type="a">0</_virtual>
-			<Args type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Args>
-			<_returnType type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">void</_hname>
-					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
-				</IHandle>
-			</_returnType>
-			<_abstract type="a">0</_abstract>
-			<_final type="a">0</_final>
-			<_concurrency type="a">Sequential</_concurrency>
-			<_protection type="a">iPublic</_protection>
-		</ITriggered>
 		<IPrimitiveOperation type="e">
 			<_id type="a">GUID cbdd3335-f154-420f-b5b9-583de034f84d</_id>
 			<_myState type="a">8192</_myState>
@@ -9006,6 +8848,74 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<_isOrdered type="a">0</_isOrdered>
 			<_argumentDirection type="a">In</_argumentDirection>
 		</IArgument>
+		<IReception type="e">
+			<_id type="a">GUID cba2929d-fd4d-4339-a83e-55cfd4803ed8</_id>
+			<_myState type="a">8192</_myState>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Args>
+			<_event type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hid type="a">GUID d86bb85a-bc2e-4afa-8348-7ac17d75a5bc</_hid>
+				</IHandle>
+			</_event>
+		</IReception>
+		<IReception type="e">
+			<_id type="a">GUID c6ff0096-77b7-4924-bfd5-07e4fe51b7a8</_id>
+			<_myState type="a">8192</_myState>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Args>
+			<_event type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hid type="a">GUID 80d7871a-0d79-43a6-abfc-811b98cf5ad7</_hid>
+				</IHandle>
+			</_event>
+		</IReception>
+		<IReception type="e">
+			<_id type="a">GUID a312a306-eb56-4f3c-80d2-eb969cc6c7bb</_id>
+			<_myState type="a">8192</_myState>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Args>
+			<_event type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hid type="a">GUID 7a8afa5b-f8a7-4287-8463-539defbef7db</_hid>
+				</IHandle>
+			</_event>
+		</IReception>
+		<IReception type="e">
+			<_id type="a">GUID d30c52b6-316e-4837-beaa-321069264e92</_id>
+			<_myState type="a">8192</_myState>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Args>
+			<_event type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hid type="a">GUID b0857c18-257f-415e-807f-061f61d20bfa</_hid>
+				</IHandle>
+			</_event>
+		</IReception>
 		<IAttribute type="e">
 			<_id type="a">GUID 4f8e8fc1-39c2-461e-adb2-f7c02dec9db9</_id>
 			<_myState type="a">8192</_myState>
@@ -9094,10 +9004,10 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<_id type="a">GUID 87bfe630-690a-425a-9493-a2e9b632520c</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">statechart_CO2_Control</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::1:5:14</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::1:5:14</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::1:59:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::1:59:10</_modifiedTime>
 			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">6.22.2023::1:5:14</weakCGTime>
+			<weakCGTime type="a">6.22.2023::1:59:10</weakCGTime>
 			<strongCGTime type="a">6.22.2023::1:5:14</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -9105,7 +9015,7 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">2</_defNumber>
-			<_version type="a">6.22.2023::2:55:40</_version>
+			<_version type="a">6.22.2023::3:59:28</_version>
 			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID 1cda687a-a098-4343-a689-236224876229</_diagram>
 			<AggregatesList type="e">
@@ -9144,8 +9054,8 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<_id type="a">GUID 853eae9e-93a7-4d4e-9d1f-0b5daca8da5b</_id>
 			<_myState type="a">2048</_myState>
 			<_name type="a">transition_2</_name>
-			<_modifiedTimeWeak type="a">6.21.2023::23:24:43</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.21.2023::23:24:43</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::1:58:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::1:58:20</_modifiedTime>
 			<_itsTarget type="s">GUID 5d3f280c-613a-46db-b8dd-0af1a9a21f0a</_itsTarget>
 			<_staticReaction type="a">0</_staticReaction>
 			<_itsSource type="s">GUID 2f5f6410-21c3-43a1-851d-dda83673add3</_itsSource>
@@ -9155,8 +9065,8 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 		</ITransition>
 		<ILabel type="e">
 			<_id type="a">GUID 57c6c6c8-648b-41cb-82a7-6a01f3ab93a0</_id>
-			<_modifiedTimeWeak type="a">6.21.2023::23:24:43</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.21.2023::23:24:43</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::1:58:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::1:58:20</_modifiedTime>
 			<_itsGuard>NULL</_itsGuard>
 			<_itsAction>NULL</_itsAction>
 			<AggregatesList type="e">
@@ -9165,13 +9075,13 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 		</ILabel>
 		<IInterfaceItemTrigger type="e">
 			<_id type="a">GUID d9844c70-9eda-4b52-8af7-bd43edac643b</_id>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::1:58:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::1:58:20</_modifiedTime>
 			<_body type="a">CO2_Alarm_TurnOn_Trigger</_body>
 			<_itsInterfaceItem type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">ITriggered</_hm2Class>
-					<_hid type="a">GUID f8bdc52d-3e7c-4102-92c6-42083de6f08b</_hid>
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hid type="a">GUID d86bb85a-bc2e-4afa-8348-7ac17d75a5bc</_hid>
 				</IHandle>
 			</_itsInterfaceItem>
 		</IInterfaceItemTrigger>
@@ -9179,8 +9089,8 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<_id type="a">GUID 61913dcd-f76f-4d82-8038-c218b4366c2b</_id>
 			<_myState type="a">2048</_myState>
 			<_name type="a">transition_3</_name>
-			<_modifiedTimeWeak type="a">6.21.2023::23:5:23</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.21.2023::23:5:23</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::1:59:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::1:59:10</_modifiedTime>
 			<_itsTarget type="s">GUID 2f5f6410-21c3-43a1-851d-dda83673add3</_itsTarget>
 			<_staticReaction type="a">0</_staticReaction>
 			<_itsSource type="s">GUID 5d3f280c-613a-46db-b8dd-0af1a9a21f0a</_itsSource>
@@ -9190,8 +9100,8 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 		</ITransition>
 		<ILabel type="e">
 			<_id type="a">GUID 784324c3-83be-432d-9c9c-c61b385b35a3</_id>
-			<_modifiedTimeWeak type="a">6.21.2023::23:5:23</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.21.2023::23:5:23</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::1:59:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::1:59:10</_modifiedTime>
 			<_itsGuard>NULL</_itsGuard>
 			<_itsAction>NULL</_itsAction>
 			<AggregatesList type="e">
@@ -9200,13 +9110,13 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 		</ILabel>
 		<IInterfaceItemTrigger type="e">
 			<_id type="a">GUID c9dc3d39-3feb-4589-9e3c-9b2c1221a2d4</_id>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::1:59:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::1:59:10</_modifiedTime>
 			<_body type="a">CO2_Alarm_TurnOff_Trigger</_body>
 			<_itsInterfaceItem type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">ITriggered</_hm2Class>
-					<_hid type="a">GUID e68dfc36-ab29-4f71-8de3-d6bb0cdf2393</_hid>
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hid type="a">GUID 80d7871a-0d79-43a6-abfc-811b98cf5ad7</_hid>
 				</IHandle>
 			</_itsInterfaceItem>
 		</IInterfaceItemTrigger>
@@ -9402,9 +9312,9 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">stm_diagram_CO2_Control</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::1:5:14</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.22.2023::1:58:20</_modifiedTimeWeak>
 			<_modifiedTime type="a">6.22.2023::1:5:14</_modifiedTime>
-			<_lastModifiedTime type="a">6.22.2023::1:5:14</_lastModifiedTime>
+			<_lastModifiedTime type="a">6.22.2023::1:59:28</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -9918,7 +9828,7 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<m_direction type="a">' '</m_direction>
 			<m_rpn type="p">
 				<CGIText type="e">
-					<m_str type="a">ev_CO2_Level_Below</m_str>
+					<m_str type="a">ev_CO2_Level_OverThreshold</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -9983,7 +9893,7 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<m_direction type="a">' '</m_direction>
 			<m_rpn type="p">
 				<CGIText type="e">
-					<m_str type="a">ev_CO2_Level_Over</m_str>
+					<m_str type="a">ev_CO2_Level_BelowThreshold</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -9995,7 +9905,7 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 					<m_position type="a">4 -6 -9  155 -9  155 5  -6 5  </m_position>
 					<m_nIdent type="a">0</m_nIdent>
 					<m_bImplicitSetRectPoints type="a">1</m_bImplicitSetRectPoints>
-					<m_transform type="a">0.807453 0 0 1 477.845 352 </m_transform>
+					<m_transform type="a">1.16149 0 0 1 479.969 352 </m_transform>
 					<m_nHorizontalSpacing type="a">-123</m_nHorizontalSpacing>
 					<m_nVerticalSpacing type="a">-11</m_nVerticalSpacing>
 					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
@@ -10017,10 +9927,10 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<_id type="a">GUID b513fc08-31ad-409f-9815-d6ef858fa349</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">statechart_Fire_Control</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::1:4:36</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::1:4:36</_modifiedTime>
-			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">6.22.2023::1:4:36</weakCGTime>
+			<_modifiedTimeWeak type="a">6.22.2023::2:2:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:2:22</_modifiedTime>
+			<_lastID type="a">5</_lastID>
+			<weakCGTime type="a">6.22.2023::2:2:22</weakCGTime>
 			<strongCGTime type="a">6.22.2023::0:55:4</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -10028,13 +9938,13 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<_defNumber type="a">2</_defNumber>
-			<_version type="a">6.22.2023::3:4:46</_version>
-			<_baseVersion type="a">1.1.1970::1:0:0</_baseVersion>
+			<_version type="a">6.22.2023::4:2:32</_version>
+			<_baseVersion type="a">1.2.1990::0:0:0</_baseVersion>
 			<_diagram type="s">GUID af0e770a-5801-4bb2-b50c-310ac549ffbc</_diagram>
 			<AggregatesList type="e">
 				<value>GUID 564435f7-b45a-466b-9e83-4e59dd4ec031</value>
-				<value>GUID 238476dc-2929-4a7c-a809-f1e241bf348e</value>
 				<value>GUID e4dc50ab-91b6-4cb1-9976-995811bea32b</value>
+				<value>GUID c67a91ff-97a5-4377-a534-0eb498c96b2f</value>
 				<value>GUID 80ba74ed-86ce-4f72-a2b7-2fafe01ea9a5</value>
 				<value>GUID 35e865aa-bc56-4432-86f5-4a4c714f7be7</value>
 				<value>GUID 0db9cf9a-b701-476e-93e4-d37d25256649</value>
@@ -10058,52 +9968,17 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 		<ILabel type="e">
 			<_id type="a">GUID b20b585a-5201-44f2-bbb5-3639769f88b6</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_itsTrigger>NULL</_itsTrigger>
 			<_itsGuard>NULL</_itsGuard>
 			<_itsAction>NULL</_itsAction>
 		</ILabel>
 		<ITransition type="e">
-			<_id type="a">GUID 238476dc-2929-4a7c-a809-f1e241bf348e</_id>
-			<_myState type="a">2048</_myState>
-			<_name type="a">transition_2</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::0:58:5</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::0:58:5</_modifiedTime>
-			<_itsTarget type="s">GUID 0db9cf9a-b701-476e-93e4-d37d25256649</_itsTarget>
-			<_staticReaction type="a">0</_staticReaction>
-			<_itsSource type="s">GUID 35e865aa-bc56-4432-86f5-4a4c714f7be7</_itsSource>
-			<AggregatesList type="e">
-				<value>GUID d08802f6-e571-433e-bce2-1d78f33a5ace</value>
-			</AggregatesList>
-		</ITransition>
-		<ILabel type="e">
-			<_id type="a">GUID d08802f6-e571-433e-bce2-1d78f33a5ace</_id>
-			<_modifiedTimeWeak type="a">6.22.2023::0:58:5</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::0:58:5</_modifiedTime>
-			<_itsGuard>NULL</_itsGuard>
-			<_itsAction>NULL</_itsAction>
-			<AggregatesList type="e">
-				<value>GUID 4fbb08ef-416f-43d5-8268-e84ff072fdc6</value>
-			</AggregatesList>
-		</ILabel>
-		<IInterfaceItemTrigger type="e">
-			<_id type="a">GUID 4fbb08ef-416f-43d5-8268-e84ff072fdc6</_id>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
-			<_body type="a">ev_Fire_Detected</_body>
-			<_itsInterfaceItem type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">ITriggered</_hm2Class>
-					<_hid type="a">GUID bae0285f-959f-4e04-9d20-80e59cdbe066</_hid>
-				</IHandle>
-			</_itsInterfaceItem>
-		</IInterfaceItemTrigger>
-		<ITransition type="e">
 			<_id type="a">GUID e4dc50ab-91b6-4cb1-9976-995811bea32b</_id>
 			<_myState type="a">2048</_myState>
 			<_name type="a">transition_3</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::0:58:24</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::0:58:24</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::2:2:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:2:22</_modifiedTime>
 			<_itsTarget type="s">GUID 35e865aa-bc56-4432-86f5-4a4c714f7be7</_itsTarget>
 			<_staticReaction type="a">0</_staticReaction>
 			<_itsSource type="s">GUID 0db9cf9a-b701-476e-93e4-d37d25256649</_itsSource>
@@ -10113,8 +9988,8 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 		</ITransition>
 		<ILabel type="e">
 			<_id type="a">GUID 2a936b27-7f32-4818-af32-3c9b4eb0d82e</_id>
-			<_modifiedTimeWeak type="a">6.22.2023::0:58:24</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::0:58:24</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::2:2:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:2:22</_modifiedTime>
 			<_itsGuard>NULL</_itsGuard>
 			<_itsAction>NULL</_itsAction>
 			<AggregatesList type="e">
@@ -10123,13 +9998,47 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 		</ILabel>
 		<IInterfaceItemTrigger type="e">
 			<_id type="a">GUID 84f7b548-b6b3-4a6c-98ce-bc916816a551</_id>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
-			<_body type="a">ev_Fire_Distinguished</_body>
+			<_modifiedTimeWeak type="a">6.22.2023::2:2:22</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:2:22</_modifiedTime>
 			<_itsInterfaceItem type="r">
 				<IHandle type="e">
-					<_hm2Class type="a">ITriggered</_hm2Class>
-					<_hid type="a">GUID c03deb5b-bc8d-4d43-b463-5d9b8e7cae5e</_hid>
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hid type="a">GUID b0857c18-257f-415e-807f-061f61d20bfa</_hid>
+				</IHandle>
+			</_itsInterfaceItem>
+		</IInterfaceItemTrigger>
+		<ITransition type="e">
+			<_id type="a">GUID c67a91ff-97a5-4377-a534-0eb498c96b2f</_id>
+			<_myState type="a">2048</_myState>
+			<_name type="a">transition_4</_name>
+			<_modifiedTimeWeak type="a">6.22.2023::2:1:52</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:1:52</_modifiedTime>
+			<_itsTarget type="s">GUID 0db9cf9a-b701-476e-93e4-d37d25256649</_itsTarget>
+			<_staticReaction type="a">0</_staticReaction>
+			<_itsSource type="s">GUID 35e865aa-bc56-4432-86f5-4a4c714f7be7</_itsSource>
+			<AggregatesList type="e">
+				<value>GUID bc42f798-a40d-4e26-b290-b7c35b18409a</value>
+			</AggregatesList>
+		</ITransition>
+		<ILabel type="e">
+			<_id type="a">GUID bc42f798-a40d-4e26-b290-b7c35b18409a</_id>
+			<_modifiedTimeWeak type="a">6.22.2023::2:1:52</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:1:52</_modifiedTime>
+			<_itsGuard>NULL</_itsGuard>
+			<_itsAction>NULL</_itsAction>
+			<AggregatesList type="e">
+				<value>GUID 67176576-ed6c-4d39-9cfc-5b5c9f024a77</value>
+			</AggregatesList>
+		</ILabel>
+		<IInterfaceItemTrigger type="e">
+			<_id type="a">GUID 67176576-ed6c-4d39-9cfc-5b5c9f024a77</_id>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_body type="a">event_13</_body>
+			<_itsInterfaceItem type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IEvent</_hm2Class>
+					<_hid type="a">GUID 7a8afa5b-f8a7-4287-8463-539defbef7db</_hid>
 				</IHandle>
 			</_itsInterfaceItem>
 		</IInterfaceItemTrigger>
@@ -10143,22 +10052,22 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 		<IState type="e">
 			<_id type="a">GUID 35e865aa-bc56-4432-86f5-4a4c714f7be7</_id>
 			<_name type="a">Fire_Alarm_Off</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::1:4:18</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::1:4:18</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::2:1:42</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:1:42</_modifiedTime>
 			<_parent type="s">GUID 80ba74ed-86ce-4f72-a2b7-2fafe01ea9a5</_parent>
 			<_defaultTrans type="s"></_defaultTrans>
 			<_entryAction type="p"><IAction type="e">
 				<_id type="a">GUID 81fd2e7f-2d08-4cd2-b4e1-704a1cf5a86f</_id>
 				<_myState type="a">4096</_myState>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-				<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+				<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 				<_body type="a">Set_Fire_Alarm(false);</_body>
 			</IAction>
 			</_entryAction>
 			<_exitAction type="p"><IAction type="e">
 				<_id type="a">GUID efddb09c-5700-48b6-a3b2-0e755e111797</_id>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-				<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+				<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 				<_body type="a">std::cout &lt;&lt; &quot; set fire alarm to false \n&quot;;</_body>
 			</IAction>
 			</_exitAction>
@@ -10166,22 +10075,22 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 		<IState type="e">
 			<_id type="a">GUID 0db9cf9a-b701-476e-93e4-d37d25256649</_id>
 			<_name type="a">Fire_Alarm_On</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::1:4:36</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::1:4:36</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::2:1:42</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:1:42</_modifiedTime>
 			<_parent type="s">GUID 80ba74ed-86ce-4f72-a2b7-2fafe01ea9a5</_parent>
 			<_defaultTrans type="s"></_defaultTrans>
 			<_entryAction type="p"><IAction type="e">
 				<_id type="a">GUID 07ec10ee-35ec-4ecf-8319-f8b3e5f5a50d</_id>
 				<_myState type="a">4096</_myState>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-				<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+				<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 				<_body type="a">Set_Fire_Alarm(true);</_body>
 			</IAction>
 			</_entryAction>
 			<_exitAction type="p"><IAction type="e">
 				<_id type="a">GUID 9fc8ece8-3c88-4086-a9a1-79b1cca6e363</_id>
 				<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-				<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+				<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 				<_body type="a">std::cout &lt;&lt; &quot; set fire alarm to true \n&quot;;</_body>
 			</IAction>
 			</_exitAction>
@@ -10325,9 +10234,9 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">statechartdiagram_0</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::0:56:55</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::0:57:9</_modifiedTime>
-			<_lastModifiedTime type="a">6.22.2023::1:4:46</_lastModifiedTime>
+			<_modifiedTimeWeak type="a">6.22.2023::2:0:24</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:1:42</_modifiedTime>
+			<_lastModifiedTime type="a">6.22.2023::2:2:32</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -10386,8 +10295,8 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 				<value>GUID 6a9e8ddd-ed1d-4cbf-a0ab-be78cc93578c</value>
 				<value>GUID 94cf5c44-01f4-471f-a0d5-8175baf5bf3d</value>
 				<value>GUID 0ee14c68-e846-43e6-96e1-df031706783f</value>
-				<value>GUID 52aa16e6-2f3f-4c6e-9d35-60d621a1801c</value>
 				<value>GUID e31f8854-9324-4008-b5e1-9d5f9702dca4</value>
+				<value>GUID bb819753-337d-45df-b4f2-04a3199ce2a2</value>
 			</AggregatesList>
 		</CGIStateChart>
 		<CGIState type="e">
@@ -10801,71 +10710,6 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<m_bShowName type="a">1</m_bShowName>
 		</CGITrans>
 		<CGITrans type="e">
-			<_id type="a">GUID 52aa16e6-2f3f-4c6e-9d35-60d621a1801c</_id>
-			<m_type type="a">28</m_type>
-			<m_pModelObject type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">ITransition</_hm2Class>
-					<_hid type="a">GUID 238476dc-2929-4a7c-a809-f1e241bf348e</_hid>
-				</IHandle>
-			</m_pModelObject>
-			<m_pParent type="s"></m_pParent>
-			<m_name type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_name>
-			<m_drawBehavior type="a">4096</m_drawBehavior>
-			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
-			<m_pSource type="s">GUID 6a9e8ddd-ed1d-4cbf-a0ab-be78cc93578c</m_pSource>
-			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID 94cf5c44-01f4-471f-a0d5-8175baf5bf3d</m_pTarget>
-			<m_targetType type="a">'T'</m_targetType>
-			<m_direction type="a">' '</m_direction>
-			<m_rpn type="p">
-				<CGIText type="e">
-					<m_str type="a">ev_Fire_Detected</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">4 -6 -9  95 -9  95 5  -6 5  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_transform type="a">1 0 0 1 122 301 </m_transform>
-					<m_nHorizontalSpacing type="a">-8</m_nHorizontalSpacing>
-					<m_nVerticalSpacing type="a">-12</m_nVerticalSpacing>
-					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_rpn>
-			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
-			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
-			<m_line_style type="a">1</m_line_style>
-			<m_SourcePort type="a">0 580 </m_SourcePort>
-			<m_TargetPort type="a">0 795 </m_TargetPort>
-			<m_pInheritsFrom type="r">
-				<IHandle type="e">
-				</IHandle>
-			</m_pInheritsFrom>
-			<m_nInheritanceMask type="a">0</m_nInheritanceMask>
-			<m_bShowName type="a">1</m_bShowName>
-		</CGITrans>
-		<CGITrans type="e">
 			<_id type="a">GUID e31f8854-9324-4008-b5e1-9d5f9702dca4</_id>
 			<m_type type="a">28</m_type>
 			<m_pModelObject type="r">
@@ -10923,6 +10767,71 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<m_line_style type="a">1</m_line_style>
 			<m_SourcePort type="a">1096 745 </m_SourcePort>
 			<m_TargetPort type="a">1096 621 </m_TargetPort>
+			<m_pInheritsFrom type="r">
+				<IHandle type="e">
+				</IHandle>
+			</m_pInheritsFrom>
+			<m_nInheritanceMask type="a">0</m_nInheritanceMask>
+			<m_bShowName type="a">1</m_bShowName>
+		</CGITrans>
+		<CGITrans type="e">
+			<_id type="a">GUID bb819753-337d-45df-b4f2-04a3199ce2a2</_id>
+			<m_type type="a">28</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ITransition</_hm2Class>
+					<_hid type="a">GUID c67a91ff-97a5-4377-a534-0eb498c96b2f</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s"></m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_pSource type="s">GUID 6a9e8ddd-ed1d-4cbf-a0ab-be78cc93578c</m_pSource>
+			<m_sourceType type="a">'F'</m_sourceType>
+			<m_pTarget type="s">GUID 94cf5c44-01f4-471f-a0d5-8175baf5bf3d</m_pTarget>
+			<m_targetType type="a">'T'</m_targetType>
+			<m_direction type="a">' '</m_direction>
+			<m_rpn type="p">
+				<CGIText type="e">
+					<m_str type="a">ev_Fire_Detected</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">4 -6 -9  95 -9  95 5  -6 5  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_transform type="a">1 0 0 1 135 302 </m_transform>
+					<m_nHorizontalSpacing type="a">-7</m_nHorizontalSpacing>
+					<m_nVerticalSpacing type="a">-6</m_nVerticalSpacing>
+					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_rpn>
+			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
+			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
+			<m_line_style type="a">1</m_line_style>
+			<m_SourcePort type="a">0 555 </m_SourcePort>
+			<m_TargetPort type="a">0 596 </m_TargetPort>
 			<m_pInheritsFrom type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -12205,10 +12114,6 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 				<IHandle type="e">
 				</IHandle>
 			</_itsStateChart>
-			<Associations type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Associations>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<AggregatesList type="e">
 				<value>GUID 79400b61-1569-4080-9c90-d0609f04548b</value>
@@ -12374,6 +12279,54 @@ Fire_Alarm_NetworkState = alarm_state;</_bodyData>
 			<_linkType type="a">Assoc</_linkType>
 			<_navigability type="a">Navigable</_navigability>
 		</IAssociationEnd>
+		<IEvent type="e">
+			<_id type="a">GUID d86bb85a-bc2e-4afa-8348-7ac17d75a5bc</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">ev_CO2_Level_OverThreshold</_name>
+			<_modifiedTimeWeak type="a">6.22.2023::2:5:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:5:20</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Args>
+		</IEvent>
+		<IEvent type="e">
+			<_id type="a">GUID 80d7871a-0d79-43a6-abfc-811b98cf5ad7</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">ev_CO2_Level_BelowThreshold</_name>
+			<_modifiedTimeWeak type="a">6.22.2023::2:5:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:5:20</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Args>
+		</IEvent>
+		<IEvent type="e">
+			<_id type="a">GUID 7a8afa5b-f8a7-4287-8463-539defbef7db</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">ev_Fire_Detected</_name>
+			<_modifiedTimeWeak type="a">6.22.2023::2:5:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:5:20</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Args>
+		</IEvent>
+		<IEvent type="e">
+			<_id type="a">GUID b0857c18-257f-415e-807f-061f61d20bfa</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">ev_Fire_Distinguished</_name>
+			<_modifiedTimeWeak type="a">6.22.2023::2:5:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.22.2023::2:5:20</_modifiedTime>
+			<_virtual type="a">0</_virtual>
+			<Args type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Args>
+		</IEvent>
 		
 	</RHAPSODY-MODEL>
 	<OslcLinks type="c">
