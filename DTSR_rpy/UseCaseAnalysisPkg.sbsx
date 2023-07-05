@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
-	<CODE-PAGE>936</CODE-PAGE>
+	<CODE-PAGE>1252</CODE-PAGE>
 	<version>109.0</version>
 	<lang>C++</lang>
 	<BuildNo>202002261110</BuildNo>
@@ -12,10 +12,10 @@
 			<_id type="a">GUID a127c406-634c-4e60-9083-0e78541b5a6d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">UseCaseAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">6.22.2023::0:54:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::1:0:27</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.5.2023::12:58:7</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.5.2023::13:1:5</_modifiedTime>
 			<_lastID type="a">69</_lastID>
-			<weakCGTime type="a">6.22.2023::0:54:45</weakCGTime>
+			<weakCGTime type="a">7.5.2023::12:58:7</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:20:48</strongCGTime>
 			<_defaultComposite type="s">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -7369,8 +7369,8 @@
 			</_properties>
 			<_name type="a">HVAC System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.21.2023::17:8:54</_modifiedTime>
-			<_lastModifiedTime type="a">6.21.2023::17:8:54</_lastModifiedTime>
+			<_modifiedTime type="a">7.5.2023::12:58:7</_modifiedTime>
+			<_lastModifiedTime type="a">7.5.2023::12:58:7</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -12947,8 +12947,8 @@
 			</_properties>
 			<_name type="a">Security and Access System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.20.2023::14:15:52</_modifiedTime>
-			<_lastModifiedTime type="a">6.20.2023::14:15:52</_lastModifiedTime>
+			<_modifiedTime type="a">7.5.2023::10:6:2</_modifiedTime>
+			<_lastModifiedTime type="a">7.5.2023::10:6:2</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -15863,8 +15863,8 @@
 			</_properties>
 			<_name type="a">CO2 Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::0:54:45</_modifiedTime>
-			<_lastModifiedTime type="a">6.22.2023::0:54:45</_lastModifiedTime>
+			<_modifiedTime type="a">7.5.2023::12:58:7</_modifiedTime>
+			<_lastModifiedTime type="a">7.5.2023::12:58:7</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -17203,8 +17203,8 @@
 			</_properties>
 			<_name type="a">Fire Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.22.2023::0:54:45</_modifiedTime>
-			<_lastModifiedTime type="a">6.22.2023::0:54:45</_lastModifiedTime>
+			<_modifiedTime type="a">7.5.2023::10:6:2</_modifiedTime>
+			<_lastModifiedTime type="a">7.5.2023::10:6:2</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -17771,6 +17771,41 @@
 		</CGIAssociationEnd>
 		<CGIClass type="e">
 			<_id type="a">GUID 8330e337-a213-4a3e-9c98-33794dbd17b7</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Block</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Font.FontColor</_Name>
+													<_Value type="a">0,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Underline</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
 			<m_type type="a">87</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Weather_Forecast
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Weather_Forecast.h
 *********************************************************************/
 
@@ -15,14 +15,24 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## auto_generated
+#include <aom\aom.h>
+//## auto_generated
+#include "ArchitecturalAnalysisPkg.h"
 //## package ArchitecturalAnalysisPkg
 
 //## class Weather_Forecast
 class Weather_Forecast {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedWeather_Forecast;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     Weather_Forecast();
     
@@ -43,6 +53,20 @@ protected :
 
     int outdoorTemperature;		//## attribute outdoorTemperature
 };
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedWeather_Forecast : virtual public AOMInstance {
+    DECLARE_META(Weather_Forecast, OMAnimatedWeather_Forecast)
+    
+    ////    Framework operations    ////
+    
+public :
+
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+};
+//#]
+#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

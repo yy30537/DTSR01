@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: HVAC
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\HVAC.h
 *********************************************************************/
 
@@ -15,6 +15,10 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## auto_generated
+#include <aom\aom.h>
+//## auto_generated
+#include "ArchitecturalAnalysisPkg.h"
 //## link itsCO2_Sensor
 class CO2_Sensor;
 
@@ -34,10 +38,16 @@ class Room_Touch_Panel;
 
 //## class HVAC
 class HVAC {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedHVAC;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     HVAC();
     
@@ -199,6 +209,22 @@ public :
     //## auto_generated
     void _clearItsRoom_Touch_Panel();
 };
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedHVAC : virtual public AOMInstance {
+    DECLARE_META(HVAC, OMAnimatedHVAC)
+    
+    ////    Framework operations    ////
+    
+public :
+
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
+    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
+};
+//#]
+#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

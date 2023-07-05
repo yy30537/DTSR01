@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Movement_Sensor
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Movement_Sensor.h
 *********************************************************************/
 
@@ -15,6 +15,10 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## auto_generated
+#include <aom\aom.h>
+//## auto_generated
+#include "ArchitecturalAnalysisPkg.h"
 //## link itsHVAC
 class HVAC;
 
@@ -25,10 +29,16 @@ class Network;
 
 //## class Movement_Sensor
 class Movement_Sensor {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedMovement_Sensor;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     Movement_Sensor();
     
@@ -92,6 +102,22 @@ public :
     //## auto_generated
     void _clearItsNetwork();
 };
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedMovement_Sensor : virtual public AOMInstance {
+    DECLARE_META(Movement_Sensor, OMAnimatedMovement_Sensor)
+    
+    ////    Framework operations    ////
+    
+public :
+
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
+    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
+};
+//#]
+#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

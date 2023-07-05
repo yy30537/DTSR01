@@ -1,15 +1,19 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.cpp
 *********************************************************************/
 
-//## auto_generated
-#include <oxf\omthread.h>
+//#[ ignore
+#define NAMESPACE_PREFIX
+
+#define _OMSTATECHART_ANIMATED
+//#]
+
 //## auto_generated
 #include "Network.h"
 //## link itsBooking_System
@@ -28,11 +32,28 @@
 #include "Smart_Room.h"
 //## link itsUser
 #include "User.h"
+//#[ ignore
+#define ArchitecturalAnalysisPkg_Network_Network_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_Network_Set_CO2_Alarm_SERIALIZE aomsmethod->addAttribute("alarm_state", x2String(alarm_state));
+
+#define ArchitecturalAnalysisPkg_Network_Set_Fire_Alarm_SERIALIZE aomsmethod->addAttribute("alarm_state", x2String(alarm_state));
+//#]
+
 //## package ArchitecturalAnalysisPkg
 
 //## class Network
 Network::Network(IOxfActive* theActiveContext) : CO2_Alarm_NetworkState(false), Fire_Alarm_NetworkState(false) {
+    NOTIFY_REACTIVE_CONSTRUCTOR(Network, Network(), 0, ArchitecturalAnalysisPkg_Network_Network_SERIALIZE);
     setActiveContext(theActiveContext, false);
+    {
+        {
+            itsFire_Sensor.setShouldDelete(false);
+        }
+        {
+            itsCO2_Sensor.setShouldDelete(false);
+        }
+    }
     itsBooking_System = NULL;
     itsDoor_Touch_Panel = NULL;
     itsExternalPersonnel = NULL;
@@ -52,10 +73,12 @@ Network::Network(IOxfActive* theActiveContext) : CO2_Alarm_NetworkState(false), 
 }
 
 Network::~Network() {
+    NOTIFY_DESTRUCTOR(~Network, true);
     cleanUpRelations();
 }
 
 void Network::Set_CO2_Alarm(bool alarm_state) {
+    NOTIFY_OPERATION(Set_CO2_Alarm, Set_CO2_Alarm(bool), 1, ArchitecturalAnalysisPkg_Network_Set_CO2_Alarm_SERIALIZE);
     //#[ operation Set_CO2_Alarm(bool)
     std::cout<< " set CO2_Alarm_NetworkState \n";
     CO2_Alarm_NetworkState = alarm_state;
@@ -64,6 +87,7 @@ void Network::Set_CO2_Alarm(bool alarm_state) {
 }
 
 void Network::Set_Fire_Alarm(bool alarm_state) {
+    NOTIFY_OPERATION(Set_Fire_Alarm, Set_Fire_Alarm(bool), 1, ArchitecturalAnalysisPkg_Network_Set_Fire_Alarm_SERIALIZE);
     //#[ operation Set_Fire_Alarm(bool)
     std::cout<< " set Fire_Alarm_NetworkState \n";
     Fire_Alarm_NetworkState = alarm_state;
@@ -304,6 +328,8 @@ Webcam* Network::getItsWebcam_1() const {
 
 bool Network::startBehavior() {
     bool done = true;
+    done &= itsCO2_Sensor.startBehavior();
+    done &= itsFire_Sensor.startBehavior();
     done &= OMReactive::startBehavior();
     return done;
 }
@@ -316,6 +342,7 @@ void Network::initStatechart() {
 void Network::cleanUpRelations() {
     if(itsBooking_System != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsBooking_System");
             Network* p_Network = itsBooking_System->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -325,6 +352,7 @@ void Network::cleanUpRelations() {
         }
     if(itsDoor_Touch_Panel != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsDoor_Touch_Panel");
             Network* p_Network = itsDoor_Touch_Panel->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -334,6 +362,7 @@ void Network::cleanUpRelations() {
         }
     if(itsExternalPersonnel != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsExternalPersonnel");
             Network* p_Network = itsExternalPersonnel->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -343,6 +372,7 @@ void Network::cleanUpRelations() {
         }
     if(itsExternal_Personnel != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsExternal_Personnel");
             Network* p_Network = itsExternal_Personnel->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -352,6 +382,7 @@ void Network::cleanUpRelations() {
         }
     if(itsHVAC != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsHVAC");
             Network* p_Network = itsHVAC->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -361,6 +392,7 @@ void Network::cleanUpRelations() {
         }
     if(itsLights != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsLights");
             Network* p_Network = itsLights->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -370,6 +402,7 @@ void Network::cleanUpRelations() {
         }
     if(itsMicrophones != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsMicrophones");
             Network* p_Network = itsMicrophones->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -379,6 +412,7 @@ void Network::cleanUpRelations() {
         }
     if(itsMovement_Sensor != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsMovement_Sensor");
             Network* p_Network = itsMovement_Sensor->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -388,6 +422,7 @@ void Network::cleanUpRelations() {
         }
     if(itsOccupancy_Sensor != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsOccupancy_Sensor");
             Network* p_Network = itsOccupancy_Sensor->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -397,6 +432,7 @@ void Network::cleanUpRelations() {
         }
     if(itsRoom_Touch_Panel != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
             Network* p_Network = itsRoom_Touch_Panel->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -406,6 +442,7 @@ void Network::cleanUpRelations() {
         }
     if(itsSmart_Room != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsSmart_Room");
             Network* p_Network = itsSmart_Room->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -415,6 +452,7 @@ void Network::cleanUpRelations() {
         }
     if(itsSmart_Screen != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsSmart_Screen");
             Network* p_Network = itsSmart_Screen->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -424,6 +462,7 @@ void Network::cleanUpRelations() {
         }
     if(itsSpeakers != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsSpeakers");
             Network* p_Network = itsSpeakers->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -433,6 +472,7 @@ void Network::cleanUpRelations() {
         }
     if(itsUser != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsUser");
             Network* p_Network = itsUser->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -442,6 +482,7 @@ void Network::cleanUpRelations() {
         }
     if(itsWebcam != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsWebcam");
             Network* p_Network = itsWebcam->getItsNetwork();
             if(p_Network != NULL)
                 {
@@ -453,6 +494,14 @@ void Network::cleanUpRelations() {
 
 void Network::__setItsBooking_System(Booking_System* p_Booking_System) {
     itsBooking_System = p_Booking_System;
+    if(p_Booking_System != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsBooking_System", p_Booking_System, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsBooking_System");
+        }
 }
 
 void Network::_setItsBooking_System(Booking_System* p_Booking_System) {
@@ -464,11 +513,20 @@ void Network::_setItsBooking_System(Booking_System* p_Booking_System) {
 }
 
 void Network::_clearItsBooking_System() {
+    NOTIFY_RELATION_CLEARED("itsBooking_System");
     itsBooking_System = NULL;
 }
 
 void Network::__setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
     itsDoor_Touch_Panel = p_Door_Touch_Panel;
+    if(p_Door_Touch_Panel != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsDoor_Touch_Panel", p_Door_Touch_Panel, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsDoor_Touch_Panel");
+        }
 }
 
 void Network::_setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
@@ -480,11 +538,20 @@ void Network::_setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
 }
 
 void Network::_clearItsDoor_Touch_Panel() {
+    NOTIFY_RELATION_CLEARED("itsDoor_Touch_Panel");
     itsDoor_Touch_Panel = NULL;
 }
 
 void Network::__setItsExternalPersonnel(ExternalPersonnel* p_ExternalPersonnel) {
     itsExternalPersonnel = p_ExternalPersonnel;
+    if(p_ExternalPersonnel != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsExternalPersonnel", p_ExternalPersonnel, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsExternalPersonnel");
+        }
 }
 
 void Network::_setItsExternalPersonnel(ExternalPersonnel* p_ExternalPersonnel) {
@@ -496,11 +563,20 @@ void Network::_setItsExternalPersonnel(ExternalPersonnel* p_ExternalPersonnel) {
 }
 
 void Network::_clearItsExternalPersonnel() {
+    NOTIFY_RELATION_CLEARED("itsExternalPersonnel");
     itsExternalPersonnel = NULL;
 }
 
 void Network::__setItsExternal_Personnel(External_Personnel* p_External_Personnel) {
     itsExternal_Personnel = p_External_Personnel;
+    if(p_External_Personnel != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsExternal_Personnel", p_External_Personnel, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsExternal_Personnel");
+        }
 }
 
 void Network::_setItsExternal_Personnel(External_Personnel* p_External_Personnel) {
@@ -512,11 +588,20 @@ void Network::_setItsExternal_Personnel(External_Personnel* p_External_Personnel
 }
 
 void Network::_clearItsExternal_Personnel() {
+    NOTIFY_RELATION_CLEARED("itsExternal_Personnel");
     itsExternal_Personnel = NULL;
 }
 
 void Network::__setItsHVAC(HVAC* p_HVAC) {
     itsHVAC = p_HVAC;
+    if(p_HVAC != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsHVAC", p_HVAC, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsHVAC");
+        }
 }
 
 void Network::_setItsHVAC(HVAC* p_HVAC) {
@@ -528,11 +613,20 @@ void Network::_setItsHVAC(HVAC* p_HVAC) {
 }
 
 void Network::_clearItsHVAC() {
+    NOTIFY_RELATION_CLEARED("itsHVAC");
     itsHVAC = NULL;
 }
 
 void Network::__setItsLights(Lights* p_Lights) {
     itsLights = p_Lights;
+    if(p_Lights != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsLights", p_Lights, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsLights");
+        }
 }
 
 void Network::_setItsLights(Lights* p_Lights) {
@@ -544,11 +638,20 @@ void Network::_setItsLights(Lights* p_Lights) {
 }
 
 void Network::_clearItsLights() {
+    NOTIFY_RELATION_CLEARED("itsLights");
     itsLights = NULL;
 }
 
 void Network::__setItsMicrophones(Microphones* p_Microphones) {
     itsMicrophones = p_Microphones;
+    if(p_Microphones != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsMicrophones", p_Microphones, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsMicrophones");
+        }
 }
 
 void Network::_setItsMicrophones(Microphones* p_Microphones) {
@@ -560,11 +663,20 @@ void Network::_setItsMicrophones(Microphones* p_Microphones) {
 }
 
 void Network::_clearItsMicrophones() {
+    NOTIFY_RELATION_CLEARED("itsMicrophones");
     itsMicrophones = NULL;
 }
 
 void Network::__setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor) {
     itsMovement_Sensor = p_Movement_Sensor;
+    if(p_Movement_Sensor != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsMovement_Sensor", p_Movement_Sensor, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsMovement_Sensor");
+        }
 }
 
 void Network::_setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor) {
@@ -576,11 +688,20 @@ void Network::_setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor) {
 }
 
 void Network::_clearItsMovement_Sensor() {
+    NOTIFY_RELATION_CLEARED("itsMovement_Sensor");
     itsMovement_Sensor = NULL;
 }
 
 void Network::__setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor) {
     itsOccupancy_Sensor = p_Occupancy_Sensor;
+    if(p_Occupancy_Sensor != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsOccupancy_Sensor", p_Occupancy_Sensor, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsOccupancy_Sensor");
+        }
 }
 
 void Network::_setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor) {
@@ -592,11 +713,20 @@ void Network::_setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor) {
 }
 
 void Network::_clearItsOccupancy_Sensor() {
+    NOTIFY_RELATION_CLEARED("itsOccupancy_Sensor");
     itsOccupancy_Sensor = NULL;
 }
 
 void Network::__setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel) {
     itsRoom_Touch_Panel = p_Room_Touch_Panel;
+    if(p_Room_Touch_Panel != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsRoom_Touch_Panel", p_Room_Touch_Panel, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
+        }
 }
 
 void Network::_setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel) {
@@ -608,11 +738,20 @@ void Network::_setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel) {
 }
 
 void Network::_clearItsRoom_Touch_Panel() {
+    NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
     itsRoom_Touch_Panel = NULL;
 }
 
 void Network::__setItsSmart_Room(Smart_Room* p_Smart_Room) {
     itsSmart_Room = p_Smart_Room;
+    if(p_Smart_Room != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsSmart_Room", p_Smart_Room, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsSmart_Room");
+        }
 }
 
 void Network::_setItsSmart_Room(Smart_Room* p_Smart_Room) {
@@ -624,11 +763,20 @@ void Network::_setItsSmart_Room(Smart_Room* p_Smart_Room) {
 }
 
 void Network::_clearItsSmart_Room() {
+    NOTIFY_RELATION_CLEARED("itsSmart_Room");
     itsSmart_Room = NULL;
 }
 
 void Network::__setItsSmart_Screen(Smart_Screen* p_Smart_Screen) {
     itsSmart_Screen = p_Smart_Screen;
+    if(p_Smart_Screen != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsSmart_Screen", p_Smart_Screen, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsSmart_Screen");
+        }
 }
 
 void Network::_setItsSmart_Screen(Smart_Screen* p_Smart_Screen) {
@@ -640,11 +788,20 @@ void Network::_setItsSmart_Screen(Smart_Screen* p_Smart_Screen) {
 }
 
 void Network::_clearItsSmart_Screen() {
+    NOTIFY_RELATION_CLEARED("itsSmart_Screen");
     itsSmart_Screen = NULL;
 }
 
 void Network::__setItsSpeakers(Speakers* p_Speakers) {
     itsSpeakers = p_Speakers;
+    if(p_Speakers != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsSpeakers", p_Speakers, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsSpeakers");
+        }
 }
 
 void Network::_setItsSpeakers(Speakers* p_Speakers) {
@@ -656,11 +813,20 @@ void Network::_setItsSpeakers(Speakers* p_Speakers) {
 }
 
 void Network::_clearItsSpeakers() {
+    NOTIFY_RELATION_CLEARED("itsSpeakers");
     itsSpeakers = NULL;
 }
 
 void Network::__setItsUser(User* p_User) {
     itsUser = p_User;
+    if(p_User != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsUser", p_User, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsUser");
+        }
 }
 
 void Network::_setItsUser(User* p_User) {
@@ -672,11 +838,20 @@ void Network::_setItsUser(User* p_User) {
 }
 
 void Network::_clearItsUser() {
+    NOTIFY_RELATION_CLEARED("itsUser");
     itsUser = NULL;
 }
 
 void Network::__setItsWebcam(Webcam* p_Webcam) {
     itsWebcam = p_Webcam;
+    if(p_Webcam != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsWebcam", p_Webcam, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsWebcam");
+        }
 }
 
 void Network::_setItsWebcam(Webcam* p_Webcam) {
@@ -688,16 +863,35 @@ void Network::_setItsWebcam(Webcam* p_Webcam) {
 }
 
 void Network::_clearItsWebcam() {
+    NOTIFY_RELATION_CLEARED("itsWebcam");
     itsWebcam = NULL;
+}
+
+void Network::setActiveContext(IOxfActive* theActiveContext, bool activeInstance) {
+    OMReactive::setActiveContext(theActiveContext, activeInstance);
+    {
+        itsFire_Sensor.setActiveContext(theActiveContext, false);
+        itsCO2_Sensor.setActiveContext(theActiveContext, false);
+    }
+}
+
+void Network::destroy() {
+    itsCO2_Sensor.destroy();
+    itsFire_Sensor.destroy();
+    OMReactive::destroy();
 }
 
 void Network::rootState_entDef() {
     {
+        NOTIFY_STATE_ENTERED("ROOT");
+        NOTIFY_TRANSITION_STARTED("0");
+        NOTIFY_STATE_ENTERED("ROOT.CO2_Alarm_Off");
         rootState_subState = CO2_Alarm_Off;
         rootState_active = CO2_Alarm_Off;
         //#[ state CO2_Alarm_Off.(Entry) 
          Set_CO2_Alarm(false);
         //#]
+        NOTIFY_TRANSITION_TERMINATED("0");
     }
 }
 
@@ -709,14 +903,18 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
         {
             if(IS_EVENT_TYPE_OF(ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id))
                 {
+                    NOTIFY_TRANSITION_STARTED("1");
                     //#[ state CO2_Alarm_Off.(Exit) 
                     std::cout << " set co2 alarm to false \n";
                     //#]
+                    NOTIFY_STATE_EXITED("ROOT.CO2_Alarm_Off");
+                    NOTIFY_STATE_ENTERED("ROOT.CO2_Alarm_On");
                     rootState_subState = CO2_Alarm_On;
                     rootState_active = CO2_Alarm_On;
                     //#[ state CO2_Alarm_On.(Entry) 
                     Set_CO2_Alarm(true);
                     //#]
+                    NOTIFY_TRANSITION_TERMINATED("1");
                     res = eventConsumed;
                 }
             
@@ -727,14 +925,18 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
         {
             if(IS_EVENT_TYPE_OF(ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id))
                 {
+                    NOTIFY_TRANSITION_STARTED("2");
                     //#[ state CO2_Alarm_On.(Exit) 
                     std::cout << " set co2 alarm to true \n";
                     //#]
+                    NOTIFY_STATE_EXITED("ROOT.CO2_Alarm_On");
+                    NOTIFY_STATE_ENTERED("ROOT.CO2_Alarm_Off");
                     rootState_subState = CO2_Alarm_Off;
                     rootState_active = CO2_Alarm_Off;
                     //#[ state CO2_Alarm_Off.(Entry) 
                      Set_CO2_Alarm(false);
                     //#]
+                    NOTIFY_TRANSITION_TERMINATED("2");
                     res = eventConsumed;
                 }
             
@@ -745,6 +947,139 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
     }
     return res;
 }
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("Fire_Alarm_NetworkState", x2String(myReal->Fire_Alarm_NetworkState));
+    aomsAttributes->addAttribute("CO2_Alarm_NetworkState", x2String(myReal->CO2_Alarm_NetworkState));
+}
+
+void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
+    aomsRelations->addRelation("itsSmart_Room", false, true);
+    if(myReal->itsSmart_Room)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsSmart_Room);
+        }
+    aomsRelations->addRelation("itsHVAC", false, true);
+    if(myReal->itsHVAC)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsHVAC);
+        }
+    aomsRelations->addRelation("itsRoom_Touch_Panel", false, true);
+    if(myReal->itsRoom_Touch_Panel)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsRoom_Touch_Panel);
+        }
+    aomsRelations->addRelation("itsDoor_Touch_Panel", false, true);
+    if(myReal->itsDoor_Touch_Panel)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsDoor_Touch_Panel);
+        }
+    aomsRelations->addRelation("itsSmart_Screen", false, true);
+    if(myReal->itsSmart_Screen)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsSmart_Screen);
+        }
+    aomsRelations->addRelation("itsSpeakers", false, true);
+    if(myReal->itsSpeakers)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsSpeakers);
+        }
+    aomsRelations->addRelation("itsWebcam", false, true);
+    if(myReal->itsWebcam)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsWebcam);
+        }
+    aomsRelations->addRelation("itsMicrophones", false, true);
+    if(myReal->itsMicrophones)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsMicrophones);
+        }
+    aomsRelations->addRelation("itsLights", false, true);
+    if(myReal->itsLights)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsLights);
+        }
+    aomsRelations->addRelation("itsOccupancy_Sensor", false, true);
+    if(myReal->itsOccupancy_Sensor)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsOccupancy_Sensor);
+        }
+    aomsRelations->addRelation("itsMovement_Sensor", false, true);
+    if(myReal->itsMovement_Sensor)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsMovement_Sensor);
+        }
+    aomsRelations->addRelation("itsBooking_System", false, true);
+    if(myReal->itsBooking_System)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsBooking_System);
+        }
+    aomsRelations->addRelation("itsExternal_Personnel", false, true);
+    if(myReal->itsExternal_Personnel)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsExternal_Personnel);
+        }
+    aomsRelations->addRelation("itsExternalPersonnel", false, true);
+    if(myReal->itsExternalPersonnel)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsExternalPersonnel);
+        }
+    aomsRelations->addRelation("itsUser", false, true);
+    if(myReal->itsUser)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsUser);
+        }
+    aomsRelations->addRelation("itsFire_Sensor", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsFire_Sensor);
+    aomsRelations->addRelation("itsCO2_Sensor", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsCO2_Sensor);
+    aomsRelations->addRelation("itsLights_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsLights_1);
+    aomsRelations->addRelation("itsSmart_Screen_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsSmart_Screen_1);
+    aomsRelations->addRelation("itsSpeakers_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsSpeakers_1);
+    aomsRelations->addRelation("itsWebcam_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsWebcam_1);
+    aomsRelations->addRelation("itsMicrophones_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsMicrophones_1);
+    aomsRelations->addRelation("itsMovement_Sensor_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsMovement_Sensor_1);
+    aomsRelations->addRelation("itsOccupancy_Sensor_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsOccupancy_Sensor_1);
+}
+
+void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT");
+    switch (myReal->rootState_subState) {
+        case Network::CO2_Alarm_Off:
+        {
+            CO2_Alarm_Off_serializeStates(aomsState);
+        }
+        break;
+        case Network::CO2_Alarm_On:
+        {
+            CO2_Alarm_On_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::CO2_Alarm_On_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CO2_Alarm_On");
+}
+
+void OMAnimatedNetwork::CO2_Alarm_Off_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CO2_Alarm_Off");
+}
+//#]
+
+IMPLEMENT_REACTIVE_META_P(Network, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, false, OMAnimatedNetwork)
+#endif // _OMINSTRUMENT
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\Network.cpp

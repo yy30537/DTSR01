@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: User
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\User.h
 *********************************************************************/
 
@@ -15,6 +15,10 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## auto_generated
+#include <aom\aom.h>
+//## auto_generated
+#include "ActorPkg.h"
 //## link itsDoor_Touch_Panel
 class Door_Touch_Panel;
 
@@ -31,10 +35,16 @@ class Smart_Room;
 
 //## actor User
 class User {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedUser;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     User();
     
@@ -113,6 +123,20 @@ public :
     //## auto_generated
     void _clearItsRoom_Touch_Panel();
 };
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedUser : virtual public AOMInstance {
+    DECLARE_META(User, OMAnimatedUser)
+    
+    ////    Framework operations    ////
+    
+public :
+
+    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
+};
+//#]
+#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

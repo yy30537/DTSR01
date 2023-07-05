@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Occupancy_Sensor
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Occupancy_Sensor.h
 *********************************************************************/
 
@@ -15,6 +15,10 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## auto_generated
+#include <aom\aom.h>
+//## auto_generated
+#include "ArchitecturalAnalysisPkg.h"
 //## link itsHVAC
 class HVAC;
 
@@ -25,10 +29,16 @@ class Network;
 
 //## class Occupancy_Sensor
 class Occupancy_Sensor {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedOccupancy_Sensor;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     Occupancy_Sensor();
     
@@ -100,6 +110,22 @@ public :
     //## auto_generated
     void _clearItsNetwork();
 };
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedOccupancy_Sensor : virtual public AOMInstance {
+    DECLARE_META(Occupancy_Sensor, OMAnimatedOccupancy_Sensor)
+    
+    ////    Framework operations    ////
+    
+public :
+
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
+    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
+};
+//#]
+#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

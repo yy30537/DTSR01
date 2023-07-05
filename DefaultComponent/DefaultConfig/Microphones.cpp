@@ -1,25 +1,35 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Microphones
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Microphones.cpp
 *********************************************************************/
+
+//#[ ignore
+#define NAMESPACE_PREFIX
+//#]
 
 //## auto_generated
 #include "Microphones.h"
 //## link itsNetwork
 #include "Network.h"
+//#[ ignore
+#define ArchitecturalAnalysisPkg_Microphones_Microphones_SERIALIZE OM_NO_OP
+//#]
+
 //## package ArchitecturalAnalysisPkg
 
 //## class Microphones
 Microphones::Microphones() : isOn(0), volume(0) {
+    NOTIFY_CONSTRUCTOR(Microphones, Microphones(), 0, ArchitecturalAnalysisPkg_Microphones_Microphones_SERIALIZE);
     itsNetwork = NULL;
 }
 
 Microphones::~Microphones() {
+    NOTIFY_DESTRUCTOR(~Microphones, true);
     cleanUpRelations();
 }
 
@@ -54,6 +64,7 @@ void Microphones::setItsNetwork(Network* p_Network) {
 void Microphones::cleanUpRelations() {
     if(itsNetwork != NULL)
         {
+            NOTIFY_RELATION_CLEARED("itsNetwork");
             Microphones* p_Microphones = itsNetwork->getItsMicrophones();
             if(p_Microphones != NULL)
                 {
@@ -65,6 +76,14 @@ void Microphones::cleanUpRelations() {
 
 void Microphones::__setItsNetwork(Network* p_Network) {
     itsNetwork = p_Network;
+    if(p_Network != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsNetwork", p_Network, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsNetwork");
+        }
 }
 
 void Microphones::_setItsNetwork(Network* p_Network) {
@@ -76,8 +95,28 @@ void Microphones::_setItsNetwork(Network* p_Network) {
 }
 
 void Microphones::_clearItsNetwork() {
+    NOTIFY_RELATION_CLEARED("itsNetwork");
     itsNetwork = NULL;
 }
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+void OMAnimatedMicrophones::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("isOn", x2String(myReal->isOn));
+    aomsAttributes->addAttribute("volume", x2String(myReal->volume));
+}
+
+void OMAnimatedMicrophones::serializeRelations(AOMSRelations* aomsRelations) const {
+    aomsRelations->addRelation("itsNetwork", false, true);
+    if(myReal->itsNetwork)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsNetwork);
+        }
+}
+//#]
+
+IMPLEMENT_META_P(Microphones, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, false, OMAnimatedMicrophones)
+#endif // _OMINSTRUMENT
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\Microphones.cpp

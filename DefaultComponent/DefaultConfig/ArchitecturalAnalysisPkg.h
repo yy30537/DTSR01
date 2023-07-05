@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.h
 *********************************************************************/
 
@@ -15,6 +15,8 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## auto_generated
+#include <aom\aom.h>
 //## auto_generated
 #include <oxf\event.h>
 //## auto_generated
@@ -76,6 +78,8 @@ class Webcam;
 #define ev_Fire_Detected_ArchitecturalAnalysisPkg_id 18203
 
 #define ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id 18204
+
+#define above_CO2_threshold_ArchitecturalAnalysisPkg_id 18205
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -84,10 +88,16 @@ class Webcam;
 
 //## event ev_CO2_Level_OverThreshold()
 class ev_CO2_Level_OverThreshold : public OMEvent {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_CO2_Level_OverThreshold;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     ev_CO2_Level_OverThreshold();
     
@@ -97,12 +107,26 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_CO2_Level_OverThreshold : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_CO2_Level_OverThreshold)
+};
+//#]
+#endif // _OMINSTRUMENT
+
 //## event ev_CO2_Level_BelowThreshold()
 class ev_CO2_Level_BelowThreshold : public OMEvent {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_CO2_Level_BelowThreshold;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     ev_CO2_Level_BelowThreshold();
     
@@ -112,12 +136,26 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_CO2_Level_BelowThreshold : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_CO2_Level_BelowThreshold)
+};
+//#]
+#endif // _OMINSTRUMENT
+
 //## event ev_Fire_Detected()
 class ev_Fire_Detected : public OMEvent {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_Fire_Detected;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     ev_Fire_Detected();
     
@@ -127,12 +165,26 @@ public :
     virtual bool isTypeOf(const short id) const;
 };
 
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_Fire_Detected : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_Fire_Detected)
+};
+//#]
+#endif // _OMINSTRUMENT
+
 //## event ev_Fire_Distinguished()
 class ev_Fire_Distinguished : public OMEvent {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_Fire_Distinguished;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     ev_Fire_Distinguished();
     
@@ -141,6 +193,43 @@ public :
     //## statechart_method
     virtual bool isTypeOf(const short id) const;
 };
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_Fire_Distinguished : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_Fire_Distinguished)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event above_CO2_threshold()
+class above_CO2_threshold : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedabove_CO2_threshold;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    above_CO2_threshold();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedabove_CO2_threshold : virtual public AOMEvent {
+    DECLARE_META_EVENT(above_CO2_threshold)
+};
+//#]
+#endif // _OMINSTRUMENT
 
 #endif
 /*********************************************************************

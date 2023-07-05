@@ -1,12 +1,16 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp
 *********************************************************************/
+
+//#[ ignore
+#define NAMESPACE_PREFIX
+//#]
 
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
@@ -44,12 +48,53 @@
 #include "Weather_Forecast.h"
 //## auto_generated
 #include "Webcam.h"
+//#[ ignore
+#define ev_CO2_Level_OverThreshold_SERIALIZE OM_NO_OP
+
+#define ev_CO2_Level_OverThreshold_UNSERIALIZE OM_NO_OP
+
+#define ev_CO2_Level_OverThreshold_CONSTRUCTOR ev_CO2_Level_OverThreshold()
+
+#define ev_CO2_Level_BelowThreshold_SERIALIZE OM_NO_OP
+
+#define ev_CO2_Level_BelowThreshold_UNSERIALIZE OM_NO_OP
+
+#define ev_CO2_Level_BelowThreshold_CONSTRUCTOR ev_CO2_Level_BelowThreshold()
+
+#define ev_Fire_Detected_SERIALIZE OM_NO_OP
+
+#define ev_Fire_Detected_UNSERIALIZE OM_NO_OP
+
+#define ev_Fire_Detected_CONSTRUCTOR ev_Fire_Detected()
+
+#define ev_Fire_Distinguished_SERIALIZE OM_NO_OP
+
+#define ev_Fire_Distinguished_UNSERIALIZE OM_NO_OP
+
+#define ev_Fire_Distinguished_CONSTRUCTOR ev_Fire_Distinguished()
+
+#define above_CO2_threshold_SERIALIZE OM_NO_OP
+
+#define above_CO2_threshold_UNSERIALIZE OM_NO_OP
+
+#define above_CO2_threshold_CONSTRUCTOR above_CO2_threshold()
+//#]
+
 //## package ArchitecturalAnalysisPkg
 
 
+#ifdef _OMINSTRUMENT
+static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */);
+
+IMPLEMENT_META_PACKAGE(ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg)
+
+static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */) {
+}
+#endif // _OMINSTRUMENT
 
 //## event ev_CO2_Level_OverThreshold()
 ev_CO2_Level_OverThreshold::ev_CO2_Level_OverThreshold() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_Level_OverThreshold)
     setId(ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id);
 }
 
@@ -57,8 +102,11 @@ bool ev_CO2_Level_OverThreshold::isTypeOf(const short id) const {
     return (ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id==id);
 }
 
+IMPLEMENT_META_EVENT_P(ev_CO2_Level_OverThreshold, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_Level_OverThreshold())
+
 //## event ev_CO2_Level_BelowThreshold()
 ev_CO2_Level_BelowThreshold::ev_CO2_Level_BelowThreshold() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_Level_BelowThreshold)
     setId(ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id);
 }
 
@@ -66,8 +114,11 @@ bool ev_CO2_Level_BelowThreshold::isTypeOf(const short id) const {
     return (ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id==id);
 }
 
+IMPLEMENT_META_EVENT_P(ev_CO2_Level_BelowThreshold, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_Level_BelowThreshold())
+
 //## event ev_Fire_Detected()
 ev_Fire_Detected::ev_Fire_Detected() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Fire_Detected)
     setId(ev_Fire_Detected_ArchitecturalAnalysisPkg_id);
 }
 
@@ -75,14 +126,31 @@ bool ev_Fire_Detected::isTypeOf(const short id) const {
     return (ev_Fire_Detected_ArchitecturalAnalysisPkg_id==id);
 }
 
+IMPLEMENT_META_EVENT_P(ev_Fire_Detected, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Fire_Detected())
+
 //## event ev_Fire_Distinguished()
 ev_Fire_Distinguished::ev_Fire_Distinguished() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Fire_Distinguished)
     setId(ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id);
 }
 
 bool ev_Fire_Distinguished::isTypeOf(const short id) const {
     return (ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id==id);
 }
+
+IMPLEMENT_META_EVENT_P(ev_Fire_Distinguished, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Fire_Distinguished())
+
+//## event above_CO2_threshold()
+above_CO2_threshold::above_CO2_threshold() {
+    NOTIFY_EVENT_CONSTRUCTOR(above_CO2_threshold)
+    setId(above_CO2_threshold_ArchitecturalAnalysisPkg_id);
+}
+
+bool above_CO2_threshold::isTypeOf(const short id) const {
+    return (above_CO2_threshold_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(above_CO2_threshold, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, above_CO2_threshold())
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp

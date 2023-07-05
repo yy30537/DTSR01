@@ -8,15 +8,9 @@ LinkRelease=
 BuildSet=Debug
 SUBSYSTEM=/SUBSYSTEM:console
 RPFrameWorkDll=False
-SimulinkLibName=
-
-ConfigurationCPPCompileSwitches=   /I . /I . /I $(OMROOT)\LangCpp /I $(OMROOT)\LangCpp\oxf /nologo /W3 $(ENABLE_EH) $(CRT_FLAGS) $(CPPCompileDebug) /D "_AFXDLL" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "_WINDOWS" $(INST_FLAGS) $(INCLUDE_PATH) $(INST_INCLUDES) /c   
-
-SIMULINK_CONFIG=False
-!IF "$(SIMULINK_CONFIG)" == "True"
-ConfigurationCPPCompileSwitches=$(ConfigurationCPPCompileSwitches) /D "OM_WITH_CLEANUP"
-!ENDIF
-
+DEF_EXT=.def
+DLL_EXT=.dll
+ConfigurationCPPCompileSwitches=   /I . /I . /I $(OMROOT)\LangCpp /I $(OMROOT)\LangCpp\oxf /nologo /W3 $(ENABLE_EH) $(CRT_FLAGS) $(CPPCompileDebug) /D "_AFXDLL" /D "WIN32" /D "_CONSOLE" /D "_MBCS" /D "_WINDOWS" $(INST_FLAGS) $(INCLUDE_PATH) $(INST_INCLUDES) /c 
 
 !IF "$(RPFrameWorkDll)" == "True"
 ConfigurationCPPCompileSwitches=$(ConfigurationCPPCompileSwitches) /D "FRAMEWORK_DLL"
@@ -25,7 +19,7 @@ ConfigurationCPPCompileSwitches=$(ConfigurationCPPCompileSwitches) /D "FRAMEWORK
 ################### Compilation flags ######################
 ############################################################
 INCLUDE_QUALIFIER=/I
-DEFINE_QUALIFIER=/D
+LIB_PREFIX=MSVC15x86$(MT_PREFIX)
 
 !IF "False" == "True"
 MT_PREFIX=MT
@@ -35,9 +29,7 @@ MT_PREFIX=
 LIBCRT_FLAG=/MD
 !ENDIF
 
-LIB_PREFIX=MSVC15x86$(MT_PREFIX)
-
-CRT_FLAGS=$(DEFINE_QUALIFIER)_CRT_SECURE_NO_DEPRECATE $(DEFINE_QUALIFIER)_CRT_SECURE_NO_WARNINGS
+CRT_FLAGS=/D "_CRT_SECURE_NO_DEPRECATE" /D "_CRT_SECURE_NO_WARNINGS"
 ENABLE_EH=/EHa
 
 WINMM_LIB=winmm.lib
@@ -45,10 +37,10 @@ WINMM_LIB=winmm.lib
 ################### Commands definition #########################
 #################################################################
 RMDIR = rmdir
-LIB_CMD=link.exe -lib
+DLL_CMD=link.exe -dll
 LINK_CMD=link.exe
-LIB_FLAGS=$(LinkDebug)  /NOLOGO   
-LINK_FLAGS=$(LinkDebug)  /NOLOGO    $(SUBSYSTEM) /MACHINE:x86 
+DLL_FLAGS=$(LinkDebug) /NOLOGO   
+LINK_FLAGS=$(LinkDebug) /NOLOGO    $(SUBSYSTEM) /MACHINE:x86 
 
 ############### Generated macros #################
 ##################################################
@@ -63,9 +55,9 @@ CPP_EXT=.cpp
 H_EXT=.h
 OBJ_EXT=.obj
 EXE_EXT=.exe
-LIB_EXT=.lib
+LIB_EXT=.dll
 
-INSTRUMENTATION=None
+INSTRUMENTATION=Animation
 
 TIME_MODEL=RealTime
 
@@ -103,7 +95,10 @@ OBJS= \
   Weather_Forecast.obj \
   Webcam.obj \
   User.obj \
-  ExternalPersonnel.obj
+  ExternalPersonnel.obj \
+  UseCaseAnalysisPkg.obj \
+  ArchitecturalAnalysisPkg.obj \
+  ActorPkg.obj
 
 
 
@@ -117,12 +112,14 @@ CLEAN_OBJ_DIR= if exist $(OBJ_DIR) $(RMDIR) $(OBJ_DIR)
 CREATE_OBJ_DIR=
 CLEAN_OBJ_DIR=
 !ENDIF
-
 ######################## Predefined macros ############################
 #######################################################################
 !IF "$(OBJS)" != ""
-$(OBJS) : $(INST_LIBS) $(OXF_LIBS)
+$(OBJS) : $(FLAGSFILE) $(RULESFILE) $(INST_LIBS) $(OXF_LIBS)
 !ENDIF
+
+LIB_EXT=.lib
+
 
 LIB_POSTFIX=
 !IF "$(BuildSet)"=="Release"
@@ -133,19 +130,27 @@ LIB_POSTFIX=R
 LinkDebug=$(LinkDebug) /DEBUG
 LinkRelease=$(LinkRelease) /OPT:NOREF
 !ELSEIF "$(TARGET_TYPE)" == "Library"
-LinkDebug=$(LinkDebug)
+LinkDebug=$(LinkDebug) /DEBUG
+LinkRelease=$(LinkRelease) /OPT:NOREF
 !ENDIF
 
+!IF "$(TIME_MODEL)" == "Simulated"
+TIM_EXT=
+!ELSEIF "$(TIME_MODEL)" == "RealTime"
+TIM_EXT=
+!ELSE
+!ERROR An invalid Time Model "$(TIME_MODEL)" is specified.
+!ENDIF
 
 !IF "$(INSTRUMENTATION)" == "Animation"
 INST_FLAGS=/D "OMANIMATOR"
 INST_INCLUDES=/I $(OMROOT)\LangCpp\aom /I $(OMROOT)\LangCpp\tom
 !IF "$(RPFrameWorkDll)" == "True"
 INST_LIBS= 
-OXF_LIBS=$(OMROOT)\LangCpp\lib\$(LIB_PREFIX)oxfanimdll$(LIB_POSTFIX)$(LIB_EXT) 
+OXF_LIBS=$(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxfanimdll$(LIB_POSTFIX)$(LIB_EXT) 
 !ELSE
-INST_LIBS= $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)aomanim$(LIB_POSTFIX)$(LIB_EXT) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxsiminst$(LIB_POSTFIX)$(LIB_EXT)
-OXF_LIBS=$(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxfinst$(LIB_POSTFIX)$(LIB_EXT) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)omComAppl$(LIB_POSTFIX)$(LIB_EXT) $(SimulinkLibName)
+INST_LIBS= $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)aomanim$(LIB_POSTFIX)$(LIB_EXT)
+OXF_LIBS=$(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxf$(TIM_EXT)inst$(LIB_POSTFIX)$(LIB_EXT) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)omComAppl$(LIB_POSTFIX)$(LIB_EXT)
 !ENDIF
 SOCK_LIB=wsock32.lib
 
@@ -156,8 +161,8 @@ INST_INCLUDES=/I $(OMROOT)\LangCpp\aom /I $(OMROOT)\LangCpp\tom
 INST_LIBS=
 OXF_LIBS= $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxftracedll$(LIB_POSTFIX)$(LIB_EXT) 
 !ELSE
-INST_LIBS=$(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)tomtrace$(LIB_POSTFIX)$(LIB_EXT) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)aomtrace$(LIB_POSTFIX)$(LIB_EXT) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxsiminst$(LIB_POSTFIX)$(LIB_EXT)
-OXF_LIBS= $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxfinst$(LIB_POSTFIX)$(LIB_EXT) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)omComAppl$(LIB_POSTFIX)$(LIB_EXT) $(SimulinkLibName)
+INST_LIBS=$(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)tomtrace$(LIB_POSTFIX)$(LIB_EXT) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)aomtrace$(LIB_POSTFIX)$(LIB_EXT)
+OXF_LIBS= $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxf$(TIM_EXT)inst$(LIB_POSTFIX)$(LIB_EXT) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)omComAppl$(LIB_POSTFIX)$(LIB_EXT)
 !ENDIF
 SOCK_LIB=wsock32.lib
 
@@ -166,17 +171,15 @@ INST_FLAGS=
 INST_INCLUDES=
 INST_LIBS=
 !IF "$(RPFrameWorkDll)" == "True"
-OXF_LIBS=$(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxfdll$(LIB_POSTFIX)$(LIB_EXT) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxsim$(LIB_POSTFIX)$(LIB_EXT)
+OXF_LIBS=$(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxfdll$(LIB_POSTFIX)$(LIB_EXT)
 !ELSE
-OXF_LIBS=$(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxf$(LIB_POSTFIX)$(LIB_EXT) $(SimulinkLibName) $(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxsim$(LIB_POSTFIX)$(LIB_EXT)
+OXF_LIBS=$(FRAMEWORK_LIB_ROOT)\LangCpp\lib\$(LIB_PREFIX)oxf$(TIM_EXT)$(LIB_POSTFIX)$(LIB_EXT)
 !ENDIF
 SOCK_LIB=
 
 !ELSE
 !ERROR An invalid Instrumentation $(INSTRUMENTATION) is specified.
 !ENDIF
-
-
 
 ################## Generated dependencies ########################
 ##################################################################
@@ -186,128 +189,152 @@ SOCK_LIB=
 
 
 
-Smart_Room.obj : Smart_Room.cpp Smart_Room.h    Network.h 
+Smart_Room.obj : Smart_Room.cpp Smart_Room.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Smart_Room.obj" "Smart_Room.cpp" 
 
 
 
-Booking_System.obj : Booking_System.cpp Booking_System.h    Network.h Door_Touch_Panel.h 
+Booking_System.obj : Booking_System.cpp Booking_System.h    ArchitecturalAnalysisPkg.h Network.h Door_Touch_Panel.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Booking_System.obj" "Booking_System.cpp" 
 
 
 
-CO2_Sensor.obj : CO2_Sensor.cpp CO2_Sensor.h    Network.h HVAC.h 
+CO2_Sensor.obj : CO2_Sensor.cpp CO2_Sensor.h    ArchitecturalAnalysisPkg.h Network.h HVAC.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"CO2_Sensor.obj" "CO2_Sensor.cpp" 
 
 
 
-Door_Touch_Panel.obj : Door_Touch_Panel.cpp Door_Touch_Panel.h    Network.h Booking_System.h User.h ExternalPersonnel.h 
+Door_Touch_Panel.obj : Door_Touch_Panel.cpp Door_Touch_Panel.h    ArchitecturalAnalysisPkg.h Network.h Booking_System.h User.h ExternalPersonnel.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Door_Touch_Panel.obj" "Door_Touch_Panel.cpp" 
 
 
 
-External_Personnel.obj : External_Personnel.cpp External_Personnel.h    Network.h 
+External_Personnel.obj : External_Personnel.cpp External_Personnel.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"External_Personnel.obj" "External_Personnel.cpp" 
 
 
 
-Fire_Sensor.obj : Fire_Sensor.cpp Fire_Sensor.h    
+Fire_Sensor.obj : Fire_Sensor.cpp Fire_Sensor.h    ArchitecturalAnalysisPkg.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Fire_Sensor.obj" "Fire_Sensor.cpp" 
 
 
 
-HVAC.obj : HVAC.cpp HVAC.h    Network.h CO2_Sensor.h Occupancy_Sensor.h Movement_Sensor.h Room_Touch_Panel.h 
+HVAC.obj : HVAC.cpp HVAC.h    ArchitecturalAnalysisPkg.h Network.h CO2_Sensor.h Occupancy_Sensor.h Movement_Sensor.h Room_Touch_Panel.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"HVAC.obj" "HVAC.cpp" 
 
 
 
-Lights.obj : Lights.cpp Lights.h    Network.h 
+Lights.obj : Lights.cpp Lights.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Lights.obj" "Lights.cpp" 
 
 
 
-Microphones.obj : Microphones.cpp Microphones.h    Network.h 
+Microphones.obj : Microphones.cpp Microphones.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Microphones.obj" "Microphones.cpp" 
 
 
 
-Movement_Sensor.obj : Movement_Sensor.cpp Movement_Sensor.h    Network.h HVAC.h 
+Movement_Sensor.obj : Movement_Sensor.cpp Movement_Sensor.h    ArchitecturalAnalysisPkg.h Network.h HVAC.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Movement_Sensor.obj" "Movement_Sensor.cpp" 
 
 
 
-Network.obj : Network.cpp Network.h    Smart_Room.h HVAC.h Room_Touch_Panel.h Door_Touch_Panel.h Smart_Screen.h Speakers.h Webcam.h Microphones.h Lights.h Occupancy_Sensor.h Movement_Sensor.h Booking_System.h External_Personnel.h ExternalPersonnel.h User.h Fire_Sensor.h CO2_Sensor.h 
+Network.obj : Network.cpp Network.h    ArchitecturalAnalysisPkg.h Smart_Room.h HVAC.h Room_Touch_Panel.h Door_Touch_Panel.h Smart_Screen.h Speakers.h Webcam.h Microphones.h Lights.h Occupancy_Sensor.h Movement_Sensor.h Booking_System.h External_Personnel.h ExternalPersonnel.h User.h Fire_Sensor.h CO2_Sensor.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Network.obj" "Network.cpp" 
 
 
 
-Occupancy_Sensor.obj : Occupancy_Sensor.cpp Occupancy_Sensor.h    Network.h HVAC.h 
+Occupancy_Sensor.obj : Occupancy_Sensor.cpp Occupancy_Sensor.h    ArchitecturalAnalysisPkg.h Network.h HVAC.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Occupancy_Sensor.obj" "Occupancy_Sensor.cpp" 
 
 
 
-Room_Touch_Panel.obj : Room_Touch_Panel.cpp Room_Touch_Panel.h    Network.h HVAC.h ExternalPersonnel.h User.h 
+Room_Touch_Panel.obj : Room_Touch_Panel.cpp Room_Touch_Panel.h    ArchitecturalAnalysisPkg.h Network.h HVAC.h ExternalPersonnel.h User.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Room_Touch_Panel.obj" "Room_Touch_Panel.cpp" 
 
 
 
-Smart_Screen.obj : Smart_Screen.cpp Smart_Screen.h    Network.h 
+Smart_Screen.obj : Smart_Screen.cpp Smart_Screen.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Smart_Screen.obj" "Smart_Screen.cpp" 
 
 
 
-Speakers.obj : Speakers.cpp Speakers.h    Network.h 
+Speakers.obj : Speakers.cpp Speakers.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Speakers.obj" "Speakers.cpp" 
 
 
 
-Weather_Forecast.obj : Weather_Forecast.cpp Weather_Forecast.h    
+Weather_Forecast.obj : Weather_Forecast.cpp Weather_Forecast.h    ArchitecturalAnalysisPkg.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Weather_Forecast.obj" "Weather_Forecast.cpp" 
 
 
 
-Webcam.obj : Webcam.cpp Webcam.h    Network.h 
+Webcam.obj : Webcam.cpp Webcam.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Webcam.obj" "Webcam.cpp" 
 
 
 
-User.obj : User.cpp User.h    Smart_Room.h Door_Touch_Panel.h Room_Touch_Panel.h Network.h 
+User.obj : User.cpp User.h    ActorPkg.h Smart_Room.h Door_Touch_Panel.h Room_Touch_Panel.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"User.obj" "User.cpp" 
 
 
 
-ExternalPersonnel.obj : ExternalPersonnel.cpp ExternalPersonnel.h    Smart_Room.h Door_Touch_Panel.h Room_Touch_Panel.h Network.h 
+ExternalPersonnel.obj : ExternalPersonnel.cpp ExternalPersonnel.h    ActorPkg.h Smart_Room.h Door_Touch_Panel.h Room_Touch_Panel.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ExternalPersonnel.obj" "ExternalPersonnel.cpp" 
 
 
 
+UseCaseAnalysisPkg.obj : UseCaseAnalysisPkg.cpp UseCaseAnalysisPkg.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"UseCaseAnalysisPkg.obj" "UseCaseAnalysisPkg.cpp" 
 
 
 
-$(TARGET_MAIN)$(OBJ_EXT) : $(TARGET_MAIN)$(CPP_EXT) $(OBJS) 
+ArchitecturalAnalysisPkg.obj : ArchitecturalAnalysisPkg.cpp ArchitecturalAnalysisPkg.h    Smart_Room.h Booking_System.h CO2_Sensor.h Door_Touch_Panel.h External_Personnel.h Fire_Sensor.h HVAC.h Lights.h Microphones.h Movement_Sensor.h Network.h Occupancy_Sensor.h Room_Touch_Panel.h Smart_Screen.h Speakers.h Weather_Forecast.h Webcam.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ArchitecturalAnalysisPkg.obj" "ArchitecturalAnalysisPkg.cpp" 
+
+
+
+ActorPkg.obj : ActorPkg.cpp ActorPkg.h    
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ActorPkg.obj" "ActorPkg.cpp" 
+
+
+
+
+
+
+!IF "$(TARGET_MAIN)" != ""
+CLEAN_MAIN_OBJ=if exist $(TARGET_MAIN)$(OBJ_EXT) erase $(TARGET_MAIN)$(OBJ_EXT)
+$(TARGET_MAIN)$(OBJ_EXT) : $(TARGET_MAIN)$(CPP_EXT) $(OBJS) $(FLAGSFILE) $(RULESFILE)
 	$(CPP) $(ConfigurationCPPCompileSwitches) /Fo"$(TARGET_MAIN)$(OBJ_EXT)" $(TARGET_MAIN)$(CPP_EXT)
+!ELSE
+CLEAN_MAIN_OBJ=
+!ENDIF
 
 ########################## Linking instructions ###############################
 ###############################################################################
+!IF "$(TARGET_NAME)" != ""
 $(TARGET_NAME)$(EXE_EXT): $(OBJS) $(ADDITIONAL_OBJS) $(TARGET_MAIN)$(OBJ_EXT) DefaultComponent.mak 
 	@echo Linking $(TARGET_NAME)$(EXE_EXT)
 	$(LINK_CMD)  $(TARGET_MAIN)$(OBJ_EXT) $(OBJS) $(ADDITIONAL_OBJS) \
@@ -317,13 +344,20 @@ $(TARGET_NAME)$(EXE_EXT): $(OBJS) $(ADDITIONAL_OBJS) $(TARGET_MAIN)$(OBJ_EXT) De
 	$(SOCK_LIB) \
 	$(WINMM_LIB) \
 	$(LINK_FLAGS) /out:$(TARGET_NAME)$(EXE_EXT)
-	if exist $(TARGET_NAME)$(EXE_EXT).manifest mt.exe -manifest $@.manifest -outputresource:$(TARGET_NAME)$(EXE_EXT);1
+	if exist $(TARGET_NAME)$(EXE_EXT).manifest mt.exe -manifest $(TARGET_NAME)$(EXE_EXT).manifest -outputresource:$(TARGET_NAME)$(EXE_EXT);1
 
-
-
-$(TARGET_NAME)$(LIB_EXT) : $(OBJS) $(ADDITIONAL_OBJS) DefaultComponent.mak
+$(TARGET_NAME)$(DLL_EXT) : $(OBJS) $(ADDITIONAL_OBJS) DefaultComponent.mak
 	@echo Building library $@
-	$(LIB_CMD) $(LIB_FLAGS) /out:$(TARGET_NAME)$(LIB_EXT) $(OBJS) $(ADDITIONAL_OBJS) $(LIBS)
+	$(DLL_CMD) $(DLL_FLAGS) $(OBJS) $(ADDITIONAL_OBJS) \
+	$(LIBS) \
+	$(INST_LIBS) \
+	$(OXF_LIBS) \
+	$(SOCK_LIB) \
+	$(WINMM_LIB) \
+	/out:$(TARGET_NAME)$(DLL_EXT)
+	if exist $(TARGET_NAME)$(DLL_EXT).manifest mt.exe -manifest $(TARGET_NAME)$(DLL_EXT).manifest -outputresource:$(TARGET_NAME)$(DLL_EXT);2
+ 
+!ENDIF
 
 clean:
 	@echo Cleanup
@@ -346,12 +380,15 @@ clean:
 	if exist Webcam.obj erase Webcam.obj
 	if exist User.obj erase User.obj
 	if exist ExternalPersonnel.obj erase ExternalPersonnel.obj
-	if exist $(TARGET_MAIN)$(OBJ_EXT) erase $(TARGET_MAIN)$(OBJ_EXT)
+	if exist UseCaseAnalysisPkg.obj erase UseCaseAnalysisPkg.obj
+	if exist ArchitecturalAnalysisPkg.obj erase ArchitecturalAnalysisPkg.obj
+	if exist ActorPkg.obj erase ActorPkg.obj
+	$(CLEAN_MAIN_OBJ)
 	if exist *$(OBJ_EXT) erase *$(OBJ_EXT)
 	if exist $(TARGET_NAME).pdb erase $(TARGET_NAME).pdb
 	if exist $(TARGET_NAME)$(LIB_EXT) erase $(TARGET_NAME)$(LIB_EXT)
 	if exist $(TARGET_NAME).ilk erase $(TARGET_NAME).ilk
 	if exist $(TARGET_NAME)$(EXE_EXT) erase $(TARGET_NAME)$(EXE_EXT)
-	if exist $(TARGET_NAME)$(EXE_EXT).manifest erase $(TARGET_NAME)$(EXE_EXT).manifest
+	if exist $(TARGET_NAME)$(EXE_EXT).manifest erase $(TARGET_NAME)$(DLL_EXT).manifest
+	if exist $(TARGET_NAME)$(DLL_EXT).manifest erase $(TARGET_NAME)$(DLL_EXT).manifest
 	$(CLEAN_OBJ_DIR)
-	

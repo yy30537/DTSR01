@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Room_Touch_Panel
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Room_Touch_Panel.h
 *********************************************************************/
 
@@ -15,6 +15,12 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
+//## auto_generated
+#include <aom\aom.h>
+//## auto_generated
+#include "ArchitecturalAnalysisPkg.h"
+//## auto_generated
+#include <oxf\omthread.h>
 //## auto_generated
 #include <oxf\omreactive.h>
 //## auto_generated
@@ -51,10 +57,16 @@ class User;
 
 //## class Room_Touch_Panel
 class Room_Touch_Panel : public OMReactive {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedRoom_Touch_Panel;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     Room_Touch_Panel(IOxfActive* theActiveContext = 0);
     
@@ -167,6 +179,20 @@ public :
     //## auto_generated
     void _clearItsUser();
 };
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedRoom_Touch_Panel : virtual public AOMInstance {
+    DECLARE_META(Room_Touch_Panel, OMAnimatedRoom_Touch_Panel)
+    
+    ////    Framework operations    ////
+    
+public :
+
+    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
+};
+//#]
+#endif // _OMINSTRUMENT
 
 //#[ ignore
 class decreaseLightIntensity_Room_Touch_Panel_Event : public OMEvent {

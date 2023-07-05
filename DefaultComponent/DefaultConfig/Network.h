@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: 20181759
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Thu, 22, Jun 2023  
+//!	Generated Date	: Wed, 5, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.h
 *********************************************************************/
 
@@ -16,7 +16,11 @@
 //## auto_generated
 #include <..\Profiles\SysML\SIDefinitions.h>
 //## auto_generated
+#include <aom\aom.h>
+//## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
+//## auto_generated
+#include <oxf\omthread.h>
 //## auto_generated
 #include <oxf\omreactive.h>
 //## auto_generated
@@ -69,10 +73,16 @@ class User;
 
 //## class Network
 class Network : public OMReactive {
-    ////    Constructors and destructors    ////
+    ////    Friends    ////
     
 public :
 
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedNetwork;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
     //## auto_generated
     Network(IOxfActive* theActiveContext = 0);
     
@@ -424,6 +434,12 @@ public :
     //## auto_generated
     void _clearItsWebcam();
     
+    //## auto_generated
+    void setActiveContext(IOxfActive* theActiveContext, bool activeInstance);
+    
+    //## auto_generated
+    virtual void destroy();
+    
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
@@ -458,6 +474,31 @@ protected :
     int rootState_active;
 //#]
 };
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedNetwork : virtual public AOMInstance {
+    DECLARE_REACTIVE_META(Network, OMAnimatedNetwork)
+    
+    ////    Framework operations    ////
+    
+public :
+
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
+    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
+    
+    //## statechart_method
+    void rootState_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void CO2_Alarm_On_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void CO2_Alarm_Off_serializeStates(AOMSState* aomsState) const;
+};
+//#]
+#endif // _OMINSTRUMENT
 
 inline bool Network::rootState_IN() const {
     return true;
