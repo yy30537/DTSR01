@@ -53,6 +53,9 @@ Network::Network(IOxfActive* theActiveContext) : CO2_Alarm_NetworkState(false), 
         {
             itsCO2_Sensor.setShouldDelete(false);
         }
+        {
+            itsLights_1.setShouldDelete(false);
+        }
     }
     itsBooking_System = NULL;
     itsDoor_Touch_Panel = NULL;
@@ -330,6 +333,7 @@ bool Network::startBehavior() {
     bool done = true;
     done &= itsCO2_Sensor.startBehavior();
     done &= itsFire_Sensor.startBehavior();
+    done &= itsLights_1.startBehavior();
     done &= OMReactive::startBehavior();
     return done;
 }
@@ -872,12 +876,14 @@ void Network::setActiveContext(IOxfActive* theActiveContext, bool activeInstance
     {
         itsFire_Sensor.setActiveContext(theActiveContext, false);
         itsCO2_Sensor.setActiveContext(theActiveContext, false);
+        itsLights_1.setActiveContext(theActiveContext, false);
     }
 }
 
 void Network::destroy() {
     itsCO2_Sensor.destroy();
     itsFire_Sensor.destroy();
+    itsLights_1.destroy();
     OMReactive::destroy();
 }
 

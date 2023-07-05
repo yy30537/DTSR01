@@ -80,6 +80,14 @@ class Webcam;
 #define ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id 18204
 
 #define above_CO2_threshold_ArchitecturalAnalysisPkg_id 18205
+
+#define turn_Off_Lights_ArchitecturalAnalysisPkg_id 18206
+
+#define turn_On_Lights_ArchitecturalAnalysisPkg_id 18207
+
+#define Occupant_in_Room_ArchitecturalAnalysisPkg_id 18208
+
+#define No_Occupant_in_Room_ArchitecturalAnalysisPkg_id 18209
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -227,6 +235,122 @@ public :
 //#[ ignore
 class OMAnimatedabove_CO2_threshold : virtual public AOMEvent {
     DECLARE_META_EVENT(above_CO2_threshold)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event turn_Off_Lights()
+class turn_Off_Lights : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedturn_Off_Lights;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    turn_Off_Lights();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedturn_Off_Lights : virtual public AOMEvent {
+    DECLARE_META_EVENT(turn_Off_Lights)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event turn_On_Lights()
+class turn_On_Lights : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedturn_On_Lights;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    turn_On_Lights();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedturn_On_Lights : virtual public AOMEvent {
+    DECLARE_META_EVENT(turn_On_Lights)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event Occupant_in_Room()
+class Occupant_in_Room : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedOccupant_in_Room;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    Occupant_in_Room();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedOccupant_in_Room : virtual public AOMEvent {
+    DECLARE_META_EVENT(Occupant_in_Room)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event No_Occupant_in_Room()
+class No_Occupant_in_Room : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedNo_Occupant_in_Room;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    No_Occupant_in_Room();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedNo_Occupant_in_Room : virtual public AOMEvent {
+    DECLARE_META_EVENT(No_Occupant_in_Room)
 };
 //#]
 #endif // _OMINSTRUMENT

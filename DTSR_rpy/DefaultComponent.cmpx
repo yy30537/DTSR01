@@ -12,8 +12,8 @@
 			<_id type="a">GUID 6a7c9d67-6d07-4d1b-bfa6-f699da2cf796</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">DefaultComponent</_name>
-			<_modifiedTimeWeak type="a">7.5.2023::12:44:43</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.5.2023::13:1:5</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.5.2023::13:29:24</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.5.2023::13:29:24</_modifiedTime>
 			<m_buildType type="a">Executable</m_buildType>
 			<m_configActive type="r">
 				<ICodeGenConfigInfoHandle type="e">
@@ -171,7 +171,7 @@
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
 			</SelectedVariants>
-			<weakCGTime type="a">7.5.2023::12:44:43</weakCGTime>
+			<weakCGTime type="a">7.5.2023::13:29:24</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<AggregatesList type="e">
 				<value>GUID 2e81ab5c-3bc8-47fe-977e-8c1ddf2969a1</value>
@@ -227,8 +227,8 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">DefaultConfig</_name>
-			<_modifiedTimeWeak type="a">7.5.2023::13:1:4</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.5.2023::13:1:4</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.5.2023::13:29:24</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.5.2023::13:29:24</_modifiedTime>
 			<_scopeType type="a">Explicit</_scopeType>
 			<_instrumentation type="a">Animation</_instrumentation>
 			<_timeModel type="a">RealTime</_timeModel>
@@ -260,9 +260,18 @@
 							<_hid type="a">GUID 6945bed3-e21e-46ab-ad82-5adce337f085</_hid>
 						</IHandle>
 					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IClass</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hname type="a">Lights</_hname>
+							<_hid type="a">GUID e39f1c5b-0f82-4fb2-a066-041edd1568c0</_hid>
+						</IHandle>
+					
 				</IRPYRawContainer>
 			</InitialInstances>
-			<weakCGTime type="a">7.5.2023::13:1:4</weakCGTime>
+			<weakCGTime type="a">7.5.2023::13:29:24</weakCGTime>
 			<strongCGTime type="a">7.5.2023::12:48:28</strongCGTime>
 			<AnimScopeElements type="c">
 				<IRPYRawContainer type="e">

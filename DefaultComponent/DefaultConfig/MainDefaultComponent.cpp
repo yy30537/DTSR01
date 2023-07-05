@@ -14,21 +14,27 @@
 #include "CO2_Sensor.h"
 //## auto_generated
 #include "Fire_Sensor.h"
+//## auto_generated
+#include "Lights.h"
 int main(int argc, char* argv[]) {
     int status = 0;
     if(OXF::initialize(argc, argv, 6423))
         {
             CO2_Sensor * p_CO2_Sensor;
             Fire_Sensor * p_Fire_Sensor;
+            Lights * p_Lights;
             p_CO2_Sensor = new CO2_Sensor;
             p_CO2_Sensor->startBehavior();
             p_Fire_Sensor = new Fire_Sensor;
             p_Fire_Sensor->startBehavior();
+            p_Lights = new Lights;
+            p_Lights->startBehavior();
             //#[ configuration DefaultComponent::DefaultConfig 
             //#]
             OXF::start();
             delete p_CO2_Sensor;
             delete p_Fire_Sensor;
+            delete p_Lights;
             status = 0;
         }
     else
