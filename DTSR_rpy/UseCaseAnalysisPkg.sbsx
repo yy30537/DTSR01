@@ -12,10 +12,10 @@
 			<_id type="a">GUID a127c406-634c-4e60-9083-0e78541b5a6d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">UseCaseAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">7.8.2023::13:19:27</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.8.2023::13:47:59</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.8.2023::19:4:13</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.8.2023::19:7:8</_modifiedTime>
 			<_lastID type="a">69</_lastID>
-			<weakCGTime type="a">7.8.2023::13:19:27</weakCGTime>
+			<weakCGTime type="a">7.8.2023::19:4:13</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:20:48</strongCGTime>
 			<_defaultComposite type="s">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -490,8 +490,8 @@
 			</_properties>
 			<_name type="a">Room Touch Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.8.2023::13:24:20</_modifiedTime>
-			<_lastModifiedTime type="a">7.8.2023::13:24:20</_lastModifiedTime>
+			<_modifiedTime type="a">7.8.2023::19:4:13</_modifiedTime>
+			<_lastModifiedTime type="a">7.8.2023::19:4:13</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -2641,8 +2641,8 @@
 			</_properties>
 			<_name type="a">Door Touch Panel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.8.2023::13:24:20</_modifiedTime>
-			<_lastModifiedTime type="a">7.8.2023::13:24:20</_lastModifiedTime>
+			<_modifiedTime type="a">7.8.2023::19:4:13</_modifiedTime>
+			<_lastModifiedTime type="a">7.8.2023::19:4:13</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -15865,8 +15865,8 @@
 			</_properties>
 			<_name type="a">CO2 Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.8.2023::13:24:20</_modifiedTime>
-			<_lastModifiedTime type="a">7.8.2023::13:24:20</_lastModifiedTime>
+			<_modifiedTime type="a">7.8.2023::19:4:13</_modifiedTime>
+			<_lastModifiedTime type="a">7.8.2023::19:4:13</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -17205,8 +17205,8 @@
 			</_properties>
 			<_name type="a">Fire Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.8.2023::13:24:20</_modifiedTime>
-			<_lastModifiedTime type="a">7.8.2023::13:24:20</_lastModifiedTime>
+			<_modifiedTime type="a">7.8.2023::19:4:13</_modifiedTime>
+			<_lastModifiedTime type="a">7.8.2023::19:4:13</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -18579,8 +18579,8 @@
 			</_properties>
 			<_name type="a">Movement Detection sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.8.2023::13:24:20</_modifiedTime>
-			<_lastModifiedTime type="a">7.8.2023::13:24:20</_lastModifiedTime>
+			<_modifiedTime type="a">7.8.2023::19:4:13</_modifiedTime>
+			<_lastModifiedTime type="a">7.8.2023::19:4:13</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -19849,8 +19849,8 @@
 			</_properties>
 			<_name type="a">Occupancy Sensor</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.8.2023::13:24:20</_modifiedTime>
-			<_lastModifiedTime type="a">7.8.2023::13:24:20</_lastModifiedTime>
+			<_modifiedTime type="a">7.8.2023::19:4:13</_modifiedTime>
+			<_lastModifiedTime type="a">7.8.2023::19:4:13</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -20820,10 +20820,6 @@
 			<_id type="a">GUID 483cdb10-3720-4386-a928-ad5447e17660</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">UseCaseAnalysisPkg</_name>
-			<OwnedDependencies type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</OwnedDependencies>
 			<_modifiedTimeWeak type="a">7.8.2023::13:19:26</_modifiedTimeWeak>
 			<_modifiedTime type="a">7.8.2023::13:19:27</_modifiedTime>
 			<m_type type="a">specFile</m_type>
@@ -20848,10 +20844,6 @@
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 039eedf4-a744-4635-805f-f162c5e08043</_id>
@@ -20868,10 +20860,6 @@
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 1052d70d-9040-4d60-8f53-7f145c4bc88a</_id>
@@ -20888,19 +20876,11 @@
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFile type="e">
 			<_id type="a">GUID 72be4e37-5101-4f30-86ea-0d95bf500fe7</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">UseCaseAnalysisPkg</_name>
-			<OwnedDependencies type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</OwnedDependencies>
 			<_modifiedTimeWeak type="a">7.8.2023::13:19:26</_modifiedTimeWeak>
 			<_modifiedTime type="a">7.8.2023::13:19:27</_modifiedTime>
 			<m_type type="a">implFile</m_type>
@@ -20923,10 +20903,6 @@
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IClass type="e">
 			<_id type="a">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_id>
