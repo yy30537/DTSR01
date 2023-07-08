@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Room_Touch_Panel
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sat, 8, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Room_Touch_Panel.h
 *********************************************************************/
 
@@ -131,13 +131,9 @@ public :
 
 protected :
 
-    ExternalPersonnel* itsExternalPersonnel;		//## link itsExternalPersonnel
-    
     HVAC* itsHVAC;		//## link itsHVAC
     
     Network* itsNetwork;		//## link itsNetwork
-    
-    User* itsUser;		//## link itsUser
     
     ////    Framework operations    ////
 
@@ -178,6 +174,12 @@ public :
     
     //## auto_generated
     void _clearItsUser();
+
+protected :
+
+    ExternalPersonnel* itsExternalPersonnel;		//## link itsExternalPersonnel
+    
+    User* itsUser;		//## link itsUser
 };
 
 #ifdef _OMINSTRUMENT

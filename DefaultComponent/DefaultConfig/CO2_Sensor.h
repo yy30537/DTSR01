@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sat, 8, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\CO2_Sensor.h
 *********************************************************************/
 
@@ -107,6 +107,8 @@ public :
     //## auto_generated
     void _clearItsHVAC();
     
+    ////    Framework    ////
+    
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
@@ -124,8 +126,6 @@ public :
     // High_CO2_Level:
     //## statechart_method
     inline bool High_CO2_Level_IN() const;
-    
-    ////    Framework    ////
 
 protected :
 

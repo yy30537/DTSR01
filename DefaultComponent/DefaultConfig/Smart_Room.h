@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Smart_Room
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sat, 8, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Smart_Room.h
 *********************************************************************/
 

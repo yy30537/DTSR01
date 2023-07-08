@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sat, 8, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.h
 *********************************************************************/
 
@@ -253,8 +253,6 @@ protected :
     
     Door_Touch_Panel* itsDoor_Touch_Panel;		//## link itsDoor_Touch_Panel
     
-    ExternalPersonnel* itsExternalPersonnel;		//## link itsExternalPersonnel
-    
     External_Personnel* itsExternal_Personnel;		//## link itsExternal_Personnel
     
     Fire_Sensor itsFire_Sensor;		//## classInstance itsFire_Sensor
@@ -288,8 +286,6 @@ protected :
     Speakers* itsSpeakers;		//## link itsSpeakers
     
     Speakers itsSpeakers_1;		//## classInstance itsSpeakers_1
-    
-    User* itsUser;		//## link itsUser
     
     Webcam* itsWebcam;		//## link itsWebcam
     
@@ -440,6 +436,16 @@ public :
     //## auto_generated
     virtual void destroy();
     
+    ////    Framework    ////
+
+protected :
+
+    ExternalPersonnel* itsExternalPersonnel;		//## link itsExternalPersonnel
+    
+    User* itsUser;		//## link itsUser
+
+public :
+
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
@@ -457,8 +463,6 @@ public :
     // CO2_Alarm_Off:
     //## statechart_method
     inline bool CO2_Alarm_Off_IN() const;
-    
-    ////    Framework    ////
 
 protected :
 

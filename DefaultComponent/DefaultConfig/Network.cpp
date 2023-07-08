@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sat, 8, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.cpp
 *********************************************************************/
 
@@ -22,14 +22,14 @@
 #include "Door_Touch_Panel.h"
 //## link itsExternal_Personnel
 #include "External_Personnel.h"
-//## link itsExternalPersonnel
-#include "ExternalPersonnel.h"
 //## link itsHVAC
 #include "HVAC.h"
 //## link itsRoom_Touch_Panel
 #include "Room_Touch_Panel.h"
 //## link itsSmart_Room
 #include "Smart_Room.h"
+//## link itsExternalPersonnel
+#include "ExternalPersonnel.h"
 //## link itsUser
 #include "User.h"
 //#[ ignore
@@ -962,6 +962,24 @@ void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) cons
 }
 
 void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
+    aomsRelations->addRelation("itsFire_Sensor", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsFire_Sensor);
+    aomsRelations->addRelation("itsCO2_Sensor", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsCO2_Sensor);
+    aomsRelations->addRelation("itsLights_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsLights_1);
+    aomsRelations->addRelation("itsSmart_Screen_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsSmart_Screen_1);
+    aomsRelations->addRelation("itsSpeakers_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsSpeakers_1);
+    aomsRelations->addRelation("itsWebcam_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsWebcam_1);
+    aomsRelations->addRelation("itsMicrophones_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsMicrophones_1);
+    aomsRelations->addRelation("itsMovement_Sensor_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsMovement_Sensor_1);
+    aomsRelations->addRelation("itsOccupancy_Sensor_1", true, true);
+    aomsRelations->ADD_ITEM(&myReal->itsOccupancy_Sensor_1);
     aomsRelations->addRelation("itsSmart_Room", false, true);
     if(myReal->itsSmart_Room)
         {
@@ -1037,24 +1055,6 @@ void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
         {
             aomsRelations->ADD_ITEM(myReal->itsUser);
         }
-    aomsRelations->addRelation("itsFire_Sensor", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsFire_Sensor);
-    aomsRelations->addRelation("itsCO2_Sensor", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsCO2_Sensor);
-    aomsRelations->addRelation("itsLights_1", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsLights_1);
-    aomsRelations->addRelation("itsSmart_Screen_1", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsSmart_Screen_1);
-    aomsRelations->addRelation("itsSpeakers_1", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsSpeakers_1);
-    aomsRelations->addRelation("itsWebcam_1", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsWebcam_1);
-    aomsRelations->addRelation("itsMicrophones_1", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsMicrophones_1);
-    aomsRelations->addRelation("itsMovement_Sensor_1", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsMovement_Sensor_1);
-    aomsRelations->addRelation("itsOccupancy_Sensor_1", true, true);
-    aomsRelations->ADD_ITEM(&myReal->itsOccupancy_Sensor_1);
 }
 
 void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {

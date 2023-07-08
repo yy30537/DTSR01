@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Fire_Sensor
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sat, 8, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Fire_Sensor.h
 *********************************************************************/
 
@@ -68,6 +68,8 @@ protected :
     bool isFire;		//## attribute isFire
     
     ////    Framework operations    ////
+    
+    ////    Framework    ////
 
 public :
 
@@ -88,8 +90,6 @@ public :
     // Emergency:
     //## statechart_method
     inline bool Emergency_IN() const;
-    
-    ////    Framework    ////
 
 protected :
 

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: User
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sat, 8, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\User.h
 *********************************************************************/
 
@@ -45,13 +45,17 @@ public :
 
     ////    Constructors and destructors    ////
     
+    ////    Additional operations    ////
+    
+    ////    Relations and components    ////
+    
+    ////    Framework operations    ////
+    
     //## auto_generated
     User();
     
     //## auto_generated
     ~User();
-    
-    ////    Additional operations    ////
     
     //## auto_generated
     Door_Touch_Panel* getItsDoor_Touch_Panel() const;
@@ -82,8 +86,6 @@ protected :
     //## auto_generated
     void cleanUpRelations();
     
-    ////    Relations and components    ////
-    
     Door_Touch_Panel* itsDoor_Touch_Panel;		//## link itsDoor_Touch_Panel
     
     Network* itsNetwork;		//## link itsNetwork
@@ -91,8 +93,6 @@ protected :
     Room_Touch_Panel* itsRoom_Touch_Panel;		//## link itsRoom_Touch_Panel
     
     Smart_Room* itsSmart_Room;		//## link itsSmart_Room
-    
-    ////    Framework operations    ////
 
 public :
 

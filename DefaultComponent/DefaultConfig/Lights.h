@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Lights
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sat, 8, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Lights.h
 *********************************************************************/
 
@@ -100,6 +100,8 @@ public :
     //## auto_generated
     void _clearItsNetwork();
     
+    ////    Framework    ////
+    
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
@@ -117,8 +119,6 @@ public :
     // LightsOn:
     //## statechart_method
     inline bool LightsOn_IN() const;
-    
-    ////    Framework    ////
 
 protected :
 
