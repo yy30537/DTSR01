@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: User
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sun, 9, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\User.cpp
 *********************************************************************/
 
@@ -16,8 +16,6 @@
 #include "User.h"
 //## link itsDoor_Touch_Panel
 #include "Door_Touch_Panel.h"
-//## link itsNetwork
-#include "Network.h"
 //## link itsRoom_Touch_Panel
 #include "Room_Touch_Panel.h"
 //## link itsSmart_Room
@@ -32,7 +30,6 @@
 User::User() {
     NOTIFY_CONSTRUCTOR(User, User(), 0, ActorPkg_User_User_SERIALIZE);
     itsDoor_Touch_Panel = NULL;
-    itsNetwork = NULL;
     itsRoom_Touch_Panel = NULL;
     itsSmart_Room = NULL;
 }
@@ -47,23 +44,15 @@ Door_Touch_Panel* User::getItsDoor_Touch_Panel() const {
 }
 
 void User::setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
+    itsDoor_Touch_Panel = p_Door_Touch_Panel;
     if(p_Door_Touch_Panel != NULL)
         {
-            p_Door_Touch_Panel->_setItsUser(this);
+            NOTIFY_RELATION_ITEM_ADDED("itsDoor_Touch_Panel", p_Door_Touch_Panel, false, true);
         }
-    _setItsDoor_Touch_Panel(p_Door_Touch_Panel);
-}
-
-Network* User::getItsNetwork() const {
-    return itsNetwork;
-}
-
-void User::setItsNetwork(Network* p_Network) {
-    if(p_Network != NULL)
+    else
         {
-            p_Network->_setItsUser(this);
+            NOTIFY_RELATION_CLEARED("itsDoor_Touch_Panel");
         }
-    _setItsNetwork(p_Network);
 }
 
 Room_Touch_Panel* User::getItsRoom_Touch_Panel() const {
@@ -71,11 +60,15 @@ Room_Touch_Panel* User::getItsRoom_Touch_Panel() const {
 }
 
 void User::setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel) {
+    itsRoom_Touch_Panel = p_Room_Touch_Panel;
     if(p_Room_Touch_Panel != NULL)
         {
-            p_Room_Touch_Panel->_setItsUser(this);
+            NOTIFY_RELATION_ITEM_ADDED("itsRoom_Touch_Panel", p_Room_Touch_Panel, false, true);
         }
-    _setItsRoom_Touch_Panel(p_Room_Touch_Panel);
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
+        }
 }
 
 Smart_Room* User::getItsSmart_Room() const {
@@ -98,31 +91,11 @@ void User::cleanUpRelations() {
     if(itsDoor_Touch_Panel != NULL)
         {
             NOTIFY_RELATION_CLEARED("itsDoor_Touch_Panel");
-            User* p_User = itsDoor_Touch_Panel->getItsUser();
-            if(p_User != NULL)
-                {
-                    itsDoor_Touch_Panel->__setItsUser(NULL);
-                }
             itsDoor_Touch_Panel = NULL;
-        }
-    if(itsNetwork != NULL)
-        {
-            NOTIFY_RELATION_CLEARED("itsNetwork");
-            User* p_User = itsNetwork->getItsUser();
-            if(p_User != NULL)
-                {
-                    itsNetwork->__setItsUser(NULL);
-                }
-            itsNetwork = NULL;
         }
     if(itsRoom_Touch_Panel != NULL)
         {
             NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
-            User* p_User = itsRoom_Touch_Panel->getItsUser();
-            if(p_User != NULL)
-                {
-                    itsRoom_Touch_Panel->__setItsUser(NULL);
-                }
             itsRoom_Touch_Panel = NULL;
         }
     if(itsSmart_Room != NULL)
@@ -130,81 +103,6 @@ void User::cleanUpRelations() {
             NOTIFY_RELATION_CLEARED("itsSmart_Room");
             itsSmart_Room = NULL;
         }
-}
-
-void User::__setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
-    itsDoor_Touch_Panel = p_Door_Touch_Panel;
-    if(p_Door_Touch_Panel != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsDoor_Touch_Panel", p_Door_Touch_Panel, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsDoor_Touch_Panel");
-        }
-}
-
-void User::_setItsDoor_Touch_Panel(Door_Touch_Panel* p_Door_Touch_Panel) {
-    if(itsDoor_Touch_Panel != NULL)
-        {
-            itsDoor_Touch_Panel->__setItsUser(NULL);
-        }
-    __setItsDoor_Touch_Panel(p_Door_Touch_Panel);
-}
-
-void User::_clearItsDoor_Touch_Panel() {
-    NOTIFY_RELATION_CLEARED("itsDoor_Touch_Panel");
-    itsDoor_Touch_Panel = NULL;
-}
-
-void User::__setItsNetwork(Network* p_Network) {
-    itsNetwork = p_Network;
-    if(p_Network != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsNetwork", p_Network, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsNetwork");
-        }
-}
-
-void User::_setItsNetwork(Network* p_Network) {
-    if(itsNetwork != NULL)
-        {
-            itsNetwork->__setItsUser(NULL);
-        }
-    __setItsNetwork(p_Network);
-}
-
-void User::_clearItsNetwork() {
-    NOTIFY_RELATION_CLEARED("itsNetwork");
-    itsNetwork = NULL;
-}
-
-void User::__setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel) {
-    itsRoom_Touch_Panel = p_Room_Touch_Panel;
-    if(p_Room_Touch_Panel != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsRoom_Touch_Panel", p_Room_Touch_Panel, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
-        }
-}
-
-void User::_setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel) {
-    if(itsRoom_Touch_Panel != NULL)
-        {
-            itsRoom_Touch_Panel->__setItsUser(NULL);
-        }
-    __setItsRoom_Touch_Panel(p_Room_Touch_Panel);
-}
-
-void User::_clearItsRoom_Touch_Panel() {
-    NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
-    itsRoom_Touch_Panel = NULL;
 }
 
 #ifdef _OMINSTRUMENT
@@ -224,11 +122,6 @@ void OMAnimatedUser::serializeRelations(AOMSRelations* aomsRelations) const {
     if(myReal->itsRoom_Touch_Panel)
         {
             aomsRelations->ADD_ITEM(myReal->itsRoom_Touch_Panel);
-        }
-    aomsRelations->addRelation("itsNetwork", false, true);
-    if(myReal->itsNetwork)
-        {
-            aomsRelations->ADD_ITEM(myReal->itsNetwork);
         }
 }
 //#]

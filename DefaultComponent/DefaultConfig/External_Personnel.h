@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: External_Personnel
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sun, 9, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\External_Personnel.h
 *********************************************************************/
 
@@ -19,9 +19,6 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
-//## link itsNetwork
-class Network;
-
 //## package ArchitecturalAnalysisPkg
 
 //## class External_Personnel
@@ -41,48 +38,12 @@ public :
     
     //## auto_generated
     ~External_Personnel();
-    
-    ////    Additional operations    ////
-    
-    //## auto_generated
-    Network* getItsNetwork() const;
-    
-    //## auto_generated
-    void setItsNetwork(Network* p_Network);
-
-protected :
-
-    //## auto_generated
-    void cleanUpRelations();
-    
-    ////    Relations and components    ////
-    
-    Network* itsNetwork;		//## link itsNetwork
-    
-    ////    Framework operations    ////
-
-public :
-
-    //## auto_generated
-    void __setItsNetwork(Network* p_Network);
-    
-    //## auto_generated
-    void _setItsNetwork(Network* p_Network);
-    
-    //## auto_generated
-    void _clearItsNetwork();
 };
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
 class OMAnimatedExternal_Personnel : virtual public AOMInstance {
     DECLARE_META(External_Personnel, OMAnimatedExternal_Personnel)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
 };
 //#]
 #endif // _OMINSTRUMENT

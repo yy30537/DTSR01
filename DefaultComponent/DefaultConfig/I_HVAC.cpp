@@ -1,0 +1,42 @@
+/********************************************************************
+	Rhapsody	: 9.0 
+	Login		: Yang
+	Component	: DefaultComponent 
+	Configuration 	: DefaultConfig
+	Model Element	: I_HVAC
+//!	Generated Date	: Sun, 9, Jul 2023  
+	File Path	: DefaultComponent\DefaultConfig\I_HVAC.cpp
+*********************************************************************/
+
+//#[ ignore
+#define NAMESPACE_PREFIX
+//#]
+
+//## auto_generated
+#include "I_HVAC.h"
+//#[ ignore
+#define ArchitecturalAnalysisPkg_I_HVAC_I_HVAC_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_HVAC_getTemp_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_HVAC_setTemp_SERIALIZE aomsmethod->addAttribute("arg_temp", x2String(arg_temp));
+//#]
+
+//## package ArchitecturalAnalysisPkg
+
+//## class I_HVAC
+I_HVAC::I_HVAC() {
+    NOTIFY_CONSTRUCTOR(I_HVAC, I_HVAC(), 0, ArchitecturalAnalysisPkg_I_HVAC_I_HVAC_SERIALIZE);
+}
+
+I_HVAC::~I_HVAC() {
+    NOTIFY_DESTRUCTOR(~I_HVAC, true);
+}
+
+#ifdef _OMINSTRUMENT
+IMPLEMENT_META_P(I_HVAC, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, false, OMAnimatedI_HVAC)
+#endif // _OMINSTRUMENT
+
+/*********************************************************************
+	File Path	: DefaultComponent\DefaultConfig\I_HVAC.cpp
+*********************************************************************/

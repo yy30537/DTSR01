@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Smart_Room
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sun, 9, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Smart_Room.h
 *********************************************************************/
 
@@ -19,13 +19,20 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
-//## link itsNetwork
-class Network;
-
+//## auto_generated
+#include <oxf\omthread.h>
+//## auto_generated
+#include <oxf\omreactive.h>
+//## auto_generated
+#include <oxf\state.h>
+//## auto_generated
+#include <oxf\event.h>
+//## classInstance itsNetwork
+#include "Network.h"
 //## package ArchitecturalAnalysisPkg
 
 //## class Smart_Room
-class Smart_Room {
+class Smart_Room : public OMReactive {
     ////    Friends    ////
     
 public :
@@ -37,7 +44,7 @@ public :
     ////    Constructors and destructors    ////
     
     //## auto_generated
-    Smart_Room();
+    Smart_Room(IOxfActive* theActiveContext = 0);
     
     //## auto_generated
     ~Smart_Room();
@@ -48,29 +55,23 @@ public :
     Network* getItsNetwork() const;
     
     //## auto_generated
-    void setItsNetwork(Network* p_Network);
+    virtual bool startBehavior();
+    
+    ////    Relations and components    ////
 
 protected :
 
-    //## auto_generated
-    void cleanUpRelations();
-    
-    ////    Relations and components    ////
-    
-    Network* itsNetwork;		//## link itsNetwork
+    Network itsNetwork;		//## classInstance itsNetwork
     
     ////    Framework operations    ////
 
 public :
 
     //## auto_generated
-    void __setItsNetwork(Network* p_Network);
+    void setActiveContext(IOxfActive* theActiveContext, bool activeInstance);
     
     //## auto_generated
-    void _setItsNetwork(Network* p_Network);
-    
-    //## auto_generated
-    void _clearItsNetwork();
+    virtual void destroy();
 };
 
 #ifdef _OMINSTRUMENT

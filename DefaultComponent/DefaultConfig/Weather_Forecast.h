@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Weather_Forecast
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sun, 9, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Weather_Forecast.h
 *********************************************************************/
 
@@ -38,32 +38,12 @@ public :
     
     //## auto_generated
     ~Weather_Forecast();
-    
-    ////    Additional operations    ////
-    
-    //## auto_generated
-    int getOutdoorTemperature() const;
-    
-    //## auto_generated
-    void setOutdoorTemperature(int p_outdoorTemperature);
-    
-    ////    Attributes    ////
-
-protected :
-
-    int outdoorTemperature;		//## attribute outdoorTemperature
 };
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
 class OMAnimatedWeather_Forecast : virtual public AOMInstance {
     DECLARE_META(Weather_Forecast, OMAnimatedWeather_Forecast)
-    
-    ////    Framework operations    ////
-    
-public :
-
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
 };
 //#]
 #endif // _OMINSTRUMENT

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Wed, 5, Jul 2023  
+//!	Generated Date	: Sun, 9, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\MainDefaultComponent.h
 *********************************************************************/
 
@@ -17,6 +17,14 @@
 #include <..\Profiles\SysML\SIDefinitions.h>
 //## auto_generated
 #include <aom\aom.h>
+class DefaultComponent {
+    ////    Constructors and destructors    ////
+    
+public :
+
+    DefaultComponent();
+};
+
 #endif
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\MainDefaultComponent.h
