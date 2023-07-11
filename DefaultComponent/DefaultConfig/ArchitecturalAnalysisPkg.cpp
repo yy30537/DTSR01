@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Sun, 9, Jul 2023  
+//!	Generated Date	: Tue, 11, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp
 *********************************************************************/
 
@@ -56,6 +56,56 @@
 #include "Weather_Forecast.h"
 //## auto_generated
 #include "Webcam.h"
+//#[ ignore
+#define ev_AC_SwitchOn_SERIALIZE OM_NO_OP
+
+#define ev_AC_SwitchOn_UNSERIALIZE OM_NO_OP
+
+#define ev_AC_SwitchOn_CONSTRUCTOR ev_AC_SwitchOn()
+
+#define ev_AC_SwitchOff_SERIALIZE OM_NO_OP
+
+#define ev_AC_SwitchOff_UNSERIALIZE OM_NO_OP
+
+#define ev_AC_SwitchOff_CONSTRUCTOR ev_AC_SwitchOff()
+
+#define ev_Heating_SwitchOn_SERIALIZE OM_NO_OP
+
+#define ev_Heating_SwitchOn_UNSERIALIZE OM_NO_OP
+
+#define ev_Heating_SwitchOn_CONSTRUCTOR ev_Heating_SwitchOn()
+
+#define ev_Heating_SwitchOff_SERIALIZE OM_NO_OP
+
+#define ev_Heating_SwitchOff_UNSERIALIZE OM_NO_OP
+
+#define ev_Heating_SwitchOff_CONSTRUCTOR ev_Heating_SwitchOff()
+
+#define ev_Vent_SwitchOn_SERIALIZE OM_NO_OP
+
+#define ev_Vent_SwitchOn_UNSERIALIZE OM_NO_OP
+
+#define ev_Vent_SwitchOn_CONSTRUCTOR ev_Vent_SwitchOn()
+
+#define ev_Vent_SwitchOff_SERIALIZE OM_NO_OP
+
+#define ev_Vent_SwitchOff_UNSERIALIZE OM_NO_OP
+
+#define ev_Vent_SwitchOff_CONSTRUCTOR ev_Vent_SwitchOff()
+
+#define ev_HVAC_SwitchOff_SERIALIZE OM_NO_OP
+
+#define ev_HVAC_SwitchOff_UNSERIALIZE OM_NO_OP
+
+#define ev_HVAC_SwitchOff_CONSTRUCTOR ev_HVAC_SwitchOff()
+
+#define ev_HVAC_SwitchOn_SERIALIZE OM_NO_OP
+
+#define ev_HVAC_SwitchOn_UNSERIALIZE OM_NO_OP
+
+#define ev_HVAC_SwitchOn_CONSTRUCTOR ev_HVAC_SwitchOn()
+//#]
+
 //## package ArchitecturalAnalysisPkg
 
 
@@ -115,6 +165,102 @@ ArchitecturalAnalysisPkg_OMInitializer::ArchitecturalAnalysisPkg_OMInitializer()
 ArchitecturalAnalysisPkg_OMInitializer::~ArchitecturalAnalysisPkg_OMInitializer() {
 }
 //#]
+
+//## event ev_AC_SwitchOn()
+ev_AC_SwitchOn::ev_AC_SwitchOn() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_AC_SwitchOn)
+    setId(ev_AC_SwitchOn_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_AC_SwitchOn::isTypeOf(const short id) const {
+    return (ev_AC_SwitchOn_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_AC_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_AC_SwitchOn())
+
+//## event ev_AC_SwitchOff()
+ev_AC_SwitchOff::ev_AC_SwitchOff() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_AC_SwitchOff)
+    setId(ev_AC_SwitchOff_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_AC_SwitchOff::isTypeOf(const short id) const {
+    return (ev_AC_SwitchOff_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_AC_SwitchOff, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_AC_SwitchOff())
+
+//## event ev_Heating_SwitchOn()
+ev_Heating_SwitchOn::ev_Heating_SwitchOn() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Heating_SwitchOn)
+    setId(ev_Heating_SwitchOn_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Heating_SwitchOn::isTypeOf(const short id) const {
+    return (ev_Heating_SwitchOn_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_Heating_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Heating_SwitchOn())
+
+//## event ev_Heating_SwitchOff()
+ev_Heating_SwitchOff::ev_Heating_SwitchOff() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Heating_SwitchOff)
+    setId(ev_Heating_SwitchOff_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Heating_SwitchOff::isTypeOf(const short id) const {
+    return (ev_Heating_SwitchOff_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_Heating_SwitchOff, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Heating_SwitchOff())
+
+//## event ev_Vent_SwitchOn()
+ev_Vent_SwitchOn::ev_Vent_SwitchOn() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Vent_SwitchOn)
+    setId(ev_Vent_SwitchOn_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Vent_SwitchOn::isTypeOf(const short id) const {
+    return (ev_Vent_SwitchOn_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_Vent_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Vent_SwitchOn())
+
+//## event ev_Vent_SwitchOff()
+ev_Vent_SwitchOff::ev_Vent_SwitchOff() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Vent_SwitchOff)
+    setId(ev_Vent_SwitchOff_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Vent_SwitchOff::isTypeOf(const short id) const {
+    return (ev_Vent_SwitchOff_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_Vent_SwitchOff, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Vent_SwitchOff())
+
+//## event ev_HVAC_SwitchOff()
+ev_HVAC_SwitchOff::ev_HVAC_SwitchOff() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_HVAC_SwitchOff)
+    setId(ev_HVAC_SwitchOff_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_HVAC_SwitchOff::isTypeOf(const short id) const {
+    return (ev_HVAC_SwitchOff_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_HVAC_SwitchOff, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_HVAC_SwitchOff())
+
+//## event ev_HVAC_SwitchOn()
+ev_HVAC_SwitchOn::ev_HVAC_SwitchOn() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_HVAC_SwitchOn)
+    setId(ev_HVAC_SwitchOn_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_HVAC_SwitchOn::isTypeOf(const short id) const {
+    return (ev_HVAC_SwitchOn_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_HVAC_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_HVAC_SwitchOn())
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp

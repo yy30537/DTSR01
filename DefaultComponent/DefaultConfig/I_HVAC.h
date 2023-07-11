@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_HVAC
-//!	Generated Date	: Sun, 9, Jul 2023  
+//!	Generated Date	: Tue, 11, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_HVAC.h
 *********************************************************************/
 
@@ -44,8 +44,32 @@ public :
     //## operation getTemp()
     virtual int getTemp() = 0;
     
+    //## operation get_AC_state()
+    virtual bool get_AC_state() = 0;
+    
+    //## operation get_HVAC_state()
+    virtual bool get_HVAC_state() = 0;
+    
+    //## operation get_Heating_state()
+    virtual bool get_Heating_state() = 0;
+    
+    //## operation get_Vent_state()
+    virtual bool get_Vent_state() = 0;
+    
     //## operation setTemp(int)
     virtual void setTemp(int arg_temp) = 0;
+    
+    //## operation set_AC_state(bool)
+    virtual void set_AC_state(bool arg_AC_state) = 0;
+    
+    //## operation set_HVAC_state(bool)
+    virtual void set_HVAC_state(bool arg_HVAC_state) = 0;
+    
+    //## operation set_Heating_state(bool)
+    virtual void set_Heating_state(bool arg_Heating_state) = 0;
+    
+    //## operation set_Vent_state(bool)
+    virtual void set_Vent_state(bool arg_Vent_state) = 0;
 };
 
 #ifdef _OMINSTRUMENT

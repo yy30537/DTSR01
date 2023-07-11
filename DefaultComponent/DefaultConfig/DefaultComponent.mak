@@ -235,7 +235,7 @@ HVAC.obj : HVAC.cpp HVAC.h    ArchitecturalAnalysisPkg.h Network.h I_HVAC.h
 
 
 
-Lights.obj : Lights.cpp Lights.h    ArchitecturalAnalysisPkg.h 
+Lights.obj : Lights.cpp Lights.h    ArchitecturalAnalysisPkg.h Network.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Lights.obj" "Lights.cpp" 
 
@@ -289,7 +289,7 @@ Webcam.obj : Webcam.cpp Webcam.h    ArchitecturalAnalysisPkg.h
 
 
 
-Network.obj : Network.cpp Network.h    ArchitecturalAnalysisPkg.h HVAC.h I_HVAC.h 
+Network.obj : Network.cpp Network.h    ArchitecturalAnalysisPkg.h HVAC.h Lights.h I_HVAC.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Network.obj" "Network.cpp" 
 

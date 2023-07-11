@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Lights
-//!	Generated Date	: Sun, 9, Jul 2023  
+//!	Generated Date	: Tue, 11, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Lights.h
 *********************************************************************/
 

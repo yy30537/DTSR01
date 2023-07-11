@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: HVAC
-//!	Generated Date	: Sun, 9, Jul 2023  
+//!	Generated Date	: Tue, 11, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\HVAC.h
 *********************************************************************/
 
@@ -55,7 +55,31 @@ public :
         virtual int getTemp();
         
         //## auto_generated
+        virtual bool get_AC_state();
+        
+        //## auto_generated
+        virtual bool get_HVAC_state();
+        
+        //## auto_generated
+        virtual bool get_Heating_state();
+        
+        //## auto_generated
+        virtual bool get_Vent_state();
+        
+        //## auto_generated
         virtual void setTemp(int arg_temp);
+        
+        //## auto_generated
+        virtual void set_AC_state(bool arg_AC_state);
+        
+        //## auto_generated
+        virtual void set_HVAC_state(bool arg_HVAC_state);
+        
+        //## auto_generated
+        virtual void set_Heating_state(bool arg_Heating_state);
+        
+        //## auto_generated
+        virtual void set_Vent_state(bool arg_Vent_state);
         
         ////    Additional operations    ////
         
@@ -96,8 +120,32 @@ public :
     //## operation getTemp()
     virtual int getTemp();
     
+    //## operation get_AC_state()
+    virtual bool get_AC_state();
+    
+    //## operation get_HVAC_state()
+    virtual bool get_HVAC_state();
+    
+    //## operation get_Heating_state()
+    virtual bool get_Heating_state();
+    
+    //## operation get_Vent_state()
+    virtual bool get_Vent_state();
+    
     //## operation setTemp(int)
     virtual void setTemp(int arg_temp);
+    
+    //## operation set_AC_state(bool)
+    virtual void set_AC_state(bool arg_AC_state);
+    
+    //## operation set_HVAC_state(bool)
+    virtual void set_HVAC_state(bool arg_HVAC_state);
+    
+    //## operation set_Heating_state(bool)
+    virtual void set_Heating_state(bool arg_Heating_state);
+    
+    //## operation set_Vent_state(bool)
+    virtual void set_Vent_state(bool arg_Vent_state);
     
     ////    Additional operations    ////
     
@@ -112,6 +160,12 @@ public :
     
     //## auto_generated
     void setStatus_AC(bool p_status_AC);
+    
+    //## auto_generated
+    bool getStatus_HVAC() const;
+    
+    //## auto_generated
+    void setStatus_HVAC(bool p_status_HVAC);
     
     //## auto_generated
     bool getStatus_Heating() const;
@@ -148,6 +202,8 @@ protected :
     ////    Attributes    ////
     
     bool status_AC;		//## attribute status_AC
+    
+    bool status_HVAC;		//## attribute status_HVAC
     
     bool status_Heating;		//## attribute status_Heating
     
