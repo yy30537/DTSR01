@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Sun, 9, Jul 2023  
+//!	Generated Date	: Wed, 12, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\MainDefaultComponent.cpp
 *********************************************************************/
 
@@ -19,8 +19,6 @@
 //## auto_generated
 #include "CO2_Sensor.h"
 //## auto_generated
-#include "Fire_Sensor.h"
-//## auto_generated
 #include "Lights.h"
 DefaultComponent::DefaultComponent() {
     ArchitecturalAnalysisPkg_initRelations();
@@ -32,17 +30,14 @@ int main(int argc, char* argv[]) {
     if(OXF::initialize(argc, argv, 6423))
         {
             CO2_Sensor * p_CO2_Sensor;
-            Fire_Sensor * p_Fire_Sensor;
             Lights * p_Lights;
             DefaultComponent initializer_DefaultComponent;
             p_CO2_Sensor = new CO2_Sensor;
-            p_Fire_Sensor = new Fire_Sensor;
             p_Lights = new Lights;
             //#[ configuration DefaultComponent::DefaultConfig 
             //#]
             OXF::start();
             delete p_CO2_Sensor;
-            delete p_Fire_Sensor;
             delete p_Lights;
             status = 0;
         }

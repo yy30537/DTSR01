@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Wed, 12, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp
 *********************************************************************/
 
@@ -14,6 +14,8 @@
 
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
+//## classInstance itsCO2_Sensor
+#include "CO2_Sensor.h"
 //## classInstance itsHVAC
 #include "HVAC.h"
 //## classInstance itsNetwork
@@ -23,15 +25,13 @@
 //## auto_generated
 #include "Booking_System.h"
 //## auto_generated
-#include "CO2_Sensor.h"
-//## auto_generated
 #include "Door_Touch_Panel.h"
 //## auto_generated
 #include "External_Personnel.h"
 //## auto_generated
-#include "Fire_Sensor.h"
-//## auto_generated
 #include "Heating.h"
+//## auto_generated
+#include "I_CO2.h"
 //## auto_generated
 #include "I_HVAC.h"
 //## auto_generated
@@ -104,10 +104,19 @@
 #define ev_HVAC_SwitchOn_UNSERIALIZE OM_NO_OP
 
 #define ev_HVAC_SwitchOn_CONSTRUCTOR ev_HVAC_SwitchOn()
+
+#define ev_CO2_Trigger_SERIALIZE OM_NO_OP
+
+#define ev_CO2_Trigger_UNSERIALIZE OM_NO_OP
+
+#define ev_CO2_Trigger_CONSTRUCTOR ev_CO2_Trigger()
 //#]
 
 //## package ArchitecturalAnalysisPkg
 
+
+//## classInstance itsCO2_Sensor
+CO2_Sensor itsCO2_Sensor;
 
 //## classInstance itsHVAC
 HVAC itsHVAC;
@@ -134,6 +143,11 @@ void ArchitecturalAnalysisPkg_initRelations() {
         itsNetwork.get_pNetwork()->setItsI_HVAC(itsHVAC.get_pHVAC()->getItsI_HVAC());
         
     }
+    {
+        
+        itsNetwork.get_pNetwork()->setItsI_CO2(itsCO2_Sensor.get_pCO2()->getItsI_CO2());
+        
+    }
     
     #ifdef _OMINSTRUMENT
     RenameGlobalInstances();
@@ -151,8 +165,9 @@ static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */) {
 }
 
 static void RenameGlobalInstances() {
-    OM_SET_INSTANCE_NAME(&itsHVAC, HVAC, "itsHVAC", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsCO2_Sensor, CO2_Sensor, "itsCO2_Sensor", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsNetwork, Network, "itsNetwork", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsHVAC, HVAC, "itsHVAC", AOMNoMultiplicity);
 }
 #endif // _OMINSTRUMENT
 
@@ -261,6 +276,18 @@ bool ev_HVAC_SwitchOn::isTypeOf(const short id) const {
 }
 
 IMPLEMENT_META_EVENT_P(ev_HVAC_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_HVAC_SwitchOn())
+
+//## event ev_CO2_Trigger()
+ev_CO2_Trigger::ev_CO2_Trigger() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_Trigger)
+    setId(ev_CO2_Trigger_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_CO2_Trigger::isTypeOf(const short id) const {
+    return (ev_CO2_Trigger_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_CO2_Trigger, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_Trigger())
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Wed, 12, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.h
 *********************************************************************/
 
@@ -28,12 +28,14 @@
 //## auto_generated
 #include <oxf\event.h>
 //## class pNetwork_C
+#include "I_CO2.h"
+//## class pNetwork_C
 #include "I_HVAC.h"
+//## link itsCO2_Sensor
+class CO2_Sensor;
+
 //## link itsHVAC
 class HVAC;
-
-//## link itsLights
-class Lights;
 
 //## package ArchitecturalAnalysisPkg
 
@@ -43,7 +45,7 @@ public :
 
 //#[ ignore
     //## package ArchitecturalAnalysisPkg
-    class pNetwork_C : public I_HVAC {
+    class pNetwork_C : public I_HVAC, public I_CO2 {
         ////    Constructors and destructors    ////
         
     public :
@@ -57,16 +59,22 @@ public :
         ////    Operations    ////
         
         //## auto_generated
+        I_CO2* getItsI_CO2();
+        
+        //## auto_generated
         I_HVAC* getItsI_HVAC();
         
         //## auto_generated
-        I_HVAC* getOutBound();
+        Network::pNetwork_C* getOutBound();
         
         //## auto_generated
         virtual int getTemp();
         
         //## auto_generated
         virtual bool get_AC_state();
+        
+        //## auto_generated
+        virtual bool get_CO2_Alarm();
         
         //## auto_generated
         virtual bool get_HVAC_state();
@@ -84,6 +92,9 @@ public :
         virtual void set_AC_state(bool arg_AC_state);
         
         //## auto_generated
+        virtual void set_CO2_Alarm(bool arg_CO2_state);
+        
+        //## auto_generated
         virtual void set_HVAC_state(bool arg_HVAC_state);
         
         //## auto_generated
@@ -93,6 +104,9 @@ public :
         virtual void set_Vent_state(bool arg_Vent_state);
         
         ////    Additional operations    ////
+        
+        //## auto_generated
+        void setItsI_CO2(I_CO2* p_I_CO2);
         
         //## auto_generated
         void setItsI_HVAC(I_HVAC* p_I_HVAC);
@@ -107,6 +121,8 @@ public :
         int _p_;		//## attribute _p_
         
         ////    Relations and components    ////
+        
+        I_CO2* itsI_CO2;		//## link itsI_CO2
         
         I_HVAC* itsI_HVAC;		//## link itsI_HVAC
     };
@@ -135,22 +151,16 @@ public :
     pNetwork_C* get_pNetwork() const;
     
     //## auto_generated
-    int getTemp_Network() const;
+    CO2_Sensor* getItsCO2_Sensor() const;
     
     //## auto_generated
-    void setTemp_Network(int p_temp_Network);
+    void setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
     
     //## auto_generated
     HVAC* getItsHVAC() const;
     
     //## auto_generated
     void setItsHVAC(HVAC* p_HVAC);
-    
-    //## auto_generated
-    Lights* getItsLights() const;
-    
-    //## auto_generated
-    void setItsLights(Lights* p_Lights);
     
     //## auto_generated
     virtual bool startBehavior();
@@ -163,9 +173,11 @@ protected :
     //## auto_generated
     void cleanUpRelations();
     
-    ////    Attributes    ////
+    //## auto_generated
+    void cancelTimeouts();
     
-    int temp_Network;		//## attribute temp_Network
+    //## auto_generated
+    bool cancelTimeout(const IOxfTimeout* arg);
     
     ////    Relations and components    ////
     
@@ -173,14 +185,23 @@ protected :
     pNetwork_C pNetwork;
 //#]
 
-    HVAC* itsHVAC;		//## link itsHVAC
+    CO2_Sensor* itsCO2_Sensor;		//## link itsCO2_Sensor
     
-    Lights* itsLights;		//## link itsLights
+    HVAC* itsHVAC;		//## link itsHVAC
     
     ////    Framework operations    ////
 
 public :
 
+    //## auto_generated
+    void __setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
+    
+    //## auto_generated
+    void _setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
+    
+    //## auto_generated
+    void _clearItsCO2_Sensor();
+    
     //## auto_generated
     void __setItsHVAC(HVAC* p_HVAC);
     
@@ -311,6 +332,8 @@ protected :
     
     int state_12_active;
     
+    IOxfTimeout* state_12_timeout;
+    
     int state_11_subState;
     
     int state_11_active;
@@ -330,8 +353,6 @@ class OMAnimatedNetwork : virtual public AOMInstance {
     
 public :
 
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-    
     virtual void serializeRelations(AOMSRelations* aomsRelations) const;
     
     //## statechart_method

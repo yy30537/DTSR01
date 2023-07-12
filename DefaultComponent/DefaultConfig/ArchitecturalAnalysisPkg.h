@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Wed, 12, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.h
 *********************************************************************/
 
@@ -25,7 +25,7 @@ class AC;
 //## auto_generated
 class Booking_System;
 
-//## auto_generated
+//## classInstance itsCO2_Sensor
 class CO2_Sensor;
 
 //## auto_generated
@@ -34,14 +34,14 @@ class Door_Touch_Panel;
 //## auto_generated
 class External_Personnel;
 
-//## auto_generated
-class Fire_Sensor;
-
 //## classInstance itsHVAC
 class HVAC;
 
 //## auto_generated
 class Heating;
+
+//## auto_generated
+class I_CO2;
 
 //## auto_generated
 class I_HVAC;
@@ -98,10 +98,15 @@ class Webcam;
 #define ev_HVAC_SwitchOff_ArchitecturalAnalysisPkg_id 18207
 
 #define ev_HVAC_SwitchOn_ArchitecturalAnalysisPkg_id 18208
+
+#define ev_CO2_Trigger_ArchitecturalAnalysisPkg_id 18209
 //#]
 
 //## package ArchitecturalAnalysisPkg
 
+
+//## classInstance itsCO2_Sensor
+extern CO2_Sensor itsCO2_Sensor;
 
 //## classInstance itsHVAC
 extern HVAC itsHVAC;
@@ -357,6 +362,35 @@ public :
 //#[ ignore
 class OMAnimatedev_HVAC_SwitchOn : virtual public AOMEvent {
     DECLARE_META_EVENT(ev_HVAC_SwitchOn)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_CO2_Trigger()
+class ev_CO2_Trigger : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_CO2_Trigger;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_CO2_Trigger();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_CO2_Trigger : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_CO2_Trigger)
 };
 //#]
 #endif // _OMINSTRUMENT

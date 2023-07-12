@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Wed, 12, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.cpp
 *********************************************************************/
 
@@ -16,10 +16,10 @@
 
 //## auto_generated
 #include "Network.h"
+//## link itsCO2_Sensor
+#include "CO2_Sensor.h"
 //## link itsHVAC
 #include "HVAC.h"
-//## link itsLights
-#include "Lights.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Network_Network_SERIALIZE OM_NO_OP
 //#]
@@ -29,6 +29,7 @@
 //## class Network
 //#[ ignore
 Network::pNetwork_C::pNetwork_C() : _p_(0) {
+    itsI_CO2 = NULL;
     itsI_HVAC = NULL;
 }
 
@@ -36,11 +37,15 @@ Network::pNetwork_C::~pNetwork_C() {
     cleanUpRelations();
 }
 
+I_CO2* Network::pNetwork_C::getItsI_CO2() {
+    return this;
+}
+
 I_HVAC* Network::pNetwork_C::getItsI_HVAC() {
     return this;
 }
 
-I_HVAC* Network::pNetwork_C::getOutBound() {
+Network::pNetwork_C* Network::pNetwork_C::getOutBound() {
     return this;
 }
 
@@ -56,6 +61,14 @@ bool Network::pNetwork_C::get_AC_state() {
     bool res = false;
     if (itsI_HVAC != NULL) {
         res = itsI_HVAC->get_AC_state();
+    }
+    return res;
+}
+
+bool Network::pNetwork_C::get_CO2_Alarm() {
+    bool res = false;
+    if (itsI_CO2 != NULL) {
+        res = itsI_CO2->get_CO2_Alarm();
     }
     return res;
 }
@@ -100,6 +113,14 @@ void Network::pNetwork_C::set_AC_state(bool arg_AC_state) {
     
 }
 
+void Network::pNetwork_C::set_CO2_Alarm(bool arg_CO2_state) {
+    
+    if (itsI_CO2 != NULL) {
+        itsI_CO2->set_CO2_Alarm(arg_CO2_state);
+    }
+    
+}
+
 void Network::pNetwork_C::set_HVAC_state(bool arg_HVAC_state) {
     
     if (itsI_HVAC != NULL) {
@@ -124,11 +145,19 @@ void Network::pNetwork_C::set_Vent_state(bool arg_Vent_state) {
     
 }
 
+void Network::pNetwork_C::setItsI_CO2(I_CO2* p_I_CO2) {
+    itsI_CO2 = p_I_CO2;
+}
+
 void Network::pNetwork_C::setItsI_HVAC(I_HVAC* p_I_HVAC) {
     itsI_HVAC = p_I_HVAC;
 }
 
 void Network::pNetwork_C::cleanUpRelations() {
+    if(itsI_CO2 != NULL)
+        {
+            itsI_CO2 = NULL;
+        }
     if(itsI_HVAC != NULL)
         {
             itsI_HVAC = NULL;
@@ -136,17 +165,18 @@ void Network::pNetwork_C::cleanUpRelations() {
 }
 //#]
 
-Network::Network(IOxfActive* theActiveContext) : temp_Network(26) {
+Network::Network(IOxfActive* theActiveContext) {
     NOTIFY_REACTIVE_CONSTRUCTOR(Network, Network(), 0, ArchitecturalAnalysisPkg_Network_Network_SERIALIZE);
     setActiveContext(theActiveContext, false);
+    itsCO2_Sensor = NULL;
     itsHVAC = NULL;
-    itsLights = NULL;
     initStatechart();
 }
 
 Network::~Network() {
     NOTIFY_DESTRUCTOR(~Network, true);
     cleanUpRelations();
+    cancelTimeouts();
 }
 
 Network::pNetwork_C* Network::getPNetwork() const {
@@ -157,12 +187,16 @@ Network::pNetwork_C* Network::get_pNetwork() const {
     return (Network::pNetwork_C*) &pNetwork;
 }
 
-int Network::getTemp_Network() const {
-    return temp_Network;
+CO2_Sensor* Network::getItsCO2_Sensor() const {
+    return itsCO2_Sensor;
 }
 
-void Network::setTemp_Network(int p_temp_Network) {
-    temp_Network = p_temp_Network;
+void Network::setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
+    if(p_CO2_Sensor != NULL)
+        {
+            p_CO2_Sensor->_setItsNetwork(this);
+        }
+    _setItsCO2_Sensor(p_CO2_Sensor);
 }
 
 HVAC* Network::getItsHVAC() const {
@@ -177,22 +211,6 @@ void Network::setItsHVAC(HVAC* p_HVAC) {
     _setItsHVAC(p_HVAC);
 }
 
-Lights* Network::getItsLights() const {
-    return itsLights;
-}
-
-void Network::setItsLights(Lights* p_Lights) {
-    itsLights = p_Lights;
-    if(p_Lights != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsLights", p_Lights, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsLights");
-        }
-}
-
 bool Network::startBehavior() {
     bool done = false;
     done = OMReactive::startBehavior();
@@ -204,6 +222,7 @@ void Network::initStatechart() {
     rootState_active = OMNonState;
     state_12_subState = OMNonState;
     state_12_active = OMNonState;
+    state_12_timeout = NULL;
     state_11_subState = OMNonState;
     state_11_active = OMNonState;
     state_10_subState = OMNonState;
@@ -211,6 +230,16 @@ void Network::initStatechart() {
 }
 
 void Network::cleanUpRelations() {
+    if(itsCO2_Sensor != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsCO2_Sensor");
+            Network* p_Network = itsCO2_Sensor->getItsNetwork();
+            if(p_Network != NULL)
+                {
+                    itsCO2_Sensor->__setItsNetwork(NULL);
+                }
+            itsCO2_Sensor = NULL;
+        }
     if(itsHVAC != NULL)
         {
             NOTIFY_RELATION_CLEARED("itsHVAC");
@@ -221,11 +250,45 @@ void Network::cleanUpRelations() {
                 }
             itsHVAC = NULL;
         }
-    if(itsLights != NULL)
+}
+
+void Network::cancelTimeouts() {
+    cancel(state_12_timeout);
+}
+
+bool Network::cancelTimeout(const IOxfTimeout* arg) {
+    bool res = false;
+    if(state_12_timeout == arg)
         {
-            NOTIFY_RELATION_CLEARED("itsLights");
-            itsLights = NULL;
+            state_12_timeout = NULL;
+            res = true;
         }
+    return res;
+}
+
+void Network::__setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
+    itsCO2_Sensor = p_CO2_Sensor;
+    if(p_CO2_Sensor != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsCO2_Sensor", p_CO2_Sensor, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsCO2_Sensor");
+        }
+}
+
+void Network::_setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
+    if(itsCO2_Sensor != NULL)
+        {
+            itsCO2_Sensor->__setItsNetwork(NULL);
+        }
+    __setItsCO2_Sensor(p_CO2_Sensor);
+}
+
+void Network::_clearItsCO2_Sensor() {
+    NOTIFY_RELATION_CLEARED("itsCO2_Sensor");
+    itsCO2_Sensor = NULL;
 }
 
 void Network::__setItsHVAC(HVAC* p_HVAC) {
@@ -314,16 +377,16 @@ void Network::HVAC_Enabled_exit() {
     state_10_subState = OMNonState;
     NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10");
     switch (state_11_subState) {
-        // State Heating_On
-        case Heating_On:
-        {
-            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On");
-        }
-        break;
         // State Heating_OFF
         case Heating_OFF:
         {
             NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF");
+        }
+        break;
+        // State Heating_On
+        case Heating_On:
+        {
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On");
         }
         break;
         default:
@@ -332,16 +395,18 @@ void Network::HVAC_Enabled_exit() {
     state_11_subState = OMNonState;
     NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11");
     switch (state_12_subState) {
-        // State Vent_On
-        case Vent_On:
-        {
-            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_On");
-        }
-        break;
         // State Vent_OFF
         case Vent_OFF:
         {
+            cancel(state_12_timeout);
             NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+        }
+        break;
+        // State Vent_On
+        case Vent_On:
+        {
+            cancel(state_12_timeout);
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_On");
         }
         break;
         default:
@@ -392,38 +457,39 @@ void Network::state_12_entDef() {
     NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
     state_12_subState = Vent_OFF;
     state_12_active = Vent_OFF;
+    state_12_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_12.Vent_OFF");
     NOTIFY_TRANSITION_TERMINATED("10");
 }
 
 IOxfReactive::TakeEventStatus Network::state_12_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     switch (state_12_active) {
-        // State Vent_On
-        case Vent_On:
-        {
-            if(IS_EVENT_TYPE_OF(ev_Vent_SwitchOff_ArchitecturalAnalysisPkg_id))
-                {
-                    NOTIFY_TRANSITION_STARTED("5");
-                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_On");
-                    //#[ transition 5 
-                    OUT_PORT(pNetwork)->set_Vent_state(false);
-                    //#]
-                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
-                    state_12_subState = Vent_OFF;
-                    state_12_active = Vent_OFF;
-                    NOTIFY_TRANSITION_TERMINATED("5");
-                    res = eventConsumed;
-                }
-            
-            
-        }
-        break;
         // State Vent_OFF
         case Vent_OFF:
         {
-            if(IS_EVENT_TYPE_OF(ev_Vent_SwitchOn_ArchitecturalAnalysisPkg_id))
+            if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+                {
+                    if(getCurrentEvent() == state_12_timeout)
+                        {
+                            //## transition 12 
+                            if([itsCO2_Sensor::CO2_Level_Triggered])
+                                {
+                                    NOTIFY_TRANSITION_STARTED("12");
+                                    cancel(state_12_timeout);
+                                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_On");
+                                    state_12_subState = Vent_On;
+                                    state_12_active = Vent_On;
+                                    state_12_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_12.Vent_On");
+                                    NOTIFY_TRANSITION_TERMINATED("12");
+                                    res = eventConsumed;
+                                }
+                        }
+                }
+            else if(IS_EVENT_TYPE_OF(ev_Vent_SwitchOn_ArchitecturalAnalysisPkg_id))
                 {
                     NOTIFY_TRANSITION_STARTED("4");
+                    cancel(state_12_timeout);
                     NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
                     //#[ transition 4 
                     OUT_PORT(pNetwork)->set_Vent_state(true);
@@ -431,7 +497,45 @@ IOxfReactive::TakeEventStatus Network::state_12_processEvent() {
                     NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_On");
                     state_12_subState = Vent_On;
                     state_12_active = Vent_On;
+                    state_12_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_12.Vent_On");
                     NOTIFY_TRANSITION_TERMINATED("4");
+                    res = eventConsumed;
+                }
+            
+            
+        }
+        break;
+        // State Vent_On
+        case Vent_On:
+        {
+            if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+                {
+                    if(getCurrentEvent() == state_12_timeout)
+                        {
+                            NOTIFY_TRANSITION_STARTED("13");
+                            cancel(state_12_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_On");
+                            NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                            state_12_subState = Vent_OFF;
+                            state_12_active = Vent_OFF;
+                            state_12_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                            NOTIFY_TRANSITION_TERMINATED("13");
+                            res = eventConsumed;
+                        }
+                }
+            else if(IS_EVENT_TYPE_OF(ev_Vent_SwitchOff_ArchitecturalAnalysisPkg_id))
+                {
+                    NOTIFY_TRANSITION_STARTED("5");
+                    cancel(state_12_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_On");
+                    //#[ transition 5 
+                    OUT_PORT(pNetwork)->set_Vent_state(false);
+                    //#]
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                    state_12_subState = Vent_OFF;
+                    state_12_active = Vent_OFF;
+                    state_12_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                    NOTIFY_TRANSITION_TERMINATED("5");
                     res = eventConsumed;
                 }
             
@@ -456,26 +560,6 @@ void Network::state_11_entDef() {
 IOxfReactive::TakeEventStatus Network::state_11_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     switch (state_11_active) {
-        // State Heating_On
-        case Heating_On:
-        {
-            if(IS_EVENT_TYPE_OF(ev_Heating_SwitchOff_ArchitecturalAnalysisPkg_id))
-                {
-                    NOTIFY_TRANSITION_STARTED("3");
-                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On");
-                    //#[ transition 3 
-                    OUT_PORT(pNetwork)->set_Heating_state(false);
-                    //#]
-                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_OFF");
-                    state_11_subState = Heating_OFF;
-                    state_11_active = Heating_OFF;
-                    NOTIFY_TRANSITION_TERMINATED("3");
-                    res = eventConsumed;
-                }
-            
-            
-        }
-        break;
         // State Heating_OFF
         case Heating_OFF:
         {
@@ -490,6 +574,26 @@ IOxfReactive::TakeEventStatus Network::state_11_processEvent() {
                     state_11_subState = Heating_On;
                     state_11_active = Heating_On;
                     NOTIFY_TRANSITION_TERMINATED("2");
+                    res = eventConsumed;
+                }
+            
+            
+        }
+        break;
+        // State Heating_On
+        case Heating_On:
+        {
+            if(IS_EVENT_TYPE_OF(ev_Heating_SwitchOff_ArchitecturalAnalysisPkg_id))
+                {
+                    NOTIFY_TRANSITION_STARTED("3");
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On");
+                    //#[ transition 3 
+                    OUT_PORT(pNetwork)->set_Heating_state(false);
+                    //#]
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_OFF");
+                    state_11_subState = Heating_OFF;
+                    state_11_active = Heating_OFF;
+                    NOTIFY_TRANSITION_TERMINATED("3");
                     res = eventConsumed;
                 }
             
@@ -621,20 +725,16 @@ IOxfReactive::TakeEventStatus Network::HVAC_Disabled_handleEvent() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
-void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) const {
-    aomsAttributes->addAttribute("temp_Network", x2String(myReal->temp_Network));
-}
-
 void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsHVAC", false, true);
     if(myReal->itsHVAC)
         {
             aomsRelations->ADD_ITEM(myReal->itsHVAC);
         }
-    aomsRelations->addRelation("itsLights", false, true);
-    if(myReal->itsLights)
+    aomsRelations->addRelation("itsCO2_Sensor", false, true);
+    if(myReal->itsCO2_Sensor)
         {
-            aomsRelations->ADD_ITEM(myReal->itsLights);
+            aomsRelations->ADD_ITEM(myReal->itsCO2_Sensor);
         }
 }
 
@@ -666,14 +766,14 @@ void OMAnimatedNetwork::HVAC_Enabled_serializeStates(AOMSState* aomsState) const
 void OMAnimatedNetwork::state_12_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT.HVAC_Enabled.state_12");
     switch (myReal->state_12_subState) {
-        case Network::Vent_On:
-        {
-            Vent_On_serializeStates(aomsState);
-        }
-        break;
         case Network::Vent_OFF:
         {
             Vent_OFF_serializeStates(aomsState);
+        }
+        break;
+        case Network::Vent_On:
+        {
+            Vent_On_serializeStates(aomsState);
         }
         break;
         default:
@@ -692,14 +792,14 @@ void OMAnimatedNetwork::Vent_OFF_serializeStates(AOMSState* aomsState) const {
 void OMAnimatedNetwork::state_11_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT.HVAC_Enabled.state_11");
     switch (myReal->state_11_subState) {
-        case Network::Heating_On:
-        {
-            Heating_On_serializeStates(aomsState);
-        }
-        break;
         case Network::Heating_OFF:
         {
             Heating_OFF_serializeStates(aomsState);
+        }
+        break;
+        case Network::Heating_On:
+        {
+            Heating_On_serializeStates(aomsState);
         }
         break;
         default:
