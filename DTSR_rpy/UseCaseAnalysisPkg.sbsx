@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
-	<CODE-PAGE>65001</CODE-PAGE>
+	<CODE-PAGE>936</CODE-PAGE>
 	<version>109.0</version>
 	<lang>C++</lang>
 	<BuildNo>202002261110</BuildNo>
@@ -12,10 +12,10 @@
 			<_id type="a">GUID a127c406-634c-4e60-9083-0e78541b5a6d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">UseCaseAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">7.9.2023::14:52:46</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.9.2023::14:52:46</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.13.2023::10:20:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.13.2023::10:20:45</_modifiedTime>
 			<_lastID type="a">69</_lastID>
-			<weakCGTime type="a">7.9.2023::14:52:46</weakCGTime>
+			<weakCGTime type="a">7.13.2023::10:20:45</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:20:48</strongCGTime>
 			<_defaultComposite type="s">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -31,6 +31,8 @@
 				<value>GUID bfb172f5-f5c5-4c20-a5a3-3fe84dbfcb86</value>
 				<value>GUID a167b975-2def-4263-a917-39d96ea32fc2</value>
 				<value>GUID 7e84f2ef-a170-4985-8bc0-124fdb6115e0</value>
+				<value>GUID 03ae079c-5e75-485f-a399-9aed1e161ad5</value>
+				<value>GUID fba9b04a-a5f9-4d2a-858e-eca70ec302d1</value>
 				<value>GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</value>
 				<value>GUID 23022587-85f1-4920-bc8a-9f0247757a80</value>
 				<value>GUID cfd3896a-db6c-402f-9469-6d590c0cfc36</value>
@@ -19410,13 +19412,125 @@
 			</m_targetQualifier>
 			<m_specificType type="a">type_221</m_specificType>
 		</CGIAssociationEnd>
+		<IFile type="e">
+			<_id type="a">GUID 03ae079c-5e75-485f-a399-9aed1e161ad5</_id>
+			<_myState type="a">139264</_myState>
+			<_name type="a">UseCaseAnalysisPkg</_name>
+			<OwnedDependencies type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</OwnedDependencies>
+			<_modifiedTimeWeak type="a">7.13.2023::10:20:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.13.2023::10:20:45</_modifiedTime>
+			<m_type type="a">specFile</m_type>
+			<AggregatesList type="e">
+				<value>GUID eecb4f29-10f1-43d3-9d4f-a96dfb70c08d</value>
+				<value>GUID f96e5b98-f320-4fb3-ae4d-f3a4b0457394</value>
+				<value>GUID 9f82a81f-180d-4231-8080-d0080c55f32f</value>
+			</AggregatesList>
+		</IFile>
+		<IFileFragment type="e">
+			<_id type="a">GUID eecb4f29-10f1-43d3-9d4f-a96dfb70c08d</_id>
+			<_name type="a">oxf:spec</_name>
+			<_modifiedTimeWeak type="a">7.13.2023::10:20:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.13.2023::10:20:44</_modifiedTime>
+			<m_type type="a">textFragment</m_type>
+			<m_text type="a">//## auto:dependency oxf:spec</m_text>
+			<m_startRow type="a">15</m_startRow>
+			<m_startCol_Short type="a">1</m_startCol_Short>
+			<m_endRow type="a">15</m_endRow>
+			<m_endCol_Short type="a">21</m_endCol_Short>
+			<m_subject type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</m_subject>
+			<Fragments type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Fragments>
+		</IFileFragment>
+		<IFileFragment type="e">
+			<_id type="a">GUID f96e5b98-f320-4fb3-ae4d-f3a4b0457394</_id>
+			<_name type="a">SIDefinitions:spec</_name>
+			<_modifiedTimeWeak type="a">7.13.2023::10:20:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.13.2023::10:20:44</_modifiedTime>
+			<m_type type="a">textFragment</m_type>
+			<m_text type="a">//## auto:dependency SIDefinitions:spec</m_text>
+			<m_startRow type="a">17</m_startRow>
+			<m_startCol_Short type="a">1</m_startCol_Short>
+			<m_endRow type="a">17</m_endRow>
+			<m_endCol_Short type="a">45</m_endCol_Short>
+			<m_subject type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</m_subject>
+			<Fragments type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Fragments>
+		</IFileFragment>
+		<IFileFragment type="e">
+			<_id type="a">GUID 9f82a81f-180d-4231-8080-d0080c55f32f</_id>
+			<_name type="a">aom:spec</_name>
+			<_modifiedTimeWeak type="a">7.13.2023::10:20:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.13.2023::10:20:44</_modifiedTime>
+			<m_type type="a">textFragment</m_type>
+			<m_text type="a">//## auto:dependency aom:spec</m_text>
+			<m_startRow type="a">19</m_startRow>
+			<m_startCol_Short type="a">1</m_startCol_Short>
+			<m_endRow type="a">19</m_endRow>
+			<m_endCol_Short type="a">21</m_endCol_Short>
+			<m_subject type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</m_subject>
+			<Fragments type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Fragments>
+		</IFileFragment>
+		<IFile type="e">
+			<_id type="a">GUID fba9b04a-a5f9-4d2a-858e-eca70ec302d1</_id>
+			<_myState type="a">139264</_myState>
+			<_name type="a">UseCaseAnalysisPkg</_name>
+			<OwnedDependencies type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</OwnedDependencies>
+			<_modifiedTimeWeak type="a">7.13.2023::10:20:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.13.2023::10:20:45</_modifiedTime>
+			<m_type type="a">implFile</m_type>
+			<AggregatesList type="e">
+				<value>GUID 89afcfce-4a3a-4460-9610-d08684005f46</value>
+			</AggregatesList>
+		</IFile>
+		<IFileFragment type="e">
+			<_id type="a">GUID 89afcfce-4a3a-4460-9610-d08684005f46</_id>
+			<_name type="a">UseCaseAnalysisPkg:spec</_name>
+			<_modifiedTimeWeak type="a">7.13.2023::10:20:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.13.2023::10:20:44</_modifiedTime>
+			<m_type type="a">textFragment</m_type>
+			<m_text type="a">//## auto:dependency UseCaseAnalysisPkg:spec</m_text>
+			<m_startRow type="a">16</m_startRow>
+			<m_startCol_Short type="a">1</m_startCol_Short>
+			<m_endRow type="a">16</m_endRow>
+			<m_endCol_Short type="a">32</m_endCol_Short>
+			<m_subject type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</m_subject>
+			<Fragments type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Fragments>
+		</IFileFragment>
 		<IClass type="e">
 			<_id type="a">GUID f2d51dd3-5b84-4b7f-819e-7b1d3ac1a995</_id>
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
-			<_modifiedTimeWeak type="a">6.12.2023::14:20:48</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
-			<weakCGTime type="a">6.12.2023::14:20:48</weakCGTime>
+			<_modifiedTimeWeak type="a">7.13.2023::10:20:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.13.2023::10:20:45</_modifiedTime>
+			<weakCGTime type="a">7.13.2023::10:20:45</weakCGTime>
 			<strongCGTime type="a">6.12.2023::14:20:48</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">

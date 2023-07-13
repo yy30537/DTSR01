@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ExternalPersonnel
-//!	Generated Date	: Sun, 9, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ExternalPersonnel.h
 *********************************************************************/
 
@@ -42,13 +42,15 @@ public :
 
     ////    Constructors and destructors    ////
     
+    ////    Additional operations    ////
+    
+    ////    Relations and components    ////
+    
     //## auto_generated
     ExternalPersonnel();
     
     //## auto_generated
     ~ExternalPersonnel();
-    
-    ////    Additional operations    ////
     
     //## auto_generated
     Door_Touch_Panel* getItsDoor_Touch_Panel() const;
@@ -72,8 +74,6 @@ protected :
 
     //## auto_generated
     void cleanUpRelations();
-    
-    ////    Relations and components    ////
     
     Door_Touch_Panel* itsDoor_Touch_Panel;		//## link itsDoor_Touch_Panel
     

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.h
 *********************************************************************/
 
@@ -29,6 +29,11 @@
 #include <oxf\event.h>
 //## class pNetwork_C
 #include "I_HVAC.h"
+//## class pNetwork_C
+#include "I_CO2.h"
+//## link itsCO2_Sensor
+class CO2_Sensor;
+
 //## link itsHVAC
 class HVAC;
 
@@ -43,7 +48,7 @@ public :
 
 //#[ ignore
     //## package ArchitecturalAnalysisPkg
-    class pNetwork_C : public I_HVAC {
+    class pNetwork_C : public I_HVAC, public I_CO2 {
         ////    Constructors and destructors    ////
         
     public :
@@ -57,16 +62,22 @@ public :
         ////    Operations    ////
         
         //## auto_generated
+        I_CO2* getItsI_CO2();
+        
+        //## auto_generated
         I_HVAC* getItsI_HVAC();
         
         //## auto_generated
-        I_HVAC* getOutBound();
+        Network::pNetwork_C* getOutBound();
         
         //## auto_generated
         virtual int getTemp();
         
         //## auto_generated
         virtual bool get_AC_state();
+        
+        //## auto_generated
+        virtual bool get_CO2_Alarm();
         
         //## auto_generated
         virtual bool get_HVAC_state();
@@ -84,6 +95,9 @@ public :
         virtual void set_AC_state(bool arg_AC_state);
         
         //## auto_generated
+        virtual void set_CO2_Alarm(bool arg_CO2_Alarm_state);
+        
+        //## auto_generated
         virtual void set_HVAC_state(bool arg_HVAC_state);
         
         //## auto_generated
@@ -93,6 +107,9 @@ public :
         virtual void set_Vent_state(bool arg_Vent_state);
         
         ////    Additional operations    ////
+        
+        //## auto_generated
+        void setItsI_CO2(I_CO2* p_I_CO2);
         
         //## auto_generated
         void setItsI_HVAC(I_HVAC* p_I_HVAC);
@@ -107,6 +124,8 @@ public :
         int _p_;		//## attribute _p_
         
         ////    Relations and components    ////
+        
+        I_CO2* itsI_CO2;		//## link itsI_CO2
         
         I_HVAC* itsI_HVAC;		//## link itsI_HVAC
     };
@@ -169,10 +188,6 @@ protected :
     
     ////    Relations and components    ////
     
-//#[ ignore
-    pNetwork_C pNetwork;
-//#]
-
     HVAC* itsHVAC;		//## link itsHVAC
     
     Lights* itsLights;		//## link itsLights
@@ -189,6 +204,33 @@ public :
     
     //## auto_generated
     void _clearItsHVAC();
+    
+    ////    Framework    ////
+    
+    //## auto_generated
+    CO2_Sensor* getItsCO2_Sensor() const;
+    
+    //## auto_generated
+    void setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
+
+protected :
+
+//#[ ignore
+    pNetwork_C pNetwork;
+//#]
+
+    CO2_Sensor* itsCO2_Sensor;		//## link itsCO2_Sensor
+
+public :
+
+    //## auto_generated
+    void __setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
+    
+    //## auto_generated
+    void _setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
+    
+    //## auto_generated
+    void _clearItsCO2_Sensor();
     
     // rootState:
     //## statechart_method
@@ -282,8 +324,6 @@ public :
     
     //## statechart_method
     IOxfReactive::TakeEventStatus HVAC_Disabled_handleEvent();
-    
-    ////    Framework    ////
 
 protected :
 

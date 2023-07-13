@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: HVAC
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\HVAC.h
 *********************************************************************/
 
@@ -213,10 +213,6 @@ protected :
     
     ////    Relations and components    ////
     
-//#[ ignore
-    pHVAC_C pHVAC;
-//#]
-
     Network* itsNetwork;		//## link itsNetwork
     
     ////    Framework operations    ////
@@ -231,6 +227,12 @@ public :
     
     //## auto_generated
     void _clearItsNetwork();
+
+protected :
+
+//#[ ignore
+    pHVAC_C pHVAC;
+//#]
 };
 
 #ifdef _OMINSTRUMENT

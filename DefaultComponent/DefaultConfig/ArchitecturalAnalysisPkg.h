@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.h
 *********************************************************************/
 
@@ -25,7 +25,7 @@ class AC;
 //## auto_generated
 class Booking_System;
 
-//## auto_generated
+//## classInstance itsCO2_Sensor
 class CO2_Sensor;
 
 //## auto_generated
@@ -42,6 +42,9 @@ class HVAC;
 
 //## auto_generated
 class Heating;
+
+//## auto_generated
+class I_CO2;
 
 //## auto_generated
 class I_HVAC;
@@ -98,6 +101,10 @@ class Webcam;
 #define ev_HVAC_SwitchOff_ArchitecturalAnalysisPkg_id 18207
 
 #define ev_HVAC_SwitchOn_ArchitecturalAnalysisPkg_id 18208
+
+#define ev_CO2_AboveTH_ArchitecturalAnalysisPkg_id 18209
+
+#define ev_CO2_BelowTH_ArchitecturalAnalysisPkg_id 18210
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -114,6 +121,9 @@ void ArchitecturalAnalysisPkg_initRelations();
 
 //## auto_generated
 bool ArchitecturalAnalysisPkg_startBehavior();
+
+//## classInstance itsCO2_Sensor
+extern CO2_Sensor itsCO2_Sensor;
 
 //#[ ignore
 class ArchitecturalAnalysisPkg_OMInitializer {
@@ -357,6 +367,64 @@ public :
 //#[ ignore
 class OMAnimatedev_HVAC_SwitchOn : virtual public AOMEvent {
     DECLARE_META_EVENT(ev_HVAC_SwitchOn)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_CO2_AboveTH()
+class ev_CO2_AboveTH : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_CO2_AboveTH;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_CO2_AboveTH();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_CO2_AboveTH : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_CO2_AboveTH)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_CO2_BelowTH()
+class ev_CO2_BelowTH : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_CO2_BelowTH;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_CO2_BelowTH();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_CO2_BelowTH : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_CO2_BelowTH)
 };
 //#]
 #endif // _OMINSTRUMENT
