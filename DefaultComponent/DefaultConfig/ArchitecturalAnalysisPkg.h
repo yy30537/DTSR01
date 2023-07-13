@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Wed, 12, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.h
 *********************************************************************/
 
@@ -99,7 +99,9 @@ class Webcam;
 
 #define ev_HVAC_SwitchOn_ArchitecturalAnalysisPkg_id 18208
 
-#define ev_CO2_Trigger_ArchitecturalAnalysisPkg_id 18209
+#define ev_CO2_OverTH_ArchitecturalAnalysisPkg_id 18209
+
+#define ev_CO2_UnderTH_ArchitecturalAnalysisPkg_id 18210
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -366,20 +368,20 @@ class OMAnimatedev_HVAC_SwitchOn : virtual public AOMEvent {
 //#]
 #endif // _OMINSTRUMENT
 
-//## event ev_CO2_Trigger()
-class ev_CO2_Trigger : public OMEvent {
+//## event ev_CO2_OverTH()
+class ev_CO2_OverTH : public OMEvent {
     ////    Friends    ////
     
 public :
 
 #ifdef _OMINSTRUMENT
-    friend class OMAnimatedev_CO2_Trigger;
+    friend class OMAnimatedev_CO2_OverTH;
 #endif // _OMINSTRUMENT
 
     ////    Constructors and destructors    ////
     
     //## auto_generated
-    ev_CO2_Trigger();
+    ev_CO2_OverTH();
     
     ////    Framework operations    ////
     
@@ -389,8 +391,37 @@ public :
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
-class OMAnimatedev_CO2_Trigger : virtual public AOMEvent {
-    DECLARE_META_EVENT(ev_CO2_Trigger)
+class OMAnimatedev_CO2_OverTH : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_CO2_OverTH)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_CO2_UnderTH()
+class ev_CO2_UnderTH : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_CO2_UnderTH;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_CO2_UnderTH();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_CO2_UnderTH : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_CO2_UnderTH)
 };
 //#]
 #endif // _OMINSTRUMENT

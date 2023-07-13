@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: HVAC
-//!	Generated Date	: Fri, 23, Jun 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\HVAC.cpp
 *********************************************************************/
 
@@ -14,147 +14,253 @@
 
 //## auto_generated
 #include "HVAC.h"
-//## link itsCO2_Sensor
-#include "CO2_Sensor.h"
-//## link itsMovement_Sensor
-#include "Movement_Sensor.h"
 //## link itsNetwork
 #include "Network.h"
-//## link itsOccupancy_Sensor
-#include "Occupancy_Sensor.h"
-//## link itsRoom_Touch_Panel
-#include "Room_Touch_Panel.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_HVAC_HVAC_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_HVAC_setTemperature_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_HVAC_get_AC_state_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_HVAC_turnOffCooling_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_HVAC_get_HVAC_state_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_HVAC_turnOffHeating_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_HVAC_get_Heating_state_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_HVAC_turnOffVentilation_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_HVAC_get_Vent_state_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_HVAC_turnOnCooling_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_HVAC_set_AC_state_SERIALIZE aomsmethod->addAttribute("arg_AC_state", x2String(arg_AC_state));
 
-#define ArchitecturalAnalysisPkg_HVAC_turnOnHeating_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_HVAC_set_HVAC_state_SERIALIZE aomsmethod->addAttribute("arg_HVAC_state", x2String(arg_HVAC_state));
 
-#define ArchitecturalAnalysisPkg_HVAC_turnOnVentilation_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_HVAC_set_Heating_state_SERIALIZE aomsmethod->addAttribute("arg_Heating_state", x2String(arg_Heating_state));
+
+#define ArchitecturalAnalysisPkg_HVAC_set_Vent_state_SERIALIZE aomsmethod->addAttribute("arg_Vent_state", x2String(arg_Vent_state));
 //#]
 
 //## package ArchitecturalAnalysisPkg
 
 //## class HVAC
-HVAC::HVAC() : coolingOn(0), heatingOn(0), ventilationOn(0) {
-    NOTIFY_CONSTRUCTOR(HVAC, HVAC(), 0, ArchitecturalAnalysisPkg_HVAC_HVAC_SERIALIZE);
-    itsCO2_Sensor = NULL;
-    itsMovement_Sensor = NULL;
-    itsNetwork = NULL;
-    itsOccupancy_Sensor = NULL;
-    itsRoom_Touch_Panel = NULL;
+//#[ ignore
+HVAC::pHVAC_C::pHVAC_C() : _p_(0) {
+    itsI_HVAC = NULL;
 }
 
-HVAC::~HVAC() {
-    NOTIFY_DESTRUCTOR(~HVAC, true);
+HVAC::pHVAC_C::~pHVAC_C() {
     cleanUpRelations();
 }
 
-void HVAC::setTemperature() {
-    NOTIFY_OPERATION(setTemperature, setTemperature(), 0, ArchitecturalAnalysisPkg_HVAC_setTemperature_SERIALIZE);
-    //#[ operation setTemperature()
-    //#]
+void HVAC::pHVAC_C::connectHVAC(HVAC* part) {
+    setItsI_HVAC(part);
+    
 }
 
-void HVAC::turnOffCooling() {
-    NOTIFY_OPERATION(turnOffCooling, turnOffCooling(), 0, ArchitecturalAnalysisPkg_HVAC_turnOffCooling_SERIALIZE);
-    //#[ operation turnOffCooling()
-    //#]
+I_HVAC* HVAC::pHVAC_C::getItsI_HVAC() {
+    return this;
 }
 
-void HVAC::turnOffHeating() {
-    NOTIFY_OPERATION(turnOffHeating, turnOffHeating(), 0, ArchitecturalAnalysisPkg_HVAC_turnOffHeating_SERIALIZE);
-    //#[ operation turnOffHeating()
-    //#]
+bool HVAC::pHVAC_C::get_AC_state() {
+    bool res = false;
+    if (itsI_HVAC != NULL) {
+        res = itsI_HVAC->get_AC_state();
+    }
+    return res;
 }
 
-void HVAC::turnOffVentilation() {
-    NOTIFY_OPERATION(turnOffVentilation, turnOffVentilation(), 0, ArchitecturalAnalysisPkg_HVAC_turnOffVentilation_SERIALIZE);
-    //#[ operation turnOffVentilation()
-    //#]
+bool HVAC::pHVAC_C::get_HVAC_state() {
+    bool res = false;
+    if (itsI_HVAC != NULL) {
+        res = itsI_HVAC->get_HVAC_state();
+    }
+    return res;
 }
 
-void HVAC::turnOnCooling() {
-    NOTIFY_OPERATION(turnOnCooling, turnOnCooling(), 0, ArchitecturalAnalysisPkg_HVAC_turnOnCooling_SERIALIZE);
-    //#[ operation turnOnCooling()
-    //#]
+bool HVAC::pHVAC_C::get_Heating_state() {
+    bool res = false;
+    if (itsI_HVAC != NULL) {
+        res = itsI_HVAC->get_Heating_state();
+    }
+    return res;
 }
 
-void HVAC::turnOnHeating() {
-    NOTIFY_OPERATION(turnOnHeating, turnOnHeating(), 0, ArchitecturalAnalysisPkg_HVAC_turnOnHeating_SERIALIZE);
-    //#[ operation turnOnHeating()
-    //#]
+bool HVAC::pHVAC_C::get_Vent_state() {
+    bool res = false;
+    if (itsI_HVAC != NULL) {
+        res = itsI_HVAC->get_Vent_state();
+    }
+    return res;
 }
 
-void HVAC::turnOnVentilation() {
-    NOTIFY_OPERATION(turnOnVentilation, turnOnVentilation(), 0, ArchitecturalAnalysisPkg_HVAC_turnOnVentilation_SERIALIZE);
-    //#[ operation turnOnVentilation()
-    //#]
+void HVAC::pHVAC_C::set_AC_state(bool arg_AC_state) {
+    
+    if (itsI_HVAC != NULL) {
+        itsI_HVAC->set_AC_state(arg_AC_state);
+    }
+    
 }
 
-bool HVAC::getCoolingOn() const {
-    return coolingOn;
+void HVAC::pHVAC_C::set_HVAC_state(bool arg_HVAC_state) {
+    
+    if (itsI_HVAC != NULL) {
+        itsI_HVAC->set_HVAC_state(arg_HVAC_state);
+    }
+    
 }
 
-void HVAC::setCoolingOn(bool p_coolingOn) {
-    coolingOn = p_coolingOn;
+void HVAC::pHVAC_C::set_Heating_state(bool arg_Heating_state) {
+    
+    if (itsI_HVAC != NULL) {
+        itsI_HVAC->set_Heating_state(arg_Heating_state);
+    }
+    
 }
 
-bool HVAC::getHeatingOn() const {
-    return heatingOn;
+void HVAC::pHVAC_C::set_Vent_state(bool arg_Vent_state) {
+    
+    if (itsI_HVAC != NULL) {
+        itsI_HVAC->set_Vent_state(arg_Vent_state);
+    }
+    
 }
 
-void HVAC::setHeatingOn(bool p_heatingOn) {
-    heatingOn = p_heatingOn;
+void HVAC::pHVAC_C::setItsI_HVAC(I_HVAC* p_I_HVAC) {
+    itsI_HVAC = p_I_HVAC;
 }
 
-int HVAC::getTemperature() const {
-    return temperature;
-}
-
-void HVAC::setTemperature(int p_temperature) {
-    temperature = p_temperature;
-}
-
-bool HVAC::getVentilationOn() const {
-    return ventilationOn;
-}
-
-void HVAC::setVentilationOn(bool p_ventilationOn) {
-    ventilationOn = p_ventilationOn;
-}
-
-CO2_Sensor* HVAC::getItsCO2_Sensor() const {
-    return itsCO2_Sensor;
-}
-
-void HVAC::setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
-    if(p_CO2_Sensor != NULL)
+void HVAC::pHVAC_C::cleanUpRelations() {
+    if(itsI_HVAC != NULL)
         {
-            p_CO2_Sensor->_setItsHVAC(this);
+            itsI_HVAC = NULL;
         }
-    _setItsCO2_Sensor(p_CO2_Sensor);
+}
+//#]
+
+HVAC::HVAC() : status_AC(false), status_HVAC(false), status_Heating(false), status_Vent(false), temp(26) {
+    NOTIFY_CONSTRUCTOR(HVAC, HVAC(), 0, ArchitecturalAnalysisPkg_HVAC_HVAC_SERIALIZE);
+    itsNetwork = NULL;
+    initRelations();
 }
 
-Movement_Sensor* HVAC::getItsMovement_Sensor() const {
-    return itsMovement_Sensor;
+HVAC::~HVAC() {
+    NOTIFY_DESTRUCTOR(~HVAC, false);
+    cleanUpRelations();
 }
 
-void HVAC::setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor) {
-    if(p_Movement_Sensor != NULL)
-        {
-            p_Movement_Sensor->_setItsHVAC(this);
-        }
-    _setItsMovement_Sensor(p_Movement_Sensor);
+bool HVAC::get_AC_state() {
+    NOTIFY_OPERATION(get_AC_state, get_AC_state(), 0, ArchitecturalAnalysisPkg_HVAC_get_AC_state_SERIALIZE);
+    //#[ operation get_AC_state()
+    std::cout<<"I_HVAC: get AC state";
+    std::cout<<"AC status=" << status_AC << "\n";
+    return status_AC;
+    //#]
+}
+
+bool HVAC::get_HVAC_state() {
+    NOTIFY_OPERATION(get_HVAC_state, get_HVAC_state(), 0, ArchitecturalAnalysisPkg_HVAC_get_HVAC_state_SERIALIZE);
+    //#[ operation get_HVAC_state()
+    std::cout<<"I_HVAC: get HVAC state";
+    std::cout<<"HVAC status=" << status_HVAC << "\n";
+    return status_HVAC;
+    //#]
+}
+
+bool HVAC::get_Heating_state() {
+    NOTIFY_OPERATION(get_Heating_state, get_Heating_state(), 0, ArchitecturalAnalysisPkg_HVAC_get_Heating_state_SERIALIZE);
+    //#[ operation get_Heating_state()
+    std::cout<<"I_HVAC: get Heating state";
+    std::cout<<"Heating status=" << status_Heating << "\n";
+    return status_Heating;
+    //#]
+}
+
+bool HVAC::get_Vent_state() {
+    NOTIFY_OPERATION(get_Vent_state, get_Vent_state(), 0, ArchitecturalAnalysisPkg_HVAC_get_Vent_state_SERIALIZE);
+    //#[ operation get_Vent_state()
+    std::cout<<"I_HVAC: get Vent state";
+    std::cout<<"Vent status=" << status_Vent << "\n";
+    return status_Vent;
+    //#]
+}
+
+void HVAC::set_AC_state(bool arg_AC_state) {
+    NOTIFY_OPERATION(set_AC_state, set_AC_state(bool), 1, ArchitecturalAnalysisPkg_HVAC_set_AC_state_SERIALIZE);
+    //#[ operation set_AC_state(bool)
+    std::cout<<"I_HVAC: set AC state="<<arg_AC_state<<"\n";
+    status_AC=arg_AC_state;
+    //#]
+}
+
+void HVAC::set_HVAC_state(bool arg_HVAC_state) {
+    NOTIFY_OPERATION(set_HVAC_state, set_HVAC_state(bool), 1, ArchitecturalAnalysisPkg_HVAC_set_HVAC_state_SERIALIZE);
+    //#[ operation set_HVAC_state(bool)
+    std::cout<<"I_HVAC: set HVAC state="<<arg_HVAC_state<<"\n";
+    status_HVAC=arg_HVAC_state;
+    //#]
+}
+
+void HVAC::set_Heating_state(bool arg_Heating_state) {
+    NOTIFY_OPERATION(set_Heating_state, set_Heating_state(bool), 1, ArchitecturalAnalysisPkg_HVAC_set_Heating_state_SERIALIZE);
+    //#[ operation set_Heating_state(bool)
+    std::cout<<"I_HVAC: set Heating state="<<arg_Heating_state<<"\n";
+    status_Heating=arg_Heating_state;
+    //#]
+}
+
+void HVAC::set_Vent_state(bool arg_Vent_state) {
+    NOTIFY_OPERATION(set_Vent_state, set_Vent_state(bool), 1, ArchitecturalAnalysisPkg_HVAC_set_Vent_state_SERIALIZE);
+    //#[ operation set_Vent_state(bool)
+    std::cout<<"I_HVAC: set Vent state="<<arg_Vent_state<<"\n";
+    status_Vent=arg_Vent_state;
+    //#]
+}
+
+HVAC::pHVAC_C* HVAC::getPHVAC() const {
+    return (HVAC::pHVAC_C*) &pHVAC;
+}
+
+HVAC::pHVAC_C* HVAC::get_pHVAC() const {
+    return (HVAC::pHVAC_C*) &pHVAC;
+}
+
+bool HVAC::getStatus_AC() const {
+    return status_AC;
+}
+
+void HVAC::setStatus_AC(bool p_status_AC) {
+    status_AC = p_status_AC;
+    NOTIFY_SET_OPERATION;
+}
+
+bool HVAC::getStatus_HVAC() const {
+    return status_HVAC;
+}
+
+void HVAC::setStatus_HVAC(bool p_status_HVAC) {
+    status_HVAC = p_status_HVAC;
+    NOTIFY_SET_OPERATION;
+}
+
+bool HVAC::getStatus_Heating() const {
+    return status_Heating;
+}
+
+void HVAC::setStatus_Heating(bool p_status_Heating) {
+    status_Heating = p_status_Heating;
+    NOTIFY_SET_OPERATION;
+}
+
+bool HVAC::getStatus_Vent() const {
+    return status_Vent;
+}
+
+void HVAC::setStatus_Vent(bool p_status_Vent) {
+    status_Vent = p_status_Vent;
+}
+
+int HVAC::getTemp() const {
+    return temp;
+}
+
+void HVAC::setTemp(int p_temp) {
+    temp = p_temp;
 }
 
 Network* HVAC::getItsNetwork() const {
@@ -169,51 +275,13 @@ void HVAC::setItsNetwork(Network* p_Network) {
     _setItsNetwork(p_Network);
 }
 
-Occupancy_Sensor* HVAC::getItsOccupancy_Sensor() const {
-    return itsOccupancy_Sensor;
-}
-
-void HVAC::setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor) {
-    if(p_Occupancy_Sensor != NULL)
-        {
-            p_Occupancy_Sensor->_setItsHVAC(this);
-        }
-    _setItsOccupancy_Sensor(p_Occupancy_Sensor);
-}
-
-Room_Touch_Panel* HVAC::getItsRoom_Touch_Panel() const {
-    return itsRoom_Touch_Panel;
-}
-
-void HVAC::setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel) {
-    if(p_Room_Touch_Panel != NULL)
-        {
-            p_Room_Touch_Panel->_setItsHVAC(this);
-        }
-    _setItsRoom_Touch_Panel(p_Room_Touch_Panel);
+void HVAC::initRelations() {
+    if (get_pHVAC() != NULL) {
+        get_pHVAC()->connectHVAC(this);
+    }
 }
 
 void HVAC::cleanUpRelations() {
-    if(itsCO2_Sensor != NULL)
-        {
-            NOTIFY_RELATION_CLEARED("itsCO2_Sensor");
-            HVAC* p_HVAC = itsCO2_Sensor->getItsHVAC();
-            if(p_HVAC != NULL)
-                {
-                    itsCO2_Sensor->__setItsHVAC(NULL);
-                }
-            itsCO2_Sensor = NULL;
-        }
-    if(itsMovement_Sensor != NULL)
-        {
-            NOTIFY_RELATION_CLEARED("itsMovement_Sensor");
-            HVAC* p_HVAC = itsMovement_Sensor->getItsHVAC();
-            if(p_HVAC != NULL)
-                {
-                    itsMovement_Sensor->__setItsHVAC(NULL);
-                }
-            itsMovement_Sensor = NULL;
-        }
     if(itsNetwork != NULL)
         {
             NOTIFY_RELATION_CLEARED("itsNetwork");
@@ -224,76 +292,6 @@ void HVAC::cleanUpRelations() {
                 }
             itsNetwork = NULL;
         }
-    if(itsOccupancy_Sensor != NULL)
-        {
-            NOTIFY_RELATION_CLEARED("itsOccupancy_Sensor");
-            HVAC* p_HVAC = itsOccupancy_Sensor->getItsHVAC();
-            if(p_HVAC != NULL)
-                {
-                    itsOccupancy_Sensor->__setItsHVAC(NULL);
-                }
-            itsOccupancy_Sensor = NULL;
-        }
-    if(itsRoom_Touch_Panel != NULL)
-        {
-            NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
-            HVAC* p_HVAC = itsRoom_Touch_Panel->getItsHVAC();
-            if(p_HVAC != NULL)
-                {
-                    itsRoom_Touch_Panel->__setItsHVAC(NULL);
-                }
-            itsRoom_Touch_Panel = NULL;
-        }
-}
-
-void HVAC::__setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
-    itsCO2_Sensor = p_CO2_Sensor;
-    if(p_CO2_Sensor != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsCO2_Sensor", p_CO2_Sensor, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsCO2_Sensor");
-        }
-}
-
-void HVAC::_setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor) {
-    if(itsCO2_Sensor != NULL)
-        {
-            itsCO2_Sensor->__setItsHVAC(NULL);
-        }
-    __setItsCO2_Sensor(p_CO2_Sensor);
-}
-
-void HVAC::_clearItsCO2_Sensor() {
-    NOTIFY_RELATION_CLEARED("itsCO2_Sensor");
-    itsCO2_Sensor = NULL;
-}
-
-void HVAC::__setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor) {
-    itsMovement_Sensor = p_Movement_Sensor;
-    if(p_Movement_Sensor != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsMovement_Sensor", p_Movement_Sensor, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsMovement_Sensor");
-        }
-}
-
-void HVAC::_setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor) {
-    if(itsMovement_Sensor != NULL)
-        {
-            itsMovement_Sensor->__setItsHVAC(NULL);
-        }
-    __setItsMovement_Sensor(p_Movement_Sensor);
-}
-
-void HVAC::_clearItsMovement_Sensor() {
-    NOTIFY_RELATION_CLEARED("itsMovement_Sensor");
-    itsMovement_Sensor = NULL;
 }
 
 void HVAC::__setItsNetwork(Network* p_Network) {
@@ -321,63 +319,15 @@ void HVAC::_clearItsNetwork() {
     itsNetwork = NULL;
 }
 
-void HVAC::__setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor) {
-    itsOccupancy_Sensor = p_Occupancy_Sensor;
-    if(p_Occupancy_Sensor != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsOccupancy_Sensor", p_Occupancy_Sensor, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsOccupancy_Sensor");
-        }
-}
-
-void HVAC::_setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor) {
-    if(itsOccupancy_Sensor != NULL)
-        {
-            itsOccupancy_Sensor->__setItsHVAC(NULL);
-        }
-    __setItsOccupancy_Sensor(p_Occupancy_Sensor);
-}
-
-void HVAC::_clearItsOccupancy_Sensor() {
-    NOTIFY_RELATION_CLEARED("itsOccupancy_Sensor");
-    itsOccupancy_Sensor = NULL;
-}
-
-void HVAC::__setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel) {
-    itsRoom_Touch_Panel = p_Room_Touch_Panel;
-    if(p_Room_Touch_Panel != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsRoom_Touch_Panel", p_Room_Touch_Panel, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
-        }
-}
-
-void HVAC::_setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel) {
-    if(itsRoom_Touch_Panel != NULL)
-        {
-            itsRoom_Touch_Panel->__setItsHVAC(NULL);
-        }
-    __setItsRoom_Touch_Panel(p_Room_Touch_Panel);
-}
-
-void HVAC::_clearItsRoom_Touch_Panel() {
-    NOTIFY_RELATION_CLEARED("itsRoom_Touch_Panel");
-    itsRoom_Touch_Panel = NULL;
-}
-
 #ifdef _OMINSTRUMENT
 //#[ ignore
 void OMAnimatedHVAC::serializeAttributes(AOMSAttributes* aomsAttributes) const {
-    aomsAttributes->addAttribute("heatingOn", x2String(myReal->heatingOn));
-    aomsAttributes->addAttribute("coolingOn", x2String(myReal->coolingOn));
-    aomsAttributes->addAttribute("ventilationOn", x2String(myReal->ventilationOn));
-    aomsAttributes->addAttribute("temperature", x2String(myReal->temperature));
+    aomsAttributes->addAttribute("temp", x2String(myReal->temp));
+    aomsAttributes->addAttribute("status_AC", x2String(myReal->status_AC));
+    aomsAttributes->addAttribute("status_Heating", x2String(myReal->status_Heating));
+    aomsAttributes->addAttribute("status_Vent", x2String(myReal->status_Vent));
+    aomsAttributes->addAttribute("status_HVAC", x2String(myReal->status_HVAC));
+    OMAnimatedI_HVAC::serializeAttributes(aomsAttributes);
 }
 
 void OMAnimatedHVAC::serializeRelations(AOMSRelations* aomsRelations) const {
@@ -386,30 +336,15 @@ void OMAnimatedHVAC::serializeRelations(AOMSRelations* aomsRelations) const {
         {
             aomsRelations->ADD_ITEM(myReal->itsNetwork);
         }
-    aomsRelations->addRelation("itsCO2_Sensor", false, true);
-    if(myReal->itsCO2_Sensor)
-        {
-            aomsRelations->ADD_ITEM(myReal->itsCO2_Sensor);
-        }
-    aomsRelations->addRelation("itsOccupancy_Sensor", false, true);
-    if(myReal->itsOccupancy_Sensor)
-        {
-            aomsRelations->ADD_ITEM(myReal->itsOccupancy_Sensor);
-        }
-    aomsRelations->addRelation("itsMovement_Sensor", false, true);
-    if(myReal->itsMovement_Sensor)
-        {
-            aomsRelations->ADD_ITEM(myReal->itsMovement_Sensor);
-        }
-    aomsRelations->addRelation("itsRoom_Touch_Panel", false, true);
-    if(myReal->itsRoom_Touch_Panel)
-        {
-            aomsRelations->ADD_ITEM(myReal->itsRoom_Touch_Panel);
-        }
+    OMAnimatedI_HVAC::serializeRelations(aomsRelations);
 }
 //#]
 
-IMPLEMENT_META_P(HVAC, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, false, OMAnimatedHVAC)
+IMPLEMENT_META_S_P(HVAC, ArchitecturalAnalysisPkg, false, I_HVAC, OMAnimatedI_HVAC, OMAnimatedHVAC)
+
+OMINIT_SUPERCLASS(I_HVAC, OMAnimatedI_HVAC)
+
+OMREGISTER_CLASS
 #endif // _OMINSTRUMENT
 
 /*********************************************************************

@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Wed, 12, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\CO2_Sensor.cpp
 *********************************************************************/
 
@@ -22,10 +22,6 @@
 #define ArchitecturalAnalysisPkg_CO2_Sensor_get_CO2_Alarm_SERIALIZE OM_NO_OP
 
 #define ArchitecturalAnalysisPkg_CO2_Sensor_set_CO2_Alarm_SERIALIZE aomsmethod->addAttribute("arg_CO2_state", x2String(arg_CO2_state));
-
-#define OMAnim_ArchitecturalAnalysisPkg_CO2_Sensor_setCO2_Level_Triggered_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_CO2_Level_Triggered)
-
-#define OMAnim_ArchitecturalAnalysisPkg_CO2_Sensor_setCO2_Level_Triggered_bool_SERIALIZE_RET_VAL
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -77,7 +73,7 @@ void CO2_Sensor::pCO2_C::cleanUpRelations() {
 }
 //#]
 
-CO2_Sensor::CO2_Sensor() : CO2_Level_Triggered(false) {
+CO2_Sensor::CO2_Sensor() : status_CO2(false) {
     NOTIFY_CONSTRUCTOR(CO2_Sensor, CO2_Sensor(), 0, ArchitecturalAnalysisPkg_CO2_Sensor_CO2_Sensor_SERIALIZE);
     itsNetwork = NULL;
     initRelations();
@@ -91,18 +87,17 @@ CO2_Sensor::~CO2_Sensor() {
 bool CO2_Sensor::get_CO2_Alarm() {
     NOTIFY_OPERATION(get_CO2_Alarm, get_CO2_Alarm(), 0, ArchitecturalAnalysisPkg_CO2_Sensor_get_CO2_Alarm_SERIALIZE);
     //#[ operation get_CO2_Alarm()
-    std::cout<<"I_CO2: get_CO2_Alarm()\n" ;
-    return CO2_Level_Triggered;
-    
+    std::cout<<"I_CO2: get CO2 alarm state";
+    std::cout<<"CO2 alarm status=" << status_CO2 << "\n";
+    return status_CO2;
     //#]
 }
 
 void CO2_Sensor::set_CO2_Alarm(bool arg_CO2_state) {
     NOTIFY_OPERATION(set_CO2_Alarm, set_CO2_Alarm(bool), 1, ArchitecturalAnalysisPkg_CO2_Sensor_set_CO2_Alarm_SERIALIZE);
     //#[ operation set_CO2_Alarm(bool)
-    std::cout<<"I_CO2: set_CO2_Alarm(" << arg_CO2_state << ") \n";
-    CO2_Level_Triggered = arg_CO2_state;
-    std::cout<<"CO2_Level_Triggered=" << CO2_Level_Triggered << " \n";
+    std::cout<<"I_CO2: set CO2 alarm state="<<arg_CO2_state<<"\n";
+    status_CO2=arg_CO2_state;
     //#]
 }
 
@@ -114,12 +109,12 @@ CO2_Sensor::pCO2_C* CO2_Sensor::get_pCO2() const {
     return (CO2_Sensor::pCO2_C*) &pCO2;
 }
 
-bool CO2_Sensor::getCO2_Level_Triggered() const {
-    return CO2_Level_Triggered;
+bool CO2_Sensor::getStatus_CO2() const {
+    return status_CO2;
 }
 
-void CO2_Sensor::setCO2_Level_Triggered(bool p_CO2_Level_Triggered) {
-    CO2_Level_Triggered = p_CO2_Level_Triggered;
+void CO2_Sensor::setStatus_CO2(bool p_status_CO2) {
+    status_CO2 = p_status_CO2;
     NOTIFY_SET_OPERATION;
 }
 
@@ -182,7 +177,7 @@ void CO2_Sensor::_clearItsNetwork() {
 #ifdef _OMINSTRUMENT
 //#[ ignore
 void OMAnimatedCO2_Sensor::serializeAttributes(AOMSAttributes* aomsAttributes) const {
-    aomsAttributes->addAttribute("CO2_Level_Triggered", x2String(myReal->CO2_Level_Triggered));
+    aomsAttributes->addAttribute("status_CO2", x2String(myReal->status_CO2));
     OMAnimatedI_CO2::serializeAttributes(aomsAttributes);
 }
 
@@ -201,10 +196,6 @@ IMPLEMENT_META_S_P(CO2_Sensor, ArchitecturalAnalysisPkg, false, I_CO2, OMAnimate
 OMINIT_SUPERCLASS(I_CO2, OMAnimatedI_CO2)
 
 OMREGISTER_CLASS
-
-IMPLEMENT_META_OP(OMAnimatedCO2_Sensor, ArchitecturalAnalysisPkg_CO2_Sensor_setCO2_Level_Triggered_bool, "setCO2_Level_Triggered", FALSE, "setCO2_Level_Triggered(bool)", 1)
-
-IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_CO2_Sensor_setCO2_Level_Triggered_bool, CO2_Sensor, setCO2_Level_Triggered(p_CO2_Level_Triggered), NO_OP())
 #endif // _OMINSTRUMENT
 
 /*********************************************************************

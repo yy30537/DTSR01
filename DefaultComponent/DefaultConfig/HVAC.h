@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: HVAC
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\HVAC.h
 *********************************************************************/
 
@@ -52,9 +52,6 @@ public :
         I_HVAC* getItsI_HVAC();
         
         //## auto_generated
-        virtual int getTemp();
-        
-        //## auto_generated
         virtual bool get_AC_state();
         
         //## auto_generated
@@ -65,9 +62,6 @@ public :
         
         //## auto_generated
         virtual bool get_Vent_state();
-        
-        //## auto_generated
-        virtual void setTemp(int arg_temp);
         
         //## auto_generated
         virtual void set_AC_state(bool arg_AC_state);
@@ -117,9 +111,6 @@ public :
     
     ////    Operations    ////
     
-    //## operation getTemp()
-    virtual int getTemp();
-    
     //## operation get_AC_state()
     virtual bool get_AC_state();
     
@@ -131,9 +122,6 @@ public :
     
     //## operation get_Vent_state()
     virtual bool get_Vent_state();
-    
-    //## operation setTemp(int)
-    virtual void setTemp(int arg_temp);
     
     //## operation set_AC_state(bool)
     virtual void set_AC_state(bool arg_AC_state);
@@ -180,10 +168,10 @@ public :
     void setStatus_Vent(bool p_status_Vent);
     
     //## auto_generated
-    int getTemp_HVAC() const;
+    int getTemp() const;
     
     //## auto_generated
-    void setTemp_HVAC(int p_temp_HVAC);
+    void setTemp(int p_temp);
     
     //## auto_generated
     Network* getItsNetwork() const;
@@ -209,7 +197,7 @@ protected :
     
     bool status_Vent;		//## attribute status_Vent
     
-    int temp_HVAC;		//## attribute temp_HVAC
+    int temp;		//## attribute temp
     
     ////    Relations and components    ////
     

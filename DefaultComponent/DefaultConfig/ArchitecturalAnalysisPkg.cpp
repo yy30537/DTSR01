@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Wed, 12, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp
 *********************************************************************/
 
@@ -105,11 +105,17 @@
 
 #define ev_HVAC_SwitchOn_CONSTRUCTOR ev_HVAC_SwitchOn()
 
-#define ev_CO2_Trigger_SERIALIZE OM_NO_OP
+#define ev_CO2_OverTH_SERIALIZE OM_NO_OP
 
-#define ev_CO2_Trigger_UNSERIALIZE OM_NO_OP
+#define ev_CO2_OverTH_UNSERIALIZE OM_NO_OP
 
-#define ev_CO2_Trigger_CONSTRUCTOR ev_CO2_Trigger()
+#define ev_CO2_OverTH_CONSTRUCTOR ev_CO2_OverTH()
+
+#define ev_CO2_UnderTH_SERIALIZE OM_NO_OP
+
+#define ev_CO2_UnderTH_UNSERIALIZE OM_NO_OP
+
+#define ev_CO2_UnderTH_CONSTRUCTOR ev_CO2_UnderTH()
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -165,9 +171,9 @@ static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */) {
 }
 
 static void RenameGlobalInstances() {
-    OM_SET_INSTANCE_NAME(&itsCO2_Sensor, CO2_Sensor, "itsCO2_Sensor", AOMNoMultiplicity);
-    OM_SET_INSTANCE_NAME(&itsNetwork, Network, "itsNetwork", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsHVAC, HVAC, "itsHVAC", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsNetwork, Network, "itsNetwork", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsCO2_Sensor, CO2_Sensor, "itsCO2_Sensor", AOMNoMultiplicity);
 }
 #endif // _OMINSTRUMENT
 
@@ -277,17 +283,29 @@ bool ev_HVAC_SwitchOn::isTypeOf(const short id) const {
 
 IMPLEMENT_META_EVENT_P(ev_HVAC_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_HVAC_SwitchOn())
 
-//## event ev_CO2_Trigger()
-ev_CO2_Trigger::ev_CO2_Trigger() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_Trigger)
-    setId(ev_CO2_Trigger_ArchitecturalAnalysisPkg_id);
+//## event ev_CO2_OverTH()
+ev_CO2_OverTH::ev_CO2_OverTH() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_OverTH)
+    setId(ev_CO2_OverTH_ArchitecturalAnalysisPkg_id);
 }
 
-bool ev_CO2_Trigger::isTypeOf(const short id) const {
-    return (ev_CO2_Trigger_ArchitecturalAnalysisPkg_id==id);
+bool ev_CO2_OverTH::isTypeOf(const short id) const {
+    return (ev_CO2_OverTH_ArchitecturalAnalysisPkg_id==id);
 }
 
-IMPLEMENT_META_EVENT_P(ev_CO2_Trigger, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_Trigger())
+IMPLEMENT_META_EVENT_P(ev_CO2_OverTH, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_OverTH())
+
+//## event ev_CO2_UnderTH()
+ev_CO2_UnderTH::ev_CO2_UnderTH() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_UnderTH)
+    setId(ev_CO2_UnderTH_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_CO2_UnderTH::isTypeOf(const short id) const {
+    return (ev_CO2_UnderTH_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_CO2_UnderTH, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_UnderTH())
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp

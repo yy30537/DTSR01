@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: HVAC
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\HVAC.cpp
 *********************************************************************/
 
@@ -19,8 +19,6 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_HVAC_HVAC_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_HVAC_getTemp_SERIALIZE OM_NO_OP
-
 #define ArchitecturalAnalysisPkg_HVAC_get_AC_state_SERIALIZE OM_NO_OP
 
 #define ArchitecturalAnalysisPkg_HVAC_get_HVAC_state_SERIALIZE OM_NO_OP
@@ -28,8 +26,6 @@
 #define ArchitecturalAnalysisPkg_HVAC_get_Heating_state_SERIALIZE OM_NO_OP
 
 #define ArchitecturalAnalysisPkg_HVAC_get_Vent_state_SERIALIZE OM_NO_OP
-
-#define ArchitecturalAnalysisPkg_HVAC_setTemp_SERIALIZE aomsmethod->addAttribute("arg_temp", x2String(arg_temp));
 
 #define ArchitecturalAnalysisPkg_HVAC_set_AC_state_SERIALIZE aomsmethod->addAttribute("arg_AC_state", x2String(arg_AC_state));
 
@@ -59,14 +55,6 @@ void HVAC::pHVAC_C::connectHVAC(HVAC* part) {
 
 I_HVAC* HVAC::pHVAC_C::getItsI_HVAC() {
     return this;
-}
-
-int HVAC::pHVAC_C::getTemp() {
-    int res = 0;
-    if (itsI_HVAC != NULL) {
-        res = itsI_HVAC->getTemp();
-    }
-    return res;
 }
 
 bool HVAC::pHVAC_C::get_AC_state() {
@@ -99,14 +87,6 @@ bool HVAC::pHVAC_C::get_Vent_state() {
         res = itsI_HVAC->get_Vent_state();
     }
     return res;
-}
-
-void HVAC::pHVAC_C::setTemp(int arg_temp) {
-    
-    if (itsI_HVAC != NULL) {
-        itsI_HVAC->setTemp(arg_temp);
-    }
-    
 }
 
 void HVAC::pHVAC_C::set_AC_state(bool arg_AC_state) {
@@ -153,7 +133,7 @@ void HVAC::pHVAC_C::cleanUpRelations() {
 }
 //#]
 
-HVAC::HVAC() : status_AC(false), status_HVAC(false), status_Heating(false), status_Vent(false), temp_HVAC(26) {
+HVAC::HVAC() : status_AC(false), status_HVAC(false), status_Heating(false), status_Vent(false), temp(26) {
     NOTIFY_CONSTRUCTOR(HVAC, HVAC(), 0, ArchitecturalAnalysisPkg_HVAC_HVAC_SERIALIZE);
     itsNetwork = NULL;
     initRelations();
@@ -164,20 +144,11 @@ HVAC::~HVAC() {
     cleanUpRelations();
 }
 
-int HVAC::getTemp() {
-    NOTIFY_OPERATION(getTemp, getTemp(), 0, ArchitecturalAnalysisPkg_HVAC_getTemp_SERIALIZE);
-    //#[ operation getTemp()
-    std::cout<<"getTemp()\n";
-    std::cout<<"temp_HVAC="<<temp_HVAC<<"\n";
-    return temp_HVAC;
-    //#]
-}
-
 bool HVAC::get_AC_state() {
     NOTIFY_OPERATION(get_AC_state, get_AC_state(), 0, ArchitecturalAnalysisPkg_HVAC_get_AC_state_SERIALIZE);
     //#[ operation get_AC_state()
-    std::cout<<"I_HVAC: get_AC_state() \n";
-    std::cout<<"status_AC = "<<status_AC<<"\n";
+    std::cout<<"I_HVAC: get AC state";
+    std::cout<<"AC status=" << status_AC << "\n";
     return status_AC;
     //#]
 }
@@ -185,8 +156,8 @@ bool HVAC::get_AC_state() {
 bool HVAC::get_HVAC_state() {
     NOTIFY_OPERATION(get_HVAC_state, get_HVAC_state(), 0, ArchitecturalAnalysisPkg_HVAC_get_HVAC_state_SERIALIZE);
     //#[ operation get_HVAC_state()
-    std::cout<<"I_HVAC: get_HVAC_state() \n";
-    std::cout<<"status_HVAC = "<< status_HVAC << "\n";
+    std::cout<<"I_HVAC: get HVAC state";
+    std::cout<<"HVAC status=" << status_HVAC << "\n";
     return status_HVAC;
     //#]
 }
@@ -194,8 +165,8 @@ bool HVAC::get_HVAC_state() {
 bool HVAC::get_Heating_state() {
     NOTIFY_OPERATION(get_Heating_state, get_Heating_state(), 0, ArchitecturalAnalysisPkg_HVAC_get_Heating_state_SERIALIZE);
     //#[ operation get_Heating_state()
-    std::cout<<"I_HVAC: get_Heating_state() \n";
-    std::cout<<"status_Heating = "<<status_Heating<<"\n";
+    std::cout<<"I_HVAC: get Heating state";
+    std::cout<<"Heating status=" << status_Heating << "\n";
     return status_Heating;
     //#]
 }
@@ -203,54 +174,41 @@ bool HVAC::get_Heating_state() {
 bool HVAC::get_Vent_state() {
     NOTIFY_OPERATION(get_Vent_state, get_Vent_state(), 0, ArchitecturalAnalysisPkg_HVAC_get_Vent_state_SERIALIZE);
     //#[ operation get_Vent_state()
-    std::cout<<"I_HVAC: get_Vent_state() \n";
-    std::cout<<"status_Vent = "<<status_Vent<<"\n";
+    std::cout<<"I_HVAC: get Vent state";
+    std::cout<<"Vent status=" << status_Vent << "\n";
     return status_Vent;
-    //#]
-}
-
-void HVAC::setTemp(int arg_temp) {
-    NOTIFY_OPERATION(setTemp, setTemp(int), 1, ArchitecturalAnalysisPkg_HVAC_setTemp_SERIALIZE);
-    //#[ operation setTemp(int)
-    std::cout<<"setTemp("<<arg_temp<<")\n";
-    temp_HVAC=arg_temp;
-    std::cout<<"temp_HVAC="<<temp_HVAC<<"\n";
     //#]
 }
 
 void HVAC::set_AC_state(bool arg_AC_state) {
     NOTIFY_OPERATION(set_AC_state, set_AC_state(bool), 1, ArchitecturalAnalysisPkg_HVAC_set_AC_state_SERIALIZE);
     //#[ operation set_AC_state(bool)
-    std::cout<<"I_HVAC: set_AC_state(" << arg_AC_state << ") \n";
+    std::cout<<"I_HVAC: set AC state="<<arg_AC_state<<"\n";
     status_AC=arg_AC_state;
-    std::cout<<"status_AC="<<status_AC<<"\n";
     //#]
 }
 
 void HVAC::set_HVAC_state(bool arg_HVAC_state) {
     NOTIFY_OPERATION(set_HVAC_state, set_HVAC_state(bool), 1, ArchitecturalAnalysisPkg_HVAC_set_HVAC_state_SERIALIZE);
     //#[ operation set_HVAC_state(bool)
-    std::cout<<"I_HVAC: set_HVAC_state(" << arg_HVAC_state << ") \n";
-    status_HVAC = arg_HVAC_state;
-    std::cout<<"status_HVAC = "<< status_HVAC << "\n";
+    std::cout<<"I_HVAC: set HVAC state="<<arg_HVAC_state<<"\n";
+    status_HVAC=arg_HVAC_state;
     //#]
 }
 
 void HVAC::set_Heating_state(bool arg_Heating_state) {
     NOTIFY_OPERATION(set_Heating_state, set_Heating_state(bool), 1, ArchitecturalAnalysisPkg_HVAC_set_Heating_state_SERIALIZE);
     //#[ operation set_Heating_state(bool)
-    std::cout<<"I_HVAC: set_Heating_state(" << arg_Heating_state << ") \n";
+    std::cout<<"I_HVAC: set Heating state="<<arg_Heating_state<<"\n";
     status_Heating=arg_Heating_state;
-    std::cout<<"status_Heating="<<status_Heating<<"\n";
     //#]
 }
 
 void HVAC::set_Vent_state(bool arg_Vent_state) {
     NOTIFY_OPERATION(set_Vent_state, set_Vent_state(bool), 1, ArchitecturalAnalysisPkg_HVAC_set_Vent_state_SERIALIZE);
     //#[ operation set_Vent_state(bool)
-    std::cout<<"I_HVAC: set_Vent_state(" << arg_Vent_state << ") \n";
+    std::cout<<"I_HVAC: set Vent state="<<arg_Vent_state<<"\n";
     status_Vent=arg_Vent_state;
-    std::cout<<"status_Vent="<<status_Vent<<"\n";
     //#]
 }
 
@@ -295,15 +253,14 @@ bool HVAC::getStatus_Vent() const {
 
 void HVAC::setStatus_Vent(bool p_status_Vent) {
     status_Vent = p_status_Vent;
-    NOTIFY_SET_OPERATION;
 }
 
-int HVAC::getTemp_HVAC() const {
-    return temp_HVAC;
+int HVAC::getTemp() const {
+    return temp;
 }
 
-void HVAC::setTemp_HVAC(int p_temp_HVAC) {
-    temp_HVAC = p_temp_HVAC;
+void HVAC::setTemp(int p_temp) {
+    temp = p_temp;
 }
 
 Network* HVAC::getItsNetwork() const {
@@ -365,7 +322,7 @@ void HVAC::_clearItsNetwork() {
 #ifdef _OMINSTRUMENT
 //#[ ignore
 void OMAnimatedHVAC::serializeAttributes(AOMSAttributes* aomsAttributes) const {
-    aomsAttributes->addAttribute("temp_HVAC", x2String(myReal->temp_HVAC));
+    aomsAttributes->addAttribute("temp", x2String(myReal->temp));
     aomsAttributes->addAttribute("status_AC", x2String(myReal->status_AC));
     aomsAttributes->addAttribute("status_Heating", x2String(myReal->status_Heating));
     aomsAttributes->addAttribute("status_Vent", x2String(myReal->status_Vent));

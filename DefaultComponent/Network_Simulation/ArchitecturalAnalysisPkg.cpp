@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Fri, 23, Jun 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\ArchitecturalAnalysisPkg.cpp
 *********************************************************************/
 
@@ -15,63 +15,75 @@
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
 //## auto_generated
-#include "Booking_System.h"
-//## auto_generated
 #include "CO2_Sensor.h"
-//## auto_generated
-#include "Door_Touch_Panel.h"
-//## auto_generated
-#include "External_Personnel.h"
-//## auto_generated
-#include "Fire_Sensor.h"
 //## auto_generated
 #include "HVAC.h"
 //## auto_generated
-#include "Lights.h"
+#include "I_CO2.h"
 //## auto_generated
-#include "Microphones.h"
-//## auto_generated
-#include "Movement_Sensor.h"
+#include "I_HVAC.h"
 //## auto_generated
 #include "Network.h"
-//## auto_generated
-#include "Occupancy_Sensor.h"
-//## auto_generated
-#include "Room_Touch_Panel.h"
-//## auto_generated
-#include "Smart_Room.h"
-//## auto_generated
-#include "Smart_Screen.h"
-//## auto_generated
-#include "Speakers.h"
-//## auto_generated
-#include "Weather_Forecast.h"
-//## auto_generated
-#include "Webcam.h"
 //#[ ignore
-#define ev_CO2_Level_OverThreshold_SERIALIZE OM_NO_OP
+#define ev_AC_SwitchOn_SERIALIZE OM_NO_OP
 
-#define ev_CO2_Level_OverThreshold_UNSERIALIZE OM_NO_OP
+#define ev_AC_SwitchOn_UNSERIALIZE OM_NO_OP
 
-#define ev_CO2_Level_OverThreshold_CONSTRUCTOR ev_CO2_Level_OverThreshold()
+#define ev_AC_SwitchOn_CONSTRUCTOR ev_AC_SwitchOn()
 
-#define ev_CO2_Level_BelowThreshold_SERIALIZE OM_NO_OP
+#define ev_AC_SwitchOff_SERIALIZE OM_NO_OP
 
-#define ev_CO2_Level_BelowThreshold_UNSERIALIZE OM_NO_OP
+#define ev_AC_SwitchOff_UNSERIALIZE OM_NO_OP
 
-#define ev_CO2_Level_BelowThreshold_CONSTRUCTOR ev_CO2_Level_BelowThreshold()
+#define ev_AC_SwitchOff_CONSTRUCTOR ev_AC_SwitchOff()
 
-#define ev_Fire_Detected_SERIALIZE OM_NO_OP
+#define ev_Heating_SwitchOn_SERIALIZE OM_NO_OP
 
-#define ev_Fire_Detected_UNSERIALIZE OM_NO_OP
+#define ev_Heating_SwitchOn_UNSERIALIZE OM_NO_OP
 
-#define ev_Fire_Detected_CONSTRUCTOR ev_Fire_Detected()
+#define ev_Heating_SwitchOn_CONSTRUCTOR ev_Heating_SwitchOn()
 
-#define ev_Fire_Distinguished_SERIALIZE OM_NO_OP
+#define ev_Heating_SwitchOff_SERIALIZE OM_NO_OP
 
-#define ev_Fire_Distinguished_UNSERIALIZE OM_NO_OP
+#define ev_Heating_SwitchOff_UNSERIALIZE OM_NO_OP
 
-#define ev_Fire_Distinguished_CONSTRUCTOR ev_Fire_Distinguished()
+#define ev_Heating_SwitchOff_CONSTRUCTOR ev_Heating_SwitchOff()
+
+#define ev_Vent_SwitchOn_SERIALIZE OM_NO_OP
+
+#define ev_Vent_SwitchOn_UNSERIALIZE OM_NO_OP
+
+#define ev_Vent_SwitchOn_CONSTRUCTOR ev_Vent_SwitchOn()
+
+#define ev_Vent_SwitchOff_SERIALIZE OM_NO_OP
+
+#define ev_Vent_SwitchOff_UNSERIALIZE OM_NO_OP
+
+#define ev_Vent_SwitchOff_CONSTRUCTOR ev_Vent_SwitchOff()
+
+#define ev_HVAC_SwitchOff_SERIALIZE OM_NO_OP
+
+#define ev_HVAC_SwitchOff_UNSERIALIZE OM_NO_OP
+
+#define ev_HVAC_SwitchOff_CONSTRUCTOR ev_HVAC_SwitchOff()
+
+#define ev_HVAC_SwitchOn_SERIALIZE OM_NO_OP
+
+#define ev_HVAC_SwitchOn_UNSERIALIZE OM_NO_OP
+
+#define ev_HVAC_SwitchOn_CONSTRUCTOR ev_HVAC_SwitchOn()
+
+#define ev_CO2_OverTH_SERIALIZE OM_NO_OP
+
+#define ev_CO2_OverTH_UNSERIALIZE OM_NO_OP
+
+#define ev_CO2_OverTH_CONSTRUCTOR ev_CO2_OverTH()
+
+#define ev_CO2_UnderTH_SERIALIZE OM_NO_OP
+
+#define ev_CO2_UnderTH_UNSERIALIZE OM_NO_OP
+
+#define ev_CO2_UnderTH_CONSTRUCTOR ev_CO2_UnderTH()
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -80,59 +92,145 @@
 #ifdef _OMINSTRUMENT
 static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */);
 
-IMPLEMENT_META_PACKAGE(ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg)
+static void RenameGlobalInstances();
 
+IMPLEMENT_META_PACKAGE(ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg)
+#endif // _OMINSTRUMENT
+
+void ArchitecturalAnalysisPkg_initRelations() {
+    
+    #ifdef _OMINSTRUMENT
+    RenameGlobalInstances();
+    #endif // _OMINSTRUMENT
+}
+
+#ifdef _OMINSTRUMENT
 static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */) {
+}
+
+static void RenameGlobalInstances() {
 }
 #endif // _OMINSTRUMENT
 
-//## event ev_CO2_Level_OverThreshold()
-ev_CO2_Level_OverThreshold::ev_CO2_Level_OverThreshold() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_Level_OverThreshold)
-    setId(ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id);
+//## event ev_AC_SwitchOn()
+ev_AC_SwitchOn::ev_AC_SwitchOn() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_AC_SwitchOn)
+    setId(ev_AC_SwitchOn_ArchitecturalAnalysisPkg_id);
 }
 
-bool ev_CO2_Level_OverThreshold::isTypeOf(const short id) const {
-    return (ev_CO2_Level_OverThreshold_ArchitecturalAnalysisPkg_id==id);
+bool ev_AC_SwitchOn::isTypeOf(const short id) const {
+    return (ev_AC_SwitchOn_ArchitecturalAnalysisPkg_id==id);
 }
 
-IMPLEMENT_META_EVENT_P(ev_CO2_Level_OverThreshold, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_Level_OverThreshold())
+IMPLEMENT_META_EVENT_P(ev_AC_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_AC_SwitchOn())
 
-//## event ev_CO2_Level_BelowThreshold()
-ev_CO2_Level_BelowThreshold::ev_CO2_Level_BelowThreshold() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_Level_BelowThreshold)
-    setId(ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id);
+//## event ev_AC_SwitchOff()
+ev_AC_SwitchOff::ev_AC_SwitchOff() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_AC_SwitchOff)
+    setId(ev_AC_SwitchOff_ArchitecturalAnalysisPkg_id);
 }
 
-bool ev_CO2_Level_BelowThreshold::isTypeOf(const short id) const {
-    return (ev_CO2_Level_BelowThreshold_ArchitecturalAnalysisPkg_id==id);
+bool ev_AC_SwitchOff::isTypeOf(const short id) const {
+    return (ev_AC_SwitchOff_ArchitecturalAnalysisPkg_id==id);
 }
 
-IMPLEMENT_META_EVENT_P(ev_CO2_Level_BelowThreshold, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_Level_BelowThreshold())
+IMPLEMENT_META_EVENT_P(ev_AC_SwitchOff, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_AC_SwitchOff())
 
-//## event ev_Fire_Detected()
-ev_Fire_Detected::ev_Fire_Detected() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_Fire_Detected)
-    setId(ev_Fire_Detected_ArchitecturalAnalysisPkg_id);
+//## event ev_Heating_SwitchOn()
+ev_Heating_SwitchOn::ev_Heating_SwitchOn() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Heating_SwitchOn)
+    setId(ev_Heating_SwitchOn_ArchitecturalAnalysisPkg_id);
 }
 
-bool ev_Fire_Detected::isTypeOf(const short id) const {
-    return (ev_Fire_Detected_ArchitecturalAnalysisPkg_id==id);
+bool ev_Heating_SwitchOn::isTypeOf(const short id) const {
+    return (ev_Heating_SwitchOn_ArchitecturalAnalysisPkg_id==id);
 }
 
-IMPLEMENT_META_EVENT_P(ev_Fire_Detected, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Fire_Detected())
+IMPLEMENT_META_EVENT_P(ev_Heating_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Heating_SwitchOn())
 
-//## event ev_Fire_Distinguished()
-ev_Fire_Distinguished::ev_Fire_Distinguished() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_Fire_Distinguished)
-    setId(ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id);
+//## event ev_Heating_SwitchOff()
+ev_Heating_SwitchOff::ev_Heating_SwitchOff() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Heating_SwitchOff)
+    setId(ev_Heating_SwitchOff_ArchitecturalAnalysisPkg_id);
 }
 
-bool ev_Fire_Distinguished::isTypeOf(const short id) const {
-    return (ev_Fire_Distinguished_ArchitecturalAnalysisPkg_id==id);
+bool ev_Heating_SwitchOff::isTypeOf(const short id) const {
+    return (ev_Heating_SwitchOff_ArchitecturalAnalysisPkg_id==id);
 }
 
-IMPLEMENT_META_EVENT_P(ev_Fire_Distinguished, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Fire_Distinguished())
+IMPLEMENT_META_EVENT_P(ev_Heating_SwitchOff, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Heating_SwitchOff())
+
+//## event ev_Vent_SwitchOn()
+ev_Vent_SwitchOn::ev_Vent_SwitchOn() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Vent_SwitchOn)
+    setId(ev_Vent_SwitchOn_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Vent_SwitchOn::isTypeOf(const short id) const {
+    return (ev_Vent_SwitchOn_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_Vent_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Vent_SwitchOn())
+
+//## event ev_Vent_SwitchOff()
+ev_Vent_SwitchOff::ev_Vent_SwitchOff() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_Vent_SwitchOff)
+    setId(ev_Vent_SwitchOff_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_Vent_SwitchOff::isTypeOf(const short id) const {
+    return (ev_Vent_SwitchOff_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_Vent_SwitchOff, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_Vent_SwitchOff())
+
+//## event ev_HVAC_SwitchOff()
+ev_HVAC_SwitchOff::ev_HVAC_SwitchOff() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_HVAC_SwitchOff)
+    setId(ev_HVAC_SwitchOff_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_HVAC_SwitchOff::isTypeOf(const short id) const {
+    return (ev_HVAC_SwitchOff_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_HVAC_SwitchOff, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_HVAC_SwitchOff())
+
+//## event ev_HVAC_SwitchOn()
+ev_HVAC_SwitchOn::ev_HVAC_SwitchOn() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_HVAC_SwitchOn)
+    setId(ev_HVAC_SwitchOn_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_HVAC_SwitchOn::isTypeOf(const short id) const {
+    return (ev_HVAC_SwitchOn_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_HVAC_SwitchOn, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_HVAC_SwitchOn())
+
+//## event ev_CO2_OverTH()
+ev_CO2_OverTH::ev_CO2_OverTH() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_OverTH)
+    setId(ev_CO2_OverTH_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_CO2_OverTH::isTypeOf(const short id) const {
+    return (ev_CO2_OverTH_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_CO2_OverTH, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_OverTH())
+
+//## event ev_CO2_UnderTH()
+ev_CO2_UnderTH::ev_CO2_UnderTH() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_CO2_UnderTH)
+    setId(ev_CO2_UnderTH_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_CO2_UnderTH::isTypeOf(const short id) const {
+    return (ev_CO2_UnderTH_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_CO2_UnderTH, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_UnderTH())
 
 /*********************************************************************
 	File Path	: DefaultComponent\Network_Simulation\ArchitecturalAnalysisPkg.cpp

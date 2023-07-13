@@ -193,7 +193,7 @@ SOCK_LIB=
 
 
 
-Smart_Room.obj : Smart_Room.cpp Smart_Room.h    ArchitecturalAnalysisPkg.h Network.h 
+Smart_Room.obj : Smart_Room.cpp Smart_Room.h    ArchitecturalAnalysisPkg.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Smart_Room.obj" "Smart_Room.cpp" 
 

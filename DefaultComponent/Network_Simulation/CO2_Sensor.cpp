@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Fri, 23, Jun 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\CO2_Sensor.cpp
 *********************************************************************/
 
@@ -14,46 +14,108 @@
 
 //## auto_generated
 #include "CO2_Sensor.h"
-//## link itsHVAC
-#include "HVAC.h"
 //## link itsNetwork
 #include "Network.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_CO2_Sensor_CO2_Sensor_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_CO2_Sensor_get_CO2_Alarm_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_CO2_Sensor_set_CO2_Alarm_SERIALIZE aomsmethod->addAttribute("arg_CO2_state", x2String(arg_CO2_state));
 //#]
 
 //## package ArchitecturalAnalysisPkg
 
 //## class CO2_Sensor
-CO2_Sensor::CO2_Sensor() {
-    NOTIFY_CONSTRUCTOR(CO2_Sensor, CO2_Sensor(), 0, ArchitecturalAnalysisPkg_CO2_Sensor_CO2_Sensor_SERIALIZE);
-    itsHVAC = NULL;
-    itsNetwork = NULL;
+//#[ ignore
+CO2_Sensor::pCO2_C::pCO2_C() : _p_(0) {
+    itsI_CO2 = NULL;
 }
 
-CO2_Sensor::~CO2_Sensor() {
-    NOTIFY_DESTRUCTOR(~CO2_Sensor, true);
+CO2_Sensor::pCO2_C::~pCO2_C() {
     cleanUpRelations();
 }
 
-int CO2_Sensor::getCO2Level() const {
-    return CO2Level;
+void CO2_Sensor::pCO2_C::connectCO2_Sensor(CO2_Sensor* part) {
+    setItsI_CO2(part);
+    
 }
 
-void CO2_Sensor::setCO2Level(int p_CO2Level) {
-    CO2Level = p_CO2Level;
+I_CO2* CO2_Sensor::pCO2_C::getItsI_CO2() {
+    return this;
 }
 
-HVAC* CO2_Sensor::getItsHVAC() const {
-    return itsHVAC;
+bool CO2_Sensor::pCO2_C::get_CO2_Alarm() {
+    bool res = false;
+    if (itsI_CO2 != NULL) {
+        res = itsI_CO2->get_CO2_Alarm();
+    }
+    return res;
 }
 
-void CO2_Sensor::setItsHVAC(HVAC* p_HVAC) {
-    if(p_HVAC != NULL)
+void CO2_Sensor::pCO2_C::set_CO2_Alarm(bool arg_CO2_state) {
+    
+    if (itsI_CO2 != NULL) {
+        itsI_CO2->set_CO2_Alarm(arg_CO2_state);
+    }
+    
+}
+
+void CO2_Sensor::pCO2_C::setItsI_CO2(I_CO2* p_I_CO2) {
+    itsI_CO2 = p_I_CO2;
+}
+
+void CO2_Sensor::pCO2_C::cleanUpRelations() {
+    if(itsI_CO2 != NULL)
         {
-            p_HVAC->_setItsCO2_Sensor(this);
+            itsI_CO2 = NULL;
         }
-    _setItsHVAC(p_HVAC);
+}
+//#]
+
+CO2_Sensor::CO2_Sensor() : status_CO2(false) {
+    NOTIFY_CONSTRUCTOR(CO2_Sensor, CO2_Sensor(), 0, ArchitecturalAnalysisPkg_CO2_Sensor_CO2_Sensor_SERIALIZE);
+    itsNetwork = NULL;
+    initRelations();
+}
+
+CO2_Sensor::~CO2_Sensor() {
+    NOTIFY_DESTRUCTOR(~CO2_Sensor, false);
+    cleanUpRelations();
+}
+
+bool CO2_Sensor::get_CO2_Alarm() {
+    NOTIFY_OPERATION(get_CO2_Alarm, get_CO2_Alarm(), 0, ArchitecturalAnalysisPkg_CO2_Sensor_get_CO2_Alarm_SERIALIZE);
+    //#[ operation get_CO2_Alarm()
+    std::cout<<"I_CO2: get CO2 alarm state";
+    std::cout<<"CO2 alarm status=" << status_CO2 << "\n";
+    return status_CO2;
+    //#]
+}
+
+void CO2_Sensor::set_CO2_Alarm(bool arg_CO2_state) {
+    NOTIFY_OPERATION(set_CO2_Alarm, set_CO2_Alarm(bool), 1, ArchitecturalAnalysisPkg_CO2_Sensor_set_CO2_Alarm_SERIALIZE);
+    //#[ operation set_CO2_Alarm(bool)
+    std::cout<<"I_CO2: set CO2 alarm state="<<arg_CO2_state<<"\n";
+    status_CO2=arg_CO2_state;
+    //#]
+}
+
+CO2_Sensor::pCO2_C* CO2_Sensor::getPCO2() const {
+    return (CO2_Sensor::pCO2_C*) &pCO2;
+}
+
+CO2_Sensor::pCO2_C* CO2_Sensor::get_pCO2() const {
+    return (CO2_Sensor::pCO2_C*) &pCO2;
+}
+
+bool CO2_Sensor::getStatus_CO2() const {
+    return status_CO2;
+}
+
+void CO2_Sensor::setStatus_CO2(bool p_status_CO2) {
+    status_CO2 = p_status_CO2;
+    NOTIFY_SET_OPERATION;
 }
 
 Network* CO2_Sensor::getItsNetwork() const {
@@ -61,6 +123,33 @@ Network* CO2_Sensor::getItsNetwork() const {
 }
 
 void CO2_Sensor::setItsNetwork(Network* p_Network) {
+    if(p_Network != NULL)
+        {
+            p_Network->_setItsCO2_Sensor(this);
+        }
+    _setItsNetwork(p_Network);
+}
+
+void CO2_Sensor::initRelations() {
+    if (get_pCO2() != NULL) {
+        get_pCO2()->connectCO2_Sensor(this);
+    }
+}
+
+void CO2_Sensor::cleanUpRelations() {
+    if(itsNetwork != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsNetwork");
+            CO2_Sensor* p_CO2_Sensor = itsNetwork->getItsCO2_Sensor();
+            if(p_CO2_Sensor != NULL)
+                {
+                    itsNetwork->__setItsCO2_Sensor(NULL);
+                }
+            itsNetwork = NULL;
+        }
+}
+
+void CO2_Sensor::__setItsNetwork(Network* p_Network) {
     itsNetwork = p_Network;
     if(p_Network != NULL)
         {
@@ -72,53 +161,24 @@ void CO2_Sensor::setItsNetwork(Network* p_Network) {
         }
 }
 
-void CO2_Sensor::cleanUpRelations() {
-    if(itsHVAC != NULL)
-        {
-            NOTIFY_RELATION_CLEARED("itsHVAC");
-            CO2_Sensor* p_CO2_Sensor = itsHVAC->getItsCO2_Sensor();
-            if(p_CO2_Sensor != NULL)
-                {
-                    itsHVAC->__setItsCO2_Sensor(NULL);
-                }
-            itsHVAC = NULL;
-        }
+void CO2_Sensor::_setItsNetwork(Network* p_Network) {
     if(itsNetwork != NULL)
         {
-            NOTIFY_RELATION_CLEARED("itsNetwork");
-            itsNetwork = NULL;
+            itsNetwork->__setItsCO2_Sensor(NULL);
         }
+    __setItsNetwork(p_Network);
 }
 
-void CO2_Sensor::__setItsHVAC(HVAC* p_HVAC) {
-    itsHVAC = p_HVAC;
-    if(p_HVAC != NULL)
-        {
-            NOTIFY_RELATION_ITEM_ADDED("itsHVAC", p_HVAC, false, true);
-        }
-    else
-        {
-            NOTIFY_RELATION_CLEARED("itsHVAC");
-        }
-}
-
-void CO2_Sensor::_setItsHVAC(HVAC* p_HVAC) {
-    if(itsHVAC != NULL)
-        {
-            itsHVAC->__setItsCO2_Sensor(NULL);
-        }
-    __setItsHVAC(p_HVAC);
-}
-
-void CO2_Sensor::_clearItsHVAC() {
-    NOTIFY_RELATION_CLEARED("itsHVAC");
-    itsHVAC = NULL;
+void CO2_Sensor::_clearItsNetwork() {
+    NOTIFY_RELATION_CLEARED("itsNetwork");
+    itsNetwork = NULL;
 }
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
 void OMAnimatedCO2_Sensor::serializeAttributes(AOMSAttributes* aomsAttributes) const {
-    aomsAttributes->addAttribute("CO2Level", x2String(myReal->CO2Level));
+    aomsAttributes->addAttribute("status_CO2", x2String(myReal->status_CO2));
+    OMAnimatedI_CO2::serializeAttributes(aomsAttributes);
 }
 
 void OMAnimatedCO2_Sensor::serializeRelations(AOMSRelations* aomsRelations) const {
@@ -127,15 +187,15 @@ void OMAnimatedCO2_Sensor::serializeRelations(AOMSRelations* aomsRelations) cons
         {
             aomsRelations->ADD_ITEM(myReal->itsNetwork);
         }
-    aomsRelations->addRelation("itsHVAC", false, true);
-    if(myReal->itsHVAC)
-        {
-            aomsRelations->ADD_ITEM(myReal->itsHVAC);
-        }
+    OMAnimatedI_CO2::serializeRelations(aomsRelations);
 }
 //#]
 
-IMPLEMENT_META_P(CO2_Sensor, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, false, OMAnimatedCO2_Sensor)
+IMPLEMENT_META_S_P(CO2_Sensor, ArchitecturalAnalysisPkg, false, I_CO2, OMAnimatedI_CO2, OMAnimatedCO2_Sensor)
+
+OMINIT_SUPERCLASS(I_CO2, OMAnimatedI_CO2)
+
+OMREGISTER_CLASS
 #endif // _OMINSTRUMENT
 
 /*********************************************************************

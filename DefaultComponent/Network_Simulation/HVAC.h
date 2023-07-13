@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: 20181759
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: HVAC
-//!	Generated Date	: Fri, 23, Jun 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\HVAC.h
 *********************************************************************/
 
@@ -19,29 +19,84 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
-//## link itsCO2_Sensor
-class CO2_Sensor;
-
-//## link itsMovement_Sensor
-class Movement_Sensor;
-
+//## class HVAC
+#include "I_HVAC.h"
 //## link itsNetwork
 class Network;
-
-//## link itsOccupancy_Sensor
-class Occupancy_Sensor;
-
-//## link itsRoom_Touch_Panel
-class Room_Touch_Panel;
 
 //## package ArchitecturalAnalysisPkg
 
 //## class HVAC
-class HVAC {
-    ////    Friends    ////
-    
+class HVAC : public I_HVAC {
 public :
 
+//#[ ignore
+    //## package ArchitecturalAnalysisPkg
+    class pHVAC_C : public I_HVAC {
+        ////    Constructors and destructors    ////
+        
+    public :
+    
+        //## auto_generated
+        pHVAC_C();
+        
+        //## auto_generated
+        virtual ~pHVAC_C();
+        
+        ////    Operations    ////
+        
+        //## auto_generated
+        void connectHVAC(HVAC* part);
+        
+        //## auto_generated
+        I_HVAC* getItsI_HVAC();
+        
+        //## auto_generated
+        virtual bool get_AC_state();
+        
+        //## auto_generated
+        virtual bool get_HVAC_state();
+        
+        //## auto_generated
+        virtual bool get_Heating_state();
+        
+        //## auto_generated
+        virtual bool get_Vent_state();
+        
+        //## auto_generated
+        virtual void set_AC_state(bool arg_AC_state);
+        
+        //## auto_generated
+        virtual void set_HVAC_state(bool arg_HVAC_state);
+        
+        //## auto_generated
+        virtual void set_Heating_state(bool arg_Heating_state);
+        
+        //## auto_generated
+        virtual void set_Vent_state(bool arg_Vent_state);
+        
+        ////    Additional operations    ////
+        
+        //## auto_generated
+        void setItsI_HVAC(I_HVAC* p_I_HVAC);
+    
+    protected :
+    
+        //## auto_generated
+        void cleanUpRelations();
+        
+        ////    Attributes    ////
+        
+        int _p_;		//## attribute _p_
+        
+        ////    Relations and components    ////
+        
+        I_HVAC* itsI_HVAC;		//## link itsI_HVAC
+    };
+//#]
+
+    ////    Friends    ////
+    
 #ifdef _OMINSTRUMENT
     friend class OMAnimatedHVAC;
 #endif // _OMINSTRUMENT
@@ -56,132 +111,106 @@ public :
     
     ////    Operations    ////
     
-    //## operation setTemperature()
-    virtual void setTemperature();
+    //## operation get_AC_state()
+    virtual bool get_AC_state();
     
-    //## operation turnOffCooling()
-    virtual void turnOffCooling();
+    //## operation get_HVAC_state()
+    virtual bool get_HVAC_state();
     
-    //## operation turnOffHeating()
-    virtual void turnOffHeating();
+    //## operation get_Heating_state()
+    virtual bool get_Heating_state();
     
-    //## operation turnOffVentilation()
-    virtual void turnOffVentilation();
+    //## operation get_Vent_state()
+    virtual bool get_Vent_state();
     
-    //## operation turnOnCooling()
-    virtual void turnOnCooling();
+    //## operation set_AC_state(bool)
+    virtual void set_AC_state(bool arg_AC_state);
     
-    //## operation turnOnHeating()
-    virtual void turnOnHeating();
+    //## operation set_HVAC_state(bool)
+    virtual void set_HVAC_state(bool arg_HVAC_state);
     
-    //## operation turnOnVentilation()
-    virtual void turnOnVentilation();
+    //## operation set_Heating_state(bool)
+    virtual void set_Heating_state(bool arg_Heating_state);
+    
+    //## operation set_Vent_state(bool)
+    virtual void set_Vent_state(bool arg_Vent_state);
     
     ////    Additional operations    ////
     
     //## auto_generated
-    bool getCoolingOn() const;
+    pHVAC_C* getPHVAC() const;
     
     //## auto_generated
-    void setCoolingOn(bool p_coolingOn);
+    pHVAC_C* get_pHVAC() const;
     
     //## auto_generated
-    bool getHeatingOn() const;
+    bool getStatus_AC() const;
     
     //## auto_generated
-    void setHeatingOn(bool p_heatingOn);
+    void setStatus_AC(bool p_status_AC);
     
     //## auto_generated
-    int getTemperature() const;
+    bool getStatus_HVAC() const;
     
     //## auto_generated
-    void setTemperature(int p_temperature);
+    void setStatus_HVAC(bool p_status_HVAC);
     
     //## auto_generated
-    bool getVentilationOn() const;
+    bool getStatus_Heating() const;
     
     //## auto_generated
-    void setVentilationOn(bool p_ventilationOn);
+    void setStatus_Heating(bool p_status_Heating);
     
     //## auto_generated
-    CO2_Sensor* getItsCO2_Sensor() const;
+    bool getStatus_Vent() const;
     
     //## auto_generated
-    void setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
+    void setStatus_Vent(bool p_status_Vent);
     
     //## auto_generated
-    Movement_Sensor* getItsMovement_Sensor() const;
+    int getTemp() const;
     
     //## auto_generated
-    void setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor);
+    void setTemp(int p_temp);
     
     //## auto_generated
     Network* getItsNetwork() const;
     
     //## auto_generated
     void setItsNetwork(Network* p_Network);
-    
-    //## auto_generated
-    Occupancy_Sensor* getItsOccupancy_Sensor() const;
-    
-    //## auto_generated
-    void setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor);
-    
-    //## auto_generated
-    Room_Touch_Panel* getItsRoom_Touch_Panel() const;
-    
-    //## auto_generated
-    void setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel);
 
 protected :
 
+    //## auto_generated
+    void initRelations();
+    
     //## auto_generated
     void cleanUpRelations();
     
     ////    Attributes    ////
     
-    bool coolingOn;		//## attribute coolingOn
+    bool status_AC;		//## attribute status_AC
     
-    bool heatingOn;		//## attribute heatingOn
+    bool status_HVAC;		//## attribute status_HVAC
     
-    int temperature;		//## attribute temperature
+    bool status_Heating;		//## attribute status_Heating
     
-    bool ventilationOn;		//## attribute ventilationOn
+    bool status_Vent;		//## attribute status_Vent
+    
+    int temp;		//## attribute temp
     
     ////    Relations and components    ////
     
-    CO2_Sensor* itsCO2_Sensor;		//## link itsCO2_Sensor
-    
-    Movement_Sensor* itsMovement_Sensor;		//## link itsMovement_Sensor
-    
+//#[ ignore
+    pHVAC_C pHVAC;
+//#]
+
     Network* itsNetwork;		//## link itsNetwork
-    
-    Occupancy_Sensor* itsOccupancy_Sensor;		//## link itsOccupancy_Sensor
-    
-    Room_Touch_Panel* itsRoom_Touch_Panel;		//## link itsRoom_Touch_Panel
     
     ////    Framework operations    ////
 
 public :
 
-    //## auto_generated
-    void __setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
-    
-    //## auto_generated
-    void _setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
-    
-    //## auto_generated
-    void _clearItsCO2_Sensor();
-    
-    //## auto_generated
-    void __setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor);
-    
-    //## auto_generated
-    void _setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor);
-    
-    //## auto_generated
-    void _clearItsMovement_Sensor();
-    
     //## auto_generated
     void __setItsNetwork(Network* p_Network);
     
@@ -190,29 +219,11 @@ public :
     
     //## auto_generated
     void _clearItsNetwork();
-    
-    //## auto_generated
-    void __setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor);
-    
-    //## auto_generated
-    void _setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor);
-    
-    //## auto_generated
-    void _clearItsOccupancy_Sensor();
-    
-    //## auto_generated
-    void __setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel);
-    
-    //## auto_generated
-    void _setItsRoom_Touch_Panel(Room_Touch_Panel* p_Room_Touch_Panel);
-    
-    //## auto_generated
-    void _clearItsRoom_Touch_Panel();
 };
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
-class OMAnimatedHVAC : virtual public AOMInstance {
+class OMAnimatedHVAC : public OMAnimatedI_HVAC {
     DECLARE_META(HVAC, OMAnimatedHVAC)
     
     ////    Framework operations    ////

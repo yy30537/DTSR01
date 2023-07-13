@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_HVAC
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_HVAC.h
 *********************************************************************/
 
@@ -41,9 +41,6 @@ public :
     
     ////    Operations    ////
     
-    //## operation getTemp()
-    virtual int getTemp() = 0;
-    
     //## operation get_AC_state()
     virtual bool get_AC_state() = 0;
     
@@ -55,9 +52,6 @@ public :
     
     //## operation get_Vent_state()
     virtual bool get_Vent_state() = 0;
-    
-    //## operation setTemp(int)
-    virtual void setTemp(int arg_temp) = 0;
     
     //## operation set_AC_state(bool)
     virtual void set_AC_state(bool arg_AC_state) = 0;

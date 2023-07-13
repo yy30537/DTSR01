@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_HVAC
-//!	Generated Date	: Tue, 11, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_HVAC.cpp
 *********************************************************************/
 
@@ -17,8 +17,6 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_HVAC_I_HVAC_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_I_HVAC_getTemp_SERIALIZE OM_NO_OP
-
 #define ArchitecturalAnalysisPkg_I_HVAC_get_AC_state_SERIALIZE OM_NO_OP
 
 #define ArchitecturalAnalysisPkg_I_HVAC_get_HVAC_state_SERIALIZE OM_NO_OP
@@ -26,8 +24,6 @@
 #define ArchitecturalAnalysisPkg_I_HVAC_get_Heating_state_SERIALIZE OM_NO_OP
 
 #define ArchitecturalAnalysisPkg_I_HVAC_get_Vent_state_SERIALIZE OM_NO_OP
-
-#define ArchitecturalAnalysisPkg_I_HVAC_setTemp_SERIALIZE aomsmethod->addAttribute("arg_temp", x2String(arg_temp));
 
 #define ArchitecturalAnalysisPkg_I_HVAC_set_AC_state_SERIALIZE aomsmethod->addAttribute("arg_AC_state", x2String(arg_AC_state));
 

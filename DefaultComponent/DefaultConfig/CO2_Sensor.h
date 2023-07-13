@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Wed, 12, Jul 2023  
+//!	Generated Date	: Thu, 13, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\CO2_Sensor.h
 *********************************************************************/
 
@@ -23,10 +23,6 @@
 #include "I_CO2.h"
 //## link itsNetwork
 class Network;
-
-//#[ ignore
-#define OMAnim_ArchitecturalAnalysisPkg_CO2_Sensor_setCO2_Level_Triggered_bool_ARGS_DECLARATION bool p_CO2_Level_Triggered;
-//#]
 
 //## package ArchitecturalAnalysisPkg
 
@@ -112,10 +108,10 @@ public :
     pCO2_C* get_pCO2() const;
     
     //## auto_generated
-    bool getCO2_Level_Triggered() const;
+    bool getStatus_CO2() const;
     
     //## auto_generated
-    void setCO2_Level_Triggered(bool p_CO2_Level_Triggered);
+    void setStatus_CO2(bool p_status_CO2);
     
     //## auto_generated
     Network* getItsNetwork() const;
@@ -133,7 +129,7 @@ protected :
     
     ////    Attributes    ////
     
-    bool CO2_Level_Triggered;		//## attribute CO2_Level_Triggered
+    bool status_CO2;		//## attribute status_CO2
     
     ////    Relations and components    ////
     
@@ -158,13 +154,9 @@ public :
 };
 
 #ifdef _OMINSTRUMENT
-DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_CO2_Sensor_setCO2_Level_Triggered_bool)
-
 //#[ ignore
 class OMAnimatedCO2_Sensor : public OMAnimatedI_CO2 {
     DECLARE_META(CO2_Sensor, OMAnimatedCO2_Sensor)
-    
-    DECLARE_META_OP(ArchitecturalAnalysisPkg_CO2_Sensor_setCO2_Level_Triggered_bool)
     
     ////    Framework operations    ////
     
