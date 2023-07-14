@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Thu, 13, Jul 2023  
+//!	Generated Date	: Fri, 14, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.h
 *********************************************************************/
 
@@ -50,6 +50,15 @@ class I_CO2;
 class I_HVAC;
 
 //## auto_generated
+class I_Light;
+
+//## auto_generated
+class I_OS;
+
+//## auto_generated
+class I_Weather;
+
+//## classInstance itsLights
 class Lights;
 
 //## auto_generated
@@ -61,7 +70,7 @@ class Movement_Sensor;
 //## classInstance itsNetwork
 class Network;
 
-//## auto_generated
+//## classInstance itsOccupancy_Sensor
 class Occupancy_Sensor;
 
 //## auto_generated
@@ -79,7 +88,7 @@ class Speakers;
 //## auto_generated
 class Ventilation;
 
-//## auto_generated
+//## classInstance itsWeather_Forecast
 class Weather_Forecast;
 
 //## auto_generated
@@ -105,6 +114,22 @@ class Webcam;
 #define ev_CO2_AboveTH_ArchitecturalAnalysisPkg_id 18209
 
 #define ev_CO2_BelowTH_ArchitecturalAnalysisPkg_id 18210
+
+#define ev_gets_too_hot_ArchitecturalAnalysisPkg_id 18211
+
+#define ev_gets_too_cold_ArchitecturalAnalysisPkg_id 18212
+
+#define ev_gets_not_hot_ArchitecturalAnalysisPkg_id 18213
+
+#define ev_gets_not_cold_ArchitecturalAnalysisPkg_id 18214
+
+#define ev_SetLightIntensity_ArchitecturalAnalysisPkg_id 18215
+
+#define ev_TurnOn_Light_ArchitecturalAnalysisPkg_id 18216
+
+#define ev_TurnOff_Light_ArchitecturalAnalysisPkg_id 18217
+
+#define ev_turnOnLight_ArchitecturalAnalysisPkg_id 18218
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -124,6 +149,15 @@ bool ArchitecturalAnalysisPkg_startBehavior();
 
 //## classInstance itsCO2_Sensor
 extern CO2_Sensor itsCO2_Sensor;
+
+//## classInstance itsWeather_Forecast
+extern Weather_Forecast itsWeather_Forecast;
+
+//## classInstance itsLights
+extern Lights itsLights;
+
+//## classInstance itsOccupancy_Sensor
+extern Occupancy_Sensor itsOccupancy_Sensor;
 
 //#[ ignore
 class ArchitecturalAnalysisPkg_OMInitializer {
@@ -425,6 +459,238 @@ public :
 //#[ ignore
 class OMAnimatedev_CO2_BelowTH : virtual public AOMEvent {
     DECLARE_META_EVENT(ev_CO2_BelowTH)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_gets_too_hot()
+class ev_gets_too_hot : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_gets_too_hot;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_gets_too_hot();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_gets_too_hot : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_gets_too_hot)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_gets_too_cold()
+class ev_gets_too_cold : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_gets_too_cold;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_gets_too_cold();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_gets_too_cold : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_gets_too_cold)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_gets_not_hot()
+class ev_gets_not_hot : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_gets_not_hot;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_gets_not_hot();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_gets_not_hot : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_gets_not_hot)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_gets_not_cold()
+class ev_gets_not_cold : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_gets_not_cold;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_gets_not_cold();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_gets_not_cold : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_gets_not_cold)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_SetLightIntensity()
+class ev_SetLightIntensity : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_SetLightIntensity;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_SetLightIntensity();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_SetLightIntensity : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_SetLightIntensity)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_TurnOn_Light()
+class ev_TurnOn_Light : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_TurnOn_Light;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_TurnOn_Light();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_TurnOn_Light : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_TurnOn_Light)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_TurnOff_Light()
+class ev_TurnOff_Light : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_TurnOff_Light;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_TurnOff_Light();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_TurnOff_Light : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_TurnOff_Light)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_turnOnLight()
+class ev_turnOnLight : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_turnOnLight;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_turnOnLight();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_turnOnLight : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_turnOnLight)
 };
 //#]
 #endif // _OMINSTRUMENT

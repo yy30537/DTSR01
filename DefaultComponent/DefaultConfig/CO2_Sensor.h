@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Thu, 13, Jul 2023  
+//!	Generated Date	: Fri, 14, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\CO2_Sensor.h
 *********************************************************************/
 
@@ -125,10 +125,6 @@ protected :
     
     bool CO2_Alarm_state;		//## attribute CO2_Alarm_state
     
-//#[ ignore
-    pCO2_C pCO2;
-//#]
-
     Network* itsNetwork;		//## link itsNetwork
 
 public :
@@ -141,6 +137,12 @@ public :
     
     //## auto_generated
     void _clearItsNetwork();
+
+protected :
+
+//#[ ignore
+    pCO2_C pCO2;
+//#]
 };
 
 #ifdef _OMINSTRUMENT

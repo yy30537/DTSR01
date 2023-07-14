@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Thu, 13, Jul 2023  
+//!	Generated Date	: Fri, 14, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.h
 *********************************************************************/
 
@@ -31,6 +31,12 @@
 #include "I_HVAC.h"
 //## class pNetwork_C
 #include "I_CO2.h"
+//## class pNetwork_C
+#include "I_Weather.h"
+//## class pNetwork_C
+#include "I_Light.h"
+//## class pNetwork_C
+#include "I_OS.h"
 //## link itsCO2_Sensor
 class CO2_Sensor;
 
@@ -40,6 +46,15 @@ class HVAC;
 //## link itsLights
 class Lights;
 
+//## link itsMovement_Sensor
+class Movement_Sensor;
+
+//## link itsOccupancy_Sensor
+class Occupancy_Sensor;
+
+//## link itsWeather_Forecast
+class Weather_Forecast;
+
 //## package ArchitecturalAnalysisPkg
 
 //## class Network
@@ -48,7 +63,7 @@ public :
 
 //#[ ignore
     //## package ArchitecturalAnalysisPkg
-    class pNetwork_C : public I_HVAC, public I_CO2 {
+    class pNetwork_C : public I_HVAC, public I_CO2, public I_Weather, public I_Light, public I_OS {
         ////    Constructors and destructors    ////
         
     public :
@@ -62,10 +77,31 @@ public :
         ////    Operations    ////
         
         //## auto_generated
+        virtual bool getCold();
+        
+        //## auto_generated
+        virtual bool getHot();
+        
+        //## auto_generated
+        virtual int getItensity();
+        
+        //## auto_generated
         I_CO2* getItsI_CO2();
         
         //## auto_generated
         I_HVAC* getItsI_HVAC();
+        
+        //## auto_generated
+        I_Light* getItsI_Light();
+        
+        //## auto_generated
+        I_OS* getItsI_OS();
+        
+        //## auto_generated
+        I_Weather* getItsI_Weather();
+        
+        //## auto_generated
+        virtual bool getOccupied();
         
         //## auto_generated
         Network::pNetwork_C* getOutBound();
@@ -87,6 +123,18 @@ public :
         
         //## auto_generated
         virtual bool get_Vent_state();
+        
+        //## auto_generated
+        virtual void setCold(bool arg_cold);
+        
+        //## auto_generated
+        virtual void setHot(bool arg_hot);
+        
+        //## auto_generated
+        virtual void setIntensity(int arg_intensity);
+        
+        //## auto_generated
+        virtual void setOccupied(bool arg_occupied);
         
         //## auto_generated
         virtual void setTemp(int arg_temp);
@@ -113,6 +161,15 @@ public :
         
         //## auto_generated
         void setItsI_HVAC(I_HVAC* p_I_HVAC);
+        
+        //## auto_generated
+        void setItsI_Light(I_Light* p_I_Light);
+        
+        //## auto_generated
+        void setItsI_OS(I_OS* p_I_OS);
+        
+        //## auto_generated
+        void setItsI_Weather(I_Weather* p_I_Weather);
     
     protected :
     
@@ -128,6 +185,12 @@ public :
         I_CO2* itsI_CO2;		//## link itsI_CO2
         
         I_HVAC* itsI_HVAC;		//## link itsI_HVAC
+        
+        I_Light* itsI_Light;		//## link itsI_Light
+        
+        I_OS* itsI_OS;		//## link itsI_OS
+        
+        I_Weather* itsI_Weather;		//## link itsI_Weather
     };
 //#]
 
@@ -143,7 +206,7 @@ public :
     Network(IOxfActive* theActiveContext = 0);
     
     //## auto_generated
-    ~Network();
+    virtual ~Network();
     
     ////    Additional operations    ////
     
@@ -190,8 +253,6 @@ protected :
     
     HVAC* itsHVAC;		//## link itsHVAC
     
-    Lights* itsLights;		//## link itsLights
-    
     ////    Framework operations    ////
 
 public :
@@ -212,14 +273,18 @@ public :
     
     //## auto_generated
     void setItsCO2_Sensor(CO2_Sensor* p_CO2_Sensor);
+    
+    //## auto_generated
+    Weather_Forecast* getItsWeather_Forecast() const;
+    
+    //## auto_generated
+    void setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast);
 
 protected :
 
-//#[ ignore
-    pNetwork_C pNetwork;
-//#]
-
     CO2_Sensor* itsCO2_Sensor;		//## link itsCO2_Sensor
+    
+    Weather_Forecast* itsWeather_Forecast;		//## link itsWeather_Forecast
 
 public :
 
@@ -232,6 +297,75 @@ public :
     //## auto_generated
     void _clearItsCO2_Sensor();
     
+    //## auto_generated
+    void __setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast);
+    
+    //## auto_generated
+    void _setItsWeather_Forecast(Weather_Forecast* p_Weather_Forecast);
+    
+    //## auto_generated
+    void _clearItsWeather_Forecast();
+    
+    //## operation setLightIntensity(int)
+    virtual void setLightIntensity(int arg_intensity);
+    
+    //## auto_generated
+    Movement_Sensor* getItsMovement_Sensor() const;
+    
+    //## auto_generated
+    void setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor);
+    
+    //## auto_generated
+    Occupancy_Sensor* getItsOccupancy_Sensor() const;
+    
+    //## auto_generated
+    void setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor);
+
+protected :
+
+    Lights* itsLights;		//## link itsLights
+    
+    Movement_Sensor* itsMovement_Sensor;		//## link itsMovement_Sensor
+    
+    Occupancy_Sensor* itsOccupancy_Sensor;		//## link itsOccupancy_Sensor
+
+public :
+
+    //## auto_generated
+    void __setItsLights(Lights* p_Lights);
+    
+    //## auto_generated
+    void _setItsLights(Lights* p_Lights);
+    
+    //## auto_generated
+    void _clearItsLights();
+    
+    //## auto_generated
+    void __setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor);
+    
+    //## auto_generated
+    void _setItsMovement_Sensor(Movement_Sensor* p_Movement_Sensor);
+    
+    //## auto_generated
+    void _clearItsMovement_Sensor();
+    
+    //## auto_generated
+    void __setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor);
+    
+    //## auto_generated
+    void _setItsOccupancy_Sensor(Occupancy_Sensor* p_Occupancy_Sensor);
+    
+    //## auto_generated
+    void _clearItsOccupancy_Sensor();
+
+protected :
+
+//#[ ignore
+    pNetwork_C pNetwork;
+//#]
+
+public :
+
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
@@ -242,122 +376,26 @@ public :
     //## statechart_method
     virtual IOxfReactive::TakeEventStatus rootState_processEvent();
     
-    // HVAC_Enabled:
+    // On:
     //## statechart_method
-    inline bool HVAC_Enabled_IN() const;
+    inline bool On_IN() const;
     
+    // Off:
     //## statechart_method
-    void HVAC_Enabled_entDef();
-    
-    //## statechart_method
-    void HVAC_Enabled_exit();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus HVAC_Enabled_processEvent();
-    
-    // state_12:
-    //## statechart_method
-    inline bool state_12_IN() const;
-    
-    //## statechart_method
-    void state_12_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_12_processEvent();
-    
-    // Vent_On:
-    //## statechart_method
-    inline bool Vent_On_IN() const;
-    
-    // Vent_OFF:
-    //## statechart_method
-    inline bool Vent_OFF_IN() const;
-    
-    // state_11:
-    //## statechart_method
-    inline bool state_11_IN() const;
-    
-    //## statechart_method
-    void state_11_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_11_processEvent();
-    
-    // Heating_On:
-    //## statechart_method
-    inline bool Heating_On_IN() const;
-    
-    // Heating_OFF:
-    //## statechart_method
-    inline bool Heating_OFF_IN() const;
-    
-    // state_10:
-    //## statechart_method
-    inline bool state_10_IN() const;
-    
-    //## statechart_method
-    void state_10_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_10_processEvent();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_10_handleEvent();
-    
-    // AC_ON:
-    //## statechart_method
-    inline bool AC_ON_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus AC_ON_handleEvent();
-    
-    // AC_OFF:
-    //## statechart_method
-    inline bool AC_OFF_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus AC_OFF_handleEvent();
-    
-    // HVAC_Disabled:
-    //## statechart_method
-    inline bool HVAC_Disabled_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus HVAC_Disabled_handleEvent();
+    inline bool Off_IN() const;
 
 protected :
 
 //#[ ignore
     enum Network_Enum {
         OMNonState = 0,
-        HVAC_Enabled = 1,
-        state_12 = 2,
-        Vent_On = 3,
-        Vent_OFF = 4,
-        state_11 = 5,
-        Heating_On = 6,
-        Heating_OFF = 7,
-        state_10 = 8,
-        AC_ON = 9,
-        AC_OFF = 10,
-        HVAC_Disabled = 11
+        On = 1,
+        Off = 2
     };
     
     int rootState_subState;
     
     int rootState_active;
-    
-    int state_12_subState;
-    
-    int state_12_active;
-    
-    int state_11_subState;
-    
-    int state_11_active;
-    
-    int state_10_subState;
-    
-    int state_10_active;
 //#]
 };
 
@@ -378,37 +416,10 @@ public :
     void rootState_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void HVAC_Enabled_serializeStates(AOMSState* aomsState) const;
+    void On_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void state_12_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Vent_On_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Vent_OFF_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void state_11_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Heating_On_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Heating_OFF_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void state_10_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void AC_ON_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void AC_OFF_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void HVAC_Disabled_serializeStates(AOMSState* aomsState) const;
+    void Off_serializeStates(AOMSState* aomsState) const;
 };
 //#]
 #endif // _OMINSTRUMENT
@@ -417,48 +428,12 @@ inline bool Network::rootState_IN() const {
     return true;
 }
 
-inline bool Network::HVAC_Enabled_IN() const {
-    return rootState_subState == HVAC_Enabled;
+inline bool Network::On_IN() const {
+    return rootState_subState == On;
 }
 
-inline bool Network::state_12_IN() const {
-    return HVAC_Enabled_IN();
-}
-
-inline bool Network::Vent_On_IN() const {
-    return state_12_subState == Vent_On;
-}
-
-inline bool Network::Vent_OFF_IN() const {
-    return state_12_subState == Vent_OFF;
-}
-
-inline bool Network::state_11_IN() const {
-    return HVAC_Enabled_IN();
-}
-
-inline bool Network::Heating_On_IN() const {
-    return state_11_subState == Heating_On;
-}
-
-inline bool Network::Heating_OFF_IN() const {
-    return state_11_subState == Heating_OFF;
-}
-
-inline bool Network::state_10_IN() const {
-    return HVAC_Enabled_IN();
-}
-
-inline bool Network::AC_ON_IN() const {
-    return state_10_subState == AC_ON;
-}
-
-inline bool Network::AC_OFF_IN() const {
-    return state_10_subState == AC_OFF;
-}
-
-inline bool Network::HVAC_Disabled_IN() const {
-    return rootState_subState == HVAC_Disabled;
+inline bool Network::Off_IN() const {
+    return rootState_subState == Off;
 }
 
 #endif
