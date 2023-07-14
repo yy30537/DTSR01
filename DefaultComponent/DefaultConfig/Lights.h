@@ -94,9 +94,6 @@ public :
     //## operation getItensity()
     virtual int getItensity();
     
-    //## operation setIntensity(int)
-    virtual void setIntensity(int arg_intensity);
-    
     //## auto_generated
     pLights_C* getPLights() const;
     
@@ -134,6 +131,9 @@ public :
     
     //## auto_generated
     void _clearItsNetwork();
+    
+    //## operation setIntensity(int)
+    virtual void setIntensity(int arg_intensity);
 
 protected :
 

@@ -91,14 +91,6 @@ int Lights::getItensity() {
     //#]
 }
 
-void Lights::setIntensity(int arg_intensity) {
-    NOTIFY_OPERATION(setIntensity, setIntensity(int), 1, ArchitecturalAnalysisPkg_Lights_setIntensity_SERIALIZE);
-    //#[ operation setIntensity(int)
-    intensity=arg_intensity;
-    //#]
-    NOTIFY_SET_OPERATION;
-}
-
 Lights::pLights_C* Lights::getPLights() const {
     return (Lights::pLights_C*) &pLights;
 }
@@ -165,6 +157,14 @@ void Lights::_setItsNetwork(Network* p_Network) {
 void Lights::_clearItsNetwork() {
     NOTIFY_RELATION_CLEARED("itsNetwork");
     itsNetwork = NULL;
+}
+
+void Lights::setIntensity(int arg_intensity) {
+    NOTIFY_OPERATION(setIntensity, setIntensity(int), 1, ArchitecturalAnalysisPkg_Lights_setIntensity_SERIALIZE);
+    //#[ operation setIntensity(int)
+    intensity=arg_intensity;
+    //#]
+    NOTIFY_SET_OPERATION;
 }
 
 #ifdef _OMINSTRUMENT

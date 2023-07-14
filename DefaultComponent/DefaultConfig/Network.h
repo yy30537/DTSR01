@@ -206,7 +206,7 @@ public :
     Network(IOxfActive* theActiveContext = 0);
     
     //## auto_generated
-    virtual ~Network();
+    ~Network();
     
     ////    Additional operations    ////
     
@@ -306,9 +306,6 @@ public :
     //## auto_generated
     void _clearItsWeather_Forecast();
     
-    //## operation setLightIntensity(int)
-    virtual void setLightIntensity(int arg_intensity);
-    
     //## auto_generated
     Movement_Sensor* getItsMovement_Sensor() const;
     
@@ -360,6 +357,12 @@ public :
 
 protected :
 
+    //## auto_generated
+    void cancelTimeouts();
+    
+    //## auto_generated
+    bool cancelTimeout(const IOxfTimeout* arg);
+    
 //#[ ignore
     pNetwork_C pNetwork;
 //#]
@@ -383,6 +386,10 @@ public :
     // Off:
     //## statechart_method
     inline bool Off_IN() const;
+    
+    // accepttimeevent_6:
+    //## statechart_method
+    inline bool accepttimeevent_6_IN() const;
 
 protected :
 
@@ -390,12 +397,15 @@ protected :
     enum Network_Enum {
         OMNonState = 0,
         On = 1,
-        Off = 2
+        Off = 2,
+        accepttimeevent_6 = 3
     };
     
     int rootState_subState;
     
     int rootState_active;
+    
+    IOxfTimeout* rootState_timeout;
 //#]
 };
 
@@ -420,6 +430,9 @@ public :
     
     //## statechart_method
     void Off_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void accepttimeevent_6_serializeStates(AOMSState* aomsState) const;
 };
 //#]
 #endif // _OMINSTRUMENT
@@ -434,6 +447,10 @@ inline bool Network::On_IN() const {
 
 inline bool Network::Off_IN() const {
     return rootState_subState == Off;
+}
+
+inline bool Network::accepttimeevent_6_IN() const {
+    return rootState_subState == accepttimeevent_6;
 }
 
 #endif

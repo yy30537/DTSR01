@@ -30,8 +30,6 @@
 #include "Occupancy_Sensor.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Network_Network_SERIALIZE OM_NO_OP
-
-#define ArchitecturalAnalysisPkg_Network_setLightIntensity_SERIALIZE aomsmethod->addAttribute("arg_intensity", x2String(arg_intensity));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -293,6 +291,7 @@ Network::Network(IOxfActive* theActiveContext) : temp_Network(26) {
 Network::~Network() {
     NOTIFY_DESTRUCTOR(~Network, true);
     cleanUpRelations();
+    cancelTimeouts();
 }
 
 Network::pNetwork_C* Network::getPNetwork() const {
@@ -344,6 +343,7 @@ bool Network::startBehavior() {
 void Network::initStatechart() {
     rootState_subState = OMNonState;
     rootState_active = OMNonState;
+    rootState_timeout = NULL;
 }
 
 void Network::cleanUpRelations() {
@@ -508,13 +508,6 @@ void Network::_clearItsWeather_Forecast() {
     itsWeather_Forecast = NULL;
 }
 
-void Network::setLightIntensity(int arg_intensity) {
-    NOTIFY_OPERATION(setLightIntensity, setLightIntensity(int), 1, ArchitecturalAnalysisPkg_Network_setLightIntensity_SERIALIZE);
-    //#[ operation setLightIntensity(int)
-    //intensity=arg_intensity;
-    //#]
-}
-
 Movement_Sensor* Network::getItsMovement_Sensor() const {
     return itsMovement_Sensor;
 }
@@ -614,13 +607,24 @@ void Network::_clearItsOccupancy_Sensor() {
     itsOccupancy_Sensor = NULL;
 }
 
+void Network::cancelTimeouts() {
+    cancel(rootState_timeout);
+}
+
+bool Network::cancelTimeout(const IOxfTimeout* arg) {
+    bool res = false;
+    if(rootState_timeout == arg)
+        {
+            rootState_timeout = NULL;
+            res = true;
+        }
+    return res;
+}
+
 void Network::rootState_entDef() {
     {
         NOTIFY_STATE_ENTERED("ROOT");
         NOTIFY_TRANSITION_STARTED("0");
-        //#[ transition 0 
-        OUT_PORT(pNetwork)->set_AC_state(true);
-        //#]
         NOTIFY_STATE_ENTERED("ROOT.Off");
         rootState_subState = Off;
         rootState_active = Off;
@@ -644,6 +648,7 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
                     NOTIFY_STATE_ENTERED("ROOT.On");
                     rootState_subState = On;
                     rootState_active = On;
+                    rootState_timeout = scheduleTimeout(1000, "ROOT.On");
                     NOTIFY_TRANSITION_TERMINATED("2");
                     res = eventConsumed;
                 }
@@ -653,9 +658,25 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
         // State On
         case On:
         {
-            if(IS_EVENT_TYPE_OF(ev_TurnOff_Light_ArchitecturalAnalysisPkg_id))
+            if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+                {
+                    if(getCurrentEvent() == rootState_timeout)
+                        {
+                            NOTIFY_TRANSITION_STARTED("3");
+                            cancel(rootState_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.On");
+                            NOTIFY_STATE_ENTERED("ROOT.accepttimeevent_6");
+                            pushNullTransition();
+                            rootState_subState = accepttimeevent_6;
+                            rootState_active = accepttimeevent_6;
+                            NOTIFY_TRANSITION_TERMINATED("3");
+                            res = eventConsumed;
+                        }
+                }
+            else if(IS_EVENT_TYPE_OF(ev_TurnOff_Light_ArchitecturalAnalysisPkg_id))
                 {
                     NOTIFY_TRANSITION_STARTED("1");
+                    cancel(rootState_timeout);
                     NOTIFY_STATE_EXITED("ROOT.On");
                     //#[ transition 1 
                     OUT_PORT(pNetwork)->setIntensity(0);
@@ -665,6 +686,42 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
                     rootState_active = Off;
                     NOTIFY_TRANSITION_TERMINATED("1");
                     res = eventConsumed;
+                }
+            
+        }
+        break;
+        case accepttimeevent_6:
+        {
+            if(IS_EVENT_TYPE_OF(OMNullEventId))
+                {
+                    //## transition 5 
+                    if(OUT_PORT(pNetwork)->getItensity()==0)
+                        {
+                            NOTIFY_TRANSITION_STARTED("4");
+                            NOTIFY_TRANSITION_STARTED("5");
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.accepttimeevent_6");
+                            NOTIFY_STATE_ENTERED("ROOT.Off");
+                            rootState_subState = Off;
+                            rootState_active = Off;
+                            NOTIFY_TRANSITION_TERMINATED("5");
+                            NOTIFY_TRANSITION_TERMINATED("4");
+                            res = eventConsumed;
+                        }
+                    else
+                        {
+                            NOTIFY_TRANSITION_STARTED("4");
+                            NOTIFY_TRANSITION_STARTED("6");
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.accepttimeevent_6");
+                            NOTIFY_STATE_ENTERED("ROOT.On");
+                            rootState_subState = On;
+                            rootState_active = On;
+                            rootState_timeout = scheduleTimeout(1000, "ROOT.On");
+                            NOTIFY_TRANSITION_TERMINATED("6");
+                            NOTIFY_TRANSITION_TERMINATED("4");
+                            res = eventConsumed;
+                        }
                 }
             
         }
@@ -727,6 +784,11 @@ void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {
             On_serializeStates(aomsState);
         }
         break;
+        case Network::accepttimeevent_6:
+        {
+            accepttimeevent_6_serializeStates(aomsState);
+        }
+        break;
         default:
             break;
     }
@@ -738,6 +800,10 @@ void OMAnimatedNetwork::On_serializeStates(AOMSState* aomsState) const {
 
 void OMAnimatedNetwork::Off_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT.Off");
+}
+
+void OMAnimatedNetwork::accepttimeevent_6_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.accepttimeevent_6");
 }
 //#]
 
