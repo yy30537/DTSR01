@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Fri, 14, Jul 2023  
+//!	Generated Date	: Sat, 15, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.cpp
 *********************************************************************/
 
@@ -343,7 +343,9 @@ bool Network::startBehavior() {
 void Network::initStatechart() {
     rootState_subState = OMNonState;
     rootState_active = OMNonState;
+    On_subState = OMNonState;
     rootState_timeout = NULL;
+    On_timeout = NULL;
 }
 
 void Network::cleanUpRelations() {
@@ -609,6 +611,7 @@ void Network::_clearItsOccupancy_Sensor() {
 
 void Network::cancelTimeouts() {
     cancel(rootState_timeout);
+    cancel(On_timeout);
 }
 
 bool Network::cancelTimeout(const IOxfTimeout* arg) {
@@ -616,6 +619,11 @@ bool Network::cancelTimeout(const IOxfTimeout* arg) {
     if(rootState_timeout == arg)
         {
             rootState_timeout = NULL;
+            res = true;
+        }
+    if(On_timeout == arg)
+        {
+            On_timeout = NULL;
             res = true;
         }
     return res;
@@ -645,81 +653,37 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
                     //#[ transition 2 
                     OUT_PORT(pNetwork)->setIntensity(5);
                     //#]
-                    NOTIFY_STATE_ENTERED("ROOT.On");
-                    rootState_subState = On;
-                    rootState_active = On;
-                    rootState_timeout = scheduleTimeout(1000, "ROOT.On");
+                    On_entDef();
                     NOTIFY_TRANSITION_TERMINATED("2");
                     res = eventConsumed;
                 }
             
         }
         break;
-        // State On
-        case On:
+        // State Op
+        case Op:
         {
-            if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
-                {
-                    if(getCurrentEvent() == rootState_timeout)
-                        {
-                            NOTIFY_TRANSITION_STARTED("3");
-                            cancel(rootState_timeout);
-                            NOTIFY_STATE_EXITED("ROOT.On");
-                            NOTIFY_STATE_ENTERED("ROOT.accepttimeevent_6");
-                            pushNullTransition();
-                            rootState_subState = accepttimeevent_6;
-                            rootState_active = accepttimeevent_6;
-                            NOTIFY_TRANSITION_TERMINATED("3");
-                            res = eventConsumed;
-                        }
-                }
-            else if(IS_EVENT_TYPE_OF(ev_TurnOff_Light_ArchitecturalAnalysisPkg_id))
-                {
-                    NOTIFY_TRANSITION_STARTED("1");
-                    cancel(rootState_timeout);
-                    NOTIFY_STATE_EXITED("ROOT.On");
-                    //#[ transition 1 
-                    OUT_PORT(pNetwork)->setIntensity(0);
-                    //#]
-                    NOTIFY_STATE_ENTERED("ROOT.Off");
-                    rootState_subState = Off;
-                    rootState_active = Off;
-                    NOTIFY_TRANSITION_TERMINATED("1");
-                    res = eventConsumed;
-                }
-            
+            res = Op_handleEvent();
+        }
+        break;
+        case accepttimeevent_7:
+        {
+            res = accepttimeevent_7_handleEvent();
         }
         break;
         case accepttimeevent_6:
         {
             if(IS_EVENT_TYPE_OF(OMNullEventId))
                 {
-                    //## transition 5 
-                    if(OUT_PORT(pNetwork)->getItensity()==0)
+                    if(TRUE)
                         {
-                            NOTIFY_TRANSITION_STARTED("4");
                             NOTIFY_TRANSITION_STARTED("5");
+                            NOTIFY_TRANSITION_STARTED("7");
                             popNullTransition();
                             NOTIFY_STATE_EXITED("ROOT.accepttimeevent_6");
-                            NOTIFY_STATE_ENTERED("ROOT.Off");
-                            rootState_subState = Off;
-                            rootState_active = Off;
+                            On_entDef();
+                            NOTIFY_TRANSITION_TERMINATED("7");
                             NOTIFY_TRANSITION_TERMINATED("5");
-                            NOTIFY_TRANSITION_TERMINATED("4");
-                            res = eventConsumed;
-                        }
-                    else
-                        {
-                            NOTIFY_TRANSITION_STARTED("4");
-                            NOTIFY_TRANSITION_STARTED("6");
-                            popNullTransition();
-                            NOTIFY_STATE_EXITED("ROOT.accepttimeevent_6");
-                            NOTIFY_STATE_ENTERED("ROOT.On");
-                            rootState_subState = On;
-                            rootState_active = On;
-                            rootState_timeout = scheduleTimeout(1000, "ROOT.On");
-                            NOTIFY_TRANSITION_TERMINATED("6");
-                            NOTIFY_TRANSITION_TERMINATED("4");
                             res = eventConsumed;
                         }
                 }
@@ -729,6 +693,136 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
         default:
             break;
     }
+    return res;
+}
+
+void Network::On_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.On");
+    rootState_subState = On;
+    rootState_timeout = scheduleTimeout(3000, "ROOT.On");
+    NOTIFY_TRANSITION_STARTED("3");
+    NOTIFY_STATE_ENTERED("ROOT.On.Op");
+    On_subState = Op;
+    rootState_active = Op;
+    On_timeout = scheduleTimeout(1000, "ROOT.On.Op");
+    NOTIFY_TRANSITION_TERMINATED("3");
+}
+
+IOxfReactive::TakeEventStatus Network::On_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+        {
+            if(getCurrentEvent() == rootState_timeout)
+                {
+                    NOTIFY_TRANSITION_STARTED("4");
+                    switch (On_subState) {
+                        // State Op
+                        case Op:
+                        {
+                            cancel(On_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.On.Op");
+                        }
+                        break;
+                        case accepttimeevent_7:
+                        {
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.On.accepttimeevent_7");
+                        }
+                        break;
+                        default:
+                            break;
+                    }
+                    On_subState = OMNonState;
+                    cancel(rootState_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.On");
+                    NOTIFY_STATE_ENTERED("ROOT.accepttimeevent_6");
+                    pushNullTransition();
+                    rootState_subState = accepttimeevent_6;
+                    rootState_active = accepttimeevent_6;
+                    NOTIFY_TRANSITION_TERMINATED("4");
+                    res = eventConsumed;
+                }
+        }
+    else if(IS_EVENT_TYPE_OF(ev_TurnOff_Light_ArchitecturalAnalysisPkg_id))
+        {
+            NOTIFY_TRANSITION_STARTED("1");
+            switch (On_subState) {
+                // State Op
+                case Op:
+                {
+                    cancel(On_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.On.Op");
+                }
+                break;
+                case accepttimeevent_7:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.On.accepttimeevent_7");
+                }
+                break;
+                default:
+                    break;
+            }
+            On_subState = OMNonState;
+            cancel(rootState_timeout);
+            NOTIFY_STATE_EXITED("ROOT.On");
+            //#[ transition 1 
+            OUT_PORT(pNetwork)->setIntensity(0);
+            //#]
+            NOTIFY_STATE_ENTERED("ROOT.Off");
+            rootState_subState = Off;
+            rootState_active = Off;
+            NOTIFY_TRANSITION_TERMINATED("1");
+            res = eventConsumed;
+        }
+    
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::Op_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+        {
+            if(getCurrentEvent() == On_timeout)
+                {
+                    NOTIFY_TRANSITION_STARTED("8");
+                    cancel(On_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.On.Op");
+                    NOTIFY_STATE_ENTERED("ROOT.On.accepttimeevent_7");
+                    pushNullTransition();
+                    On_subState = accepttimeevent_7;
+                    rootState_active = accepttimeevent_7;
+                    NOTIFY_TRANSITION_TERMINATED("8");
+                    res = eventConsumed;
+                }
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = On_handleEvent();
+        }
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::accepttimeevent_7_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            NOTIFY_TRANSITION_STARTED("9");
+            popNullTransition();
+            NOTIFY_STATE_EXITED("ROOT.On.accepttimeevent_7");
+            NOTIFY_STATE_ENTERED("ROOT.On.Op");
+            On_subState = Op;
+            rootState_active = Op;
+            On_timeout = scheduleTimeout(1000, "ROOT.On.Op");
+            NOTIFY_TRANSITION_TERMINATED("9");
+            res = eventConsumed;
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = On_handleEvent();
+        }
     return res;
 }
 
@@ -796,6 +890,28 @@ void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {
 
 void OMAnimatedNetwork::On_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT.On");
+    switch (myReal->On_subState) {
+        case Network::Op:
+        {
+            Op_serializeStates(aomsState);
+        }
+        break;
+        case Network::accepttimeevent_7:
+        {
+            accepttimeevent_7_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::Op_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.On.Op");
+}
+
+void OMAnimatedNetwork::accepttimeevent_7_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.On.accepttimeevent_7");
 }
 
 void OMAnimatedNetwork::Off_serializeStates(AOMSState* aomsState) const {

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Administrator
+	Login		: Yang
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Fri, 14, Jul 2023  
+//!	Generated Date	: Sat, 15, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.h
 *********************************************************************/
 
@@ -383,6 +383,26 @@ public :
     //## statechart_method
     inline bool On_IN() const;
     
+    //## statechart_method
+    void On_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus On_handleEvent();
+    
+    // Op:
+    //## statechart_method
+    inline bool Op_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Op_handleEvent();
+    
+    // accepttimeevent_7:
+    //## statechart_method
+    inline bool accepttimeevent_7_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus accepttimeevent_7_handleEvent();
+    
     // Off:
     //## statechart_method
     inline bool Off_IN() const;
@@ -397,15 +417,21 @@ protected :
     enum Network_Enum {
         OMNonState = 0,
         On = 1,
-        Off = 2,
-        accepttimeevent_6 = 3
+        Op = 2,
+        accepttimeevent_7 = 3,
+        Off = 4,
+        accepttimeevent_6 = 5
     };
     
     int rootState_subState;
     
     int rootState_active;
     
+    int On_subState;
+    
     IOxfTimeout* rootState_timeout;
+    
+    IOxfTimeout* On_timeout;
 //#]
 };
 
@@ -429,6 +455,12 @@ public :
     void On_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
+    void Op_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void accepttimeevent_7_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
     void Off_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
@@ -443,6 +475,14 @@ inline bool Network::rootState_IN() const {
 
 inline bool Network::On_IN() const {
     return rootState_subState == On;
+}
+
+inline bool Network::Op_IN() const {
+    return On_subState == Op;
+}
+
+inline bool Network::accepttimeevent_7_IN() const {
+    return On_subState == accepttimeevent_7;
 }
 
 inline bool Network::Off_IN() const {
