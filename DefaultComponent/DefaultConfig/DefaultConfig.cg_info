@@ -1,17 +1,17 @@
 I-Logix-RPY-Archive version 8.15.0 * 202002261110
 
 - m_fileModifyTime = { IRPYRawContainer 
-	- size = 77;
+	- size = 79;
 	- value = "DefaultComponent\\DefaultConfig\\AC.cpp" 7.15.2023::12:21:40
 	"DefaultComponent\\DefaultConfig\\AC.h" 7.15.2023::12:21:40
 	"DefaultComponent\\DefaultConfig\\ActorPkg.cpp" 7.15.2023::13:58:6
 	"DefaultComponent\\DefaultConfig\\ActorPkg.h" 7.15.2023::13:58:6
-	"DefaultComponent\\DefaultConfig\\ArchitecturalAnalysisPkg.cpp" 7.15.2023::14:24:52
-	"DefaultComponent\\DefaultConfig\\ArchitecturalAnalysisPkg.h" 7.15.2023::14:24:52
+	"DefaultComponent\\DefaultConfig\\ArchitecturalAnalysisPkg.cpp" 7.15.2023::14:34:51
+	"DefaultComponent\\DefaultConfig\\ArchitecturalAnalysisPkg.h" 7.15.2023::14:34:51
 	"DefaultComponent\\DefaultConfig\\BehaviorialAnalysisPkg.cpp" 7.15.2023::13:59:49
 	"DefaultComponent\\DefaultConfig\\BehaviorialAnalysisPkg.h" 7.15.2023::13:59:49
-	"DefaultComponent\\DefaultConfig\\Booking_System.cpp" 7.15.2023::13:58:55
-	"DefaultComponent\\DefaultConfig\\Booking_System.h" 7.15.2023::13:58:55
+	"DefaultComponent\\DefaultConfig\\Booking_System.cpp" 7.15.2023::14:34:51
+	"DefaultComponent\\DefaultConfig\\Booking_System.h" 7.15.2023::14:34:51
 	"DefaultComponent\\DefaultConfig\\CO2_Sensor.cpp" 7.15.2023::13:58:6
 	"DefaultComponent\\DefaultConfig\\CO2_Sensor.h" 7.15.2023::13:58:6
 	"DefaultComponent\\DefaultConfig\\Door_Touch_Panel.cpp" 7.15.2023::13:58:55
@@ -26,6 +26,8 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	"DefaultComponent\\DefaultConfig\\HVAC.h" 7.15.2023::13:58:6
 	"DefaultComponent\\DefaultConfig\\Heating.cpp" 7.15.2023::12:21:40
 	"DefaultComponent\\DefaultConfig\\Heating.h" 7.15.2023::12:21:40
+	"DefaultComponent\\DefaultConfig\\I_BS.cpp" 7.15.2023::14:34:51
+	"DefaultComponent\\DefaultConfig\\I_BS.h" 7.15.2023::14:34:51
 	"DefaultComponent\\DefaultConfig\\I_CO2.cpp" 7.15.2023::13:58:6
 	"DefaultComponent\\DefaultConfig\\I_CO2.h" 7.15.2023::13:58:6
 	"DefaultComponent\\DefaultConfig\\I_FS.cpp" 7.15.2023::14:8:29
@@ -52,8 +54,8 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	"DefaultComponent\\DefaultConfig\\Microphones.h" 7.15.2023::14:23:7
 	"DefaultComponent\\DefaultConfig\\Movement_Sensor.cpp" 7.15.2023::13:58:6
 	"DefaultComponent\\DefaultConfig\\Movement_Sensor.h" 7.15.2023::13:58:6
-	"DefaultComponent\\DefaultConfig\\Network.cpp" 7.15.2023::14:13:32
-	"DefaultComponent\\DefaultConfig\\Network.h" 7.15.2023::14:13:31
+	"DefaultComponent\\DefaultConfig\\Network.cpp" 7.15.2023::14:34:52
+	"DefaultComponent\\DefaultConfig\\Network.h" 7.15.2023::14:34:51
 	"DefaultComponent\\DefaultConfig\\Occupancy_Sensor.cpp" 7.15.2023::13:58:6
 	"DefaultComponent\\DefaultConfig\\Occupancy_Sensor.h" 7.15.2023::13:58:6
 	"DefaultComponent\\DefaultConfig\\ProxyPortInterfaces.cpp" 7.14.2023::18:44:17
@@ -89,7 +91,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	"GUID b851de7a-61ef-4289-bfd6-f9aac76a1047" "GUID 79a904df-a658-4ea5-870a-854c1d648312"
 	
 }
-- size = 34;
+- size = 35;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\DTSM_rpy\\ArchitecturalAnalysisPkg.sbsx";
@@ -136,7 +138,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "Booking_System";
 	- _id = GUID 76a8c87b-5e66-4d8c-a9a6-31aca6ee4b6f;
 }
-- genTime = 7.15.2023::13:58:57;
+- genTime = 7.15.2023::14:34:52;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\DTSM_rpy\\ArchitecturalAnalysisPkg.sbsx";
@@ -180,6 +182,14 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\DTSM_rpy\\ArchitecturalAnalysisPkg.sbsx";
 	- _subsystem = "ArchitecturalAnalysisPkg";
+	- _name = "I_BS";
+	- _id = GUID d587c737-8eb5-45d0-91f6-de785b63359f;
+}
+- genTime = 7.15.2023::14:34:52;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\DTSM_rpy\\ArchitecturalAnalysisPkg.sbsx";
+	- _subsystem = "ArchitecturalAnalysisPkg";
 	- _name = "Movement_Sensor";
 	- _id = GUID b65d22f4-3fd9-457a-862a-d752f0963951;
 }
@@ -198,7 +208,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "ArchitecturalAnalysisPkg";
 	- _id = GUID 18af55da-14bc-4e3a-9961-31c8936235af;
 }
-- genTime = 7.15.2023::14:24:52;
+- genTime = 7.15.2023::14:34:52;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\DTSM_rpy\\ArchitecturalAnalysisPkg.sbsx";
@@ -274,7 +284,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "DefaultComponent\\DefaultConfig";
 	- _id = GUID a17a272c-7dc4-4d63-806e-b509cfbc377a;
 }
-- genTime = 7.15.2023::14:24:52;
+- genTime = 7.15.2023::14:34:52;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\DTSM_rpy\\ArchitecturalAnalysisPkg.sbsx";
@@ -322,7 +332,7 @@ I-Logix-RPY-Archive version 8.15.0 * 202002261110
 	- _name = "Network";
 	- _id = GUID b480fd00-57e1-402e-95d3-8379f27fae1e;
 }
-- genTime = 7.15.2023::14:24:52;
+- genTime = 7.15.2023::14:34:52;
 - hElement = { IHandle 
 	- _m2Class = "IClass";
 	- _filename = ".\\..\\..\\DTSM_rpy\\ArchitecturalAnalysisPkg.sbsx";

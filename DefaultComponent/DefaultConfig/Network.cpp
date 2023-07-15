@@ -37,6 +37,7 @@
 //## class Network
 //#[ ignore
 Network::pNetwork_C::pNetwork_C() : _p_(0) {
+    itsI_BS = NULL;
     itsI_CO2 = NULL;
     itsI_FS = NULL;
     itsI_HVAC = NULL;
@@ -75,6 +76,10 @@ int Network::pNetwork_C::getItensity() {
         res = itsI_Light->getItensity();
     }
     return res;
+}
+
+I_BS* Network::pNetwork_C::getItsI_BS() {
+    return this;
 }
 
 I_CO2* Network::pNetwork_C::getItsI_CO2() {
@@ -185,6 +190,14 @@ bool Network::pNetwork_C::get_Vent_state() {
     return res;
 }
 
+void Network::pNetwork_C::login() {
+    
+    if (itsI_BS != NULL) {
+        itsI_BS->login();
+    }
+    
+}
+
 void Network::pNetwork_C::setCold(bool arg_cold) {
     
     if (itsI_Weather != NULL) {
@@ -273,6 +286,10 @@ void Network::pNetwork_C::set_Vent_state(bool arg_Vent_state) {
     
 }
 
+void Network::pNetwork_C::setItsI_BS(I_BS* p_I_BS) {
+    itsI_BS = p_I_BS;
+}
+
 void Network::pNetwork_C::setItsI_CO2(I_CO2* p_I_CO2) {
     itsI_CO2 = p_I_CO2;
 }
@@ -314,6 +331,10 @@ void Network::pNetwork_C::setItsI_Weather(I_Weather* p_I_Weather) {
 }
 
 void Network::pNetwork_C::cleanUpRelations() {
+    if(itsI_BS != NULL)
+        {
+            itsI_BS = NULL;
+        }
     if(itsI_CO2 != NULL)
         {
             itsI_CO2 = NULL;
@@ -357,7 +378,7 @@ void Network::pNetwork_C::cleanUpRelations() {
 }
 //#]
 
-Network::Network(IOxfActive* theActiveContext) : temp_Network(26) {
+Network::Network(IOxfActive* theActiveContext) {
     NOTIFY_REACTIVE_CONSTRUCTOR(Network, Network(), 0, ArchitecturalAnalysisPkg_Network_Network_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsCO2_Sensor = NULL;
@@ -381,14 +402,6 @@ Network::pNetwork_C* Network::getPNetwork() const {
 
 Network::pNetwork_C* Network::get_pNetwork() const {
     return (Network::pNetwork_C*) &pNetwork;
-}
-
-int Network::getTemp_Network() const {
-    return temp_Network;
-}
-
-void Network::setTemp_Network(int p_temp_Network) {
-    temp_Network = p_temp_Network;
 }
 
 HVAC* Network::getItsHVAC() const {
@@ -909,10 +922,6 @@ IOxfReactive::TakeEventStatus Network::accepttimeevent_7_handleEvent() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
-void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) const {
-    aomsAttributes->addAttribute("temp_Network", x2String(myReal->temp_Network));
-}
-
 void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsHVAC", false, true);
     if(myReal->itsHVAC)

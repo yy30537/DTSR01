@@ -19,17 +19,17 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
-//## auto_generated
-#include <oxf\OMDefaultReactivePort.h>
+//## class Booking_System
+#include "I_BS.h"
 //## package ArchitecturalAnalysisPkg
 
 //## class Booking_System
-class Booking_System {
+class Booking_System : public I_BS {
 public :
 
 //#[ ignore
     //## package ArchitecturalAnalysisPkg
-    class pBook_C : public OMDefaultReactivePort {
+    class pBook_C : public I_BS {
         ////    Constructors and destructors    ////
         
     public :
@@ -45,11 +45,29 @@ public :
         //## auto_generated
         void connectBooking_System(Booking_System* part);
         
-        ////    Attributes    ////
+        //## auto_generated
+        I_BS* getItsI_BS();
+        
+        //## auto_generated
+        virtual void login();
+        
+        ////    Additional operations    ////
+        
+        //## auto_generated
+        void setItsI_BS(I_BS* p_I_BS);
     
     protected :
     
+        //## auto_generated
+        void cleanUpRelations();
+        
+        ////    Attributes    ////
+        
         int _p_;		//## attribute _p_
+        
+        ////    Relations and components    ////
+        
+        I_BS* itsI_BS;		//## link itsI_BS
     };
 //#]
 
@@ -65,16 +83,30 @@ public :
     Booking_System();
     
     //## auto_generated
-    ~Booking_System();
+    virtual ~Booking_System();
+    
+    //## operation login()
+    virtual void login();
     
     //## auto_generated
     pBook_C* getPBook() const;
     
     //## auto_generated
     pBook_C* get_pBook() const;
+    
+    //## auto_generated
+    bool getAuth_status() const;
+    
+    //## auto_generated
+    void setAuth_status(bool p_auth_status);
 
 protected :
 
+    //## auto_generated
+    void initRelations();
+    
+    bool auth_status;		//## attribute auth_status
+    
 //#[ ignore
     pBook_C pBook;
 //#]
@@ -82,8 +114,16 @@ protected :
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
-class OMAnimatedBooking_System : virtual public AOMInstance {
+class OMAnimatedBooking_System : public OMAnimatedI_BS {
     DECLARE_META(Booking_System, OMAnimatedBooking_System)
+    
+    ////    Framework operations    ////
+    
+public :
+
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
+    virtual void serializeRelations(AOMSRelations* aomsRelations) const;
 };
 //#]
 #endif // _OMINSTRUMENT

@@ -18,7 +18,7 @@
 #include "HVAC.h"
 //## classInstance itsNetwork
 #include "Network.h"
-//## auto_generated
+//## classInstance itsBooking_System
 #include "Booking_System.h"
 //## classInstance itsCO2_Sensor
 #include "CO2_Sensor.h"
@@ -58,6 +58,8 @@
 #include "I_Light.h"
 //## auto_generated
 #include "I_OS.h"
+//## auto_generated
+#include "I_BS.h"
 //## auto_generated
 #include "I_FS.h"
 //## auto_generated
@@ -203,6 +205,7 @@ static void RenameGlobalInstances() {
     OM_SET_INSTANCE_NAME(&itsSmart_Screen, Smart_Screen, "itsSmart_Screen", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsSpeakers, Speakers, "itsSpeakers", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsWebcam, Webcam, "itsWebcam", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsBooking_System, Booking_System, "itsBooking_System", AOMNoMultiplicity);
 }
 #endif // _OMINSTRUMENT
 
@@ -268,6 +271,11 @@ void ArchitecturalAnalysisPkg_initRelations() {
         itsNetwork.get_pNetwork()->setItsI_WC(itsWebcam.get_pWebcam()->getItsI_WC());
         
     }
+    {
+        
+        itsNetwork.get_pNetwork()->setItsI_BS(itsBooking_System.get_pBook()->getItsI_BS());
+        
+    }
     
     #ifdef _OMINSTRUMENT
     RenameGlobalInstances();
@@ -291,6 +299,9 @@ Lights itsLights;
 
 //## classInstance itsOccupancy_Sensor
 Occupancy_Sensor itsOccupancy_Sensor;
+
+//## classInstance itsBooking_System
+Booking_System itsBooking_System;
 
 //## classInstance itsFire_Sensor
 Fire_Sensor itsFire_Sensor;

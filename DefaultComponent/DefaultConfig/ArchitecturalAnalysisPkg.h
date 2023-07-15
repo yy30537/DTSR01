@@ -19,7 +19,7 @@
 #include <aom\aom.h>
 //## auto_generated
 #include <oxf\event.h>
-//## auto_generated
+//## classInstance itsBooking_System
 class Booking_System;
 
 //## classInstance itsCO2_Sensor
@@ -36,6 +36,9 @@ class Fire_Sensor;
 
 //## classInstance itsHVAC
 class HVAC;
+
+//## auto_generated
+class I_BS;
 
 //## auto_generated
 class I_CO2;
@@ -164,6 +167,9 @@ extern Lights itsLights;
 
 //## classInstance itsOccupancy_Sensor
 extern Occupancy_Sensor itsOccupancy_Sensor;
+
+//## classInstance itsBooking_System
+extern Booking_System itsBooking_System;
 
 //## classInstance itsFire_Sensor
 extern Fire_Sensor itsFire_Sensor;

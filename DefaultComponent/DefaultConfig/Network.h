@@ -38,6 +38,8 @@
 //## class pNetwork_C
 #include "I_OS.h"
 //## class pNetwork_C
+#include "I_BS.h"
+//## class pNetwork_C
 #include "I_FS.h"
 //## class pNetwork_C
 #include "I_Mic.h"
@@ -73,7 +75,7 @@ public :
 
 //#[ ignore
     //## package ArchitecturalAnalysisPkg
-    class pNetwork_C : public I_HVAC, public I_CO2, public I_Weather, public I_Light, public I_OS, public I_FS, public I_Mic, public I_SS, public I_Spkr, public I_WC {
+    class pNetwork_C : public I_HVAC, public I_CO2, public I_Weather, public I_Light, public I_OS, public I_FS, public I_Mic, public I_SS, public I_Spkr, public I_WC, public I_BS {
         ////    Constructors and destructors    ////
         
     public :
@@ -94,6 +96,9 @@ public :
         
         //## auto_generated
         virtual int getItensity();
+        
+        //## auto_generated
+        I_BS* getItsI_BS();
         
         //## auto_generated
         I_CO2* getItsI_CO2();
@@ -153,6 +158,9 @@ public :
         virtual bool get_Vent_state();
         
         //## auto_generated
+        virtual void login();
+        
+        //## auto_generated
         virtual void setCold(bool arg_cold);
         
         //## auto_generated
@@ -186,6 +194,9 @@ public :
         virtual void set_Vent_state(bool arg_Vent_state);
         
         ////    Additional operations    ////
+        
+        //## auto_generated
+        void setItsI_BS(I_BS* p_I_BS);
         
         //## auto_generated
         void setItsI_CO2(I_CO2* p_I_CO2);
@@ -227,6 +238,8 @@ public :
         int _p_;		//## attribute _p_
         
         ////    Relations and components    ////
+        
+        I_BS* itsI_BS;		//## link itsI_BS
         
         I_CO2* itsI_CO2;		//## link itsI_CO2
         
@@ -273,12 +286,6 @@ public :
     pNetwork_C* get_pNetwork() const;
     
     //## auto_generated
-    int getTemp_Network() const;
-    
-    //## auto_generated
-    void setTemp_Network(int p_temp_Network);
-    
-    //## auto_generated
     HVAC* getItsHVAC() const;
     
     //## auto_generated
@@ -302,8 +309,6 @@ protected :
     void cleanUpRelations();
     
     ////    Attributes    ////
-    
-    int temp_Network;		//## attribute temp_Network
     
     ////    Relations and components    ////
     
@@ -500,8 +505,6 @@ class OMAnimatedNetwork : virtual public AOMInstance {
     
 public :
 
-    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
-    
     virtual void serializeRelations(AOMSRelations* aomsRelations) const;
     
     //## statechart_method
