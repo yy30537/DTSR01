@@ -67,6 +67,10 @@ class Occupancy_Sensor;
 //## link itsWeather_Forecast
 class Weather_Forecast;
 
+//#[ ignore
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_ARGS_DECLARATION int p_intensity;
+//#]
+
 //## package ArchitecturalAnalysisPkg
 
 //## class Network
@@ -423,6 +427,18 @@ protected :
     
     //## auto_generated
     bool cancelTimeout(const IOxfTimeout* arg);
+
+public :
+
+    //## auto_generated
+    int getIntensity() const;
+    
+    //## auto_generated
+    void setIntensity(int p_intensity);
+
+protected :
+
+    int intensity;		//## attribute intensity
     
 //#[ ignore
     pNetwork_C pNetwork;
@@ -467,10 +483,6 @@ public :
     // Off:
     //## statechart_method
     inline bool Off_IN() const;
-    
-    // accepttimeevent_6:
-    //## statechart_method
-    inline bool accepttimeevent_6_IN() const;
 
 protected :
 
@@ -480,8 +492,7 @@ protected :
         On = 1,
         Op = 2,
         accepttimeevent_7 = 3,
-        Off = 4,
-        accepttimeevent_6 = 5
+        Off = 4
     };
     
     int rootState_subState;
@@ -490,21 +501,25 @@ protected :
     
     int On_subState;
     
-    IOxfTimeout* rootState_timeout;
-    
     IOxfTimeout* On_timeout;
 //#]
 };
 
 #ifdef _OMINSTRUMENT
+DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setIntensity_int)
+
 //#[ ignore
 class OMAnimatedNetwork : virtual public AOMInstance {
     DECLARE_REACTIVE_META(Network, OMAnimatedNetwork)
+    
+    DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setIntensity_int)
     
     ////    Framework operations    ////
     
 public :
 
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
     virtual void serializeRelations(AOMSRelations* aomsRelations) const;
     
     //## statechart_method
@@ -521,9 +536,6 @@ public :
     
     //## statechart_method
     void Off_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void accepttimeevent_6_serializeStates(AOMSState* aomsState) const;
 };
 //#]
 #endif // _OMINSTRUMENT
@@ -546,10 +558,6 @@ inline bool Network::accepttimeevent_7_IN() const {
 
 inline bool Network::Off_IN() const {
     return rootState_subState == Off;
-}
-
-inline bool Network::accepttimeevent_6_IN() const {
-    return rootState_subState == accepttimeevent_6;
 }
 
 #endif

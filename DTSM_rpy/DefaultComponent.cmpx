@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
-	<CODE-PAGE>1252</CODE-PAGE>
+	<CODE-PAGE>65001</CODE-PAGE>
 	<version>109.0</version>
 	<lang>C++</lang>
 	<BuildNo>202002261110</BuildNo>
@@ -12,8 +12,8 @@
 			<_id type="a">GUID 6a7c9d67-6d07-4d1b-bfa6-f699da2cf796</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">DefaultComponent</_name>
-			<_modifiedTimeWeak type="a">7.5.2023::13:29:24</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.5.2023::13:29:24</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.15.2023::18:11:15</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.15.2023::18:16:41</_modifiedTime>
 			<m_buildType type="a">Executable</m_buildType>
 			<m_configActive type="r">
 				<ICodeGenConfigInfoHandle type="e">
@@ -147,22 +147,6 @@
 					
 					
 						<IHandle type="e">
-							<_hm2Class type="a">ISubsystem</_hm2Class>
-							<_hfilename type="a">.\PackagePkg.sbsx</_hfilename>
-							<_hname type="a">PackagePkg</_hname>
-							<_hid type="a">GUID 3d461902-d2d6-4e03-a5a4-8d4484d7b822</_hid>
-						</IHandle>
-					
-					
-						<IHandle type="e">
-							<_hm2Class type="a">ISubsystem</_hm2Class>
-							<_hfilename type="a">.\GUI.sbsx</_hfilename>
-							<_hname type="a">GUI</_hname>
-							<_hid type="a">GUID 69a9c5e4-f1a9-44f8-ba3f-9a2c7fcc5f05</_hid>
-						</IHandle>
-					
-					
-						<IHandle type="e">
 							<_hm2Class type="a">IProfile</_hm2Class>
 							<_hfilename type="a">$OMROOT\Profiles\SysML\SysMLProfile_rpy\SysML.sbs</_hfilename>
 							<_hname type="a">SysML</_hname>
@@ -179,7 +163,7 @@
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
 			</SelectedVariants>
-			<weakCGTime type="a">7.5.2023::13:29:24</weakCGTime>
+			<weakCGTime type="a">7.15.2023::18:11:15</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<AggregatesList type="e">
 				<value>GUID 2e81ab5c-3bc8-47fe-977e-8c1ddf2969a1</value>
@@ -235,8 +219,8 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">DefaultConfig</_name>
-			<_modifiedTimeWeak type="a">7.5.2023::13:29:24</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.5.2023::13:29:24</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.15.2023::18:16:35</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.15.2023::18:16:35</_modifiedTime>
 			<_scopeType type="a">Explicit</_scopeType>
 			<_instrumentation type="a">Animation</_instrumentation>
 			<_timeModel type="a">RealTime</_timeModel>
@@ -255,31 +239,22 @@
 							<_hm2Class type="a">IClass</_hm2Class>
 							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
 							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-							<_hname type="a">CO2_Sensor</_hname>
-							<_hid type="a">GUID 23e944c3-bf4b-489d-8285-9fcb08fe2e14</_hid>
-						</IHandle>
-					
-					
-						<IHandle type="e">
-							<_hm2Class type="a">IClass</_hm2Class>
-							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-							<_hname type="a">Fire_Sensor</_hname>
-							<_hid type="a">GUID 6945bed3-e21e-46ab-ad82-5adce337f085</_hid>
-						</IHandle>
-					
-					
-						<IHandle type="e">
-							<_hm2Class type="a">IClass</_hm2Class>
-							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 							<_hname type="a">Lights</_hname>
 							<_hid type="a">GUID e39f1c5b-0f82-4fb2-a066-041edd1568c0</_hid>
 						</IHandle>
 					
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IClass</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hname type="a">Network</_hname>
+							<_hid type="a">GUID b480fd00-57e1-402e-95d3-8379f27fae1e</_hid>
+						</IHandle>
+					
 				</IRPYRawContainer>
 			</InitialInstances>
-			<weakCGTime type="a">7.5.2023::13:29:24</weakCGTime>
+			<weakCGTime type="a">7.15.2023::18:16:35</weakCGTime>
 			<strongCGTime type="a">7.5.2023::12:48:28</strongCGTime>
 			<AnimScopeElements type="c">
 				<IRPYRawContainer type="e">
