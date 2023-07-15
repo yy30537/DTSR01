@@ -1,3 +1,14 @@
 
 Reverse Engineering Done.
 
+Removing Attribute 'alarmState' from Class 'Fire_Sensor'. 
+Removing AssociationEnd 'itsNetwork' from Class 'Fire_Sensor'. 
+Removing AssociationEnd 'itsNetwork' from Class 'Microphones'. 
+Removing AssociationEnd 'itsNetwork' from Class 'Smart_Screen'. 
+Removing AssociationEnd 'itsNetwork' from Class 'Speakers'. 
+Removing AssociationEnd 'itsNetwork' from Class 'Webcam'. 
+Removing AssociationEnd 'itsFire_Sensor' from Class 'Network'. 
+Removing AssociationEnd 'itsMicrophones' from Class 'Network'. 
+Removing AssociationEnd 'itsSmart_Screen' from Class 'Network'. 
+Removing AssociationEnd 'itsSpeakers' from Class 'Network'. 
+Removing AssociationEnd 'itsWebcam' from Class 'Network'. 

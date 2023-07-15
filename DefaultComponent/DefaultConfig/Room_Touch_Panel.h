@@ -19,14 +19,42 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
+//## auto_generated
+#include <oxf\OMDefaultReactivePort.h>
 //## package ArchitecturalAnalysisPkg
 
 //## class Room_Touch_Panel
 class Room_Touch_Panel {
-    ////    Friends    ////
-    
 public :
 
+//#[ ignore
+    //## package ArchitecturalAnalysisPkg
+    class pRoomTouch_C : public OMDefaultReactivePort {
+        ////    Constructors and destructors    ////
+        
+    public :
+    
+        //## auto_generated
+        pRoomTouch_C();
+        
+        //## auto_generated
+        virtual ~pRoomTouch_C();
+        
+        ////    Operations    ////
+        
+        //## auto_generated
+        void connectRoom_Touch_Panel(Room_Touch_Panel* part);
+        
+        ////    Attributes    ////
+    
+    protected :
+    
+        int _p_;		//## attribute _p_
+    };
+//#]
+
+    ////    Friends    ////
+    
 #ifdef _OMINSTRUMENT
     friend class OMAnimatedRoom_Touch_Panel;
 #endif // _OMINSTRUMENT
@@ -38,6 +66,18 @@ public :
     
     //## auto_generated
     ~Room_Touch_Panel();
+    
+    //## auto_generated
+    pRoomTouch_C* getPRoomTouch() const;
+    
+    //## auto_generated
+    pRoomTouch_C* get_pRoomTouch() const;
+
+protected :
+
+//#[ ignore
+    pRoomTouch_C pRoomTouch;
+//#]
 };
 
 #ifdef _OMINSTRUMENT

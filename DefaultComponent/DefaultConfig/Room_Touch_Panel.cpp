@@ -21,12 +21,31 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Room_Touch_Panel
+//#[ ignore
+Room_Touch_Panel::pRoomTouch_C::pRoomTouch_C() : _p_(0) {
+}
+
+Room_Touch_Panel::pRoomTouch_C::~pRoomTouch_C() {
+}
+
+void Room_Touch_Panel::pRoomTouch_C::connectRoom_Touch_Panel(Room_Touch_Panel* part) {
+}
+//#]
+
 Room_Touch_Panel::Room_Touch_Panel() {
     NOTIFY_CONSTRUCTOR(Room_Touch_Panel, Room_Touch_Panel(), 0, ArchitecturalAnalysisPkg_Room_Touch_Panel_Room_Touch_Panel_SERIALIZE);
 }
 
 Room_Touch_Panel::~Room_Touch_Panel() {
     NOTIFY_DESTRUCTOR(~Room_Touch_Panel, true);
+}
+
+Room_Touch_Panel::pRoomTouch_C* Room_Touch_Panel::getPRoomTouch() const {
+    return (Room_Touch_Panel::pRoomTouch_C*) &pRoomTouch;
+}
+
+Room_Touch_Panel::pRoomTouch_C* Room_Touch_Panel::get_pRoomTouch() const {
+    return (Room_Touch_Panel::pRoomTouch_C*) &pRoomTouch;
 }
 
 #ifdef _OMINSTRUMENT

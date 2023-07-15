@@ -37,6 +37,16 @@
 #include "I_Light.h"
 //## class pNetwork_C
 #include "I_OS.h"
+//## class pNetwork_C
+#include "I_FS.h"
+//## class pNetwork_C
+#include "I_Mic.h"
+//## class pNetwork_C
+#include "I_Spkr.h"
+//## class pNetwork_C
+#include "I_SS.h"
+//## class pNetwork_C
+#include "I_WC.h"
 //## link itsCO2_Sensor
 class CO2_Sensor;
 
@@ -63,7 +73,7 @@ public :
 
 //#[ ignore
     //## package ArchitecturalAnalysisPkg
-    class pNetwork_C : public I_HVAC, public I_CO2, public I_Weather, public I_Light, public I_OS {
+    class pNetwork_C : public I_HVAC, public I_CO2, public I_Weather, public I_Light, public I_OS, public I_FS, public I_Mic, public I_SS, public I_Spkr, public I_WC {
         ////    Constructors and destructors    ////
         
     public :
@@ -89,13 +99,28 @@ public :
         I_CO2* getItsI_CO2();
         
         //## auto_generated
+        I_FS* getItsI_FS();
+        
+        //## auto_generated
         I_HVAC* getItsI_HVAC();
         
         //## auto_generated
         I_Light* getItsI_Light();
         
         //## auto_generated
+        I_Mic* getItsI_Mic();
+        
+        //## auto_generated
         I_OS* getItsI_OS();
+        
+        //## auto_generated
+        I_SS* getItsI_SS();
+        
+        //## auto_generated
+        I_Spkr* getItsI_Spkr();
+        
+        //## auto_generated
+        I_WC* getItsI_WC();
         
         //## auto_generated
         I_Weather* getItsI_Weather();
@@ -105,6 +130,9 @@ public :
         
         //## auto_generated
         Network::pNetwork_C* getOutBound();
+        
+        //## auto_generated
+        virtual bool getState();
         
         //## auto_generated
         virtual int getTemp();
@@ -137,6 +165,9 @@ public :
         virtual void setOccupied(bool arg_occupied);
         
         //## auto_generated
+        virtual void setState(bool argState);
+        
+        //## auto_generated
         virtual void setTemp(int arg_temp);
         
         //## auto_generated
@@ -160,13 +191,28 @@ public :
         void setItsI_CO2(I_CO2* p_I_CO2);
         
         //## auto_generated
+        void setItsI_FS(I_FS* p_I_FS);
+        
+        //## auto_generated
         void setItsI_HVAC(I_HVAC* p_I_HVAC);
         
         //## auto_generated
         void setItsI_Light(I_Light* p_I_Light);
         
         //## auto_generated
+        void setItsI_Mic(I_Mic* p_I_Mic);
+        
+        //## auto_generated
         void setItsI_OS(I_OS* p_I_OS);
+        
+        //## auto_generated
+        void setItsI_SS(I_SS* p_I_SS);
+        
+        //## auto_generated
+        void setItsI_Spkr(I_Spkr* p_I_Spkr);
+        
+        //## auto_generated
+        void setItsI_WC(I_WC* p_I_WC);
         
         //## auto_generated
         void setItsI_Weather(I_Weather* p_I_Weather);
@@ -184,11 +230,21 @@ public :
         
         I_CO2* itsI_CO2;		//## link itsI_CO2
         
+        I_FS* itsI_FS;		//## link itsI_FS
+        
         I_HVAC* itsI_HVAC;		//## link itsI_HVAC
         
         I_Light* itsI_Light;		//## link itsI_Light
         
+        I_Mic* itsI_Mic;		//## link itsI_Mic
+        
         I_OS* itsI_OS;		//## link itsI_OS
+        
+        I_SS* itsI_SS;		//## link itsI_SS
+        
+        I_Spkr* itsI_Spkr;		//## link itsI_Spkr
+        
+        I_WC* itsI_WC;		//## link itsI_WC
         
         I_Weather* itsI_Weather;		//## link itsI_Weather
     };

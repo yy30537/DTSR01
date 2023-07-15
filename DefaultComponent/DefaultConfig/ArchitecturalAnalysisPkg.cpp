@@ -19,8 +19,6 @@
 //## classInstance itsNetwork
 #include "Network.h"
 //## auto_generated
-#include "AC.h"
-//## auto_generated
 #include "Booking_System.h"
 //## classInstance itsCO2_Sensor
 #include "CO2_Sensor.h"
@@ -28,10 +26,8 @@
 #include "Door_Touch_Panel.h"
 //## auto_generated
 #include "External_Personnel.h"
-//## auto_generated
+//## classInstance itsFire_Sensor
 #include "Fire_Sensor.h"
-//## auto_generated
-#include "Heating.h"
 //## auto_generated
 #include "I_HVAC.h"
 //## classInstance itsLights
@@ -50,8 +46,6 @@
 #include "Smart_Screen.h"
 //## auto_generated
 #include "Speakers.h"
-//## auto_generated
-#include "Ventilation.h"
 //## classInstance itsWeather_Forecast
 #include "Weather_Forecast.h"
 //## auto_generated
@@ -64,6 +58,16 @@
 #include "I_Light.h"
 //## auto_generated
 #include "I_OS.h"
+//## auto_generated
+#include "I_FS.h"
+//## auto_generated
+#include "I_Mic.h"
+//## auto_generated
+#include "I_Spkr.h"
+//## auto_generated
+#include "I_SS.h"
+//## auto_generated
+#include "I_WC.h"
 //#[ ignore
 #define ev_AC_SwitchOn_SERIALIZE OM_NO_OP
 
@@ -188,12 +192,13 @@ static void serializeGlobalVars(AOMSAttributes* /* aomsAttributes */) {
 }
 
 static void RenameGlobalInstances() {
-    OM_SET_INSTANCE_NAME(&itsHVAC, HVAC, "itsHVAC", AOMNoMultiplicity);
-    OM_SET_INSTANCE_NAME(&itsNetwork, Network, "itsNetwork", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsCO2_Sensor, CO2_Sensor, "itsCO2_Sensor", AOMNoMultiplicity);
-    OM_SET_INSTANCE_NAME(&itsWeather_Forecast, Weather_Forecast, "itsWeather_Forecast", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsHVAC, HVAC, "itsHVAC", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsLights, Lights, "itsLights", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsNetwork, Network, "itsNetwork", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsOccupancy_Sensor, Occupancy_Sensor, "itsOccupancy_Sensor", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsWeather_Forecast, Weather_Forecast, "itsWeather_Forecast", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsFire_Sensor, Fire_Sensor, "itsFire_Sensor", AOMNoMultiplicity);
 }
 #endif // _OMINSTRUMENT
 
@@ -234,6 +239,11 @@ void ArchitecturalAnalysisPkg_initRelations() {
         itsNetwork.get_pNetwork()->setItsI_OS(itsOccupancy_Sensor.get_pOS()->getItsI_OS());
         
     }
+    {
+        
+        itsNetwork.get_pNetwork()->setItsI_FS(itsFire_Sensor.get_pFS()->getItsI_FS());
+        
+    }
     
     #ifdef _OMINSTRUMENT
     RenameGlobalInstances();
@@ -257,6 +267,9 @@ Lights itsLights;
 
 //## classInstance itsOccupancy_Sensor
 Occupancy_Sensor itsOccupancy_Sensor;
+
+//## classInstance itsFire_Sensor
+Fire_Sensor itsFire_Sensor;
 
 //#[ ignore
 ArchitecturalAnalysisPkg_OMInitializer::ArchitecturalAnalysisPkg_OMInitializer() {

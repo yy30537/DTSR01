@@ -38,9 +38,14 @@
 //#[ ignore
 Network::pNetwork_C::pNetwork_C() : _p_(0) {
     itsI_CO2 = NULL;
+    itsI_FS = NULL;
     itsI_HVAC = NULL;
     itsI_Light = NULL;
+    itsI_Mic = NULL;
     itsI_OS = NULL;
+    itsI_SS = NULL;
+    itsI_Spkr = NULL;
+    itsI_WC = NULL;
     itsI_Weather = NULL;
 }
 
@@ -76,6 +81,10 @@ I_CO2* Network::pNetwork_C::getItsI_CO2() {
     return this;
 }
 
+I_FS* Network::pNetwork_C::getItsI_FS() {
+    return this;
+}
+
 I_HVAC* Network::pNetwork_C::getItsI_HVAC() {
     return this;
 }
@@ -84,7 +93,23 @@ I_Light* Network::pNetwork_C::getItsI_Light() {
     return this;
 }
 
+I_Mic* Network::pNetwork_C::getItsI_Mic() {
+    return this;
+}
+
 I_OS* Network::pNetwork_C::getItsI_OS() {
+    return this;
+}
+
+I_SS* Network::pNetwork_C::getItsI_SS() {
+    return this;
+}
+
+I_Spkr* Network::pNetwork_C::getItsI_Spkr() {
+    return this;
+}
+
+I_WC* Network::pNetwork_C::getItsI_WC() {
     return this;
 }
 
@@ -102,6 +127,14 @@ bool Network::pNetwork_C::getOccupied() {
 
 Network::pNetwork_C* Network::pNetwork_C::getOutBound() {
     return this;
+}
+
+bool Network::pNetwork_C::getState() {
+    bool res = false;
+    if (itsI_FS != NULL) {
+        res = itsI_FS->getState();
+    }
+    return res;
 }
 
 int Network::pNetwork_C::getTemp() {
@@ -184,6 +217,14 @@ void Network::pNetwork_C::setOccupied(bool arg_occupied) {
     
 }
 
+void Network::pNetwork_C::setState(bool argState) {
+    
+    if (itsI_FS != NULL) {
+        itsI_FS->setState(argState);
+    }
+    
+}
+
 void Network::pNetwork_C::setTemp(int arg_temp) {
     
     if (itsI_HVAC != NULL) {
@@ -236,6 +277,10 @@ void Network::pNetwork_C::setItsI_CO2(I_CO2* p_I_CO2) {
     itsI_CO2 = p_I_CO2;
 }
 
+void Network::pNetwork_C::setItsI_FS(I_FS* p_I_FS) {
+    itsI_FS = p_I_FS;
+}
+
 void Network::pNetwork_C::setItsI_HVAC(I_HVAC* p_I_HVAC) {
     itsI_HVAC = p_I_HVAC;
 }
@@ -244,8 +289,24 @@ void Network::pNetwork_C::setItsI_Light(I_Light* p_I_Light) {
     itsI_Light = p_I_Light;
 }
 
+void Network::pNetwork_C::setItsI_Mic(I_Mic* p_I_Mic) {
+    itsI_Mic = p_I_Mic;
+}
+
 void Network::pNetwork_C::setItsI_OS(I_OS* p_I_OS) {
     itsI_OS = p_I_OS;
+}
+
+void Network::pNetwork_C::setItsI_SS(I_SS* p_I_SS) {
+    itsI_SS = p_I_SS;
+}
+
+void Network::pNetwork_C::setItsI_Spkr(I_Spkr* p_I_Spkr) {
+    itsI_Spkr = p_I_Spkr;
+}
+
+void Network::pNetwork_C::setItsI_WC(I_WC* p_I_WC) {
+    itsI_WC = p_I_WC;
 }
 
 void Network::pNetwork_C::setItsI_Weather(I_Weather* p_I_Weather) {
@@ -257,6 +318,10 @@ void Network::pNetwork_C::cleanUpRelations() {
         {
             itsI_CO2 = NULL;
         }
+    if(itsI_FS != NULL)
+        {
+            itsI_FS = NULL;
+        }
     if(itsI_HVAC != NULL)
         {
             itsI_HVAC = NULL;
@@ -265,9 +330,25 @@ void Network::pNetwork_C::cleanUpRelations() {
         {
             itsI_Light = NULL;
         }
+    if(itsI_Mic != NULL)
+        {
+            itsI_Mic = NULL;
+        }
     if(itsI_OS != NULL)
         {
             itsI_OS = NULL;
+        }
+    if(itsI_SS != NULL)
+        {
+            itsI_SS = NULL;
+        }
+    if(itsI_Spkr != NULL)
+        {
+            itsI_Spkr = NULL;
+        }
+    if(itsI_WC != NULL)
+        {
+            itsI_WC = NULL;
         }
     if(itsI_Weather != NULL)
         {

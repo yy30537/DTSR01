@@ -12,14 +12,14 @@
 			<_id type="a">GUID 299315ac-aded-43cd-bffa-041a110c3460</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BehaviorialAnalysisPkg</_name>
-			<_modifiedTimeWeak type="a">7.15.2023::12:52:36</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.15.2023::12:52:36</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.15.2023::14:0:53</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.15.2023::14:0:53</_modifiedTime>
 			<_lastID type="a">3</_lastID>
-			<weakCGTime type="a">7.15.2023::12:52:36</weakCGTime>
+			<weakCGTime type="a">7.15.2023::14:0:53</weakCGTime>
 			<strongCGTime type="a">7.15.2023::12:32:8</strongCGTime>
 			<_defaultComposite type="s">GUID 0ea71794-8628-4e19-b167-328d27e12348</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
-			<_configurationRelatedTime type="a">1.1.1970::1:0:0</_configurationRelatedTime>
+			<_configurationRelatedTime type="a">7.15.2023::14:0:53</_configurationRelatedTime>
 			<AggregatesList type="e">
 				<value>GUID bed5c17b-d7b0-4cd9-b701-6214730a4666</value>
 				<value>GUID 1eeb48e4-d9a3-4e34-a7d0-549a82ba86a2</value>
@@ -1029,8 +1029,8 @@
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">7.11.2023::15:8:7</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.15.2023::12:53:9</_modifiedTime>
-			<_lastModifiedTime type="a">7.15.2023::12:53:9</_lastModifiedTime>
+			<_modifiedTime type="a">7.15.2023::14:0:53</_modifiedTime>
+			<_lastModifiedTime type="a">7.15.2023::14:0:53</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -6344,8 +6344,8 @@
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">7.14.2023::18:31:13</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.15.2023::12:53:9</_modifiedTime>
-			<_lastModifiedTime type="a">7.15.2023::12:53:9</_lastModifiedTime>
+			<_modifiedTime type="a">7.15.2023::14:0:53</_modifiedTime>
+			<_lastModifiedTime type="a">7.15.2023::14:0:53</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -9119,19 +9119,19 @@
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.AttributeListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.OperationListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.Template Params</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
@@ -9495,8 +9495,8 @@
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.15.2023::12:53:9</_modifiedTime>
-			<_lastModifiedTime type="a">7.15.2023::12:53:9</_lastModifiedTime>
+			<_modifiedTime type="a">7.15.2023::13:58:52</_modifiedTime>
+			<_lastModifiedTime type="a">7.15.2023::13:58:52</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -9539,7 +9539,7 @@
 			</m_name>
 			<m_drawBehavior type="a">0</m_drawBehavior>
 			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
-			<elementList type="a">7</elementList>
+			<elementList type="a">6</elementList>
 			
 			<m_access type="a">'Z'</m_access>
 			<m_modified type="a">'N'</m_modified>
@@ -9557,7 +9557,6 @@
 				<value>GUID 75fa178f-5ae1-48cf-b71f-1012e578a2f9</value>
 				<value>GUID a00bbd39-edad-469a-8165-f5ccce4937e1</value>
 				<value>GUID 148c36ad-dc1e-48ef-ae03-37040615c54b</value>
-				<value>GUID b714fb5a-7449-4ca0-905d-09b45e0bb331</value>
 				<value>GUID 8d8a773f-9fed-4f19-8ea0-8780bbe9f17b</value>
 			</AggregatesList>
 		</CGIClassChart>
@@ -9810,8 +9809,6 @@
 			<m_displayOption type="a">All</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
-			<_itemValueOfFontPropertiesMapCount type="a">1</_itemValueOfFontPropertiesMapCount>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
 		</CGICompartment>
 		<CGICompartment type="e">
 			<_id type="a">GUID babb6b88-5c93-4106-85ec-0f58d6130319</_id>
@@ -9853,19 +9850,19 @@
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.AttributeListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.OperationListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.Template Params</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
@@ -10255,193 +10252,6 @@
 				</CGIText>
 			</m_requiredInterfaceLabel>
 		</CGIPortConnector>
-		<CGIAssociationEnd type="e">
-			<_id type="a">GUID b714fb5a-7449-4ca0-905d-09b45e0bb331</_id>
-			<m_type type="a">92</m_type>
-			<m_pModelObject type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Fire_Sensor</_hclass>
-					<_hname type="a">itsNetwork</_hname>
-					<_hid type="a">GUID 1561302d-41a9-4a48-afc0-faafaa7f71ec</_hid>
-				</IHandle>
-			</m_pModelObject>
-			<m_pParent type="s"></m_pParent>
-			<m_name type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_name>
-			<m_drawBehavior type="a">4096</m_drawBehavior>
-			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
-			<m_pSource type="s">GUID 75fa178f-5ae1-48cf-b71f-1012e578a2f9</m_pSource>
-			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID a00bbd39-edad-469a-8165-f5ccce4937e1</m_pTarget>
-			<m_targetType type="a">'T'</m_targetType>
-			<m_direction type="a">' '</m_direction>
-			<m_rpn type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">7</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_rpn>
-			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
-			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
-			<m_line_style type="a">2</m_line_style>
-			<m_SourcePort type="a">1061 384 </m_SourcePort>
-			<m_TargetPort type="a">2 367 </m_TargetPort>
-			<m_pInverseModelObject type="r">
-				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsFire_Sensor</_hname>
-					<_hid type="a">GUID c6a15b03-9e58-4139-90ec-4610f6ea0fc9</_hid>
-				</IAssociationEndHandle>
-			</m_pInverseModelObject>
-			<m_pInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInstance>
-			<m_pInverseInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInverseInstance>
-			<m_bShowSourceMultiplicity type="a">1</m_bShowSourceMultiplicity>
-			<m_bShowSourceRole type="a">1</m_bShowSourceRole>
-			<m_bShowTargetMultiplicity type="a">1</m_bShowTargetMultiplicity>
-			<m_bShowTargetRole type="a">1</m_bShowTargetRole>
-			<m_bShowLinkName type="a">1</m_bShowLinkName>
-			<m_bShowSpecificType type="a">0</m_bShowSpecificType>
-			<m_bInstance type="a">0</m_bInstance>
-			<m_bShowQualifier1 type="a">1</m_bShowQualifier1>
-			<m_bShowQualifier2 type="a">1</m_bShowQualifier2>
-			<m_sourceRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsFire_Sensor</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">2</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceRole>
-			<m_targetRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsNetwork</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">3</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">2</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetRole>
-			<m_sourceMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">4</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceMultiplicity>
-			<m_targetMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">5</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">4</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetMultiplicity>
-			<m_sourceQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">6</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceQualifier>
-			<m_targetQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">7</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
-		</CGIAssociationEnd>
 		<CGIPortConnector type="e">
 			<_id type="a">GUID 8d8a773f-9fed-4f19-8ea0-8780bbe9f17b</_id>
 			<_properties type="p"><IPropertyContainer type="e">
@@ -10795,8 +10605,8 @@
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.15.2023::12:53:9</_modifiedTime>
-			<_lastModifiedTime type="a">7.15.2023::12:53:9</_lastModifiedTime>
+			<_modifiedTime type="a">7.15.2023::13:59:45</_modifiedTime>
+			<_lastModifiedTime type="a">7.15.2023::13:59:45</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -10839,7 +10649,7 @@
 			</m_name>
 			<m_drawBehavior type="a">0</m_drawBehavior>
 			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
-			<elementList type="a">16</elementList>
+			<elementList type="a">12</elementList>
 			
 			<m_access type="a">'Z'</m_access>
 			<m_modified type="a">'N'</m_modified>
@@ -10864,10 +10674,6 @@
 				<value>GUID aaf722c5-b4c4-4033-8789-7ae7d9d41531</value>
 				<value>GUID 80df8106-57f5-40a5-8fb1-a56f9f7dda96</value>
 				<value>GUID 0d5ad4a9-428b-4105-9baf-e51711844d07</value>
-				<value>GUID 955685fb-778f-43d1-9058-43cbf6ad6095</value>
-				<value>GUID 05ca2940-73c0-4e22-be12-01a379e93850</value>
-				<value>GUID 279ab80b-fcd9-4529-80f6-cb4879e8afc7</value>
-				<value>GUID 06ffe132-9324-4d03-9e73-ea89fd3f3a78</value>
 			</AggregatesList>
 		</CGIClassChart>
 		<CGIClass type="e">
@@ -10952,7 +10758,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">4096</m_drawBehavior>
-			<m_transform type="a">5.4537 0 0 8.18182 20 20 </m_transform>
+			<m_transform type="a">4.81018 0 0 8.18182 20 20 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -12195,758 +12001,6 @@
 				</CGIText>
 			</m_requiredInterfaceLabel>
 		</CGIPortConnector>
-		<CGIAssociationEnd type="e">
-			<_id type="a">GUID 955685fb-778f-43d1-9058-43cbf6ad6095</_id>
-			<m_type type="a">92</m_type>
-			<m_pModelObject type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsMicrophones</_hname>
-					<_hid type="a">GUID e97e2bd1-98c2-4e43-98fa-cf5047a9d89c</_hid>
-				</IHandle>
-			</m_pModelObject>
-			<m_pParent type="s"></m_pParent>
-			<m_name type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_name>
-			<m_drawBehavior type="a">4096</m_drawBehavior>
-			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
-			<m_pSource type="s">GUID bbbbca93-1099-4039-bde4-2bd499197c4e</m_pSource>
-			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID 59135632-1b50-4d02-9770-2dada452d8b2</m_pTarget>
-			<m_targetType type="a">'T'</m_targetType>
-			<m_direction type="a">' '</m_direction>
-			<m_rpn type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">7</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_rpn>
-			<m_arrow type="a">3 352 162  1121 162  1121 294  </m_arrow>
-			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
-			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
-			<m_line_style type="a">2</m_line_style>
-			<m_SourcePort type="a">901 329 </m_SourcePort>
-			<m_TargetPort type="a">1061 825 </m_TargetPort>
-			<m_pInverseModelObject type="r">
-				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Microphones</_hclass>
-					<_hname type="a">itsNetwork</_hname>
-					<_hid type="a">GUID 1e4d52ca-62de-470c-b1a6-0e28b1f683e9</_hid>
-				</IAssociationEndHandle>
-			</m_pInverseModelObject>
-			<m_pInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInstance>
-			<m_pInverseInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInverseInstance>
-			<m_bShowSourceMultiplicity type="a">1</m_bShowSourceMultiplicity>
-			<m_bShowSourceRole type="a">1</m_bShowSourceRole>
-			<m_bShowTargetMultiplicity type="a">1</m_bShowTargetMultiplicity>
-			<m_bShowTargetRole type="a">1</m_bShowTargetRole>
-			<m_bShowLinkName type="a">1</m_bShowLinkName>
-			<m_bShowSpecificType type="a">0</m_bShowSpecificType>
-			<m_bInstance type="a">0</m_bInstance>
-			<m_bShowQualifier1 type="a">1</m_bShowQualifier1>
-			<m_bShowQualifier2 type="a">1</m_bShowQualifier2>
-			<m_sourceRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsNetwork</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">2</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">4</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceRole>
-			<m_targetRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsMicrophones</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">3</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetRole>
-			<m_sourceMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">4</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceMultiplicity>
-			<m_targetMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">5</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetMultiplicity>
-			<m_sourceQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">6</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceQualifier>
-			<m_targetQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">7</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
-		</CGIAssociationEnd>
-		<CGIAssociationEnd type="e">
-			<_id type="a">GUID 05ca2940-73c0-4e22-be12-01a379e93850</_id>
-			<m_type type="a">92</m_type>
-			<m_pModelObject type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsSmart_Screen</_hname>
-					<_hid type="a">GUID f22b7dbc-461f-4ccf-b5f1-6bf96002b91a</_hid>
-				</IHandle>
-			</m_pModelObject>
-			<m_pParent type="s"></m_pParent>
-			<m_name type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_name>
-			<m_drawBehavior type="a">4096</m_drawBehavior>
-			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
-			<m_pSource type="s">GUID bbbbca93-1099-4039-bde4-2bd499197c4e</m_pSource>
-			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID 08626bd0-5a8a-41d8-a221-0cc5dc817583</m_pTarget>
-			<m_targetType type="a">'T'</m_targetType>
-			<m_direction type="a">' '</m_direction>
-			<m_rpn type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">7</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_rpn>
-			<m_arrow type="a">3 326 140  1140 140  1140 534  </m_arrow>
-			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
-			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
-			<m_line_style type="a">2</m_line_style>
-			<m_SourcePort type="a">812 329 </m_SourcePort>
-			<m_TargetPort type="a">1061 840 </m_TargetPort>
-			<m_pInverseModelObject type="r">
-				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Smart_Screen</_hclass>
-					<_hname type="a">itsNetwork</_hname>
-					<_hid type="a">GUID dd3fcc90-acaa-4518-b0ee-427cdf833fa0</_hid>
-				</IAssociationEndHandle>
-			</m_pInverseModelObject>
-			<m_pInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInstance>
-			<m_pInverseInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInverseInstance>
-			<m_bShowSourceMultiplicity type="a">1</m_bShowSourceMultiplicity>
-			<m_bShowSourceRole type="a">1</m_bShowSourceRole>
-			<m_bShowTargetMultiplicity type="a">1</m_bShowTargetMultiplicity>
-			<m_bShowTargetRole type="a">1</m_bShowTargetRole>
-			<m_bShowLinkName type="a">1</m_bShowLinkName>
-			<m_bShowSpecificType type="a">0</m_bShowSpecificType>
-			<m_bInstance type="a">0</m_bInstance>
-			<m_bShowQualifier1 type="a">1</m_bShowQualifier1>
-			<m_bShowQualifier2 type="a">1</m_bShowQualifier2>
-			<m_sourceRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsNetwork</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">2</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">4</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceRole>
-			<m_targetRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsSmart_Screen</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">3</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetRole>
-			<m_sourceMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">4</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceMultiplicity>
-			<m_targetMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">5</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetMultiplicity>
-			<m_sourceQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">6</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceQualifier>
-			<m_targetQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">7</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
-		</CGIAssociationEnd>
-		<CGIAssociationEnd type="e">
-			<_id type="a">GUID 279ab80b-fcd9-4529-80f6-cb4879e8afc7</_id>
-			<m_type type="a">92</m_type>
-			<m_pModelObject type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsSpeakers</_hname>
-					<_hid type="a">GUID 77d5c8d2-8083-49ed-87ec-c81f8ff1b726</_hid>
-				</IHandle>
-			</m_pModelObject>
-			<m_pParent type="s"></m_pParent>
-			<m_name type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_name>
-			<m_drawBehavior type="a">4096</m_drawBehavior>
-			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
-			<m_pSource type="s">GUID bbbbca93-1099-4039-bde4-2bd499197c4e</m_pSource>
-			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID b25157ae-6400-4280-a133-b95d098828be</m_pTarget>
-			<m_targetType type="a">'T'</m_targetType>
-			<m_direction type="a">' '</m_direction>
-			<m_rpn type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">7</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_rpn>
-			<m_arrow type="a">3 302 124  1166 124  1166 754  </m_arrow>
-			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
-			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
-			<m_line_style type="a">2</m_line_style>
-			<m_SourcePort type="a">731 327 </m_SourcePort>
-			<m_TargetPort type="a">1061 703 </m_TargetPort>
-			<m_pInverseModelObject type="r">
-				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Speakers</_hclass>
-					<_hname type="a">itsNetwork</_hname>
-					<_hid type="a">GUID 24a8e306-ae17-4c7c-8f13-45d0878ae43a</_hid>
-				</IAssociationEndHandle>
-			</m_pInverseModelObject>
-			<m_pInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInstance>
-			<m_pInverseInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInverseInstance>
-			<m_bShowSourceMultiplicity type="a">1</m_bShowSourceMultiplicity>
-			<m_bShowSourceRole type="a">1</m_bShowSourceRole>
-			<m_bShowTargetMultiplicity type="a">1</m_bShowTargetMultiplicity>
-			<m_bShowTargetRole type="a">1</m_bShowTargetRole>
-			<m_bShowLinkName type="a">1</m_bShowLinkName>
-			<m_bShowSpecificType type="a">0</m_bShowSpecificType>
-			<m_bInstance type="a">0</m_bInstance>
-			<m_bShowQualifier1 type="a">1</m_bShowQualifier1>
-			<m_bShowQualifier2 type="a">1</m_bShowQualifier2>
-			<m_sourceRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsNetwork</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">2</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">4</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceRole>
-			<m_targetRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsSpeakers</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">3</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetRole>
-			<m_sourceMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">4</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceMultiplicity>
-			<m_targetMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">5</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetMultiplicity>
-			<m_sourceQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">6</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceQualifier>
-			<m_targetQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">7</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
-		</CGIAssociationEnd>
-		<CGIAssociationEnd type="e">
-			<_id type="a">GUID 06ffe132-9324-4d03-9e73-ea89fd3f3a78</_id>
-			<m_type type="a">92</m_type>
-			<m_pModelObject type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsWebcam</_hname>
-					<_hid type="a">GUID 95a1c3f1-8f27-4064-a755-68029d7ff02b</_hid>
-				</IHandle>
-			</m_pModelObject>
-			<m_pParent type="s"></m_pParent>
-			<m_name type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_name>
-			<m_drawBehavior type="a">4096</m_drawBehavior>
-			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
-			<m_pSource type="s">GUID bbbbca93-1099-4039-bde4-2bd499197c4e</m_pSource>
-			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID 432fe432-fb05-45e2-8846-b4f7f358ceb1</m_pTarget>
-			<m_targetType type="a">'T'</m_targetType>
-			<m_direction type="a">' '</m_direction>
-			<m_rpn type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">7</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_rpn>
-			<m_arrow type="a">3 224 94  1188 94  1188 992  </m_arrow>
-			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
-			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
-			<m_line_style type="a">2</m_line_style>
-			<m_SourcePort type="a">465 329 </m_SourcePort>
-			<m_TargetPort type="a">1061 703 </m_TargetPort>
-			<m_pInverseModelObject type="r">
-				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Webcam</_hclass>
-					<_hname type="a">itsNetwork</_hname>
-					<_hid type="a">GUID f42e516b-ad3d-4f70-9a32-b72f8afb4859</_hid>
-				</IAssociationEndHandle>
-			</m_pInverseModelObject>
-			<m_pInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInstance>
-			<m_pInverseInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInverseInstance>
-			<m_bShowSourceMultiplicity type="a">1</m_bShowSourceMultiplicity>
-			<m_bShowSourceRole type="a">1</m_bShowSourceRole>
-			<m_bShowTargetMultiplicity type="a">1</m_bShowTargetMultiplicity>
-			<m_bShowTargetRole type="a">1</m_bShowTargetRole>
-			<m_bShowLinkName type="a">1</m_bShowLinkName>
-			<m_bShowSpecificType type="a">0</m_bShowSpecificType>
-			<m_bInstance type="a">0</m_bInstance>
-			<m_bShowQualifier1 type="a">1</m_bShowQualifier1>
-			<m_bShowQualifier2 type="a">1</m_bShowQualifier2>
-			<m_sourceRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsNetwork</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">2</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">4</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceRole>
-			<m_targetRole type="p">
-				<CGIText type="e">
-					<m_str type="a">itsWebcam</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">3</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetRole>
-			<m_sourceMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">4</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceMultiplicity>
-			<m_targetMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">5</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetMultiplicity>
-			<m_sourceQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">6</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceQualifier>
-			<m_targetQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">7</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
-		</CGIAssociationEnd>
 		<IDiagram type="e">
 			<_id type="a">GUID de3a7cfd-9289-4fdf-b5fd-6629e3bb845e</_id>
 			<_myState type="a">8192</_myState>
@@ -13013,19 +12067,19 @@
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.AttributeListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.OperationListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.Template Params</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
@@ -13421,8 +12475,8 @@
 				</IRPYRawContainer>
 			</Stereotypes>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.15.2023::12:53:9</_modifiedTime>
-			<_lastModifiedTime type="a">7.15.2023::12:53:9</_lastModifiedTime>
+			<_modifiedTime type="a">7.15.2023::13:58:52</_modifiedTime>
+			<_lastModifiedTime type="a">7.15.2023::13:58:52</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -13465,7 +12519,7 @@
 			</m_name>
 			<m_drawBehavior type="a">0</m_drawBehavior>
 			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
-			<elementList type="a">17</elementList>
+			<elementList type="a">16</elementList>
 			
 			<m_access type="a">'Z'</m_access>
 			<m_modified type="a">'N'</m_modified>
@@ -13488,7 +12542,6 @@
 				<value>GUID e179a74a-0b92-40f9-9689-9f6872c9ba23</value>
 				<value>GUID a11eb4c5-4806-4ada-b413-b277b7b284cf</value>
 				<value>GUID f64060f2-6e06-4006-b8c9-6544d86314ce</value>
-				<value>GUID 16f356d0-0ebd-4122-9737-ffcdc88700cd</value>
 				<value>GUID 80089f21-c8a7-4543-8747-bfb7d512108f</value>
 				<value>GUID 301cd69a-a998-4bba-a317-6d6ab16ae13d</value>
 				<value>GUID 55bb94ca-b923-4ef7-b462-d76d20343d71</value>
@@ -13634,19 +12687,19 @@
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.AttributeListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.OperationListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.Template Params</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
@@ -13909,19 +12962,19 @@
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.AttributeListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.OperationListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.Template Params</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
@@ -14184,19 +13237,19 @@
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.AttributeListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.OperationListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.Template Params</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
@@ -14499,19 +13552,19 @@
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.AttributeListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.OperationListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.Template Params</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
@@ -14987,6 +14040,7 @@
 			</m_sourceRole>
 			<m_targetRole type="p">
 				<CGIText type="e">
+					<m_str type="a">itsNetwork</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -15104,19 +14158,19 @@
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.AttributeListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.OperationListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.Template Params</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
@@ -15379,19 +14433,19 @@
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.AttributeListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.OperationListCompartment</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
 												<IProperty type="e">
 													<_Name type="a">Font.Font@Child.Template Params</_Name>
-													<_Value type="a">Tahoma%008%00NoBold%00NoItalic</_Value>
+													<_Value type="a">Tahoma</_Value>
 													<_Type type="a">String</_Type>
 												</IProperty>
 												
@@ -15633,8 +14687,6 @@
 			<m_displayOption type="a">All</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
-			<_itemValueOfFontPropertiesMapCount type="a">1</_itemValueOfFontPropertiesMapCount>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
 		</CGICompartment>
 		<CGICompartment type="e">
 			<_id type="a">GUID 8bbe29d4-9c34-4a86-9de1-4f61a98debfa</_id>
@@ -15643,192 +14695,6 @@
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
 		</CGICompartment>
-		<CGIAssociationEnd type="e">
-			<_id type="a">GUID 16f356d0-0ebd-4122-9737-ffcdc88700cd</_id>
-			<m_type type="a">92</m_type>
-			<m_pModelObject type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Network</_hclass>
-					<_hname type="a">itsFire_Sensor</_hname>
-					<_hid type="a">GUID c6a15b03-9e58-4139-90ec-4610f6ea0fc9</_hid>
-				</IHandle>
-			</m_pModelObject>
-			<m_pParent type="s"></m_pParent>
-			<m_name type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_name>
-			<m_drawBehavior type="a">4096</m_drawBehavior>
-			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
-			<m_pSource type="s">GUID 86576288-541b-447c-8152-bfaf8189a0e0</m_pSource>
-			<m_sourceType type="a">'F'</m_sourceType>
-			<m_pTarget type="s">GUID f64060f2-6e06-4006-b8c9-6544d86314ce</m_pTarget>
-			<m_targetType type="a">'T'</m_targetType>
-			<m_direction type="a">' '</m_direction>
-			<m_rpn type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">0</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">7</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_rpn>
-			<m_arrow type="a">2 501 595  501 534  </m_arrow>
-			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
-			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
-			<m_line_style type="a">2</m_line_style>
-			<m_SourcePort type="a">2 894 </m_SourcePort>
-			<m_TargetPort type="a">1061 895 </m_TargetPort>
-			<m_pInverseModelObject type="r">
-				<IAssociationEndHandle type="e">
-					<_hm2Class type="a">IAssociationEnd</_hm2Class>
-					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
-					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-					<_hclass type="a">Fire_Sensor</_hclass>
-					<_hname type="a">itsNetwork</_hname>
-					<_hid type="a">GUID 1561302d-41a9-4a48-afc0-faafaa7f71ec</_hid>
-				</IAssociationEndHandle>
-			</m_pInverseModelObject>
-			<m_pInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInstance>
-			<m_pInverseInstance type="r">
-				<IObjectLinkHandle type="e">
-				</IObjectLinkHandle>
-			</m_pInverseInstance>
-			<m_bShowSourceMultiplicity type="a">1</m_bShowSourceMultiplicity>
-			<m_bShowSourceRole type="a">1</m_bShowSourceRole>
-			<m_bShowTargetMultiplicity type="a">1</m_bShowTargetMultiplicity>
-			<m_bShowTargetRole type="a">1</m_bShowTargetRole>
-			<m_bShowLinkName type="a">1</m_bShowLinkName>
-			<m_bShowSpecificType type="a">0</m_bShowSpecificType>
-			<m_bInstance type="a">0</m_bInstance>
-			<m_bShowQualifier1 type="a">1</m_bShowQualifier1>
-			<m_bShowQualifier2 type="a">1</m_bShowQualifier2>
-			<m_sourceRole type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">2</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">2</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceRole>
-			<m_targetRole type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">3</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">0</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetRole>
-			<m_sourceMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">4</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">4</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceMultiplicity>
-			<m_targetMultiplicity type="p">
-				<CGIText type="e">
-					<m_str type="a">1</m_str>
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">5</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">6</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetMultiplicity>
-			<m_sourceQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">6</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_sourceQualifier>
-			<m_targetQualifier type="p">
-				<CGIText type="e">
-					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
-					<m_color type="p">
-						<IColor type="e">
-							<m_fgColor type="a">0</m_fgColor>
-							<m_bgColor type="a">0</m_bgColor>
-							<m_bgFlag type="a">0</m_bgFlag>
-						</IColor>
-					</m_color>
-					<m_position type="a">1 0 0  </m_position>
-					<m_nIdent type="a">7</m_nIdent>
-					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
-					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
-				</CGIText>
-			</m_targetQualifier>
-			<m_specificType type="a">symmetric_type</m_specificType>
-		</CGIAssociationEnd>
 		<CGIPortConnector type="e">
 			<_id type="a">GUID 80089f21-c8a7-4543-8747-bfb7d512108f</_id>
 			<_properties type="p"><IPropertyContainer type="e">
@@ -16592,14 +15458,18 @@
 			<_id type="a">GUID 0ea71794-8628-4e19-b167-328d27e12348</_id>
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
-			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
+			<_modifiedTimeWeak type="a">7.15.2023::14:0:53</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.15.2023::14:0:53</_modifiedTime>
+			<weakCGTime type="a">7.15.2023::14:0:53</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
 				</IHandle>
 			</_itsStateChart>
+			<Associations type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Associations>
 			<_classModifier type="a">Unspecified</_classModifier>
 		</IClass>
 		

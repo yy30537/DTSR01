@@ -21,12 +21,31 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class External_Personnel
+//#[ ignore
+External_Personnel::pEP_C::pEP_C() : _p_(0) {
+}
+
+External_Personnel::pEP_C::~pEP_C() {
+}
+
+void External_Personnel::pEP_C::connectExternal_Personnel(External_Personnel* part) {
+}
+//#]
+
 External_Personnel::External_Personnel() {
     NOTIFY_CONSTRUCTOR(External_Personnel, External_Personnel(), 0, ArchitecturalAnalysisPkg_External_Personnel_External_Personnel_SERIALIZE);
 }
 
 External_Personnel::~External_Personnel() {
     NOTIFY_DESTRUCTOR(~External_Personnel, true);
+}
+
+External_Personnel::pEP_C* External_Personnel::getPEP() const {
+    return (External_Personnel::pEP_C*) &pEP;
+}
+
+External_Personnel::pEP_C* External_Personnel::get_pEP() const {
+    return (External_Personnel::pEP_C*) &pEP;
 }
 
 #ifdef _OMINSTRUMENT

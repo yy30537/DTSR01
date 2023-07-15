@@ -19,14 +19,42 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
+//## auto_generated
+#include <oxf\OMDefaultReactivePort.h>
 //## package ArchitecturalAnalysisPkg
 
 //## class Booking_System
 class Booking_System {
-    ////    Friends    ////
-    
 public :
 
+//#[ ignore
+    //## package ArchitecturalAnalysisPkg
+    class pBook_C : public OMDefaultReactivePort {
+        ////    Constructors and destructors    ////
+        
+    public :
+    
+        //## auto_generated
+        pBook_C();
+        
+        //## auto_generated
+        virtual ~pBook_C();
+        
+        ////    Operations    ////
+        
+        //## auto_generated
+        void connectBooking_System(Booking_System* part);
+        
+        ////    Attributes    ////
+    
+    protected :
+    
+        int _p_;		//## attribute _p_
+    };
+//#]
+
+    ////    Friends    ////
+    
 #ifdef _OMINSTRUMENT
     friend class OMAnimatedBooking_System;
 #endif // _OMINSTRUMENT
@@ -38,6 +66,18 @@ public :
     
     //## auto_generated
     ~Booking_System();
+    
+    //## auto_generated
+    pBook_C* getPBook() const;
+    
+    //## auto_generated
+    pBook_C* get_pBook() const;
+
+protected :
+
+//#[ ignore
+    pBook_C pBook;
+//#]
 };
 
 #ifdef _OMINSTRUMENT

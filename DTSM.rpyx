@@ -24,8 +24,8 @@
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">7.15.2023::12:32:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.15.2023::12:32:0</_modifiedTime>
+			<_modifiedTimeWeak type="a">7.15.2023::14:8:57</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.15.2023::14:8:57</_modifiedTime>
 			<_lastID type="a">29</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
@@ -65,7 +65,7 @@
 				<IRPYRawContainer type="e">
 					<IMultiplicityItem type="e">
 						<_name type="a">1</_name>
-						<_count type="a">2</_count>
+						<_count type="a">3</_count>
 					</IMultiplicityItem>
 					
 					<IMultiplicityItem type="e">
@@ -109,8 +109,6 @@
 				<value>GUID 18af55da-14bc-4e3a-9961-31c8936235af</value>
 				<value>GUID b851de7a-61ef-4289-bfd6-f9aac76a1047</value>
 				<value>GUID 3d461902-d2d6-4e03-a5a4-8d4484d7b822</value>
-				<value>GUID 69a9c5e4-f1a9-44f8-ba3f-9a2c7fcc5f05</value>
-				<value>GUID 299315ac-aded-43cd-bffa-041a110c3460</value>
 				<value>GUID 6a7c9d67-6d07-4d1b-bfa6-f699da2cf796</value>
 			</AggregatesList>
 		</IProject>
@@ -139,14 +137,6 @@
 		<ISubsystem type="e">
 			<fileName type="a">PackagePkg</fileName>
 			<_id type="a">GUID 3d461902-d2d6-4e03-a5a4-8d4484d7b822</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">GUI</fileName>
-			<_id type="a">GUID 69a9c5e4-f1a9-44f8-ba3f-9a2c7fcc5f05</_id>
-		</ISubsystem>
-		<ISubsystem type="e">
-			<fileName type="a">BehaviorialAnalysisPkg</fileName>
-			<_id type="a">GUID 299315ac-aded-43cd-bffa-041a110c3460</_id>
 		</ISubsystem>
 		<IComponent type="e">
 			<fileName type="a">DefaultComponent</fileName>

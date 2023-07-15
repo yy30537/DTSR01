@@ -21,12 +21,31 @@
 //## package ArchitecturalAnalysisPkg
 
 //## class Door_Touch_Panel
+//#[ ignore
+Door_Touch_Panel::pDoorTouch_C::pDoorTouch_C() : _p_(0) {
+}
+
+Door_Touch_Panel::pDoorTouch_C::~pDoorTouch_C() {
+}
+
+void Door_Touch_Panel::pDoorTouch_C::connectDoor_Touch_Panel(Door_Touch_Panel* part) {
+}
+//#]
+
 Door_Touch_Panel::Door_Touch_Panel() {
     NOTIFY_CONSTRUCTOR(Door_Touch_Panel, Door_Touch_Panel(), 0, ArchitecturalAnalysisPkg_Door_Touch_Panel_Door_Touch_Panel_SERIALIZE);
 }
 
 Door_Touch_Panel::~Door_Touch_Panel() {
     NOTIFY_DESTRUCTOR(~Door_Touch_Panel, true);
+}
+
+Door_Touch_Panel::pDoorTouch_C* Door_Touch_Panel::getPDoorTouch() const {
+    return (Door_Touch_Panel::pDoorTouch_C*) &pDoorTouch;
+}
+
+Door_Touch_Panel::pDoorTouch_C* Door_Touch_Panel::get_pDoorTouch() const {
+    return (Door_Touch_Panel::pDoorTouch_C*) &pDoorTouch;
 }
 
 #ifdef _OMINSTRUMENT

@@ -19,14 +19,42 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
+//## auto_generated
+#include <oxf\OMDefaultReactivePort.h>
 //## package ArchitecturalAnalysisPkg
 
 //## class External_Personnel
 class External_Personnel {
-    ////    Friends    ////
-    
 public :
 
+//#[ ignore
+    //## package ArchitecturalAnalysisPkg
+    class pEP_C : public OMDefaultReactivePort {
+        ////    Constructors and destructors    ////
+        
+    public :
+    
+        //## auto_generated
+        pEP_C();
+        
+        //## auto_generated
+        virtual ~pEP_C();
+        
+        ////    Operations    ////
+        
+        //## auto_generated
+        void connectExternal_Personnel(External_Personnel* part);
+        
+        ////    Attributes    ////
+    
+    protected :
+    
+        int _p_;		//## attribute _p_
+    };
+//#]
+
+    ////    Friends    ////
+    
 #ifdef _OMINSTRUMENT
     friend class OMAnimatedExternal_Personnel;
 #endif // _OMINSTRUMENT
@@ -38,6 +66,18 @@ public :
     
     //## auto_generated
     ~External_Personnel();
+    
+    //## auto_generated
+    pEP_C* getPEP() const;
+    
+    //## auto_generated
+    pEP_C* get_pEP() const;
+
+protected :
+
+//#[ ignore
+    pEP_C pEP;
+//#]
 };
 
 #ifdef _OMINSTRUMENT

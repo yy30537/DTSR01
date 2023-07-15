@@ -20,9 +20,6 @@
 //## auto_generated
 #include <oxf\event.h>
 //## auto_generated
-class AC;
-
-//## auto_generated
 class Booking_System;
 
 //## classInstance itsCO2_Sensor
@@ -34,17 +31,17 @@ class Door_Touch_Panel;
 //## auto_generated
 class External_Personnel;
 
-//## auto_generated
+//## classInstance itsFire_Sensor
 class Fire_Sensor;
 
 //## classInstance itsHVAC
 class HVAC;
 
 //## auto_generated
-class Heating;
+class I_CO2;
 
 //## auto_generated
-class I_CO2;
+class I_FS;
 
 //## auto_generated
 class I_HVAC;
@@ -53,7 +50,19 @@ class I_HVAC;
 class I_Light;
 
 //## auto_generated
+class I_Mic;
+
+//## auto_generated
 class I_OS;
+
+//## auto_generated
+class I_SS;
+
+//## auto_generated
+class I_Spkr;
+
+//## auto_generated
+class I_WC;
 
 //## auto_generated
 class I_Weather;
@@ -84,9 +93,6 @@ class Smart_Screen;
 
 //## auto_generated
 class Speakers;
-
-//## auto_generated
-class Ventilation;
 
 //## classInstance itsWeather_Forecast
 class Weather_Forecast;
@@ -158,6 +164,9 @@ extern Lights itsLights;
 
 //## classInstance itsOccupancy_Sensor
 extern Occupancy_Sensor itsOccupancy_Sensor;
+
+//## classInstance itsFire_Sensor
+extern Fire_Sensor itsFire_Sensor;
 
 //#[ ignore
 class ArchitecturalAnalysisPkg_OMInitializer {
