@@ -1,14 +1,19 @@
 
 Reverse Engineering Done.
 
-Removing Attribute 'alarmState' from Class 'Fire_Sensor'. 
-Removing AssociationEnd 'itsNetwork' from Class 'Fire_Sensor'. 
-Removing AssociationEnd 'itsNetwork' from Class 'Microphones'. 
-Removing AssociationEnd 'itsNetwork' from Class 'Smart_Screen'. 
-Removing AssociationEnd 'itsNetwork' from Class 'Speakers'. 
-Removing AssociationEnd 'itsNetwork' from Class 'Webcam'. 
-Removing AssociationEnd 'itsFire_Sensor' from Class 'Network'. 
-Removing AssociationEnd 'itsMicrophones' from Class 'Network'. 
-Removing AssociationEnd 'itsSmart_Screen' from Class 'Network'. 
-Removing AssociationEnd 'itsSpeakers' from Class 'Network'. 
-Removing AssociationEnd 'itsWebcam' from Class 'Network'. 
+Source Artifacts have been added to the model to ensure that the generated code reflects details from the original code, such as global comments, preprocessor directives, and the order of elements. See the log file for more details.
+To view the Source Artifacts in the Rhapsody browser, open the View menu and select Browser Display Options > Show Source Artifacts.
+Source Artifacts were added for the following files:
+Adding File 'I_BS:impl' to Class 'I_BS'.
+Adding File 'I_BS:spec' to Class 'I_BS'.
+Adding File 'I_FS:impl' to Class 'I_FS'.
+Adding File 'I_FS:spec' to Class 'I_FS'.
+Adding File 'I_Mic:impl' to Class 'I_Mic'.
+Adding File 'I_Mic:spec' to Class 'I_Mic'.
+Adding File 'I_Spkr:impl' to Class 'I_Spkr'.
+Adding File 'I_Spkr:spec' to Class 'I_Spkr'.
+Adding File 'I_SS:impl' to Class 'I_SS'.
+Adding File 'I_SS:spec' to Class 'I_SS'.
+Adding File 'I_WC:impl' to Class 'I_WC'.
+Adding File 'I_WC:spec' to Class 'I_WC'.
+
