@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
@@ -49,6 +49,8 @@
 #include "I_SS.h"
 //## class pNetwork_C
 #include "I_WC.h"
+//## class pNetwork_C
+#include "I_MS.h"
 //## link itsCO2_Sensor
 class CO2_Sensor;
 
@@ -69,6 +71,8 @@ class Weather_Forecast;
 
 //#[ ignore
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_ARGS_DECLARATION int p_intensity;
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setLightState_bool_ARGS_DECLARATION bool p_lightState;
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -79,7 +83,7 @@ public :
 
 //#[ ignore
     //## package ArchitecturalAnalysisPkg
-    class pNetwork_C : public I_HVAC, public I_CO2, public I_Weather, public I_Light, public I_OS, public I_FS, public I_Mic, public I_SS, public I_Spkr, public I_WC, public I_BS {
+    class pNetwork_C : public I_HVAC, public I_CO2, public I_Weather, public I_Light, public I_OS, public I_FS, public I_Mic, public I_SS, public I_Spkr, public I_WC, public I_BS, public I_MS {
         ////    Constructors and destructors    ////
         
     public :
@@ -93,10 +97,7 @@ public :
         ////    Operations    ////
         
         //## auto_generated
-        virtual bool getCold();
-        
-        //## auto_generated
-        virtual bool getHot();
+        virtual bool get();
         
         //## auto_generated
         virtual int getItensity();
@@ -115,6 +116,9 @@ public :
         
         //## auto_generated
         I_Light* getItsI_Light();
+        
+        //## auto_generated
+        I_MS* getItsI_MS();
         
         //## auto_generated
         I_Mic* getItsI_Mic();
@@ -165,10 +169,7 @@ public :
         virtual void login();
         
         //## auto_generated
-        virtual void setCold(bool arg_cold);
-        
-        //## auto_generated
-        virtual void setHot(bool arg_hot);
+        virtual void set(bool arg);
         
         //## auto_generated
         virtual void setIntensity(int arg_intensity);
@@ -177,7 +178,7 @@ public :
         virtual void setOccupied(bool arg_occupied);
         
         //## auto_generated
-        virtual void setState(bool argState);
+        virtual void setState(bool arg);
         
         //## auto_generated
         virtual void setTemp(int arg_temp);
@@ -213,6 +214,9 @@ public :
         
         //## auto_generated
         void setItsI_Light(I_Light* p_I_Light);
+        
+        //## auto_generated
+        void setItsI_MS(I_MS* p_I_MS);
         
         //## auto_generated
         void setItsI_Mic(I_Mic* p_I_Mic);
@@ -252,6 +256,8 @@ public :
         I_HVAC* itsI_HVAC;		//## link itsI_HVAC
         
         I_Light* itsI_Light;		//## link itsI_Light
+        
+        I_MS* itsI_MS;		//## link itsI_MS
         
         I_Mic* itsI_Mic;		//## link itsI_Mic
         
@@ -439,6 +445,26 @@ public :
 protected :
 
     int intensity;		//## attribute intensity
+
+public :
+
+    //## auto_generated
+    bool getLightState() const;
+    
+    //## auto_generated
+    void setLightState(bool p_lightState);
+    
+    //## auto_generated
+    bool getOccupied() const;
+    
+    //## auto_generated
+    void setOccupied(bool p_occupied);
+
+protected :
+
+    bool lightState;		//## attribute lightState
+    
+    bool occupied;		//## attribute occupied
     
 //#[ ignore
     pNetwork_C pNetwork;
@@ -461,28 +487,22 @@ public :
     inline bool On_IN() const;
     
     //## statechart_method
-    void On_entDef();
-    
-    //## statechart_method
     IOxfReactive::TakeEventStatus On_handleEvent();
-    
-    // Op:
-    //## statechart_method
-    inline bool Op_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Op_handleEvent();
-    
-    // accepttimeevent_7:
-    //## statechart_method
-    inline bool accepttimeevent_7_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus accepttimeevent_7_handleEvent();
     
     // Off:
     //## statechart_method
     inline bool Off_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Off_handleEvent();
+    
+    // accepttimeevent_9:
+    //## statechart_method
+    inline bool accepttimeevent_9_IN() const;
+    
+    // accepttimeevent_7:
+    //## statechart_method
+    inline bool accepttimeevent_7_IN() const;
 
 protected :
 
@@ -490,29 +510,31 @@ protected :
     enum Network_Enum {
         OMNonState = 0,
         On = 1,
-        Op = 2,
-        accepttimeevent_7 = 3,
-        Off = 4
+        Off = 2,
+        accepttimeevent_9 = 3,
+        accepttimeevent_7 = 4
     };
     
     int rootState_subState;
     
     int rootState_active;
     
-    int On_subState;
-    
-    IOxfTimeout* On_timeout;
+    IOxfTimeout* rootState_timeout;
 //#]
 };
 
 #ifdef _OMINSTRUMENT
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setIntensity_int)
 
+DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setLightState_bool)
+
 //#[ ignore
 class OMAnimatedNetwork : virtual public AOMInstance {
     DECLARE_REACTIVE_META(Network, OMAnimatedNetwork)
     
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setIntensity_int)
+    
+    DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setLightState_bool)
     
     ////    Framework operations    ////
     
@@ -529,13 +551,13 @@ public :
     void On_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void Op_serializeStates(AOMSState* aomsState) const;
+    void Off_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void accepttimeevent_9_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
     void accepttimeevent_7_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Off_serializeStates(AOMSState* aomsState) const;
 };
 //#]
 #endif // _OMINSTRUMENT
@@ -548,16 +570,16 @@ inline bool Network::On_IN() const {
     return rootState_subState == On;
 }
 
-inline bool Network::Op_IN() const {
-    return On_subState == Op;
+inline bool Network::Off_IN() const {
+    return rootState_subState == Off;
+}
+
+inline bool Network::accepttimeevent_9_IN() const {
+    return rootState_subState == accepttimeevent_9;
 }
 
 inline bool Network::accepttimeevent_7_IN() const {
-    return On_subState == accepttimeevent_7;
-}
-
-inline bool Network::Off_IN() const {
-    return rootState_subState == Off;
+    return rootState_subState == accepttimeevent_7;
 }
 
 #endif

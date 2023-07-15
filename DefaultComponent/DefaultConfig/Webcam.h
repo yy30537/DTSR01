@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Webcam
@@ -48,12 +48,6 @@ public :
         //## auto_generated
         I_WC* getItsI_WC();
         
-        //## auto_generated
-        virtual bool getState();
-        
-        //## auto_generated
-        virtual void setState(bool argState);
-        
         ////    Additional operations    ////
         
         //## auto_generated
@@ -86,13 +80,7 @@ public :
     Webcam();
     
     //## auto_generated
-    virtual ~Webcam();
-    
-    //## operation getState()
-    virtual bool getState();
-    
-    //## operation setState(bool)
-    virtual void setState(bool argState);
+    ~Webcam();
     
     //## auto_generated
     pWebcam_C* getPWebcam() const;
@@ -106,7 +94,17 @@ protected :
     void initRelations();
     
     bool state;		//## attribute state
+
+public :
+
+    //## auto_generated
+    bool getState() const;
     
+    //## auto_generated
+    void setState(bool p_state);
+
+protected :
+
 //#[ ignore
     pWebcam_C pWebcam;
 //#]

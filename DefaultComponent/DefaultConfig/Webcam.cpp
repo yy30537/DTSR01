@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Webcam
@@ -16,10 +16,6 @@
 #include "Webcam.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Webcam_Webcam_SERIALIZE OM_NO_OP
-
-#define ArchitecturalAnalysisPkg_Webcam_getState_SERIALIZE OM_NO_OP
-
-#define ArchitecturalAnalysisPkg_Webcam_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -43,22 +39,6 @@ I_WC* Webcam::pWebcam_C::getItsI_WC() {
     return this;
 }
 
-bool Webcam::pWebcam_C::getState() {
-    bool res = false;
-    if (itsI_WC != NULL) {
-        res = itsI_WC->getState();
-    }
-    return res;
-}
-
-void Webcam::pWebcam_C::setState(bool argState) {
-    
-    if (itsI_WC != NULL) {
-        itsI_WC->setState(argState);
-    }
-    
-}
-
 void Webcam::pWebcam_C::setItsI_WC(I_WC* p_I_WC) {
     itsI_WC = p_I_WC;
 }
@@ -80,20 +60,6 @@ Webcam::~Webcam() {
     NOTIFY_DESTRUCTOR(~Webcam, false);
 }
 
-bool Webcam::getState() {
-    NOTIFY_OPERATION(getState, getState(), 0, ArchitecturalAnalysisPkg_Webcam_getState_SERIALIZE);
-    //#[ operation getState()
-    return state;
-    //#]
-}
-
-void Webcam::setState(bool argState) {
-    NOTIFY_OPERATION(setState, setState(bool), 1, ArchitecturalAnalysisPkg_Webcam_setState_SERIALIZE);
-    //#[ operation setState(bool)
-    state=argState;
-    //#]
-}
-
 Webcam::pWebcam_C* Webcam::getPWebcam() const {
     return (Webcam::pWebcam_C*) &pWebcam;
 }
@@ -106,6 +72,14 @@ void Webcam::initRelations() {
     if (get_pWebcam() != NULL) {
         get_pWebcam()->connectWebcam(this);
     }
+}
+
+bool Webcam::getState() const {
+    return state;
+}
+
+void Webcam::setState(bool p_state) {
+    state = p_state;
 }
 
 #ifdef _OMINSTRUMENT

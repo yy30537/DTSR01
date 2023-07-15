@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Lights
@@ -21,7 +21,11 @@
 
 #define ArchitecturalAnalysisPkg_Lights_getItensity_SERIALIZE OM_NO_OP
 
+#define ArchitecturalAnalysisPkg_Lights_getState_SERIALIZE OM_NO_OP
+
 #define ArchitecturalAnalysisPkg_Lights_setIntensity_SERIALIZE aomsmethod->addAttribute("arg_intensity", x2String(arg_intensity));
+
+#define ArchitecturalAnalysisPkg_Lights_setState_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -53,10 +57,26 @@ I_Light* Lights::pLights_C::getItsI_Light() {
     return this;
 }
 
+bool Lights::pLights_C::getState() {
+    bool res = false;
+    if (itsI_Light != NULL) {
+        res = itsI_Light->getState();
+    }
+    return res;
+}
+
 void Lights::pLights_C::setIntensity(int arg_intensity) {
     
     if (itsI_Light != NULL) {
         itsI_Light->setIntensity(arg_intensity);
+    }
+    
+}
+
+void Lights::pLights_C::setState(bool arg) {
+    
+    if (itsI_Light != NULL) {
+        itsI_Light->setState(arg);
     }
     
 }
@@ -164,13 +184,27 @@ void Lights::setIntensity(int arg_intensity) {
     //#[ operation setIntensity(int)
     intensity=arg_intensity;
     //#]
-    NOTIFY_SET_OPERATION;
+}
+
+bool Lights::getState() {
+    NOTIFY_OPERATION(getState, getState(), 0, ArchitecturalAnalysisPkg_Lights_getState_SERIALIZE);
+    //#[ operation getState()
+    return state;
+    //#]
+}
+
+void Lights::setState(bool arg) {
+    NOTIFY_OPERATION(setState, setState(bool), 1, ArchitecturalAnalysisPkg_Lights_setState_SERIALIZE);
+    //#[ operation setState(bool)
+    state=arg;
+    //#]
 }
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
 void OMAnimatedLights::serializeAttributes(AOMSAttributes* aomsAttributes) const {
     aomsAttributes->addAttribute("intensity", x2String(myReal->intensity));
+    aomsAttributes->addAttribute("state", x2String(myReal->state));
     OMAnimatedI_Light::serializeAttributes(aomsAttributes);
 }
 

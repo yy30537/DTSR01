@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_Light
@@ -46,6 +46,12 @@ public :
     
     //## operation setIntensity(int)
     virtual void setIntensity(int arg_intensity) = 0;
+    
+    //## operation getState()
+    virtual bool getState() = 0;
+    
+    //## operation setState(bool)
+    virtual void setState(bool arg) = 0;
 };
 
 #ifdef _OMINSTRUMENT

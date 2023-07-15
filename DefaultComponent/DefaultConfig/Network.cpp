@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
@@ -34,6 +34,10 @@
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_intensity)
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_SERIALIZE_RET_VAL
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setLightState_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_lightState)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setLightState_bool_SERIALIZE_RET_VAL
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -46,6 +50,7 @@ Network::pNetwork_C::pNetwork_C() : _p_(0) {
     itsI_FS = NULL;
     itsI_HVAC = NULL;
     itsI_Light = NULL;
+    itsI_MS = NULL;
     itsI_Mic = NULL;
     itsI_OS = NULL;
     itsI_SS = NULL;
@@ -58,18 +63,10 @@ Network::pNetwork_C::~pNetwork_C() {
     cleanUpRelations();
 }
 
-bool Network::pNetwork_C::getCold() {
+bool Network::pNetwork_C::get() {
     bool res = false;
-    if (itsI_Weather != NULL) {
-        res = itsI_Weather->getCold();
-    }
-    return res;
-}
-
-bool Network::pNetwork_C::getHot() {
-    bool res = false;
-    if (itsI_Weather != NULL) {
-        res = itsI_Weather->getHot();
+    if (itsI_MS != NULL) {
+        res = itsI_MS->get();
     }
     return res;
 }
@@ -99,6 +96,10 @@ I_HVAC* Network::pNetwork_C::getItsI_HVAC() {
 }
 
 I_Light* Network::pNetwork_C::getItsI_Light() {
+    return this;
+}
+
+I_MS* Network::pNetwork_C::getItsI_MS() {
     return this;
 }
 
@@ -140,8 +141,8 @@ Network::pNetwork_C* Network::pNetwork_C::getOutBound() {
 
 bool Network::pNetwork_C::getState() {
     bool res = false;
-    if (itsI_FS != NULL) {
-        res = itsI_FS->getState();
+    if (itsI_Light != NULL) {
+        res = itsI_Light->getState();
     }
     return res;
 }
@@ -202,18 +203,10 @@ void Network::pNetwork_C::login() {
     
 }
 
-void Network::pNetwork_C::setCold(bool arg_cold) {
+void Network::pNetwork_C::set(bool arg) {
     
-    if (itsI_Weather != NULL) {
-        itsI_Weather->setCold(arg_cold);
-    }
-    
-}
-
-void Network::pNetwork_C::setHot(bool arg_hot) {
-    
-    if (itsI_Weather != NULL) {
-        itsI_Weather->setHot(arg_hot);
+    if (itsI_MS != NULL) {
+        itsI_MS->set(arg);
     }
     
 }
@@ -234,10 +227,10 @@ void Network::pNetwork_C::setOccupied(bool arg_occupied) {
     
 }
 
-void Network::pNetwork_C::setState(bool argState) {
+void Network::pNetwork_C::setState(bool arg) {
     
-    if (itsI_FS != NULL) {
-        itsI_FS->setState(argState);
+    if (itsI_Light != NULL) {
+        itsI_Light->setState(arg);
     }
     
 }
@@ -310,6 +303,10 @@ void Network::pNetwork_C::setItsI_Light(I_Light* p_I_Light) {
     itsI_Light = p_I_Light;
 }
 
+void Network::pNetwork_C::setItsI_MS(I_MS* p_I_MS) {
+    itsI_MS = p_I_MS;
+}
+
 void Network::pNetwork_C::setItsI_Mic(I_Mic* p_I_Mic) {
     itsI_Mic = p_I_Mic;
 }
@@ -355,6 +352,10 @@ void Network::pNetwork_C::cleanUpRelations() {
         {
             itsI_Light = NULL;
         }
+    if(itsI_MS != NULL)
+        {
+            itsI_MS = NULL;
+        }
     if(itsI_Mic != NULL)
         {
             itsI_Mic = NULL;
@@ -382,7 +383,7 @@ void Network::pNetwork_C::cleanUpRelations() {
 }
 //#]
 
-Network::Network(IOxfActive* theActiveContext) : intensity(0) {
+Network::Network(IOxfActive* theActiveContext) : intensity(0), lightState(false), occupied(false) {
     NOTIFY_REACTIVE_CONSTRUCTOR(Network, Network(), 0, ArchitecturalAnalysisPkg_Network_Network_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsCO2_Sensor = NULL;
@@ -441,8 +442,7 @@ bool Network::startBehavior() {
 void Network::initStatechart() {
     rootState_subState = OMNonState;
     rootState_active = OMNonState;
-    On_subState = OMNonState;
-    On_timeout = NULL;
+    rootState_timeout = NULL;
 }
 
 void Network::cleanUpRelations() {
@@ -707,14 +707,14 @@ void Network::_clearItsOccupancy_Sensor() {
 }
 
 void Network::cancelTimeouts() {
-    cancel(On_timeout);
+    cancel(rootState_timeout);
 }
 
 bool Network::cancelTimeout(const IOxfTimeout* arg) {
     bool res = false;
-    if(On_timeout == arg)
+    if(rootState_timeout == arg)
         {
-            On_timeout = NULL;
+            rootState_timeout = NULL;
             res = true;
         }
     return res;
@@ -729,13 +729,37 @@ void Network::setIntensity(int p_intensity) {
     NOTIFY_SET_OPERATION;
 }
 
+bool Network::getLightState() const {
+    return lightState;
+}
+
+void Network::setLightState(bool p_lightState) {
+    lightState = p_lightState;
+    NOTIFY_SET_OPERATION;
+}
+
+bool Network::getOccupied() const {
+    return occupied;
+}
+
+void Network::setOccupied(bool p_occupied) {
+    occupied = p_occupied;
+}
+
 void Network::rootState_entDef() {
     {
         NOTIFY_STATE_ENTERED("ROOT");
         NOTIFY_TRANSITION_STARTED("0");
         NOTIFY_STATE_ENTERED("ROOT.Off");
+        pushNullTransition();
         rootState_subState = Off;
         rootState_active = Off;
+        //#[ state Off.(Entry) 
+        intensity=intensity;
+        lightState=lightState;
+        OUT_PORT(pNetwork)->setIntensity(intensity);
+        //#]
+        rootState_timeout = scheduleTimeout(200, "ROOT.Off");
         NOTIFY_TRANSITION_TERMINATED("0");
     }
 }
@@ -746,29 +770,59 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
         // State Off
         case Off:
         {
-            if(IS_EVENT_TYPE_OF(ev_turnOnLight_ArchitecturalAnalysisPkg_id))
+            res = Off_handleEvent();
+        }
+        break;
+        case accepttimeevent_7:
+        {
+            if(IS_EVENT_TYPE_OF(OMNullEventId))
                 {
-                    NOTIFY_TRANSITION_STARTED("2");
-                    NOTIFY_STATE_EXITED("ROOT.Off");
-                    //#[ transition 2 
-                    OUT_PORT(pNetwork)->setIntensity(5);
+                    NOTIFY_TRANSITION_STARTED("8");
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.accepttimeevent_7");
+                    NOTIFY_STATE_ENTERED("ROOT.On");
+                    pushNullTransition();
+                    rootState_subState = On;
+                    rootState_active = On;
+                    //#[ state On.(Entry) 
+                    intensity=intensity;
+                    lightState=lightState;
+                    OUT_PORT(pNetwork)->setIntensity(intensity);
                     //#]
-                    On_entDef();
-                    NOTIFY_TRANSITION_TERMINATED("2");
+                    rootState_timeout = scheduleTimeout(200, "ROOT.On");
+                    NOTIFY_TRANSITION_TERMINATED("8");
                     res = eventConsumed;
                 }
             
         }
         break;
-        // State Op
-        case Op:
+        case accepttimeevent_9:
         {
-            res = Op_handleEvent();
+            if(IS_EVENT_TYPE_OF(OMNullEventId))
+                {
+                    NOTIFY_TRANSITION_STARTED("6");
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.accepttimeevent_9");
+                    NOTIFY_STATE_ENTERED("ROOT.Off");
+                    pushNullTransition();
+                    rootState_subState = Off;
+                    rootState_active = Off;
+                    //#[ state Off.(Entry) 
+                    intensity=intensity;
+                    lightState=lightState;
+                    OUT_PORT(pNetwork)->setIntensity(intensity);
+                    //#]
+                    rootState_timeout = scheduleTimeout(200, "ROOT.Off");
+                    NOTIFY_TRANSITION_TERMINATED("6");
+                    res = eventConsumed;
+                }
+            
         }
         break;
-        case accepttimeevent_7:
+        // State On
+        case On:
         {
-            res = accepttimeevent_7_handleEvent();
+            res = On_handleEvent();
         }
         break;
         default:
@@ -777,136 +831,151 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
     return res;
 }
 
-void Network::On_entDef() {
-    NOTIFY_STATE_ENTERED("ROOT.On");
-    pushNullTransition();
-    rootState_subState = On;
-    //#[ state On.(Entry) 
-    intensity=5;
-    //#]
-    NOTIFY_TRANSITION_STARTED("3");
-    NOTIFY_STATE_ENTERED("ROOT.On.Op");
-    On_subState = Op;
-    rootState_active = Op;
-    On_timeout = scheduleTimeout(1000, "ROOT.On.Op");
-    NOTIFY_TRANSITION_TERMINATED("3");
-}
-
 IOxfReactive::TakeEventStatus Network::On_handleEvent() {
-    IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    if(IS_EVENT_TYPE_OF(OMNullEventId))
-        {
-            //## transition 6 
-            if(intensity==0)
-                {
-                    NOTIFY_TRANSITION_STARTED("6");
-                    popNullTransition();
-                    switch (On_subState) {
-                        // State Op
-                        case Op:
-                        {
-                            cancel(On_timeout);
-                            NOTIFY_STATE_EXITED("ROOT.On.Op");
-                        }
-                        break;
-                        case accepttimeevent_7:
-                        {
-                            popNullTransition();
-                            NOTIFY_STATE_EXITED("ROOT.On.accepttimeevent_7");
-                        }
-                        break;
-                        default:
-                            break;
-                    }
-                    On_subState = OMNonState;
-                    NOTIFY_STATE_EXITED("ROOT.On");
-                    NOTIFY_STATE_ENTERED("ROOT.Off");
-                    rootState_subState = Off;
-                    rootState_active = Off;
-                    NOTIFY_TRANSITION_TERMINATED("6");
-                    res = eventConsumed;
-                }
-        }
-    else if(IS_EVENT_TYPE_OF(ev_TurnOff_Light_ArchitecturalAnalysisPkg_id))
-        {
-            NOTIFY_TRANSITION_STARTED("1");
-            popNullTransition();
-            switch (On_subState) {
-                // State Op
-                case Op:
-                {
-                    cancel(On_timeout);
-                    NOTIFY_STATE_EXITED("ROOT.On.Op");
-                }
-                break;
-                case accepttimeevent_7:
-                {
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.On.accepttimeevent_7");
-                }
-                break;
-                default:
-                    break;
-            }
-            On_subState = OMNonState;
-            NOTIFY_STATE_EXITED("ROOT.On");
-            //#[ transition 1 
-            OUT_PORT(pNetwork)->setIntensity(0);
-            //#]
-            NOTIFY_STATE_ENTERED("ROOT.Off");
-            rootState_subState = Off;
-            rootState_active = Off;
-            NOTIFY_TRANSITION_TERMINATED("1");
-            res = eventConsumed;
-        }
-    
-    return res;
-}
-
-IOxfReactive::TakeEventStatus Network::Op_handleEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
         {
-            if(getCurrentEvent() == On_timeout)
+            if(getCurrentEvent() == rootState_timeout)
                 {
-                    NOTIFY_TRANSITION_STARTED("4");
-                    cancel(On_timeout);
-                    NOTIFY_STATE_EXITED("ROOT.On.Op");
-                    NOTIFY_STATE_ENTERED("ROOT.On.accepttimeevent_7");
+                    NOTIFY_TRANSITION_STARTED("7");
+                    popNullTransition();
+                    cancel(rootState_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.On");
+                    NOTIFY_STATE_ENTERED("ROOT.accepttimeevent_7");
                     pushNullTransition();
-                    On_subState = accepttimeevent_7;
+                    rootState_subState = accepttimeevent_7;
                     rootState_active = accepttimeevent_7;
-                    NOTIFY_TRANSITION_TERMINATED("4");
+                    NOTIFY_TRANSITION_TERMINATED("7");
                     res = eventConsumed;
                 }
         }
-    
-    if(res == eventNotConsumed)
+    else if(IS_EVENT_TYPE_OF(OMNullEventId))
         {
-            res = On_handleEvent();
+            //## transition 1 
+            if(intensity==0)
+                {
+                    NOTIFY_TRANSITION_STARTED("1");
+                    popNullTransition();
+                    cancel(rootState_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.On");
+                    //#[ transition 1 
+                    lightState=false;
+                    //#]
+                    NOTIFY_STATE_ENTERED("ROOT.Off");
+                    pushNullTransition();
+                    rootState_subState = Off;
+                    rootState_active = Off;
+                    //#[ state Off.(Entry) 
+                    intensity=intensity;
+                    lightState=lightState;
+                    OUT_PORT(pNetwork)->setIntensity(intensity);
+                    //#]
+                    rootState_timeout = scheduleTimeout(200, "ROOT.Off");
+                    NOTIFY_TRANSITION_TERMINATED("1");
+                    res = eventConsumed;
+                }
+            else
+                {
+                    //## transition 4 
+                    if(lightState==false)
+                        {
+                            NOTIFY_TRANSITION_STARTED("4");
+                            popNullTransition();
+                            cancel(rootState_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.On");
+                            //#[ transition 4 
+                            intensity=0;
+                            //#]
+                            NOTIFY_STATE_ENTERED("ROOT.Off");
+                            pushNullTransition();
+                            rootState_subState = Off;
+                            rootState_active = Off;
+                            //#[ state Off.(Entry) 
+                            intensity=intensity;
+                            lightState=lightState;
+                            OUT_PORT(pNetwork)->setIntensity(intensity);
+                            //#]
+                            rootState_timeout = scheduleTimeout(200, "ROOT.Off");
+                            NOTIFY_TRANSITION_TERMINATED("4");
+                            res = eventConsumed;
+                        }
+                }
         }
+    
     return res;
 }
 
-IOxfReactive::TakeEventStatus Network::accepttimeevent_7_handleEvent() {
+IOxfReactive::TakeEventStatus Network::Off_handleEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    if(IS_EVENT_TYPE_OF(OMNullEventId))
+    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
         {
-            NOTIFY_TRANSITION_STARTED("5");
-            popNullTransition();
-            NOTIFY_STATE_EXITED("ROOT.On.accepttimeevent_7");
-            NOTIFY_STATE_ENTERED("ROOT.On.Op");
-            On_subState = Op;
-            rootState_active = Op;
-            On_timeout = scheduleTimeout(1000, "ROOT.On.Op");
-            NOTIFY_TRANSITION_TERMINATED("5");
-            res = eventConsumed;
+            if(getCurrentEvent() == rootState_timeout)
+                {
+                    NOTIFY_TRANSITION_STARTED("5");
+                    popNullTransition();
+                    cancel(rootState_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.Off");
+                    NOTIFY_STATE_ENTERED("ROOT.accepttimeevent_9");
+                    pushNullTransition();
+                    rootState_subState = accepttimeevent_9;
+                    rootState_active = accepttimeevent_9;
+                    NOTIFY_TRANSITION_TERMINATED("5");
+                    res = eventConsumed;
+                }
+        }
+    else if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            //## transition 2 
+            if(intensity!=0)
+                {
+                    NOTIFY_TRANSITION_STARTED("2");
+                    popNullTransition();
+                    cancel(rootState_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.Off");
+                    //#[ transition 2 
+                    lightState=true;
+                    //#]
+                    NOTIFY_STATE_ENTERED("ROOT.On");
+                    pushNullTransition();
+                    rootState_subState = On;
+                    rootState_active = On;
+                    //#[ state On.(Entry) 
+                    intensity=intensity;
+                    lightState=lightState;
+                    OUT_PORT(pNetwork)->setIntensity(intensity);
+                    //#]
+                    rootState_timeout = scheduleTimeout(200, "ROOT.On");
+                    NOTIFY_TRANSITION_TERMINATED("2");
+                    res = eventConsumed;
+                }
+            else
+                {
+                    //## transition 3 
+                    if(lightState==true)
+                        {
+                            NOTIFY_TRANSITION_STARTED("3");
+                            popNullTransition();
+                            cancel(rootState_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.Off");
+                            //#[ transition 3 
+                            intensity=5;
+                            //#]
+                            NOTIFY_STATE_ENTERED("ROOT.On");
+                            pushNullTransition();
+                            rootState_subState = On;
+                            rootState_active = On;
+                            //#[ state On.(Entry) 
+                            intensity=intensity;
+                            lightState=lightState;
+                            OUT_PORT(pNetwork)->setIntensity(intensity);
+                            //#]
+                            rootState_timeout = scheduleTimeout(200, "ROOT.On");
+                            NOTIFY_TRANSITION_TERMINATED("3");
+                            res = eventConsumed;
+                        }
+                }
         }
     
-    if(res == eventNotConsumed)
-        {
-            res = On_handleEvent();
-        }
     return res;
 }
 
@@ -914,6 +983,8 @@ IOxfReactive::TakeEventStatus Network::accepttimeevent_7_handleEvent() {
 //#[ ignore
 void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) const {
     aomsAttributes->addAttribute("intensity", x2String(myReal->intensity));
+    aomsAttributes->addAttribute("lightState", x2String(myReal->lightState));
+    aomsAttributes->addAttribute("occupied", x2String(myReal->occupied));
 }
 
 void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
@@ -957,6 +1028,16 @@ void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {
             Off_serializeStates(aomsState);
         }
         break;
+        case Network::accepttimeevent_7:
+        {
+            accepttimeevent_7_serializeStates(aomsState);
+        }
+        break;
+        case Network::accepttimeevent_9:
+        {
+            accepttimeevent_9_serializeStates(aomsState);
+        }
+        break;
         case Network::On:
         {
             On_serializeStates(aomsState);
@@ -969,32 +1050,18 @@ void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {
 
 void OMAnimatedNetwork::On_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT.On");
-    switch (myReal->On_subState) {
-        case Network::Op:
-        {
-            Op_serializeStates(aomsState);
-        }
-        break;
-        case Network::accepttimeevent_7:
-        {
-            accepttimeevent_7_serializeStates(aomsState);
-        }
-        break;
-        default:
-            break;
-    }
-}
-
-void OMAnimatedNetwork::Op_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.On.Op");
-}
-
-void OMAnimatedNetwork::accepttimeevent_7_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.On.accepttimeevent_7");
 }
 
 void OMAnimatedNetwork::Off_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT.Off");
+}
+
+void OMAnimatedNetwork::accepttimeevent_9_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.accepttimeevent_9");
+}
+
+void OMAnimatedNetwork::accepttimeevent_7_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.accepttimeevent_7");
 }
 //#]
 
@@ -1003,6 +1070,10 @@ IMPLEMENT_REACTIVE_META_P(Network, ArchitecturalAnalysisPkg, ArchitecturalAnalys
 IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setIntensity_int, "setIntensity", FALSE, "setIntensity(int)", 1)
 
 IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setIntensity_int, Network, setIntensity(p_intensity), NO_OP())
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setLightState_bool, "setLightState", FALSE, "setLightState(bool)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setLightState_bool, Network, setLightState(p_lightState), NO_OP())
 #endif // _OMINSTRUMENT
 
 /*********************************************************************

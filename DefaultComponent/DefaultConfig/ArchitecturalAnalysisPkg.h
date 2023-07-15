@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
@@ -51,6 +51,9 @@ class I_HVAC;
 
 //## auto_generated
 class I_Light;
+
+//## auto_generated
+class I_MS;
 
 //## auto_generated
 class I_Mic;
@@ -124,21 +127,11 @@ class Webcam;
 
 #define ev_CO2_BelowTH_ArchitecturalAnalysisPkg_id 18210
 
-#define ev_gets_too_hot_ArchitecturalAnalysisPkg_id 18211
+#define ev_TurnOn_Light_ArchitecturalAnalysisPkg_id 18211
 
-#define ev_gets_too_cold_ArchitecturalAnalysisPkg_id 18212
+#define ev_TurnOff_Light_ArchitecturalAnalysisPkg_id 18212
 
-#define ev_gets_not_hot_ArchitecturalAnalysisPkg_id 18213
-
-#define ev_gets_not_cold_ArchitecturalAnalysisPkg_id 18214
-
-#define ev_SetLightIntensity_ArchitecturalAnalysisPkg_id 18215
-
-#define ev_TurnOn_Light_ArchitecturalAnalysisPkg_id 18216
-
-#define ev_TurnOff_Light_ArchitecturalAnalysisPkg_id 18217
-
-#define ev_turnOnLight_ArchitecturalAnalysisPkg_id 18218
+#define ev_turnOnLight_ArchitecturalAnalysisPkg_id 18213
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -486,151 +479,6 @@ public :
 //#[ ignore
 class OMAnimatedev_CO2_BelowTH : virtual public AOMEvent {
     DECLARE_META_EVENT(ev_CO2_BelowTH)
-};
-//#]
-#endif // _OMINSTRUMENT
-
-//## event ev_gets_too_hot()
-class ev_gets_too_hot : public OMEvent {
-    ////    Friends    ////
-    
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedev_gets_too_hot;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
-    //## auto_generated
-    ev_gets_too_hot();
-    
-    ////    Framework operations    ////
-    
-    //## statechart_method
-    virtual bool isTypeOf(const short id) const;
-};
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedev_gets_too_hot : virtual public AOMEvent {
-    DECLARE_META_EVENT(ev_gets_too_hot)
-};
-//#]
-#endif // _OMINSTRUMENT
-
-//## event ev_gets_too_cold()
-class ev_gets_too_cold : public OMEvent {
-    ////    Friends    ////
-    
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedev_gets_too_cold;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
-    //## auto_generated
-    ev_gets_too_cold();
-    
-    ////    Framework operations    ////
-    
-    //## statechart_method
-    virtual bool isTypeOf(const short id) const;
-};
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedev_gets_too_cold : virtual public AOMEvent {
-    DECLARE_META_EVENT(ev_gets_too_cold)
-};
-//#]
-#endif // _OMINSTRUMENT
-
-//## event ev_gets_not_hot()
-class ev_gets_not_hot : public OMEvent {
-    ////    Friends    ////
-    
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedev_gets_not_hot;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
-    //## auto_generated
-    ev_gets_not_hot();
-    
-    ////    Framework operations    ////
-    
-    //## statechart_method
-    virtual bool isTypeOf(const short id) const;
-};
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedev_gets_not_hot : virtual public AOMEvent {
-    DECLARE_META_EVENT(ev_gets_not_hot)
-};
-//#]
-#endif // _OMINSTRUMENT
-
-//## event ev_gets_not_cold()
-class ev_gets_not_cold : public OMEvent {
-    ////    Friends    ////
-    
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedev_gets_not_cold;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
-    //## auto_generated
-    ev_gets_not_cold();
-    
-    ////    Framework operations    ////
-    
-    //## statechart_method
-    virtual bool isTypeOf(const short id) const;
-};
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedev_gets_not_cold : virtual public AOMEvent {
-    DECLARE_META_EVENT(ev_gets_not_cold)
-};
-//#]
-#endif // _OMINSTRUMENT
-
-//## event ev_SetLightIntensity()
-class ev_SetLightIntensity : public OMEvent {
-    ////    Friends    ////
-    
-public :
-
-#ifdef _OMINSTRUMENT
-    friend class OMAnimatedev_SetLightIntensity;
-#endif // _OMINSTRUMENT
-
-    ////    Constructors and destructors    ////
-    
-    //## auto_generated
-    ev_SetLightIntensity();
-    
-    ////    Framework operations    ////
-    
-    //## statechart_method
-    virtual bool isTypeOf(const short id) const;
-};
-
-#ifdef _OMINSTRUMENT
-//#[ ignore
-class OMAnimatedev_SetLightIntensity : virtual public AOMEvent {
-    DECLARE_META_EVENT(ev_SetLightIntensity)
 };
 //#]
 #endif // _OMINSTRUMENT

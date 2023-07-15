@@ -1,6 +1,6 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_Light
@@ -19,7 +19,11 @@
 
 #define ArchitecturalAnalysisPkg_I_Light_getItensity_SERIALIZE OM_NO_OP
 
+#define ArchitecturalAnalysisPkg_I_Light_getState_SERIALIZE OM_NO_OP
+
 #define ArchitecturalAnalysisPkg_I_Light_setIntensity_SERIALIZE aomsmethod->addAttribute("arg_intensity", x2String(arg_intensity));
+
+#define ArchitecturalAnalysisPkg_I_Light_setState_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
 //#]
 
 //## package ArchitecturalAnalysisPkg
