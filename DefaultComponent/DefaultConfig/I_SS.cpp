@@ -16,6 +16,10 @@
 #include "I_SS.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_SS_I_SS_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_SS_getState_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_SS_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg

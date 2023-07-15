@@ -37,7 +37,15 @@ public :
     I_Mic();
     
     //## auto_generated
-    virtual ~I_Mic();
+    virtual ~I_Mic() = 0;
+    
+    ////    Operations    ////
+    
+    //## operation getState()
+    virtual bool getState() = 0;
+    
+    //## operation setState(bool)
+    virtual void setState(bool argState) = 0;
 };
 
 #ifdef _OMINSTRUMENT

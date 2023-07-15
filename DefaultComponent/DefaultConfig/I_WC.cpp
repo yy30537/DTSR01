@@ -16,6 +16,10 @@
 #include "I_WC.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_WC_I_WC_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_WC_getState_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_WC_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg

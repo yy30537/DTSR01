@@ -16,6 +16,10 @@
 #include "Smart_Screen.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Smart_Screen_Smart_Screen_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_Smart_Screen_getState_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_Smart_Screen_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -39,6 +43,22 @@ I_SS* Smart_Screen::pSmartScreen_C::getItsI_SS() {
     return this;
 }
 
+bool Smart_Screen::pSmartScreen_C::getState() {
+    bool res = false;
+    if (itsI_SS != NULL) {
+        res = itsI_SS->getState();
+    }
+    return res;
+}
+
+void Smart_Screen::pSmartScreen_C::setState(bool argState) {
+    
+    if (itsI_SS != NULL) {
+        itsI_SS->setState(argState);
+    }
+    
+}
+
 void Smart_Screen::pSmartScreen_C::setItsI_SS(I_SS* p_I_SS) {
     itsI_SS = p_I_SS;
 }
@@ -51,13 +71,27 @@ void Smart_Screen::pSmartScreen_C::cleanUpRelations() {
 }
 //#]
 
-Smart_Screen::Smart_Screen() {
+Smart_Screen::Smart_Screen() : state(false) {
     NOTIFY_CONSTRUCTOR(Smart_Screen, Smart_Screen(), 0, ArchitecturalAnalysisPkg_Smart_Screen_Smart_Screen_SERIALIZE);
     initRelations();
 }
 
 Smart_Screen::~Smart_Screen() {
     NOTIFY_DESTRUCTOR(~Smart_Screen, false);
+}
+
+bool Smart_Screen::getState() {
+    NOTIFY_OPERATION(getState, getState(), 0, ArchitecturalAnalysisPkg_Smart_Screen_getState_SERIALIZE);
+    //#[ operation getState()
+    return state;
+    //#]
+}
+
+void Smart_Screen::setState(bool argState) {
+    NOTIFY_OPERATION(setState, setState(bool), 1, ArchitecturalAnalysisPkg_Smart_Screen_setState_SERIALIZE);
+    //#[ operation setState(bool)
+    state=argState;
+    //#]
 }
 
 Smart_Screen::pSmartScreen_C* Smart_Screen::getPSmartScreen() const {
@@ -77,6 +111,7 @@ void Smart_Screen::initRelations() {
 #ifdef _OMINSTRUMENT
 //#[ ignore
 void OMAnimatedSmart_Screen::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("state", x2String(myReal->state));
     OMAnimatedI_SS::serializeAttributes(aomsAttributes);
 }
 

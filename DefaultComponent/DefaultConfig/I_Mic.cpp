@@ -16,6 +16,10 @@
 #include "I_Mic.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_Mic_I_Mic_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_Mic_getState_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_Mic_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg

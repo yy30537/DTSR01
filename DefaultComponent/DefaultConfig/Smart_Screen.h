@@ -48,6 +48,12 @@ public :
         //## auto_generated
         I_SS* getItsI_SS();
         
+        //## auto_generated
+        virtual bool getState();
+        
+        //## auto_generated
+        virtual void setState(bool argState);
+        
         ////    Additional operations    ////
         
         //## auto_generated
@@ -80,7 +86,13 @@ public :
     Smart_Screen();
     
     //## auto_generated
-    ~Smart_Screen();
+    virtual ~Smart_Screen();
+    
+    //## operation getState()
+    virtual bool getState();
+    
+    //## operation setState(bool)
+    virtual void setState(bool argState);
     
     //## auto_generated
     pSmartScreen_C* getPSmartScreen() const;
@@ -92,6 +104,8 @@ protected :
 
     //## auto_generated
     void initRelations();
+    
+    bool state;		//## attribute state
     
 //#[ ignore
     pSmartScreen_C pSmartScreen;

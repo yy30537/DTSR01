@@ -16,6 +16,10 @@
 #include "Speakers.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Speakers_Speakers_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_Speakers_getState_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_Speakers_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -39,6 +43,22 @@ I_Spkr* Speakers::pSpeakers_C::getItsI_Spkr() {
     return this;
 }
 
+bool Speakers::pSpeakers_C::getState() {
+    bool res = false;
+    if (itsI_Spkr != NULL) {
+        res = itsI_Spkr->getState();
+    }
+    return res;
+}
+
+void Speakers::pSpeakers_C::setState(bool argState) {
+    
+    if (itsI_Spkr != NULL) {
+        itsI_Spkr->setState(argState);
+    }
+    
+}
+
 void Speakers::pSpeakers_C::setItsI_Spkr(I_Spkr* p_I_Spkr) {
     itsI_Spkr = p_I_Spkr;
 }
@@ -51,13 +71,27 @@ void Speakers::pSpeakers_C::cleanUpRelations() {
 }
 //#]
 
-Speakers::Speakers() {
+Speakers::Speakers() : state(false) {
     NOTIFY_CONSTRUCTOR(Speakers, Speakers(), 0, ArchitecturalAnalysisPkg_Speakers_Speakers_SERIALIZE);
     initRelations();
 }
 
 Speakers::~Speakers() {
     NOTIFY_DESTRUCTOR(~Speakers, false);
+}
+
+bool Speakers::getState() {
+    NOTIFY_OPERATION(getState, getState(), 0, ArchitecturalAnalysisPkg_Speakers_getState_SERIALIZE);
+    //#[ operation getState()
+    return state;
+    //#]
+}
+
+void Speakers::setState(bool argState) {
+    NOTIFY_OPERATION(setState, setState(bool), 1, ArchitecturalAnalysisPkg_Speakers_setState_SERIALIZE);
+    //#[ operation setState(bool)
+    state=argState;
+    //#]
 }
 
 Speakers::pSpeakers_C* Speakers::getPSpeakers() const {
@@ -77,6 +111,7 @@ void Speakers::initRelations() {
 #ifdef _OMINSTRUMENT
 //#[ ignore
 void OMAnimatedSpeakers::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("state", x2String(myReal->state));
     OMAnimatedI_Spkr::serializeAttributes(aomsAttributes);
 }
 

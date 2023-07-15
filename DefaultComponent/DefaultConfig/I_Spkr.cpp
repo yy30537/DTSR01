@@ -16,6 +16,10 @@
 #include "I_Spkr.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_Spkr_I_Spkr_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_Spkr_getState_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_Spkr_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg

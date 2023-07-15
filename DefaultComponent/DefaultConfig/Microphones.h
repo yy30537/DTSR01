@@ -48,6 +48,12 @@ public :
         //## auto_generated
         I_Mic* getItsI_Mic();
         
+        //## auto_generated
+        virtual bool getState();
+        
+        //## auto_generated
+        virtual void setState(bool argState);
+        
         ////    Additional operations    ////
         
         //## auto_generated
@@ -80,7 +86,13 @@ public :
     Microphones();
     
     //## auto_generated
-    ~Microphones();
+    virtual ~Microphones();
+    
+    //## operation getState()
+    virtual bool getState();
+    
+    //## operation setState(bool)
+    virtual void setState(bool argState);
     
     //## auto_generated
     pMic_C* getPMic() const;
@@ -92,6 +104,8 @@ protected :
 
     //## auto_generated
     void initRelations();
+    
+    bool state;		//## attribute state
     
 //#[ ignore
     pMic_C pMic;

@@ -70,7 +70,7 @@ class I_Weather;
 //## classInstance itsLights
 class Lights;
 
-//## auto_generated
+//## classInstance itsMicrophones
 class Microphones;
 
 //## auto_generated
@@ -88,16 +88,16 @@ class Room_Touch_Panel;
 //## auto_generated
 class Smart_Room;
 
-//## auto_generated
+//## classInstance itsSmart_Screen
 class Smart_Screen;
 
-//## auto_generated
+//## classInstance itsSpeakers
 class Speakers;
 
 //## classInstance itsWeather_Forecast
 class Weather_Forecast;
 
-//## auto_generated
+//## classInstance itsWebcam
 class Webcam;
 
 //#[ ignore
@@ -167,6 +167,18 @@ extern Occupancy_Sensor itsOccupancy_Sensor;
 
 //## classInstance itsFire_Sensor
 extern Fire_Sensor itsFire_Sensor;
+
+//## classInstance itsMicrophones
+extern Microphones itsMicrophones;
+
+//## classInstance itsSmart_Screen
+extern Smart_Screen itsSmart_Screen;
+
+//## classInstance itsSpeakers
+extern Speakers itsSpeakers;
+
+//## classInstance itsWebcam
+extern Webcam itsWebcam;
 
 //#[ ignore
 class ArchitecturalAnalysisPkg_OMInitializer {

@@ -32,7 +32,7 @@
 #include "I_HVAC.h"
 //## classInstance itsLights
 #include "Lights.h"
-//## auto_generated
+//## classInstance itsMicrophones
 #include "Microphones.h"
 //## auto_generated
 #include "Movement_Sensor.h"
@@ -42,13 +42,13 @@
 #include "Room_Touch_Panel.h"
 //## auto_generated
 #include "Smart_Room.h"
-//## auto_generated
+//## classInstance itsSmart_Screen
 #include "Smart_Screen.h"
-//## auto_generated
+//## classInstance itsSpeakers
 #include "Speakers.h"
 //## classInstance itsWeather_Forecast
 #include "Weather_Forecast.h"
-//## auto_generated
+//## classInstance itsWebcam
 #include "Webcam.h"
 //## auto_generated
 #include "I_CO2.h"
@@ -199,6 +199,10 @@ static void RenameGlobalInstances() {
     OM_SET_INSTANCE_NAME(&itsOccupancy_Sensor, Occupancy_Sensor, "itsOccupancy_Sensor", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsWeather_Forecast, Weather_Forecast, "itsWeather_Forecast", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsFire_Sensor, Fire_Sensor, "itsFire_Sensor", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsMicrophones, Microphones, "itsMicrophones", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsSmart_Screen, Smart_Screen, "itsSmart_Screen", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsSpeakers, Speakers, "itsSpeakers", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsWebcam, Webcam, "itsWebcam", AOMNoMultiplicity);
 }
 #endif // _OMINSTRUMENT
 
@@ -244,6 +248,26 @@ void ArchitecturalAnalysisPkg_initRelations() {
         itsNetwork.get_pNetwork()->setItsI_FS(itsFire_Sensor.get_pFS()->getItsI_FS());
         
     }
+    {
+        
+        itsNetwork.get_pNetwork()->setItsI_Mic(itsMicrophones.get_pMic()->getItsI_Mic());
+        
+    }
+    {
+        
+        itsNetwork.get_pNetwork()->setItsI_SS(itsSmart_Screen.get_pSmartScreen()->getItsI_SS());
+        
+    }
+    {
+        
+        itsNetwork.get_pNetwork()->setItsI_Spkr(itsSpeakers.get_pSpeakers()->getItsI_Spkr());
+        
+    }
+    {
+        
+        itsNetwork.get_pNetwork()->setItsI_WC(itsWebcam.get_pWebcam()->getItsI_WC());
+        
+    }
     
     #ifdef _OMINSTRUMENT
     RenameGlobalInstances();
@@ -270,6 +294,18 @@ Occupancy_Sensor itsOccupancy_Sensor;
 
 //## classInstance itsFire_Sensor
 Fire_Sensor itsFire_Sensor;
+
+//## classInstance itsMicrophones
+Microphones itsMicrophones;
+
+//## classInstance itsSmart_Screen
+Smart_Screen itsSmart_Screen;
+
+//## classInstance itsSpeakers
+Speakers itsSpeakers;
+
+//## classInstance itsWebcam
+Webcam itsWebcam;
 
 //#[ ignore
 ArchitecturalAnalysisPkg_OMInitializer::ArchitecturalAnalysisPkg_OMInitializer() {
