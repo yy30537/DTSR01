@@ -457,17 +457,7 @@ public :
     
     //## auto_generated
     void _clearItsOccupancy_Sensor();
-
-protected :
-
-    //## auto_generated
-    void cancelTimeouts();
     
-    //## auto_generated
-    bool cancelTimeout(const IOxfTimeout* arg);
-
-public :
-
     //## auto_generated
     int getIntensity() const;
     
@@ -570,233 +560,26 @@ public :
     //## statechart_method
     virtual IOxfReactive::TakeEventStatus rootState_processEvent();
     
-    // HVAC_Enabled:
+    // loggedOut:
     //## statechart_method
-    inline bool HVAC_Enabled_IN() const;
+    inline bool loggedOut_IN() const;
     
+    // loggedIn:
     //## statechart_method
-    void HVAC_Enabled_entDef();
-    
-    //## statechart_method
-    void HVAC_Enabled_exit();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus HVAC_Enabled_processEvent();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus HVAC_Enabled_handleEvent();
-    
-    // state_12:
-    //## statechart_method
-    inline bool state_12_IN() const;
-    
-    //## statechart_method
-    void state_12_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_12_processEvent();
-    
-    // Vent_On:
-    //## statechart_method
-    inline bool Vent_On_IN() const;
-    
-    // Vent_OFF:
-    //## statechart_method
-    inline bool Vent_OFF_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Vent_OFF_handleEvent();
-    
-    // accepttimeevent_14:
-    //## statechart_method
-    inline bool accepttimeevent_14_IN() const;
-    
-    // state_11:
-    //## statechart_method
-    inline bool state_11_IN() const;
-    
-    //## statechart_method
-    void state_11_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_11_processEvent();
-    
-    // Heating_On:
-    //## statechart_method
-    inline bool Heating_On_IN() const;
-    
-    //## statechart_method
-    void Heating_On_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Heating_On_handleEvent();
-    
-    // Heating_On_idle:
-    //## statechart_method
-    inline bool Heating_On_idle_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Heating_On_idle_handleEvent();
-    
-    // Heating_On_accepttimeevent_17:
-    //## statechart_method
-    inline bool Heating_On_accepttimeevent_17_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Heating_On_accepttimeevent_17_handleEvent();
-    
-    // Heating_OFF:
-    //## statechart_method
-    inline bool Heating_OFF_IN() const;
-    
-    //## statechart_method
-    void Heating_OFF_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Heating_OFF_handleEvent();
-    
-    // Heating_OFF_idle:
-    //## statechart_method
-    inline bool Heating_OFF_idle_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Heating_OFF_idle_handleEvent();
-    
-    // Heating_OFF_accepttimeevent_17:
-    //## statechart_method
-    inline bool Heating_OFF_accepttimeevent_17_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Heating_OFF_accepttimeevent_17_handleEvent();
-    
-    // state_10:
-    //## statechart_method
-    inline bool state_10_IN() const;
-    
-    //## statechart_method
-    void state_10_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_10_processEvent();
-    
-    // AC_ON:
-    //## statechart_method
-    inline bool AC_ON_IN() const;
-    
-    //## statechart_method
-    void AC_ON_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus AC_ON_handleEvent();
-    
-    // AC_ON_idle:
-    //## statechart_method
-    inline bool AC_ON_idle_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus AC_ON_idle_handleEvent();
-    
-    // AC_ON_accepttimeevent_17:
-    //## statechart_method
-    inline bool AC_ON_accepttimeevent_17_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus AC_ON_accepttimeevent_17_handleEvent();
-    
-    // AC_OFF:
-    //## statechart_method
-    inline bool AC_OFF_IN() const;
-    
-    //## statechart_method
-    void AC_OFF_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus AC_OFF_handleEvent();
-    
-    // idle:
-    //## statechart_method
-    inline bool idle_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus idle_handleEvent();
-    
-    // accepttimeevent_17:
-    //## statechart_method
-    inline bool accepttimeevent_17_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus accepttimeevent_17_handleEvent();
-    
-    // HVAC_Disabled:
-    //## statechart_method
-    inline bool HVAC_Disabled_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus HVAC_DisabledTakeev_HVAC_SwitchOn();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus HVAC_Disabled_handleEvent();
+    inline bool loggedIn_IN() const;
 
 protected :
 
 //#[ ignore
     enum Network_Enum {
         OMNonState = 0,
-        HVAC_Enabled = 1,
-        state_12 = 2,
-        Vent_On = 3,
-        Vent_OFF = 4,
-        accepttimeevent_14 = 5,
-        state_11 = 6,
-        Heating_On = 7,
-        Heating_On_idle = 8,
-        Heating_On_accepttimeevent_17 = 9,
-        Heating_OFF = 10,
-        Heating_OFF_idle = 11,
-        Heating_OFF_accepttimeevent_17 = 12,
-        state_10 = 13,
-        AC_ON = 14,
-        AC_ON_idle = 15,
-        AC_ON_accepttimeevent_17 = 16,
-        AC_OFF = 17,
-        idle = 18,
-        accepttimeevent_17 = 19,
-        HVAC_Disabled = 20
+        loggedOut = 1,
+        loggedIn = 2
     };
     
     int rootState_subState;
     
     int rootState_active;
-    
-    int state_12_subState;
-    
-    int state_12_active;
-    
-    IOxfTimeout* state_12_timeout;
-    
-    int state_11_subState;
-    
-    int state_11_active;
-    
-    int Heating_On_subState;
-    
-    IOxfTimeout* Heating_On_timeout;
-    
-    int Heating_OFF_subState;
-    
-    IOxfTimeout* Heating_OFF_timeout;
-    
-    int state_10_subState;
-    
-    int state_10_active;
-    
-    int AC_ON_subState;
-    
-    IOxfTimeout* AC_ON_timeout;
-    
-    int AC_OFF_subState;
-    
-    IOxfTimeout* AC_OFF_timeout;
 //#]
 };
 
@@ -853,64 +636,10 @@ public :
     void rootState_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void HVAC_Enabled_serializeStates(AOMSState* aomsState) const;
+    void loggedOut_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void state_12_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Vent_On_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Vent_OFF_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void accepttimeevent_14_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void state_11_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Heating_On_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Heating_On_idle_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Heating_On_accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Heating_OFF_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Heating_OFF_idle_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Heating_OFF_accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void state_10_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void AC_ON_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void AC_ON_idle_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void AC_ON_accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void AC_OFF_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void idle_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void HVAC_Disabled_serializeStates(AOMSState* aomsState) const;
+    void loggedIn_serializeStates(AOMSState* aomsState) const;
 };
 //#]
 #endif // _OMINSTRUMENT
@@ -919,84 +648,12 @@ inline bool Network::rootState_IN() const {
     return true;
 }
 
-inline bool Network::HVAC_Enabled_IN() const {
-    return rootState_subState == HVAC_Enabled;
+inline bool Network::loggedOut_IN() const {
+    return rootState_subState == loggedOut;
 }
 
-inline bool Network::state_12_IN() const {
-    return HVAC_Enabled_IN();
-}
-
-inline bool Network::Vent_On_IN() const {
-    return state_12_subState == Vent_On;
-}
-
-inline bool Network::Vent_OFF_IN() const {
-    return state_12_subState == Vent_OFF;
-}
-
-inline bool Network::accepttimeevent_14_IN() const {
-    return state_12_subState == accepttimeevent_14;
-}
-
-inline bool Network::state_11_IN() const {
-    return HVAC_Enabled_IN();
-}
-
-inline bool Network::Heating_On_IN() const {
-    return state_11_subState == Heating_On;
-}
-
-inline bool Network::Heating_On_idle_IN() const {
-    return Heating_On_subState == Heating_On_idle;
-}
-
-inline bool Network::Heating_On_accepttimeevent_17_IN() const {
-    return Heating_On_subState == Heating_On_accepttimeevent_17;
-}
-
-inline bool Network::Heating_OFF_IN() const {
-    return state_11_subState == Heating_OFF;
-}
-
-inline bool Network::Heating_OFF_idle_IN() const {
-    return Heating_OFF_subState == Heating_OFF_idle;
-}
-
-inline bool Network::Heating_OFF_accepttimeevent_17_IN() const {
-    return Heating_OFF_subState == Heating_OFF_accepttimeevent_17;
-}
-
-inline bool Network::state_10_IN() const {
-    return HVAC_Enabled_IN();
-}
-
-inline bool Network::AC_ON_IN() const {
-    return state_10_subState == AC_ON;
-}
-
-inline bool Network::AC_ON_idle_IN() const {
-    return AC_ON_subState == AC_ON_idle;
-}
-
-inline bool Network::AC_ON_accepttimeevent_17_IN() const {
-    return AC_ON_subState == AC_ON_accepttimeevent_17;
-}
-
-inline bool Network::AC_OFF_IN() const {
-    return state_10_subState == AC_OFF;
-}
-
-inline bool Network::idle_IN() const {
-    return AC_OFF_subState == idle;
-}
-
-inline bool Network::accepttimeevent_17_IN() const {
-    return AC_OFF_subState == accepttimeevent_17;
-}
-
-inline bool Network::HVAC_Disabled_IN() const {
-    return rootState_subState == HVAC_Disabled;
+inline bool Network::loggedIn_IN() const {
+    return rootState_subState == loggedIn;
 }
 
 #endif

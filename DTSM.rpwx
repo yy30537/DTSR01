@@ -20,16 +20,16 @@
 						<_placement type="p">
 							<CCommon_WINDOWPLACEMENT type="e">
 								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">2</m_nFlags>
-								<m_showCmd type="a">3</m_showCmd>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
 								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
 								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
 								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
-								<m_nLeft type="a">182</m_nLeft>
-								<m_nTop type="a">182</m_nTop>
-								<m_nRight type="a">1369</m_nRight>
-								<m_nBottom type="a">669</m_nBottom>
+								<m_nLeft type="a">52</m_nLeft>
+								<m_nTop type="a">52</m_nTop>
+								<m_nRight type="a">1265</m_nRight>
+								<m_nBottom type="a">433</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
@@ -40,13 +40,79 @@
 								<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
 								<_hclass type="a">Network</_hclass>
 								<_hname type="a">StatechartDiagram</_hname>
-								<_hid type="a">GUID e3ab20da-f6e3-4050-a4ec-780f329282ba</_hid>
+								<_hid type="a">GUID 7742b0ff-1986-45a9-af66-a3c0ffb27c1d</_hid>
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">1374 674 </_DownRight>
-						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
-						<m_bIsActiveView type="a">1</m_bIsActiveView>
+						<_DownRight type="a">2138 584 </_DownRight>
+						<m_nDiagramIndex type="a">4</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
+								<m_nLeft type="a">78</m_nLeft>
+								<m_nTop type="a">78</m_nTop>
+								<m_nRight type="a">1291</m_nRight>
+								<m_nBottom type="a">459</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\DTSM_rpy\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+								<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+								<_hclass type="a">Network</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID 906423ec-7509-4cf7-9c76-024615ec80c4</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">1237 338 </_DownRight>
+						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
+								<m_nLeft type="a">104</m_nLeft>
+								<m_nTop type="a">104</m_nTop>
+								<m_nRight type="a">1317</m_nRight>
+								<m_nBottom type="a">485</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\DTSM_rpy\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+								<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+								<_hclass type="a">Network</_hclass>
+								<_hname type="a">Statechart_AC</_hname>
+								<_hid type="a">GUID e8af639b-0bee-4bad-b79d-ed7d379ab245</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">24 95 </_UpLeft>
+						<_DownRight type="a">2637 808 </_DownRight>
+						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
 					<CGEMdiDiagramParams type="e">
@@ -62,22 +128,88 @@
 								<m_nLeft type="a">130</m_nLeft>
 								<m_nTop type="a">130</m_nTop>
 								<m_nRight type="a">1343</m_nRight>
-								<m_nBottom type="a">527</m_nBottom>
+								<m_nBottom type="a">511</m_nBottom>
 							</CCommon_WINDOWPLACEMENT>
 						</_placement>
 						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
 						<_theDiagram type="r">
 							<IHandle type="e">
-								<_hm2Class type="a">IDiagram</_hm2Class>
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
 								<_hfilename type="a">.\DTSM_rpy\ArchitecturalAnalysisPkg.sbsx</_hfilename>
 								<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
-								<_hname type="a">Security System Context</_hname>
-								<_hid type="a">GUID de3a7cfd-9289-4fdf-b5fd-6629e3bb845e</_hid>
+								<_hclass type="a">Network</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID 4020407e-4951-4797-a94a-f35837c2bfb2</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">108 5 </_UpLeft>
-						<_DownRight type="a">1228 326 </_DownRight>
+						<_UpLeft type="a">0 10 </_UpLeft>
+						<_DownRight type="a">1470 411 </_DownRight>
 						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">2</m_nFlags>
+								<m_showCmd type="a">3</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
+								<m_nLeft type="a">156</m_nLeft>
+								<m_nTop type="a">156</m_nTop>
+								<m_nRight type="a">1369</m_nRight>
+								<m_nBottom type="a">537</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IStateChartDiagram</_hm2Class>
+								<_hfilename type="a">.\DTSM_rpy\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+								<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+								<_hclass type="a">Network</_hclass>
+								<_hname type="a">StatechartDiagram</_hname>
+								<_hid type="a">GUID e3ab20da-f6e3-4050-a4ec-780f329282ba</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">1374 542 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_bIsActiveView type="a">1</m_bIsActiveView>
+					</CGEMdiDiagramParams>
+					
+					<CGEMdiDiagramParams type="e">
+						<_placement type="p">
+							<CCommon_WINDOWPLACEMENT type="e">
+								<m_nLength type="a">44</m_nLength>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
+								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
+								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
+								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
+								<m_ptMaxPositionY type="a">-31</m_ptMaxPositionY>
+								<m_nLeft type="a">182</m_nLeft>
+								<m_nTop type="a">182</m_nTop>
+								<m_nRight type="a">1395</m_nRight>
+								<m_nBottom type="a">563</m_nBottom>
+							</CCommon_WINDOWPLACEMENT>
+						</_placement>
+						<_wasOpenedOnCloseProject type="a">1</_wasOpenedOnCloseProject>
+						<_theDiagram type="r">
+							<IHandle type="e">
+								<_hm2Class type="a">IPanelDiagram</_hm2Class>
+								<_hfilename type="a">.\DTSM_rpy\GUI.sbsx</_hfilename>
+								<_hsubsystem type="a">GUI</_hsubsystem>
+								<_hname type="a">Security</_hname>
+								<_hid type="a">GUID 3375ae58-173a-4305-8ae3-63efdbfc439f</_hid>
+							</IHandle>
+						</_theDiagram>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">1176 321 </_DownRight>
+						<m_nDiagramIndex type="a">5</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					

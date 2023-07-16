@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RhapsodyArchive>
 	<MagicNumber></MagicNumber>
-	<CODE-PAGE>1252</CODE-PAGE>
+	<CODE-PAGE>936</CODE-PAGE>
 	<version>109.0</version>
 	<lang>C++</lang>
 	<BuildNo>202002261110</BuildNo>
@@ -9,24 +9,27 @@
 	
 	<RHAPSODY-MODEL>
 	<ISubsystem type="e">
-			<_id type="a">GUID 69a9c5e4-f1a9-44f8-ba3f-9a2c7fcc5f05</_id>
+			<_id type="a">GUID 0ad8adcc-cee5-4bcb-93dd-4088518c3e68</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">GUI</_name>
-			<_modifiedTimeWeak type="a">7.14.2023::11:28:36</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.14.2023::11:28:36</_modifiedTime>
-			<_lastID type="a">3</_lastID>
-			<weakCGTime type="a">7.14.2023::11:28:36</weakCGTime>
-			<strongCGTime type="a">7.11.2023::14:16:11</strongCGTime>
-			<_defaultComposite type="s">GUID fbff9631-cec3-4c79-b8ef-6107abb82760</_defaultComposite>
+			<_modifiedTimeWeak type="a">7.16.2023::4:21:56</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::4:21:56</_modifiedTime>
+			<_lastID type="a">4</_lastID>
+			<weakCGTime type="a">7.16.2023::4:21:56</weakCGTime>
+			<strongCGTime type="a">7.16.2023::4:20:45</strongCGTime>
+			<_defaultComposite type="s">GUID 1e4d2ee9-cb35-4595-94d8-972c5bfa5f12</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
-			<_configurationRelatedTime type="a">1.2.1990::0:0:0</_configurationRelatedTime>
+			<_configurationRelatedTime type="a">1.1.1970::1:0:0</_configurationRelatedTime>
 			<AggregatesList type="e">
-				<value>GUID 43d5359c-f852-4225-b9ec-a29fe2a4c972</value>
-				<value>GUID fbff9631-cec3-4c79-b8ef-6107abb82760</value>
+				<value>GUID eddef382-4b1e-4ded-b54d-fb4100d09fc0</value>
+				<value>GUID f1e1915d-52d8-4cc4-9b54-9c48333f0754</value>
+				<value>GUID 20f6e4e9-f1c4-4dc5-acd5-a479808ece69</value>
+				<value>GUID 3375ae58-173a-4305-8ae3-63efdbfc439f</value>
+				<value>GUID 1e4d2ee9-cb35-4595-94d8-972c5bfa5f12</value>
 			</AggregatesList>
 		</ISubsystem>
 		<IPanelDiagram type="e">
-			<_id type="a">GUID 43d5359c-f852-4225-b9ec-a29fe2a4c972</_id>
+			<_id type="a">GUID eddef382-4b1e-4ded-b54d-fb4100d09fc0</_id>
 			<_myState type="a">8192</_myState>
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
@@ -35,44 +38,6 @@
 							<_Name type="a">Format</_Name>
 							<Metaclasses type="c">
 								<IRPYRawContainer type="e">
-									<IPropertyMetaclass type="e">
-										<_Name type="a">ButtonArray</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<IProperty type="e">
-													<_Name type="a">DefaultSize</_Name>
-													<_Value type="a">0,0,100,50</_Value>
-													<_Type type="a">String</_Type>
-												</IProperty>
-												
-												<IProperty type="e">
-													<_Name type="a">Fill.Transparent_Fill</_Name>
-													<_Value type="a">1</_Value>
-													<_Type type="a">Int</_Type>
-												</IProperty>
-												
-												<IProperty type="e">
-													<_Name type="a">Line.LineColor</_Name>
-													<_Value type="a">0,0,0</_Value>
-													<_Type type="a">Color</_Type>
-												</IProperty>
-												
-												<IProperty type="e">
-													<_Name type="a">Line.LineWidth</_Name>
-													<_Value type="a">0</_Value>
-													<_Type type="a">Int</_Type>
-												</IProperty>
-												
-												<IProperty type="e">
-													<_Name type="a">Line.Transparent</_Name>
-													<_Value type="a">1</_Value>
-													<_Type type="a">Int</_Type>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
 									<IPropertyMetaclass type="e">
 										<_Name type="a">DiagramFrame</_Name>
 										<Properties type="c">
@@ -175,10 +140,10 @@
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">GUI BIG</_name>
+			<_name type="a">Communication System</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.14.2023::11:28:36</_modifiedTime>
-			<_lastModifiedTime type="a">7.14.2023::11:28:36</_lastModifiedTime>
+			<_modifiedTime type="a">7.16.2023::4:22:40</_modifiedTime>
+			<_lastModifiedTime type="a">7.16.2023::4:22:40</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -186,20 +151,20 @@
 			<_defaultSubsystem type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">ISubsystem</_hm2Class>
-					<_hid type="a">GUID 69a9c5e4-f1a9-44f8-ba3f-9a2c7fcc5f05</_hid>
+					<_hid type="a">GUID 0ad8adcc-cee5-4bcb-93dd-4088518c3e68</_hid>
 				</IHandle>
 			</_defaultSubsystem>
 			<AggregatesList type="e">
-				<value>GUID 4c4a9416-e9e4-4251-8716-7d5ba16c973d</value>
+				<value>GUID f8f4e598-762c-4eba-af42-7a1db75536e8</value>
 			</AggregatesList>
 		</IPanelDiagram>
 		<CGIClassChart type="e">
-			<_id type="a">GUID 4c4a9416-e9e4-4251-8716-7d5ba16c973d</_id>
+			<_id type="a">GUID f8f4e598-762c-4eba-af42-7a1db75536e8</_id>
 			<m_type type="a">0</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IPanelDiagram</_hm2Class>
-					<_hid type="a">GUID 43d5359c-f852-4225-b9ec-a29fe2a4c972</_hid>
+					<_hid type="a">GUID eddef382-4b1e-4ded-b54d-fb4100d09fc0</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -221,7 +186,7 @@
 			</m_name>
 			<m_drawBehavior type="a">0</m_drawBehavior>
 			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
-			<elementList type="a">2</elementList>
+			<elementList type="a">16</elementList>
 			
 			<m_access type="a">'Z'</m_access>
 			<m_modified type="a">'N'</m_modified>
@@ -229,22 +194,36 @@
 			<m_nCreateDate type="a">0</m_nCreateDate>
 			<m_bScaleWithZoom type="a">1</m_bScaleWithZoom>
 			<m_arrowStyle type="a">'S'</m_arrowStyle>
-			<m_pRoot type="s">GUID e22f17dc-5696-4aee-87b1-caae25322731</m_pRoot>
+			<m_pRoot type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pRoot>
 			<m_currentLeftTop type="a">0 0 </m_currentLeftTop>
 			<m_currentRightBottom type="a">0 0 </m_currentRightBottom>
 			<m_bFreezeCompartmentContent type="a">0</m_bFreezeCompartmentContent>
 			<AggregatesList type="e">
-				<value>GUID e22f17dc-5696-4aee-87b1-caae25322731</value>
-				<value>GUID 8de45c2a-ac28-4b32-9d08-1d4cb4c23751</value>
+				<value>GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</value>
+				<value>GUID eec1de68-e601-45e2-a869-11d1a87f9ec4</value>
+				<value>GUID 04cc0b78-850e-4c73-90d8-34300e82c5cc</value>
+				<value>GUID ada42ec6-62c2-435b-bb02-e96269abf693</value>
+				<value>GUID 674a8e19-88e8-43c6-8cf1-36e085987f38</value>
+				<value>GUID 20927851-ab68-43f3-809e-224e29a6301e</value>
+				<value>GUID 6116bebb-6100-4ee1-8246-1ec1401bb2a0</value>
+				<value>GUID 012ecc5b-4098-433e-b833-90ee2486619e</value>
+				<value>GUID 806b6d2e-715d-4475-bb3f-7b8450cf9d8a</value>
+				<value>GUID cca81398-b6b1-4728-8249-b3b4cffdeb39</value>
+				<value>GUID 7d2d25d2-b257-47b9-a9df-6da0bac4e0bc</value>
+				<value>GUID 2a25e90e-bd33-4fe4-a06b-eea2ce3ed4be</value>
+				<value>GUID 3ca1653a-d513-4c4f-9fdc-1026fd952a09</value>
+				<value>GUID ffd15234-5757-4b52-bc09-649557ef48f9</value>
+				<value>GUID ce56320b-abd5-44dd-91dd-ea333b33fe65</value>
+				<value>GUID a98b431a-9792-4cf1-964d-a80ba12bb134</value>
 			</AggregatesList>
 		</CGIClassChart>
 		<CGIBox type="e">
-			<_id type="a">GUID e22f17dc-5696-4aee-87b1-caae25322731</_id>
+			<_id type="a">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</_id>
 			<m_type type="a">215</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">ISubsystem</_hm2Class>
-					<_hid type="a">GUID 69a9c5e4-f1a9-44f8-ba3f-9a2c7fcc5f05</_hid>
+					<_hid type="a">GUID 0ad8adcc-cee5-4bcb-93dd-4088518c3e68</_hid>
 				</IHandle>
 			</m_pModelObject>
 			<m_pParent type="s"></m_pParent>
@@ -271,13 +250,2895 @@
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
 		</CGIBox>
 		<CGIDiagramFrame type="e">
-			<_id type="a">GUID 8de45c2a-ac28-4b32-9d08-1d4cb4c23751</_id>
+			<_id type="a">GUID eec1de68-e601-45e2-a869-11d1a87f9ec4</_id>
 			<m_type type="a">203</m_type>
 			<m_pModelObject type="r">
 				<IHandle type="e">
 				</IHandle>
 			</m_pModelObject>
-			<m_pParent type="s">GUID e22f17dc-5696-4aee-87b1-caae25322731</m_pParent>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">2.63889 0 0 6.15909 20 20 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_AdditionalLabel type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_AdditionalLabel>
+			<m_polygon type="a">4 0 0  0 132  216 132  216 0  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+		</CGIDiagramFrame>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 04cc0b78-850e-4c73-90d8-34300e82c5cc</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Microphones</_hclass>
+					<_hname type="a">state</_hname>
+					<_hid type="a">GUID c4a7c4b8-7480-4ad1-aa29-5c7f46a0ee02</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">mic state</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 148 120.126 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsMicrophones.state</m_csModelObjPath>
+			<m_csName type="a">mic state</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsMicrophones</_hname>
+							<_hid type="a">GUID bddd825a-c0af-4e6a-8926-dcc11414822a</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID ada42ec6-62c2-435b-bb02-e96269abf693</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Smart_Screen</_hclass>
+					<_hname type="a">state</_hname>
+					<_hid type="a">GUID d7a2bc42-e54e-4aeb-a982-2972c9084e54</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">smart screen state</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 154 316.126 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsSmart_Screen.state</m_csModelObjPath>
+			<m_csName type="a">smart screen state</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsSmart_Screen</_hname>
+							<_hid type="a">GUID 0aa7caf8-99ab-40cb-9853-d191c83df254</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 674a8e19-88e8-43c6-8cf1-36e085987f38</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Speakers</_hclass>
+					<_hname type="a">state</_hname>
+					<_hid type="a">GUID 1a5a1ea9-9f39-4cad-b76e-f6843b8bf722</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">speakers state</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 144 491.126 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsSpeakers.state</m_csModelObjPath>
+			<m_csName type="a">speakers state</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsSpeakers</_hname>
+							<_hid type="a">GUID ac120547-9dc7-4ad7-8649-755cde882590</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 20927851-ab68-43f3-809e-224e29a6301e</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Webcam</_hclass>
+					<_hname type="a">state</_hname>
+					<_hid type="a">GUID f593d444-c685-437c-aafc-863deac14fd3</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">webcam state</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 152 771.126 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsWebcam.state</m_csModelObjPath>
+			<m_csName type="a">webcam state</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsWebcam</_hname>
+							<_hid type="a">GUID bc877d0c-5fd0-44b0-8117-8fea5ae3f951</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 6116bebb-6100-4ee1-8246-1ec1401bb2a0</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_turnon_SS()</_hname>
+					<_hid type="a">GUID b8ba2848-f0db-4945-9bc9-f18b33823f7c</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">turn on screen</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 241 299.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_turnon_SS</m_csModelObjPath>
+			<m_csName type="a">turn on screen</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 012ecc5b-4098-433e-b833-90ee2486619e</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_turnoff_SS()</_hname>
+					<_hid type="a">GUID e1298185-436c-4233-bc06-d6779906a353</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">turn off screen</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 370 298.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_turnoff_SS</m_csModelObjPath>
+			<m_csName type="a">turn off screen</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 806b6d2e-715d-4475-bb3f-7b8450cf9d8a</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_turnon_WC()</_hname>
+					<_hid type="a">GUID ae07f9bd-d767-419e-92d5-7ac0505175a3</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">turn on webcam</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 239 773.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_turnon_WC</m_csModelObjPath>
+			<m_csName type="a">turn on webcam</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID cca81398-b6b1-4728-8249-b3b4cffdeb39</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_turnoff_WC()</_hname>
+					<_hid type="a">GUID 71c7743a-a428-4e8c-a9c2-2d6efd8b7ec1</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">turn off webcam</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 368 773.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_turnoff_WC</m_csModelObjPath>
+			<m_csName type="a">turn off webcam</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 7d2d25d2-b257-47b9-a9df-6da0bac4e0bc</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_turnon_mic()</_hname>
+					<_hid type="a">GUID 5540be00-506c-4751-97ff-4ee22747e9b1</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">turn on mic</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 235 102.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_turnon_mic</m_csModelObjPath>
+			<m_csName type="a">turn on mic</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 2a25e90e-bd33-4fe4-a06b-eea2ce3ed4be</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_turnoff_mic()</_hname>
+					<_hid type="a">GUID 13da0641-7e3d-4dc5-ac53-0464349888dd</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">turn off mic</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 364 102.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_turnoff_mic</m_csModelObjPath>
+			<m_csName type="a">turn off mic</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 3ca1653a-d513-4c4f-9fdc-1026fd952a09</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_turnon_spkr()</_hname>
+					<_hid type="a">GUID 5a092bd0-60e7-47eb-8be4-6971013ba893</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">turn on speaker</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 231 476.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_turnon_spkr</m_csModelObjPath>
+			<m_csName type="a">turn on speaker</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID ffd15234-5757-4b52-bc09-649557ef48f9</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_turnoff_spkr()</_hname>
+					<_hid type="a">GUID e43d1de7-bdad-4d7f-9a0c-4ae977f8ea17</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">turn off speaker</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 360 476.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_turnoff_spkr</m_csModelObjPath>
+			<m_csName type="a">turn off speaker</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIActiveX type="e">
+			<_id type="a">GUID ce56320b-abd5-44dd-91dd-ea333b33fe65</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Slider</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackGroundColor;4210752;DivisionLineThickness;2;DotColor;255;EndAngle;-45;Font;Arial;;8.25;0;0;0;0;400;0;GradientFactor;0.7;LineColor;14737632;MaximumValue;100;MinimumValue;0;NumberOfDivisions;10;NumberOfSubdivisions;1;RelativeBubbleRadius;0.1;RelativeDotPositionRadius;0.75;RelativeDotRadius;2;RelativeExternalRadius;6.25;RelativeInternalRadius;4.75;RelativeTextRadius;7.5;StartAngle;225;SubdivisionLineThickness;1;TextColor;16777215;Value;0;ValueFormatString;%25.0f;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">StatechartDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Slider</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">225</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">speakerVol</_hname>
+					<_hid type="a">GUID 2bcf9fa4-16d3-4099-9580-5138a1de097a</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Speaker Volume</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.00252476 0 0 0.000610064 111 594.68 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.speakerVol</m_csModelObjPath>
+			<m_csName type="a">Speaker Volume</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID a98b431a-9792-4cf1-964d-a80ba12bb134</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DigitalDisplay</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;DisplayedString;;Style;4;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;DisplayedString;;Style;4;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">221</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">speakerVol</_hname>
+					<_hid type="a">GUID 2bcf9fa4-16d3-4099-9580-5138a1de097a</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 4fe14c96-21e5-4da8-a23c-e4d330e8b4bb</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000602059 0 0 0.000278887 390 610.311 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.speakerVol</m_csModelObjPath>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<IPanelDiagram type="e">
+			<_id type="a">GUID f1e1915d-52d8-4cc4-9b54-9c48333f0754</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DiagramFrame</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">DefaultSize</_Name>
+													<_Value type="a">20,20,590,500</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">247,247,247</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.Transparent_Fill</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Font</_Name>
+													<_Value type="a">Tahoma</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Size</_Name>
+													<_Value type="a">8</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Weight@Child.NameCompartment@Name</_Name>
+													<_Value type="a">700</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">194,192,192</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">PushButton</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">DefaultSize</_Name>
+													<_Value type="a">0,0,100,50</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.Transparent_Fill</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.Transparent</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_name type="a">HVAC</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::4:25:2</_modifiedTime>
+			<_lastModifiedTime type="a">7.16.2023::4:25:2</_lastModifiedTime>
+			<m_hReferencedDiagram type="r">
+				<IHandle type="e">
+				</IHandle>
+			</m_hReferencedDiagram>
+			<_defaultSubsystem type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ISubsystem</_hm2Class>
+					<_hid type="a">GUID 0ad8adcc-cee5-4bcb-93dd-4088518c3e68</_hid>
+				</IHandle>
+			</_defaultSubsystem>
+			<AggregatesList type="e">
+				<value>GUID 3cf82953-626a-4c62-a678-d81bb966b470</value>
+			</AggregatesList>
+		</IPanelDiagram>
+		<CGIClassChart type="e">
+			<_id type="a">GUID 3cf82953-626a-4c62-a678-d81bb966b470</_id>
+			<m_type type="a">0</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IPanelDiagram</_hm2Class>
+					<_hid type="a">GUID f1e1915d-52d8-4cc4-9b54-9c48333f0754</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s"></m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">0</m_drawBehavior>
+			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
+			<elementList type="a">19</elementList>
+			
+			<m_access type="a">'Z'</m_access>
+			<m_modified type="a">'N'</m_modified>
+			<m_nModifyDate type="a">0</m_nModifyDate>
+			<m_nCreateDate type="a">0</m_nCreateDate>
+			<m_bScaleWithZoom type="a">1</m_bScaleWithZoom>
+			<m_arrowStyle type="a">'S'</m_arrowStyle>
+			<m_pRoot type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pRoot>
+			<m_currentLeftTop type="a">0 0 </m_currentLeftTop>
+			<m_currentRightBottom type="a">0 0 </m_currentRightBottom>
+			<m_bFreezeCompartmentContent type="a">0</m_bFreezeCompartmentContent>
+			<AggregatesList type="e">
+				<value>GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</value>
+				<value>GUID 8fea6c2a-c96e-4fc9-8b88-41182849835a</value>
+				<value>GUID ca2e9c03-abf1-4de1-bd67-8d4f5dc6a7b5</value>
+				<value>GUID 7acb9c8c-60e4-497b-8469-d4d471aaef1b</value>
+				<value>GUID b827cdd8-b0a7-4502-906c-fe014f533bf5</value>
+				<value>GUID 47322162-8467-4171-9688-f2103b98f4cf</value>
+				<value>GUID 6a48f421-a21b-406f-81da-f5f746d676b1</value>
+				<value>GUID 94832596-2370-44fc-8d51-016609d00cd5</value>
+				<value>GUID 3546a490-ee4c-494c-a5c1-602a9062db06</value>
+				<value>GUID 4d0debec-9c28-45b0-b7de-c0721a726216</value>
+				<value>GUID f4e23892-4862-4f44-b197-b6928f0f711b</value>
+				<value>GUID 99c30e5b-1526-4e7c-a1dd-53324276f640</value>
+				<value>GUID 882f46d3-5ea8-447b-98bc-0dfe34702996</value>
+				<value>GUID 3ff01db7-6d28-4849-95c5-1efd2dc70cd7</value>
+				<value>GUID f9e62ace-df07-48ae-b64b-f21f806db97e</value>
+				<value>GUID 93977f36-c814-42b9-b94e-3cf2541b7987</value>
+				<value>GUID 1a909a25-db33-4abe-9864-0845a26878da</value>
+				<value>GUID 2d9cf67e-e6b0-4700-b223-38d81d39b953</value>
+				<value>GUID 52a72c3c-3a2a-4ba8-bcf7-afb407ffa900</value>
+			</AggregatesList>
+		</CGIClassChart>
+		<CGIBox type="e">
+			<_id type="a">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</_id>
+			<m_type type="a">215</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ISubsystem</_hm2Class>
+					<_hid type="a">GUID 0ad8adcc-cee5-4bcb-93dd-4088518c3e68</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s"></m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">0</m_drawBehavior>
+			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
+			<m_polygon type="a">0 </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+		</CGIBox>
+		<CGIDiagramFrame type="e">
+			<_id type="a">GUID 8fea6c2a-c96e-4fc9-8b88-41182849835a</_id>
+			<m_type type="a">203</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">4.69444 0 0 3.79545 20 20 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_AdditionalLabel type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_AdditionalLabel>
+			<m_polygon type="a">4 0 0  0 132  216 132  216 0  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+		</CGIDiagramFrame>
+		<CGIActiveX type="e">
+			<_id type="a">GUID ca2e9c03-abf1-4de1-bd67-8d4f5dc6a7b5</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;IconSet;9;State;0;UserInteractionEnabled;-1;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;IconSet;9;State;0;UserInteractionEnabled;-1;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">StatechartDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">222</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">fireDetected</_hname>
+					<_hid type="a">GUID 4bae8468-46ed-4a8f-ab06-649fee74595a</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">simulate fire</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000485531 0 0 0.00043576 799 428.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.fireDetected</m_csModelObjPath>
+			<m_csName type="a">simulate fire</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 7acb9c8c-60e4-497b-8469-d4d471aaef1b</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">fireAlarm</_hname>
+					<_hid type="a">GUID ccafa87c-aa19-4986-9158-3ba920136393</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">fire alarm status</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 683 457.126 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.fireAlarm</m_csModelObjPath>
+			<m_csName type="a">fire alarm status</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID b827cdd8-b0a7-4502-906c-fe014f533bf5</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_DisableFireAlarm()</_hname>
+					<_hid type="a">GUID bf755418-2e44-4690-a77f-93608974d5f2</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">disable fire alarm</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 924 428.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_DisableFireAlarm</m_csModelObjPath>
+			<m_csName type="a">disable fire alarm</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 47322162-8467-4171-9688-f2103b98f4cf</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">HVAC</_hclass>
+					<_hname type="a">status_HVAC</_hname>
+					<_hid type="a">GUID 744b3035-45ed-440a-9331-2c4a07233f1d</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">HVAC_Status_LED%0D
+</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">4 -44 -16  90 -16  90 18  -44 18  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">1</m_bImplicitSetRectPoints>
+					<m_transform type="a">1 0 0 0.676471 732 57.8235 </m_transform>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 142 146.126 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsHVAC.status_HVAC</m_csModelObjPath>
+			<m_csName type="a">HVAC_Status_LED%0D
+</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsHVAC</_hname>
+							<_hid type="a">GUID f02c5807-07f6-4069-a792-9d2c472eaf34</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 6a48f421-a21b-406f-81da-f5f746d676b1</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_HVAC_SwitchOn()</_hname>
+					<_hid type="a">GUID 87a91010-c720-463f-84fa-c76b74f95f80</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">switch on HVAC</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 248 108.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_HVAC_SwitchOn</m_csModelObjPath>
+			<m_csName type="a">switch on HVAC</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 94832596-2370-44fc-8d51-016609d00cd5</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_HVAC_SwitchOff()</_hname>
+					<_hid type="a">GUID 86d99296-2999-4494-b70c-656a027e80e3</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">switch off HVAC</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 417 108.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_HVAC_SwitchOff</m_csModelObjPath>
+			<m_csName type="a">switch off HVAC</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 3546a490-ee4c-494c-a5c1-602a9062db06</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">HVAC</_hclass>
+					<_hname type="a">status_AC</_hname>
+					<_hid type="a">GUID fa8f24a3-ca18-4679-81f5-eba8f3a1da30</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">AC_Status_LED</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 144 248.13 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsHVAC.status_AC</m_csModelObjPath>
+			<m_csName type="a">AC_Status_LED</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsHVAC</_hname>
+							<_hid type="a">GUID f02c5807-07f6-4069-a792-9d2c472eaf34</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 4d0debec-9c28-45b0-b7de-c0721a726216</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_AC_SwitchOn()</_hname>
+					<_hid type="a">GUID 7caf8410-3c3e-47fa-a9c7-dfef56736341</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">switch on AC</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 250 230.48 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_AC_SwitchOn</m_csModelObjPath>
+			<m_csName type="a">switch on AC</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID f4e23892-4862-4f44-b197-b6928f0f711b</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_AC_SwitchOff()</_hname>
+					<_hid type="a">GUID 4e1db866-aa37-449e-ac19-8a443c803f4d</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">switch off AC</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 412 230.48 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_AC_SwitchOff</m_csModelObjPath>
+			<m_csName type="a">switch off AC</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 99c30e5b-1526-4e7c-a1dd-53324276f640</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">HVAC</_hclass>
+					<_hname type="a">status_Heating</_hname>
+					<_hid type="a">GUID 111d24c0-299f-49f2-bc54-4a55bd5b0908</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Heating_Status_LED%0D
+</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 142 373.13 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsHVAC.status_Heating</m_csModelObjPath>
+			<m_csName type="a">Heating_Status_LED%0D
+</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsHVAC</_hname>
+							<_hid type="a">GUID f02c5807-07f6-4069-a792-9d2c472eaf34</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 882f46d3-5ea8-447b-98bc-0dfe34702996</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">HVAC</_hclass>
+					<_hname type="a">status_Vent</_hname>
+					<_hid type="a">GUID 9821677c-42a3-44f7-8951-69ebada97e99</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Vent_Status_LED%0D
+</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">4 -35 -15  91 -15  91 19  -35 19  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">1</m_bImplicitSetRectPoints>
+					<m_transform type="a">1 0 0 0.588235 666 437.824 </m_transform>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 148 485.13 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsHVAC.status_Vent</m_csModelObjPath>
+			<m_csName type="a">Vent_Status_LED%0D
+</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsHVAC</_hname>
+							<_hid type="a">GUID f02c5807-07f6-4069-a792-9d2c472eaf34</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 3ff01db7-6d28-4849-95c5-1efd2dc70cd7</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_Heating_SwitchOn()</_hname>
+					<_hid type="a">GUID 883f5779-6acf-4c86-aa01-a60b123625ef</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">switch on Heating</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 248 348.49 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_Heating_SwitchOn</m_csModelObjPath>
+			<m_csName type="a">switch on Heating</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID f9e62ace-df07-48ae-b64b-f21f806db97e</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_Heating_SwitchOff()</_hname>
+					<_hid type="a">GUID 03749cdd-b335-4e60-854f-81b5a3fca496</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">switch off Heating</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 410 348.49 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_Heating_SwitchOff</m_csModelObjPath>
+			<m_csName type="a">switch off Heating</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 93977f36-c814-42b9-b94e-3cf2541b7987</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_Vent_SwitchOn()</_hname>
+					<_hid type="a">GUID 2b11b146-11af-421f-a27c-afd025b5cc7d</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">switch on Ventilation</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 253 461.49 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_Vent_SwitchOn</m_csModelObjPath>
+			<m_csName type="a">switch on Ventilation</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 1a909a25-db33-4abe-9864-0845a26878da</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_Vent_SwitchOff()</_hname>
+					<_hid type="a">GUID 5eb7eaa6-744c-4ab2-a77b-ac1f884be138</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">switch off Ventilation</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 415 461.49 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_Vent_SwitchOff</m_csModelObjPath>
+			<m_csName type="a">switch off Ventilation</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 2d9cf67e-e6b0-4700-b223-38d81d39b953</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;IconSet;9;State;0;UserInteractionEnabled;-1;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;IconSet;9;State;0;UserInteractionEnabled;-1;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">StatechartDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">222</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">CO2Alarm</_hname>
+					<_hid type="a">GUID 4ecd067d-bdb0-4cef-940d-d7ac1d90cf3c</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Trigger CO2 Alarm</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000485531 0 0 0.00043576 717 298.49 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.CO2Alarm</m_csModelObjPath>
+			<m_csName type="a">Trigger CO2 Alarm</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 52a72c3c-3a2a-4ba8-bcf7-afb407ffa900</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Slider</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackGroundColor;4210752;DivisionLineThickness;2;DotColor;255;EndAngle;-45;Font;Arial;;8.25;0;0;0;0;400;0;GradientFactor;0.7;LineColor;14737632;MaximumValue;50;MinimumValue;-20;NumberOfDivisions;140;NumberOfSubdivisions;1;RelativeBubbleRadius;0.1;RelativeDotPositionRadius;0.75;RelativeDotRadius;2;RelativeExternalRadius;6.25;RelativeInternalRadius;4.75;RelativeTextRadius;7.5;StartAngle;225;SubdivisionLineThickness;1;TextColor;16777215;Value;0;ValueFormatString;%25.0f;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackGroundColor;4210752;DivisionLineThickness;2;DotColor;255;EndAngle;-45;Font;Arial;;8.25;0;0;0;0;400;0;GradientFactor;0.7;LineColor;14737632;MaximumValue;40;MinimumValue;0;NumberOfDivisions;8;NumberOfSubdivisions;1;RelativeBubbleRadius;0.1;RelativeDotPositionRadius;0.75;RelativeDotRadius;2;RelativeExternalRadius;6.25;RelativeInternalRadius;4.75;RelativeTextRadius;7.5;StartAngle;225;SubdivisionLineThickness;1;TextColor;16777215;Value;0;ValueFormatString;%25.0f;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">StatechartDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Slider</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">225</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">temp</_hname>
+					<_hid type="a">GUID 62cd3209-c764-49ea-bb58-a742eba9b6ef</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 3e5c2ea4-eaec-4479-8bc7-0f0ca6143819</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">simulate temperature</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.00252476 0 0 0.000610064 640 162.68 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.temp</m_csModelObjPath>
+			<m_csName type="a">simulate temperature</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<IPanelDiagram type="e">
+			<_id type="a">GUID 20f6e4e9-f1c4-4dc5-acd5-a479808ece69</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DiagramFrame</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">DefaultSize</_Name>
+													<_Value type="a">20,20,590,500</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">247,247,247</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.Transparent_Fill</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Font</_Name>
+													<_Value type="a">Tahoma</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Size</_Name>
+													<_Value type="a">8</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Weight@Child.NameCompartment@Name</_Name>
+													<_Value type="a">700</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">194,192,192</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_name type="a">Light</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::4:24:13</_modifiedTime>
+			<_lastModifiedTime type="a">7.16.2023::4:24:13</_lastModifiedTime>
+			<m_hReferencedDiagram type="r">
+				<IHandle type="e">
+				</IHandle>
+			</m_hReferencedDiagram>
+			<_defaultSubsystem type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ISubsystem</_hm2Class>
+					<_hid type="a">GUID 0ad8adcc-cee5-4bcb-93dd-4088518c3e68</_hid>
+				</IHandle>
+			</_defaultSubsystem>
+			<AggregatesList type="e">
+				<value>GUID bf06b2fa-1527-4b5e-bcec-322fb2393db2</value>
+			</AggregatesList>
+		</IPanelDiagram>
+		<CGIClassChart type="e">
+			<_id type="a">GUID bf06b2fa-1527-4b5e-bcec-322fb2393db2</_id>
+			<m_type type="a">0</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IPanelDiagram</_hm2Class>
+					<_hid type="a">GUID 20f6e4e9-f1c4-4dc5-acd5-a479808ece69</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s"></m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">0</m_drawBehavior>
+			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
+			<elementList type="a">10</elementList>
+			
+			<m_access type="a">'Z'</m_access>
+			<m_modified type="a">'N'</m_modified>
+			<m_nModifyDate type="a">0</m_nModifyDate>
+			<m_nCreateDate type="a">0</m_nCreateDate>
+			<m_bScaleWithZoom type="a">1</m_bScaleWithZoom>
+			<m_arrowStyle type="a">'S'</m_arrowStyle>
+			<m_pRoot type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pRoot>
+			<m_currentLeftTop type="a">0 0 </m_currentLeftTop>
+			<m_currentRightBottom type="a">0 0 </m_currentRightBottom>
+			<m_bFreezeCompartmentContent type="a">0</m_bFreezeCompartmentContent>
+			<AggregatesList type="e">
+				<value>GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</value>
+				<value>GUID eedd8f0a-6e60-43ed-a4c0-e6c6a79fef65</value>
+				<value>GUID f698d0fa-032e-469e-9f92-33a9d7464afb</value>
+				<value>GUID bdc3c081-ed44-4f74-95cb-9a1b5ee2b402</value>
+				<value>GUID 6415a201-239e-4893-b25d-13ca7ca6006e</value>
+				<value>GUID 485935b1-3982-4d53-82af-d9c59712c270</value>
+				<value>GUID c309c06f-3c97-4e70-8aa8-6fe3ef8f8f87</value>
+				<value>GUID ae5446fc-0b58-40b2-aaee-ac21e24cabb9</value>
+				<value>GUID 402a65ba-9960-499d-9d60-aceb1a4d3e79</value>
+				<value>GUID 02b01b7f-a57c-475a-bab3-b42c9def4ddb</value>
+			</AggregatesList>
+		</CGIClassChart>
+		<CGIBox type="e">
+			<_id type="a">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</_id>
+			<m_type type="a">215</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ISubsystem</_hm2Class>
+					<_hid type="a">GUID 0ad8adcc-cee5-4bcb-93dd-4088518c3e68</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s"></m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">0</m_drawBehavior>
+			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
+			<m_polygon type="a">0 </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+		</CGIBox>
+		<CGIDiagramFrame type="e">
+			<_id type="a">GUID eedd8f0a-6e60-43ed-a4c0-e6c6a79fef65</_id>
+			<m_type type="a">203</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pParent>
 			<m_name type="p">
 				<CGIText type="e">
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
@@ -317,12 +3178,1214 @@
 			<m_nNameFormat type="a">0</m_nNameFormat>
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
 		</CGIDiagramFrame>
+		<CGIActiveX type="e">
+			<_id type="a">GUID f698d0fa-032e-469e-9f92-33a9d7464afb</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DigitalDisplay</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;DisplayedString;;Style;4;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;DisplayedString;;Style;4;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">221</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Lights</_hclass>
+					<_hname type="a">intensity</_hname>
+					<_hid type="a">GUID f0bb3dd7-1d6b-47fc-b31f-0afda6f2f610</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Intensity</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000291319 0 0 0.000261457 281 283.292 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsLights.intensity</m_csModelObjPath>
+			<m_csName type="a">Intensity</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsLights</_hname>
+							<_hid type="a">GUID 5e68b225-f9d5-4c0f-8e30-67a117c0fc2a</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID bdc3c081-ed44-4f74-95cb-9a1b5ee2b402</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Slider</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackGroundColor;4210752;DivisionLineThickness;2;DotColor;255;EndAngle;-45;Font;Arial;;8.25;0;0;0;0;400;0;GradientFactor;0.7;LineColor;14737632;MaximumValue;5;MinimumValue;0;NumberOfDivisions;5;NumberOfSubdivisions;1;RelativeBubbleRadius;0.1;RelativeDotPositionRadius;0.75;RelativeDotRadius;2;RelativeExternalRadius;6.25;RelativeInternalRadius;4.75;RelativeTextRadius;7.5;StartAngle;225;SubdivisionLineThickness;1;TextColor;16777215;Value;0;ValueFormatString;%25.0f;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">StatechartDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Slider</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">225</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">intensity</_hname>
+					<_hid type="a">GUID 6af649d2-3696-4faf-8ecc-52924ca449d1</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">light intensity</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.00252476 0 0 0.000610064 166 337.68 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.intensity</m_csModelObjPath>
+			<m_csName type="a">light intensity</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 6415a201-239e-4893-b25d-13ca7ca6006e</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;IconSet;9;State;0;UserInteractionEnabled;-1;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">StatechartDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">222</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">lightState</_hname>
+					<_hid type="a">GUID 98b84edf-5efd-42ce-b1fe-fd21bc6ecf94</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">light switch</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000485531 0 0 0.00043576 105 147.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.lightState</m_csModelObjPath>
+			<m_csName type="a">light switch</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 485935b1-3982-4d53-82af-d9c59712c270</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">ValueProperty</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Lights</_hclass>
+					<_hname type="a">state</_hname>
+					<_hid type="a">GUID b48106dc-f9ab-41a7-bd8c-bccf4c7003f8</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">light status</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 124 100.126 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsLights.state</m_csModelObjPath>
+			<m_csName type="a">light status</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsLights</_hname>
+							<_hid type="a">GUID 5e68b225-f9d5-4c0f-8e30-67a117c0fc2a</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID c309c06f-3c97-4e70-8aa8-6fe3ef8f8f87</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;IconSet;9;State;0;UserInteractionEnabled;-1;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">StatechartDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">222</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">occupied</_hname>
+					<_hid type="a">GUID 46ec270b-2594-44f1-9937-94acd82c0bfe</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Toggle Occupancy%0D
+</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">4 -6 -9  121 -9  121 9  -6 9  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">1</m_bImplicitSetRectPoints>
+					<m_transform type="a">0.952756 0 0 1.33333 1113.72 307 </m_transform>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000485531 0 0 0.00043576 267 148.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.occupied</m_csModelObjPath>
+			<m_csName type="a">Toggle Occupancy%0D
+</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID ae5446fc-0b58-40b2-aaee-ac21e24cabb9</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Occupancy_Sensor</_hclass>
+					<_hname type="a">occupied</_hname>
+					<_hid type="a">GUID 229b8855-9939-4705-b9f0-953af32b73b0</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Occupancy Sensor Status</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 286 100.126 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsOccupancy_Sensor.occupied</m_csModelObjPath>
+			<m_csName type="a">Occupancy Sensor Status</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsOccupancy_Sensor</_hname>
+							<_hid type="a">GUID 039c5643-e9e6-4ce8-99f4-0d3d4e80eb95</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 402a65ba-9960-499d-9d60-aceb1a4d3e79</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Led</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">219</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Movement_Sensor</_hclass>
+					<_hname type="a">movementDetected</_hname>
+					<_hid type="a">GUID 3f62470b-d090-4e77-87dc-95034546152a</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">movement detected</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000126238 0 0 0.000113298 459 100.126 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsMovement_Sensor.movementDetected</m_csModelObjPath>
+			<m_csName type="a">movement detected</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsMovement_Sensor</_hname>
+							<_hid type="a">GUID a541499d-f46f-4d51-8aea-5960bf3ab917</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<CGIActiveX type="e">
+			<_id type="a">GUID 02b01b7f-a57c-475a-bab3-b42c9def4ddb</_id>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ActiveXProperties@Child.ActiveXControl</_Name>
+													<_Value type="a">BackColor;16777215;IconSet;9;State;0;UserInteractionEnabled;-1;</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">StatechartDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">OnOffSwitch</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Direction</_Name>
+													<_Value type="a">InOut</_Value>
+													<_Type type="a">Enum</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<m_type type="a">222</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">is_Movement</_hname>
+					<_hid type="a">GUID 95b5e93a-c40d-4dc6-af39-842d28880103</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID 334d1a15-66e8-408f-b335-48a1c36fda8f</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Toggle Movement</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000485531 0 0 0.00043576 440 147.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.is_Movement</m_csModelObjPath>
+			<m_csName type="a">Toggle Movement</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGIActiveX>
+		<IPanelDiagram type="e">
+			<_id type="a">GUID 3375ae58-173a-4305-8ae3-63efdbfc439f</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">Format</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">DiagramFrame</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">DefaultSize</_Name>
+													<_Value type="a">20,20,590,500</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.FillColor</_Name>
+													<_Value type="a">247,247,247</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.Transparent_Fill</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Font</_Name>
+													<_Value type="a">Tahoma</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Size</_Name>
+													<_Value type="a">8</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Font.Weight@Child.NameCompartment@Name</_Name>
+													<_Value type="a">700</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">194,192,192</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+									<IPropertyMetaclass type="e">
+										<_Name type="a">PushButton</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">DefaultSize</_Name>
+													<_Value type="a">0,0,100,50</_Value>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Fill.Transparent_Fill</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineColor</_Name>
+													<_Value type="a">0,0,0</_Value>
+													<_Type type="a">Color</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.LineWidth</_Name>
+													<_Value type="a">0</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">Line.Transparent</_Name>
+													<_Value type="a">1</_Value>
+													<_Type type="a">Int</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_name type="a">Security</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.16.2023::4:24:21</_modifiedTime>
+			<_lastModifiedTime type="a">7.16.2023::4:24:21</_lastModifiedTime>
+			<m_hReferencedDiagram type="r">
+				<IHandle type="e">
+				</IHandle>
+			</m_hReferencedDiagram>
+			<_defaultSubsystem type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ISubsystem</_hm2Class>
+					<_hid type="a">GUID 0ad8adcc-cee5-4bcb-93dd-4088518c3e68</_hid>
+				</IHandle>
+			</_defaultSubsystem>
+			<AggregatesList type="e">
+				<value>GUID fc859aff-5a42-4045-b20f-f70045ca6ec1</value>
+			</AggregatesList>
+		</IPanelDiagram>
+		<CGIClassChart type="e">
+			<_id type="a">GUID fc859aff-5a42-4045-b20f-f70045ca6ec1</_id>
+			<m_type type="a">0</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IPanelDiagram</_hm2Class>
+					<_hid type="a">GUID 3375ae58-173a-4305-8ae3-63efdbfc439f</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s"></m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">0</m_drawBehavior>
+			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
+			<elementList type="a">5</elementList>
+			
+			<m_access type="a">'Z'</m_access>
+			<m_modified type="a">'N'</m_modified>
+			<m_nModifyDate type="a">0</m_nModifyDate>
+			<m_nCreateDate type="a">0</m_nCreateDate>
+			<m_bScaleWithZoom type="a">1</m_bScaleWithZoom>
+			<m_arrowStyle type="a">'S'</m_arrowStyle>
+			<m_pRoot type="s">GUID b12955e6-a884-4fc7-9791-ca9c103d004a</m_pRoot>
+			<m_currentLeftTop type="a">0 0 </m_currentLeftTop>
+			<m_currentRightBottom type="a">0 0 </m_currentRightBottom>
+			<m_bFreezeCompartmentContent type="a">0</m_bFreezeCompartmentContent>
+			<AggregatesList type="e">
+				<value>GUID b12955e6-a884-4fc7-9791-ca9c103d004a</value>
+				<value>GUID 6f096f72-cf5b-4945-ba5b-a873e00e0abe</value>
+				<value>GUID 51f0acc0-82f9-4321-85d2-63f95100105c</value>
+				<value>GUID 396c7bca-e17f-485f-be89-96d0836d0010</value>
+				<value>GUID 0a2b8ab4-7faa-4766-abe7-875e817c279d</value>
+			</AggregatesList>
+		</CGIClassChart>
+		<CGIBox type="e">
+			<_id type="a">GUID b12955e6-a884-4fc7-9791-ca9c103d004a</_id>
+			<m_type type="a">215</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">ISubsystem</_hm2Class>
+					<_hid type="a">GUID 0ad8adcc-cee5-4bcb-93dd-4088518c3e68</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s"></m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">0</m_drawBehavior>
+			<m_bIsPreferencesInitialized type="a">0</m_bIsPreferencesInitialized>
+			<m_polygon type="a">0 </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+		</CGIBox>
+		<CGIDiagramFrame type="e">
+			<_id type="a">GUID 6f096f72-cf5b-4945-ba5b-a873e00e0abe</_id>
+			<m_type type="a">203</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID b12955e6-a884-4fc7-9791-ca9c103d004a</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">8</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">2.63889 0 0 3.63636 20 20 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_AdditionalLabel type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_AdditionalLabel>
+			<m_polygon type="a">4 0 0  0 132  216 132  216 0  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+		</CGIDiagramFrame>
+		<CGITextBox type="e">
+			<_id type="a">GUID 51f0acc0-82f9-4321-85d2-63f95100105c</_id>
+			<m_type type="a">224</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IAttribute</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">userStatus</_hname>
+					<_hid type="a">GUID 4a977231-64dd-409d-a843-c3a36c39552e</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID b12955e6-a884-4fc7-9791-ca9c103d004a</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.209366 0 0 0.0263389 194.047 155.658 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 -5 -25  -5 1114  1084 1114  1084 -25  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.userStatus</m_csModelObjPath>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+		</CGITextBox>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 396c7bca-e17f-485f-be89-96d0836d0010</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_login()</_hname>
+					<_hid type="a">GUID d5efe9a4-10f4-42f0-b2b3-54edd016c64e</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID b12955e6-a884-4fc7-9791-ca9c103d004a</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Login</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 193 238.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_login</m_csModelObjPath>
+			<m_csName type="a">Login</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
+		<CGIMFCCtrl type="e">
+			<_id type="a">GUID 0a2b8ab4-7faa-4766-abe7-875e817c279d</_id>
+			<m_type type="a">227</m_type>
+			<m_pModelObject type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IReception</_hm2Class>
+					<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+					<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+					<_hclass type="a">Network</_hclass>
+					<_hname type="a">ev_logout()</_hname>
+					<_hid type="a">GUID ac6cf486-959d-41c2-aaa3-bd2a0dd31538</_hid>
+				</IHandle>
+			</m_pModelObject>
+			<m_pParent type="s">GUID b12955e6-a884-4fc7-9791-ca9c103d004a</m_pParent>
+			<m_name type="p">
+				<CGIText type="e">
+					<m_str type="a">Logout</m_str>
+					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
+					<m_color type="p">
+						<IColor type="e">
+							<m_fgColor type="a">0</m_fgColor>
+							<m_bgColor type="a">0</m_bgColor>
+							<m_bgFlag type="a">0</m_bgFlag>
+						</IColor>
+					</m_color>
+					<m_position type="a">1 0 0  </m_position>
+					<m_nIdent type="a">0</m_nIdent>
+					<m_bImplicitSetRectPoints type="a">0</m_bImplicitSetRectPoints>
+					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
+				</CGIText>
+			</m_name>
+			<m_drawBehavior type="a">4096</m_drawBehavior>
+			<m_transform type="a">0.000971062 0 0 0.00043576 325 238.485 </m_transform>
+			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
+			<m_polygon type="a">4 0 -1114  0 113628  102980 113628  102980 -1114  </m_polygon>
+			<m_nNameFormat type="a">0</m_nNameFormat>
+			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<m_csModelObjPath type="a">ArchitecturalAnalysisPkg.itsNetwork.ev_logout</m_csModelObjPath>
+			<m_csName type="a">Logout</m_csName>
+			<m_PartsArray type="c">
+				<IRPYRawContainer type="e">
+					
+						<IHandle type="e">
+							<_hm2Class type="a">IPart</_hm2Class>
+							<_hfilename type="a">.\ArchitecturalAnalysisPkg.sbsx</_hfilename>
+							<_hsubsystem type="a">ArchitecturalAnalysisPkg</_hsubsystem>
+							<_hclass type="a">TopLevel</_hclass>
+							<_hname type="a">itsNetwork</_hname>
+							<_hid type="a">GUID f930be77-494f-41ba-9465-c72e69fd380d</_hid>
+						</IHandle>
+					
+				</IRPYRawContainer>
+			</m_PartsArray>
+			<m_csButtonCaption type="a">Push</m_csButtonCaption>
+		</CGIMFCCtrl>
 		<IClass type="e">
-			<_id type="a">GUID fbff9631-cec3-4c79-b8ef-6107abb82760</_id>
+			<_id type="a">GUID 1e4d2ee9-cb35-4595-94d8-972c5bfa5f12</_id>
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
 			<weakCGTime type="a">1.2.1990::0:0:0</weakCGTime>
 			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
 			<_itsStateChart type="r">
