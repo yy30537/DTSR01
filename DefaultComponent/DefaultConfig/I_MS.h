@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_MS
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_MS.h
 *********************************************************************/
 
@@ -41,11 +41,11 @@ public :
     
     ////    Operations    ////
     
-    //## operation get()
-    virtual bool get() = 0;
+    //## operation getMM()
+    virtual bool getMM() = 0;
     
-    //## operation set(bool)
-    virtual void set(bool arg) = 0;
+    //## operation setMM(bool)
+    virtual void setMM(bool arg) = 0;
 };
 
 #ifdef _OMINSTRUMENT

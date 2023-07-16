@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Movement_Sensor
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Movement_Sensor.h
 *********************************************************************/
 
@@ -49,13 +49,13 @@ public :
         void connectMovement_Sensor(Movement_Sensor* part);
         
         //## auto_generated
-        virtual bool get();
-        
-        //## auto_generated
         I_MS* getItsI_MS();
         
         //## auto_generated
-        virtual void set(bool arg);
+        virtual bool getMM();
+        
+        //## auto_generated
+        virtual void setMM(bool arg);
         
         ////    Additional operations    ////
         
@@ -89,7 +89,7 @@ public :
     Movement_Sensor();
     
     //## auto_generated
-    ~Movement_Sensor();
+    virtual ~Movement_Sensor();
     
     //## auto_generated
     Network* getItsNetwork() const;
@@ -114,6 +114,12 @@ public :
     
     //## auto_generated
     void _clearItsNetwork();
+    
+    //## operation getMM()
+    virtual bool getMM();
+    
+    //## operation setMM(bool)
+    virtual void setMM(bool arg);
     
     //## auto_generated
     pMS_C* getPMS() const;

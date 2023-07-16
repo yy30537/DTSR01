@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_MS
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_MS.cpp
 *********************************************************************/
 
@@ -17,9 +17,9 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_MS_I_MS_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_I_MS_get_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_I_MS_getMM_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_I_MS_set_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
+#define ArchitecturalAnalysisPkg_I_MS_setMM_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
 //#]
 
 //## package ArchitecturalAnalysisPkg

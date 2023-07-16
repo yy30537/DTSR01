@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Occupancy_Sensor
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Occupancy_Sensor.cpp
 *********************************************************************/
 
@@ -96,6 +96,7 @@ void Occupancy_Sensor::setOccupied(bool arg_occupied) {
     //#[ operation setOccupied(bool)
     occupied=arg_occupied;
     //#]
+    NOTIFY_SET_OPERATION;
 }
 
 Occupancy_Sensor::pOS_C* Occupancy_Sensor::getPOS() const {

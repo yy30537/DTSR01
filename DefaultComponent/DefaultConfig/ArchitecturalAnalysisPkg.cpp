@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp
 *********************************************************************/
 
@@ -34,7 +34,7 @@
 #include "Lights.h"
 //## classInstance itsMicrophones
 #include "Microphones.h"
-//## auto_generated
+//## classInstance itsMovement_Sensor
 #include "Movement_Sensor.h"
 //## classInstance itsOccupancy_Sensor
 #include "Occupancy_Sensor.h"
@@ -178,6 +178,7 @@ static void RenameGlobalInstances() {
     OM_SET_INSTANCE_NAME(&itsSpeakers, Speakers, "itsSpeakers", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsWebcam, Webcam, "itsWebcam", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsBooking_System, Booking_System, "itsBooking_System", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsMovement_Sensor, Movement_Sensor, "itsMovement_Sensor", AOMNoMultiplicity);
 }
 #endif // _OMINSTRUMENT
 
@@ -248,6 +249,11 @@ void ArchitecturalAnalysisPkg_initRelations() {
         itsNetwork.get_pNetwork()->setItsI_BS(itsBooking_System.get_pBook()->getItsI_BS());
         
     }
+    {
+        
+        itsNetwork.get_pNetwork()->setItsI_MS(itsMovement_Sensor.get_pMS()->getItsI_MS());
+        
+    }
     
     #ifdef _OMINSTRUMENT
     RenameGlobalInstances();
@@ -289,6 +295,9 @@ Speakers itsSpeakers;
 
 //## classInstance itsWebcam
 Webcam itsWebcam;
+
+//## classInstance itsMovement_Sensor
+Movement_Sensor itsMovement_Sensor;
 
 //#[ ignore
 ArchitecturalAnalysisPkg_OMInitializer::ArchitecturalAnalysisPkg_OMInitializer() {

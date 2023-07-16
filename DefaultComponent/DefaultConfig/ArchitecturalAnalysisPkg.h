@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.h
 *********************************************************************/
 
@@ -79,7 +79,7 @@ class Lights;
 //## classInstance itsMicrophones
 class Microphones;
 
-//## auto_generated
+//## classInstance itsMovement_Sensor
 class Movement_Sensor;
 
 //## classInstance itsNetwork
@@ -178,6 +178,9 @@ extern Speakers itsSpeakers;
 
 //## classInstance itsWebcam
 extern Webcam itsWebcam;
+
+//## classInstance itsMovement_Sensor
+extern Movement_Sensor itsMovement_Sensor;
 
 //#[ ignore
 class ArchitecturalAnalysisPkg_OMInitializer {

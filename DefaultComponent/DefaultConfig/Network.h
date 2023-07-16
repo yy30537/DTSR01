@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Network
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Network.h
 *********************************************************************/
 
@@ -72,7 +72,11 @@ class Weather_Forecast;
 //#[ ignore
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_ARGS_DECLARATION int p_intensity;
 
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setIs_Movement_bool_ARGS_DECLARATION bool p_is_Movement;
+
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setLightState_bool_ARGS_DECLARATION bool p_lightState;
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setOccupied_bool_ARGS_DECLARATION bool p_occupied;
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -95,9 +99,6 @@ public :
         virtual ~pNetwork_C();
         
         ////    Operations    ////
-        
-        //## auto_generated
-        virtual bool get();
         
         //## auto_generated
         virtual int getItensity();
@@ -139,6 +140,9 @@ public :
         I_Weather* getItsI_Weather();
         
         //## auto_generated
+        virtual bool getMM();
+        
+        //## auto_generated
         virtual bool getOccupied();
         
         //## auto_generated
@@ -169,10 +173,10 @@ public :
         virtual void login();
         
         //## auto_generated
-        virtual void set(bool arg);
+        virtual void setIntensity(int arg_intensity);
         
         //## auto_generated
-        virtual void setIntensity(int arg_intensity);
+        virtual void setMM(bool arg);
         
         //## auto_generated
         virtual void setOccupied(bool arg_occupied);
@@ -449,6 +453,12 @@ protected :
 public :
 
     //## auto_generated
+    bool getIs_Movement() const;
+    
+    //## auto_generated
+    void setIs_Movement(bool p_is_Movement);
+    
+    //## auto_generated
     bool getLightState() const;
     
     //## auto_generated
@@ -462,6 +472,8 @@ public :
 
 protected :
 
+    bool is_Movement;		//## attribute is_Movement
+    
     bool lightState;		//## attribute lightState
     
     bool occupied;		//## attribute occupied
@@ -486,15 +498,9 @@ public :
     //## statechart_method
     inline bool On_IN() const;
     
-    //## statechart_method
-    IOxfReactive::TakeEventStatus On_handleEvent();
-    
     // Off:
     //## statechart_method
     inline bool Off_IN() const;
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus Off_handleEvent();
     
     // accepttimeevent_9:
     //## statechart_method
@@ -526,7 +532,11 @@ protected :
 #ifdef _OMINSTRUMENT
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setIntensity_int)
 
+DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setIs_Movement_bool)
+
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setLightState_bool)
+
+DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setOccupied_bool)
 
 //#[ ignore
 class OMAnimatedNetwork : virtual public AOMInstance {
@@ -534,7 +544,11 @@ class OMAnimatedNetwork : virtual public AOMInstance {
     
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setIntensity_int)
     
+    DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setIs_Movement_bool)
+    
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setLightState_bool)
+    
+    DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setOccupied_bool)
     
     ////    Framework operations    ////
     

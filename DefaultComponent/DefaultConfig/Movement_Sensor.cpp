@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Movement_Sensor
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Movement_Sensor.cpp
 *********************************************************************/
 
@@ -18,6 +18,10 @@
 #include "Network.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Movement_Sensor_Movement_Sensor_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_Movement_Sensor_getMM_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_Movement_Sensor_setMM_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -37,22 +41,22 @@ void Movement_Sensor::pMS_C::connectMovement_Sensor(Movement_Sensor* part) {
     
 }
 
-bool Movement_Sensor::pMS_C::get() {
-    bool res = false;
-    if (itsI_MS != NULL) {
-        res = itsI_MS->get();
-    }
-    return res;
-}
-
 I_MS* Movement_Sensor::pMS_C::getItsI_MS() {
     return this;
 }
 
-void Movement_Sensor::pMS_C::set(bool arg) {
+bool Movement_Sensor::pMS_C::getMM() {
+    bool res = false;
+    if (itsI_MS != NULL) {
+        res = itsI_MS->getMM();
+    }
+    return res;
+}
+
+void Movement_Sensor::pMS_C::setMM(bool arg) {
     
     if (itsI_MS != NULL) {
-        itsI_MS->set(arg);
+        itsI_MS->setMM(arg);
     }
     
 }
@@ -130,6 +134,20 @@ void Movement_Sensor::_clearItsNetwork() {
     itsNetwork = NULL;
 }
 
+bool Movement_Sensor::getMM() {
+    NOTIFY_OPERATION(getMM, getMM(), 0, ArchitecturalAnalysisPkg_Movement_Sensor_getMM_SERIALIZE);
+    //#[ operation getMM()
+    return movementDetected;
+    //#]
+}
+
+void Movement_Sensor::setMM(bool arg) {
+    NOTIFY_OPERATION(setMM, setMM(bool), 1, ArchitecturalAnalysisPkg_Movement_Sensor_setMM_SERIALIZE);
+    //#[ operation setMM(bool)
+    movementDetected=arg;
+    //#]
+}
+
 Movement_Sensor::pMS_C* Movement_Sensor::getPMS() const {
     return (Movement_Sensor::pMS_C*) &pMS;
 }
@@ -144,6 +162,7 @@ bool Movement_Sensor::getMovementDetected() const {
 
 void Movement_Sensor::setMovementDetected(bool p_movementDetected) {
     movementDetected = p_movementDetected;
+    NOTIFY_SET_OPERATION;
 }
 
 void Movement_Sensor::initRelations() {

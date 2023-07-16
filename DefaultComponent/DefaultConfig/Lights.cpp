@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Lights
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Lights.cpp
 *********************************************************************/
 
@@ -184,6 +184,7 @@ void Lights::setIntensity(int arg_intensity) {
     //#[ operation setIntensity(int)
     intensity=arg_intensity;
     //#]
+    NOTIFY_SET_OPERATION;
 }
 
 bool Lights::getState() {
@@ -198,6 +199,7 @@ void Lights::setState(bool arg) {
     //#[ operation setState(bool)
     state=arg;
     //#]
+    NOTIFY_SET_OPERATION;
 }
 
 #ifdef _OMINSTRUMENT
