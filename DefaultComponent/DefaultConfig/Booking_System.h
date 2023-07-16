@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Booking_System
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Booking_System.h
 *********************************************************************/
 
@@ -85,9 +85,6 @@ public :
     //## auto_generated
     virtual ~Booking_System();
     
-    //## operation login()
-    virtual void login();
-    
     //## auto_generated
     pBook_C* getPBook() const;
     
@@ -106,7 +103,14 @@ protected :
     void initRelations();
     
     bool auth_status;		//## attribute auth_status
-    
+
+public :
+
+    //## operation login()
+    virtual void login();
+
+protected :
+
 //#[ ignore
     pBook_C pBook;
 //#]

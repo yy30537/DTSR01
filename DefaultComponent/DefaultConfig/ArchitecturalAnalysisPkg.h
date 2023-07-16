@@ -150,6 +150,10 @@ class Webcam;
 #define ev_turnon_spkr_ArchitecturalAnalysisPkg_id 18221
 
 #define ev_turnoff_spkr_ArchitecturalAnalysisPkg_id 18222
+
+#define ev_login_ArchitecturalAnalysisPkg_id 18223
+
+#define ev_logout_ArchitecturalAnalysisPkg_id 18224
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -848,6 +852,64 @@ public :
 //#[ ignore
 class OMAnimatedev_turnoff_spkr : virtual public AOMEvent {
     DECLARE_META_EVENT(ev_turnoff_spkr)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_login()
+class ev_login : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_login;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_login();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_login : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_login)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_logout()
+class ev_logout : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_logout;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_logout();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_logout : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_logout)
 };
 //#]
 #endif // _OMINSTRUMENT

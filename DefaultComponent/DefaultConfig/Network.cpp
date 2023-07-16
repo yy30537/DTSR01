@@ -62,6 +62,10 @@
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setTemp_int_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_temp)
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setTemp_int_SERIALIZE_RET_VAL
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setUserStatus_charPtr_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_userStatus)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setUserStatus_charPtr_SERIALIZE_RET_VAL
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -908,6 +912,15 @@ int Network::getTemp() const {
 
 void Network::setTemp(int p_temp) {
     temp = p_temp;
+    NOTIFY_SET_OPERATION;
+}
+
+char* Network::getUserStatus() const {
+    return userStatus;
+}
+
+void Network::setUserStatus(char* p_userStatus) {
+    userStatus = p_userStatus;
     NOTIFY_SET_OPERATION;
 }
 
@@ -1937,6 +1950,7 @@ void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) cons
     aomsAttributes->addAttribute("speakerVol", x2String(myReal->speakerVol));
     aomsAttributes->addAttribute("CO2Alarm", x2String(myReal->CO2Alarm));
     aomsAttributes->addAttribute("temp", x2String(myReal->temp));
+    aomsAttributes->addAttribute("userStatus", x2String(myReal->userStatus));
 }
 
 void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
@@ -2210,6 +2224,10 @@ IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setSpeakerVol_int, Network, s
 IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setTemp_int, "setTemp", FALSE, "setTemp(int)", 1)
 
 IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setTemp_int, Network, setTemp(p_temp), NO_OP())
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setUserStatus_charPtr, "setUserStatus", FALSE, "setUserStatus(char*)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setUserStatus_charPtr, Network, setUserStatus(p_userStatus), NO_OP())
 #endif // _OMINSTRUMENT
 
 /*********************************************************************

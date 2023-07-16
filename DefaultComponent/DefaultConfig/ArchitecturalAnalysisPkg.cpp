@@ -204,6 +204,18 @@
 #define ev_turnoff_spkr_UNSERIALIZE OM_NO_OP
 
 #define ev_turnoff_spkr_CONSTRUCTOR ev_turnoff_spkr()
+
+#define ev_login_SERIALIZE OM_NO_OP
+
+#define ev_login_UNSERIALIZE OM_NO_OP
+
+#define ev_login_CONSTRUCTOR ev_login()
+
+#define ev_logout_SERIALIZE OM_NO_OP
+
+#define ev_logout_UNSERIALIZE OM_NO_OP
+
+#define ev_logout_CONSTRUCTOR ev_logout()
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -626,6 +638,30 @@ bool ev_turnoff_spkr::isTypeOf(const short id) const {
 }
 
 IMPLEMENT_META_EVENT_P(ev_turnoff_spkr, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnoff_spkr())
+
+//## event ev_login()
+ev_login::ev_login() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_login)
+    setId(ev_login_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_login::isTypeOf(const short id) const {
+    return (ev_login_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_login, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_login())
+
+//## event ev_logout()
+ev_logout::ev_logout() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_logout)
+    setId(ev_logout_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_logout::isTypeOf(const short id) const {
+    return (ev_logout_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_logout, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_logout())
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp

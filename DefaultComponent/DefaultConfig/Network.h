@@ -85,6 +85,8 @@ class Weather_Forecast;
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setSpeakerVol_int_ARGS_DECLARATION int p_speakerVol;
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setTemp_int_ARGS_DECLARATION int p_temp;
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setUserStatus_charPtr_ARGS_DECLARATION char* p_userStatus;
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -525,6 +527,12 @@ public :
     
     //## auto_generated
     void setTemp(int p_temp);
+    
+    //## auto_generated
+    char* getUserStatus() const;
+    
+    //## auto_generated
+    void setUserStatus(char* p_userStatus);
 
 protected :
 
@@ -543,6 +551,8 @@ protected :
     int speakerVol;		//## attribute speakerVol
     
     int temp;		//## attribute temp
+    
+    char* userStatus;		//## attribute userStatus
     
 //#[ ignore
     pNetwork_C pNetwork;
@@ -807,6 +817,8 @@ DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setSpeakerVol_int)
 
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setTemp_int)
 
+DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setUserStatus_charPtr)
+
 //#[ ignore
 class OMAnimatedNetwork : virtual public AOMInstance {
     DECLARE_REACTIVE_META(Network, OMAnimatedNetwork)
@@ -826,6 +838,8 @@ class OMAnimatedNetwork : virtual public AOMInstance {
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setSpeakerVol_int)
     
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setTemp_int)
+    
+    DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setUserStatus_charPtr)
     
     ////    Framework operations    ////
     

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Booking_System
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Booking_System.cpp
 *********************************************************************/
 
@@ -70,13 +70,6 @@ Booking_System::~Booking_System() {
     NOTIFY_DESTRUCTOR(~Booking_System, false);
 }
 
-void Booking_System::login() {
-    NOTIFY_OPERATION(login, login(), 0, ArchitecturalAnalysisPkg_Booking_System_login_SERIALIZE);
-    //#[ operation login()
-    auth_status=true;
-    //#]
-}
-
 Booking_System::pBook_C* Booking_System::getPBook() const {
     return (Booking_System::pBook_C*) &pBook;
 }
@@ -97,6 +90,13 @@ void Booking_System::initRelations() {
     if (get_pBook() != NULL) {
         get_pBook()->connectBooking_System(this);
     }
+}
+
+void Booking_System::login() {
+    NOTIFY_OPERATION(login, login(), 0, ArchitecturalAnalysisPkg_Booking_System_login_SERIALIZE);
+    //#[ operation login()
+    std::cout<<"Somehow you logged in!\n";
+    //#]
 }
 
 #ifdef _OMINSTRUMENT
