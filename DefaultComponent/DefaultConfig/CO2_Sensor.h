@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\CO2_Sensor.h
 *********************************************************************/
 
@@ -51,12 +51,6 @@ public :
         //## auto_generated
         I_CO2* getItsI_CO2();
         
-        //## auto_generated
-        virtual bool get_CO2_Alarm();
-        
-        //## auto_generated
-        virtual void set_CO2_Alarm(bool arg_CO2_Alarm_state);
-        
         ////    Additional operations    ////
         
         //## auto_generated
@@ -89,25 +83,13 @@ public :
     CO2_Sensor();
     
     //## auto_generated
-    virtual ~CO2_Sensor();
-    
-    //## operation get_CO2_Alarm()
-    virtual bool get_CO2_Alarm();
-    
-    //## operation set_CO2_Alarm(bool)
-    virtual void set_CO2_Alarm(bool arg_CO2_Alarm_state);
+    ~CO2_Sensor();
     
     //## auto_generated
     pCO2_C* getPCO2() const;
     
     //## auto_generated
     pCO2_C* get_pCO2() const;
-    
-    //## auto_generated
-    bool getCO2_Alarm_state() const;
-    
-    //## auto_generated
-    void setCO2_Alarm_state(bool p_CO2_Alarm_state);
     
     //## auto_generated
     Network* getItsNetwork() const;
@@ -123,7 +105,7 @@ protected :
     //## auto_generated
     void cleanUpRelations();
     
-    bool CO2_Alarm_state;		//## attribute CO2_Alarm_state
+    bool CO2AlarmState;		//## attribute CO2AlarmState
     
     Network* itsNetwork;		//## link itsNetwork
 
@@ -137,6 +119,12 @@ public :
     
     //## auto_generated
     void _clearItsNetwork();
+    
+    //## auto_generated
+    bool getCO2AlarmState() const;
+    
+    //## auto_generated
+    void setCO2AlarmState(bool p_CO2AlarmState);
 
 protected :
 

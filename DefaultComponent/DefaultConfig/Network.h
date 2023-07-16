@@ -70,6 +70,8 @@ class Occupancy_Sensor;
 class Weather_Forecast;
 
 //#[ ignore
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setCO2Alarm_bool_ARGS_DECLARATION bool p_CO2Alarm;
+
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setFireDetected_bool_ARGS_DECLARATION bool p_fireDetected;
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_ARGS_DECLARATION int p_intensity;
@@ -81,6 +83,8 @@ class Weather_Forecast;
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setOccupied_bool_ARGS_DECLARATION bool p_occupied;
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setSpeakerVol_int_ARGS_DECLARATION int p_speakerVol;
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setTemp_int_ARGS_DECLARATION int p_temp;
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -177,9 +181,6 @@ public :
         virtual bool get_AC_state();
         
         //## auto_generated
-        virtual bool get_CO2_Alarm();
-        
-        //## auto_generated
         virtual bool get_HVAC_state();
         
         //## auto_generated
@@ -217,9 +218,6 @@ public :
         
         //## auto_generated
         virtual void set_AC_state(bool arg_AC_state);
-        
-        //## auto_generated
-        virtual void set_CO2_Alarm(bool arg_CO2_Alarm_state);
         
         //## auto_generated
         virtual void set_HVAC_state(bool arg_HVAC_state);
@@ -481,6 +479,12 @@ protected :
 public :
 
     //## auto_generated
+    bool getCO2Alarm() const;
+    
+    //## auto_generated
+    void setCO2Alarm(bool p_CO2Alarm);
+    
+    //## auto_generated
     bool getFireAlarm() const;
     
     //## auto_generated
@@ -515,9 +519,17 @@ public :
     
     //## auto_generated
     void setSpeakerVol(int p_speakerVol);
+    
+    //## auto_generated
+    int getTemp() const;
+    
+    //## auto_generated
+    void setTemp(int p_temp);
 
 protected :
 
+    bool CO2Alarm;		//## attribute CO2Alarm
+    
     bool fireAlarm;		//## attribute fireAlarm
     
     bool fireDetected;		//## attribute fireDetected
@@ -529,6 +541,8 @@ protected :
     bool occupied;		//## attribute occupied
     
     int speakerVol;		//## attribute speakerVol
+    
+    int temp;		//## attribute temp
     
 //#[ ignore
     pNetwork_C pNetwork;
@@ -544,91 +558,23 @@ public :
     virtual void rootState_entDef();
     
     //## statechart_method
-    void rootStateEntDef();
-    
-    //## statechart_method
     virtual IOxfReactive::TakeEventStatus rootState_processEvent();
     
-    // CommunicationAudioSystemInOperation:
+    // HVAC_Enabled:
     //## statechart_method
-    inline bool CommunicationAudioSystemInOperation_IN() const;
+    inline bool HVAC_Enabled_IN() const;
     
     //## statechart_method
-    void CommunicationAudioSystemInOperation_entDef();
+    void HVAC_Enabled_entDef();
     
     //## statechart_method
-    void CommunicationAudioSystemInOperation_exit();
+    void HVAC_Enabled_exit();
     
     //## statechart_method
-    IOxfReactive::TakeEventStatus CommunicationAudioSystemInOperation_processEvent();
-    
-    // state_15:
-    //## statechart_method
-    inline bool state_15_IN() const;
+    IOxfReactive::TakeEventStatus HVAC_Enabled_processEvent();
     
     //## statechart_method
-    void state_15_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_15_processEvent();
-    
-    // webcamOn:
-    //## statechart_method
-    inline bool webcamOn_IN() const;
-    
-    // webcamOff:
-    //## statechart_method
-    inline bool webcamOff_IN() const;
-    
-    // state_14:
-    //## statechart_method
-    inline bool state_14_IN() const;
-    
-    //## statechart_method
-    void state_14_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_14_processEvent();
-    
-    // speakersOn:
-    //## statechart_method
-    inline bool speakersOn_IN() const;
-    
-    //## statechart_method
-    void speakersOn_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus speakersOn_handleEvent();
-    
-    // Idle:
-    //## statechart_method
-    inline bool Idle_IN() const;
-    
-    // accepttimeevent_17:
-    //## statechart_method
-    inline bool accepttimeevent_17_IN() const;
-    
-    // speakersOff:
-    //## statechart_method
-    inline bool speakersOff_IN() const;
-    
-    // state_13:
-    //## statechart_method
-    inline bool state_13_IN() const;
-    
-    //## statechart_method
-    void state_13_entDef();
-    
-    //## statechart_method
-    IOxfReactive::TakeEventStatus state_13_processEvent();
-    
-    // smartscreenOn:
-    //## statechart_method
-    inline bool smartscreenOn_IN() const;
-    
-    // smartscreenOff:
-    //## statechart_method
-    inline bool smartscreenOff_IN() const;
+    IOxfReactive::TakeEventStatus HVAC_Enabled_handleEvent();
     
     // state_12:
     //## statechart_method
@@ -640,63 +586,213 @@ public :
     //## statechart_method
     IOxfReactive::TakeEventStatus state_12_processEvent();
     
-    // micOn:
+    // Vent_On:
     //## statechart_method
-    inline bool micOn_IN() const;
+    inline bool Vent_On_IN() const;
     
-    // micOff:
+    // Vent_OFF:
     //## statechart_method
-    inline bool micOff_IN() const;
+    inline bool Vent_OFF_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Vent_OFF_handleEvent();
+    
+    // accepttimeevent_14:
+    //## statechart_method
+    inline bool accepttimeevent_14_IN() const;
+    
+    // state_11:
+    //## statechart_method
+    inline bool state_11_IN() const;
+    
+    //## statechart_method
+    void state_11_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus state_11_processEvent();
+    
+    // Heating_On:
+    //## statechart_method
+    inline bool Heating_On_IN() const;
+    
+    //## statechart_method
+    void Heating_On_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Heating_On_handleEvent();
+    
+    // Heating_On_idle:
+    //## statechart_method
+    inline bool Heating_On_idle_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Heating_On_idle_handleEvent();
+    
+    // Heating_On_accepttimeevent_17:
+    //## statechart_method
+    inline bool Heating_On_accepttimeevent_17_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Heating_On_accepttimeevent_17_handleEvent();
+    
+    // Heating_OFF:
+    //## statechart_method
+    inline bool Heating_OFF_IN() const;
+    
+    //## statechart_method
+    void Heating_OFF_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Heating_OFF_handleEvent();
+    
+    // Heating_OFF_idle:
+    //## statechart_method
+    inline bool Heating_OFF_idle_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Heating_OFF_idle_handleEvent();
+    
+    // Heating_OFF_accepttimeevent_17:
+    //## statechart_method
+    inline bool Heating_OFF_accepttimeevent_17_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus Heating_OFF_accepttimeevent_17_handleEvent();
+    
+    // state_10:
+    //## statechart_method
+    inline bool state_10_IN() const;
+    
+    //## statechart_method
+    void state_10_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus state_10_processEvent();
+    
+    // AC_ON:
+    //## statechart_method
+    inline bool AC_ON_IN() const;
+    
+    //## statechart_method
+    void AC_ON_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus AC_ON_handleEvent();
+    
+    // AC_ON_idle:
+    //## statechart_method
+    inline bool AC_ON_idle_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus AC_ON_idle_handleEvent();
+    
+    // AC_ON_accepttimeevent_17:
+    //## statechart_method
+    inline bool AC_ON_accepttimeevent_17_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus AC_ON_accepttimeevent_17_handleEvent();
+    
+    // AC_OFF:
+    //## statechart_method
+    inline bool AC_OFF_IN() const;
+    
+    //## statechart_method
+    void AC_OFF_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus AC_OFF_handleEvent();
+    
+    // idle:
+    //## statechart_method
+    inline bool idle_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus idle_handleEvent();
+    
+    // accepttimeevent_17:
+    //## statechart_method
+    inline bool accepttimeevent_17_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus accepttimeevent_17_handleEvent();
+    
+    // HVAC_Disabled:
+    //## statechart_method
+    inline bool HVAC_Disabled_IN() const;
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus HVAC_DisabledTakeev_HVAC_SwitchOn();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus HVAC_Disabled_handleEvent();
 
 protected :
 
 //#[ ignore
     enum Network_Enum {
         OMNonState = 0,
-        CommunicationAudioSystemInOperation = 1,
-        state_15 = 2,
-        webcamOn = 3,
-        webcamOff = 4,
-        state_14 = 5,
-        speakersOn = 6,
-        Idle = 7,
-        accepttimeevent_17 = 8,
-        speakersOff = 9,
-        state_13 = 10,
-        smartscreenOn = 11,
-        smartscreenOff = 12,
-        state_12 = 13,
-        micOn = 14,
-        micOff = 15
+        HVAC_Enabled = 1,
+        state_12 = 2,
+        Vent_On = 3,
+        Vent_OFF = 4,
+        accepttimeevent_14 = 5,
+        state_11 = 6,
+        Heating_On = 7,
+        Heating_On_idle = 8,
+        Heating_On_accepttimeevent_17 = 9,
+        Heating_OFF = 10,
+        Heating_OFF_idle = 11,
+        Heating_OFF_accepttimeevent_17 = 12,
+        state_10 = 13,
+        AC_ON = 14,
+        AC_ON_idle = 15,
+        AC_ON_accepttimeevent_17 = 16,
+        AC_OFF = 17,
+        idle = 18,
+        accepttimeevent_17 = 19,
+        HVAC_Disabled = 20
     };
     
     int rootState_subState;
     
     int rootState_active;
     
-    int state_15_subState;
-    
-    int state_15_active;
-    
-    int state_14_subState;
-    
-    int state_14_active;
-    
-    int speakersOn_subState;
-    
-    IOxfTimeout* speakersOn_timeout;
-    
-    int state_13_subState;
-    
-    int state_13_active;
-    
     int state_12_subState;
     
     int state_12_active;
+    
+    IOxfTimeout* state_12_timeout;
+    
+    int state_11_subState;
+    
+    int state_11_active;
+    
+    int Heating_On_subState;
+    
+    IOxfTimeout* Heating_On_timeout;
+    
+    int Heating_OFF_subState;
+    
+    IOxfTimeout* Heating_OFF_timeout;
+    
+    int state_10_subState;
+    
+    int state_10_active;
+    
+    int AC_ON_subState;
+    
+    IOxfTimeout* AC_ON_timeout;
+    
+    int AC_OFF_subState;
+    
+    IOxfTimeout* AC_OFF_timeout;
 //#]
 };
 
 #ifdef _OMINSTRUMENT
+DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setCO2Alarm_bool)
+
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setFireDetected_bool)
 
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setIntensity_int)
@@ -709,9 +805,13 @@ DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setOccupied_bool)
 
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setSpeakerVol_int)
 
+DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setTemp_int)
+
 //#[ ignore
 class OMAnimatedNetwork : virtual public AOMInstance {
     DECLARE_REACTIVE_META(Network, OMAnimatedNetwork)
+    
+    DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setCO2Alarm_bool)
     
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setFireDetected_bool)
     
@@ -725,6 +825,8 @@ class OMAnimatedNetwork : virtual public AOMInstance {
     
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setSpeakerVol_int)
     
+    DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setTemp_int)
+    
     ////    Framework operations    ////
     
 public :
@@ -737,49 +839,64 @@ public :
     void rootState_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void CommunicationAudioSystemInOperation_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void state_15_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void webcamOn_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void webcamOff_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void state_14_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void speakersOn_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void Idle_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void speakersOff_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void state_13_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void smartscreenOn_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void smartscreenOff_serializeStates(AOMSState* aomsState) const;
+    void HVAC_Enabled_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
     void state_12_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void micOn_serializeStates(AOMSState* aomsState) const;
+    void Vent_On_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void micOff_serializeStates(AOMSState* aomsState) const;
+    void Vent_OFF_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void accepttimeevent_14_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void state_11_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void Heating_On_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void Heating_On_idle_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void Heating_On_accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void Heating_OFF_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void Heating_OFF_idle_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void Heating_OFF_accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void state_10_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void AC_ON_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void AC_ON_idle_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void AC_ON_accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void AC_OFF_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void idle_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void HVAC_Disabled_serializeStates(AOMSState* aomsState) const;
 };
 //#]
 #endif // _OMINSTRUMENT
@@ -788,64 +905,84 @@ inline bool Network::rootState_IN() const {
     return true;
 }
 
-inline bool Network::CommunicationAudioSystemInOperation_IN() const {
-    return rootState_subState == CommunicationAudioSystemInOperation;
-}
-
-inline bool Network::state_15_IN() const {
-    return CommunicationAudioSystemInOperation_IN();
-}
-
-inline bool Network::webcamOn_IN() const {
-    return state_15_subState == webcamOn;
-}
-
-inline bool Network::webcamOff_IN() const {
-    return state_15_subState == webcamOff;
-}
-
-inline bool Network::state_14_IN() const {
-    return CommunicationAudioSystemInOperation_IN();
-}
-
-inline bool Network::speakersOn_IN() const {
-    return state_14_subState == speakersOn;
-}
-
-inline bool Network::Idle_IN() const {
-    return speakersOn_subState == Idle;
-}
-
-inline bool Network::accepttimeevent_17_IN() const {
-    return speakersOn_subState == accepttimeevent_17;
-}
-
-inline bool Network::speakersOff_IN() const {
-    return state_14_subState == speakersOff;
-}
-
-inline bool Network::state_13_IN() const {
-    return CommunicationAudioSystemInOperation_IN();
-}
-
-inline bool Network::smartscreenOn_IN() const {
-    return state_13_subState == smartscreenOn;
-}
-
-inline bool Network::smartscreenOff_IN() const {
-    return state_13_subState == smartscreenOff;
+inline bool Network::HVAC_Enabled_IN() const {
+    return rootState_subState == HVAC_Enabled;
 }
 
 inline bool Network::state_12_IN() const {
-    return CommunicationAudioSystemInOperation_IN();
+    return HVAC_Enabled_IN();
 }
 
-inline bool Network::micOn_IN() const {
-    return state_12_subState == micOn;
+inline bool Network::Vent_On_IN() const {
+    return state_12_subState == Vent_On;
 }
 
-inline bool Network::micOff_IN() const {
-    return state_12_subState == micOff;
+inline bool Network::Vent_OFF_IN() const {
+    return state_12_subState == Vent_OFF;
+}
+
+inline bool Network::accepttimeevent_14_IN() const {
+    return state_12_subState == accepttimeevent_14;
+}
+
+inline bool Network::state_11_IN() const {
+    return HVAC_Enabled_IN();
+}
+
+inline bool Network::Heating_On_IN() const {
+    return state_11_subState == Heating_On;
+}
+
+inline bool Network::Heating_On_idle_IN() const {
+    return Heating_On_subState == Heating_On_idle;
+}
+
+inline bool Network::Heating_On_accepttimeevent_17_IN() const {
+    return Heating_On_subState == Heating_On_accepttimeevent_17;
+}
+
+inline bool Network::Heating_OFF_IN() const {
+    return state_11_subState == Heating_OFF;
+}
+
+inline bool Network::Heating_OFF_idle_IN() const {
+    return Heating_OFF_subState == Heating_OFF_idle;
+}
+
+inline bool Network::Heating_OFF_accepttimeevent_17_IN() const {
+    return Heating_OFF_subState == Heating_OFF_accepttimeevent_17;
+}
+
+inline bool Network::state_10_IN() const {
+    return HVAC_Enabled_IN();
+}
+
+inline bool Network::AC_ON_IN() const {
+    return state_10_subState == AC_ON;
+}
+
+inline bool Network::AC_ON_idle_IN() const {
+    return AC_ON_subState == AC_ON_idle;
+}
+
+inline bool Network::AC_ON_accepttimeevent_17_IN() const {
+    return AC_ON_subState == AC_ON_accepttimeevent_17;
+}
+
+inline bool Network::AC_OFF_IN() const {
+    return state_10_subState == AC_OFF;
+}
+
+inline bool Network::idle_IN() const {
+    return AC_OFF_subState == idle;
+}
+
+inline bool Network::accepttimeevent_17_IN() const {
+    return AC_OFF_subState == accepttimeevent_17;
+}
+
+inline bool Network::HVAC_Disabled_IN() const {
+    return rootState_subState == HVAC_Disabled;
 }
 
 #endif

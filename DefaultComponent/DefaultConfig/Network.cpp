@@ -31,6 +31,10 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Network_Network_SERIALIZE OM_NO_OP
 
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setCO2Alarm_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_CO2Alarm)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setCO2Alarm_bool_SERIALIZE_RET_VAL
+
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setFireDetected_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_fireDetected)
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setFireDetected_bool_SERIALIZE_RET_VAL
@@ -54,6 +58,10 @@
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setSpeakerVol_int_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_speakerVol)
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setSpeakerVol_int_SERIALIZE_RET_VAL
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setTemp_int_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_temp)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setTemp_int_SERIALIZE_RET_VAL
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -219,14 +227,6 @@ bool Network::pNetwork_C::get_AC_state() {
     return res;
 }
 
-bool Network::pNetwork_C::get_CO2_Alarm() {
-    bool res = false;
-    if (itsI_CO2 != NULL) {
-        res = itsI_CO2->get_CO2_Alarm();
-    }
-    return res;
-}
-
 bool Network::pNetwork_C::get_HVAC_state() {
     bool res = false;
     if (itsI_HVAC != NULL) {
@@ -327,14 +327,6 @@ void Network::pNetwork_C::set_AC_state(bool arg_AC_state) {
     
     if (itsI_HVAC != NULL) {
         itsI_HVAC->set_AC_state(arg_AC_state);
-    }
-    
-}
-
-void Network::pNetwork_C::set_CO2_Alarm(bool arg_CO2_Alarm_state) {
-    
-    if (itsI_CO2 != NULL) {
-        itsI_CO2->set_CO2_Alarm(arg_CO2_Alarm_state);
     }
     
 }
@@ -463,7 +455,7 @@ void Network::pNetwork_C::cleanUpRelations() {
 }
 //#]
 
-Network::Network(IOxfActive* theActiveContext) : intensity(0), fireAlarm(false), fireDetected(false), is_Movement(false), lightState(false), occupied(false), speakerVol(0) {
+Network::Network(IOxfActive* theActiveContext) : intensity(0), CO2Alarm(false), fireAlarm(false), fireDetected(false), is_Movement(false), lightState(false), occupied(false), speakerVol(0), temp(26) {
     NOTIFY_REACTIVE_CONSTRUCTOR(Network, Network(), 0, ArchitecturalAnalysisPkg_Network_Network_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsCO2_Sensor = NULL;
@@ -522,16 +514,21 @@ bool Network::startBehavior() {
 void Network::initStatechart() {
     rootState_subState = OMNonState;
     rootState_active = OMNonState;
-    state_15_subState = OMNonState;
-    state_15_active = OMNonState;
-    state_14_subState = OMNonState;
-    state_14_active = OMNonState;
-    speakersOn_subState = OMNonState;
-    speakersOn_timeout = NULL;
-    state_13_subState = OMNonState;
-    state_13_active = OMNonState;
     state_12_subState = OMNonState;
     state_12_active = OMNonState;
+    state_12_timeout = NULL;
+    state_11_subState = OMNonState;
+    state_11_active = OMNonState;
+    Heating_On_subState = OMNonState;
+    Heating_On_timeout = NULL;
+    Heating_OFF_subState = OMNonState;
+    Heating_OFF_timeout = NULL;
+    state_10_subState = OMNonState;
+    state_10_active = OMNonState;
+    AC_ON_subState = OMNonState;
+    AC_ON_timeout = NULL;
+    AC_OFF_subState = OMNonState;
+    AC_OFF_timeout = NULL;
 }
 
 void Network::cleanUpRelations() {
@@ -796,14 +793,38 @@ void Network::_clearItsOccupancy_Sensor() {
 }
 
 void Network::cancelTimeouts() {
-    cancel(speakersOn_timeout);
+    cancel(state_12_timeout);
+    cancel(Heating_On_timeout);
+    cancel(Heating_OFF_timeout);
+    cancel(AC_ON_timeout);
+    cancel(AC_OFF_timeout);
 }
 
 bool Network::cancelTimeout(const IOxfTimeout* arg) {
     bool res = false;
-    if(speakersOn_timeout == arg)
+    if(state_12_timeout == arg)
         {
-            speakersOn_timeout = NULL;
+            state_12_timeout = NULL;
+            res = true;
+        }
+    if(Heating_On_timeout == arg)
+        {
+            Heating_On_timeout = NULL;
+            res = true;
+        }
+    if(Heating_OFF_timeout == arg)
+        {
+            Heating_OFF_timeout = NULL;
+            res = true;
+        }
+    if(AC_ON_timeout == arg)
+        {
+            AC_ON_timeout = NULL;
+            res = true;
+        }
+    if(AC_OFF_timeout == arg)
+        {
+            AC_OFF_timeout = NULL;
             res = true;
         }
     return res;
@@ -815,6 +836,15 @@ int Network::getIntensity() const {
 
 void Network::setIntensity(int p_intensity) {
     intensity = p_intensity;
+    NOTIFY_SET_OPERATION;
+}
+
+bool Network::getCO2Alarm() const {
+    return CO2Alarm;
+}
+
+void Network::setCO2Alarm(bool p_CO2Alarm) {
+    CO2Alarm = p_CO2Alarm;
     NOTIFY_SET_OPERATION;
 }
 
@@ -872,438 +902,306 @@ void Network::setSpeakerVol(int p_speakerVol) {
     NOTIFY_SET_OPERATION;
 }
 
+int Network::getTemp() const {
+    return temp;
+}
+
+void Network::setTemp(int p_temp) {
+    temp = p_temp;
+    NOTIFY_SET_OPERATION;
+}
+
 void Network::rootState_entDef() {
     {
         NOTIFY_STATE_ENTERED("ROOT");
-        rootStateEntDef();
+        NOTIFY_TRANSITION_STARTED("6");
+        NOTIFY_STATE_ENTERED("ROOT.HVAC_Disabled");
+        rootState_subState = HVAC_Disabled;
+        rootState_active = HVAC_Disabled;
+        //#[ state HVAC_Disabled.(Entry) 
+        OUT_PORT(pNetwork)->set_AC_state(false);
+        OUT_PORT(pNetwork)->set_Heating_state(false);
+        OUT_PORT(pNetwork)->set_Vent_state(false);
+        OUT_PORT(pNetwork)->set_HVAC_state(false);
+        //#]
+        NOTIFY_TRANSITION_TERMINATED("6");
     }
-}
-
-void Network::rootStateEntDef() {
-    NOTIFY_TRANSITION_STARTED("0");
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation");
-    rootState_subState = CommunicationAudioSystemInOperation;
-    rootState_active = CommunicationAudioSystemInOperation;
-    state_13_entDef();
-    state_14_entDef();
-    state_15_entDef();
-    state_12_entDef();
-    NOTIFY_TRANSITION_TERMINATED("0");
 }
 
 IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    // State CommunicationAudioSystemInOperation
-    if(rootState_active == CommunicationAudioSystemInOperation)
+    switch (rootState_active) {
+        // State HVAC_Enabled
+        case HVAC_Enabled:
         {
-            res = CommunicationAudioSystemInOperation_processEvent();
+            res = HVAC_Enabled_processEvent();
         }
+        break;
+        // State HVAC_Disabled
+        case HVAC_Disabled:
+        {
+            res = HVAC_Disabled_handleEvent();
+        }
+        break;
+        default:
+            break;
+    }
     return res;
 }
 
-void Network::CommunicationAudioSystemInOperation_entDef() {
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation");
-    rootState_subState = CommunicationAudioSystemInOperation;
-    rootState_active = CommunicationAudioSystemInOperation;
+void Network::HVAC_Enabled_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled");
+    rootState_subState = HVAC_Enabled;
+    rootState_active = HVAC_Enabled;
+    //#[ state HVAC_Enabled.(Entry) 
+    OUT_PORT(pNetwork)->set_HVAC_state(true);
+    //#]
+    state_10_entDef();
+    state_11_entDef();
     state_12_entDef();
-    state_13_entDef();
-    state_14_entDef();
-    state_15_entDef();
 }
 
-void Network::CommunicationAudioSystemInOperation_exit() {
-    switch (state_12_subState) {
-        // State micOn
-        case micOn:
+void Network::HVAC_Enabled_exit() {
+    switch (state_10_subState) {
+        // State AC_OFF
+        case AC_OFF:
         {
-            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_12.micOn");
+            popNullTransition();
+            switch (AC_OFF_subState) {
+                // State idle
+                case idle:
+                {
+                    cancel(AC_OFF_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF.idle");
+                }
+                break;
+                case accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            AC_OFF_subState = OMNonState;
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF");
         }
         break;
-        // State micOff
-        case micOff:
+        // State AC_ON
+        case AC_ON:
         {
-            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_12.micOff");
+            popNullTransition();
+            switch (AC_ON_subState) {
+                // State idle
+                case AC_ON_idle:
+                {
+                    cancel(AC_ON_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON.idle");
+                }
+                break;
+                case AC_ON_accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            AC_ON_subState = OMNonState;
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON");
+        }
+        break;
+        default:
+            break;
+    }
+    state_10_subState = OMNonState;
+    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10");
+    switch (state_11_subState) {
+        // State Heating_OFF
+        case Heating_OFF:
+        {
+            popNullTransition();
+            switch (Heating_OFF_subState) {
+                // State idle
+                case Heating_OFF_idle:
+                {
+                    cancel(Heating_OFF_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF.idle");
+                }
+                break;
+                case Heating_OFF_accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            Heating_OFF_subState = OMNonState;
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF");
+        }
+        break;
+        // State Heating_On
+        case Heating_On:
+        {
+            popNullTransition();
+            switch (Heating_On_subState) {
+                // State idle
+                case Heating_On_idle:
+                {
+                    cancel(Heating_On_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On.idle");
+                }
+                break;
+                case Heating_On_accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            Heating_On_subState = OMNonState;
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On");
+        }
+        break;
+        default:
+            break;
+    }
+    state_11_subState = OMNonState;
+    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11");
+    switch (state_12_subState) {
+        // State Vent_OFF
+        case Vent_OFF:
+        {
+            popNullTransition();
+            cancel(state_12_timeout);
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+        }
+        break;
+        // State Vent_On
+        case Vent_On:
+        {
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_On");
+        }
+        break;
+        case accepttimeevent_14:
+        {
+            popNullTransition();
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.accepttimeevent_14");
         }
         break;
         default:
             break;
     }
     state_12_subState = OMNonState;
-    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_12");
-    switch (state_13_subState) {
-        // State smartscreenOn
-        case smartscreenOn:
-        {
-            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOn");
-        }
-        break;
-        // State smartscreenOff
-        case smartscreenOff:
-        {
-            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOff");
-        }
-        break;
-        default:
-            break;
-    }
-    state_13_subState = OMNonState;
-    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13");
-    switch (state_14_subState) {
-        // State speakersOff
-        case speakersOff:
-        {
-            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
-        }
-        break;
-        // State speakersOn
-        case speakersOn:
-        {
-            switch (speakersOn_subState) {
-                // State Idle
-                case Idle:
-                {
-                    cancel(speakersOn_timeout);
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
-                }
-                break;
-                case accepttimeevent_17:
-                {
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
-                }
-                break;
-                default:
-                    break;
-            }
-            speakersOn_subState = OMNonState;
-            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
-        }
-        break;
-        default:
-            break;
-    }
-    state_14_subState = OMNonState;
-    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14");
-    switch (state_15_subState) {
-        // State webcamOn
-        case webcamOn:
-        {
-            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOn");
-        }
-        break;
-        // State webcamOff
-        case webcamOff:
-        {
-            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOff");
-        }
-        break;
-        default:
-            break;
-    }
-    state_15_subState = OMNonState;
-    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_15");
+    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12");
     
-    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation");
+    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled");
 }
 
-IOxfReactive::TakeEventStatus Network::CommunicationAudioSystemInOperation_processEvent() {
+IOxfReactive::TakeEventStatus Network::HVAC_Enabled_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    // State state_10
+    if(state_10_processEvent() != eventNotConsumed)
+        {
+            res = eventConsumed;
+            if(!IS_IN(HVAC_Enabled))
+                {
+                    return res;
+                }
+        }
+    // State state_11
+    if(state_11_processEvent() != eventNotConsumed)
+        {
+            res = eventConsumed;
+            if(!IS_IN(HVAC_Enabled))
+                {
+                    return res;
+                }
+        }
     // State state_12
     if(state_12_processEvent() != eventNotConsumed)
         {
             res = eventConsumed;
-            if(!IS_IN(CommunicationAudioSystemInOperation))
+            if(!IS_IN(HVAC_Enabled))
                 {
                     return res;
                 }
         }
-    // State state_13
-    if(state_13_processEvent() != eventNotConsumed)
+    if(res == eventNotConsumed)
         {
-            res = eventConsumed;
-            if(!IS_IN(CommunicationAudioSystemInOperation))
-                {
-                    return res;
-                }
+            res = HVAC_Enabled_handleEvent();
         }
-    // State state_14
-    if(state_14_processEvent() != eventNotConsumed)
-        {
-            res = eventConsumed;
-            if(!IS_IN(CommunicationAudioSystemInOperation))
-                {
-                    return res;
-                }
-        }
-    // State state_15
-    if(state_15_processEvent() != eventNotConsumed)
-        {
-            res = eventConsumed;
-            if(!IS_IN(CommunicationAudioSystemInOperation))
-                {
-                    return res;
-                }
-        }
-    
     return res;
 }
 
-void Network::state_15_entDef() {
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_15");
-    NOTIFY_TRANSITION_STARTED("4");
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOff");
-    state_15_subState = webcamOff;
-    state_15_active = webcamOff;
-    //#[ state CommunicationAudioSystemInOperation.state_15.webcamOff.(Entry) 
-    OUT_PORT(pNetwork)->setWC(false);
-    //#]
-    NOTIFY_TRANSITION_TERMINATED("4");
-}
-
-IOxfReactive::TakeEventStatus Network::state_15_processEvent() {
+IOxfReactive::TakeEventStatus Network::HVAC_Enabled_handleEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    switch (state_15_active) {
-        // State webcamOn
-        case webcamOn:
+    if(IS_EVENT_TYPE_OF(ev_HVAC_SwitchOff_ArchitecturalAnalysisPkg_id))
         {
-            if(IS_EVENT_TYPE_OF(ev_turnoff_WC_ArchitecturalAnalysisPkg_id))
-                {
-                    NOTIFY_TRANSITION_STARTED("8");
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOn");
-                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOff");
-                    state_15_subState = webcamOff;
-                    state_15_active = webcamOff;
-                    //#[ state CommunicationAudioSystemInOperation.state_15.webcamOff.(Entry) 
-                    OUT_PORT(pNetwork)->setWC(false);
-                    //#]
-                    NOTIFY_TRANSITION_TERMINATED("8");
-                    res = eventConsumed;
-                }
-            
-            
-        }
-        break;
-        // State webcamOff
-        case webcamOff:
-        {
-            if(IS_EVENT_TYPE_OF(ev_turnon_WC_ArchitecturalAnalysisPkg_id))
-                {
-                    NOTIFY_TRANSITION_STARTED("7");
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOff");
-                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOn");
-                    state_15_subState = webcamOn;
-                    state_15_active = webcamOn;
-                    //#[ state CommunicationAudioSystemInOperation.state_15.webcamOn.(Entry) 
-                    OUT_PORT(pNetwork)->setWC(true);
-                    //#]
-                    NOTIFY_TRANSITION_TERMINATED("7");
-                    res = eventConsumed;
-                }
-            
-            
-        }
-        break;
-        default:
-            break;
-    }
-    return res;
-}
-
-void Network::state_14_entDef() {
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14");
-    NOTIFY_TRANSITION_STARTED("3");
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
-    state_14_subState = speakersOff;
-    state_14_active = speakersOff;
-    //#[ state CommunicationAudioSystemInOperation.state_14.speakersOff.(Entry) 
-    OUT_PORT(pNetwork)->setStateSpkr(false);
-    speakerVol=0;
-    //#]
-    NOTIFY_TRANSITION_TERMINATED("3");
-}
-
-IOxfReactive::TakeEventStatus Network::state_14_processEvent() {
-    IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    switch (state_14_active) {
-        // State speakersOff
-        case speakersOff:
-        {
-            if(IS_EVENT_TYPE_OF(ev_turnon_spkr_ArchitecturalAnalysisPkg_id))
-                {
-                    NOTIFY_TRANSITION_STARTED("11");
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
-                    speakersOn_entDef();
-                    NOTIFY_TRANSITION_TERMINATED("11");
-                    res = eventConsumed;
-                }
-            
-            
-        }
-        break;
-        // State Idle
-        case Idle:
-        {
-            if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
-                {
-                    if(getCurrentEvent() == speakersOn_timeout)
-                        {
-                            NOTIFY_TRANSITION_STARTED("14");
-                            cancel(speakersOn_timeout);
-                            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
-                            NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
-                            pushNullTransition();
-                            speakersOn_subState = accepttimeevent_17;
-                            state_14_active = accepttimeevent_17;
-                            NOTIFY_TRANSITION_TERMINATED("14");
-                            res = eventConsumed;
-                        }
-                }
-            
-            if(res == eventNotConsumed)
-                {
-                    res = speakersOn_handleEvent();
-                }
-        }
-        break;
-        case accepttimeevent_17:
-        {
-            if(IS_EVENT_TYPE_OF(OMNullEventId))
-                {
-                    NOTIFY_TRANSITION_STARTED("15");
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
-                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
-                    speakersOn_subState = Idle;
-                    state_14_active = Idle;
-                    //#[ state CommunicationAudioSystemInOperation.state_14.speakersOn.Idle.(Entry) 
-                    speakerVol=speakerVol;
-                    
-                    //#]
-                    speakersOn_timeout = scheduleTimeout(100, "ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
-                    NOTIFY_TRANSITION_TERMINATED("15");
-                    res = eventConsumed;
-                }
-            
-            if(res == eventNotConsumed)
-                {
-                    res = speakersOn_handleEvent();
-                }
-        }
-        break;
-        default:
-            break;
-    }
-    return res;
-}
-
-void Network::speakersOn_entDef() {
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
-    state_14_subState = speakersOn;
-    //#[ state CommunicationAudioSystemInOperation.state_14.speakersOn.(Entry) 
-    OUT_PORT(pNetwork)->setStateSpkr(true);
-    if(speakerVol==0){
-    speakerVol=50;
-    }
-    //#]
-    NOTIFY_TRANSITION_STARTED("13");
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
-    speakersOn_subState = Idle;
-    state_14_active = Idle;
-    //#[ state CommunicationAudioSystemInOperation.state_14.speakersOn.Idle.(Entry) 
-    speakerVol=speakerVol;
-    
-    //#]
-    speakersOn_timeout = scheduleTimeout(100, "ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
-    NOTIFY_TRANSITION_TERMINATED("13");
-}
-
-IOxfReactive::TakeEventStatus Network::speakersOn_handleEvent() {
-    IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    if(IS_EVENT_TYPE_OF(ev_turnoff_spkr_ArchitecturalAnalysisPkg_id))
-        {
-            NOTIFY_TRANSITION_STARTED("12");
-            switch (speakersOn_subState) {
-                // State Idle
-                case Idle:
-                {
-                    cancel(speakersOn_timeout);
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
-                }
-                break;
-                case accepttimeevent_17:
-                {
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
-                }
-                break;
-                default:
-                    break;
-            }
-            speakersOn_subState = OMNonState;
-            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
-            NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
-            state_14_subState = speakersOff;
-            state_14_active = speakersOff;
-            //#[ state CommunicationAudioSystemInOperation.state_14.speakersOff.(Entry) 
-            OUT_PORT(pNetwork)->setStateSpkr(false);
-            speakerVol=0;
+            NOTIFY_TRANSITION_STARTED("7");
+            HVAC_Enabled_exit();
+            NOTIFY_STATE_ENTERED("ROOT.HVAC_Disabled");
+            rootState_subState = HVAC_Disabled;
+            rootState_active = HVAC_Disabled;
+            //#[ state HVAC_Disabled.(Entry) 
+            OUT_PORT(pNetwork)->set_AC_state(false);
+            OUT_PORT(pNetwork)->set_Heating_state(false);
+            OUT_PORT(pNetwork)->set_Vent_state(false);
+            OUT_PORT(pNetwork)->set_HVAC_state(false);
             //#]
-            NOTIFY_TRANSITION_TERMINATED("12");
+            NOTIFY_TRANSITION_TERMINATED("7");
             res = eventConsumed;
         }
-    
     
     return res;
 }
 
-void Network::state_13_entDef() {
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_13");
-    NOTIFY_TRANSITION_STARTED("2");
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOff");
-    state_13_subState = smartscreenOff;
-    state_13_active = smartscreenOff;
-    //#[ state CommunicationAudioSystemInOperation.state_13.smartscreenOff.(Entry) 
-    OUT_PORT(pNetwork)->SS_setState(false);
+void Network::state_12_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12");
+    NOTIFY_TRANSITION_STARTED("10");
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+    pushNullTransition();
+    state_12_subState = Vent_OFF;
+    state_12_active = Vent_OFF;
+    //#[ state HVAC_Enabled.state_12.Vent_OFF.(Entry) 
+    OUT_PORT(pNetwork)->set_Vent_state(false);
+    CO2Alarm=CO2Alarm;
     //#]
-    NOTIFY_TRANSITION_TERMINATED("2");
+    state_12_timeout = scheduleTimeout(100, "ROOT.HVAC_Enabled.state_12.Vent_OFF");
+    NOTIFY_TRANSITION_TERMINATED("10");
 }
 
-IOxfReactive::TakeEventStatus Network::state_13_processEvent() {
+IOxfReactive::TakeEventStatus Network::state_12_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    switch (state_13_active) {
-        // State smartscreenOn
-        case smartscreenOn:
+    switch (state_12_active) {
+        // State Vent_OFF
+        case Vent_OFF:
         {
-            if(IS_EVENT_TYPE_OF(ev_turnoff_SS_ArchitecturalAnalysisPkg_id))
-                {
-                    NOTIFY_TRANSITION_STARTED("6");
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOn");
-                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOff");
-                    state_13_subState = smartscreenOff;
-                    state_13_active = smartscreenOff;
-                    //#[ state CommunicationAudioSystemInOperation.state_13.smartscreenOff.(Entry) 
-                    OUT_PORT(pNetwork)->SS_setState(false);
-                    //#]
-                    NOTIFY_TRANSITION_TERMINATED("6");
-                    res = eventConsumed;
-                }
-            
-            
+            res = Vent_OFF_handleEvent();
         }
         break;
-        // State smartscreenOff
-        case smartscreenOff:
+        // State Vent_On
+        case Vent_On:
         {
-            if(IS_EVENT_TYPE_OF(ev_turnon_SS_ArchitecturalAnalysisPkg_id))
+            if(IS_EVENT_TYPE_OF(ev_Vent_SwitchOff_ArchitecturalAnalysisPkg_id))
                 {
                     NOTIFY_TRANSITION_STARTED("5");
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOff");
-                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOn");
-                    state_13_subState = smartscreenOn;
-                    state_13_active = smartscreenOn;
-                    //#[ state CommunicationAudioSystemInOperation.state_13.smartscreenOn.(Entry) 
-                    OUT_PORT(pNetwork)->SS_setState(true);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_On");
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                    pushNullTransition();
+                    state_12_subState = Vent_OFF;
+                    state_12_active = Vent_OFF;
+                    //#[ state HVAC_Enabled.state_12.Vent_OFF.(Entry) 
+                    OUT_PORT(pNetwork)->set_Vent_state(false);
+                    CO2Alarm=CO2Alarm;
                     //#]
+                    state_12_timeout = scheduleTimeout(100, "ROOT.HVAC_Enabled.state_12.Vent_OFF");
                     NOTIFY_TRANSITION_TERMINATED("5");
                     res = eventConsumed;
                 }
@@ -1311,70 +1209,719 @@ IOxfReactive::TakeEventStatus Network::state_13_processEvent() {
             
         }
         break;
+        case accepttimeevent_14:
+        {
+            if(IS_EVENT_TYPE_OF(OMNullEventId))
+                {
+                    NOTIFY_TRANSITION_STARTED("13");
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.accepttimeevent_14");
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                    pushNullTransition();
+                    state_12_subState = Vent_OFF;
+                    state_12_active = Vent_OFF;
+                    //#[ state HVAC_Enabled.state_12.Vent_OFF.(Entry) 
+                    OUT_PORT(pNetwork)->set_Vent_state(false);
+                    CO2Alarm=CO2Alarm;
+                    //#]
+                    state_12_timeout = scheduleTimeout(100, "ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                    NOTIFY_TRANSITION_TERMINATED("13");
+                    res = eventConsumed;
+                }
+            
+            
+        }
+        break;
         default:
             break;
     }
     return res;
 }
 
-void Network::state_12_entDef() {
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_12");
-    NOTIFY_TRANSITION_STARTED("1");
-    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_12.micOff");
-    state_12_subState = micOff;
-    state_12_active = micOff;
-    //#[ state CommunicationAudioSystemInOperation.state_12.micOff.(Entry) 
-    OUT_PORT(pNetwork)->setStateMic(false);
-    //#]
-    NOTIFY_TRANSITION_TERMINATED("1");
+IOxfReactive::TakeEventStatus Network::Vent_OFF_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+        {
+            if(getCurrentEvent() == state_12_timeout)
+                {
+                    NOTIFY_TRANSITION_STARTED("12");
+                    popNullTransition();
+                    cancel(state_12_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.accepttimeevent_14");
+                    pushNullTransition();
+                    state_12_subState = accepttimeevent_14;
+                    state_12_active = accepttimeevent_14;
+                    NOTIFY_TRANSITION_TERMINATED("12");
+                    res = eventConsumed;
+                }
+        }
+    else if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            //## transition 14 
+            if(CO2Alarm==true)
+                {
+                    NOTIFY_TRANSITION_STARTED("14");
+                    popNullTransition();
+                    cancel(state_12_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_On");
+                    state_12_subState = Vent_On;
+                    state_12_active = Vent_On;
+                    //#[ state HVAC_Enabled.state_12.Vent_On.(Entry) 
+                    OUT_PORT(pNetwork)->set_Vent_state(true);
+                    CO2Alarm=false;
+                    //#]
+                    NOTIFY_TRANSITION_TERMINATED("14");
+                    res = eventConsumed;
+                }
+        }
+    else if(IS_EVENT_TYPE_OF(ev_Vent_SwitchOn_ArchitecturalAnalysisPkg_id))
+        {
+            NOTIFY_TRANSITION_STARTED("4");
+            popNullTransition();
+            cancel(state_12_timeout);
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+            NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_12.Vent_On");
+            state_12_subState = Vent_On;
+            state_12_active = Vent_On;
+            //#[ state HVAC_Enabled.state_12.Vent_On.(Entry) 
+            OUT_PORT(pNetwork)->set_Vent_state(true);
+            CO2Alarm=false;
+            //#]
+            NOTIFY_TRANSITION_TERMINATED("4");
+            res = eventConsumed;
+        }
+    
+    
+    return res;
 }
 
-IOxfReactive::TakeEventStatus Network::state_12_processEvent() {
+void Network::state_11_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11");
+    NOTIFY_TRANSITION_STARTED("9");
+    Heating_OFF_entDef();
+    NOTIFY_TRANSITION_TERMINATED("9");
+}
+
+IOxfReactive::TakeEventStatus Network::state_11_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    switch (state_12_active) {
-        // State micOn
-        case micOn:
+    switch (state_11_active) {
+        // State idle
+        case Heating_OFF_idle:
         {
-            if(IS_EVENT_TYPE_OF(ev_turnoff_mic_ArchitecturalAnalysisPkg_id))
-                {
-                    NOTIFY_TRANSITION_STARTED("10");
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_12.micOn");
-                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_12.micOff");
-                    state_12_subState = micOff;
-                    state_12_active = micOff;
-                    //#[ state CommunicationAudioSystemInOperation.state_12.micOff.(Entry) 
-                    OUT_PORT(pNetwork)->setStateMic(false);
-                    //#]
-                    NOTIFY_TRANSITION_TERMINATED("10");
-                    res = eventConsumed;
-                }
-            
-            
+            res = Heating_OFF_idle_handleEvent();
         }
         break;
-        // State micOff
-        case micOff:
+        case Heating_OFF_accepttimeevent_17:
         {
-            if(IS_EVENT_TYPE_OF(ev_turnon_mic_ArchitecturalAnalysisPkg_id))
-                {
-                    NOTIFY_TRANSITION_STARTED("9");
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_12.micOff");
-                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_12.micOn");
-                    state_12_subState = micOn;
-                    state_12_active = micOn;
-                    //#[ state CommunicationAudioSystemInOperation.state_12.micOn.(Entry) 
-                    OUT_PORT(pNetwork)->setStateMic(true);
-                    //#]
-                    NOTIFY_TRANSITION_TERMINATED("9");
-                    res = eventConsumed;
-                }
-            
-            
+            res = Heating_OFF_accepttimeevent_17_handleEvent();
+        }
+        break;
+        // State idle
+        case Heating_On_idle:
+        {
+            res = Heating_On_idle_handleEvent();
+        }
+        break;
+        case Heating_On_accepttimeevent_17:
+        {
+            res = Heating_On_accepttimeevent_17_handleEvent();
         }
         break;
         default:
             break;
     }
+    return res;
+}
+
+void Network::Heating_On_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_On");
+    pushNullTransition();
+    state_11_subState = Heating_On;
+    //#[ state HVAC_Enabled.state_11.Heating_On.(Entry) 
+    OUT_PORT(pNetwork)->set_Heating_state(true);
+    //#]
+    NOTIFY_TRANSITION_STARTED("24");
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_On.idle");
+    Heating_On_subState = Heating_On_idle;
+    state_11_active = Heating_On_idle;
+    //#[ state HVAC_Enabled.state_11.Heating_On.idle.(Entry) 
+    temp=temp;
+    //#]
+    Heating_On_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_11.Heating_On.idle");
+    NOTIFY_TRANSITION_TERMINATED("24");
+}
+
+IOxfReactive::TakeEventStatus Network::Heating_On_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            //## transition 30 
+            if(temp>20)
+                {
+                    NOTIFY_TRANSITION_STARTED("30");
+                    popNullTransition();
+                    switch (Heating_On_subState) {
+                        // State idle
+                        case Heating_On_idle:
+                        {
+                            cancel(Heating_On_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On.idle");
+                        }
+                        break;
+                        case Heating_On_accepttimeevent_17:
+                        {
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On.accepttimeevent_17");
+                        }
+                        break;
+                        default:
+                            break;
+                    }
+                    Heating_On_subState = OMNonState;
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On");
+                    Heating_OFF_entDef();
+                    NOTIFY_TRANSITION_TERMINATED("30");
+                    res = eventConsumed;
+                }
+        }
+    else if(IS_EVENT_TYPE_OF(ev_Heating_SwitchOff_ArchitecturalAnalysisPkg_id))
+        {
+            NOTIFY_TRANSITION_STARTED("3");
+            popNullTransition();
+            switch (Heating_On_subState) {
+                // State idle
+                case Heating_On_idle:
+                {
+                    cancel(Heating_On_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On.idle");
+                }
+                break;
+                case Heating_On_accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            Heating_On_subState = OMNonState;
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On");
+            Heating_OFF_entDef();
+            NOTIFY_TRANSITION_TERMINATED("3");
+            res = eventConsumed;
+        }
+    
+    
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::Heating_On_idle_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+        {
+            if(getCurrentEvent() == Heating_On_timeout)
+                {
+                    NOTIFY_TRANSITION_STARTED("27");
+                    cancel(Heating_On_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On.idle");
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_On.accepttimeevent_17");
+                    pushNullTransition();
+                    Heating_On_subState = Heating_On_accepttimeevent_17;
+                    state_11_active = Heating_On_accepttimeevent_17;
+                    NOTIFY_TRANSITION_TERMINATED("27");
+                    res = eventConsumed;
+                }
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = Heating_On_handleEvent();
+        }
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::Heating_On_accepttimeevent_17_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            NOTIFY_TRANSITION_STARTED("28");
+            popNullTransition();
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_On.accepttimeevent_17");
+            NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_On.idle");
+            Heating_On_subState = Heating_On_idle;
+            state_11_active = Heating_On_idle;
+            //#[ state HVAC_Enabled.state_11.Heating_On.idle.(Entry) 
+            temp=temp;
+            //#]
+            Heating_On_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_11.Heating_On.idle");
+            NOTIFY_TRANSITION_TERMINATED("28");
+            res = eventConsumed;
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = Heating_On_handleEvent();
+        }
+    return res;
+}
+
+void Network::Heating_OFF_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_OFF");
+    pushNullTransition();
+    state_11_subState = Heating_OFF;
+    //#[ state HVAC_Enabled.state_11.Heating_OFF.(Entry) 
+    OUT_PORT(pNetwork)->set_Heating_state(false);
+    //#]
+    NOTIFY_TRANSITION_STARTED("23");
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_OFF.idle");
+    Heating_OFF_subState = Heating_OFF_idle;
+    state_11_active = Heating_OFF_idle;
+    //#[ state HVAC_Enabled.state_11.Heating_OFF.idle.(Entry) 
+    temp=temp;
+    //#]
+    Heating_OFF_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_11.Heating_OFF.idle");
+    NOTIFY_TRANSITION_TERMINATED("23");
+}
+
+IOxfReactive::TakeEventStatus Network::Heating_OFF_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            //## transition 29 
+            if(temp<15)
+                {
+                    NOTIFY_TRANSITION_STARTED("29");
+                    popNullTransition();
+                    switch (Heating_OFF_subState) {
+                        // State idle
+                        case Heating_OFF_idle:
+                        {
+                            cancel(Heating_OFF_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF.idle");
+                        }
+                        break;
+                        case Heating_OFF_accepttimeevent_17:
+                        {
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF.accepttimeevent_17");
+                        }
+                        break;
+                        default:
+                            break;
+                    }
+                    Heating_OFF_subState = OMNonState;
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF");
+                    Heating_On_entDef();
+                    NOTIFY_TRANSITION_TERMINATED("29");
+                    res = eventConsumed;
+                }
+        }
+    else if(IS_EVENT_TYPE_OF(ev_Heating_SwitchOn_ArchitecturalAnalysisPkg_id))
+        {
+            NOTIFY_TRANSITION_STARTED("2");
+            popNullTransition();
+            switch (Heating_OFF_subState) {
+                // State idle
+                case Heating_OFF_idle:
+                {
+                    cancel(Heating_OFF_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF.idle");
+                }
+                break;
+                case Heating_OFF_accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            Heating_OFF_subState = OMNonState;
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF");
+            Heating_On_entDef();
+            NOTIFY_TRANSITION_TERMINATED("2");
+            res = eventConsumed;
+        }
+    
+    
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::Heating_OFF_idle_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+        {
+            if(getCurrentEvent() == Heating_OFF_timeout)
+                {
+                    NOTIFY_TRANSITION_STARTED("25");
+                    cancel(Heating_OFF_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF.idle");
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_OFF.accepttimeevent_17");
+                    pushNullTransition();
+                    Heating_OFF_subState = Heating_OFF_accepttimeevent_17;
+                    state_11_active = Heating_OFF_accepttimeevent_17;
+                    NOTIFY_TRANSITION_TERMINATED("25");
+                    res = eventConsumed;
+                }
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = Heating_OFF_handleEvent();
+        }
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::Heating_OFF_accepttimeevent_17_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            NOTIFY_TRANSITION_STARTED("26");
+            popNullTransition();
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_11.Heating_OFF.accepttimeevent_17");
+            NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_11.Heating_OFF.idle");
+            Heating_OFF_subState = Heating_OFF_idle;
+            state_11_active = Heating_OFF_idle;
+            //#[ state HVAC_Enabled.state_11.Heating_OFF.idle.(Entry) 
+            temp=temp;
+            //#]
+            Heating_OFF_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_11.Heating_OFF.idle");
+            NOTIFY_TRANSITION_TERMINATED("26");
+            res = eventConsumed;
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = Heating_OFF_handleEvent();
+        }
+    return res;
+}
+
+void Network::state_10_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_10");
+    NOTIFY_TRANSITION_STARTED("8");
+    AC_OFF_entDef();
+    NOTIFY_TRANSITION_TERMINATED("8");
+}
+
+IOxfReactive::TakeEventStatus Network::state_10_processEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    switch (state_10_active) {
+        // State idle
+        case idle:
+        {
+            res = idle_handleEvent();
+        }
+        break;
+        case accepttimeevent_17:
+        {
+            res = accepttimeevent_17_handleEvent();
+        }
+        break;
+        // State idle
+        case AC_ON_idle:
+        {
+            res = AC_ON_idle_handleEvent();
+        }
+        break;
+        case AC_ON_accepttimeevent_17:
+        {
+            res = AC_ON_accepttimeevent_17_handleEvent();
+        }
+        break;
+        default:
+            break;
+    }
+    return res;
+}
+
+void Network::AC_ON_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_10.AC_ON");
+    pushNullTransition();
+    state_10_subState = AC_ON;
+    //#[ state HVAC_Enabled.state_10.AC_ON.(Entry) 
+    OUT_PORT(pNetwork)->set_AC_state(true);
+    //#]
+    NOTIFY_TRANSITION_STARTED("18");
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_10.AC_ON.idle");
+    AC_ON_subState = AC_ON_idle;
+    state_10_active = AC_ON_idle;
+    //#[ state HVAC_Enabled.state_10.AC_ON.idle.(Entry) 
+    temp=temp;
+    //#]
+    AC_ON_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_10.AC_ON.idle");
+    NOTIFY_TRANSITION_TERMINATED("18");
+}
+
+IOxfReactive::TakeEventStatus Network::AC_ON_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            //## transition 16 
+            if(temp<25)
+                {
+                    NOTIFY_TRANSITION_STARTED("16");
+                    popNullTransition();
+                    switch (AC_ON_subState) {
+                        // State idle
+                        case AC_ON_idle:
+                        {
+                            cancel(AC_ON_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON.idle");
+                        }
+                        break;
+                        case AC_ON_accepttimeevent_17:
+                        {
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON.accepttimeevent_17");
+                        }
+                        break;
+                        default:
+                            break;
+                    }
+                    AC_ON_subState = OMNonState;
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON");
+                    AC_OFF_entDef();
+                    NOTIFY_TRANSITION_TERMINATED("16");
+                    res = eventConsumed;
+                }
+        }
+    else if(IS_EVENT_TYPE_OF(ev_AC_SwitchOff_ArchitecturalAnalysisPkg_id))
+        {
+            NOTIFY_TRANSITION_STARTED("1");
+            popNullTransition();
+            switch (AC_ON_subState) {
+                // State idle
+                case AC_ON_idle:
+                {
+                    cancel(AC_ON_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON.idle");
+                }
+                break;
+                case AC_ON_accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            AC_ON_subState = OMNonState;
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON");
+            AC_OFF_entDef();
+            NOTIFY_TRANSITION_TERMINATED("1");
+            res = eventConsumed;
+        }
+    
+    
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::AC_ON_idle_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+        {
+            if(getCurrentEvent() == AC_ON_timeout)
+                {
+                    NOTIFY_TRANSITION_STARTED("19");
+                    cancel(AC_ON_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON.idle");
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_10.AC_ON.accepttimeevent_17");
+                    pushNullTransition();
+                    AC_ON_subState = AC_ON_accepttimeevent_17;
+                    state_10_active = AC_ON_accepttimeevent_17;
+                    NOTIFY_TRANSITION_TERMINATED("19");
+                    res = eventConsumed;
+                }
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = AC_ON_handleEvent();
+        }
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::AC_ON_accepttimeevent_17_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            NOTIFY_TRANSITION_STARTED("20");
+            popNullTransition();
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_ON.accepttimeevent_17");
+            NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_10.AC_ON.idle");
+            AC_ON_subState = AC_ON_idle;
+            state_10_active = AC_ON_idle;
+            //#[ state HVAC_Enabled.state_10.AC_ON.idle.(Entry) 
+            temp=temp;
+            //#]
+            AC_ON_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_10.AC_ON.idle");
+            NOTIFY_TRANSITION_TERMINATED("20");
+            res = eventConsumed;
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = AC_ON_handleEvent();
+        }
+    return res;
+}
+
+void Network::AC_OFF_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_10.AC_OFF");
+    pushNullTransition();
+    state_10_subState = AC_OFF;
+    //#[ state HVAC_Enabled.state_10.AC_OFF.(Entry) 
+    OUT_PORT(pNetwork)->set_AC_state(false);
+    //#]
+    NOTIFY_TRANSITION_STARTED("17");
+    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_10.AC_OFF.idle");
+    AC_OFF_subState = idle;
+    state_10_active = idle;
+    //#[ state HVAC_Enabled.state_10.AC_OFF.idle.(Entry) 
+    temp=temp;
+    //#]
+    AC_OFF_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_10.AC_OFF.idle");
+    NOTIFY_TRANSITION_TERMINATED("17");
+}
+
+IOxfReactive::TakeEventStatus Network::AC_OFF_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            //## transition 15 
+            if(temp>30)
+                {
+                    NOTIFY_TRANSITION_STARTED("15");
+                    popNullTransition();
+                    switch (AC_OFF_subState) {
+                        // State idle
+                        case idle:
+                        {
+                            cancel(AC_OFF_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF.idle");
+                        }
+                        break;
+                        case accepttimeevent_17:
+                        {
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF.accepttimeevent_17");
+                        }
+                        break;
+                        default:
+                            break;
+                    }
+                    AC_OFF_subState = OMNonState;
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF");
+                    AC_ON_entDef();
+                    NOTIFY_TRANSITION_TERMINATED("15");
+                    res = eventConsumed;
+                }
+        }
+    else if(IS_EVENT_TYPE_OF(ev_AC_SwitchOn_ArchitecturalAnalysisPkg_id))
+        {
+            NOTIFY_TRANSITION_STARTED("0");
+            popNullTransition();
+            switch (AC_OFF_subState) {
+                // State idle
+                case idle:
+                {
+                    cancel(AC_OFF_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF.idle");
+                }
+                break;
+                case accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            AC_OFF_subState = OMNonState;
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF");
+            AC_ON_entDef();
+            NOTIFY_TRANSITION_TERMINATED("0");
+            res = eventConsumed;
+        }
+    
+    
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::idle_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
+        {
+            if(getCurrentEvent() == AC_OFF_timeout)
+                {
+                    NOTIFY_TRANSITION_STARTED("21");
+                    cancel(AC_OFF_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF.idle");
+                    NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_10.AC_OFF.accepttimeevent_17");
+                    pushNullTransition();
+                    AC_OFF_subState = accepttimeevent_17;
+                    state_10_active = accepttimeevent_17;
+                    NOTIFY_TRANSITION_TERMINATED("21");
+                    res = eventConsumed;
+                }
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = AC_OFF_handleEvent();
+        }
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::accepttimeevent_17_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(OMNullEventId))
+        {
+            NOTIFY_TRANSITION_STARTED("22");
+            popNullTransition();
+            NOTIFY_STATE_EXITED("ROOT.HVAC_Enabled.state_10.AC_OFF.accepttimeevent_17");
+            NOTIFY_STATE_ENTERED("ROOT.HVAC_Enabled.state_10.AC_OFF.idle");
+            AC_OFF_subState = idle;
+            state_10_active = idle;
+            //#[ state HVAC_Enabled.state_10.AC_OFF.idle.(Entry) 
+            temp=temp;
+            //#]
+            AC_OFF_timeout = scheduleTimeout(1000, "ROOT.HVAC_Enabled.state_10.AC_OFF.idle");
+            NOTIFY_TRANSITION_TERMINATED("22");
+            res = eventConsumed;
+        }
+    
+    if(res == eventNotConsumed)
+        {
+            res = AC_OFF_handleEvent();
+        }
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::HVAC_DisabledTakeev_HVAC_SwitchOn() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    NOTIFY_TRANSITION_STARTED("11");
+    NOTIFY_STATE_EXITED("ROOT.HVAC_Disabled");
+    HVAC_Enabled_entDef();
+    NOTIFY_TRANSITION_TERMINATED("11");
+    res = eventConsumed;
+    return res;
+}
+
+IOxfReactive::TakeEventStatus Network::HVAC_Disabled_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(ev_HVAC_SwitchOn_ArchitecturalAnalysisPkg_id))
+        {
+            res = HVAC_DisabledTakeev_HVAC_SwitchOn();
+        }
+    
     return res;
 }
 
@@ -1388,6 +1935,8 @@ void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) cons
     aomsAttributes->addAttribute("fireDetected", x2String(myReal->fireDetected));
     aomsAttributes->addAttribute("fireAlarm", x2String(myReal->fireAlarm));
     aomsAttributes->addAttribute("speakerVol", x2String(myReal->speakerVol));
+    aomsAttributes->addAttribute("CO2Alarm", x2String(myReal->CO2Alarm));
+    aomsAttributes->addAttribute("temp", x2String(myReal->temp));
 }
 
 void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
@@ -1425,57 +1974,45 @@ void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
 
 void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT");
-    if(myReal->rootState_subState == Network::CommunicationAudioSystemInOperation)
+    switch (myReal->rootState_subState) {
+        case Network::HVAC_Enabled:
         {
-            CommunicationAudioSystemInOperation_serializeStates(aomsState);
+            HVAC_Enabled_serializeStates(aomsState);
         }
+        break;
+        case Network::HVAC_Disabled:
+        {
+            HVAC_Disabled_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
 }
 
-void OMAnimatedNetwork::CommunicationAudioSystemInOperation_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation");
+void OMAnimatedNetwork::HVAC_Enabled_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled");
+    state_10_serializeStates(aomsState);
+    state_11_serializeStates(aomsState);
     state_12_serializeStates(aomsState);
-    state_13_serializeStates(aomsState);
-    state_14_serializeStates(aomsState);
-    state_15_serializeStates(aomsState);
 }
 
-void OMAnimatedNetwork::state_15_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_15");
-    switch (myReal->state_15_subState) {
-        case Network::webcamOn:
+void OMAnimatedNetwork::state_12_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_12");
+    switch (myReal->state_12_subState) {
+        case Network::Vent_OFF:
         {
-            webcamOn_serializeStates(aomsState);
+            Vent_OFF_serializeStates(aomsState);
         }
         break;
-        case Network::webcamOff:
+        case Network::Vent_On:
         {
-            webcamOff_serializeStates(aomsState);
+            Vent_On_serializeStates(aomsState);
         }
         break;
-        default:
-            break;
-    }
-}
-
-void OMAnimatedNetwork::webcamOn_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOn");
-}
-
-void OMAnimatedNetwork::webcamOff_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOff");
-}
-
-void OMAnimatedNetwork::state_14_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14");
-    switch (myReal->state_14_subState) {
-        case Network::speakersOff:
+        case Network::accepttimeevent_14:
         {
-            speakersOff_serializeStates(aomsState);
-        }
-        break;
-        case Network::speakersOn:
-        {
-            speakersOn_serializeStates(aomsState);
+            accepttimeevent_14_serializeStates(aomsState);
         }
         break;
         default:
@@ -1483,12 +2020,138 @@ void OMAnimatedNetwork::state_14_serializeStates(AOMSState* aomsState) const {
     }
 }
 
-void OMAnimatedNetwork::speakersOn_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
-    switch (myReal->speakersOn_subState) {
-        case Network::Idle:
+void OMAnimatedNetwork::Vent_On_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_12.Vent_On");
+}
+
+void OMAnimatedNetwork::Vent_OFF_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_12.Vent_OFF");
+}
+
+void OMAnimatedNetwork::accepttimeevent_14_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_12.accepttimeevent_14");
+}
+
+void OMAnimatedNetwork::state_11_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_11");
+    switch (myReal->state_11_subState) {
+        case Network::Heating_OFF:
         {
-            Idle_serializeStates(aomsState);
+            Heating_OFF_serializeStates(aomsState);
+        }
+        break;
+        case Network::Heating_On:
+        {
+            Heating_On_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::Heating_On_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_11.Heating_On");
+    switch (myReal->Heating_On_subState) {
+        case Network::Heating_On_idle:
+        {
+            Heating_On_idle_serializeStates(aomsState);
+        }
+        break;
+        case Network::Heating_On_accepttimeevent_17:
+        {
+            Heating_On_accepttimeevent_17_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::Heating_On_idle_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_11.Heating_On.idle");
+}
+
+void OMAnimatedNetwork::Heating_On_accepttimeevent_17_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_11.Heating_On.accepttimeevent_17");
+}
+
+void OMAnimatedNetwork::Heating_OFF_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_11.Heating_OFF");
+    switch (myReal->Heating_OFF_subState) {
+        case Network::Heating_OFF_idle:
+        {
+            Heating_OFF_idle_serializeStates(aomsState);
+        }
+        break;
+        case Network::Heating_OFF_accepttimeevent_17:
+        {
+            Heating_OFF_accepttimeevent_17_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::Heating_OFF_idle_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_11.Heating_OFF.idle");
+}
+
+void OMAnimatedNetwork::Heating_OFF_accepttimeevent_17_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_11.Heating_OFF.accepttimeevent_17");
+}
+
+void OMAnimatedNetwork::state_10_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_10");
+    switch (myReal->state_10_subState) {
+        case Network::AC_OFF:
+        {
+            AC_OFF_serializeStates(aomsState);
+        }
+        break;
+        case Network::AC_ON:
+        {
+            AC_ON_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::AC_ON_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_10.AC_ON");
+    switch (myReal->AC_ON_subState) {
+        case Network::AC_ON_idle:
+        {
+            AC_ON_idle_serializeStates(aomsState);
+        }
+        break;
+        case Network::AC_ON_accepttimeevent_17:
+        {
+            AC_ON_accepttimeevent_17_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::AC_ON_idle_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_10.AC_ON.idle");
+}
+
+void OMAnimatedNetwork::AC_ON_accepttimeevent_17_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_10.AC_ON.accepttimeevent_17");
+}
+
+void OMAnimatedNetwork::AC_OFF_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_10.AC_OFF");
+    switch (myReal->AC_OFF_subState) {
+        case Network::idle:
+        {
+            idle_serializeStates(aomsState);
         }
         break;
         case Network::accepttimeevent_17:
@@ -1501,72 +2164,24 @@ void OMAnimatedNetwork::speakersOn_serializeStates(AOMSState* aomsState) const {
     }
 }
 
-void OMAnimatedNetwork::Idle_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
+void OMAnimatedNetwork::idle_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Enabled.state_10.AC_OFF.idle");
 }
 
 void OMAnimatedNetwork::accepttimeevent_17_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
+    aomsState->addState("ROOT.HVAC_Enabled.state_10.AC_OFF.accepttimeevent_17");
 }
 
-void OMAnimatedNetwork::speakersOff_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
-}
-
-void OMAnimatedNetwork::state_13_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_13");
-    switch (myReal->state_13_subState) {
-        case Network::smartscreenOn:
-        {
-            smartscreenOn_serializeStates(aomsState);
-        }
-        break;
-        case Network::smartscreenOff:
-        {
-            smartscreenOff_serializeStates(aomsState);
-        }
-        break;
-        default:
-            break;
-    }
-}
-
-void OMAnimatedNetwork::smartscreenOn_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOn");
-}
-
-void OMAnimatedNetwork::smartscreenOff_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOff");
-}
-
-void OMAnimatedNetwork::state_12_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_12");
-    switch (myReal->state_12_subState) {
-        case Network::micOn:
-        {
-            micOn_serializeStates(aomsState);
-        }
-        break;
-        case Network::micOff:
-        {
-            micOff_serializeStates(aomsState);
-        }
-        break;
-        default:
-            break;
-    }
-}
-
-void OMAnimatedNetwork::micOn_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_12.micOn");
-}
-
-void OMAnimatedNetwork::micOff_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_12.micOff");
+void OMAnimatedNetwork::HVAC_Disabled_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.HVAC_Disabled");
 }
 //#]
 
 IMPLEMENT_REACTIVE_META_P(Network, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, false, OMAnimatedNetwork)
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setCO2Alarm_bool, "setCO2Alarm", FALSE, "setCO2Alarm(bool)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setCO2Alarm_bool, Network, setCO2Alarm(p_CO2Alarm), NO_OP())
 
 IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setFireDetected_bool, "setFireDetected", FALSE, "setFireDetected(bool)", 1)
 
@@ -1591,6 +2206,10 @@ IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setOccupied_bool, Network, se
 IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setSpeakerVol_int, "setSpeakerVol", FALSE, "setSpeakerVol(int)", 1)
 
 IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setSpeakerVol_int, Network, setSpeakerVol(p_speakerVol), NO_OP())
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setTemp_int, "setTemp", FALSE, "setTemp(int)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setTemp_int, Network, setTemp(p_temp), NO_OP())
 #endif // _OMINSTRUMENT
 
 /*********************************************************************

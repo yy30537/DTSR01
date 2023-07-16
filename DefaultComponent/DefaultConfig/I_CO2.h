@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_CO2
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_CO2.h
 *********************************************************************/
 
@@ -37,15 +37,9 @@ public :
     I_CO2();
     
     //## auto_generated
-    virtual ~I_CO2() = 0;
+    virtual ~I_CO2();
     
     ////    Operations    ////
-    
-    //## operation get_CO2_Alarm()
-    virtual bool get_CO2_Alarm() = 0;
-    
-    //## operation set_CO2_Alarm(bool)
-    virtual void set_CO2_Alarm(bool arg_CO2_Alarm_state) = 0;
 };
 
 #ifdef _OMINSTRUMENT

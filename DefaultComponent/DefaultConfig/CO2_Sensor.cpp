@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: CO2_Sensor
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\CO2_Sensor.cpp
 *********************************************************************/
 
@@ -18,10 +18,6 @@
 #include "Network.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_CO2_Sensor_CO2_Sensor_SERIALIZE OM_NO_OP
-
-#define ArchitecturalAnalysisPkg_CO2_Sensor_get_CO2_Alarm_SERIALIZE OM_NO_OP
-
-#define ArchitecturalAnalysisPkg_CO2_Sensor_set_CO2_Alarm_SERIALIZE aomsmethod->addAttribute("arg_CO2_Alarm_state", x2String(arg_CO2_Alarm_state));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -45,22 +41,6 @@ I_CO2* CO2_Sensor::pCO2_C::getItsI_CO2() {
     return this;
 }
 
-bool CO2_Sensor::pCO2_C::get_CO2_Alarm() {
-    bool res = false;
-    if (itsI_CO2 != NULL) {
-        res = itsI_CO2->get_CO2_Alarm();
-    }
-    return res;
-}
-
-void CO2_Sensor::pCO2_C::set_CO2_Alarm(bool arg_CO2_Alarm_state) {
-    
-    if (itsI_CO2 != NULL) {
-        itsI_CO2->set_CO2_Alarm(arg_CO2_Alarm_state);
-    }
-    
-}
-
 void CO2_Sensor::pCO2_C::setItsI_CO2(I_CO2* p_I_CO2) {
     itsI_CO2 = p_I_CO2;
 }
@@ -73,7 +53,7 @@ void CO2_Sensor::pCO2_C::cleanUpRelations() {
 }
 //#]
 
-CO2_Sensor::CO2_Sensor() {
+CO2_Sensor::CO2_Sensor() : CO2AlarmState(false) {
     NOTIFY_CONSTRUCTOR(CO2_Sensor, CO2_Sensor(), 0, ArchitecturalAnalysisPkg_CO2_Sensor_CO2_Sensor_SERIALIZE);
     itsNetwork = NULL;
     initRelations();
@@ -84,37 +64,12 @@ CO2_Sensor::~CO2_Sensor() {
     cleanUpRelations();
 }
 
-bool CO2_Sensor::get_CO2_Alarm() {
-    NOTIFY_OPERATION(get_CO2_Alarm, get_CO2_Alarm(), 0, ArchitecturalAnalysisPkg_CO2_Sensor_get_CO2_Alarm_SERIALIZE);
-    //#[ operation get_CO2_Alarm()
-    std::cout<<"get_CO2_Alarm\n";
-    return CO2_Alarm_state;
-    //#]
-}
-
-void CO2_Sensor::set_CO2_Alarm(bool arg_CO2_Alarm_state) {
-    NOTIFY_OPERATION(set_CO2_Alarm, set_CO2_Alarm(bool), 1, ArchitecturalAnalysisPkg_CO2_Sensor_set_CO2_Alarm_SERIALIZE);
-    //#[ operation set_CO2_Alarm(bool)
-    std::cout<<"set_CO2_Alarm_state()\n";
-    CO2_Alarm_state=arg_CO2_Alarm_state;
-    //#]
-}
-
 CO2_Sensor::pCO2_C* CO2_Sensor::getPCO2() const {
     return (CO2_Sensor::pCO2_C*) &pCO2;
 }
 
 CO2_Sensor::pCO2_C* CO2_Sensor::get_pCO2() const {
     return (CO2_Sensor::pCO2_C*) &pCO2;
-}
-
-bool CO2_Sensor::getCO2_Alarm_state() const {
-    return CO2_Alarm_state;
-}
-
-void CO2_Sensor::setCO2_Alarm_state(bool p_CO2_Alarm_state) {
-    CO2_Alarm_state = p_CO2_Alarm_state;
-    NOTIFY_SET_OPERATION;
 }
 
 Network* CO2_Sensor::getItsNetwork() const {
@@ -173,10 +128,18 @@ void CO2_Sensor::_clearItsNetwork() {
     itsNetwork = NULL;
 }
 
+bool CO2_Sensor::getCO2AlarmState() const {
+    return CO2AlarmState;
+}
+
+void CO2_Sensor::setCO2AlarmState(bool p_CO2AlarmState) {
+    CO2AlarmState = p_CO2AlarmState;
+}
+
 #ifdef _OMINSTRUMENT
 //#[ ignore
 void OMAnimatedCO2_Sensor::serializeAttributes(AOMSAttributes* aomsAttributes) const {
-    aomsAttributes->addAttribute("CO2_Alarm_state", x2String(myReal->CO2_Alarm_state));
+    aomsAttributes->addAttribute("CO2AlarmState", x2String(myReal->CO2AlarmState));
     OMAnimatedI_CO2::serializeAttributes(aomsAttributes);
 }
 
