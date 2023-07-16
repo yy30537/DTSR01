@@ -132,6 +132,8 @@ class Webcam;
 #define ev_TurnOff_Light_ArchitecturalAnalysisPkg_id 18212
 
 #define ev_turnOnLight_ArchitecturalAnalysisPkg_id 18213
+
+#define ev_DisableFireAlarm_ArchitecturalAnalysisPkg_id 18214
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -569,6 +571,35 @@ public :
 //#[ ignore
 class OMAnimatedev_turnOnLight : virtual public AOMEvent {
     DECLARE_META_EVENT(ev_turnOnLight)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_DisableFireAlarm()
+class ev_DisableFireAlarm : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_DisableFireAlarm;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_DisableFireAlarm();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_DisableFireAlarm : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_DisableFireAlarm)
 };
 //#]
 #endif // _OMINSTRUMENT

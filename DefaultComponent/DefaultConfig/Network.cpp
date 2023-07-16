@@ -31,6 +31,10 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Network_Network_SERIALIZE OM_NO_OP
 
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setFireDetected_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_fireDetected)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setFireDetected_bool_SERIALIZE_RET_VAL
+
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_intensity)
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_SERIALIZE_RET_VAL
@@ -391,7 +395,7 @@ void Network::pNetwork_C::cleanUpRelations() {
 }
 //#]
 
-Network::Network(IOxfActive* theActiveContext) : intensity(0), is_Movement(false), lightState(false), occupied(false) {
+Network::Network(IOxfActive* theActiveContext) : intensity(0), fireAlarm(false), fireDetected(false), is_Movement(false), lightState(false), occupied(false) {
     NOTIFY_REACTIVE_CONSTRUCTOR(Network, Network(), 0, ArchitecturalAnalysisPkg_Network_Network_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsCO2_Sensor = NULL;
@@ -737,6 +741,24 @@ void Network::setIntensity(int p_intensity) {
     NOTIFY_SET_OPERATION;
 }
 
+bool Network::getFireAlarm() const {
+    return fireAlarm;
+}
+
+void Network::setFireAlarm(bool p_fireAlarm) {
+    fireAlarm = p_fireAlarm;
+    NOTIFY_SET_OPERATION;
+}
+
+bool Network::getFireDetected() const {
+    return fireDetected;
+}
+
+void Network::setFireDetected(bool p_fireDetected) {
+    fireDetected = p_fireDetected;
+    NOTIFY_SET_OPERATION;
+}
+
 bool Network::getIs_Movement() const {
     return is_Movement;
 }
@@ -768,21 +790,10 @@ void Network::rootState_entDef() {
     {
         NOTIFY_STATE_ENTERED("ROOT");
         NOTIFY_TRANSITION_STARTED("0");
-        NOTIFY_STATE_ENTERED("ROOT.Off");
-        pushNullTransition();
-        rootState_subState = Off;
-        rootState_active = Off;
-        //#[ state Off.(Entry) 
-        intensity=intensity;
-        lightState=lightState;
-        occupied=occupied;
-        is_Movement=is_Movement;
-        OUT_PORT(pNetwork)->setIntensity(intensity);
-        OUT_PORT(pNetwork)->setState(lightState);
-        OUT_PORT(pNetwork)->setOccupied(occupied);
-        OUT_PORT(pNetwork)->setMM(is_Movement);
-        //#]
-        rootState_timeout = scheduleTimeout(200, "ROOT.Off");
+        NOTIFY_STATE_ENTERED("ROOT.SystemInOperation");
+        rootState_subState = SystemInOperation;
+        rootState_active = SystemInOperation;
+        rootState_timeout = scheduleTimeout(500, "ROOT.SystemInOperation");
         NOTIFY_TRANSITION_TERMINATED("0");
     }
 }
@@ -790,116 +801,20 @@ void Network::rootState_entDef() {
 IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
     switch (rootState_active) {
-        // State Off
-        case Off:
+        // State SystemInOperation
+        case SystemInOperation:
         {
             if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
                 {
                     if(getCurrentEvent() == rootState_timeout)
-                        {
-                            NOTIFY_TRANSITION_STARTED("3");
-                            popNullTransition();
-                            cancel(rootState_timeout);
-                            NOTIFY_STATE_EXITED("ROOT.Off");
-                            NOTIFY_STATE_ENTERED("ROOT.accepttimeevent_9");
-                            pushNullTransition();
-                            rootState_subState = accepttimeevent_9;
-                            rootState_active = accepttimeevent_9;
-                            NOTIFY_TRANSITION_TERMINATED("3");
-                            res = eventConsumed;
-                        }
-                }
-            else if(IS_EVENT_TYPE_OF(OMNullEventId))
-                {
-                    //## transition 2 
-                    if(lightState==true||intensity!=0||occupied==true||is_Movement==true)
-                        {
-                            NOTIFY_TRANSITION_STARTED("2");
-                            popNullTransition();
-                            cancel(rootState_timeout);
-                            NOTIFY_STATE_EXITED("ROOT.Off");
-                            //#[ transition 2 
-                            lightState=true;
-                            occupied=true;
-                            is_Movement=true;
-                            
-                            if(intensity==0) {
-                            intensity=5;
-                            }
-                            
-                            intensity=intensity;
-                            //#]
-                            NOTIFY_STATE_ENTERED("ROOT.On");
-                            pushNullTransition();
-                            rootState_subState = On;
-                            rootState_active = On;
-                            //#[ state On.(Entry) 
-                            intensity=intensity;
-                            lightState=lightState;
-                            occupied=occupied;
-                            is_Movement=is_Movement;
-                            OUT_PORT(pNetwork)->setIntensity(intensity);
-                            OUT_PORT(pNetwork)->setState(lightState);
-                            OUT_PORT(pNetwork)->setOccupied(occupied);
-                            OUT_PORT(pNetwork)->setMM(is_Movement);
-                            //#]
-                            rootState_timeout = scheduleTimeout(200, "ROOT.On");
-                            NOTIFY_TRANSITION_TERMINATED("2");
-                            res = eventConsumed;
-                        }
-                }
-            
-        }
-        break;
-        // State On
-        case On:
-        {
-            if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
-                {
-                    if(getCurrentEvent() == rootState_timeout)
-                        {
-                            NOTIFY_TRANSITION_STARTED("5");
-                            popNullTransition();
-                            cancel(rootState_timeout);
-                            NOTIFY_STATE_EXITED("ROOT.On");
-                            NOTIFY_STATE_ENTERED("ROOT.accepttimeevent_7");
-                            pushNullTransition();
-                            rootState_subState = accepttimeevent_7;
-                            rootState_active = accepttimeevent_7;
-                            NOTIFY_TRANSITION_TERMINATED("5");
-                            res = eventConsumed;
-                        }
-                }
-            else if(IS_EVENT_TYPE_OF(OMNullEventId))
-                {
-                    //## transition 1 
-                    if(intensity==0||lightState==false||occupied==false||is_Movement==false)
                         {
                             NOTIFY_TRANSITION_STARTED("1");
-                            popNullTransition();
                             cancel(rootState_timeout);
-                            NOTIFY_STATE_EXITED("ROOT.On");
-                            //#[ transition 1 
-                            lightState=false;
-                            occupied=false;
-                            is_Movement=false;
-                            intensity=0;
-                            //#]
-                            NOTIFY_STATE_ENTERED("ROOT.Off");
+                            NOTIFY_STATE_EXITED("ROOT.SystemInOperation");
+                            NOTIFY_STATE_ENTERED("ROOT.accepttimeevent_2");
                             pushNullTransition();
-                            rootState_subState = Off;
-                            rootState_active = Off;
-                            //#[ state Off.(Entry) 
-                            intensity=intensity;
-                            lightState=lightState;
-                            occupied=occupied;
-                            is_Movement=is_Movement;
-                            OUT_PORT(pNetwork)->setIntensity(intensity);
-                            OUT_PORT(pNetwork)->setState(lightState);
-                            OUT_PORT(pNetwork)->setOccupied(occupied);
-                            OUT_PORT(pNetwork)->setMM(is_Movement);
-                            //#]
-                            rootState_timeout = scheduleTimeout(200, "ROOT.Off");
+                            rootState_subState = accepttimeevent_2;
+                            rootState_active = accepttimeevent_2;
                             NOTIFY_TRANSITION_TERMINATED("1");
                             res = eventConsumed;
                         }
@@ -907,57 +822,62 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
             
         }
         break;
-        case accepttimeevent_7:
+        case accepttimeevent_2:
         {
             if(IS_EVENT_TYPE_OF(OMNullEventId))
                 {
-                    NOTIFY_TRANSITION_STARTED("6");
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.accepttimeevent_7");
-                    NOTIFY_STATE_ENTERED("ROOT.On");
-                    pushNullTransition();
-                    rootState_subState = On;
-                    rootState_active = On;
-                    //#[ state On.(Entry) 
-                    intensity=intensity;
-                    lightState=lightState;
-                    occupied=occupied;
-                    is_Movement=is_Movement;
-                    OUT_PORT(pNetwork)->setIntensity(intensity);
-                    OUT_PORT(pNetwork)->setState(lightState);
-                    OUT_PORT(pNetwork)->setOccupied(occupied);
-                    OUT_PORT(pNetwork)->setMM(is_Movement);
-                    //#]
-                    rootState_timeout = scheduleTimeout(200, "ROOT.On");
-                    NOTIFY_TRANSITION_TERMINATED("6");
-                    res = eventConsumed;
+                    //## transition 3 
+                    if(fireDetected==true)
+                        {
+                            NOTIFY_TRANSITION_STARTED("2");
+                            NOTIFY_TRANSITION_STARTED("3");
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.accepttimeevent_2");
+                            NOTIFY_STATE_ENTERED("ROOT.FireAlarmOn");
+                            rootState_subState = FireAlarmOn;
+                            rootState_active = FireAlarmOn;
+                            //#[ state FireAlarmOn.(Entry) 
+                            fireAlarm=true;
+                            //Alert fire department
+                            //#]
+                            NOTIFY_TRANSITION_TERMINATED("3");
+                            NOTIFY_TRANSITION_TERMINATED("2");
+                            res = eventConsumed;
+                        }
+                    else
+                        {
+                            NOTIFY_TRANSITION_STARTED("2");
+                            NOTIFY_TRANSITION_STARTED("4");
+                            popNullTransition();
+                            NOTIFY_STATE_EXITED("ROOT.accepttimeevent_2");
+                            NOTIFY_STATE_ENTERED("ROOT.SystemInOperation");
+                            rootState_subState = SystemInOperation;
+                            rootState_active = SystemInOperation;
+                            rootState_timeout = scheduleTimeout(500, "ROOT.SystemInOperation");
+                            NOTIFY_TRANSITION_TERMINATED("4");
+                            NOTIFY_TRANSITION_TERMINATED("2");
+                            res = eventConsumed;
+                        }
                 }
             
         }
         break;
-        case accepttimeevent_9:
+        // State FireAlarmOn
+        case FireAlarmOn:
         {
-            if(IS_EVENT_TYPE_OF(OMNullEventId))
+            if(IS_EVENT_TYPE_OF(ev_DisableFireAlarm_ArchitecturalAnalysisPkg_id))
                 {
-                    NOTIFY_TRANSITION_STARTED("4");
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.accepttimeevent_9");
-                    NOTIFY_STATE_ENTERED("ROOT.Off");
-                    pushNullTransition();
-                    rootState_subState = Off;
-                    rootState_active = Off;
-                    //#[ state Off.(Entry) 
-                    intensity=intensity;
-                    lightState=lightState;
-                    occupied=occupied;
-                    is_Movement=is_Movement;
-                    OUT_PORT(pNetwork)->setIntensity(intensity);
-                    OUT_PORT(pNetwork)->setState(lightState);
-                    OUT_PORT(pNetwork)->setOccupied(occupied);
-                    OUT_PORT(pNetwork)->setMM(is_Movement);
+                    NOTIFY_TRANSITION_STARTED("5");
+                    NOTIFY_STATE_EXITED("ROOT.FireAlarmOn");
+                    //#[ transition 5 
+                    fireDetected=false;
+                    fireAlarm=false;
                     //#]
-                    rootState_timeout = scheduleTimeout(200, "ROOT.Off");
-                    NOTIFY_TRANSITION_TERMINATED("4");
+                    NOTIFY_STATE_ENTERED("ROOT.SystemInOperation");
+                    rootState_subState = SystemInOperation;
+                    rootState_active = SystemInOperation;
+                    rootState_timeout = scheduleTimeout(500, "ROOT.SystemInOperation");
+                    NOTIFY_TRANSITION_TERMINATED("5");
                     res = eventConsumed;
                 }
             
@@ -976,6 +896,8 @@ void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) cons
     aomsAttributes->addAttribute("lightState", x2String(myReal->lightState));
     aomsAttributes->addAttribute("occupied", x2String(myReal->occupied));
     aomsAttributes->addAttribute("is_Movement", x2String(myReal->is_Movement));
+    aomsAttributes->addAttribute("fireDetected", x2String(myReal->fireDetected));
+    aomsAttributes->addAttribute("fireAlarm", x2String(myReal->fireAlarm));
 }
 
 void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
@@ -1014,24 +936,19 @@ void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
 void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT");
     switch (myReal->rootState_subState) {
-        case Network::Off:
+        case Network::SystemInOperation:
         {
-            Off_serializeStates(aomsState);
+            SystemInOperation_serializeStates(aomsState);
         }
         break;
-        case Network::On:
+        case Network::accepttimeevent_2:
         {
-            On_serializeStates(aomsState);
+            accepttimeevent_2_serializeStates(aomsState);
         }
         break;
-        case Network::accepttimeevent_7:
+        case Network::FireAlarmOn:
         {
-            accepttimeevent_7_serializeStates(aomsState);
-        }
-        break;
-        case Network::accepttimeevent_9:
-        {
-            accepttimeevent_9_serializeStates(aomsState);
+            FireAlarmOn_serializeStates(aomsState);
         }
         break;
         default:
@@ -1039,24 +956,24 @@ void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {
     }
 }
 
-void OMAnimatedNetwork::On_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.On");
+void OMAnimatedNetwork::SystemInOperation_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.SystemInOperation");
 }
 
-void OMAnimatedNetwork::Off_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.Off");
+void OMAnimatedNetwork::FireAlarmOn_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.FireAlarmOn");
 }
 
-void OMAnimatedNetwork::accepttimeevent_9_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.accepttimeevent_9");
-}
-
-void OMAnimatedNetwork::accepttimeevent_7_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.accepttimeevent_7");
+void OMAnimatedNetwork::accepttimeevent_2_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.accepttimeevent_2");
 }
 //#]
 
 IMPLEMENT_REACTIVE_META_P(Network, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, false, OMAnimatedNetwork)
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setFireDetected_bool, "setFireDetected", FALSE, "setFireDetected(bool)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setFireDetected_bool, Network, setFireDetected(p_fireDetected), NO_OP())
 
 IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setIntensity_int, "setIntensity", FALSE, "setIntensity(int)", 1)
 

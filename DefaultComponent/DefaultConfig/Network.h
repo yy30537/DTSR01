@@ -70,6 +70,8 @@ class Occupancy_Sensor;
 class Weather_Forecast;
 
 //#[ ignore
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setFireDetected_bool_ARGS_DECLARATION bool p_fireDetected;
+
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_ARGS_DECLARATION int p_intensity;
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setIs_Movement_bool_ARGS_DECLARATION bool p_is_Movement;
@@ -453,6 +455,18 @@ protected :
 public :
 
     //## auto_generated
+    bool getFireAlarm() const;
+    
+    //## auto_generated
+    void setFireAlarm(bool p_fireAlarm);
+    
+    //## auto_generated
+    bool getFireDetected() const;
+    
+    //## auto_generated
+    void setFireDetected(bool p_fireDetected);
+    
+    //## auto_generated
     bool getIs_Movement() const;
     
     //## auto_generated
@@ -472,6 +486,10 @@ public :
 
 protected :
 
+    bool fireAlarm;		//## attribute fireAlarm
+    
+    bool fireDetected;		//## attribute fireDetected
+    
     bool is_Movement;		//## attribute is_Movement
     
     bool lightState;		//## attribute lightState
@@ -494,31 +512,26 @@ public :
     //## statechart_method
     virtual IOxfReactive::TakeEventStatus rootState_processEvent();
     
-    // On:
+    // SystemInOperation:
     //## statechart_method
-    inline bool On_IN() const;
+    inline bool SystemInOperation_IN() const;
     
-    // Off:
+    // FireAlarmOn:
     //## statechart_method
-    inline bool Off_IN() const;
+    inline bool FireAlarmOn_IN() const;
     
-    // accepttimeevent_9:
+    // accepttimeevent_2:
     //## statechart_method
-    inline bool accepttimeevent_9_IN() const;
-    
-    // accepttimeevent_7:
-    //## statechart_method
-    inline bool accepttimeevent_7_IN() const;
+    inline bool accepttimeevent_2_IN() const;
 
 protected :
 
 //#[ ignore
     enum Network_Enum {
         OMNonState = 0,
-        On = 1,
-        Off = 2,
-        accepttimeevent_9 = 3,
-        accepttimeevent_7 = 4
+        SystemInOperation = 1,
+        FireAlarmOn = 2,
+        accepttimeevent_2 = 3
     };
     
     int rootState_subState;
@@ -530,6 +543,8 @@ protected :
 };
 
 #ifdef _OMINSTRUMENT
+DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setFireDetected_bool)
+
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setIntensity_int)
 
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setIs_Movement_bool)
@@ -541,6 +556,8 @@ DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setOccupied_bool)
 //#[ ignore
 class OMAnimatedNetwork : virtual public AOMInstance {
     DECLARE_REACTIVE_META(Network, OMAnimatedNetwork)
+    
+    DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setFireDetected_bool)
     
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setIntensity_int)
     
@@ -562,16 +579,13 @@ public :
     void rootState_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void On_serializeStates(AOMSState* aomsState) const;
+    void SystemInOperation_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void Off_serializeStates(AOMSState* aomsState) const;
+    void FireAlarmOn_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void accepttimeevent_9_serializeStates(AOMSState* aomsState) const;
-    
-    //## statechart_method
-    void accepttimeevent_7_serializeStates(AOMSState* aomsState) const;
+    void accepttimeevent_2_serializeStates(AOMSState* aomsState) const;
 };
 //#]
 #endif // _OMINSTRUMENT
@@ -580,20 +594,16 @@ inline bool Network::rootState_IN() const {
     return true;
 }
 
-inline bool Network::On_IN() const {
-    return rootState_subState == On;
+inline bool Network::SystemInOperation_IN() const {
+    return rootState_subState == SystemInOperation;
 }
 
-inline bool Network::Off_IN() const {
-    return rootState_subState == Off;
+inline bool Network::FireAlarmOn_IN() const {
+    return rootState_subState == FireAlarmOn;
 }
 
-inline bool Network::accepttimeevent_9_IN() const {
-    return rootState_subState == accepttimeevent_9;
-}
-
-inline bool Network::accepttimeevent_7_IN() const {
-    return rootState_subState == accepttimeevent_7;
+inline bool Network::accepttimeevent_2_IN() const {
+    return rootState_subState == accepttimeevent_2;
 }
 
 #endif

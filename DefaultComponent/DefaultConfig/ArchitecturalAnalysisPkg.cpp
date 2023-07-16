@@ -150,6 +150,12 @@
 #define ev_turnOnLight_UNSERIALIZE OM_NO_OP
 
 #define ev_turnOnLight_CONSTRUCTOR ev_turnOnLight()
+
+#define ev_DisableFireAlarm_SERIALIZE OM_NO_OP
+
+#define ev_DisableFireAlarm_UNSERIALIZE OM_NO_OP
+
+#define ev_DisableFireAlarm_CONSTRUCTOR ev_DisableFireAlarm()
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -464,6 +470,18 @@ bool ev_turnOnLight::isTypeOf(const short id) const {
 }
 
 IMPLEMENT_META_EVENT_P(ev_turnOnLight, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnOnLight())
+
+//## event ev_DisableFireAlarm()
+ev_DisableFireAlarm::ev_DisableFireAlarm() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_DisableFireAlarm)
+    setId(ev_DisableFireAlarm_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_DisableFireAlarm::isTypeOf(const short id) const {
+    return (ev_DisableFireAlarm_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_DisableFireAlarm, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_DisableFireAlarm())
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp
