@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Speakers
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Speakers.h
 *********************************************************************/
 
@@ -49,10 +49,10 @@ public :
         I_Spkr* getItsI_Spkr();
         
         //## auto_generated
-        virtual bool getState();
+        virtual bool getStateSpkr();
         
         //## auto_generated
-        virtual void setState(bool argState);
+        virtual void setStateSpkr(bool argState);
         
         ////    Additional operations    ////
         
@@ -88,11 +88,11 @@ public :
     //## auto_generated
     virtual ~Speakers();
     
-    //## operation getState()
-    virtual bool getState();
+    //## operation getStateSpkr()
+    virtual bool getStateSpkr();
     
-    //## operation setState(bool)
-    virtual void setState(bool argState);
+    //## operation setStateSpkr(bool)
+    virtual void setStateSpkr(bool argState);
     
     //## auto_generated
     pSpeakers_C* getPSpeakers() const;
@@ -106,7 +106,17 @@ protected :
     void initRelations();
     
     bool state;		//## attribute state
+
+public :
+
+    //## auto_generated
+    bool getState() const;
     
+    //## auto_generated
+    void setState(bool p_state);
+
+protected :
+
 //#[ ignore
     pSpeakers_C pSpeakers;
 //#]

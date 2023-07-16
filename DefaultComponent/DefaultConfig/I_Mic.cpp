@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_Mic
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_Mic.cpp
 *********************************************************************/
 
@@ -17,9 +17,9 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_Mic_I_Mic_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_I_Mic_getState_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_I_Mic_getStateMic_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_I_Mic_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
+#define ArchitecturalAnalysisPkg_I_Mic_setStateMic_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg

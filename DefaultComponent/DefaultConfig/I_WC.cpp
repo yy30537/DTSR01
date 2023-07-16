@@ -17,9 +17,9 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_WC_I_WC_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_I_WC_get_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_I_WC_getWC_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_I_WC_set_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
+#define ArchitecturalAnalysisPkg_I_WC_setWC_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
 //#]
 
 //## package ArchitecturalAnalysisPkg

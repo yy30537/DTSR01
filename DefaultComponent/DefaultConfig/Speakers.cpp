@@ -17,9 +17,9 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Speakers_Speakers_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_Speakers_getState_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_Speakers_getStateSpkr_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_Speakers_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
+#define ArchitecturalAnalysisPkg_Speakers_setStateSpkr_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -43,18 +43,18 @@ I_Spkr* Speakers::pSpeakers_C::getItsI_Spkr() {
     return this;
 }
 
-bool Speakers::pSpeakers_C::getState() {
+bool Speakers::pSpeakers_C::getStateSpkr() {
     bool res = false;
     if (itsI_Spkr != NULL) {
-        res = itsI_Spkr->getState();
+        res = itsI_Spkr->getStateSpkr();
     }
     return res;
 }
 
-void Speakers::pSpeakers_C::setState(bool argState) {
+void Speakers::pSpeakers_C::setStateSpkr(bool argState) {
     
     if (itsI_Spkr != NULL) {
-        itsI_Spkr->setState(argState);
+        itsI_Spkr->setStateSpkr(argState);
     }
     
 }
@@ -80,19 +80,18 @@ Speakers::~Speakers() {
     NOTIFY_DESTRUCTOR(~Speakers, false);
 }
 
-bool Speakers::getState() {
-    NOTIFY_OPERATION(getState, getState(), 0, ArchitecturalAnalysisPkg_Speakers_getState_SERIALIZE);
-    //#[ operation getState()
+bool Speakers::getStateSpkr() {
+    NOTIFY_OPERATION(getStateSpkr, getStateSpkr(), 0, ArchitecturalAnalysisPkg_Speakers_getStateSpkr_SERIALIZE);
+    //#[ operation getStateSpkr()
     return state;
     //#]
 }
 
-void Speakers::setState(bool argState) {
-    NOTIFY_OPERATION(setState, setState(bool), 1, ArchitecturalAnalysisPkg_Speakers_setState_SERIALIZE);
-    //#[ operation setState(bool)
+void Speakers::setStateSpkr(bool argState) {
+    NOTIFY_OPERATION(setStateSpkr, setStateSpkr(bool), 1, ArchitecturalAnalysisPkg_Speakers_setStateSpkr_SERIALIZE);
+    //#[ operation setStateSpkr(bool)
     state=argState;
     //#]
-    NOTIFY_SET_OPERATION;
 }
 
 Speakers::pSpeakers_C* Speakers::getPSpeakers() const {
@@ -107,6 +106,15 @@ void Speakers::initRelations() {
     if (get_pSpeakers() != NULL) {
         get_pSpeakers()->connectSpeakers(this);
     }
+}
+
+bool Speakers::getState() const {
+    return state;
+}
+
+void Speakers::setState(bool p_state) {
+    state = p_state;
+    NOTIFY_SET_OPERATION;
 }
 
 #ifdef _OMINSTRUMENT

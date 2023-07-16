@@ -109,9 +109,6 @@ public :
         virtual void SS_setState(bool argState);
         
         //## auto_generated
-        virtual bool get();
-        
-        //## auto_generated
         virtual int getItensity();
         
         //## auto_generated
@@ -163,7 +160,16 @@ public :
         virtual bool getState();
         
         //## auto_generated
+        virtual bool getStateMic();
+        
+        //## auto_generated
+        virtual bool getStateSpkr();
+        
+        //## auto_generated
         virtual int getTemp();
+        
+        //## auto_generated
+        virtual bool getWC();
         
         //## auto_generated
         virtual bool get_AC_state();
@@ -184,9 +190,6 @@ public :
         virtual void login();
         
         //## auto_generated
-        virtual void set(bool arg);
-        
-        //## auto_generated
         virtual void setIntensity(int arg_intensity);
         
         //## auto_generated
@@ -199,7 +202,16 @@ public :
         virtual void setState(bool arg);
         
         //## auto_generated
+        virtual void setStateMic(bool argState);
+        
+        //## auto_generated
+        virtual void setStateSpkr(bool argState);
+        
+        //## auto_generated
         virtual void setTemp(int arg_temp);
+        
+        //## auto_generated
+        virtual void setWC(bool arg);
         
         //## auto_generated
         virtual void set_AC_state(bool arg_AC_state);

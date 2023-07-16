@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Microphones
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Microphones.h
 *********************************************************************/
 
@@ -49,10 +49,10 @@ public :
         I_Mic* getItsI_Mic();
         
         //## auto_generated
-        virtual bool getState();
+        virtual bool getStateMic();
         
         //## auto_generated
-        virtual void setState(bool argState);
+        virtual void setStateMic(bool argState);
         
         ////    Additional operations    ////
         
@@ -88,11 +88,11 @@ public :
     //## auto_generated
     virtual ~Microphones();
     
-    //## operation getState()
-    virtual bool getState();
+    //## operation getStateMic()
+    virtual bool getStateMic();
     
-    //## operation setState(bool)
-    virtual void setState(bool argState);
+    //## operation setStateMic(bool)
+    virtual void setStateMic(bool argState);
     
     //## auto_generated
     pMic_C* getPMic() const;
@@ -106,7 +106,17 @@ protected :
     void initRelations();
     
     bool state;		//## attribute state
+
+public :
+
+    //## auto_generated
+    bool getState() const;
     
+    //## auto_generated
+    void setState(bool p_state);
+
+protected :
+
 //#[ ignore
     pMic_C pMic;
 //#]

@@ -138,6 +138,18 @@ class Webcam;
 #define ev_turnon_SS_ArchitecturalAnalysisPkg_id 18215
 
 #define ev_turnoff_SS_ArchitecturalAnalysisPkg_id 18216
+
+#define ev_turnon_WC_ArchitecturalAnalysisPkg_id 18217
+
+#define ev_turnoff_WC_ArchitecturalAnalysisPkg_id 18218
+
+#define ev_turnon_mic_ArchitecturalAnalysisPkg_id 18219
+
+#define ev_turnoff_mic_ArchitecturalAnalysisPkg_id 18220
+
+#define ev_turnon_spkr_ArchitecturalAnalysisPkg_id 18221
+
+#define ev_turnoff_spkr_ArchitecturalAnalysisPkg_id 18222
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -662,6 +674,180 @@ public :
 //#[ ignore
 class OMAnimatedev_turnoff_SS : virtual public AOMEvent {
     DECLARE_META_EVENT(ev_turnoff_SS)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_turnon_WC()
+class ev_turnon_WC : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_turnon_WC;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_turnon_WC();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_turnon_WC : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_turnon_WC)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_turnoff_WC()
+class ev_turnoff_WC : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_turnoff_WC;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_turnoff_WC();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_turnoff_WC : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_turnoff_WC)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_turnon_mic()
+class ev_turnon_mic : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_turnon_mic;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_turnon_mic();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_turnon_mic : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_turnon_mic)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_turnoff_mic()
+class ev_turnoff_mic : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_turnoff_mic;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_turnoff_mic();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_turnoff_mic : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_turnoff_mic)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_turnon_spkr()
+class ev_turnon_spkr : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_turnon_spkr;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_turnon_spkr();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_turnon_spkr : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_turnon_spkr)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_turnoff_spkr()
+class ev_turnoff_spkr : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_turnoff_spkr;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_turnoff_spkr();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_turnoff_spkr : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_turnoff_spkr)
 };
 //#]
 #endif // _OMINSTRUMENT

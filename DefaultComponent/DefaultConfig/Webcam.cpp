@@ -17,9 +17,9 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Webcam_Webcam_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_Webcam_get_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_Webcam_getWC_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_Webcam_set_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
+#define ArchitecturalAnalysisPkg_Webcam_setWC_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -39,22 +39,22 @@ void Webcam::pWebcam_C::connectWebcam(Webcam* part) {
     
 }
 
-bool Webcam::pWebcam_C::get() {
-    bool res = false;
-    if (itsI_WC != NULL) {
-        res = itsI_WC->get();
-    }
-    return res;
-}
-
 I_WC* Webcam::pWebcam_C::getItsI_WC() {
     return this;
 }
 
-void Webcam::pWebcam_C::set(bool arg) {
+bool Webcam::pWebcam_C::getWC() {
+    bool res = false;
+    if (itsI_WC != NULL) {
+        res = itsI_WC->getWC();
+    }
+    return res;
+}
+
+void Webcam::pWebcam_C::setWC(bool arg) {
     
     if (itsI_WC != NULL) {
-        itsI_WC->set(arg);
+        itsI_WC->setWC(arg);
     }
     
 }
@@ -94,16 +94,16 @@ void Webcam::initRelations() {
     }
 }
 
-bool Webcam::get() {
-    NOTIFY_OPERATION(get, get(), 0, ArchitecturalAnalysisPkg_Webcam_get_SERIALIZE);
-    //#[ operation get()
+bool Webcam::getWC() {
+    NOTIFY_OPERATION(getWC, getWC(), 0, ArchitecturalAnalysisPkg_Webcam_getWC_SERIALIZE);
+    //#[ operation getWC()
     return state;
     //#]
 }
 
-void Webcam::set(bool arg) {
-    NOTIFY_OPERATION(set, set(bool), 1, ArchitecturalAnalysisPkg_Webcam_set_SERIALIZE);
-    //#[ operation set(bool)
+void Webcam::setWC(bool arg) {
+    NOTIFY_OPERATION(setWC, setWC(bool), 1, ArchitecturalAnalysisPkg_Webcam_setWC_SERIALIZE);
+    //#[ operation setWC(bool)
     state=arg;
     //#]
 }

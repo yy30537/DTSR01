@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_Spkr
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_Spkr.cpp
 *********************************************************************/
 
@@ -17,9 +17,9 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_Spkr_I_Spkr_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_I_Spkr_getState_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_I_Spkr_getStateSpkr_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_I_Spkr_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
+#define ArchitecturalAnalysisPkg_I_Spkr_setStateSpkr_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg

@@ -46,13 +46,13 @@ public :
         void connectWebcam(Webcam* part);
         
         //## auto_generated
-        virtual bool get();
-        
-        //## auto_generated
         I_WC* getItsI_WC();
         
         //## auto_generated
-        virtual void set(bool arg);
+        virtual bool getWC();
+        
+        //## auto_generated
+        virtual void setWC(bool arg);
         
         ////    Additional operations    ////
         
@@ -103,11 +103,11 @@ protected :
 
 public :
 
-    //## operation get()
-    virtual bool get();
+    //## operation getWC()
+    virtual bool getWC();
     
-    //## operation set(bool)
-    virtual void set(bool arg);
+    //## operation setWC(bool)
+    virtual void setWC(bool arg);
     
     //## auto_generated
     bool getState() const;

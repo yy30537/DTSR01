@@ -168,6 +168,42 @@
 #define ev_turnoff_SS_UNSERIALIZE OM_NO_OP
 
 #define ev_turnoff_SS_CONSTRUCTOR ev_turnoff_SS()
+
+#define ev_turnon_WC_SERIALIZE OM_NO_OP
+
+#define ev_turnon_WC_UNSERIALIZE OM_NO_OP
+
+#define ev_turnon_WC_CONSTRUCTOR ev_turnon_WC()
+
+#define ev_turnoff_WC_SERIALIZE OM_NO_OP
+
+#define ev_turnoff_WC_UNSERIALIZE OM_NO_OP
+
+#define ev_turnoff_WC_CONSTRUCTOR ev_turnoff_WC()
+
+#define ev_turnon_mic_SERIALIZE OM_NO_OP
+
+#define ev_turnon_mic_UNSERIALIZE OM_NO_OP
+
+#define ev_turnon_mic_CONSTRUCTOR ev_turnon_mic()
+
+#define ev_turnoff_mic_SERIALIZE OM_NO_OP
+
+#define ev_turnoff_mic_UNSERIALIZE OM_NO_OP
+
+#define ev_turnoff_mic_CONSTRUCTOR ev_turnoff_mic()
+
+#define ev_turnon_spkr_SERIALIZE OM_NO_OP
+
+#define ev_turnon_spkr_UNSERIALIZE OM_NO_OP
+
+#define ev_turnon_spkr_CONSTRUCTOR ev_turnon_spkr()
+
+#define ev_turnoff_spkr_SERIALIZE OM_NO_OP
+
+#define ev_turnoff_spkr_UNSERIALIZE OM_NO_OP
+
+#define ev_turnoff_spkr_CONSTRUCTOR ev_turnoff_spkr()
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -518,6 +554,78 @@ bool ev_turnoff_SS::isTypeOf(const short id) const {
 }
 
 IMPLEMENT_META_EVENT_P(ev_turnoff_SS, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnoff_SS())
+
+//## event ev_turnon_WC()
+ev_turnon_WC::ev_turnon_WC() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnon_WC)
+    setId(ev_turnon_WC_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnon_WC::isTypeOf(const short id) const {
+    return (ev_turnon_WC_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnon_WC, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnon_WC())
+
+//## event ev_turnoff_WC()
+ev_turnoff_WC::ev_turnoff_WC() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnoff_WC)
+    setId(ev_turnoff_WC_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnoff_WC::isTypeOf(const short id) const {
+    return (ev_turnoff_WC_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnoff_WC, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnoff_WC())
+
+//## event ev_turnon_mic()
+ev_turnon_mic::ev_turnon_mic() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnon_mic)
+    setId(ev_turnon_mic_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnon_mic::isTypeOf(const short id) const {
+    return (ev_turnon_mic_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnon_mic, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnon_mic())
+
+//## event ev_turnoff_mic()
+ev_turnoff_mic::ev_turnoff_mic() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnoff_mic)
+    setId(ev_turnoff_mic_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnoff_mic::isTypeOf(const short id) const {
+    return (ev_turnoff_mic_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnoff_mic, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnoff_mic())
+
+//## event ev_turnon_spkr()
+ev_turnon_spkr::ev_turnon_spkr() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnon_spkr)
+    setId(ev_turnon_spkr_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnon_spkr::isTypeOf(const short id) const {
+    return (ev_turnon_spkr_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnon_spkr, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnon_spkr())
+
+//## event ev_turnoff_spkr()
+ev_turnoff_spkr::ev_turnoff_spkr() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnoff_spkr)
+    setId(ev_turnoff_spkr_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnoff_spkr::isTypeOf(const short id) const {
+    return (ev_turnoff_spkr_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnoff_spkr, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnoff_spkr())
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp

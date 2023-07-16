@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_Mic
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_Mic.h
 *********************************************************************/
 
@@ -41,11 +41,11 @@ public :
     
     ////    Operations    ////
     
-    //## operation getState()
-    virtual bool getState() = 0;
+    //## operation getStateMic()
+    virtual bool getStateMic() = 0;
     
-    //## operation setState(bool)
-    virtual void setState(bool argState) = 0;
+    //## operation setStateMic(bool)
+    virtual void setStateMic(bool argState) = 0;
 };
 
 #ifdef _OMINSTRUMENT

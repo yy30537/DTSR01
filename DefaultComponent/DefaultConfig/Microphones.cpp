@@ -17,9 +17,9 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Microphones_Microphones_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_Microphones_getState_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_Microphones_getStateMic_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_Microphones_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
+#define ArchitecturalAnalysisPkg_Microphones_setStateMic_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -43,18 +43,18 @@ I_Mic* Microphones::pMic_C::getItsI_Mic() {
     return this;
 }
 
-bool Microphones::pMic_C::getState() {
+bool Microphones::pMic_C::getStateMic() {
     bool res = false;
     if (itsI_Mic != NULL) {
-        res = itsI_Mic->getState();
+        res = itsI_Mic->getStateMic();
     }
     return res;
 }
 
-void Microphones::pMic_C::setState(bool argState) {
+void Microphones::pMic_C::setStateMic(bool argState) {
     
     if (itsI_Mic != NULL) {
-        itsI_Mic->setState(argState);
+        itsI_Mic->setStateMic(argState);
     }
     
 }
@@ -80,19 +80,18 @@ Microphones::~Microphones() {
     NOTIFY_DESTRUCTOR(~Microphones, false);
 }
 
-bool Microphones::getState() {
-    NOTIFY_OPERATION(getState, getState(), 0, ArchitecturalAnalysisPkg_Microphones_getState_SERIALIZE);
-    //#[ operation getState()
+bool Microphones::getStateMic() {
+    NOTIFY_OPERATION(getStateMic, getStateMic(), 0, ArchitecturalAnalysisPkg_Microphones_getStateMic_SERIALIZE);
+    //#[ operation getStateMic()
     return state;
     //#]
 }
 
-void Microphones::setState(bool argState) {
-    NOTIFY_OPERATION(setState, setState(bool), 1, ArchitecturalAnalysisPkg_Microphones_setState_SERIALIZE);
-    //#[ operation setState(bool)
+void Microphones::setStateMic(bool argState) {
+    NOTIFY_OPERATION(setStateMic, setStateMic(bool), 1, ArchitecturalAnalysisPkg_Microphones_setStateMic_SERIALIZE);
+    //#[ operation setStateMic(bool)
     state=argState;
     //#]
-    NOTIFY_SET_OPERATION;
 }
 
 Microphones::pMic_C* Microphones::getPMic() const {
@@ -107,6 +106,15 @@ void Microphones::initRelations() {
     if (get_pMic() != NULL) {
         get_pMic()->connectMicrophones(this);
     }
+}
+
+bool Microphones::getState() const {
+    return state;
+}
+
+void Microphones::setState(bool p_state) {
+    state = p_state;
+    NOTIFY_SET_OPERATION;
 }
 
 #ifdef _OMINSTRUMENT

@@ -41,11 +41,11 @@ public :
     
     ////    Operations    ////
     
-    //## operation get()
-    virtual bool get() = 0;
+    //## operation getWC()
+    virtual bool getWC() = 0;
     
-    //## operation set(bool)
-    virtual void set(bool arg) = 0;
+    //## operation setWC(bool)
+    virtual void setWC(bool arg) = 0;
 };
 
 #ifdef _OMINSTRUMENT
