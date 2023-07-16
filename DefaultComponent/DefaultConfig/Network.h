@@ -79,6 +79,8 @@ class Weather_Forecast;
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setLightState_bool_ARGS_DECLARATION bool p_lightState;
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setOccupied_bool_ARGS_DECLARATION bool p_occupied;
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setSpeakerVol_int_ARGS_DECLARATION int p_speakerVol;
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -455,7 +457,17 @@ public :
     
     //## auto_generated
     void _clearItsOccupancy_Sensor();
+
+protected :
+
+    //## auto_generated
+    void cancelTimeouts();
     
+    //## auto_generated
+    bool cancelTimeout(const IOxfTimeout* arg);
+
+public :
+
     //## auto_generated
     int getIntensity() const;
     
@@ -497,6 +509,12 @@ public :
     
     //## auto_generated
     void setOccupied(bool p_occupied);
+    
+    //## auto_generated
+    int getSpeakerVol() const;
+    
+    //## auto_generated
+    void setSpeakerVol(int p_speakerVol);
 
 protected :
 
@@ -509,6 +527,8 @@ protected :
     bool lightState;		//## attribute lightState
     
     bool occupied;		//## attribute occupied
+    
+    int speakerVol;		//## attribute speakerVol
     
 //#[ ignore
     pNetwork_C pNetwork;
@@ -574,6 +594,20 @@ public :
     //## statechart_method
     inline bool speakersOn_IN() const;
     
+    //## statechart_method
+    void speakersOn_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus speakersOn_handleEvent();
+    
+    // Idle:
+    //## statechart_method
+    inline bool Idle_IN() const;
+    
+    // accepttimeevent_17:
+    //## statechart_method
+    inline bool accepttimeevent_17_IN() const;
+    
     // speakersOff:
     //## statechart_method
     inline bool speakersOff_IN() const;
@@ -625,13 +659,15 @@ protected :
         webcamOff = 4,
         state_14 = 5,
         speakersOn = 6,
-        speakersOff = 7,
-        state_13 = 8,
-        smartscreenOn = 9,
-        smartscreenOff = 10,
-        state_12 = 11,
-        micOn = 12,
-        micOff = 13
+        Idle = 7,
+        accepttimeevent_17 = 8,
+        speakersOff = 9,
+        state_13 = 10,
+        smartscreenOn = 11,
+        smartscreenOff = 12,
+        state_12 = 13,
+        micOn = 14,
+        micOff = 15
     };
     
     int rootState_subState;
@@ -645,6 +681,10 @@ protected :
     int state_14_subState;
     
     int state_14_active;
+    
+    int speakersOn_subState;
+    
+    IOxfTimeout* speakersOn_timeout;
     
     int state_13_subState;
     
@@ -667,6 +707,8 @@ DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setLightState_bool)
 
 DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setOccupied_bool)
 
+DECLARE_OPERATION_CLASS(ArchitecturalAnalysisPkg_Network_setSpeakerVol_int)
+
 //#[ ignore
 class OMAnimatedNetwork : virtual public AOMInstance {
     DECLARE_REACTIVE_META(Network, OMAnimatedNetwork)
@@ -680,6 +722,8 @@ class OMAnimatedNetwork : virtual public AOMInstance {
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setLightState_bool)
     
     DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setOccupied_bool)
+    
+    DECLARE_META_OP(ArchitecturalAnalysisPkg_Network_setSpeakerVol_int)
     
     ////    Framework operations    ////
     
@@ -709,6 +753,12 @@ public :
     
     //## statechart_method
     void speakersOn_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void Idle_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void accepttimeevent_17_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
     void speakersOff_serializeStates(AOMSState* aomsState) const;
@@ -760,6 +810,14 @@ inline bool Network::state_14_IN() const {
 
 inline bool Network::speakersOn_IN() const {
     return state_14_subState == speakersOn;
+}
+
+inline bool Network::Idle_IN() const {
+    return speakersOn_subState == Idle;
+}
+
+inline bool Network::accepttimeevent_17_IN() const {
+    return speakersOn_subState == accepttimeevent_17;
 }
 
 inline bool Network::speakersOff_IN() const {

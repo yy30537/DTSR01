@@ -50,6 +50,10 @@
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setOccupied_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_occupied)
 
 #define OMAnim_ArchitecturalAnalysisPkg_Network_setOccupied_bool_SERIALIZE_RET_VAL
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setSpeakerVol_int_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_speakerVol)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setSpeakerVol_int_SERIALIZE_RET_VAL
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -459,7 +463,7 @@ void Network::pNetwork_C::cleanUpRelations() {
 }
 //#]
 
-Network::Network(IOxfActive* theActiveContext) : intensity(0), fireAlarm(false), fireDetected(false), is_Movement(false), lightState(false), occupied(false) {
+Network::Network(IOxfActive* theActiveContext) : intensity(0), fireAlarm(false), fireDetected(false), is_Movement(false), lightState(false), occupied(false), speakerVol(0) {
     NOTIFY_REACTIVE_CONSTRUCTOR(Network, Network(), 0, ArchitecturalAnalysisPkg_Network_Network_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsCO2_Sensor = NULL;
@@ -474,6 +478,7 @@ Network::Network(IOxfActive* theActiveContext) : intensity(0), fireAlarm(false),
 Network::~Network() {
     NOTIFY_DESTRUCTOR(~Network, true);
     cleanUpRelations();
+    cancelTimeouts();
 }
 
 Network::pNetwork_C* Network::getPNetwork() const {
@@ -521,6 +526,8 @@ void Network::initStatechart() {
     state_15_active = OMNonState;
     state_14_subState = OMNonState;
     state_14_active = OMNonState;
+    speakersOn_subState = OMNonState;
+    speakersOn_timeout = NULL;
     state_13_subState = OMNonState;
     state_13_active = OMNonState;
     state_12_subState = OMNonState;
@@ -788,6 +795,20 @@ void Network::_clearItsOccupancy_Sensor() {
     itsOccupancy_Sensor = NULL;
 }
 
+void Network::cancelTimeouts() {
+    cancel(speakersOn_timeout);
+}
+
+bool Network::cancelTimeout(const IOxfTimeout* arg) {
+    bool res = false;
+    if(speakersOn_timeout == arg)
+        {
+            speakersOn_timeout = NULL;
+            res = true;
+        }
+    return res;
+}
+
 int Network::getIntensity() const {
     return intensity;
 }
@@ -839,6 +860,15 @@ bool Network::getOccupied() const {
 
 void Network::setOccupied(bool p_occupied) {
     occupied = p_occupied;
+    NOTIFY_SET_OPERATION;
+}
+
+int Network::getSpeakerVol() const {
+    return speakerVol;
+}
+
+void Network::setSpeakerVol(int p_speakerVol) {
+    speakerVol = p_speakerVol;
     NOTIFY_SET_OPERATION;
 }
 
@@ -928,6 +958,24 @@ void Network::CommunicationAudioSystemInOperation_exit() {
         // State speakersOn
         case speakersOn:
         {
+            switch (speakersOn_subState) {
+                // State Idle
+                case Idle:
+                {
+                    cancel(speakersOn_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
+                }
+                break;
+                case accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            speakersOn_subState = OMNonState;
             NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
         }
         break;
@@ -1069,6 +1117,7 @@ void Network::state_14_entDef() {
     state_14_active = speakersOff;
     //#[ state CommunicationAudioSystemInOperation.state_14.speakersOff.(Entry) 
     OUT_PORT(pNetwork)->setStateSpkr(false);
+    speakerVol=0;
     //#]
     NOTIFY_TRANSITION_TERMINATED("3");
 }
@@ -1083,12 +1132,7 @@ IOxfReactive::TakeEventStatus Network::state_14_processEvent() {
                 {
                     NOTIFY_TRANSITION_STARTED("11");
                     NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
-                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
-                    state_14_subState = speakersOn;
-                    state_14_active = speakersOn;
-                    //#[ state CommunicationAudioSystemInOperation.state_14.speakersOn.(Entry) 
-                    OUT_PORT(pNetwork)->setStateSpkr(true);
-                    //#]
+                    speakersOn_entDef();
                     NOTIFY_TRANSITION_TERMINATED("11");
                     res = eventConsumed;
                 }
@@ -1096,29 +1140,119 @@ IOxfReactive::TakeEventStatus Network::state_14_processEvent() {
             
         }
         break;
-        // State speakersOn
-        case speakersOn:
+        // State Idle
+        case Idle:
         {
-            if(IS_EVENT_TYPE_OF(ev_turnoff_spkr_ArchitecturalAnalysisPkg_id))
+            if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
                 {
-                    NOTIFY_TRANSITION_STARTED("12");
-                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
-                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
-                    state_14_subState = speakersOff;
-                    state_14_active = speakersOff;
-                    //#[ state CommunicationAudioSystemInOperation.state_14.speakersOff.(Entry) 
-                    OUT_PORT(pNetwork)->setStateSpkr(false);
+                    if(getCurrentEvent() == speakersOn_timeout)
+                        {
+                            NOTIFY_TRANSITION_STARTED("14");
+                            cancel(speakersOn_timeout);
+                            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
+                            NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
+                            pushNullTransition();
+                            speakersOn_subState = accepttimeevent_17;
+                            state_14_active = accepttimeevent_17;
+                            NOTIFY_TRANSITION_TERMINATED("14");
+                            res = eventConsumed;
+                        }
+                }
+            
+            if(res == eventNotConsumed)
+                {
+                    res = speakersOn_handleEvent();
+                }
+        }
+        break;
+        case accepttimeevent_17:
+        {
+            if(IS_EVENT_TYPE_OF(OMNullEventId))
+                {
+                    NOTIFY_TRANSITION_STARTED("15");
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
+                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
+                    speakersOn_subState = Idle;
+                    state_14_active = Idle;
+                    //#[ state CommunicationAudioSystemInOperation.state_14.speakersOn.Idle.(Entry) 
+                    speakerVol=speakerVol;
+                    
                     //#]
-                    NOTIFY_TRANSITION_TERMINATED("12");
+                    speakersOn_timeout = scheduleTimeout(100, "ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
+                    NOTIFY_TRANSITION_TERMINATED("15");
                     res = eventConsumed;
                 }
             
-            
+            if(res == eventNotConsumed)
+                {
+                    res = speakersOn_handleEvent();
+                }
         }
         break;
         default:
             break;
     }
+    return res;
+}
+
+void Network::speakersOn_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
+    state_14_subState = speakersOn;
+    //#[ state CommunicationAudioSystemInOperation.state_14.speakersOn.(Entry) 
+    OUT_PORT(pNetwork)->setStateSpkr(true);
+    if(speakerVol==0){
+    speakerVol=50;
+    }
+    //#]
+    NOTIFY_TRANSITION_STARTED("13");
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
+    speakersOn_subState = Idle;
+    state_14_active = Idle;
+    //#[ state CommunicationAudioSystemInOperation.state_14.speakersOn.Idle.(Entry) 
+    speakerVol=speakerVol;
+    
+    //#]
+    speakersOn_timeout = scheduleTimeout(100, "ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
+    NOTIFY_TRANSITION_TERMINATED("13");
+}
+
+IOxfReactive::TakeEventStatus Network::speakersOn_handleEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    if(IS_EVENT_TYPE_OF(ev_turnoff_spkr_ArchitecturalAnalysisPkg_id))
+        {
+            NOTIFY_TRANSITION_STARTED("12");
+            switch (speakersOn_subState) {
+                // State Idle
+                case Idle:
+                {
+                    cancel(speakersOn_timeout);
+                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
+                }
+                break;
+                case accepttimeevent_17:
+                {
+                    popNullTransition();
+                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
+                }
+                break;
+                default:
+                    break;
+            }
+            speakersOn_subState = OMNonState;
+            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
+            NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
+            state_14_subState = speakersOff;
+            state_14_active = speakersOff;
+            //#[ state CommunicationAudioSystemInOperation.state_14.speakersOff.(Entry) 
+            OUT_PORT(pNetwork)->setStateSpkr(false);
+            speakerVol=0;
+            //#]
+            NOTIFY_TRANSITION_TERMINATED("12");
+            res = eventConsumed;
+        }
+    
+    
     return res;
 }
 
@@ -1253,6 +1387,7 @@ void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) cons
     aomsAttributes->addAttribute("is_Movement", x2String(myReal->is_Movement));
     aomsAttributes->addAttribute("fireDetected", x2String(myReal->fireDetected));
     aomsAttributes->addAttribute("fireAlarm", x2String(myReal->fireAlarm));
+    aomsAttributes->addAttribute("speakerVol", x2String(myReal->speakerVol));
 }
 
 void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
@@ -1350,6 +1485,28 @@ void OMAnimatedNetwork::state_14_serializeStates(AOMSState* aomsState) const {
 
 void OMAnimatedNetwork::speakersOn_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
+    switch (myReal->speakersOn_subState) {
+        case Network::Idle:
+        {
+            Idle_serializeStates(aomsState);
+        }
+        break;
+        case Network::accepttimeevent_17:
+        {
+            accepttimeevent_17_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::Idle_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.Idle");
+}
+
+void OMAnimatedNetwork::accepttimeevent_17_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn.accepttimeevent_17");
 }
 
 void OMAnimatedNetwork::speakersOff_serializeStates(AOMSState* aomsState) const {
@@ -1430,6 +1587,10 @@ IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setLightState_bool, Network, 
 IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setOccupied_bool, "setOccupied", FALSE, "setOccupied(bool)", 1)
 
 IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setOccupied_bool, Network, setOccupied(p_occupied), NO_OP())
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setSpeakerVol_int, "setSpeakerVol", FALSE, "setSpeakerVol(int)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setSpeakerVol_int, Network, setSpeakerVol(p_speakerVol), NO_OP())
 #endif // _OMINSTRUMENT
 
 /*********************************************************************

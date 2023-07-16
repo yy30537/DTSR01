@@ -42,8 +42,8 @@
 								<_hid type="a">GUID aa3aac12-80a9-4a63-b08a-e34457fb1a46</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">21 472 </_UpLeft>
-						<_DownRight type="a">1258 827 </_DownRight>
+						<_UpLeft type="a">0 84 </_UpLeft>
+						<_DownRight type="a">1176 421 </_DownRight>
 						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
@@ -75,8 +75,8 @@
 								<_hid type="a">GUID 7742b0ff-1986-45a9-af66-a3c0ffb27c1d</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">0 60 </_UpLeft>
-						<_DownRight type="a">1383 456 </_DownRight>
+						<_UpLeft type="a">0 122 </_UpLeft>
+						<_DownRight type="a">1679 603 </_DownRight>
 						<m_nDiagramIndex type="a">2</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
@@ -108,8 +108,8 @@
 								<_hid type="a">GUID 7742b0ff-1986-45a9-af66-a3c0ffb27c1d</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">79 236 </_UpLeft>
-						<_DownRight type="a">1387 767 </_DownRight>
+						<_UpLeft type="a">0 63 </_UpLeft>
+						<_DownRight type="a">2113 1113 </_DownRight>
 						<_instanceName type="a">itsNetwork</_instanceName>
 						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
 						<m_bIsActiveView type="a">1</m_bIsActiveView>
