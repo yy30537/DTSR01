@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Weather_Forecast
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\Weather_Forecast.h
 *********************************************************************/
 
@@ -49,19 +49,7 @@ public :
         void connectWeather_Forecast(Weather_Forecast* part);
         
         //## auto_generated
-        virtual bool getCold();
-        
-        //## auto_generated
-        virtual bool getHot();
-        
-        //## auto_generated
         I_Weather* getItsI_Weather();
-        
-        //## auto_generated
-        virtual void setCold(bool arg_cold);
-        
-        //## auto_generated
-        virtual void setHot(bool arg_hot);
         
         ////    Additional operations    ////
         
@@ -95,37 +83,13 @@ public :
     Weather_Forecast();
     
     //## auto_generated
-    virtual ~Weather_Forecast();
-    
-    //## operation getCold()
-    virtual bool getCold();
-    
-    //## operation getHot()
-    virtual bool getHot();
-    
-    //## operation setCold(bool)
-    virtual void setCold(bool arg_cold);
-    
-    //## operation setHot(bool)
-    virtual void setHot(bool arg_hot);
+    ~Weather_Forecast();
     
     //## auto_generated
     pWeatherForecast_C* getPWeatherForecast() const;
     
     //## auto_generated
     pWeatherForecast_C* get_pWeatherForecast() const;
-    
-    //## auto_generated
-    bool getColdOutside() const;
-    
-    //## auto_generated
-    void setColdOutside(bool p_ColdOutside);
-    
-    //## auto_generated
-    bool getHotOutside() const;
-    
-    //## auto_generated
-    void setHotOutside(bool p_HotOutside);
     
     //## auto_generated
     Network* getItsNetwork() const;
@@ -140,10 +104,6 @@ protected :
     
     //## auto_generated
     void cleanUpRelations();
-    
-    bool ColdOutside;		//## attribute ColdOutside
-    
-    bool HotOutside;		//## attribute HotOutside
     
     Network* itsNetwork;		//## link itsNetwork
 

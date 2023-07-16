@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Movement_Sensor
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\Movement_Sensor.h
 *********************************************************************/
 
@@ -19,17 +19,66 @@
 #include <aom\aom.h>
 //## auto_generated
 #include "ArchitecturalAnalysisPkg.h"
+//## class Movement_Sensor
+#include "I_MS.h"
 //## link itsNetwork
 class Network;
 
 //## package ArchitecturalAnalysisPkg
 
 //## class Movement_Sensor
-class Movement_Sensor {
-    ////    Friends    ////
-    
+class Movement_Sensor : public I_MS {
 public :
 
+//#[ ignore
+    //## package ArchitecturalAnalysisPkg
+    class pMS_C : public I_MS {
+        ////    Constructors and destructors    ////
+        
+    public :
+    
+        //## auto_generated
+        pMS_C();
+        
+        //## auto_generated
+        virtual ~pMS_C();
+        
+        ////    Operations    ////
+        
+        //## auto_generated
+        void connectMovement_Sensor(Movement_Sensor* part);
+        
+        //## auto_generated
+        I_MS* getItsI_MS();
+        
+        //## auto_generated
+        virtual bool getMM();
+        
+        //## auto_generated
+        virtual void setMM(bool arg);
+        
+        ////    Additional operations    ////
+        
+        //## auto_generated
+        void setItsI_MS(I_MS* p_I_MS);
+    
+    protected :
+    
+        //## auto_generated
+        void cleanUpRelations();
+        
+        ////    Attributes    ////
+        
+        int _p_;		//## attribute _p_
+        
+        ////    Relations and components    ////
+        
+        I_MS* itsI_MS;		//## link itsI_MS
+    };
+//#]
+
+    ////    Friends    ////
+    
 #ifdef _OMINSTRUMENT
     friend class OMAnimatedMovement_Sensor;
 #endif // _OMINSTRUMENT
@@ -40,7 +89,7 @@ public :
     Movement_Sensor();
     
     //## auto_generated
-    ~Movement_Sensor();
+    virtual ~Movement_Sensor();
     
     //## auto_generated
     Network* getItsNetwork() const;
@@ -65,17 +114,48 @@ public :
     
     //## auto_generated
     void _clearItsNetwork();
+    
+    //## operation getMM()
+    virtual bool getMM();
+    
+    //## operation setMM(bool)
+    virtual void setMM(bool arg);
+    
+    //## auto_generated
+    pMS_C* getPMS() const;
+    
+    //## auto_generated
+    pMS_C* get_pMS() const;
+    
+    //## auto_generated
+    bool getMovementDetected() const;
+    
+    //## auto_generated
+    void setMovementDetected(bool p_movementDetected);
+
+protected :
+
+    //## auto_generated
+    void initRelations();
+    
+    bool movementDetected;		//## attribute movementDetected
+    
+//#[ ignore
+    pMS_C pMS;
+//#]
 };
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
-class OMAnimatedMovement_Sensor : virtual public AOMInstance {
+class OMAnimatedMovement_Sensor : public OMAnimatedI_MS {
     DECLARE_META(Movement_Sensor, OMAnimatedMovement_Sensor)
     
     ////    Framework operations    ////
     
 public :
 
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
     virtual void serializeRelations(AOMSRelations* aomsRelations) const;
 };
 //#]

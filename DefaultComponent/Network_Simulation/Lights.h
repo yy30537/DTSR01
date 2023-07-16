@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Lights
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\Lights.h
 *********************************************************************/
 
@@ -55,7 +55,13 @@ public :
         I_Light* getItsI_Light();
         
         //## auto_generated
+        virtual bool getState();
+        
+        //## auto_generated
         virtual void setIntensity(int arg_intensity);
+        
+        //## auto_generated
+        virtual void setState(bool arg);
         
         ////    Additional operations    ////
         
@@ -134,9 +140,17 @@ public :
     
     //## operation setIntensity(int)
     virtual void setIntensity(int arg_intensity);
+    
+    //## operation getState()
+    virtual bool getState();
+    
+    //## operation setState(bool)
+    virtual void setState(bool arg);
 
 protected :
 
+    bool state;		//## attribute state
+    
 //#[ ignore
     pLights_C pLights;
 //#]

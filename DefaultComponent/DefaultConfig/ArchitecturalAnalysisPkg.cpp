@@ -156,6 +156,18 @@
 #define ev_DisableFireAlarm_UNSERIALIZE OM_NO_OP
 
 #define ev_DisableFireAlarm_CONSTRUCTOR ev_DisableFireAlarm()
+
+#define ev_turnon_SS_SERIALIZE OM_NO_OP
+
+#define ev_turnon_SS_UNSERIALIZE OM_NO_OP
+
+#define ev_turnon_SS_CONSTRUCTOR ev_turnon_SS()
+
+#define ev_turnoff_SS_SERIALIZE OM_NO_OP
+
+#define ev_turnoff_SS_UNSERIALIZE OM_NO_OP
+
+#define ev_turnoff_SS_CONSTRUCTOR ev_turnoff_SS()
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -482,6 +494,30 @@ bool ev_DisableFireAlarm::isTypeOf(const short id) const {
 }
 
 IMPLEMENT_META_EVENT_P(ev_DisableFireAlarm, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_DisableFireAlarm())
+
+//## event ev_turnon_SS()
+ev_turnon_SS::ev_turnon_SS() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnon_SS)
+    setId(ev_turnon_SS_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnon_SS::isTypeOf(const short id) const {
+    return (ev_turnon_SS_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnon_SS, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnon_SS())
+
+//## event ev_turnoff_SS()
+ev_turnoff_SS::ev_turnoff_SS() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnoff_SS)
+    setId(ev_turnoff_SS_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnoff_SS::isTypeOf(const short id) const {
+    return (ev_turnoff_SS_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnoff_SS, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnoff_SS())
 
 /*********************************************************************
 	File Path	: DefaultComponent\DefaultConfig\ArchitecturalAnalysisPkg.cpp

@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: I_WC
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\I_WC.h
 *********************************************************************/
 
@@ -41,11 +41,11 @@ public :
     
     ////    Operations    ////
     
-    //## operation getState()
-    virtual bool getState() = 0;
+    //## operation get()
+    virtual bool get() = 0;
     
-    //## operation setState(bool)
-    virtual void setState(bool argState) = 0;
+    //## operation set(bool)
+    virtual void set(bool arg) = 0;
 };
 
 #ifdef _OMINSTRUMENT

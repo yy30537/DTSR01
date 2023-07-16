@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Webcam
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Webcam.h
 *********************************************************************/
 
@@ -46,7 +46,13 @@ public :
         void connectWebcam(Webcam* part);
         
         //## auto_generated
+        virtual bool get();
+        
+        //## auto_generated
         I_WC* getItsI_WC();
+        
+        //## auto_generated
+        virtual void set(bool arg);
         
         ////    Additional operations    ////
         
@@ -80,7 +86,7 @@ public :
     Webcam();
     
     //## auto_generated
-    ~Webcam();
+    virtual ~Webcam();
     
     //## auto_generated
     pWebcam_C* getPWebcam() const;
@@ -97,6 +103,12 @@ protected :
 
 public :
 
+    //## operation get()
+    virtual bool get();
+    
+    //## operation set(bool)
+    virtual void set(bool arg);
+    
     //## auto_generated
     bool getState() const;
     

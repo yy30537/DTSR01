@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: Network
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\Network.cpp
 *********************************************************************/
 
@@ -30,6 +30,26 @@
 #include "Occupancy_Sensor.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Network_Network_SERIALIZE OM_NO_OP
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setFireDetected_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_fireDetected)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setFireDetected_bool_SERIALIZE_RET_VAL
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_intensity)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setIntensity_int_SERIALIZE_RET_VAL
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setIs_Movement_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_is_Movement)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setIs_Movement_bool_SERIALIZE_RET_VAL
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setLightState_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_lightState)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setLightState_bool_SERIALIZE_RET_VAL
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setOccupied_bool_UNSERIALIZE_ARGS OP_UNSER(OMDestructiveString2X,p_occupied)
+
+#define OMAnim_ArchitecturalAnalysisPkg_Network_setOccupied_bool_SERIALIZE_RET_VAL
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -42,6 +62,7 @@ Network::pNetwork_C::pNetwork_C() : _p_(0) {
     itsI_FS = NULL;
     itsI_HVAC = NULL;
     itsI_Light = NULL;
+    itsI_MS = NULL;
     itsI_Mic = NULL;
     itsI_OS = NULL;
     itsI_SS = NULL;
@@ -54,18 +75,10 @@ Network::pNetwork_C::~pNetwork_C() {
     cleanUpRelations();
 }
 
-bool Network::pNetwork_C::getCold() {
+bool Network::pNetwork_C::get() {
     bool res = false;
-    if (itsI_Weather != NULL) {
-        res = itsI_Weather->getCold();
-    }
-    return res;
-}
-
-bool Network::pNetwork_C::getHot() {
-    bool res = false;
-    if (itsI_Weather != NULL) {
-        res = itsI_Weather->getHot();
+    if (itsI_WC != NULL) {
+        res = itsI_WC->get();
     }
     return res;
 }
@@ -98,6 +111,10 @@ I_Light* Network::pNetwork_C::getItsI_Light() {
     return this;
 }
 
+I_MS* Network::pNetwork_C::getItsI_MS() {
+    return this;
+}
+
 I_Mic* Network::pNetwork_C::getItsI_Mic() {
     return this;
 }
@@ -122,6 +139,14 @@ I_Weather* Network::pNetwork_C::getItsI_Weather() {
     return this;
 }
 
+bool Network::pNetwork_C::getMM() {
+    bool res = false;
+    if (itsI_MS != NULL) {
+        res = itsI_MS->getMM();
+    }
+    return res;
+}
+
 bool Network::pNetwork_C::getOccupied() {
     bool res = false;
     if (itsI_OS != NULL) {
@@ -136,8 +161,8 @@ Network::pNetwork_C* Network::pNetwork_C::getOutBound() {
 
 bool Network::pNetwork_C::getState() {
     bool res = false;
-    if (itsI_FS != NULL) {
-        res = itsI_FS->getState();
+    if (itsI_Light != NULL) {
+        res = itsI_Light->getState();
     }
     return res;
 }
@@ -198,18 +223,10 @@ void Network::pNetwork_C::login() {
     
 }
 
-void Network::pNetwork_C::setCold(bool arg_cold) {
+void Network::pNetwork_C::set(bool arg) {
     
-    if (itsI_Weather != NULL) {
-        itsI_Weather->setCold(arg_cold);
-    }
-    
-}
-
-void Network::pNetwork_C::setHot(bool arg_hot) {
-    
-    if (itsI_Weather != NULL) {
-        itsI_Weather->setHot(arg_hot);
+    if (itsI_WC != NULL) {
+        itsI_WC->set(arg);
     }
     
 }
@@ -222,6 +239,14 @@ void Network::pNetwork_C::setIntensity(int arg_intensity) {
     
 }
 
+void Network::pNetwork_C::setMM(bool arg) {
+    
+    if (itsI_MS != NULL) {
+        itsI_MS->setMM(arg);
+    }
+    
+}
+
 void Network::pNetwork_C::setOccupied(bool arg_occupied) {
     
     if (itsI_OS != NULL) {
@@ -230,10 +255,10 @@ void Network::pNetwork_C::setOccupied(bool arg_occupied) {
     
 }
 
-void Network::pNetwork_C::setState(bool argState) {
+void Network::pNetwork_C::setState(bool arg) {
     
-    if (itsI_FS != NULL) {
-        itsI_FS->setState(argState);
+    if (itsI_Light != NULL) {
+        itsI_Light->setState(arg);
     }
     
 }
@@ -306,6 +331,10 @@ void Network::pNetwork_C::setItsI_Light(I_Light* p_I_Light) {
     itsI_Light = p_I_Light;
 }
 
+void Network::pNetwork_C::setItsI_MS(I_MS* p_I_MS) {
+    itsI_MS = p_I_MS;
+}
+
 void Network::pNetwork_C::setItsI_Mic(I_Mic* p_I_Mic) {
     itsI_Mic = p_I_Mic;
 }
@@ -351,6 +380,10 @@ void Network::pNetwork_C::cleanUpRelations() {
         {
             itsI_Light = NULL;
         }
+    if(itsI_MS != NULL)
+        {
+            itsI_MS = NULL;
+        }
     if(itsI_Mic != NULL)
         {
             itsI_Mic = NULL;
@@ -378,7 +411,7 @@ void Network::pNetwork_C::cleanUpRelations() {
 }
 //#]
 
-Network::Network(IOxfActive* theActiveContext) {
+Network::Network(IOxfActive* theActiveContext) : intensity(0), fireAlarm(false), fireDetected(false), is_Movement(false), lightState(false), occupied(false) {
     NOTIFY_REACTIVE_CONSTRUCTOR(Network, Network(), 0, ArchitecturalAnalysisPkg_Network_Network_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsCO2_Sensor = NULL;
@@ -393,7 +426,6 @@ Network::Network(IOxfActive* theActiveContext) {
 Network::~Network() {
     NOTIFY_DESTRUCTOR(~Network, true);
     cleanUpRelations();
-    cancelTimeouts();
 }
 
 Network::pNetwork_C* Network::getPNetwork() const {
@@ -437,9 +469,14 @@ bool Network::startBehavior() {
 void Network::initStatechart() {
     rootState_subState = OMNonState;
     rootState_active = OMNonState;
-    On_subState = OMNonState;
-    rootState_timeout = NULL;
-    On_timeout = NULL;
+    state_15_subState = OMNonState;
+    state_15_active = OMNonState;
+    state_14_subState = OMNonState;
+    state_14_active = OMNonState;
+    state_13_subState = OMNonState;
+    state_13_active = OMNonState;
+    state_12_subState = OMNonState;
+    state_12_active = OMNonState;
 }
 
 void Network::cleanUpRelations() {
@@ -703,84 +740,298 @@ void Network::_clearItsOccupancy_Sensor() {
     itsOccupancy_Sensor = NULL;
 }
 
-void Network::cancelTimeouts() {
-    cancel(rootState_timeout);
-    cancel(On_timeout);
+int Network::getIntensity() const {
+    return intensity;
 }
 
-bool Network::cancelTimeout(const IOxfTimeout* arg) {
-    bool res = false;
-    if(rootState_timeout == arg)
-        {
-            rootState_timeout = NULL;
-            res = true;
-        }
-    if(On_timeout == arg)
-        {
-            On_timeout = NULL;
-            res = true;
-        }
-    return res;
+void Network::setIntensity(int p_intensity) {
+    intensity = p_intensity;
+    NOTIFY_SET_OPERATION;
+}
+
+bool Network::getFireAlarm() const {
+    return fireAlarm;
+}
+
+void Network::setFireAlarm(bool p_fireAlarm) {
+    fireAlarm = p_fireAlarm;
+    NOTIFY_SET_OPERATION;
+}
+
+bool Network::getFireDetected() const {
+    return fireDetected;
+}
+
+void Network::setFireDetected(bool p_fireDetected) {
+    fireDetected = p_fireDetected;
+    NOTIFY_SET_OPERATION;
+}
+
+bool Network::getIs_Movement() const {
+    return is_Movement;
+}
+
+void Network::setIs_Movement(bool p_is_Movement) {
+    is_Movement = p_is_Movement;
+    NOTIFY_SET_OPERATION;
+}
+
+bool Network::getLightState() const {
+    return lightState;
+}
+
+void Network::setLightState(bool p_lightState) {
+    lightState = p_lightState;
+    NOTIFY_SET_OPERATION;
+}
+
+bool Network::getOccupied() const {
+    return occupied;
+}
+
+void Network::setOccupied(bool p_occupied) {
+    occupied = p_occupied;
+    NOTIFY_SET_OPERATION;
 }
 
 void Network::rootState_entDef() {
     {
         NOTIFY_STATE_ENTERED("ROOT");
-        NOTIFY_TRANSITION_STARTED("0");
-        NOTIFY_STATE_ENTERED("ROOT.Off");
-        rootState_subState = Off;
-        rootState_active = Off;
-        NOTIFY_TRANSITION_TERMINATED("0");
+        rootStateEntDef();
     }
+}
+
+void Network::rootStateEntDef() {
+    NOTIFY_TRANSITION_STARTED("0");
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation");
+    rootState_subState = CommunicationAudioSystemInOperation;
+    rootState_active = CommunicationAudioSystemInOperation;
+    state_13_entDef();
+    state_14_entDef();
+    state_15_entDef();
+    state_12_entDef();
+    NOTIFY_TRANSITION_TERMINATED("0");
 }
 
 IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    switch (rootState_active) {
-        // State Off
-        case Off:
+    // State CommunicationAudioSystemInOperation
+    if(rootState_active == CommunicationAudioSystemInOperation)
         {
-            if(IS_EVENT_TYPE_OF(ev_turnOnLight_ArchitecturalAnalysisPkg_id))
+            res = CommunicationAudioSystemInOperation_processEvent();
+        }
+    return res;
+}
+
+void Network::CommunicationAudioSystemInOperation_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation");
+    rootState_subState = CommunicationAudioSystemInOperation;
+    rootState_active = CommunicationAudioSystemInOperation;
+    state_12_entDef();
+    state_13_entDef();
+    state_14_entDef();
+    state_15_entDef();
+}
+
+void Network::CommunicationAudioSystemInOperation_exit() {
+    switch (state_12_subState) {
+        // State micOn
+        case micOn:
+        {
+            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_12.micOn");
+        }
+        break;
+        // State micOff
+        case micOff:
+        {
+            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_12.micOff");
+        }
+        break;
+        default:
+            break;
+    }
+    state_12_subState = OMNonState;
+    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_12");
+    switch (state_13_subState) {
+        // State smartscreenOn
+        case smartscreenOn:
+        {
+            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOn");
+        }
+        break;
+        // State smartscreenOff
+        case smartscreenOff:
+        {
+            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOff");
+        }
+        break;
+        default:
+            break;
+    }
+    state_13_subState = OMNonState;
+    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13");
+    switch (state_14_subState) {
+        // State speakersOff
+        case speakersOff:
+        {
+            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
+        }
+        break;
+        // State speakersOn
+        case speakersOn:
+        {
+            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
+        }
+        break;
+        default:
+            break;
+    }
+    state_14_subState = OMNonState;
+    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_14");
+    switch (state_15_subState) {
+        // State webcamOn
+        case webcamOn:
+        {
+            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOn");
+        }
+        break;
+        // State webcamOff
+        case webcamOff:
+        {
+            NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOff");
+        }
+        break;
+        default:
+            break;
+    }
+    state_15_subState = OMNonState;
+    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_15");
+    
+    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation");
+}
+
+IOxfReactive::TakeEventStatus Network::CommunicationAudioSystemInOperation_processEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    // State state_12
+    if(state_12_processEvent() != eventNotConsumed)
+        {
+            res = eventConsumed;
+            if(!IS_IN(CommunicationAudioSystemInOperation))
                 {
-                    NOTIFY_TRANSITION_STARTED("2");
-                    NOTIFY_STATE_EXITED("ROOT.Off");
-                    //#[ transition 2 
-                    OUT_PORT(pNetwork)->setIntensity(5);
+                    return res;
+                }
+        }
+    // State state_13
+    if(state_13_processEvent() != eventNotConsumed)
+        {
+            res = eventConsumed;
+            if(!IS_IN(CommunicationAudioSystemInOperation))
+                {
+                    return res;
+                }
+        }
+    // State state_14
+    if(state_14_processEvent() != eventNotConsumed)
+        {
+            res = eventConsumed;
+            if(!IS_IN(CommunicationAudioSystemInOperation))
+                {
+                    return res;
+                }
+        }
+    // State state_15
+    if(state_15_processEvent() != eventNotConsumed)
+        {
+            res = eventConsumed;
+            if(!IS_IN(CommunicationAudioSystemInOperation))
+                {
+                    return res;
+                }
+        }
+    
+    return res;
+}
+
+void Network::state_15_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_15");
+    NOTIFY_TRANSITION_STARTED("4");
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOn");
+    state_15_subState = webcamOn;
+    state_15_active = webcamOn;
+    NOTIFY_TRANSITION_TERMINATED("4");
+}
+
+IOxfReactive::TakeEventStatus Network::state_15_processEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    return res;
+}
+
+void Network::state_14_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14");
+    NOTIFY_TRANSITION_STARTED("3");
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
+    state_14_subState = speakersOn;
+    state_14_active = speakersOn;
+    NOTIFY_TRANSITION_TERMINATED("3");
+}
+
+IOxfReactive::TakeEventStatus Network::state_14_processEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    return res;
+}
+
+void Network::state_13_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_13");
+    NOTIFY_TRANSITION_STARTED("2");
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOn");
+    state_13_subState = smartscreenOn;
+    state_13_active = smartscreenOn;
+    //#[ state CommunicationAudioSystemInOperation.state_13.smartscreenOn.(Entry) 
+    OUT_PORT(pNetwork)->set(true);
+    //#]
+    NOTIFY_TRANSITION_TERMINATED("2");
+}
+
+IOxfReactive::TakeEventStatus Network::state_13_processEvent() {
+    IOxfReactive::TakeEventStatus res = eventNotConsumed;
+    switch (state_13_active) {
+        // State smartscreenOn
+        case smartscreenOn:
+        {
+            if(IS_EVENT_TYPE_OF(ev_turnon_SS_ArchitecturalAnalysisPkg_id))
+                {
+                    NOTIFY_TRANSITION_STARTED("5");
+                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOn");
+                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOff");
+                    state_13_subState = smartscreenOff;
+                    state_13_active = smartscreenOff;
+                    //#[ state CommunicationAudioSystemInOperation.state_13.smartscreenOff.(Entry) 
+                    OUT_PORT(pNetwork)->set(false);
                     //#]
-                    On_entDef();
-                    NOTIFY_TRANSITION_TERMINATED("2");
+                    NOTIFY_TRANSITION_TERMINATED("5");
                     res = eventConsumed;
                 }
             
+            
         }
         break;
-        // State Op
-        case Op:
+        // State smartscreenOff
+        case smartscreenOff:
         {
-            res = Op_handleEvent();
-        }
-        break;
-        case accepttimeevent_7:
-        {
-            res = accepttimeevent_7_handleEvent();
-        }
-        break;
-        case accepttimeevent_6:
-        {
-            if(IS_EVENT_TYPE_OF(OMNullEventId))
+            if(IS_EVENT_TYPE_OF(ev_turnoff_SS_ArchitecturalAnalysisPkg_id))
                 {
-                    if(TRUE)
-                        {
-                            NOTIFY_TRANSITION_STARTED("5");
-                            NOTIFY_TRANSITION_STARTED("7");
-                            popNullTransition();
-                            NOTIFY_STATE_EXITED("ROOT.accepttimeevent_6");
-                            On_entDef();
-                            NOTIFY_TRANSITION_TERMINATED("7");
-                            NOTIFY_TRANSITION_TERMINATED("5");
-                            res = eventConsumed;
-                        }
+                    NOTIFY_TRANSITION_STARTED("6");
+                    NOTIFY_STATE_EXITED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOff");
+                    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOn");
+                    state_13_subState = smartscreenOn;
+                    state_13_active = smartscreenOn;
+                    //#[ state CommunicationAudioSystemInOperation.state_13.smartscreenOn.(Entry) 
+                    OUT_PORT(pNetwork)->set(true);
+                    //#]
+                    NOTIFY_TRANSITION_TERMINATED("6");
+                    res = eventConsumed;
                 }
+            
             
         }
         break;
@@ -790,138 +1041,31 @@ IOxfReactive::TakeEventStatus Network::rootState_processEvent() {
     return res;
 }
 
-void Network::On_entDef() {
-    NOTIFY_STATE_ENTERED("ROOT.On");
-    rootState_subState = On;
-    rootState_timeout = scheduleTimeout(3000, "ROOT.On");
-    NOTIFY_TRANSITION_STARTED("3");
-    NOTIFY_STATE_ENTERED("ROOT.On.Op");
-    On_subState = Op;
-    rootState_active = Op;
-    On_timeout = scheduleTimeout(1000, "ROOT.On.Op");
-    NOTIFY_TRANSITION_TERMINATED("3");
+void Network::state_12_entDef() {
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_12");
+    NOTIFY_TRANSITION_STARTED("1");
+    NOTIFY_STATE_ENTERED("ROOT.CommunicationAudioSystemInOperation.state_12.micOn");
+    state_12_subState = micOn;
+    state_12_active = micOn;
+    NOTIFY_TRANSITION_TERMINATED("1");
 }
 
-IOxfReactive::TakeEventStatus Network::On_handleEvent() {
+IOxfReactive::TakeEventStatus Network::state_12_processEvent() {
     IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
-        {
-            if(getCurrentEvent() == rootState_timeout)
-                {
-                    NOTIFY_TRANSITION_STARTED("4");
-                    switch (On_subState) {
-                        // State Op
-                        case Op:
-                        {
-                            cancel(On_timeout);
-                            NOTIFY_STATE_EXITED("ROOT.On.Op");
-                        }
-                        break;
-                        case accepttimeevent_7:
-                        {
-                            popNullTransition();
-                            NOTIFY_STATE_EXITED("ROOT.On.accepttimeevent_7");
-                        }
-                        break;
-                        default:
-                            break;
-                    }
-                    On_subState = OMNonState;
-                    cancel(rootState_timeout);
-                    NOTIFY_STATE_EXITED("ROOT.On");
-                    NOTIFY_STATE_ENTERED("ROOT.accepttimeevent_6");
-                    pushNullTransition();
-                    rootState_subState = accepttimeevent_6;
-                    rootState_active = accepttimeevent_6;
-                    NOTIFY_TRANSITION_TERMINATED("4");
-                    res = eventConsumed;
-                }
-        }
-    else if(IS_EVENT_TYPE_OF(ev_TurnOff_Light_ArchitecturalAnalysisPkg_id))
-        {
-            NOTIFY_TRANSITION_STARTED("1");
-            switch (On_subState) {
-                // State Op
-                case Op:
-                {
-                    cancel(On_timeout);
-                    NOTIFY_STATE_EXITED("ROOT.On.Op");
-                }
-                break;
-                case accepttimeevent_7:
-                {
-                    popNullTransition();
-                    NOTIFY_STATE_EXITED("ROOT.On.accepttimeevent_7");
-                }
-                break;
-                default:
-                    break;
-            }
-            On_subState = OMNonState;
-            cancel(rootState_timeout);
-            NOTIFY_STATE_EXITED("ROOT.On");
-            //#[ transition 1 
-            OUT_PORT(pNetwork)->setIntensity(0);
-            //#]
-            NOTIFY_STATE_ENTERED("ROOT.Off");
-            rootState_subState = Off;
-            rootState_active = Off;
-            NOTIFY_TRANSITION_TERMINATED("1");
-            res = eventConsumed;
-        }
-    
-    return res;
-}
-
-IOxfReactive::TakeEventStatus Network::Op_handleEvent() {
-    IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    if(IS_EVENT_TYPE_OF(OMTimeoutEventId))
-        {
-            if(getCurrentEvent() == On_timeout)
-                {
-                    NOTIFY_TRANSITION_STARTED("8");
-                    cancel(On_timeout);
-                    NOTIFY_STATE_EXITED("ROOT.On.Op");
-                    NOTIFY_STATE_ENTERED("ROOT.On.accepttimeevent_7");
-                    pushNullTransition();
-                    On_subState = accepttimeevent_7;
-                    rootState_active = accepttimeevent_7;
-                    NOTIFY_TRANSITION_TERMINATED("8");
-                    res = eventConsumed;
-                }
-        }
-    
-    if(res == eventNotConsumed)
-        {
-            res = On_handleEvent();
-        }
-    return res;
-}
-
-IOxfReactive::TakeEventStatus Network::accepttimeevent_7_handleEvent() {
-    IOxfReactive::TakeEventStatus res = eventNotConsumed;
-    if(IS_EVENT_TYPE_OF(OMNullEventId))
-        {
-            NOTIFY_TRANSITION_STARTED("9");
-            popNullTransition();
-            NOTIFY_STATE_EXITED("ROOT.On.accepttimeevent_7");
-            NOTIFY_STATE_ENTERED("ROOT.On.Op");
-            On_subState = Op;
-            rootState_active = Op;
-            On_timeout = scheduleTimeout(1000, "ROOT.On.Op");
-            NOTIFY_TRANSITION_TERMINATED("9");
-            res = eventConsumed;
-        }
-    
-    if(res == eventNotConsumed)
-        {
-            res = On_handleEvent();
-        }
     return res;
 }
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedNetwork::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("intensity", x2String(myReal->intensity));
+    aomsAttributes->addAttribute("lightState", x2String(myReal->lightState));
+    aomsAttributes->addAttribute("occupied", x2String(myReal->occupied));
+    aomsAttributes->addAttribute("is_Movement", x2String(myReal->is_Movement));
+    aomsAttributes->addAttribute("fireDetected", x2String(myReal->fireDetected));
+    aomsAttributes->addAttribute("fireAlarm", x2String(myReal->fireAlarm));
+}
+
 void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsHVAC", false, true);
     if(myReal->itsHVAC)
@@ -957,38 +1101,31 @@ void OMAnimatedNetwork::serializeRelations(AOMSRelations* aomsRelations) const {
 
 void OMAnimatedNetwork::rootState_serializeStates(AOMSState* aomsState) const {
     aomsState->addState("ROOT");
-    switch (myReal->rootState_subState) {
-        case Network::Off:
+    if(myReal->rootState_subState == Network::CommunicationAudioSystemInOperation)
         {
-            Off_serializeStates(aomsState);
+            CommunicationAudioSystemInOperation_serializeStates(aomsState);
         }
-        break;
-        case Network::On:
-        {
-            On_serializeStates(aomsState);
-        }
-        break;
-        case Network::accepttimeevent_6:
-        {
-            accepttimeevent_6_serializeStates(aomsState);
-        }
-        break;
-        default:
-            break;
-    }
 }
 
-void OMAnimatedNetwork::On_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.On");
-    switch (myReal->On_subState) {
-        case Network::Op:
+void OMAnimatedNetwork::CommunicationAudioSystemInOperation_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation");
+    state_12_serializeStates(aomsState);
+    state_13_serializeStates(aomsState);
+    state_14_serializeStates(aomsState);
+    state_15_serializeStates(aomsState);
+}
+
+void OMAnimatedNetwork::state_15_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_15");
+    switch (myReal->state_15_subState) {
+        case Network::webcamOn:
         {
-            Op_serializeStates(aomsState);
+            webcamOn_serializeStates(aomsState);
         }
         break;
-        case Network::accepttimeevent_7:
+        case Network::webcamOff:
         {
-            accepttimeevent_7_serializeStates(aomsState);
+            webcamOff_serializeStates(aomsState);
         }
         break;
         default:
@@ -996,24 +1133,114 @@ void OMAnimatedNetwork::On_serializeStates(AOMSState* aomsState) const {
     }
 }
 
-void OMAnimatedNetwork::Op_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.On.Op");
+void OMAnimatedNetwork::webcamOn_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOn");
 }
 
-void OMAnimatedNetwork::accepttimeevent_7_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.On.accepttimeevent_7");
+void OMAnimatedNetwork::webcamOff_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_15.webcamOff");
 }
 
-void OMAnimatedNetwork::Off_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.Off");
+void OMAnimatedNetwork::state_14_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14");
+    switch (myReal->state_14_subState) {
+        case Network::speakersOff:
+        {
+            speakersOff_serializeStates(aomsState);
+        }
+        break;
+        case Network::speakersOn:
+        {
+            speakersOn_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
 }
 
-void OMAnimatedNetwork::accepttimeevent_6_serializeStates(AOMSState* aomsState) const {
-    aomsState->addState("ROOT.accepttimeevent_6");
+void OMAnimatedNetwork::speakersOn_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOn");
+}
+
+void OMAnimatedNetwork::speakersOff_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_14.speakersOff");
+}
+
+void OMAnimatedNetwork::state_13_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_13");
+    switch (myReal->state_13_subState) {
+        case Network::smartscreenOn:
+        {
+            smartscreenOn_serializeStates(aomsState);
+        }
+        break;
+        case Network::smartscreenOff:
+        {
+            smartscreenOff_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::smartscreenOn_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOn");
+}
+
+void OMAnimatedNetwork::smartscreenOff_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_13.smartscreenOff");
+}
+
+void OMAnimatedNetwork::state_12_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_12");
+    switch (myReal->state_12_subState) {
+        case Network::micOn:
+        {
+            micOn_serializeStates(aomsState);
+        }
+        break;
+        case Network::micOff:
+        {
+            micOff_serializeStates(aomsState);
+        }
+        break;
+        default:
+            break;
+    }
+}
+
+void OMAnimatedNetwork::micOn_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_12.micOn");
+}
+
+void OMAnimatedNetwork::micOff_serializeStates(AOMSState* aomsState) const {
+    aomsState->addState("ROOT.CommunicationAudioSystemInOperation.state_12.micOff");
 }
 //#]
 
 IMPLEMENT_REACTIVE_META_P(Network, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, false, OMAnimatedNetwork)
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setFireDetected_bool, "setFireDetected", FALSE, "setFireDetected(bool)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setFireDetected_bool, Network, setFireDetected(p_fireDetected), NO_OP())
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setIntensity_int, "setIntensity", FALSE, "setIntensity(int)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setIntensity_int, Network, setIntensity(p_intensity), NO_OP())
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setIs_Movement_bool, "setIs_Movement", FALSE, "setIs_Movement(bool)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setIs_Movement_bool, Network, setIs_Movement(p_is_Movement), NO_OP())
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setLightState_bool, "setLightState", FALSE, "setLightState(bool)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setLightState_bool, Network, setLightState(p_lightState), NO_OP())
+
+IMPLEMENT_META_OP(OMAnimatedNetwork, ArchitecturalAnalysisPkg_Network_setOccupied_bool, "setOccupied", FALSE, "setOccupied(bool)", 1)
+
+IMPLEMENT_OP_CALL(ArchitecturalAnalysisPkg_Network_setOccupied_bool, Network, setOccupied(p_occupied), NO_OP())
 #endif // _OMINSTRUMENT
 
 /*********************************************************************

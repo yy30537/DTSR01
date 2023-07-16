@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Smart_Screen
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Smart_Screen.h
 *********************************************************************/
 
@@ -43,16 +43,16 @@ public :
         ////    Operations    ////
         
         //## auto_generated
+        virtual bool SS_getState();
+        
+        //## auto_generated
+        virtual void SS_setState(bool argState);
+        
+        //## auto_generated
         void connectSmart_Screen(Smart_Screen* part);
         
         //## auto_generated
         I_SS* getItsI_SS();
-        
-        //## auto_generated
-        virtual bool getState();
-        
-        //## auto_generated
-        virtual void setState(bool argState);
         
         ////    Additional operations    ////
         
@@ -88,11 +88,11 @@ public :
     //## auto_generated
     virtual ~Smart_Screen();
     
-    //## operation getState()
-    virtual bool getState();
+    //## operation SS_getState()
+    virtual bool SS_getState();
     
-    //## operation setState(bool)
-    virtual void setState(bool argState);
+    //## operation SS_setState(bool)
+    virtual void SS_setState(bool argState);
     
     //## auto_generated
     pSmartScreen_C* getPSmartScreen() const;
@@ -106,7 +106,17 @@ protected :
     void initRelations();
     
     bool state;		//## attribute state
+
+public :
+
+    //## auto_generated
+    bool getState() const;
     
+    //## auto_generated
+    void setState(bool p_state);
+
+protected :
+
 //#[ ignore
     pSmartScreen_C pSmartScreen;
 //#]

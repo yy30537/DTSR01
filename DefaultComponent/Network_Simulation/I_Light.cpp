@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: I_Light
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\I_Light.cpp
 *********************************************************************/
 
@@ -19,7 +19,11 @@
 
 #define ArchitecturalAnalysisPkg_I_Light_getItensity_SERIALIZE OM_NO_OP
 
+#define ArchitecturalAnalysisPkg_I_Light_getState_SERIALIZE OM_NO_OP
+
 #define ArchitecturalAnalysisPkg_I_Light_setIntensity_SERIALIZE aomsmethod->addAttribute("arg_intensity", x2String(arg_intensity));
+
+#define ArchitecturalAnalysisPkg_I_Light_setState_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
 //#]
 
 //## package ArchitecturalAnalysisPkg

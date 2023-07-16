@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: I_Weather
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\I_Weather.h
 *********************************************************************/
 
@@ -37,21 +37,9 @@ public :
     I_Weather();
     
     //## auto_generated
-    virtual ~I_Weather() = 0;
+    virtual ~I_Weather();
     
     ////    Operations    ////
-    
-    //## operation getCold()
-    virtual bool getCold() = 0;
-    
-    //## operation getHot()
-    virtual bool getHot() = 0;
-    
-    //## operation setCold(bool)
-    virtual void setCold(bool arg_cold) = 0;
-    
-    //## operation setHot(bool)
-    virtual void setHot(bool arg_hot) = 0;
 };
 
 #ifdef _OMINSTRUMENT

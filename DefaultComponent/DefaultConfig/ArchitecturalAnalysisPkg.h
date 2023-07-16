@@ -134,6 +134,10 @@ class Webcam;
 #define ev_turnOnLight_ArchitecturalAnalysisPkg_id 18213
 
 #define ev_DisableFireAlarm_ArchitecturalAnalysisPkg_id 18214
+
+#define ev_turnon_SS_ArchitecturalAnalysisPkg_id 18215
+
+#define ev_turnoff_SS_ArchitecturalAnalysisPkg_id 18216
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -600,6 +604,64 @@ public :
 //#[ ignore
 class OMAnimatedev_DisableFireAlarm : virtual public AOMEvent {
     DECLARE_META_EVENT(ev_DisableFireAlarm)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_turnon_SS()
+class ev_turnon_SS : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_turnon_SS;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_turnon_SS();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_turnon_SS : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_turnon_SS)
+};
+//#]
+#endif // _OMINSTRUMENT
+
+//## event ev_turnoff_SS()
+class ev_turnoff_SS : public OMEvent {
+    ////    Friends    ////
+    
+public :
+
+#ifdef _OMINSTRUMENT
+    friend class OMAnimatedev_turnoff_SS;
+#endif // _OMINSTRUMENT
+
+    ////    Constructors and destructors    ////
+    
+    //## auto_generated
+    ev_turnoff_SS();
+    
+    ////    Framework operations    ////
+    
+    //## statechart_method
+    virtual bool isTypeOf(const short id) const;
+};
+
+#ifdef _OMINSTRUMENT
+//#[ ignore
+class OMAnimatedev_turnoff_SS : virtual public AOMEvent {
+    DECLARE_META_EVENT(ev_turnoff_SS)
 };
 //#]
 #endif // _OMINSTRUMENT

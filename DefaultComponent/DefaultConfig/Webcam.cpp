@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Webcam
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Webcam.cpp
 *********************************************************************/
 
@@ -16,6 +16,10 @@
 #include "Webcam.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Webcam_Webcam_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_Webcam_get_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_Webcam_set_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -35,8 +39,24 @@ void Webcam::pWebcam_C::connectWebcam(Webcam* part) {
     
 }
 
+bool Webcam::pWebcam_C::get() {
+    bool res = false;
+    if (itsI_WC != NULL) {
+        res = itsI_WC->get();
+    }
+    return res;
+}
+
 I_WC* Webcam::pWebcam_C::getItsI_WC() {
     return this;
+}
+
+void Webcam::pWebcam_C::set(bool arg) {
+    
+    if (itsI_WC != NULL) {
+        itsI_WC->set(arg);
+    }
+    
 }
 
 void Webcam::pWebcam_C::setItsI_WC(I_WC* p_I_WC) {
@@ -74,12 +94,27 @@ void Webcam::initRelations() {
     }
 }
 
+bool Webcam::get() {
+    NOTIFY_OPERATION(get, get(), 0, ArchitecturalAnalysisPkg_Webcam_get_SERIALIZE);
+    //#[ operation get()
+    return state;
+    //#]
+}
+
+void Webcam::set(bool arg) {
+    NOTIFY_OPERATION(set, set(bool), 1, ArchitecturalAnalysisPkg_Webcam_set_SERIALIZE);
+    //#[ operation set(bool)
+    state=arg;
+    //#]
+}
+
 bool Webcam::getState() const {
     return state;
 }
 
 void Webcam::setState(bool p_state) {
     state = p_state;
+    NOTIFY_SET_OPERATION;
 }
 
 #ifdef _OMINSTRUMENT

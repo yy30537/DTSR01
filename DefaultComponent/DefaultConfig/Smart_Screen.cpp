@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Smart_Screen
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Smart_Screen.cpp
 *********************************************************************/
 
@@ -17,9 +17,9 @@
 //#[ ignore
 #define ArchitecturalAnalysisPkg_Smart_Screen_Smart_Screen_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_Smart_Screen_getState_SERIALIZE OM_NO_OP
+#define ArchitecturalAnalysisPkg_Smart_Screen_SS_getState_SERIALIZE OM_NO_OP
 
-#define ArchitecturalAnalysisPkg_Smart_Screen_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
+#define ArchitecturalAnalysisPkg_Smart_Screen_SS_setState_SERIALIZE aomsmethod->addAttribute("argState", x2String(argState));
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -34,6 +34,22 @@ Smart_Screen::pSmartScreen_C::~pSmartScreen_C() {
     cleanUpRelations();
 }
 
+bool Smart_Screen::pSmartScreen_C::SS_getState() {
+    bool res = false;
+    if (itsI_SS != NULL) {
+        res = itsI_SS->SS_getState();
+    }
+    return res;
+}
+
+void Smart_Screen::pSmartScreen_C::SS_setState(bool argState) {
+    
+    if (itsI_SS != NULL) {
+        itsI_SS->SS_setState(argState);
+    }
+    
+}
+
 void Smart_Screen::pSmartScreen_C::connectSmart_Screen(Smart_Screen* part) {
     setItsI_SS(part);
     
@@ -41,22 +57,6 @@ void Smart_Screen::pSmartScreen_C::connectSmart_Screen(Smart_Screen* part) {
 
 I_SS* Smart_Screen::pSmartScreen_C::getItsI_SS() {
     return this;
-}
-
-bool Smart_Screen::pSmartScreen_C::getState() {
-    bool res = false;
-    if (itsI_SS != NULL) {
-        res = itsI_SS->getState();
-    }
-    return res;
-}
-
-void Smart_Screen::pSmartScreen_C::setState(bool argState) {
-    
-    if (itsI_SS != NULL) {
-        itsI_SS->setState(argState);
-    }
-    
 }
 
 void Smart_Screen::pSmartScreen_C::setItsI_SS(I_SS* p_I_SS) {
@@ -80,16 +80,16 @@ Smart_Screen::~Smart_Screen() {
     NOTIFY_DESTRUCTOR(~Smart_Screen, false);
 }
 
-bool Smart_Screen::getState() {
-    NOTIFY_OPERATION(getState, getState(), 0, ArchitecturalAnalysisPkg_Smart_Screen_getState_SERIALIZE);
-    //#[ operation getState()
+bool Smart_Screen::SS_getState() {
+    NOTIFY_OPERATION(SS_getState, SS_getState(), 0, ArchitecturalAnalysisPkg_Smart_Screen_SS_getState_SERIALIZE);
+    //#[ operation SS_getState()
     return state;
     //#]
 }
 
-void Smart_Screen::setState(bool argState) {
-    NOTIFY_OPERATION(setState, setState(bool), 1, ArchitecturalAnalysisPkg_Smart_Screen_setState_SERIALIZE);
-    //#[ operation setState(bool)
+void Smart_Screen::SS_setState(bool argState) {
+    NOTIFY_OPERATION(SS_setState, SS_setState(bool), 1, ArchitecturalAnalysisPkg_Smart_Screen_SS_setState_SERIALIZE);
+    //#[ operation SS_setState(bool)
     state=argState;
     //#]
 }
@@ -106,6 +106,15 @@ void Smart_Screen::initRelations() {
     if (get_pSmartScreen() != NULL) {
         get_pSmartScreen()->connectSmart_Screen(this);
     }
+}
+
+bool Smart_Screen::getState() const {
+    return state;
+}
+
+void Smart_Screen::setState(bool p_state) {
+    state = p_state;
+    NOTIFY_SET_OPERATION;
 }
 
 #ifdef _OMINSTRUMENT

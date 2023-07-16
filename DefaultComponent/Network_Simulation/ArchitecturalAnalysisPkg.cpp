@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: Yang
+	Login		: Administrator
 	Component	: DefaultComponent 
 	Configuration 	: Network_Simulation
 	Model Element	: ArchitecturalAnalysisPkg
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\Network_Simulation\ArchitecturalAnalysisPkg.cpp
 *********************************************************************/
 
@@ -50,6 +50,8 @@
 #include "I_SS.h"
 //## auto_generated
 #include "I_WC.h"
+//## auto_generated
+#include "I_MS.h"
 //#[ ignore
 #define ev_AC_SwitchOn_SERIALIZE OM_NO_OP
 
@@ -111,36 +113,6 @@
 
 #define ev_CO2_BelowTH_CONSTRUCTOR ev_CO2_BelowTH()
 
-#define ev_gets_too_hot_SERIALIZE OM_NO_OP
-
-#define ev_gets_too_hot_UNSERIALIZE OM_NO_OP
-
-#define ev_gets_too_hot_CONSTRUCTOR ev_gets_too_hot()
-
-#define ev_gets_too_cold_SERIALIZE OM_NO_OP
-
-#define ev_gets_too_cold_UNSERIALIZE OM_NO_OP
-
-#define ev_gets_too_cold_CONSTRUCTOR ev_gets_too_cold()
-
-#define ev_gets_not_hot_SERIALIZE OM_NO_OP
-
-#define ev_gets_not_hot_UNSERIALIZE OM_NO_OP
-
-#define ev_gets_not_hot_CONSTRUCTOR ev_gets_not_hot()
-
-#define ev_gets_not_cold_SERIALIZE OM_NO_OP
-
-#define ev_gets_not_cold_UNSERIALIZE OM_NO_OP
-
-#define ev_gets_not_cold_CONSTRUCTOR ev_gets_not_cold()
-
-#define ev_SetLightIntensity_SERIALIZE OM_NO_OP
-
-#define ev_SetLightIntensity_UNSERIALIZE OM_NO_OP
-
-#define ev_SetLightIntensity_CONSTRUCTOR ev_SetLightIntensity()
-
 #define ev_TurnOn_Light_SERIALIZE OM_NO_OP
 
 #define ev_TurnOn_Light_UNSERIALIZE OM_NO_OP
@@ -158,6 +130,24 @@
 #define ev_turnOnLight_UNSERIALIZE OM_NO_OP
 
 #define ev_turnOnLight_CONSTRUCTOR ev_turnOnLight()
+
+#define ev_DisableFireAlarm_SERIALIZE OM_NO_OP
+
+#define ev_DisableFireAlarm_UNSERIALIZE OM_NO_OP
+
+#define ev_DisableFireAlarm_CONSTRUCTOR ev_DisableFireAlarm()
+
+#define ev_turnon_SS_SERIALIZE OM_NO_OP
+
+#define ev_turnon_SS_UNSERIALIZE OM_NO_OP
+
+#define ev_turnon_SS_CONSTRUCTOR ev_turnon_SS()
+
+#define ev_turnoff_SS_SERIALIZE OM_NO_OP
+
+#define ev_turnoff_SS_UNSERIALIZE OM_NO_OP
+
+#define ev_turnoff_SS_CONSTRUCTOR ev_turnoff_SS()
 //#]
 
 //## package ArchitecturalAnalysisPkg
@@ -304,66 +294,6 @@ bool ev_CO2_BelowTH::isTypeOf(const short id) const {
 
 IMPLEMENT_META_EVENT_P(ev_CO2_BelowTH, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_CO2_BelowTH())
 
-//## event ev_gets_too_hot()
-ev_gets_too_hot::ev_gets_too_hot() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_gets_too_hot)
-    setId(ev_gets_too_hot_ArchitecturalAnalysisPkg_id);
-}
-
-bool ev_gets_too_hot::isTypeOf(const short id) const {
-    return (ev_gets_too_hot_ArchitecturalAnalysisPkg_id==id);
-}
-
-IMPLEMENT_META_EVENT_P(ev_gets_too_hot, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_gets_too_hot())
-
-//## event ev_gets_too_cold()
-ev_gets_too_cold::ev_gets_too_cold() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_gets_too_cold)
-    setId(ev_gets_too_cold_ArchitecturalAnalysisPkg_id);
-}
-
-bool ev_gets_too_cold::isTypeOf(const short id) const {
-    return (ev_gets_too_cold_ArchitecturalAnalysisPkg_id==id);
-}
-
-IMPLEMENT_META_EVENT_P(ev_gets_too_cold, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_gets_too_cold())
-
-//## event ev_gets_not_hot()
-ev_gets_not_hot::ev_gets_not_hot() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_gets_not_hot)
-    setId(ev_gets_not_hot_ArchitecturalAnalysisPkg_id);
-}
-
-bool ev_gets_not_hot::isTypeOf(const short id) const {
-    return (ev_gets_not_hot_ArchitecturalAnalysisPkg_id==id);
-}
-
-IMPLEMENT_META_EVENT_P(ev_gets_not_hot, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_gets_not_hot())
-
-//## event ev_gets_not_cold()
-ev_gets_not_cold::ev_gets_not_cold() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_gets_not_cold)
-    setId(ev_gets_not_cold_ArchitecturalAnalysisPkg_id);
-}
-
-bool ev_gets_not_cold::isTypeOf(const short id) const {
-    return (ev_gets_not_cold_ArchitecturalAnalysisPkg_id==id);
-}
-
-IMPLEMENT_META_EVENT_P(ev_gets_not_cold, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_gets_not_cold())
-
-//## event ev_SetLightIntensity()
-ev_SetLightIntensity::ev_SetLightIntensity() {
-    NOTIFY_EVENT_CONSTRUCTOR(ev_SetLightIntensity)
-    setId(ev_SetLightIntensity_ArchitecturalAnalysisPkg_id);
-}
-
-bool ev_SetLightIntensity::isTypeOf(const short id) const {
-    return (ev_SetLightIntensity_ArchitecturalAnalysisPkg_id==id);
-}
-
-IMPLEMENT_META_EVENT_P(ev_SetLightIntensity, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_SetLightIntensity())
-
 //## event ev_TurnOn_Light()
 ev_TurnOn_Light::ev_TurnOn_Light() {
     NOTIFY_EVENT_CONSTRUCTOR(ev_TurnOn_Light)
@@ -399,6 +329,42 @@ bool ev_turnOnLight::isTypeOf(const short id) const {
 }
 
 IMPLEMENT_META_EVENT_P(ev_turnOnLight, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnOnLight())
+
+//## event ev_DisableFireAlarm()
+ev_DisableFireAlarm::ev_DisableFireAlarm() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_DisableFireAlarm)
+    setId(ev_DisableFireAlarm_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_DisableFireAlarm::isTypeOf(const short id) const {
+    return (ev_DisableFireAlarm_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_DisableFireAlarm, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_DisableFireAlarm())
+
+//## event ev_turnon_SS()
+ev_turnon_SS::ev_turnon_SS() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnon_SS)
+    setId(ev_turnon_SS_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnon_SS::isTypeOf(const short id) const {
+    return (ev_turnon_SS_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnon_SS, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnon_SS())
+
+//## event ev_turnoff_SS()
+ev_turnoff_SS::ev_turnoff_SS() {
+    NOTIFY_EVENT_CONSTRUCTOR(ev_turnoff_SS)
+    setId(ev_turnoff_SS_ArchitecturalAnalysisPkg_id);
+}
+
+bool ev_turnoff_SS::isTypeOf(const short id) const {
+    return (ev_turnoff_SS_ArchitecturalAnalysisPkg_id==id);
+}
+
+IMPLEMENT_META_EVENT_P(ev_turnoff_SS, ArchitecturalAnalysisPkg, ArchitecturalAnalysisPkg, ev_turnoff_SS())
 
 /*********************************************************************
 	File Path	: DefaultComponent\Network_Simulation\ArchitecturalAnalysisPkg.cpp

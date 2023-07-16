@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Speakers
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\Speakers.cpp
 *********************************************************************/
 
@@ -92,6 +92,7 @@ void Speakers::setState(bool argState) {
     //#[ operation setState(bool)
     state=argState;
     //#]
+    NOTIFY_SET_OPERATION;
 }
 
 Speakers::pSpeakers_C* Speakers::getPSpeakers() const {

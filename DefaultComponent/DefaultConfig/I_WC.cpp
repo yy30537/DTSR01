@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_WC
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_WC.cpp
 *********************************************************************/
 
@@ -16,6 +16,10 @@
 #include "I_WC.h"
 //#[ ignore
 #define ArchitecturalAnalysisPkg_I_WC_I_WC_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_WC_get_SERIALIZE OM_NO_OP
+
+#define ArchitecturalAnalysisPkg_I_WC_set_SERIALIZE aomsmethod->addAttribute("arg", x2String(arg));
 //#]
 
 //## package ArchitecturalAnalysisPkg

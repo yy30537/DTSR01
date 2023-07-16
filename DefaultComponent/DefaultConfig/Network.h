@@ -103,6 +103,15 @@ public :
         ////    Operations    ////
         
         //## auto_generated
+        virtual bool SS_getState();
+        
+        //## auto_generated
+        virtual void SS_setState(bool argState);
+        
+        //## auto_generated
+        virtual bool get();
+        
+        //## auto_generated
         virtual int getItensity();
         
         //## auto_generated
@@ -173,6 +182,9 @@ public :
         
         //## auto_generated
         virtual void login();
+        
+        //## auto_generated
+        virtual void set(bool arg);
         
         //## auto_generated
         virtual void setIntensity(int arg_intensity);
@@ -431,17 +443,7 @@ public :
     
     //## auto_generated
     void _clearItsOccupancy_Sensor();
-
-protected :
-
-    //## auto_generated
-    void cancelTimeouts();
     
-    //## auto_generated
-    bool cancelTimeout(const IOxfTimeout* arg);
-
-public :
-
     //## auto_generated
     int getIntensity() const;
     
@@ -510,35 +512,135 @@ public :
     virtual void rootState_entDef();
     
     //## statechart_method
+    void rootStateEntDef();
+    
+    //## statechart_method
     virtual IOxfReactive::TakeEventStatus rootState_processEvent();
     
-    // SystemInOperation:
+    // CommunicationAudioSystemInOperation:
     //## statechart_method
-    inline bool SystemInOperation_IN() const;
+    inline bool CommunicationAudioSystemInOperation_IN() const;
     
-    // FireAlarmOn:
     //## statechart_method
-    inline bool FireAlarmOn_IN() const;
+    void CommunicationAudioSystemInOperation_entDef();
     
-    // accepttimeevent_2:
     //## statechart_method
-    inline bool accepttimeevent_2_IN() const;
+    void CommunicationAudioSystemInOperation_exit();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus CommunicationAudioSystemInOperation_processEvent();
+    
+    // state_15:
+    //## statechart_method
+    inline bool state_15_IN() const;
+    
+    //## statechart_method
+    void state_15_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus state_15_processEvent();
+    
+    // webcamOn:
+    //## statechart_method
+    inline bool webcamOn_IN() const;
+    
+    // webcamOff:
+    //## statechart_method
+    inline bool webcamOff_IN() const;
+    
+    // state_14:
+    //## statechart_method
+    inline bool state_14_IN() const;
+    
+    //## statechart_method
+    void state_14_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus state_14_processEvent();
+    
+    // speakersOn:
+    //## statechart_method
+    inline bool speakersOn_IN() const;
+    
+    // speakersOff:
+    //## statechart_method
+    inline bool speakersOff_IN() const;
+    
+    // state_13:
+    //## statechart_method
+    inline bool state_13_IN() const;
+    
+    //## statechart_method
+    void state_13_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus state_13_processEvent();
+    
+    // smartscreenOn:
+    //## statechart_method
+    inline bool smartscreenOn_IN() const;
+    
+    // smartscreenOff:
+    //## statechart_method
+    inline bool smartscreenOff_IN() const;
+    
+    // state_12:
+    //## statechart_method
+    inline bool state_12_IN() const;
+    
+    //## statechart_method
+    void state_12_entDef();
+    
+    //## statechart_method
+    IOxfReactive::TakeEventStatus state_12_processEvent();
+    
+    // micOn:
+    //## statechart_method
+    inline bool micOn_IN() const;
+    
+    // micOff:
+    //## statechart_method
+    inline bool micOff_IN() const;
 
 protected :
 
 //#[ ignore
     enum Network_Enum {
         OMNonState = 0,
-        SystemInOperation = 1,
-        FireAlarmOn = 2,
-        accepttimeevent_2 = 3
+        CommunicationAudioSystemInOperation = 1,
+        state_15 = 2,
+        webcamOn = 3,
+        webcamOff = 4,
+        state_14 = 5,
+        speakersOn = 6,
+        speakersOff = 7,
+        state_13 = 8,
+        smartscreenOn = 9,
+        smartscreenOff = 10,
+        state_12 = 11,
+        micOn = 12,
+        micOff = 13
     };
     
     int rootState_subState;
     
     int rootState_active;
     
-    IOxfTimeout* rootState_timeout;
+    int state_15_subState;
+    
+    int state_15_active;
+    
+    int state_14_subState;
+    
+    int state_14_active;
+    
+    int state_13_subState;
+    
+    int state_13_active;
+    
+    int state_12_subState;
+    
+    int state_12_active;
 //#]
 };
 
@@ -579,13 +681,43 @@ public :
     void rootState_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void SystemInOperation_serializeStates(AOMSState* aomsState) const;
+    void CommunicationAudioSystemInOperation_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void FireAlarmOn_serializeStates(AOMSState* aomsState) const;
+    void state_15_serializeStates(AOMSState* aomsState) const;
     
     //## statechart_method
-    void accepttimeevent_2_serializeStates(AOMSState* aomsState) const;
+    void webcamOn_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void webcamOff_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void state_14_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void speakersOn_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void speakersOff_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void state_13_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void smartscreenOn_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void smartscreenOff_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void state_12_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void micOn_serializeStates(AOMSState* aomsState) const;
+    
+    //## statechart_method
+    void micOff_serializeStates(AOMSState* aomsState) const;
 };
 //#]
 #endif // _OMINSTRUMENT
@@ -594,16 +726,56 @@ inline bool Network::rootState_IN() const {
     return true;
 }
 
-inline bool Network::SystemInOperation_IN() const {
-    return rootState_subState == SystemInOperation;
+inline bool Network::CommunicationAudioSystemInOperation_IN() const {
+    return rootState_subState == CommunicationAudioSystemInOperation;
 }
 
-inline bool Network::FireAlarmOn_IN() const {
-    return rootState_subState == FireAlarmOn;
+inline bool Network::state_15_IN() const {
+    return CommunicationAudioSystemInOperation_IN();
 }
 
-inline bool Network::accepttimeevent_2_IN() const {
-    return rootState_subState == accepttimeevent_2;
+inline bool Network::webcamOn_IN() const {
+    return state_15_subState == webcamOn;
+}
+
+inline bool Network::webcamOff_IN() const {
+    return state_15_subState == webcamOff;
+}
+
+inline bool Network::state_14_IN() const {
+    return CommunicationAudioSystemInOperation_IN();
+}
+
+inline bool Network::speakersOn_IN() const {
+    return state_14_subState == speakersOn;
+}
+
+inline bool Network::speakersOff_IN() const {
+    return state_14_subState == speakersOff;
+}
+
+inline bool Network::state_13_IN() const {
+    return CommunicationAudioSystemInOperation_IN();
+}
+
+inline bool Network::smartscreenOn_IN() const {
+    return state_13_subState == smartscreenOn;
+}
+
+inline bool Network::smartscreenOff_IN() const {
+    return state_13_subState == smartscreenOff;
+}
+
+inline bool Network::state_12_IN() const {
+    return CommunicationAudioSystemInOperation_IN();
+}
+
+inline bool Network::micOn_IN() const {
+    return state_12_subState == micOn;
+}
+
+inline bool Network::micOff_IN() const {
+    return state_12_subState == micOff;
 }
 
 #endif

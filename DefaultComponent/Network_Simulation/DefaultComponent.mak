@@ -85,6 +85,7 @@ OBJS= \
   Weather_Forecast.obj \
   I_Weather.obj \
   Movement_Sensor.obj \
+  I_MS.obj \
   Lights.obj \
   I_Light.obj \
   Occupancy_Sensor.obj \
@@ -186,7 +187,7 @@ SOCK_LIB=
 
 
 
-Network.obj : Network.cpp Network.h    ArchitecturalAnalysisPkg.h HVAC.h CO2_Sensor.h Weather_Forecast.h Movement_Sensor.h Lights.h Occupancy_Sensor.h I_HVAC.h I_CO2.h I_Weather.h I_Light.h I_OS.h I_FS.h I_Mic.h I_SS.h I_Spkr.h I_WC.h I_BS.h 
+Network.obj : Network.cpp Network.h    ArchitecturalAnalysisPkg.h HVAC.h CO2_Sensor.h Weather_Forecast.h Movement_Sensor.h Lights.h Occupancy_Sensor.h I_HVAC.h I_CO2.h I_Weather.h I_Light.h I_OS.h I_FS.h I_Mic.h I_SS.h I_Spkr.h I_WC.h I_BS.h I_MS.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Network.obj" "Network.cpp" 
 
@@ -228,9 +229,15 @@ I_Weather.obj : I_Weather.cpp I_Weather.h    ArchitecturalAnalysisPkg.h
 
 
 
-Movement_Sensor.obj : Movement_Sensor.cpp Movement_Sensor.h    ArchitecturalAnalysisPkg.h Network.h 
+Movement_Sensor.obj : Movement_Sensor.cpp Movement_Sensor.h    ArchitecturalAnalysisPkg.h Network.h I_MS.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Movement_Sensor.obj" "Movement_Sensor.cpp" 
+
+
+
+I_MS.obj : I_MS.cpp I_MS.h    ArchitecturalAnalysisPkg.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"I_MS.obj" "I_MS.cpp" 
 
 
 
@@ -294,7 +301,7 @@ I_BS.obj : I_BS.cpp I_BS.h    ArchitecturalAnalysisPkg.h
 
 
 
-ArchitecturalAnalysisPkg.obj : ArchitecturalAnalysisPkg.cpp ArchitecturalAnalysisPkg.h    CO2_Sensor.h HVAC.h Lights.h Movement_Sensor.h Occupancy_Sensor.h Weather_Forecast.h Network.h I_HVAC.h I_CO2.h I_Weather.h I_Light.h I_OS.h I_FS.h I_Mic.h I_SS.h I_Spkr.h I_WC.h I_BS.h 
+ArchitecturalAnalysisPkg.obj : ArchitecturalAnalysisPkg.cpp ArchitecturalAnalysisPkg.h    CO2_Sensor.h HVAC.h Lights.h Movement_Sensor.h Occupancy_Sensor.h Weather_Forecast.h Network.h I_HVAC.h I_CO2.h I_Weather.h I_Light.h I_OS.h I_FS.h I_Mic.h I_SS.h I_Spkr.h I_WC.h I_BS.h I_MS.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ArchitecturalAnalysisPkg.obj" "ArchitecturalAnalysisPkg.cpp" 
 
@@ -348,6 +355,7 @@ clean:
 	if exist Weather_Forecast.obj erase Weather_Forecast.obj
 	if exist I_Weather.obj erase I_Weather.obj
 	if exist Movement_Sensor.obj erase Movement_Sensor.obj
+	if exist I_MS.obj erase I_MS.obj
 	if exist Lights.obj erase Lights.obj
 	if exist I_Light.obj erase I_Light.obj
 	if exist Occupancy_Sensor.obj erase Occupancy_Sensor.obj

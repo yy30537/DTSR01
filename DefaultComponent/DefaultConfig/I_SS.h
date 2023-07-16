@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: I_SS
-//!	Generated Date	: Sat, 15, Jul 2023  
+//!	Generated Date	: Sun, 16, Jul 2023  
 	File Path	: DefaultComponent\DefaultConfig\I_SS.h
 *********************************************************************/
 
@@ -41,11 +41,11 @@ public :
     
     ////    Operations    ////
     
-    //## operation getState()
-    virtual bool getState() = 0;
+    //## operation SS_getState()
+    virtual bool SS_getState() = 0;
     
-    //## operation setState(bool)
-    virtual void setState(bool argState) = 0;
+    //## operation SS_setState(bool)
+    virtual void SS_setState(bool argState) = 0;
 };
 
 #ifdef _OMINSTRUMENT
